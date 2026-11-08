@@ -66,3 +66,39 @@ findbar .close-button image
 {
   padding: 0;
 }
+
+/* Vertical tabs sidebar, used when the tabs are at the left or right */
+
+tabsidebar.left
+{
+  border-right: 1px solid alpha(currentColor, .15);
+}
+
+tabsidebar.right
+{
+  border-left: 1px solid alpha(currentColor, .15);
+}
+
+tabsidebar listview.navigation-sidebar > row
+{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+tabsidebar .tab-row.needs-attention > label
+{
+  font-weight: bold;
+}
+
+tabsidebar .tab-row .close-button
+{
+  min-height: 0;
+  min-width: 0;
+  padding: 2px;
+  border-radius: 99px;
+}
+
+tabsidebar listview > row:not(:hover):not(:selected) .tab-row .close-button
+{
+  opacity: 0;
+}

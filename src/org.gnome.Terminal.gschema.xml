@@ -103,8 +103,10 @@
     <value nick='always' value='3'/>
   </enum>
 
-   <!-- These are deprecated and unused -->
+  <!-- Same values as GtkPositionType -->
   <enum id="org.gnome.Terminal.TabPosition">
+    <value nick="left"   value="0" />
+    <value nick="right"  value="1" />
     <value nick="top"    value="2" />
     <value nick="bottom" value="3" />
   </enum>
@@ -700,6 +702,11 @@
       <summary>When to show the tabs bar</summary>
     </key>
 
+    <key name="tab-position" enum="org.gnome.Terminal.TabPosition">
+      <default>'top'</default>
+      <summary>The position of the tabs bar</summary>
+    </key>
+
     <key name="theme-variant" enum="org.gnome.Terminal.ThemeVariant">
       <default>'system'</default>
       <summary>Which theme variant to use</summary>
@@ -747,10 +754,6 @@
    <key name="default-show-menubar" type="b"><default>true</default></key>
 
    <key name="mnemonics-enabled" type="b"><default>false</default></key>
-
-  <key name="tab-position" enum="org.gnome.Terminal.TabPosition">
-    <default>'top'</default>
-  </key>
 
   </schema>
 

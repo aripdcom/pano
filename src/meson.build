@@ -184,6 +184,8 @@ server_sources = app_sources + client_util_sources + debug_sources + default_sou
   'terminal-settings-bridge-impl.hh',
   'terminal-tab.cc',
   'terminal-tab.hh',
+  'terminal-tab-sidebar.cc',
+  'terminal-tab-sidebar.hh',
   'terminal-window.cc',
   'terminal-window.hh',
 )

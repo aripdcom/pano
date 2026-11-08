@@ -43,6 +43,7 @@
 #include "terminal-notebook.hh"
 #include "terminal-schemas.hh"
 #include "terminal-tab.hh"
+#include "terminal-tab-sidebar.hh"
 #include "terminal-util.hh"
 #include "terminal-window.hh"
 #include "terminal-libgsystem.hh"
@@ -59,11 +60,14 @@ struct _TerminalWindow
 
   GtkWidget *titlebar;
   AdwTabBar *tab_bar;
+  TerminalTabSidebar* tab_sidebar;
+  GtkPositionType tab_position;
   AdwTabOverview* tab_overview;
   TerminalHeaderbar *headerbar;
   TerminalNotebook *notebook;
   GActionMap* notebook_context_action_group; // unowned
   AdwToolbarView *toolbar_view;
+  GtkWidget* content_box;
   GtkWidget *main_vbox;
   GtkWidget* ask_default_infobar;
   TerminalScreen *active_screen;
@@ -110,6 +114,8 @@ struct _TerminalWindow
   guint disposed : 1;
   guint present_on_insert : 1;
   guint tab_overview_animating : 1;
+  guint tab_bar_at_bottom : 1;
+  guint tabs_hidden_for_fullscreen : 1;
 
   guint realized : 1;
 };
@@ -166,6 +172,7 @@ static void notebook_screen_removed_cb    (TerminalNotebook *notebook,
 static void notebook_screens_reordered_cb (TerminalNotebook *notebook,
                                            TerminalWindow   *window);
 
+static void window_update_tabs_visibility(TerminalWindow* window);
 static void notebook_setup_menu_cb(TerminalNotebook* notebook,
                                    TerminalTab* tab,
                                    TerminalWindow* window);
@@ -1221,6 +1228,12 @@ action_fullscreen_state_cb (GSimpleAction *action,
 
   adw_toolbar_view_set_reveal_top_bars (window->toolbar_view, !fullscreen);
 
+  /* The top tabs bar is hidden with the top bars above; also
+   * hide the tabs when they are at the bottom or at the side.
+   */
+  window->tabs_hidden_for_fullscreen = fullscreen;
+  window_update_tabs_visibility (window);
+
   /* Wait for the revealer transition to finish plus a small amount
    * of time, then do fullscreen state change. This helps ensure that
    * the compositor can animate the approprate screen contents between
@@ -1914,6 +1927,60 @@ window_sync_rounded_corners_cb(GSettings* settings,
 }
 
 static void
+window_update_tabs_visibility(TerminalWindow* window)
+{
+  auto const position = window->tab_position;
+  auto const horizontal = position == GTK_POS_TOP || position == GTK_POS_BOTTOM;
+  auto const hidden = bool(window->tabs_hidden_for_fullscreen);
+
+  gtk_widget_set_visible(GTK_WIDGET(window->tab_bar),
+                         horizontal && !(hidden && position == GTK_POS_BOTTOM));
+  gtk_widget_set_visible(GTK_WIDGET(window->tab_sidebar),
+                         !horizontal && !hidden);
+}
+
+static void
+window_sync_tab_position_cb(GSettings* settings,
+                            char const* key,
+                            TerminalWindow* window)
+{
+  // The enum values are the same as GtkPositionType's
+  auto const position = GtkPositionType(g_settings_get_enum(settings, key));
+  GtkWidget* tab_bar = GTK_WIDGET(window->tab_bar);
+  auto const horizontal = position == GTK_POS_TOP || position == GTK_POS_BOTTOM;
+
+  if (horizontal) {
+    // AdwTabBar is horizontal only; move it between the top and
+    // bottom bars of the toolbar view. The bottom tab bar is placed
+    // below the find bar, at the window's edge.
+    auto const at_bottom = position == GTK_POS_BOTTOM;
+    if (bool(window->tab_bar_at_bottom) != at_bottom) {
+      g_object_ref(tab_bar);
+      adw_toolbar_view_remove(window->toolbar_view, tab_bar);
+      if (at_bottom)
+        adw_toolbar_view_add_bottom_bar(window->toolbar_view, tab_bar);
+      else
+        adw_toolbar_view_add_top_bar(window->toolbar_view, tab_bar);
+      g_object_unref(tab_bar);
+
+      window->tab_bar_at_bottom = at_bottom;
+    }
+  } else {
+    // Use the vertical tab sidebar at the left or right of the terminal
+    gtk_box_reorder_child_after(GTK_BOX(window->content_box),
+                                GTK_WIDGET(window->tab_sidebar),
+                                position == GTK_POS_LEFT ? nullptr : window->main_vbox);
+    terminal_tab_sidebar_set_position(window->tab_sidebar, position);
+  }
+
+  window->tab_position = position;
+  window_update_tabs_visibility(window);
+
+  // Keep the terminal grid size; the window grows or shrinks instead
+  terminal_window_update_size(window);
+}
+
+static void
 default_infobar_response_cb(GtkInfoBar* infobar,
                             int response,
                             TerminalWindow* window)
@@ -2146,6 +2213,10 @@ terminal_window_init (TerminalWindow *window)
 
   window->old_geometry_widget = nullptr;
 
+  // Matches the template; updated from the settings in constructed()
+  window->tab_position = GTK_POS_TOP;
+  window->tab_bar_at_bottom = FALSE;
+
   uuid_generate (u);
   uuid_unparse (u, uuidstr);
   window->uuid = g_strdup (uuidstr);
@@ -2265,17 +2336,6 @@ policy_type_to_autohide (GValue   *value,
   return TRUE;
 }
 
-static gboolean
-policy_type_to_visible (GValue   *value,
-                        GVariant *variant,
-                        gpointer  user_data)
-{
-  auto policy_type = g_variant_get_string (variant, nullptr);
-  gboolean visible = g_strcmp0 (policy_type, "never") != 0;
-  g_value_set_boolean (value, visible);
-  return TRUE;
-}
-
 static void
 terminal_window_size_allocate (GtkWidget *widget,
                                int width,
@@ -2311,11 +2371,15 @@ terminal_window_constructed (GObject *object)
                                 policy_type_to_autohide, nullptr, nullptr, nullptr);
   g_settings_bind_with_mapping (settings,
                                 TERMINAL_SETTING_TAB_POLICY_KEY,
-                                window->tab_bar,
-                                "visible",
+                                window->tab_sidebar,
+                                "autohide",
                                 GSettingsBindFlags(G_SETTINGS_BIND_GET |
                                                    G_SETTINGS_BIND_NO_SENSITIVITY),
-                                policy_type_to_visible, nullptr, nullptr, nullptr);
+                                policy_type_to_autohide, nullptr, nullptr, nullptr);
+
+  window_sync_tab_position_cb(settings, TERMINAL_SETTING_TAB_POSITION_KEY, window);
+  g_signal_connect(settings, "changed::" TERMINAL_SETTING_TAB_POSITION_KEY,
+                   G_CALLBACK(window_sync_tab_position_cb), window);
 
   window_sync_rounded_corners_cb(settings, TERMINAL_SETTING_ROUNDED_CORNERS_KEY, window);
   g_signal_connect(settings, "changed::" TERMINAL_SETTING_ROUNDED_CORNERS_KEY,
@@ -2356,15 +2420,18 @@ terminal_window_class_init (TerminalWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, find_bar);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, find_bar_revealer);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, headerbar);
+  gtk_widget_class_bind_template_child (widget_class, TerminalWindow, content_box);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, main_vbox);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, notebook);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, tab_bar);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, tab_overview);
+  gtk_widget_class_bind_template_child (widget_class, TerminalWindow, tab_sidebar);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, toolbar_view);
 
   g_type_ensure (TERMINAL_TYPE_HEADERBAR);
   g_type_ensure (TERMINAL_TYPE_FIND_BAR);
   g_type_ensure (TERMINAL_TYPE_NOTEBOOK);
+  g_type_ensure (TERMINAL_TYPE_TAB_SIDEBAR);
 }
 
 static void
@@ -2402,6 +2469,9 @@ terminal_window_dispose (GObject *object)
   auto const settings = terminal_app_get_global_settings(terminal_app_get());
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_sync_rounded_corners_cb,
+                                       window);
+  g_signal_handlers_disconnect_by_func(settings,
+                                       (void*)window_sync_tab_position_cb,
                                        window);
 
   G_OBJECT_CLASS (terminal_window_parent_class)->dispose (object);

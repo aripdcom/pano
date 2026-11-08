@@ -113,6 +113,43 @@
                 </property>
               </object>
             </child>
+            <child>
+              <object class="AdwComboRow" id="tab_bar_position">
+                <property name="title" translatable="yes">Tab Bar Position</property>
+                <property name="expression">
+                  <lookup name="title" type="TerminalPreferencesListItem"/>
+                </property>
+                <property name="model">
+                  <object class="GListStore" id="tab_bar_positions">
+                    <property name="item-type">TerminalPreferencesListItem</property>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes">Top</property>
+                        <property name="value">'top'</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes">Bottom</property>
+                        <property name="value">'bottom'</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes">Left</property>
+                        <property name="value">'left'</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes">Right</property>
+                        <property name="value">'right'</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
