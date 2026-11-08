@@ -1603,11 +1603,10 @@ update_color_scheme (TerminalScreen *screen)
     auto const app = terminal_app_get();
     auto const style_manager = reinterpret_cast<AdwStyleManager*>(terminal_app_get_adw_style_manager(app));
 
-    switch (adw_style_manager_get_color_scheme(style_manager)) {
-    default:
-    case ADW_COLOR_SCHEME_DEFAULT:
-    case ADW_COLOR_SCHEME_FORCE_LIGHT:
-    case ADW_COLOR_SCHEME_PREFER_LIGHT:
+    // Use the style that is actually in effect. With the "system" theme
+    // variant the requested color scheme is PREFER_LIGHT, but the system
+    // may still have selected the dark style.
+    if (!adw_style_manager_get_dark(style_manager)) {
       if (n_colors >= 16) {
         fg = colors[0];
         bg = colors[15];
@@ -1618,10 +1617,7 @@ update_color_scheme (TerminalScreen *screen)
         fg = {0, 0, 0, 1};
         bg = {1, 1, 1, 1};
       }
-      break;
-
-    case ADW_COLOR_SCHEME_PREFER_DARK:
-    case ADW_COLOR_SCHEME_FORCE_DARK:
+    } else {
       if (n_colors >= 16) {
         fg = colors[15];
         bg = colors[0];
@@ -1632,7 +1628,6 @@ update_color_scheme (TerminalScreen *screen)
         fg = {1, 1, 1, 1};
         bg = {0, 0, 0, 1};
       }
-      break;
     }
   }
 
