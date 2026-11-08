@@ -1,124 +1,97 @@
-GNOME Terminal
-==============
+Termit
+======
 
-CI status
----------
+Termit is a terminal emulator for the GNOME desktop, built with GTK 4,
+libadwaita and VTE.
 
-[![pipeline status](https://gitlab.gnome.org/GNOME/gnome-terminal/badges/master/pipeline.svg)](https://gitlab.gnome.org/GNOME/gnome-terminal/-/commits/master)
+Website: https://termit.aripd.com
 
-[![coverage report](https://gitlab.gnome.org/GNOME/gnome-terminal/badges/master/coverage.svg)](https://gitlab.gnome.org/GNOME/gnome-terminal/-/commits/master)
+Termit is a fork of [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal).
+It focuses on power-user features that GNOME Terminal does not offer, such
+as flexible tab placement and, on the roadmap, split panes, session restore
+and background transparency.
 
-Releases
+> **Status:** early development. The code has not been renamed yet, so the
+> built programs are still called `gnome-terminal` and `gnome-terminal-server`
+> and use the `org.gnome.Terminal` application ID. Renaming is tracked in the
+> issue tracker.
+
+Features
 --------
 
-[![Latest Release](https://gitlab.gnome.org/GNOME/gnome-terminal/-/badges/release.svg)](https://gitlab.gnome.org/GNOME/gnome-terminal/-/releases)
+Everything GNOME Terminal provides, plus:
 
-Tarballs for newer releases are available from the
-[package registry](https://gitlab.gnome.org/GNOME/gnome-terminal/-/packages)
-and new and old release are also available on
-[download.gnome.org](https://download.gnome.org/sources/gnome-terminal/).
+* **Tab bar position**: place the tabs at the top, bottom, left or right of
+  the window (*Preferences → Appearance → Tab Bar Position*). Left and right
+  show the tabs as a vertical list.
 
-Source code
------------
-
-To get the source code, use
-```
-$ git clone https://gitlab.gnome.org/GNOME/gnome-terminal
-```
+See the [issue tracker](https://github.com/aripdcom/termit/issues) for the
+roadmap.
 
 Building from source
 --------------------
 
-You will most likely need to also build `vte` from source; see https://gitlab.gnome.org/GNOME/vte/-/blob/master/README.md .
+Termit needs recent versions of its dependencies. It is currently tested with
+GTK 4.24, libadwaita 1.10 and VTE 0.84.
 
-Start by installing the build dependencies, and a C++ compiler.
-
-For fedora and related distributions, use
+On Fedora:
 ```
-sudo dnf build-dep vte291-gtk4 gnome-terminal
-sudo dnf install g++
-```
-while for debian and related distributions, use
-```
-sudo apt-get build-dep libvte-2.91-0 gnome-terminal
-sudo apt-get install g++
+sudo dnf install meson ninja-build gcc-c++ gtk4-devel libadwaita-devel \
+    vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel \
+    gettext itstool desktop-file-utils libxslt docbook-style-xsl
 ```
 
-First build `vte` according to its own instructions. Then:
+On Debian and Ubuntu:
 ```
-$ # Get the source code
-$ git clone https://gitlab.gnome.org/GNOME/gnome-terminal
-$
-$ # Change to the toplevel directory
-$ cd gnome-terminal
-$
-$ # Run the configure script (choose an appropriate path instead of "/some/where"!)
-$ # Don't forget to make sure that pkg-config can find your self-build vte!
-$ # e.g. by doing:
-$ # export PKG_CONFIG_PATH=/some/where/lib64/pkg-config:$PKG_CONFIG_PATH
-$ #
-$ # If you compiled gnome-shell into the same prefix, you can omit disabling
-$ # the search provider.
-$ #
-$ meson _build --prefix=/some/where -Dsearch_provider=false
-$
-$ # Build
-$ ninja -C _build
-$
-$ # Install
-$ ninja -C _build install
+sudo apt install meson ninja-build g++ libgtk-4-dev libadwaita-1-dev \
+    libvte-2.91-gtk4-dev libpcre2-dev uuid-dev gsettings-desktop-schemas-dev \
+    gettext itstool desktop-file-utils xsltproc docbook-xsl
 ```
 
-* By default, GNOME Terminal will install under `/usr/local`, which is not usually
-the right choice. You can customize the prefix directory by `--prefix` option, e.g.
-if you want to install GNOME-TERMINAL under `~/foobar`, you should run
-`meson _build --prefix=$HOME/foobar`. If you already run the configure script before,
-you should also pass `--reconfigure` option to it.
+If your distribution ships an older VTE, let Meson build VTE as a subproject
+by adding `--force-fallback-for=vte-2.91-gtk4` to the `meson setup` command.
 
-* You may need to execute `ninja -C _build install` as root
-(i.e. `sudo ninja -C _build install`) if installing to system directories. Use a
-user-writable directory as `--prefix` instead to avoid that.
-
-* Since GNOME Terminal uses a D-Bus activated server, you cannot simply run
-the self-built gnome-terminal directly. Instead, you need to start the new `gnome-terminal-server` directly using
+Then build and install:
 ```
-$ ./_build/src/gnome-terminal-server --app-id test.Terminal &
-```
-and then you have 10s time to open a window in that server using
-```
-$ ./_build/src/gnome-terminal --app-id test.Terminal
+git clone https://github.com/aripdcom/termit.git
+cd termit
+meson setup _build --prefix=$HOME/.local -Dsearch_provider=false -Dnautilus_extension=false
+ninja -C _build
+ninja -C _build install
 ```
 
-Also see https://wiki.gnome.org/Apps/Terminal/Debugging for more information.
+Termit uses a D-Bus activated server, so the client cannot simply be run from
+the build directory. Start the server with a test application ID, then open a
+window in it within 10 seconds:
+```
+./_build/src/gnome-terminal-server --app-id test.Termit &
+./_build/src/gnome-terminal --app-id test.Termit
+```
 
 Debugging
 ---------
 
-After installing GNOME-TERMINAL with `-Ddbg=true` flag, you can use `GNOME_TERMINAL_DEBUG` variable to control
-GNOME-TERMINAL to print out the debug information
-
+Configure with `-Ddbg=true` and set `GNOME_TERMINAL_DEBUG` to the debug
+categories you want, for example:
 ```
-$ GNOME_TERMINAL_DEBUG=selection ./_build/src/gnome-terminal-server [...]
-
-# Or, you can mixup with multiple logging level
-$ GNOME_TERMINAL_DEBUG=selection,draw,cell ./_build/src/gnome-terminal-server [...]
-
-$ Or, you can use `all` to print out all logging message
-$ GNOME_TERMINAL_DEBUG=all ./_build/src/gnome-terminal-server [...]
+GNOME_TERMINAL_DEBUG=selection,draw ./_build/src/gnome-terminal-server [...]
+GNOME_TERMINAL_DEBUG=all ./_build/src/gnome-terminal-server [...]
 ```
-
-For logging level information, please refer to enum [TerminalDebugFlags](src/terminal-debug.hh).
+The categories are listed in [`TerminalDebugFlags`](src/terminal-debug.hh).
 
 Contributing
 ------------
 
-Bugs should be filed here: https://gitlab.gnome.org/GNOME/gnome-terminal/issues/
-Please note that this is a bug tracker to be used for developers of GNOME Terminal,
-and contributors of code, documentation, and translations to GNOME Terminal,
-and *not a support forum*.
+Report bugs and request features in the
+[issue tracker](https://github.com/aripdcom/termit/issues). Please do not
+report Termit problems to the GNOME Terminal project.
 
-If you are an end user, always file bugs in your distribution's bug tracker, or use their
-support forums.
+License
+-------
 
-If you want to provide a patch, please attach them to an issue in GNOME
-GitLab, in the format output by the `git format-patch` command.
+Termit is free software, released under the
+[GNU General Public License, version 3 or later](COPYING). The documentation
+is released under the [GNU Free Documentation License](COPYING.GFDL).
+
+GNOME Terminal is developed by the GNOME project and its contributors. Termit
+is not affiliated with or endorsed by the GNOME Foundation.
