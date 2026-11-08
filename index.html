@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pano — a terminal for GNOME, your tabs where you want them</title>
+  <meta name="description" content="Pano is a GTK 4 terminal emulator for GNOME. Put your tabs at the top, bottom, left or right of the window. A fork of GNOME Terminal.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fafafb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1d1d21" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Pano">
+  <meta property="og:description" content="A terminal for GNOME. Put your tabs at the top, bottom, left or right.">
+  <meta property="og:url" content="https://pano.aripd.com/">
+  <meta property="og:image" content="https://pano.aripd.com/images/tabs-left-dark.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#">
+        <img src="favicon.svg" alt="">
+        Pano
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#tabs">Tabs</a>
+        <a href="#features" class="optional">Features</a>
+        <a href="#install">Install</a>
+        <a href="https://github.com/aripdcom/pano">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">Early development</span>
+        <h1>A terminal for GNOME that puts your tabs where you want them</h1>
+        <p>
+          Pano is a fast, native terminal emulator built with GTK&nbsp;4,
+          libadwaita and VTE. It keeps everything you know from GNOME Terminal
+          and adds the power-user features it leaves out.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#install">Build from source</a>
+          <a class="button" href="https://github.com/aripdcom/pano">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tabs">
+      <div class="container">
+        <h2>Tabs on any side</h2>
+        <p class="lead">
+          Place the tab bar at the top, bottom, left or right of the window.
+          On the left and right, tabs become a vertical list, so long titles
+          stay readable even with many tabs open. Change it any time in
+          <em>Preferences → Appearance → Tab Bar Position</em>.
+        </p>
+
+        <figure class="showcase">
+          <div class="segmented" role="group" aria-label="Tab bar position">
+            <button type="button" data-position="top" aria-pressed="false">Top</button>
+            <button type="button" data-position="bottom" aria-pressed="false">Bottom</button>
+            <button type="button" data-position="left" aria-pressed="true">Left</button>
+            <button type="button" data-position="right" aria-pressed="false">Right</button>
+          </div>
+          <div class="screenshot">
+            <picture>
+              <source id="shot-dark" srcset="images/tabs-left-dark.png" media="(prefers-color-scheme: dark)">
+              <img id="shot" src="images/tabs-left-light.png" alt="Pano with the tabs shown as a vertical list on the left">
+            </picture>
+          </div>
+          <figcaption>The terminal keeps its size in rows and columns when you move the tabs.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2>Features</h2>
+        <p class="lead">
+          Pano builds on the solid base of GNOME Terminal. New features land
+          one at a time; follow them on the
+          <a href="https://github.com/aripdcom/pano/issues">roadmap</a>.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag done">Available</span>
+            <h3>Tab bar position</h3>
+            <p>Top, bottom, left or right, with a vertical tab list for the sides.</p>
+          </article>
+          <article class="card">
+            <span class="tag done">Available</span>
+            <h3>Profiles</h3>
+            <p>Separate fonts, colors, commands and scrolling settings for each kind of work.</p>
+          </article>
+          <article class="card">
+            <span class="tag done">Available</span>
+            <h3>Native GNOME look</h3>
+            <p>GTK&nbsp;4 and libadwaita, with light and dark styles that follow your system.</p>
+          </article>
+          <article class="card">
+            <span class="tag done">Available</span>
+            <h3>Search and links</h3>
+            <p>Search the scrollback with regular expressions and open links and hyperlinks with a click.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Planned</span>
+            <h3>Split panes</h3>
+            <p>Run several terminals side by side in one tab.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Planned</span>
+            <h3>Session restore</h3>
+            <p>Reopen your windows, tabs and working directories after a restart.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Planned</span>
+            <h3>Transparency</h3>
+            <p>Adjustable background opacity for each profile.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Planned</span>
+            <h3>Command notifications</h3>
+            <p>Get notified when a long-running command finishes in a background tab.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <div class="container steps">
+        <h2>Install</h2>
+        <p class="lead">
+          There are no packages yet. Build Pano from source; it is tested
+          with GTK&nbsp;4.24, libadwaita&nbsp;1.10 and VTE&nbsp;0.84.
+        </p>
+
+        <h3>1. Install the build dependencies</h3>
+        <p>Fedora:</p>
+<pre><code>sudo dnf install meson ninja-build gcc-c++ gtk4-devel libadwaita-devel \
+    vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel \
+    gettext itstool desktop-file-utils libxslt docbook-style-xsl</code></pre>
+        <p>Debian and Ubuntu:</p>
+<pre><code>sudo apt install meson ninja-build g++ libgtk-4-dev libadwaita-1-dev \
+    libvte-2.91-gtk4-dev libpcre2-dev uuid-dev gsettings-desktop-schemas-dev \
+    gettext itstool desktop-file-utils xsltproc docbook-xsl</code></pre>
+
+        <h3>2. Build and install</h3>
+<pre><code>git clone https://github.com/aripdcom/pano.git
+cd pano
+meson setup _build --prefix=$HOME/.local -Dsearch_provider=false -Dnautilus_extension=false
+ninja -C _build
+ninja -C _build install</code></pre>
+
+        <p class="note">
+          If your distribution ships an older VTE, add
+          <code>--force-fallback-for=vte-2.91-gtk4</code> to the
+          <code>meson setup</code> command to build VTE along with Pano.
+          Pano has not been renamed yet, so it still installs as
+          <code>gnome-terminal</code>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Pano is free software under the
+        <a href="https://github.com/aripdcom/pano/blob/main/COPYING">GNU GPL v3 or later</a>.
+        Source code and issues on <a href="https://github.com/aripdcom/pano">GitHub</a>.
+      </p>
+      <p>
+        Pano is a fork of GNOME Terminal and is not affiliated with or
+        endorsed by the GNOME Foundation.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Switch the tab position screenshot. The <picture> element picks the
+    // light or dark image from the system color scheme.
+    const buttons = document.querySelectorAll(".segmented button");
+    const img = document.getElementById("shot");
+    const dark = document.getElementById("shot-dark");
+    const labels = {
+      top: "Pano with the tab bar at the top of the window",
+      bottom: "Pano with the tab bar at the bottom of the window",
+      left: "Pano with the tabs shown as a vertical list on the left",
+      right: "Pano with the tabs shown as a vertical list on the right",
+    };
+
+    for (const button of buttons) {
+      button.addEventListener("click", () => {
+        const position = button.dataset.position;
+        for (const other of buttons)
+          other.setAttribute("aria-pressed", String(other === button));
+        dark.srcset = `images/tabs-${position}-dark.png`;
+        img.src = `images/tabs-${position}-light.png`;
+        img.alt = labels[position];
+      });
+    }
+  </script>
+</body>
+</html>
