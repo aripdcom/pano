@@ -191,6 +191,22 @@ void terminal_screen_set_broadcast_excluded(TerminalScreen* screen,
 
 gboolean terminal_screen_get_broadcast_excluded(TerminalScreen* screen);
 
+typedef struct {
+  double position; /* from 0 at the top of the scrollback to 1 at the bottom */
+  gboolean failed; /* the command exited with a non-zero status */
+} TerminalScrollMark;
+
+GArray* terminal_screen_dup_scroll_marks(TerminalScreen* screen);
+
+long terminal_screen_get_row_at(TerminalScreen* screen,
+                                double y);
+
+gboolean terminal_screen_has_command_output_at(TerminalScreen* screen,
+                                               long row);
+
+char* terminal_screen_dup_command_output_at(TerminalScreen* screen,
+                                            long row);
+
 void terminal_screen_get_visible_rows(TerminalScreen* screen,
                                       long* first_row,
                                       long* last_row);
@@ -218,6 +234,7 @@ struct _TerminalScreenPopupInfo {
   char *timestamp_info;
   double x;
   double y;
+  long row; /* the absolute row under the pointer, or -1 */
   guint button;
   guint state;
   guint32 timestamp;

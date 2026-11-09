@@ -806,6 +806,24 @@ action_copy_output_cb(GSimpleAction* action,
   window_show_copy_toast(window);
 }
 
+static void
+action_copy_output_here_cb(GSimpleAction* action,
+                           GVariant* parameter,
+                           gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (!window->active_screen || !window->popup_info)
+    return;
+
+  gs_free char* text = terminal_screen_dup_command_output_at(window->active_screen,
+                                                             window->popup_info->row);
+  if (!text)
+    return;
+
+  gdk_clipboard_set_text(window->clipboard, text);
+  window_show_copy_toast(window);
+}
+
 /* Prompt jumping and copying command output need shell integration. The
  * shortcuts are only taken from the terminal while they can work. */
 static void
@@ -2457,7 +2475,10 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   menu_append (section4, _("_Copy"), "win.copy::text");
   menu_append (section4, _("Copy as _HTML"), "win.copy::html");
   menu_append (section4, _("_Paste"), "win.paste-text");
-  if (terminal_screen_has_command_output (screen))
+  // The command under the pointer, else the last one
+  if (terminal_screen_has_command_output_at (screen, info->row))
+    menu_append (section4, _("Copy _Output of This Command"), "win.copy-output-here");
+  else if (terminal_screen_has_command_output (screen))
     menu_append (section4, _("Copy _Output of Last Command"), "win.copy-output");
   if (g_action_get_enabled (G_ACTION (lookup_action (window, "paste-uris"))))
     menu_append (section4, _("Paste as _Filenames"), "win.paste-uris");
@@ -3156,6 +3177,7 @@ terminal_window_init (TerminalWindow *window)
     { "reopen-tab",          action_reopen_tab_cb,       nullptr,   nullptr, nullptr },
     { "set-title",           action_set_title_cb,        nullptr,   nullptr, nullptr },
     { "copy-output",         action_copy_output_cb,      nullptr,   nullptr, nullptr },
+    { "copy-output-here",    action_copy_output_here_cb, nullptr,   nullptr, nullptr },
     { "scroll-to-prompt",    action_prompt_cb,           "s",    nullptr, nullptr },
     { "copy",                action_copy_cb,             "s",    nullptr, nullptr },
     { "copy-hyperlink",      action_copy_hyperlink_cb,   nullptr,   nullptr, nullptr },

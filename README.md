@@ -90,8 +90,10 @@ Everything GNOME Terminal provides, plus:
   `~/.bashrc`.
 * **Prompt navigation**: with the same shell integration, jump between the
   prompts of earlier commands with Ctrl+Shift+Up and Ctrl+Shift+Down, and
-  copy the output of the last command with Ctrl+Shift+O or from the context
-  menu. Without shell integration these keys keep their usual meaning.
+  copy the output of the last command with Ctrl+Shift+O, or that of any
+  command by right-clicking it. Marks next to the scrollbar show where the
+  commands are, in red for those that failed. Without shell integration
+  these keys keep their usual meaning.
 * **Better search**: the find bar highlights every match, shows which match
   is current out of how many ("3 of 17"), and says when a regular expression
   is invalid.

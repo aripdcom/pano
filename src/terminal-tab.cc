@@ -30,6 +30,7 @@
 #include <gtk/gtk.h>
 
 #include <algorithm>
+#include <cmath>
 
 /* TerminalPane: a single terminal with its scrolled window and overlays,
  * below an optional title bar */
@@ -46,9 +47,43 @@ struct _TerminalPane
   GtkWidget* title_bar;
   GtkWidget* overlay;
   GtkWidget* scrolled_window;
+  GtkWidget* scroll_marks; // over the scrollbar
 };
 
 G_DEFINE_FINAL_TYPE (TerminalPane, terminal_pane, GTK_TYPE_WIDGET)
+
+/* Marks next to the scrollbar for the commands that ran, from shell
+ * integration; red for those that failed */
+static void
+scroll_marks_draw_cb(GtkDrawingArea* area,
+                     cairo_t* cr,
+                     int width,
+                     int height,
+                     TerminalPane* pane)
+{
+  if (!pane->screen)
+    return;
+
+  gs_unref_array auto marks = terminal_screen_dup_scroll_marks(pane->screen);
+  if (marks->len == 0)
+    return;
+
+  GdkRGBA color;
+  gtk_widget_get_color(GTK_WIDGET(area), &color);
+  static GdkRGBA const failed_color = {0.88f, 0.11f, 0.14f, 1.0f};
+
+  for (auto i = 0u; i < marks->len; ++i) {
+    auto const& mark = g_array_index(marks, TerminalScrollMark, i);
+    auto const y = std::clamp(mark.position * height, 0.0, double(height - 2));
+
+    if (mark.failed)
+      gdk_cairo_set_source_rgba(cr, &failed_color);
+    else
+      cairo_set_source_rgba(cr, color.red, color.green, color.blue, 0.45);
+    cairo_rectangle(cr, 0, floor(y), width, 2);
+    cairo_fill(cr);
+  }
+}
 
 static void
 terminal_pane_init(TerminalPane* pane)
@@ -70,6 +105,17 @@ terminal_pane_init(TerminalPane* pane)
                             "propagate-natural-height", TRUE,
                             nullptr));
   gtk_overlay_set_child(GTK_OVERLAY(pane->overlay), pane->scrolled_window);
+
+  pane->scroll_marks = gtk_drawing_area_new();
+  gtk_widget_add_css_class(pane->scroll_marks, "scroll-marks");
+  gtk_widget_set_halign(pane->scroll_marks, GTK_ALIGN_END);
+  gtk_widget_set_size_request(pane->scroll_marks, 4, -1);
+  gtk_widget_set_can_target(pane->scroll_marks, false);
+  gtk_widget_set_can_focus(pane->scroll_marks, false);
+  gtk_drawing_area_set_draw_func(GTK_DRAWING_AREA(pane->scroll_marks),
+                                 GtkDrawingAreaDrawFunc(scroll_marks_draw_cb),
+                                 pane, nullptr);
+  gtk_overlay_add_overlay(GTK_OVERLAY(pane->overlay), pane->scroll_marks);
 }
 
 static void
@@ -118,6 +164,9 @@ terminal_pane_set_policy(TerminalPane* pane,
                                  vpolicy_to_gtk(vpolicy));
   gtk_scrolled_window_set_overlay_scrolling(scrolled_window,
                                             vpolicy == TERMINAL_SCROLLBAR_POLICY_OVERLAY);
+
+  // The marks go with the scrollbar
+  gtk_widget_set_visible(pane->scroll_marks, vpolicy != TERMINAL_SCROLLBAR_POLICY_NEVER);
 }
 
 static TerminalPane*
@@ -132,6 +181,15 @@ terminal_pane_new(TerminalScreen* screen,
   g_object_bind_property(screen, "title", pane->title_bar, "label", G_BINDING_SYNC_CREATE);
   gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(pane->scrolled_window),
                                 GTK_WIDGET(screen));
+
+  // Redraw the marks when they change, and when the scrollback grows
+  g_signal_connect_object(screen, "prompts-changed",
+                          G_CALLBACK(gtk_widget_queue_draw), pane->scroll_marks,
+                          G_CONNECT_SWAPPED);
+  if (auto const adjustment = gtk_scrollable_get_vadjustment(GTK_SCROLLABLE(screen)))
+    g_signal_connect_object(adjustment, "changed",
+                            G_CALLBACK(gtk_widget_queue_draw), pane->scroll_marks,
+                            G_CONNECT_SWAPPED);
   // The real policy is applied from the profile once the screen is rooted
   terminal_pane_set_policy(pane, TERMINAL_SCROLLBAR_POLICY_NEVER);
   gtk_widget_set_visible(pane->scrolled_window, visible);
