@@ -99,6 +99,8 @@ Everything GNOME Terminal provides, plus:
   main menu (*New Tab in Container*). New tabs and panes opened from a
   terminal in a container start in the same container; turn this off in
   *Preferences → Behavior*. Containers are found with podman.
+* **Copy notice**: a short "Copied to clipboard" notice confirms copying;
+  turn it off with *Confirm Copying* in *Preferences → Behavior*.
 * **Middle-click on a tab**: choose in *Preferences → Behavior* whether a
   middle click on a tab, in the tab bar or the tab list, closes it, pastes
   the selection into it, or does nothing (the default).

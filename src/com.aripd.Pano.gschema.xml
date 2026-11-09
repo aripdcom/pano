@@ -837,6 +837,11 @@
 
     <!-- Default terminal -->
 
+    <key name="toast-on-copy" type="b">
+      <default>true</default>
+      <summary>Whether to show a short notice after copying to the clipboard</summary>
+    </key>
+
     <key name="notify-command-finished" type="b">
       <default>true</default>
       <summary>Whether to notify when a long-running command finishes in the background</summary>

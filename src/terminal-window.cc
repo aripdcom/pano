@@ -71,6 +71,7 @@ struct _TerminalWindow
   GtkWidget* content_box;
   AdwToastOverlay* toast_overlay;
   AdwToast* closed_tab_toast; // weak pointer
+  AdwToast* copy_toast; // weak pointer
   GtkWidget *main_vbox;
   GtkWidget* ask_default_infobar;
   AdwBanner* broadcast_banner;
@@ -851,6 +852,25 @@ action_prompt_cb(GSimpleAction* action,
   terminal_screen_scroll_to_prompt(window->active_screen, direction);
 }
 
+/* Tells that something was copied, unless turned off. A new notice
+ * replaces the last one rather than waiting behind it. */
+static void
+window_show_copy_toast(TerminalWindow* window)
+{
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  if (!g_settings_get_boolean(settings, TERMINAL_SETTING_TOAST_ON_COPY_KEY))
+    return;
+
+  if (window->copy_toast)
+    adw_toast_dismiss(window->copy_toast);
+
+  auto const toast = adw_toast_new(_("Copied to clipboard"));
+  adw_toast_set_timeout(toast, 2);
+  window->copy_toast = toast;
+  g_object_add_weak_pointer(G_OBJECT(toast), reinterpret_cast<void**>(&window->copy_toast));
+  adw_toast_overlay_add_toast(window->toast_overlay, toast);
+}
+
 static void
 action_copy_output_cb(GSimpleAction* action,
                       GVariant* parameter,
@@ -861,8 +881,11 @@ action_copy_output_cb(GSimpleAction* action,
     return;
 
   gs_free char* text = terminal_screen_dup_command_output(window->active_screen);
-  if (text)
-    gdk_clipboard_set_text(window->clipboard, text);
+  if (!text)
+    return;
+
+  gdk_clipboard_set_text(window->clipboard, text);
+  window_show_copy_toast(window);
 }
 
 /* Prompt jumping and copying command output need shell integration. The
@@ -1066,7 +1089,11 @@ action_copy_cb (GSimpleAction *action,
   else
     return;
 
+  if (!vte_terminal_get_has_selection (VTE_TERMINAL (window->active_screen)))
+    return;
+
   vte_terminal_copy_clipboard_format (VTE_TERMINAL (window->active_screen), format);
+  window_show_copy_toast (window);
 }
 
 /* Clipboard helpers */
@@ -1725,6 +1752,7 @@ action_copy_match_cb (GSimpleAction *action,
     return;
 
   gdk_clipboard_set_text (window->clipboard, info->url);
+  window_show_copy_toast (window);
 }
 
 static void
@@ -1758,6 +1786,7 @@ action_copy_hyperlink_cb (GSimpleAction *action,
     return;
 
   gdk_clipboard_set_text (window->clipboard, info->hyperlink);
+  window_show_copy_toast (window);
 }
 
 static void
@@ -3336,6 +3365,11 @@ terminal_window_dispose (GObject *object)
     g_object_remove_weak_pointer(G_OBJECT(window->closed_tab_toast),
                                  reinterpret_cast<void**>(&window->closed_tab_toast));
     window->closed_tab_toast = nullptr;
+  }
+  if (window->copy_toast) {
+    g_object_remove_weak_pointer(G_OBJECT(window->copy_toast),
+                                 reinterpret_cast<void**>(&window->copy_toast));
+    window->copy_toast = nullptr;
   }
 
   // Before the tabs go away, so that the last window can be restored

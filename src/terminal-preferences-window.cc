@@ -43,6 +43,7 @@ struct _TerminalPreferencesWindow
   GListModel           *new_terminal_modes;
   GtkListBox           *profiles_list_box;
   AdwSwitchRow         *notify_command_finished;
+  AdwSwitchRow         *toast_on_copy;
   AdwSpinRow           *notify_command_min_duration;
   AdwSwitchRow         *restore_session;
   AdwSwitchRow         *preserve_container;
@@ -520,6 +521,11 @@ terminal_preferences_window_constructed (GObject *object)
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_TOAST_ON_COPY_KEY,
+                   self->toast_on_copy,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_NOTIFY_COMMAND_FINISHED_KEY,
                    self->notify_command_finished,
                    "active",
@@ -678,6 +684,7 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, add_profile_row);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, always_check_default);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_finished);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, toast_on_copy);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_min_duration);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_session);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, preserve_container);
