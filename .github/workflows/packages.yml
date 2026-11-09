@@ -25,7 +25,7 @@ jobs:
           meson ninja-build gcc-c++ pkgconf gtk4-devel libadwaita-devel
           vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel
           glib2-devel gettext itstool desktop-file-utils libxslt docbook-style-xsl
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Make the source tarball
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -38,7 +38,7 @@ jobs:
           rpmbuild -bb packaging/fedora/pano-terminal.spec
           cp _build/meson-dist/*.tar.xz out/
           find ~/rpmbuild/RPMS -name '*.rpm' ! -name '*-debug*' -exec cp {} out/ \;
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: rpm
           path: out/*
@@ -55,7 +55,7 @@ jobs:
           apt-get update
           apt-get install -y --no-install-recommends \
             ca-certificates git devscripts equivs debhelper dpkg-dev fakeroot
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build the package
         env:
           DEBIAN_FRONTEND: noninteractive
@@ -65,7 +65,7 @@ jobs:
           dpkg-buildpackage -us -uc -b
           mkdir out
           find .. -maxdepth 1 -name '*.deb' ! -name '*-dbgsym*' -exec cp {} out/ \;
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: deb
           path: out/*
@@ -78,7 +78,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: assets
           merge-multiple: true

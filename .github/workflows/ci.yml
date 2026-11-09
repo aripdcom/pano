@@ -22,7 +22,7 @@ jobs:
           vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel
           glib2-devel gettext itstool desktop-file-utils libxslt docbook-style-xsl
           appstream
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Configure
         run: meson setup _build -Dsearch_provider=true -Dnautilus_extension=false
       - name: Build
@@ -47,7 +47,7 @@ jobs:
             libgtk-4-dev libadwaita-1-dev libvte-2.91-gtk4-dev libpcre2-dev \
             uuid-dev gsettings-desktop-schemas-dev libglib2.0-dev-bin gettext \
             itstool desktop-file-utils xsltproc docbook-xsl
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Configure
         run: meson setup _build -Dsearch_provider=true -Dnautilus_extension=false
       - name: Build
