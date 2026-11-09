@@ -456,6 +456,10 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to toggle the read-only state</summary>
     </key>
+    <key name="set-terminal-title" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to set a title for the terminal that programs cannot change</summary>
+    </key>
     <key name="reset" type="s">
       <default>'disabled'</default>
       <summary>Keyboard shortcut to reset the terminal</summary>
@@ -836,6 +840,12 @@
     </key>
 
     <!-- Default terminal -->
+
+    <key name="ignore-program-titles" type="b">
+      <default>false</default>
+      <summary>Whether to ignore the titles that programs set</summary>
+      <description>If true, terminals show the title set with “Set Title…” or the --title option, or else their working directory, instead of the title that programs set with escape sequences.</description>
+    </key>
 
     <key name="toast-on-copy" type="b">
       <default>true</default>

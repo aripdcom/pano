@@ -128,6 +128,9 @@ struct _TerminalScreenPrivate
   gboolean registered; /* D-Bus interface is registered */
 
   GSettings *profile; /* never nullptr */
+  char* user_title; /* set with Set Title, or nullptr */
+  char* initial_title; /* from --title, or nullptr */
+  char* directory_title; /* the working directory, when no title is set */
   GtkWidget* bell_flash; /* the visual bell's overlay, while it shows */
   guint bell_flash_source;
   guint profile_changed_id;
@@ -884,10 +887,20 @@ terminal_screen_find_process_kind(TerminalScreen* screen)
   return TERMINAL_PROCESS_KIND_NORMAL;
 }
 
+static void terminal_screen_update_directory_title(TerminalScreen* screen);
+static void terminal_screen_ignore_program_titles_changed_cb(TerminalScreen* screen);
+static void terminal_screen_cwd_changed_cb(TerminalScreen* screen,
+                                           const char* prop,
+                                           void* user_data);
+
 static void
 terminal_screen_update_process_kind(TerminalScreen* screen)
 {
   auto const priv = screen->priv;
+
+  // Without shell integration, the working directory has no signal either
+  terminal_screen_update_directory_title(screen);
+
   auto const kind = terminal_screen_find_process_kind(screen);
   if (kind == priv->process_kind)
     return;
@@ -1462,6 +1475,13 @@ terminal_screen_init (TerminalScreen *screen)
   g_signal_connect(screen, "bell",
                    G_CALLBACK(terminal_screen_bell_cb), nullptr);
 
+  g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_CURRENT_DIRECTORY_URI,
+                   G_CALLBACK(terminal_screen_cwd_changed_cb), nullptr);
+  g_signal_connect_object(terminal_app_get_global_settings(terminal_app_get()),
+                          "changed::" TERMINAL_SETTING_IGNORE_PROGRAM_TITLES_KEY,
+                          G_CALLBACK(terminal_screen_ignore_program_titles_changed_cb),
+                          screen, G_CONNECT_SWAPPED);
+
   // A new foreground program usually prints something; look then
   g_signal_connect(screen, "contents-changed",
                    G_CALLBACK(terminal_screen_queue_process_kind_update), nullptr);
@@ -1789,6 +1809,9 @@ terminal_screen_finalize (GObject *object)
   g_clear_pointer (&priv->search_matches, g_array_unref);
 
   g_free (priv->uuid);
+  g_free (priv->user_title);
+  g_free (priv->initial_title);
+  g_free (priv->directory_title);
 
   G_OBJECT_CLASS (terminal_screen_parent_class)->finalize (object);
 }
@@ -1809,8 +1832,11 @@ terminal_screen_new (GSettings       *profile,
                          g_settings_get_int (profile, TERMINAL_PROFILE_DEFAULT_SIZE_ROWS_KEY));
 
   /* If given an initial title, strip it of control characters and
-   * feed it to the terminal.
+   * feed it to the terminal. It is also kept for when the titles that
+   * programs set are ignored.
    */
+  if (title != nullptr && title[0])
+    screen->priv->initial_title = g_strdup (title);
   if (title != nullptr) {
     GString *seq;
     const char *p;
@@ -2044,10 +2070,110 @@ terminal_screen_exec (TerminalScreen *screen,
   return TRUE;
 }
 
+/**
+ * terminal_screen_get_title:
+ * @screen: a #TerminalScreen
+ *
+ * Returns: the title: the one set by the user, else the one the program
+ *   set (unless those are ignored), else the one from --title, else the
+ *   working directory
+ */
 const char*
 terminal_screen_get_title (TerminalScreen *screen)
 {
-  return vte_terminal_get_window_title (VTE_TERMINAL (screen));
+  auto const priv = screen->priv;
+  if (priv->user_title)
+    return priv->user_title;
+
+  auto const settings = terminal_app_get_global_settings (terminal_app_get ());
+  if (!g_settings_get_boolean (settings, TERMINAL_SETTING_IGNORE_PROGRAM_TITLES_KEY)) {
+    auto const title = vte_terminal_get_window_title (VTE_TERMINAL (screen));
+    if (title && title[0])
+      return title;
+  }
+
+  if (priv->initial_title)
+    return priv->initial_title;
+
+  return priv->directory_title ? priv->directory_title : "";
+}
+
+/**
+ * terminal_screen_get_user_title:
+ * @screen: a #TerminalScreen
+ *
+ * Returns: (nullable): the title set by the user
+ */
+const char*
+terminal_screen_get_user_title (TerminalScreen* screen)
+{
+  g_return_val_if_fail (TERMINAL_IS_SCREEN (screen), nullptr);
+
+  return screen->priv->user_title;
+}
+
+/**
+ * terminal_screen_set_user_title:
+ * @screen: a #TerminalScreen
+ * @title: (nullable): the title, or %NULL or "" to go back to the others
+ *
+ * Sets a title that programs cannot change.
+ */
+void
+terminal_screen_set_user_title (TerminalScreen* screen,
+                                const char* title)
+{
+  g_return_if_fail (TERMINAL_IS_SCREEN (screen));
+
+  auto const priv = screen->priv;
+  gs_free char* stripped = title ? g_strstrip (g_strdup (title)) : nullptr;
+  auto const value = stripped && stripped[0] ? stripped : nullptr;
+  if (g_strcmp0 (value, priv->user_title) == 0)
+    return;
+
+  g_free (priv->user_title);
+  priv->user_title = g_strdup (value);
+  g_object_notify_by_pspec (G_OBJECT (screen), pspecs[PROP_TITLE]);
+}
+
+/* The working directory, with ~ for the home folder */
+static void
+terminal_screen_update_directory_title (TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+  gs_free char* dir = terminal_screen_get_current_dir (screen);
+  gs_free char* title = nullptr;
+  if (dir) {
+    auto const home = g_get_home_dir ();
+    auto const len = strlen (home);
+    if (g_str_equal (dir, home))
+      title = g_strdup ("~");
+    else if (len > 1 && g_str_has_prefix (dir, home) && dir[len] == '/')
+      title = g_strconcat ("~", dir + len, nullptr);
+    else
+      title = g_strdup (dir);
+  }
+
+  if (g_strcmp0 (title, priv->directory_title) == 0)
+    return;
+
+  g_free (priv->directory_title);
+  priv->directory_title = static_cast<char*>(g_steal_pointer (&title));
+  g_object_notify_by_pspec (G_OBJECT (screen), pspecs[PROP_TITLE]);
+}
+
+static void
+terminal_screen_ignore_program_titles_changed_cb (TerminalScreen* screen)
+{
+  g_object_notify_by_pspec (G_OBJECT (screen), pspecs[PROP_TITLE]);
+}
+
+static void
+terminal_screen_cwd_changed_cb (TerminalScreen* screen,
+                                const char* prop,
+                                void* user_data)
+{
+  terminal_screen_update_directory_title (screen);
 }
 
 static void

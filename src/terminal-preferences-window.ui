@@ -243,6 +243,12 @@
               </object>
             </child>
             <child>
+              <object class="AdwSwitchRow" id="ignore_program_titles">
+                <property name="title" translatable="yes">Ignore Titles Set by Programs</property>
+                <property name="subtitle" translatable="yes">Show the title set with Set Title, or else the working directory</property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="toast_on_copy">
                 <property name="title" translatable="yes">Confirm Copying</property>
                 <property name="subtitle" translatable="yes">Show a short notice after copying to the clipboard</property>

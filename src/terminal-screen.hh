@@ -114,6 +114,9 @@ GSettings* terminal_screen_get_profile (TerminalScreen *screen);
 GSettings* terminal_screen_ref_profile (TerminalScreen *screen);
 
 const char* terminal_screen_get_title          (TerminalScreen *screen);
+const char* terminal_screen_get_user_title (TerminalScreen* screen);
+void terminal_screen_set_user_title (TerminalScreen* screen,
+                                     const char* title);
 
 char *terminal_screen_get_current_dir (TerminalScreen *screen);
 

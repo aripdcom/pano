@@ -2051,6 +2051,79 @@ action_notebook_tab_close_others_cb(GSimpleAction* action,
 }
 
 static void
+set_title_response_cb(AdwMessageDialog* dialog,
+                      char const* response,
+                      TerminalScreen* screen)
+{
+  if (!g_str_equal(response, "set"))
+    return;
+
+  auto const entry = GTK_EDITABLE(adw_message_dialog_get_extra_child(dialog));
+  terminal_screen_set_user_title(screen, gtk_editable_get_text(entry));
+}
+
+/* Asks for a title for @screen that programs cannot change */
+static void
+window_ask_screen_title(TerminalWindow* window,
+                        TerminalScreen* screen)
+{
+  auto const dialog = ADW_MESSAGE_DIALOG(adw_message_dialog_new(GTK_WINDOW(window),
+                                                                _("Set Title"),
+                                                                _("Programs cannot change this title. Leave it empty to show the title from the program again.")));
+  adw_message_dialog_add_responses(dialog,
+                                   "cancel", _("_Cancel"),
+                                   "set", _("_Set"),
+                                   nullptr);
+  adw_message_dialog_set_response_appearance(dialog, "set", ADW_RESPONSE_SUGGESTED);
+  adw_message_dialog_set_default_response(dialog, "set");
+  adw_message_dialog_set_close_response(dialog, "cancel");
+
+  auto const entry = gtk_entry_new();
+  gtk_entry_set_activates_default(GTK_ENTRY(entry), true);
+  auto const user_title = terminal_screen_get_user_title(screen);
+  gtk_editable_set_text(GTK_EDITABLE(entry),
+                        user_title ? user_title : terminal_screen_get_title(screen));
+  adw_message_dialog_set_extra_child(dialog, entry);
+
+  // The screen may close while the dialog is open
+  g_signal_connect_object(dialog, "response",
+                          G_CALLBACK(set_title_response_cb), screen,
+                          GConnectFlags(0));
+  g_signal_connect_object(screen, "destroy",
+                          G_CALLBACK(gtk_window_destroy), dialog,
+                          G_CONNECT_SWAPPED);
+
+  gtk_window_present(GTK_WINDOW(dialog));
+  gtk_widget_grab_focus(entry);
+}
+
+static void
+action_notebook_set_title_cb(GSimpleAction* action,
+                             GVariant* parameter,
+                             void* user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (!window->notebook_context_tab)
+    return;
+
+  auto const tab = window->notebook_context_tab;
+  window->notebook_context_tab = nullptr;
+
+  if (auto const screen = terminal_tab_get_screen(tab))
+    window_ask_screen_title(window, screen);
+}
+
+static void
+action_set_title_cb(GSimpleAction* action,
+                    GVariant* parameter,
+                    void* user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (window->active_screen)
+    window_ask_screen_title(window, window->active_screen);
+}
+
+static void
 action_notebook_tab_detach_cb(GSimpleAction* action,
                               GVariant* parameter,
                               void* user_data)
@@ -3009,6 +3082,7 @@ terminal_window_init (TerminalWindow *window)
     { "close",               action_close_cb,            "s",    nullptr, nullptr },
     { "close-pane",          action_close_pane_cb,       nullptr,   nullptr, nullptr },
     { "reopen-tab",          action_reopen_tab_cb,       nullptr,   nullptr, nullptr },
+    { "set-title",           action_set_title_cb,        nullptr,   nullptr, nullptr },
     { "copy-output",         action_copy_output_cb,      nullptr,   nullptr, nullptr },
     { "scroll-to-prompt",    action_prompt_cb,           "s",    nullptr, nullptr },
     { "copy",                action_copy_cb,             "s",    nullptr, nullptr },
@@ -3076,6 +3150,7 @@ terminal_window_init (TerminalWindow *window)
   static GActionEntry const notebook_context_action_entries[] = {
     { "notebook-tab-close",      action_notebook_tab_close_cb,      nullptr, nullptr, nullptr },
     { "notebook-tab-close-others", action_notebook_tab_close_others_cb, nullptr, nullptr, nullptr },
+    { "notebook-set-title",      action_notebook_set_title_cb,      nullptr, nullptr, nullptr },
     { "notebook-tab-detach",     action_notebook_tab_detach_cb,     nullptr, nullptr, nullptr },
     { "notebook-tab-move-left",  action_notebook_tab_move_left_cb,  nullptr, nullptr, nullptr },
     { "notebook-tab-move-right", action_notebook_tab_move_right_cb, nullptr, nullptr, nullptr },

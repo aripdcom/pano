@@ -107,6 +107,7 @@ G_BEGIN_DECLS
 #define TERMINAL_SETTING_QUICK_TERMINAL_HEIGHT_KEY      "quick-terminal-height"
 #define TERMINAL_SETTING_NOTIFY_COMMAND_FINISHED_KEY    "notify-command-finished"
 #define TERMINAL_SETTING_TOAST_ON_COPY_KEY              "toast-on-copy"
+#define TERMINAL_SETTING_IGNORE_PROGRAM_TITLES_KEY      "ignore-program-titles"
 #define TERMINAL_SETTING_NOTIFY_COMMAND_MIN_DURATION_KEY "notify-command-min-duration"
 #define TERMINAL_SETTING_RESTORE_WINDOW_SIZE_KEY        "restore-window-size"
 

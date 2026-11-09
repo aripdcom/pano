@@ -90,6 +90,7 @@
 #define KEY_FOCUS_TAB_LIST      "focus-tab-list"
 #define KEY_REOPEN_TAB          "reopen-closed-tab"
 #define KEY_CLOSE_OTHER_TABS    "close-other-tabs"
+#define KEY_SET_TITLE           "set-terminal-title"
 #define KEY_BROADCAST_TAB       "broadcast-tab"
 #define KEY_BROADCAST_WINDOW    "broadcast-window"
 #define KEY_SPLIT_RIGHT         "split-right"
@@ -193,6 +194,7 @@ static KeyEntry view_entries[] = {
 
 static KeyEntry terminal_entries[] = {
   ENTRY (N_("Read-Only"),       KEY_READ_ONLY,          "read-only", nullptr, nullptr   ),
+  ENTRY (N_("Set Title"),       KEY_SET_TITLE,          "set-title", nullptr, nullptr   ),
   ENTRY (N_("Reset"),           KEY_RESET,              "reset",     "b",  "false"),
   ENTRY (N_("Reset and Clear"), KEY_RESET_AND_CLEAR,    "reset",     "b",  "true" ),
   ENTRY_PROMPT (N_("Scroll to Previous Prompt"),    KEY_PREV_PROMPT, "scroll-to-prompt", "s", "'previous'"),

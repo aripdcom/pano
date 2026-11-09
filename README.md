@@ -99,6 +99,11 @@ Everything GNOME Terminal provides, plus:
   main menu (*New Tab in Container*). New tabs and panes opened from a
   terminal in a container start in the same container; turn this off in
   *Preferences → Behavior*. Containers are found with podman.
+* **Tab titles**: *Set Title…* in a tab's menu gives the terminal a title
+  that programs cannot change, which is kept with the session. To ignore
+  the titles that programs set everywhere, turn on *Ignore Titles Set by
+  Programs* in *Preferences → Behavior*. A terminal without a title shows
+  its working directory.
 * **Copy notice**: a short "Copied to clipboard" notice confirms copying;
   turn it off with *Confirm Copying* in *Preferences → Behavior*.
 * **Middle-click on a tab**: choose in *Preferences → Behavior* whether a

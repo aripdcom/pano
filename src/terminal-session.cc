@@ -42,7 +42,8 @@
  * and "height" (i, in pixels) and, unless its active tab is split,
  * "columns" and "rows" (i). A tab has "layout" (see terminal-tab.hh),
  * "active" (i, the index of the active pane), "pinned" and "zoomed" (b).
- * A pane has "profile" (s, a profile UUID), "cwd" (s) and "zoom" (d).
+ * A pane has "profile" (s, a profile UUID), "cwd" (s), "zoom" (d) and,
+ * if the user set one, "title" (s).
  */
 
 #define SESSION_VERSION 1u
@@ -128,6 +129,9 @@ save_screen(TerminalScreen* screen,
 
   g_variant_builder_add(&builder, "{sv}", "zoom",
                         g_variant_new_double(vte_terminal_get_font_scale(VTE_TERMINAL(screen))));
+
+  if (auto const title = terminal_screen_get_user_title(screen))
+    g_variant_builder_add(&builder, "{sv}", "title", g_variant_new_string(title));
 
   gs_free char* container_runtime = nullptr;
   gs_free char* container_name = nullptr;
@@ -456,6 +460,10 @@ restore_screen_cb(GVariant* pane,
     zoom = 1.0;
 
   auto const screen = terminal_screen_new(profile, nullptr, zoom);
+
+  char const* title = nullptr;
+  if (g_variant_lookup(pane, "title", "&s", &title))
+    terminal_screen_set_user_title(screen, title);
 
   char const* container_runtime = nullptr;
   char const* container_name = nullptr;
