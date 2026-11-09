@@ -207,6 +207,16 @@ gboolean terminal_screen_has_command_output_at(TerminalScreen* screen,
 char* terminal_screen_dup_command_output_at(TerminalScreen* screen,
                                             long row);
 
+typedef enum {
+  TERMINAL_QUICK_SELECT_COPY,
+  TERMINAL_QUICK_SELECT_PASTE,
+  TERMINAL_QUICK_SELECT_OPEN,
+} TerminalQuickSelectAction;
+
+gboolean terminal_screen_start_quick_select(TerminalScreen* screen);
+
+void terminal_screen_stop_quick_select(TerminalScreen* screen);
+
 void terminal_screen_get_visible_rows(TerminalScreen* screen,
                                       long* first_row,
                                       long* last_row);

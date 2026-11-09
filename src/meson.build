@@ -169,6 +169,8 @@ server_sources = app_sources + client_util_sources + debug_sources + default_sou
   'terminal-gdbus.hh',
   'terminal-command-palette.cc',
   'terminal-command-palette.hh',
+  'terminal-quick-select.cc',
+  'terminal-quick-select.hh',
   'terminal-gnome-terminal-import.cc',
   'terminal-gnome-terminal-import.hh',
   'terminal-headerbar.cc',
@@ -501,6 +503,21 @@ test_profile_file = executable(
   install: false,
 )
 
+test_quick_select = executable(
+  'test-quick-select',
+  cpp_args: glib_version_cxxflags,
+  dependencies: [
+    glib_dep,
+  ],
+  include_directories: [top_inc, src_inc,],
+  sources: files(
+    'terminal-quick-select.cc',
+    'terminal-quick-select.hh',
+    'test-quick-select.cc',
+  ),
+  install: false,
+)
+
 test_env = [
   'PANO_DEBUG=0',
   'VTE_DEBUG=0',
@@ -510,6 +527,7 @@ test_env = [
 test_units = [
   ['regex', test_regex],
   ['profile-file', test_profile_file],
+  ['quick-select', test_quick_select],
 ]
 
 foreach test: test_units

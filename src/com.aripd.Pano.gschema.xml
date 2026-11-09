@@ -454,6 +454,10 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to toggle the read-only state</summary>
     </key>
+    <key name="quick-select" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;space'</default>
+      <summary>Keyboard shortcut to label URLs, paths and more on the screen, to copy them by typing the label</summary>
+    </key>
     <key name="command-palette" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;p'</default>
       <summary>Keyboard shortcut to open the command palette</summary>
@@ -877,6 +881,12 @@
     <key name="show-pane-titles" type="b">
       <default>false</default>
       <summary>Whether to show a title bar above each pane of a split tab</summary>
+    </key>
+
+    <key name="quick-select-patterns" type="as">
+      <default>[]</default>
+      <summary>Regular expressions for more text that quick select offers</summary>
+      <description>Quick select labels URLs, paths, hashes, addresses and numbers; matches of these Perl-compatible regular expressions are offered too, before those.</description>
     </key>
 
     <key name="ignore-program-titles" type="b">

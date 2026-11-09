@@ -90,6 +90,7 @@
 #define KEY_CLOSE_OTHER_TABS    "close-other-tabs"
 #define KEY_SET_TITLE           "set-terminal-title"
 #define KEY_COMMAND_PALETTE     "command-palette"
+#define KEY_QUICK_SELECT        "quick-select"
 #define KEY_BROADCAST_TAB       "broadcast-tab"
 #define KEY_BROADCAST_WINDOW    "broadcast-window"
 #define KEY_SPLIT_RIGHT         "split-right"
@@ -170,6 +171,7 @@ static KeyEntry view_entries[] = {
   ENTRY (N_("Zoom Out"),              KEY_ZOOM_OUT,       "zoom-out",        nullptr, nullptr),
   ENTRY (N_("Normal Size"),           KEY_ZOOM_NORMAL,    "zoom-normal",     nullptr, nullptr),
   ENTRY (N_("Command Palette"),       KEY_COMMAND_PALETTE, "command-palette", nullptr, nullptr),
+  ENTRY (N_("Quick Select"),          KEY_QUICK_SELECT,   "quick-select",    nullptr, nullptr),
 };
 
 static KeyEntry terminal_entries[] = {

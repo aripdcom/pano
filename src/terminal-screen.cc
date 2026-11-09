@@ -62,6 +62,7 @@
 #include "terminal-marshal.h"
 #include "terminal-schemas.hh"
 #include "terminal-schemes.hh"
+#include "terminal-quick-select.hh"
 #include "terminal-tab.hh"
 #include "terminal-util.hh"
 #include "terminal-window.hh"
@@ -134,6 +135,13 @@ struct _TerminalScreenPrivate
   char* directory_title; /* the working directory, when no title is set */
   GtkWidget* bell_flash; /* the visual bell's overlay, while it shows */
   guint bell_flash_source;
+
+  /* Quick select, while it runs: the labelled matches in the rows from
+   * quick_select_first_row on, and the letters typed so far */
+  GArray* quick_select; /* TerminalQuickSelectMatch */
+  long quick_select_first_row;
+  char quick_select_typed[3];
+  GtkWidget* quick_select_hint;
   guint profile_changed_id;
   guint profile_forgotten_id;
   int child_pid;
@@ -220,6 +228,7 @@ enum
   COMMAND_FINISHED,
   PROMPTS_CHANGED,
   COLUMNS_CHANGED,
+  QUICK_SELECT_CHOSEN,
   LAST_SIGNAL
 };
 
@@ -295,6 +304,11 @@ static char**terminal_screen_get_child_environment (TerminalScreen *screen,
                                                     char **path,
                                                     char **shell);
 
+static void terminal_screen_snapshot_quick_select (TerminalScreen *screen,
+                                                   GtkSnapshot *snapshot);
+static gboolean terminal_screen_quick_select_key (TerminalScreen *screen,
+                                                  guint keyval,
+                                                  GdkModifierType state);
 static void terminal_screen_add_shell_integration (TerminalScreen* screen,
                                                    char** argv,
                                                    gboolean as_shell,
@@ -974,6 +988,9 @@ terminal_screen_key_pressed_cb(GtkEventControllerKey* controller,
 {
   auto const priv = screen->priv;
 
+  if (priv->quick_select)
+    return terminal_screen_quick_select_key (screen, keyval, state);
+
   priv->in_key_event = true;
   if (priv->key_event_source == 0)
     priv->key_event_source = g_idle_add_full(G_PRIORITY_HIGH,
@@ -1244,6 +1261,7 @@ terminal_screen_size_allocate (GtkWidget *widget,
   if (column_count != prev_column_count) {
     if (terminal_screen_validate_prompts (screen))
       g_signal_emit (screen, signals[PROMPTS_CHANGED], 0);
+    terminal_screen_stop_quick_select (screen);
     g_signal_emit (screen, signals[COLUMNS_CHANGED], 0);
   }
 
@@ -1350,9 +1368,223 @@ terminal_screen_snapshot (GtkWidget   *widget,
   GTK_WIDGET_CLASS (terminal_screen_parent_class)->snapshot (widget, snapshot);
 
   terminal_screen_snapshot_search_matches (screen, snapshot);
+  terminal_screen_snapshot_quick_select (screen, snapshot);
 
   gtk_widget_snapshot_child (widget, GTK_WIDGET (priv->drop_highlight), snapshot);
   gtk_widget_snapshot_child (widget, GTK_WIDGET (priv->size_revealer), snapshot);
+}
+
+/* Quick select */
+
+static void
+terminal_screen_snapshot_quick_select (TerminalScreen *screen,
+                                       GtkSnapshot *snapshot)
+{
+  auto const priv = screen->priv;
+  auto const terminal = VTE_TERMINAL (screen);
+  if (!priv->quick_select)
+    return;
+
+  auto const cell_width = double (vte_terminal_get_char_width (terminal));
+  auto const cell_height = double (vte_terminal_get_char_height (terminal));
+  if (cell_width <= 0 || cell_height <= 0)
+    return;
+
+  GtkBorder padding;
+  gtk_style_context_get_padding (gtk_widget_get_style_context (GTK_WIDGET (screen)), &padding);
+
+  long first_row, last_row;
+  terminal_screen_get_visible_rows (screen, &first_row, &last_row);
+  // The rows may have scrolled since the matches were found
+  auto const top = double (padding.top) - double (first_row - priv->quick_select_first_row) * cell_height;
+
+  static GdkRGBA const match_color = {1.0f, 0.8f, 0.0f, 0.25f};
+  static GdkRGBA const label_color = {1.0f, 0.8f, 0.0f, 1.0f};
+  static GdkRGBA const text_color = {0.0f, 0.0f, 0.0f, 1.0f};
+
+  auto font = pango_font_description_copy (vte_terminal_get_font (terminal));
+  pango_font_description_set_weight (font, PANGO_WEIGHT_BOLD);
+  gs_unref_object auto layout = gtk_widget_create_pango_layout (GTK_WIDGET (screen), nullptr);
+  pango_layout_set_font_description (layout, font);
+  pango_font_description_free (font);
+
+  auto const typed_len = strlen (priv->quick_select_typed);
+  for (auto i = 0u; i < priv->quick_select->len; ++i) {
+    auto const& match = g_array_index (priv->quick_select, TerminalQuickSelectMatch, i);
+    if (!g_str_has_prefix (match.label, priv->quick_select_typed))
+      continue;
+
+    auto const y = top + double (match.line) * cell_height;
+    auto const x = double (padding.left) + double (match.start_col) * cell_width;
+    auto const match_rect = GRAPHENE_RECT_INIT (float (x), float (y),
+                                                float ((match.end_col - match.start_col) * cell_width),
+                                                float (cell_height));
+    gtk_snapshot_append_color (snapshot, &match_color, &match_rect);
+
+    // The letters still to type, over the start of the match
+    auto const rest = match.label + typed_len;
+    auto const label_rect = GRAPHENE_RECT_INIT (float (x), float (y),
+                                                float (strlen (rest) * cell_width),
+                                                float (cell_height));
+    gtk_snapshot_append_color (snapshot, &label_color, &label_rect);
+
+    pango_layout_set_text (layout, rest, -1);
+    gtk_snapshot_save (snapshot);
+    auto const point = GRAPHENE_POINT_INIT (float (x), float (y));
+    gtk_snapshot_translate (snapshot, &point);
+    gtk_snapshot_append_layout (snapshot, layout, &text_color);
+    gtk_snapshot_restore (snapshot);
+  }
+}
+
+/**
+ * terminal_screen_stop_quick_select:
+ * @screen: a #TerminalScreen
+ *
+ * Ends quick select, if it runs.
+ */
+void
+terminal_screen_stop_quick_select (TerminalScreen *screen)
+{
+  auto const priv = screen->priv;
+  if (!priv->quick_select)
+    return;
+
+  g_clear_pointer (&priv->quick_select, g_array_unref);
+  if (priv->quick_select_hint) {
+    terminal_tab_remove_overlay (priv->quick_select_hint);
+    g_clear_object (&priv->quick_select_hint);
+  }
+  gtk_widget_queue_draw (GTK_WIDGET (screen));
+}
+
+/**
+ * terminal_screen_start_quick_select:
+ * @screen: a #TerminalScreen
+ *
+ * Labels what is worth copying in the visible text, and lets the user
+ * pick one by typing its label.
+ *
+ * Returns: whether there was something to label
+ */
+gboolean
+terminal_screen_start_quick_select (TerminalScreen *screen)
+{
+  g_return_val_if_fail (TERMINAL_IS_SCREEN (screen), FALSE);
+
+  auto const priv = screen->priv;
+  auto const terminal = VTE_TERMINAL (screen);
+  terminal_screen_stop_quick_select (screen);
+
+  long first_row, last_row;
+  terminal_screen_get_visible_rows (screen, &first_row, &last_row);
+  auto const columns = vte_terminal_get_column_count (terminal);
+
+  // One line per row, so that rows and lines correspond
+  gs_unref_ptrarray auto lines = g_ptr_array_new_with_free_func (g_free);
+  for (auto row = first_row; row <= last_row; ++row) {
+    auto text = vte_terminal_get_text_range_format (terminal, VTE_FORMAT_TEXT,
+                                                    row, 0, row, columns, nullptr);
+    if (!text)
+      text = g_strdup ("");
+    g_strdelimit (text, "\r\n", ' ');
+    g_ptr_array_add (lines, text);
+  }
+  g_ptr_array_add (lines, nullptr);
+
+  auto const settings = terminal_app_get_global_settings (terminal_app_get ());
+  gs_strfreev char** patterns = g_settings_get_strv (settings, TERMINAL_SETTING_QUICK_SELECT_PATTERNS_KEY);
+  auto const matches = terminal_quick_select_find (reinterpret_cast<char const* const*> (lines->pdata),
+                                                   patterns);
+  if (matches->len == 0) {
+    g_array_unref (matches);
+    return FALSE;
+  }
+
+  terminal_quick_select_assign_labels (matches);
+  priv->quick_select = matches;
+  priv->quick_select_first_row = first_row;
+  priv->quick_select_typed[0] = '\0';
+
+  auto hint = gtk_label_new (_("Type a label to copy it · with Shift to paste it · with Ctrl to open it · Esc to cancel"));
+  gtk_label_set_wrap (GTK_LABEL (hint), true);
+  gtk_widget_add_css_class (hint, "quick-select-hint");
+  gtk_widget_add_css_class (hint, "osd");
+  gtk_widget_set_halign (hint, GTK_ALIGN_CENTER);
+  gtk_widget_set_valign (hint, GTK_ALIGN_END);
+  gtk_widget_set_can_target (hint, false);
+  priv->quick_select_hint = GTK_WIDGET (g_object_ref_sink (hint));
+  terminal_tab_add_screen_overlay (screen, hint);
+
+  gtk_widget_queue_draw (GTK_WIDGET (screen));
+  gtk_widget_grab_focus (GTK_WIDGET (screen));
+  return TRUE;
+}
+
+static gboolean
+terminal_screen_quick_select_key (TerminalScreen *screen,
+                                  guint keyval,
+                                  GdkModifierType state)
+{
+  auto const priv = screen->priv;
+
+  switch (keyval) {
+  case GDK_KEY_Shift_L: case GDK_KEY_Shift_R:
+  case GDK_KEY_Control_L: case GDK_KEY_Control_R:
+  case GDK_KEY_Caps_Lock:
+    return GDK_EVENT_STOP;
+  case GDK_KEY_BackSpace: {
+    auto const len = strlen (priv->quick_select_typed);
+    if (len > 0)
+      priv->quick_select_typed[len - 1] = '\0';
+    gtk_widget_queue_draw (GTK_WIDGET (screen));
+    return GDK_EVENT_STOP;
+  }
+  default:
+    break;
+  }
+
+  auto const c = gdk_keyval_to_unicode (gdk_keyval_to_lower (keyval));
+  if (c < 'a' || c > 'z') {
+    // Anything else ends it, without reaching the terminal
+    terminal_screen_stop_quick_select (screen);
+    return GDK_EVENT_STOP;
+  }
+
+  auto const len = strlen (priv->quick_select_typed);
+  if (len >= 2) {
+    terminal_screen_stop_quick_select (screen);
+    return GDK_EVENT_STOP;
+  }
+  priv->quick_select_typed[len] = char (c);
+  priv->quick_select_typed[len + 1] = '\0';
+
+  gboolean is_prefix;
+  auto const match = terminal_quick_select_lookup (priv->quick_select, priv->quick_select_typed, &is_prefix);
+  if (match) {
+    auto const action = (state & GDK_CONTROL_MASK) ? TERMINAL_QUICK_SELECT_OPEN
+      : (state & GDK_SHIFT_MASK) || keyval != gdk_keyval_to_lower (keyval) ? TERMINAL_QUICK_SELECT_PASTE
+      : TERMINAL_QUICK_SELECT_COPY;
+    gs_free char* text = g_strdup (match->text);
+    auto const openable = match->openable;
+    terminal_screen_stop_quick_select (screen);
+    g_signal_emit (screen, signals[QUICK_SELECT_CHOSEN], 0, text, int (action), openable);
+  } else if (!is_prefix) {
+    // Not a label; start over
+    priv->quick_select_typed[0] = '\0';
+  }
+
+  gtk_widget_queue_draw (GTK_WIDGET (screen));
+  return GDK_EVENT_STOP;
+}
+
+static void
+terminal_screen_quick_select_focus_cb (TerminalScreen* screen,
+                                       GParamSpec* pspec,
+                                       void* user_data)
+{
+  if (!gtk_widget_has_focus (GTK_WIDGET (screen)))
+    terminal_screen_stop_quick_select (screen);
 }
 
 /* Visual bell */
@@ -1497,6 +1729,8 @@ terminal_screen_init (TerminalScreen *screen)
 
   g_signal_connect(screen, "bell",
                    G_CALLBACK(terminal_screen_bell_cb), nullptr);
+  g_signal_connect(screen, "notify::has-focus",
+                   G_CALLBACK(terminal_screen_quick_select_focus_cb), nullptr);
 
   g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_CURRENT_DIRECTORY_URI,
                    G_CALLBACK(terminal_screen_cwd_changed_cb), nullptr);
@@ -1655,6 +1889,18 @@ terminal_screen_class_init (TerminalScreenClass *klass)
                   G_TYPE_NONE,
                   0);
 
+  /* Quick select picked a match: its text, and what to do with it,
+   * a TerminalQuickSelectAction */
+  signals[QUICK_SELECT_CHOSEN] =
+    g_signal_new (I_("quick-select-chosen"),
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  0,
+                  nullptr, nullptr,
+                  nullptr /* generic marshaller */,
+                  G_TYPE_NONE,
+                  3, G_TYPE_STRING, G_TYPE_INT, G_TYPE_BOOLEAN);
+
   signals[PROMPTS_CHANGED] =
     g_signal_new (I_("prompts-changed"),
                   G_OBJECT_CLASS_TYPE (object_class),
@@ -1771,6 +2017,7 @@ terminal_screen_dispose (GObject *object)
 
   g_clear_handle_id (&priv->size_dismiss_source, g_source_remove);
   terminal_screen_stop_bell_flash (screen);
+  terminal_screen_stop_quick_select (screen);
 
   gtk_widget_dispose_template (GTK_WIDGET (object), TERMINAL_TYPE_SCREEN);
 

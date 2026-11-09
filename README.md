@@ -113,6 +113,12 @@ Everything GNOME Terminal provides, plus:
   main menu (*New Tab in Container*). New tabs and panes opened from a
   terminal in a container start in the same container; turn this off in
   *Preferences → Behavior*. Containers are found with podman.
+* **Quick select**: Ctrl+Shift+Space puts a one- or two-letter label on
+  every URL, path, git hash, IP address, UUID and long number on the
+  screen. Type a label to copy that text, with Shift to paste it into the
+  terminal, or with Ctrl to open it. Add your own regular expressions with
+  `gsettings set com.aripd.Pano.Legacy.Settings quick-select-patterns
+  "['JIRA-[0-9]+']"`.
 * **Command palette**: Ctrl+Shift+P opens a searchable list of the
   actions with their shortcuts, the profiles and the open tabs. Type a few
   letters of the words, for example "spl rig" for Split Right, and press

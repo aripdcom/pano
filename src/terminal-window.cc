@@ -1596,6 +1596,68 @@ detach_tab(TerminalWindow* window,
 }
 
 static void
+action_quick_select_cb(GSimpleAction* action,
+                       GVariant* parameter,
+                       gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (!window->active_screen)
+    return;
+
+  if (!terminal_screen_start_quick_select(window->active_screen))
+    window_show_toast(window, _("Nothing to select"));
+}
+
+/* Quick select picked @text: copy it, paste it into the terminal, or open
+ * it if it is a URL or a path */
+static void
+screen_quick_select_chosen_cb(TerminalScreen* screen,
+                              char const* text,
+                              int action,
+                              gboolean openable,
+                              TerminalWindow* window)
+{
+  if (action == TERMINAL_QUICK_SELECT_PASTE) {
+    vte_terminal_paste_text(VTE_TERMINAL(screen), text);
+    return;
+  }
+
+  if (action == TERMINAL_QUICK_SELECT_OPEN && openable) {
+    if (strstr(text, "://")) {
+      terminal_util_open_url(GTK_WIDGET(window), text, FLAVOR_AS_IS, GDK_CURRENT_TIME);
+      return;
+    }
+
+    // A path, from the home folder or the terminal's working directory
+    gs_free char* path = nullptr;
+    if (g_str_has_prefix(text, "~/") || g_str_equal(text, "~")) {
+      path = g_build_filename(g_get_home_dir(), text + 1, nullptr);
+    } else if (g_path_is_absolute(text)) {
+      path = g_strdup(text);
+    } else {
+      gs_free char* cwd = terminal_screen_get_current_dir(screen);
+      path = g_build_filename(cwd ? cwd : g_get_home_dir(), text, nullptr);
+    }
+
+    if (g_file_test(path, G_FILE_TEST_EXISTS)) {
+      gs_free char* uri = g_filename_to_uri(path, nullptr, nullptr);
+      if (uri) {
+        terminal_util_open_url(GTK_WIDGET(window), uri, FLAVOR_AS_IS, GDK_CURRENT_TIME);
+        return;
+      }
+    }
+
+    /* Translators: %s is a file name */
+    gs_free char* title = g_strdup_printf(_("“%s” does not exist"), text);
+    window_show_toast(window, title);
+    return;
+  }
+
+  gdk_clipboard_set_text(window->clipboard, text);
+  window_show_copy_toast(window);
+}
+
+static void
 action_command_palette_cb(GSimpleAction* action,
                           GVariant* parameter,
                           gpointer user_data)
@@ -3214,6 +3276,7 @@ terminal_window_init (TerminalWindow *window)
     { "split",               action_split_cb,            "s",    nullptr, nullptr },
     { "equalize-panes",      action_equalize_panes_cb,   nullptr, nullptr, nullptr },
     { "command-palette",     action_command_palette_cb,  nullptr, nullptr, nullptr },
+    { "quick-select",        action_quick_select_cb,     nullptr, nullptr, nullptr },
     { "move-pane",           action_move_pane_cb,        "s",    nullptr, nullptr },
     { "tab-detach",          action_tab_detach_cb,       nullptr,   nullptr, nullptr },
     { "tab-move-left",       action_tab_move_left_cb,    nullptr,   nullptr, nullptr },
@@ -3989,6 +4052,8 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
                     G_CALLBACK (screen_command_finished_cb), window);
   g_signal_connect (screen, "bell",
                     G_CALLBACK (screen_bell_cb), window);
+  g_signal_connect (screen, "quick-select-chosen",
+                    G_CALLBACK (screen_quick_select_chosen_cb), window);
   g_signal_connect (screen, "prompts-changed",
                     G_CALLBACK (screen_prompts_changed_cb), window);
   g_signal_connect (screen, "commit",
@@ -4092,6 +4157,9 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_bell_cb,
+                                        window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_quick_select_chosen_cb,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_prompts_changed_cb,
