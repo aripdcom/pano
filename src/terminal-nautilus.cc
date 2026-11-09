@@ -38,6 +38,7 @@ extern "C" {
 #include "terminal-debug.hh"
 #include "terminal-defines.hh"
 #include "terminal-gdbus-generated.h"
+#include "terminal-libgsystem.hh"
 
 /* Nautilus extension class */
 
@@ -140,109 +141,52 @@ get_terminal_file_info_from_uri (const char *uri)
 #define NAUTILUS_SETTINGS_SCHEMA                "org.gnome.Nautilus"
 #define GNOME_DESKTOP_LOCKDOWN_SETTINGS_SCHEMA  "org.gnome.desktop.lockdown"
 
-/* a very simple URI parsing routine from Launchpad #333462, until GLib supports URI parsing (GNOME #489862) */
-#define SFTP_PREFIX "sftp://"
-static void
-parse_sftp_uri (GFile *file,
-                char **user,
-                char **host,
-                unsigned int *port,
-                char **path)
-{
-  char *tmp, *save;
-  char *uri;
-
-  uri = g_file_get_uri (file);
-  g_assert (uri != nullptr);
-  save = uri;
-
-  *path = nullptr;
-  *user = nullptr;
-  *host = nullptr;
-  *port = 0;
-
-  /* skip intial 'sftp:// prefix */
-  g_assert (!strncmp (uri, SFTP_PREFIX, strlen (SFTP_PREFIX)));
-  uri += strlen (SFTP_PREFIX);
-
-  /* cut out the path */
-  tmp = strchr (uri, '/');
-  if (tmp != nullptr) {
-    *path = g_uri_unescape_string (tmp, "/");
-    *tmp = '\0';
-  }
-
-  /* read the username - it ends with @ */
-  tmp = strchr (uri, '@');
-  if (tmp != nullptr) {
-    *tmp++ = '\0';
-
-    *user = strdup (uri);
-    if (strchr (*user, ':') != nullptr) {
-      /* chop the password */
-      *(strchr (*user, ':')) = '\0'; 
-    }
-
-    uri = tmp;
-  }
-
-  /* now read the port, starts with : */
-  tmp = strchr (uri, ':');
-  if (tmp != nullptr) {
-    *tmp++ = '\0';
-    *port = atoi (tmp);  /*FIXME: getservbyname*/
-  }
-
-  /* what is left is the host */
-  *host = strdup (uri);
-  g_free (save);
-}
-
+/* Returns: (transfer full) (nullable): the arguments for ssh to open a
+ * login shell in the folder of the sftp:// @uri on its host */
 static char **
-ssh_argv (const char *uri,
-          int *argcp)
+ssh_argv (const char *uri)
 {
-  GFile *file;
-  char **argv;
-  int argc;
-  char *host_name, *path, *user_name, *quoted_path;
-  guint host_port;
+  g_autoptr(GError) error = nullptr;
+  // The password, if any, is split off and not used
+  g_autoptr(GUri) parsed = g_uri_parse (uri, G_URI_FLAGS_HAS_PASSWORD, &error);
+  if (parsed == nullptr) {
+    g_printerr ("Cannot open a terminal for %s: %s\n", uri, error->message);
+    return nullptr;
+  }
 
-  g_assert (uri != nullptr);
+  auto const host = g_uri_get_host (parsed);
+  if (host == nullptr || host[0] == '\0')
+    return nullptr;
 
-  argv = g_new0 (char *, 9);
-  argc = 0;
-  argv[argc++] = g_strdup ("ssh");
-  argv[argc++] = g_strdup ("-t");
+  auto const argv = g_ptr_array_new_with_free_func (g_free);
+  g_ptr_array_add (argv, g_strdup ("ssh"));
+  g_ptr_array_add (argv, g_strdup ("-t"));
 
-  file = g_file_new_for_uri (uri);
-  parse_sftp_uri (file, &user_name, &host_name, &host_port, &path);
-  g_object_unref (file);
+  auto const user = g_uri_get_user (parsed);
+  if (user != nullptr && user[0] != '\0')
+    g_ptr_array_add (argv, g_strdup_printf ("%s@%s", user, host));
+  else
+    g_ptr_array_add (argv, g_strdup (host));
 
-  if (user_name != nullptr) {
-    argv[argc++ ]= g_strdup_printf ("%s@%s", user_name, host_name);
-    g_free (host_name);
-    g_free (user_name);
+  // GUri only accepts numeric ports; -1 means none
+  auto const port = g_uri_get_port (parsed);
+  if (port > 0) {
+    g_ptr_array_add (argv, g_strdup ("-p"));
+    g_ptr_array_add (argv, g_strdup_printf ("%d", port));
+  }
+
+  // A login shell in the folder; the path is unescaped, and an empty one
+  // means the remote home folder
+  auto const path = g_uri_get_path (parsed);
+  if (path && path[0]) {
+    g_autofree char *quoted_path = g_shell_quote (path);
+    g_ptr_array_add (argv, g_strdup_printf ("cd %s && exec $SHELL -l", quoted_path));
   } else {
-    argv[argc++] = host_name;
+    g_ptr_array_add (argv, g_strdup ("exec $SHELL -l"));
   }
 
-  if (host_port != 0) {
-    argv[argc++] = g_strdup ("-p");
-    argv[argc++] = g_strdup_printf ("%u", host_port);
-  }
-
-  /* FIXME to we have to consider the remote file encoding? */
-  quoted_path = g_shell_quote (path);
-
-  /* login shell */
-  argv[argc++] = g_strdup_printf ("cd %s && exec $SHELL -l", quoted_path);
-
-  g_free (path);
-  g_free (quoted_path);
-
-  *argcp = argc;
-  return argv;
+  g_ptr_array_add (argv, nullptr);
+  return reinterpret_cast<char**>(g_ptr_array_free (argv, false));
 }
 
 static gboolean
@@ -296,42 +240,121 @@ exec_data_free (ExecData *data)
   g_free (data);
 }
 
-/* FIXME: make this async */
-static gboolean
-create_terminal (ExecData *data /* transfer full */)
-{
-  TerminalFactory *factory;
-  TerminalReceiver *receiver;
-  GError *error = nullptr;
-  GVariantBuilder builder;
-  char *object_path;
-  char startup_id[32];
-  char **argv;
-  int argc;
+/* Opening the terminal talks to the terminal server over D-Bus, which may
+ * have to start first. It all runs asynchronously, so that the file
+ * manager does not wait for it. */
 
-  factory = terminal_factory_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
-                                                     GDBusProxyFlags(G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
-								     G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS),
-                                                     TERMINAL_APPLICATION_ID,
-                                                     TERMINAL_FACTORY_OBJECT_PATH,
-                                                     nullptr /* cancellable */,
-                                                     &error);
-  if (factory == nullptr) {
-    g_dbus_error_strip_remote_error (error);
-    g_printerr ("Error constructing proxy for %s:%s: %s\n",
-                TERMINAL_APPLICATION_ID, TERMINAL_FACTORY_OBJECT_PATH,
-                error->message);
-    g_error_free (error);
-    exec_data_free (data);
-    return FALSE;
+static void
+create_terminal_failed (ExecData *data /* transfer full */,
+                        const char *what,
+                        GError *error)
+{
+  g_dbus_error_strip_remote_error (error);
+  g_printerr ("%s: %s\n", what, error->message);
+  exec_data_free (data);
+}
+
+static void
+exec_done_cb (GObject *source,
+              GAsyncResult *result,
+              gpointer user_data)
+{
+  auto const data = reinterpret_cast<ExecData*>(user_data);
+  g_autoptr(GError) error = nullptr;
+
+  if (!terminal_receiver_call_exec_finish (TERMINAL_RECEIVER (source),
+                                           nullptr /* out FD list */,
+                                           result, &error)) {
+    create_terminal_failed (data, "Error running the shell", error);
+    return;
   }
 
+  exec_data_free (data);
+}
+
+static void
+receiver_proxy_cb (GObject *source,
+                   GAsyncResult *result,
+                   gpointer user_data)
+{
+  auto const data = reinterpret_cast<ExecData*>(user_data);
+  g_autoptr(GError) error = nullptr;
+
+  gs_unref_object TerminalReceiver *receiver = terminal_receiver_proxy_new_for_bus_finish (result, &error);
+  if (receiver == nullptr) {
+    create_terminal_failed (data, "Error creating the proxy for the terminal", error);
+    return;
+  }
+
+  GVariantBuilder builder;
+  g_variant_builder_init (&builder, G_VARIANT_TYPE ("a{sv}"));
+  terminal_client_append_exec_options (&builder,
+                                       TRUE, /* pass environment */
+                                       data->path,
+                                       nullptr, 0, /* FD array */
+                                       TRUE /* shell */);
+
+  g_auto(GStrv) argv = nullptr;
+  if (data->info == FILE_INFO_SFTP && data->remote)
+    argv = ssh_argv (data->uri);
+
+  terminal_receiver_call_exec (receiver,
+                               g_variant_builder_end (&builder),
+                               g_variant_new_bytestring_array ((const char * const *) argv,
+                                                               argv ? -1 : 0),
+                               nullptr /* in FD list */,
+                               nullptr /* cancellable */,
+                               exec_done_cb,
+                               data);
+}
+
+static void
+create_instance_cb (GObject *source,
+                    GAsyncResult *result,
+                    gpointer user_data)
+{
+  auto const data = reinterpret_cast<ExecData*>(user_data);
+  g_autoptr(GError) error = nullptr;
+  g_autofree char *object_path = nullptr;
+
+  if (!terminal_factory_call_create_instance_finish (TERMINAL_FACTORY (source),
+                                                     &object_path,
+                                                     result, &error)) {
+    create_terminal_failed (data, "Error creating the terminal", error);
+    return;
+  }
+
+  terminal_receiver_proxy_new_for_bus (G_BUS_TYPE_SESSION,
+                                       GDBusProxyFlags(G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
+                                                       G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS),
+                                       TERMINAL_APPLICATION_ID,
+                                       object_path,
+                                       nullptr /* cancellable */,
+                                       receiver_proxy_cb,
+                                       data);
+}
+
+static void
+factory_proxy_cb (GObject *source,
+                  GAsyncResult *result,
+                  gpointer user_data)
+{
+  auto const data = reinterpret_cast<ExecData*>(user_data);
+  g_autoptr(GError) error = nullptr;
+
+  gs_unref_object TerminalFactory *factory = terminal_factory_proxy_new_for_bus_finish (result, &error);
+  if (factory == nullptr) {
+    create_terminal_failed (data, "Error creating the proxy for " TERMINAL_APPLICATION_ID, error);
+    return;
+  }
+
+  char startup_id[32];
   g_snprintf (startup_id, sizeof (startup_id), "_TIME%u", data->timestamp);
 
+  GVariantBuilder builder;
   g_variant_builder_init (&builder, G_VARIANT_TYPE ("a{sv}"));
-
   terminal_client_append_create_instance_options (&builder,
-                                                  nullptr, // display name. FIXMEgtk4?
+                                                  nullptr, /* display name */
                                                   startup_id,
                                                   nullptr, /* activation_token */
                                                   nullptr /* geometry */,
@@ -343,78 +366,24 @@ create_terminal (ExecData *data /* transfer full */)
                                                   FALSE /* maximised */,
                                                   FALSE /* fullscreen */);
 
-  if (!terminal_factory_call_create_instance_sync
-         (factory,
-          g_variant_builder_end (&builder),
-          &object_path,
-          nullptr /* cancellable */,
-          &error)) {
-    g_dbus_error_strip_remote_error (error);
-    g_printerr ("Error creating terminal: %s\n", error->message);
-    g_error_free (error);
-    g_object_unref (factory);
-    exec_data_free (data);
-    return FALSE;
-  }
-
-  g_object_unref (factory);
-
-  receiver = terminal_receiver_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
-                                                       GDBusProxyFlags(G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
-								       G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS),
-                                                       TERMINAL_APPLICATION_ID,
-                                                       object_path,
-                                                       nullptr /* cancellable */,
-                                                       &error);
-  if (receiver == nullptr) {
-    g_dbus_error_strip_remote_error (error);
-    g_printerr ("Failed to create proxy for terminal: %s\n", error->message);
-    g_error_free (error);
-    g_free (object_path);
-    exec_data_free (data);
-    return FALSE;
-  }
-
-  g_free (object_path);
-
-  g_variant_builder_init (&builder, G_VARIANT_TYPE ("a{sv}"));
-
-  terminal_client_append_exec_options (&builder,
-                                       TRUE, /* pass environment */
-                                       data->path,
-                                       nullptr, 0, /* FD array */
-                                       TRUE /* shell */);
-
-  if (data->info == FILE_INFO_SFTP &&
-      data->remote) {
-    argv = ssh_argv (data->uri, &argc);
-  } else {
-    argv = nullptr; argc = 0;
-  }
-
-  if (!terminal_receiver_call_exec_sync (receiver,
+  terminal_factory_call_create_instance (factory,
                                          g_variant_builder_end (&builder),
-                                         g_variant_new_bytestring_array ((const char * const *) argv, argc),
-                                         nullptr /* in FD list */,
-                                         nullptr /* out FD list */,
                                          nullptr /* cancellable */,
-                                         &error)) {
-    g_dbus_error_strip_remote_error (error);
-    g_printerr ("Error: %s\n", error->message);
-    g_error_free (error);
-    g_strfreev (argv);
-    g_object_unref (receiver);
-    exec_data_free (data);
-    return FALSE;
-  }
+                                         create_instance_cb,
+                                         data);
+}
 
-  g_strfreev (argv);
-
-  exec_data_free (data);
-
-  g_object_unref (receiver);
-
-  return TRUE;
+static void
+create_terminal (ExecData *data /* transfer full */)
+{
+  terminal_factory_proxy_new_for_bus (G_BUS_TYPE_SESSION,
+                                      GDBusProxyFlags(G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
+                                                      G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS),
+                                      TERMINAL_APPLICATION_ID,
+                                      TERMINAL_FACTORY_OBJECT_PATH,
+                                      nullptr /* cancellable */,
+                                      factory_proxy_cb,
+                                      data);
 }
 
 static void

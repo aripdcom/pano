@@ -21,10 +21,11 @@ jobs:
           git meson ninja-build gcc-c++ pkgconf gtk4-devel libadwaita-devel
           vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel
           glib2-devel gettext itstool desktop-file-utils libxslt docbook-style-xsl
-          appstream
+          appstream nautilus-devel
       - uses: actions/checkout@v7
       - name: Configure
-        run: meson setup _build -Dsearch_provider=true -Dnautilus_extension=false
+        # The packages leave the file manager extension out; build it here
+        run: meson setup _build -Dsearch_provider=true -Dnautilus_extension=true
       - name: Build
         run: meson compile -C _build
       - name: Test
