@@ -89,11 +89,26 @@ remove_reorder_bindings (GtkWidgetClass *widget_class,
   remove_binding (widget_class, keypad_keysym, GDK_ALT_MASK);
 }
 
-// The tab forwards the title and icons of its active pane
+static void
+page_pinned_changed_cb(AdwTabPage* page,
+                       GParamSpec* pspec,
+                       TerminalTab* tab)
+{
+  terminal_tab_set_pinned(tab, adw_tab_page_get_pinned(page));
+}
+
+// The tab forwards the title and icons of its active pane, and follows
+// the page's pinned state, however that changes. The page stays with the
+// tab when it moves to another window.
 static void
 bind_page(TerminalTab* tab,
           AdwTabPage* page)
 {
+  terminal_tab_set_pinned(tab, adw_tab_page_get_pinned(page));
+  g_signal_connect_object(page, "notify::pinned",
+                          G_CALLBACK(page_pinned_changed_cb), tab,
+                          GConnectFlags(0));
+
   g_object_bind_property(tab, "title",
                          page, "title",
                          G_BINDING_SYNC_CREATE);
@@ -899,11 +914,9 @@ terminal_notebook_set_tab_pinned(TerminalNotebook* notebook,
   g_return_if_fail(TERMINAL_IS_NOTEBOOK(notebook));
   g_return_if_fail(TERMINAL_IS_TAB(tab));
 
-  auto const page = adw_tab_view_get_page(notebook->tab_view, GTK_WIDGET(tab));
-  adw_tab_view_set_page_pinned(notebook->tab_view, page, pinned);
-
-  // FIXME connect to notifications
-  terminal_tab_set_pinned(tab, pinned);
+  // The tab follows the page, see bind_page()
+  if (auto const page = adw_tab_view_get_page(notebook->tab_view, GTK_WIDGET(tab)))
+    adw_tab_view_set_page_pinned(notebook->tab_view, page, pinned);
 }
 
 void

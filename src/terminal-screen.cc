@@ -3137,8 +3137,9 @@ terminal_screen_child_exited (VteTerminal *terminal,
   terminal_screen_update_process_kind (screen);
 
   action = TerminalExitAction(g_settings_get_enum (priv->profile, TERMINAL_PROFILE_EXIT_ACTION_KEY));
+  // A pinned tab stays, so that it can be restarted
   auto const tab = terminal_tab_get_from_screen(screen);
-  if (terminal_tab_get_pinned(tab))
+  if (tab && terminal_tab_get_pinned(tab))
     action = TERMINAL_EXIT_HOLD;
 
   switch (action)
