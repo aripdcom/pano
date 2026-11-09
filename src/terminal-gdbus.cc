@@ -91,6 +91,7 @@ namespace {
 typedef struct {
   TerminalReceiver *receiver;
   GDBusMethodInvocation *invocation;
+  bool replied; /* the method call was answered before the process started */
 } ExecData;
 
 } // anon namespace
@@ -108,6 +109,10 @@ exec_cb (TerminalScreen *screen, /* unused, may be %nullptr */
          GError *error, /* set on error, %nullptr on success */
          ExecData *data)
 {
+  /* Already answered, see terminal_receiver_impl_exec() */
+  if (data->replied)
+    return;
+
   /* Note: these calls transfer the ref */
   g_object_ref (data->invocation);
   if (error) {
@@ -212,7 +217,7 @@ terminal_receiver_impl_exec (TerminalReceiver *receiver,
 
   exec_argv = (char **) g_variant_get_bytestring_array (arguments, &exec_argc);
 
-  ExecData *exec_data = g_new (ExecData, 1);
+  ExecData *exec_data = g_new0 (ExecData, 1);
   exec_data->receiver = (TerminalReceiver*)g_object_ref (receiver);
   /* We want to transfer the ownership of @invocation to ExecData here, but
    * we have to temporarily ref it so that in the error case below (where
@@ -236,6 +241,15 @@ terminal_receiver_impl_exec (TerminalReceiver *receiver,
                              &err)) {
     /* Transfers ownership of @invocation */
     g_dbus_method_invocation_take_error (invocation, err);
+  } else if (!gtk_widget_get_realized (GTK_WIDGET (priv->screen))) {
+    /* The terminal is in a tab that is not shown yet, and starts its
+     * process only when it is shown. Don't keep the caller waiting until
+     * then (it would time out); errors still show in the terminal. */
+    exec_data->replied = true;
+    /* Transfers a ref, like in exec_cb() */
+    terminal_receiver_complete_exec (receiver,
+                                     (GDBusMethodInvocation*) g_object_ref (invocation),
+                                     nullptr /* outfdlist */);
   }
 
   /* Now we can remove that extra ref again. */

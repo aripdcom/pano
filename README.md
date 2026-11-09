@@ -26,7 +26,11 @@ Everything GNOME Terminal provides, plus:
 
 * **Tab bar position**: place the tabs at the top, bottom, left or right of
   the window (*Preferences → Appearance → Tab Bar Position*). Left and right
-  show the tabs as a vertical list.
+  show the tabs as a vertical list: drag tabs to reorder them, onto another
+  window or out of the window; drag its inner edge to resize it; pinned tabs
+  stay on top. Ctrl+Shift+L moves the focus to the list, where the arrow
+  keys switch tabs, the menu key opens the tab menu, Delete closes the tab,
+  and Return or Escape go back to the terminal.
 * **Split panes**: split a tab into several terminals, side by side or one
   above the other. New panes start in the working directory of the active
   one. Use the context menu, the main menu or these shortcuts (all can be

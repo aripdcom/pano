@@ -779,6 +779,15 @@ screen_prompts_changed_cb(TerminalScreen* screen,
 }
 
 static void
+action_focus_tab_list_cb(GSimpleAction* action,
+                         GVariant* parameter,
+                         gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  terminal_tab_sidebar_focus_list(window->tab_sidebar);
+}
+
+static void
 action_close_pane_cb(GSimpleAction* action,
                      GVariant* parameter,
                      gpointer user_data)
@@ -2428,6 +2437,11 @@ window_update_tabs_visibility(TerminalWindow* window)
                          horizontal && !(hidden && position == GTK_POS_BOTTOM));
   gtk_widget_set_visible(GTK_WIDGET(window->tab_sidebar),
                          !horizontal && !hidden);
+
+  // Only take the shortcut for the tab list from the terminal while it is there
+  auto const sidebar_shown = !horizontal && !hidden;
+  g_simple_action_set_enabled(lookup_action(window, "focus-tab-list"), sidebar_shown);
+  g_simple_action_set_enabled(lookup_action(window, "shadow-tablist"), sidebar_shown);
 }
 
 static void
@@ -2671,6 +2685,8 @@ terminal_window_init (TerminalWindow *window)
     { "shadow-mdi",          action_shadow_activate_cb,  "s",    nullptr, nullptr },
     { "shadow-pane",         action_shadow_activate_cb,  "s",    nullptr, nullptr },
     { "shadow-prompt",       action_shadow_activate_cb,  "s",    nullptr, nullptr },
+    { "shadow-tablist",      action_shadow_activate_cb,  "s",    nullptr, nullptr },
+    { "focus-tab-list",      action_focus_tab_list_cb,   nullptr,   nullptr, nullptr },
 
     /* Actions with state */
     { "active-tab",          action_active_tab_set_cb,   "i",  "@i 0",    action_active_tab_state_cb      },
@@ -2792,6 +2808,11 @@ terminal_window_init (TerminalWindow *window)
 
   g_signal_connect_swapped (window->find_bar, "notify::has-search",
                             G_CALLBACK (terminal_window_update_search_sensitivity), window);
+
+  g_settings_bind (terminal_app_get_global_settings (app),
+                   TERMINAL_SETTING_TAB_SIDEBAR_WIDTH_KEY,
+                   window->tab_sidebar, "width",
+                   G_SETTINGS_BIND_DEFAULT);
 
   window->broadcast_banner = ADW_BANNER (adw_banner_new (""));
   adw_banner_set_button_label (window->broadcast_banner, _("_Stop"));

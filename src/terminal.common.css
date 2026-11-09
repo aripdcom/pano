@@ -130,3 +130,30 @@ terminal-pane.broadcast
   outline: 2px solid @warning_color;
   outline-offset: -2px;
 }
+
+/* Tab list: pinned tabs, drop marks and the resize handle */
+tabsidebar .tab-row .pin-icon
+{
+  opacity: 0.6;
+}
+
+tabsidebar listview > row.last-pinned
+{
+  border-bottom: 1px solid alpha(currentColor, .15);
+  margin-bottom: 6px;
+}
+
+tabsidebar .tab-row.drop-before
+{
+  box-shadow: inset 0 2px @accent_color;
+}
+
+tabsidebar .tab-row.drop-after
+{
+  box-shadow: inset 0 -2px @accent_color;
+}
+
+tabsidebar > handle
+{
+  min-width: 6px;
+}

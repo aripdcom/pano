@@ -87,6 +87,7 @@
 #define KEY_PREV_PROMPT         "previous-prompt"
 #define KEY_NEXT_PROMPT         "next-prompt"
 #define KEY_COPY_OUTPUT         "copy-output"
+#define KEY_FOCUS_TAB_LIST      "focus-tab-list"
 #define KEY_BROADCAST_TAB       "broadcast-tab"
 #define KEY_BROADCAST_WINDOW    "broadcast-window"
 #define KEY_SPLIT_RIGHT         "split-right"
@@ -204,6 +205,7 @@ static KeyEntry tabs_entries[] = {
   ENTRY_MDI (N_("Move Tab to the End"),    KEY_MOVE_TAB_END,   "tab-move-end",     nullptr, nullptr),
   ENTRY_MDI (N_("Detach Tab"),             KEY_DETACH_TAB,     "tab-detach",       nullptr, nullptr),
   ENTRY_MDI (N_("Show Tabs Overview"), KEY_SHOW_TABS_OVERVIEW, "tab-overview",     nullptr, nullptr),
+  ENTRY_FULL (N_("Focus the Tab List"), KEY_FOCUS_TAB_LIST, "focus-tab-list", nullptr, nullptr, "win.shadow-tablist"),
   ENTRY_MDI (nullptr, KEY_SWITCH_TAB_PREFIX "1", "active-tab", "i", "0"),
   ENTRY_MDI (nullptr, KEY_SWITCH_TAB_PREFIX "2", "active-tab", "i", "1"),
   ENTRY_MDI (nullptr, KEY_SWITCH_TAB_PREFIX "3", "active-tab", "i", "2"),

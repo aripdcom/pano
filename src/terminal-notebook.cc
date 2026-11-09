@@ -32,6 +32,7 @@
 #include "terminal-app.hh"
 #include "terminal-intl.hh"
 #include "terminal-tab.hh"
+#include "terminal-tab-sidebar.hh"
 #include "terminal-schemas.hh"
 #include "terminal-libgsystem.hh"
 #include "terminal-util.hh"
@@ -446,7 +447,12 @@ terminal_notebook_update_active_screen(TerminalNotebook* notebook)
   g_signal_emit (notebook, signals[SCREEN_SWITCHED], 0, old_active_screen, screen);
   g_object_notify (G_OBJECT (notebook), "active-screen");
 
-  if (screen != nullptr && !gtk_widget_has_focus(GTK_WIDGET(screen)))
+  // Switching tabs from the keyboard in the tab list keeps the focus there
+  auto const root = gtk_widget_get_root(GTK_WIDGET(notebook));
+  auto const focus = root ? gtk_root_get_focus(root) : nullptr;
+  auto const in_tab_list = focus && gtk_widget_get_ancestor(focus, TERMINAL_TYPE_TAB_SIDEBAR);
+
+  if (screen != nullptr && !in_tab_list && !gtk_widget_has_focus(GTK_WIDGET(screen)))
     gtk_widget_grab_focus (GTK_WIDGET (screen));
 }
 

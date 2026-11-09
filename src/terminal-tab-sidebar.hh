@@ -35,6 +35,11 @@ gboolean terminal_tab_sidebar_get_autohide(TerminalTabSidebar* sidebar);
 void terminal_tab_sidebar_set_autohide(TerminalTabSidebar* sidebar,
                                        gboolean autohide);
 
+void terminal_tab_sidebar_set_width(TerminalTabSidebar* sidebar,
+                                   int width);
+
+gboolean terminal_tab_sidebar_focus_list(TerminalTabSidebar* sidebar);
+
 void terminal_tab_sidebar_set_position(TerminalTabSidebar* sidebar,
                                        GtkPositionType position);
 

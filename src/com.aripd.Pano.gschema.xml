@@ -504,6 +504,10 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to send input to all terminals of the window, or to stop</summary>
     </key>
+    <key name="focus-tab-list" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;l'</default>
+      <summary>Keyboard shortcut to move the focus to the tab list, when the tabs are on the left or right</summary>
+    </key>
     <key name="split-right" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;r'</default>
       <summary>Keyboard shortcut to split the terminal and open a new one on the right</summary>
@@ -776,6 +780,11 @@
       <summary>When to show the tabs bar</summary>
     </key>
 
+    <key name="tab-sidebar-width" type="i">
+      <range min="120" max="600" />
+      <default>200</default>
+      <summary>Width of the tab list when the tabs are on the left or right</summary>
+    </key>
     <key name="tab-position" enum="com.aripd.Pano.TabPosition">
       <default>'top'</default>
       <summary>The position of the tabs bar</summary>
