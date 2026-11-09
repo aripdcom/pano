@@ -130,6 +130,8 @@ version_sources = [configure_file(
 )]
 
 util_sources = files(
+  'terminal-schemes.cc',
+  'terminal-schemes.hh',
   'terminal-util.cc',
   'terminal-util.hh',
 )

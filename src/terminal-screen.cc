@@ -60,6 +60,7 @@
 #include "terminal-intl.hh"
 #include "terminal-marshal.h"
 #include "terminal-schemas.hh"
+#include "terminal-schemes.hh"
 #include "terminal-tab.hh"
 #include "terminal-util.hh"
 #include "terminal-window.hh"
@@ -1408,6 +1409,10 @@ terminal_screen_init (TerminalScreen *screen)
                           screen, G_CONNECT_SWAPPED);
 
   app = terminal_app_get ();
+  // Scheme files may change on disk
+  g_signal_connect_object (terminal_schemes_get_default (), "changed",
+                           G_CALLBACK (update_color_scheme), screen, G_CONNECT_SWAPPED);
+
   g_signal_connect (terminal_app_get_desktop_interface_settings (app), "changed::" MONOSPACE_FONT_KEY_NAME,
                     G_CALLBACK (terminal_screen_system_font_changed_cb), screen);
 
@@ -2035,6 +2040,7 @@ terminal_screen_profile_changed_cb (GSettings     *profile,
       prop_name == I_(TERMINAL_PROFILE_FOREGROUND_COLOR_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_BACKGROUND_COLOR_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY) ||
+      prop_name == I_(TERMINAL_PROFILE_COLOR_SCHEME_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR_SAME_AS_FG_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_CURSOR_COLORS_SET_KEY) ||
@@ -2195,6 +2201,26 @@ update_color_scheme (TerminalScreen *screen)
       if (terminal_g_settings_get_rgba (profile, TERMINAL_PROFILE_HIGHLIGHT_FOREGROUND_COLOR_KEY, &highlight_fg))
         highlight_fgp = &highlight_fg;
     }
+
+  /* A color scheme replaces the profile's own colors, in the variant for
+   * the style in use */
+  gs_free char* scheme_id = g_settings_get_string (profile, TERMINAL_PROFILE_COLOR_SCHEME_KEY);
+  auto const scheme = terminal_schemes_lookup (terminal_schemes_get_default (), scheme_id);
+  GdkRGBA scheme_cursor;
+  if (scheme) {
+    auto const style_manager = reinterpret_cast<AdwStyleManager*>(terminal_app_get_adw_style_manager(terminal_app_get()));
+    auto const scheme_colors = terminal_scheme_get_colors (scheme, adw_style_manager_get_dark (style_manager));
+    fg = scheme_colors->foreground;
+    bg = scheme_colors->background;
+    g_free (colors);
+    colors = (GdkRGBA*) g_memdup2 (scheme_colors->palette, sizeof (scheme_colors->palette));
+    n_colors = TERMINAL_SCHEME_PALETTE_SIZE;
+    boldp = nullptr;
+    if (scheme_colors->has_cursor && !cursor_bgp) {
+      scheme_cursor = scheme_colors->cursor;
+      cursor_bgp = &scheme_cursor;
+    }
+  }
 
   /* Only the background is translucent; the window lets the desktop show
    * through the terminal area, see window_sync_translucency(). */

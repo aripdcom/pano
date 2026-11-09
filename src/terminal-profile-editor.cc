@@ -25,6 +25,7 @@
 #include "terminal-profile-editor.hh"
 #include "terminal-preferences-list-item.hh"
 #include "terminal-schemas.hh"
+#include "terminal-schemes.hh"
 #include "terminal-screen.hh"
 #include "terminal-util.hh"
 #include "terminal-libgsystem.hh"
@@ -94,6 +95,13 @@ struct _TerminalProfileEditor
   AdwEntryRow          *title;
   AdwSwitchRow         *use_custom_command;
   AdwSwitchRow         *use_system_colors;
+  AdwComboRow          *color_scheme;
+  GtkButton            *open_schemes_folder;
+  GtkWidget            *custom_colors_group;
+  GtkWidget            *palette_group;
+  GtkWidget            *palette_buttons_group;
+  GPtrArray            *scheme_ids; /* the ids in the color_scheme model; "" for custom */
+  gboolean              updating_scheme;
   GtkScale             *background_opacity;
   GtkAdjustment        *background_opacity_adjustment;
   AdwSwitchRow         *use_system_font;
@@ -787,6 +795,93 @@ sanitize_font_string (GValue   *value,
   return TRUE;
 }
 
+/* Color schemes */
+
+/* A color scheme replaces the profile's own colors */
+static void
+terminal_profile_editor_update_color_sensitivity(TerminalProfileEditor* self)
+{
+  gs_free char* id = g_settings_get_string(self->settings, TERMINAL_PROFILE_COLOR_SCHEME_KEY);
+  auto const custom = !id[0];
+  auto const theme_colors = adw_switch_row_get_active(self->use_system_colors);
+
+  gtk_widget_set_sensitive(GTK_WIDGET(self->use_system_colors), custom);
+  gtk_widget_set_sensitive(self->custom_colors_group, custom && !theme_colors);
+  gtk_widget_set_sensitive(self->palette_group, custom);
+  gtk_widget_set_sensitive(self->palette_buttons_group, custom);
+}
+
+static void
+terminal_profile_editor_color_scheme_from_settings(TerminalProfileEditor* self)
+{
+  gs_free char* id = g_settings_get_string(self->settings, TERMINAL_PROFILE_COLOR_SCHEME_KEY);
+
+  auto index = 0u;
+  for (auto i = 0u; i < self->scheme_ids->len; ++i) {
+    if (g_str_equal(reinterpret_cast<char const*>(g_ptr_array_index(self->scheme_ids, i)), id)) {
+      index = i;
+      break;
+    }
+  }
+
+  self->updating_scheme = true;
+  adw_combo_row_set_selected(self->color_scheme, index);
+  self->updating_scheme = false;
+
+  terminal_profile_editor_update_color_sensitivity(self);
+}
+
+static void
+terminal_profile_editor_color_scheme_from_selection(TerminalProfileEditor* self)
+{
+  if (self->updating_scheme)
+    return;
+
+  auto const index = adw_combo_row_get_selected(self->color_scheme);
+  if (index >= self->scheme_ids->len)
+    return;
+
+  g_settings_set_string(self->settings, TERMINAL_PROFILE_COLOR_SCHEME_KEY,
+                        reinterpret_cast<char const*>(g_ptr_array_index(self->scheme_ids, index)));
+}
+
+/* Fills the list: "Custom" (the profile's own colors), then the schemes */
+static void
+terminal_profile_editor_load_color_schemes(TerminalProfileEditor* self)
+{
+  g_ptr_array_set_size(self->scheme_ids, 0);
+  gs_unref_object auto model = gtk_string_list_new(nullptr);
+
+  gtk_string_list_append(model, _("Custom"));
+  g_ptr_array_add(self->scheme_ids, g_strdup(""));
+
+  auto const schemes = terminal_schemes_get_all(terminal_schemes_get_default());
+  for (auto i = 0u; i < schemes->len; ++i) {
+    auto const scheme = reinterpret_cast<TerminalScheme*>(g_ptr_array_index(schemes, i));
+    gtk_string_list_append(model, scheme->name);
+    g_ptr_array_add(self->scheme_ids, g_strdup(scheme->id));
+  }
+
+  self->updating_scheme = true;
+  adw_combo_row_set_model(self->color_scheme, G_LIST_MODEL(model));
+  self->updating_scheme = false;
+
+  terminal_profile_editor_color_scheme_from_settings(self);
+}
+
+static void
+terminal_profile_editor_open_schemes_folder(TerminalProfileEditor* self)
+{
+  gs_free char* path = terminal_schemes_dup_user_dir();
+  g_mkdir_with_parents(path, 0755);
+
+  gs_unref_object auto file = g_file_new_for_path(path);
+  gs_unref_object auto launcher = gtk_file_launcher_new(file);
+  gtk_file_launcher_launch(launcher,
+                           GTK_WINDOW(gtk_widget_get_root(GTK_WIDGET(self))),
+                           nullptr, nullptr, nullptr);
+}
+
 static gboolean
 opacity_to_percent(GValue* value,
                    GVariant* variant,
@@ -1041,6 +1136,27 @@ terminal_profile_editor_constructed (GObject *object)
   adw_combo_row_set_enable_search (self->encoding, TRUE);
   adw_combo_row_set_model (self->encoding, encodings_model);
 
+  self->scheme_ids = g_ptr_array_new_with_free_func (g_free);
+  terminal_profile_editor_load_color_schemes (self);
+  g_signal_connect_object (self->color_scheme, "notify::selected",
+                           G_CALLBACK (terminal_profile_editor_color_scheme_from_selection),
+                           self, G_CONNECT_SWAPPED);
+  g_signal_connect_object (self->settings, "changed::" TERMINAL_PROFILE_COLOR_SCHEME_KEY,
+                           G_CALLBACK (terminal_profile_editor_color_scheme_from_settings),
+                           self, G_CONNECT_SWAPPED);
+  g_signal_connect_object (self->use_system_colors, "notify::active",
+                           G_CALLBACK (terminal_profile_editor_update_color_sensitivity),
+                           self, G_CONNECT_SWAPPED);
+  g_signal_connect_object (terminal_schemes_get_default (), "changed",
+                           G_CALLBACK (terminal_profile_editor_load_color_schemes),
+                           self, G_CONNECT_SWAPPED);
+  g_signal_connect_object (self->open_schemes_folder, "clicked",
+                           G_CALLBACK (terminal_profile_editor_open_schemes_folder),
+                           self, G_CONNECT_SWAPPED);
+  terminal_util_set_settings_and_key_for_widget (GTK_WIDGET (self->color_scheme),
+                                                 self->settings,
+                                                 TERMINAL_PROFILE_COLOR_SCHEME_KEY);
+
   color_schemes_model = create_color_scheme_model ();
   adw_combo_row_set_model (self->color_schemes, color_schemes_model);
   terminal_profile_editor_scheme_changed_from_settings (self, nullptr, self->settings);
@@ -1154,6 +1270,7 @@ terminal_profile_editor_dispose (GObject *object)
   gtk_widget_dispose_template (GTK_WIDGET (self), TERMINAL_TYPE_PROFILE_EDITOR);
 
   g_clear_object (&self->settings);
+  g_clear_pointer (&self->scheme_ids, g_ptr_array_unref);
 
   G_OBJECT_CLASS (terminal_profile_editor_parent_class)->dispose (object);
 }
@@ -1278,6 +1395,11 @@ terminal_profile_editor_class_init (TerminalProfileEditorClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, show_scrollbar);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, use_custom_command);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, use_system_colors);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, color_scheme);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, open_schemes_folder);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, custom_colors_group);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, palette_group);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, palette_buttons_group);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, background_opacity);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, background_opacity_adjustment);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, use_system_font);

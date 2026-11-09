@@ -54,6 +54,12 @@ Everything GNOME Terminal provides, plus:
   `~/.local/state/pano-terminal/`.
 * **Remember window size** (optional): open new windows with the size of the
   last used terminal instead of the initial size of the profile.
+* **Color schemes**: choose one of about 240 color schemes (Gruvbox, Nord,
+  Dracula, Solarized, Tango, …) in *Preferences → Profile → Colors → Color
+  Scheme*. Schemes with a light and a dark variant switch with the system
+  style. Add your own `.palette` files to `~/.local/share/pano-terminal/schemes`
+  (*Open Folder* in the same place); the format is described in
+  [data/schemes/README.md](data/schemes/README.md), and changes apply at once.
 * **Background transparency**: set the background opacity of each profile in
   *Preferences → Profile → Colors → Background Opacity*. Only the terminal
   background lets the desktop through; text, header bar and tab bars stay

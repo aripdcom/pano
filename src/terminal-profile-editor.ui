@@ -138,6 +138,26 @@
               <object class="AdwPreferencesGroup">
                 <property name="title" translatable="yes">Colors</property>
                 <child>
+                  <object class="AdwComboRow" id="color_scheme">
+                    <property name="title" translatable="yes">Color Scheme</property>
+                    <property name="subtitle" translatable="yes">Follows the light or dark style if it has both</property>
+                    <property name="enable-search">true</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Your Own Color Schemes</property>
+                    <property name="subtitle" translatable="yes">Add .palette files to this folder</property>
+                    <child type="suffix">
+                      <object class="GtkButton" id="open_schemes_folder">
+                        <property name="label" translatable="yes">_Open Folder</property>
+                        <property name="use-underline">true</property>
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
                   <object class="AdwSwitchRow" id="use_system_colors">
                     <property name="title" translatable="yes">Use Colors from Palette</property>
                   </object>
@@ -171,11 +191,9 @@
               </object>
             </child>
             <child>
-              <object class="AdwPreferencesGroup">
-                <property name="sensitive" bind-source="use_system_colors" bind-property="active" bind-flags="invert-boolean"/>
+              <object class="AdwPreferencesGroup" id="custom_colors_group">
                 <child>
                   <object class="AdwComboRow" id="color_schemes">
-                    <property name="sensitive" bind-source="use_system_colors" bind-property="active" bind-flags="invert-boolean"/>
                     <property name="title" translatable="yes">Use Colors from Scheme</property>
                   </object>
                 </child>
@@ -287,7 +305,7 @@
               </object>
             </child>
             <child>
-              <object class="AdwPreferencesGroup">
+              <object class="AdwPreferencesGroup" id="palette_group">
                 <property name="title" translatable="yes">Palette</property>
                 <child>
                   <object class="AdwComboRow" id="color_palette">
@@ -297,7 +315,7 @@
               </object>
             </child>
             <child>
-              <object class="AdwPreferencesGroup">
+              <object class="AdwPreferencesGroup" id="palette_buttons_group">
                 <child>
                   <object class="AdwPreferencesRow">
                     <child>

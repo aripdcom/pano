@@ -89,4 +89,12 @@ install_symlink(
 
 # Subdirs
 
+# Color schemes
+
+install_subdir(
+  'schemes',
+  install_dir: gt_prefix / gt_pkgdatadir,
+  install_tag: 'runtime',
+)
+
 subdir('icons')
