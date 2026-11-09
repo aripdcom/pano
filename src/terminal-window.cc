@@ -131,20 +131,6 @@ struct _TerminalWindow
 #define MIN_WIDTH_CHARS 4
 #define MIN_HEIGHT_CHARS 1
 
-#if 1
-/*
- * We don't want to enable content saving until vte supports it async.
- * So we disable this code for stable versions.
- */
-#include "terminal-version.hh"
-
-#if (TERMINAL_MINOR_VERSION & 1) != 0
-#define ENABLE_SAVE
-#else
-#undef ENABLE_SAVE
-#endif
-#endif
-
 /* See bug #789356 and issue gnome-terminal#129*/
 static inline constexpr auto
 window_state_is_snapped(GdkToplevelState state) noexcept
@@ -512,49 +498,80 @@ action_new_terminal_cb (GSimpleAction *action,
   terminal_window_new_tab(window, mode_str, uuid_str, true);
 }
 
-#ifdef ENABLE_SAVE
+/* Save Contents */
+
+// The folder of the last saved file, to start there the next time
+static GFile* last_save_folder;
 
 static void
-save_contents_dialog_on_response (GtkDialog *dialog,
-				  int response_id,
-				  gpointer user_data)
+window_show_toast(TerminalWindow* window,
+                  char const* title)
 {
-  VteTerminal *terminal = (VteTerminal*)user_data;
-  GtkWindow *parent;
-  gs_unref_object GFile *file = nullptr;
-  GOutputStream *stream;
-  gs_free_error GError *error = nullptr;
+  adw_toast_overlay_add_toast(window->toast_overlay, adw_toast_new(title));
+}
 
-  if (response_id != GTK_RESPONSE_ACCEPT)
-    {
-      gtk_window_destroy (GTK_WINDOW (dialog));
-      return;
-    }
+static void
+save_contents_written_cb(GObject* source,
+                         GAsyncResult* result,
+                         void* user_data)
+{
+  gs_unref_object auto window = TERMINAL_WINDOW(user_data);
+  auto const file = G_FILE(source);
+  gs_free_error GError* error = nullptr;
 
-  parent = (GtkWindow*) gtk_widget_get_ancestor (GTK_WIDGET (terminal), GTK_TYPE_WINDOW);
+  if (!g_file_replace_contents_finish(file, result, nullptr, &error)) {
+    /* Translators: %s is an error message */
+    gs_free char* title = g_strdup_printf(_("Could not save the contents: %s"), error->message);
+    window_show_toast(window, title);
+    return;
+  }
 
-  gtk_window_destroy (GTK_WINDOW (dialog));
+  gs_free char* name = g_file_get_basename(file);
+  /* Translators: %s is a file name */
+  gs_free char* title = g_strdup_printf(_("Saved “%s”"), name);
+  window_show_toast(window, title);
+}
 
-  stream = G_OUTPUT_STREAM (g_file_replace (file, nullptr, FALSE, G_FILE_CREATE_NONE, nullptr, &error));
+static void
+save_contents_file_chosen_cb(GObject* source,
+                             GAsyncResult* result,
+                             void* user_data)
+{
+  gs_unref_object auto screen = TERMINAL_SCREEN(user_data);
+  gs_unref_object auto file = gtk_file_dialog_save_finish(GTK_FILE_DIALOG(source), result, nullptr);
+  if (!file) // cancelled
+    return;
 
-  if (stream)
-    {
-      /* XXX
-       * FIXME
-       * This is a sync operation.
-       * Should be replaced with the async version when vte implements that.
-       */
-      vte_terminal_write_contents_sync (terminal, stream,
-					VTE_WRITE_DEFAULT,
-					nullptr, &error);
-      g_object_unref (stream);
-    }
+  g_clear_object(&last_save_folder);
+  last_save_folder = g_file_get_parent(file);
 
-  if (error)
-    {
-      terminal_util_show_error_dialog (parent, nullptr, error,
-				       "%s", _("Could not save contents"));
-    }
+  // The terminal may have closed meanwhile
+  auto window = reinterpret_cast<TerminalWindow*>(gtk_widget_get_ancestor(GTK_WIDGET(screen),
+                                                                          TERMINAL_TYPE_WINDOW));
+  if (!window)
+    return;
+
+  // Collecting the text needs the terminal, so it happens here, but only
+  // in memory, which is quick; writing the file, which may take long, runs
+  // in the background.
+  gs_free_error GError* error = nullptr;
+  gs_unref_object auto stream = g_memory_output_stream_new_resizable();
+  if (!vte_terminal_write_contents_sync(VTE_TERMINAL(screen), stream,
+                                        VTE_WRITE_DEFAULT, nullptr, &error) ||
+      !g_output_stream_close(stream, nullptr, &error)) {
+    /* Translators: %s is an error message */
+    gs_free char* title = g_strdup_printf(_("Could not save the contents: %s"), error->message);
+    window_show_toast(window, title);
+    return;
+  }
+
+  gs_unref_bytes auto bytes =
+    g_memory_output_stream_steal_as_bytes(G_MEMORY_OUTPUT_STREAM(stream));
+  g_file_replace_contents_bytes_async(file, bytes, nullptr, false,
+                                      G_FILE_CREATE_REPLACE_DESTINATION,
+                                      nullptr,
+                                      save_contents_written_cb,
+                                      g_object_ref(window));
 }
 
 static void
@@ -562,139 +579,38 @@ action_save_contents_cb (GSimpleAction *action,
                          GVariant *parameter,
                          gpointer user_data)
 {
-  TerminalWindow *window = (TerminalWindow*)user_data;
-  GtkWidget *dialog = nullptr;
-  VteTerminal *terminal;
-  gs_unref_object GFile *file = nullptr;
-
+  auto const window = TERMINAL_WINDOW(user_data);
   if (window->active_screen == nullptr)
     return;
 
-  terminal = VTE_TERMINAL (window->active_screen);
-  g_return_if_fail (VTE_IS_TERMINAL (terminal));
+  gs_unref_object auto dialog = gtk_file_dialog_new();
+  gtk_file_dialog_set_title(dialog, _("Save Contents"));
+  gtk_file_dialog_set_modal(dialog, true);
 
-  dialog = gtk_file_chooser_dialog_new (_("Save as…"),
-                                        GTK_WINDOW(window),
-                                        GTK_FILE_CHOOSER_ACTION_SAVE,
-                                        _("_Cancel"), GTK_RESPONSE_CANCEL,
-                                        _("_Save"), GTK_RESPONSE_ACCEPT,
-                                        nullptr);
+  if (last_save_folder) {
+    gtk_file_dialog_set_initial_folder(dialog, last_save_folder);
+  } else {
+    // Without the dialog would start in the server's folder
+    auto const documents = g_get_user_special_dir(G_USER_DIRECTORY_DOCUMENTS);
+    gs_unref_object auto folder =
+      g_file_new_for_path(documents && g_file_test(documents, G_FILE_TEST_IS_DIR)
+                          ? documents : g_get_home_dir());
+    gtk_file_dialog_set_initial_folder(dialog, folder);
+  }
 
-  file = g_file_new_for_path (g_get_user_special_dir (G_USER_DIRECTORY_DOCUMENTS));
-  gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), file, nullptr);
+  // Name the file after the terminal, as far as that makes a file name
+  gs_free char* name = g_strdup(terminal_screen_get_title(window->active_screen));
+  g_strdelimit(name, "/\\:", '-');
+  auto base = g_strstrip(name);
+  while (*base == '~' || *base == '-' || *base == '.' || *base == ' ')
+    ++base;
+  gs_free char* file_name = g_strconcat(base[0] ? base : "terminal", ".txt", nullptr);
+  gtk_file_dialog_set_initial_name(dialog, file_name);
 
-  gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
-  gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
-  gtk_window_set_destroy_with_parent (GTK_WINDOW (dialog), TRUE);
-
-  g_signal_connect (dialog, "response", G_CALLBACK (save_contents_dialog_on_response), terminal);
-  g_signal_connect (dialog, "delete_event", G_CALLBACK (terminal_util_dialog_response_on_delete), nullptr);
-
-  gtk_window_present (GTK_WINDOW (dialog));
+  gtk_file_dialog_save(dialog, GTK_WINDOW(window), nullptr,
+                       save_contents_file_chosen_cb,
+                       g_object_ref(window->active_screen));
 }
-
-#endif /* ENABLE_SAVE */
-
-#ifdef ENABLE_PRINT
-
-static void
-print_begin_cb (GtkPrintOperation *op,
-                GtkPrintContext *context,
-                TerminalApp *app)
-{
-  GtkPrintSettings *settings;
-  GtkPageSetup *page_setup;
-
-  /* Don't save if the print dialogue was cancelled */
-  if (gtk_print_operation_get_status(op) == GTK_PRINT_STATUS_FINISHED_ABORTED)
-    return;
-
-  settings = gtk_print_operation_get_print_settings (op);
-  page_setup = gtk_print_operation_get_default_page_setup (op);
-  terminal_util_save_print_settings (settings, page_setup);
-}
-
-static void
-print_done_cb (GtkPrintOperation *op,
-               GtkPrintOperationResult result,
-               TerminalWindow *window)
-{
-  if (result != GTK_PRINT_OPERATION_RESULT_ERROR)
-    return;
-
-  /* FIXME: show error */
-}
-
-static void
-action_print_cb (GSimpleAction *action,
-                 GVariant *parameter,
-                 gpointer user_data)
-{
-  TerminalWindow *window = user_data;
-  gs_unref_object GtkPrintSettings *settings = nullptr;
-  gs_unref_object GtkPageSetup *page_setup = nullptr;
-  gs_unref_object GtkPrintOperation *op = nullptr;
-  gs_free_error GError *error = nullptr;
-  GtkPrintOperationResult result;
-
-  if (window->active_screen == nullptr)
-    return;
-
-  op = vte_print_operation_new (VTE_TERMINAL (window->active_screen),
-                                VTE_PRINT_OPERATION_DEFAULT /* flags */);
-  if (op == nullptr)
-    return;
-
-  terminal_util_load_print_settings (&settings, &page_setup);
-  if (settings != nullptr)
-    gtk_print_operation_set_print_settings (op, settings);
-  if (page_setup != nullptr)
-    gtk_print_operation_set_default_page_setup (op, page_setup);
-
-  g_signal_connect (op, "begin-print", G_CALLBACK (print_begin_cb), window);
-  g_signal_connect (op, "done", G_CALLBACK (print_done_cb), window);
-
-  /* FIXME: show progress better */
-
-  result = gtk_print_operation_run (op,
-                                    /* this is the only supported one: */
-                                    GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG,
-                                    GTK_WINDOW (window),
-                                    &error);
-  /* VtePrintOperation always runs async */
-  terminal_assert_cmpint (result, ==, GTK_PRINT_OPERATION_RESULT_IN_PROGRESS);
-}
-
-#endif /* ENABLE_PRINT */
-
-#ifdef ENABLE_EXPORT
-
-static void
-action_export_cb (GSimpleAction *action,
-                 GVariant *parameter,
-                 gpointer user_data)
-{
-  TerminalWindow *window = user_data;
-  gs_unref_object VteExportOperation *op = nullptr;
-  gs_free_error GError *error = nullptr;
-
-  if (window->active_screen == nullptr)
-    return;
-
-  op = vte_export_operation_new (VTE_TERMINAL (window->active_screen),
-                                 TRUE /* interactive */,
-                                 VTE_EXPORT_FORMAT_ASK /* allow user to choose export format */,
-                                 nullptr, nullptr /* GSettings & key to load/store default directory from, FIXME */,
-                                 nullptr, nullptr /* progress callback & user data, FIXME */);
-  if (op == nullptr)
-    return;
-
-  /* FIXME: show progress better */
-
-  vte_export_operation_run_async (op, GTK_WINDOW (window), nullptr /* cancellable */);
-}
-
-#endif /* ENABLE_EXPORT */
 
 static void
 action_close_cb (GSimpleAction *action,
@@ -3141,15 +3057,7 @@ terminal_window_init (TerminalWindow *window)
     { "zoom-in",             action_zoom_in_cb,          nullptr,   nullptr, nullptr },
     { "zoom-normal",         action_zoom_normal_cb,      nullptr,   nullptr, nullptr },
     { "zoom-out",            action_zoom_out_cb,         nullptr,   nullptr, nullptr },
-#ifdef ENABLE_EXPORT
-    { "export",              action_export_cb,           nullptr,   nullptr, nullptr },
-#endif
-#ifdef ENABLE_PRINT
-    { "print",               action_print_cb,            nullptr,   nullptr, nullptr },
-#endif
-#ifdef ENABLE_SAVE
     { "save-contents",       action_save_contents_cb,    nullptr,   nullptr, nullptr },
-#endif
 
     /* Shadow actions for keybinding comsumption, see comment in terminal-accels.c */
     { "shadow",              action_shadow_activate_cb,  "s",    nullptr, nullptr },

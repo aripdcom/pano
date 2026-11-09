@@ -107,6 +107,11 @@
         <attribute name="hidden-when">action-missing</attribute>
 	<attribute name="accel"></attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">_Save Contents…</attribute>
+        <attribute name="action">win.save-contents</attribute>
+	<attribute name="accel"></attribute>
+      </item>
       <section id="set-profile-section" />
       <submenu>
         <attribute name="label" translatable="yes">_Advanced</attribute>

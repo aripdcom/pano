@@ -106,6 +106,8 @@ Everything GNOME Terminal provides, plus:
   the titles that programs set everywhere, turn on *Ignore Titles Set by
   Programs* in *Preferences → Behavior*. A terminal without a title shows
   its working directory.
+* **Save contents**: *Save Contents…* in the main menu saves the terminal's
+  text with all its scrollback to a file, without freezing the window.
 * **Copy notice**: a short "Copied to clipboard" notice confirms copying;
   turn it off with *Confirm Copying* in *Preferences → Behavior*.
 * **Middle-click on a tab**: choose in *Preferences → Behavior* whether a

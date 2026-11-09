@@ -408,15 +408,7 @@
     </key>
     <key name="save-contents" type="s">
       <default>'disabled'</default>
-      <summary>Keyboard shortcut to save the current tab contents to file</summary>
-    </key>
-    <key name="export" type="s">
-      <default>'disabled'</default>
-      <summary>Keyboard shortcut to export the current tab contents to file in various formats</summary>
-    </key>
-    <key name="print" type="s">
-      <default>'disabled'</default>
-      <summary>Keyboard shortcut to print the current tab contents to printer or file</summary>
+      <summary>Keyboard shortcut to save the contents of the current terminal, with its scrollback, to a file</summary>
     </key>
     <key name="close-tab" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;w'</default>

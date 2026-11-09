@@ -55,7 +55,6 @@
 #define KEY_COPY                "copy"
 #define KEY_COPY_HTML           "copy-html"
 #define KEY_DETACH_TAB          "detach-tab"
-#define KEY_EXPORT              "export"
 #define KEY_FIND                "find"
 #define KEY_FIND_CLEAR          "find-clear"
 #define KEY_FIND_PREV           "find-previous"
@@ -73,7 +72,6 @@
 #define KEY_PASTE               "paste"
 #define KEY_PREFERENCES         "preferences"
 #define KEY_PREV_TAB            "prev-tab"
-#define KEY_PRINT               "print"
 #define KEY_READ_ONLY           "read-only"
 #define KEY_RESET_AND_CLEAR     "reset-and-clear"
 #define KEY_RESET               "reset"
@@ -105,20 +103,6 @@
 #define KEY_RESIZE_PANE_RIGHT   "resize-pane-right"
 #define KEY_RESIZE_PANE_UP      "resize-pane-up"
 #define KEY_RESIZE_PANE_DOWN    "resize-pane-down"
-
-#if 1
-/*
-* We don't want to enable content saving until vte supports it async.
-* So we disable this code for stable versions.
-*/
-#include "terminal-version.hh"
-
-#if (TERMINAL_MINOR_VERSION & 1) != 0
-#define ENABLE_SAVE
-#else
-#undef ENABLE_SAVE
-#endif
-#endif
 
 typedef struct
 {
@@ -155,15 +139,7 @@ typedef struct
 static KeyEntry file_entries[] = {
   ENTRY (N_("New Tab"),       KEY_NEW_TAB,       "new-terminal",  "(ss)",  "('tab','current')"   ),
   ENTRY (N_("New Window"),    KEY_NEW_WINDOW,    "new-terminal",  "(ss)",  "('window','current')"),
-#ifdef ENABLE_SAVE
   ENTRY (N_("Save Contents"), KEY_SAVE_CONTENTS, "save-contents", nullptr,    nullptr                  ),
-#endif
-#ifdef ENABLE_EXPORT
-  ENTRY (N_("Export"),        KEY_EXPORT,        "export",        nullptr,    nullptr                  ),
-#endif
-#ifdef ENABLE_PRINT
-  ENTRY (N_("Print"),         KEY_PRINT,         "print",         nullptr,    nullptr                  ),
-#endif
   ENTRY (N_("Close Tab"),     KEY_CLOSE_TAB,     "close",         "s",     "'tab'"               ),
   ENTRY (N_("Close Other Tabs"), KEY_CLOSE_OTHER_TABS, "close",   "s",     "'other-tabs'"        ),
   ENTRY (N_("Reopen Closed Tab"), KEY_REOPEN_TAB, "reopen-tab",     nullptr, nullptr               ),
