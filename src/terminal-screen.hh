@@ -162,6 +162,15 @@ void terminal_screen_set_search_matches(TerminalScreen* screen,
 void terminal_screen_scroll_to_row(TerminalScreen* screen,
                                    long row);
 
+gboolean terminal_screen_is_user_input(TerminalScreen* screen,
+                                       char const* text,
+                                       gsize size);
+
+void terminal_screen_set_broadcast_excluded(TerminalScreen* screen,
+                                            gboolean excluded);
+
+gboolean terminal_screen_get_broadcast_excluded(TerminalScreen* screen);
+
 void terminal_screen_get_visible_rows(TerminalScreen* screen,
                                       long* first_row,
                                       long* last_row);

@@ -69,6 +69,11 @@ Everything GNOME Terminal provides, plus:
 * **Better search**: the find bar highlights every match, shows which match
   is current out of how many ("3 of 17"), and says when a regular expression
   is invalid.
+* **Broadcast input**: type into several terminals at once, for example to
+  run the same command on several servers. Choose *Broadcast Input → To All
+  Panes in This Tab* or *To All Terminals in This Window* in the main or
+  context menu. A banner shows how many terminals get the input, and they
+  are framed; leave single terminals out with *Include This Terminal*.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.

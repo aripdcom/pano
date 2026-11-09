@@ -496,6 +496,14 @@
       <default>'&lt;Control&gt;&lt;Shift&gt;o'</default>
       <summary>Keyboard shortcut to copy the output of the last command</summary>
     </key>
+    <key name="broadcast-tab" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to send input to all panes of the tab, or to stop</summary>
+    </key>
+    <key name="broadcast-window" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to send input to all terminals of the window, or to stop</summary>
+    </key>
     <key name="split-right" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;r'</default>
       <summary>Keyboard shortcut to split the terminal and open a new one on the right</summary>

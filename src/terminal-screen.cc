@@ -163,6 +163,11 @@ struct _TerminalScreenPrivate
   bool precmd_in_batch; /* a prompt was reported in the current batch */
   guint precmd_batch_source;
 
+  /* Input broadcasting, see terminal_screen_is_user_input() */
+  bool in_key_event;
+  guint key_event_source;
+  bool broadcast_excluded;
+
   /* Search matches to highlight, see terminal_screen_set_search_matches() */
   GArray* search_matches; /* TerminalSearchMatch */
   int search_current;
@@ -822,6 +827,34 @@ terminal_screen_row_to_adjustment(TerminalScreen* screen,
 }
 
 static gboolean
+terminal_screen_key_event_done_cb(void* user_data)
+{
+  auto const priv = TERMINAL_SCREEN(user_data)->priv;
+
+  priv->in_key_event = false;
+  priv->key_event_source = 0;
+  return G_SOURCE_REMOVE;
+}
+
+/* Marks the time until the main loop runs again as handling a key press */
+static gboolean
+terminal_screen_key_pressed_cb(GtkEventControllerKey* controller,
+                               guint keyval,
+                               guint keycode,
+                               GdkModifierType state,
+                               TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+
+  priv->in_key_event = true;
+  if (priv->key_event_source == 0)
+    priv->key_event_source = g_idle_add_full(G_PRIORITY_HIGH,
+                                             terminal_screen_key_event_done_cb,
+                                             screen, nullptr);
+  return GDK_EVENT_PROPAGATE;
+}
+
+static gboolean
 terminal_screen_precmd_batch_done_cb(void* user_data)
 {
   auto const priv = TERMINAL_SCREEN(user_data)->priv;
@@ -1197,6 +1230,13 @@ terminal_screen_init (TerminalScreen *screen)
   priv->uuid = g_strdup (uuidstr);
 
   priv->prompts = g_array_new (false, false, sizeof (PromptMark));
+
+  /* Notice key presses before VTE handles them; see terminal_screen_is_user_input() */
+  auto const key_controller = gtk_event_controller_key_new ();
+  gtk_event_controller_set_propagation_phase (key_controller, GTK_PHASE_CAPTURE);
+  g_signal_connect (key_controller, "key-pressed",
+                    G_CALLBACK (terminal_screen_key_pressed_cb), screen);
+  gtk_widget_add_controller (GTK_WIDGET (screen), key_controller);
   priv->search_current = -1;
 
   priv->child_pid = -1;
@@ -1526,6 +1566,7 @@ terminal_screen_dispose (GObject *object)
   g_clear_object(&screen->priv->icon_image);
   g_clear_handle_id(&priv->command_capture_source, g_source_remove);
   g_clear_handle_id(&priv->precmd_batch_source, g_source_remove);
+  g_clear_handle_id(&priv->key_event_source, g_source_remove);
   g_clear_pointer(&priv->command, g_free);
 
   G_OBJECT_CLASS (terminal_screen_parent_class)->dispose (object);
@@ -3791,4 +3832,59 @@ terminal_screen_get_visible_rows(TerminalScreen* screen,
   auto const adjustment = terminal_screen_get_vadjustment(screen);
   *first_row = terminal_screen_adjustment_to_row(screen, gtk_adjustment_get_value(adjustment));
   *last_row = *first_row + vte_terminal_get_row_count(VTE_TERMINAL(screen)) - 1;
+}
+
+/* Input broadcasting */
+
+/**
+ * terminal_screen_is_user_input:
+ * @screen: a #TerminalScreen
+ * @text: data from the #VteTerminal::commit signal
+ * @size: the length of @text
+ *
+ * VTE emits ::commit for everything it sends to the child: typed text,
+ * keys, pastes, mouse reports, and its own replies to queries from the
+ * program. Only what the user typed should be sent to other terminals.
+ *
+ * Text without escape sequences is typed (directly or through an input
+ * method, which may commit it later); replies and reports always start
+ * with an escape. Escape sequences count only while a key press is being
+ * handled, for cursor and function keys.
+ *
+ * Returns: whether @text is input from the user
+ */
+gboolean
+terminal_screen_is_user_input(TerminalScreen* screen,
+                              char const* text,
+                              gsize size)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), FALSE);
+
+  if (!memchr(text, '\x1b', size))
+    return TRUE;
+
+  return screen->priv->in_key_event;
+}
+
+void
+terminal_screen_set_broadcast_excluded(TerminalScreen* screen,
+                                       gboolean excluded)
+{
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  screen->priv->broadcast_excluded = excluded != FALSE;
+}
+
+/**
+ * terminal_screen_get_broadcast_excluded:
+ * @screen: a #TerminalScreen
+ *
+ * Returns: whether @screen neither sends nor receives broadcast input
+ */
+gboolean
+terminal_screen_get_broadcast_excluded(TerminalScreen* screen)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), FALSE);
+
+  return screen->priv->broadcast_excluded;
 }

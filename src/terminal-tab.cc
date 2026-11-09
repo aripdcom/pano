@@ -996,6 +996,29 @@ terminal_tab_add_screen_overlay(TerminalScreen* screen,
     gtk_overlay_add_overlay(GTK_OVERLAY(pane->overlay), child);
 }
 
+/**
+ * terminal_tab_set_screen_css_class:
+ * @screen: a #TerminalScreen
+ * @css_class: a style class
+ * @set: whether to add or remove @css_class
+ *
+ * Adds a style class to the pane of @screen, for example to draw a frame.
+ */
+void
+terminal_tab_set_screen_css_class(TerminalScreen* screen,
+                                  char const* css_class,
+                                  bool set)
+{
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  if (auto const pane = pane_from_screen(screen)) {
+    if (set)
+      gtk_widget_add_css_class(GTK_WIDGET(pane), css_class);
+    else
+      gtk_widget_remove_css_class(GTK_WIDGET(pane), css_class);
+  }
+}
+
 void
 terminal_tab_remove_overlay(GtkWidget* child)
 {

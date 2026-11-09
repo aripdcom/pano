@@ -102,6 +102,10 @@ void terminal_tab_add_screen_overlay(TerminalScreen* screen,
 
 void terminal_tab_remove_overlay(GtkWidget* child);
 
+void terminal_tab_set_screen_css_class(TerminalScreen* screen,
+                                       char const* css_class,
+                                       bool set);
+
 void terminal_tab_set_pinned(TerminalTab* tab,
                              bool pinned);
 

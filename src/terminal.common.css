@@ -123,3 +123,10 @@ window.terminal-window.translucent terminal-pane scrollbar
 {
   background-color: @window_bg_color;
 }
+
+/* Terminals that get broadcast input */
+terminal-pane.broadcast
+{
+  outline: 2px solid @warning_color;
+  outline-offset: -2px;
+}

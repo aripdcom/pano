@@ -87,6 +87,8 @@
 #define KEY_PREV_PROMPT         "previous-prompt"
 #define KEY_NEXT_PROMPT         "next-prompt"
 #define KEY_COPY_OUTPUT         "copy-output"
+#define KEY_BROADCAST_TAB       "broadcast-tab"
+#define KEY_BROADCAST_WINDOW    "broadcast-window"
 #define KEY_SPLIT_RIGHT         "split-right"
 #define KEY_SPLIT_DOWN          "split-down"
 #define KEY_CLOSE_PANE          "close-pane"
@@ -253,6 +255,8 @@ static KeyEntry panes_entries[] = {
   ENTRY_PANE (N_("Move Divider Right"),      KEY_RESIZE_PANE_RIGHT, "pane-resize", "s", "'right'"),
   ENTRY_PANE (N_("Move Divider Up"),         KEY_RESIZE_PANE_UP,    "pane-resize", "s", "'up'"   ),
   ENTRY_PANE (N_("Move Divider Down"),       KEY_RESIZE_PANE_DOWN,  "pane-resize", "s", "'down'" ),
+  ENTRY      (N_("Broadcast Input to This Tab"),    KEY_BROADCAST_TAB,    "broadcast", "s", "'tab'"   ),
+  ENTRY      (N_("Broadcast Input to This Window"), KEY_BROADCAST_WINDOW, "broadcast", "s", "'window'"),
 };
 
 static KeyEntry help_entries[] = {

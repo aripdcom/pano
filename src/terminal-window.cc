@@ -71,6 +71,8 @@ struct _TerminalWindow
   GtkWidget* content_box;
   GtkWidget *main_vbox;
   GtkWidget* ask_default_infobar;
+  AdwBanner* broadcast_banner;
+  int broadcast_mode; /* BroadcastMode */
   TerminalScreen *active_screen;
   TerminalTab* notebook_context_tab; // unowned
 
@@ -198,6 +200,14 @@ enum class CloseKind {
 
 static void terminal_window_update_pane_actions(TerminalWindow* window);
 static void window_sync_translucency(TerminalWindow* window);
+static void window_update_broadcast(TerminalWindow* window);
+
+// Where typed input goes besides the active terminal
+enum BroadcastMode {
+  BROADCAST_OFF,
+  BROADCAST_TAB, // all panes of the active tab
+  BROADCAST_WINDOW, // all terminals of the window
+};
 static gboolean confirm_close_window_or_tab (TerminalWindow *window,
                                              TerminalScreen *screen,
                                              CloseKind kind);
@@ -877,6 +887,7 @@ terminal_window_update_pane_actions(TerminalWindow* window)
 
   // Panes come and go with the same calls
   window_sync_translucency(window);
+  window_update_broadcast(window);
 }
 
 static void
@@ -950,6 +961,178 @@ clipboard_uris_received_cb (GObject *object,
   g_slice_free (PasteData, data);
 }
 
+/* Input broadcasting */
+
+// Set while sending input on to other terminals, so that it is not sent on again
+static bool broadcasting = false;
+
+/* Returns: (transfer container): the terminals that broadcast input goes
+ * to, including the active one */
+static GList*
+window_broadcast_screens(TerminalWindow* window)
+{
+  GList* screens = nullptr;
+  if (window->broadcast_mode == BROADCAST_WINDOW) {
+    screens = terminal_notebook_list_screens(window->notebook);
+  } else if (window->broadcast_mode == BROADCAST_TAB) {
+    if (auto const tab = terminal_window_get_active_tab(window))
+      screens = terminal_tab_list_screens(tab);
+  }
+
+  for (auto l = screens; l; ) {
+    auto const next = l->next;
+    if (terminal_screen_get_broadcast_excluded(TERMINAL_SCREEN(l->data)))
+      screens = g_list_delete_link(screens, l);
+    l = next;
+  }
+
+  return screens;
+}
+
+static void
+screen_commit_cb(TerminalScreen* screen,
+                 char const* text,
+                 guint size,
+                 TerminalWindow* window)
+{
+  if (broadcasting || window->broadcast_mode == BROADCAST_OFF ||
+      !terminal_screen_is_user_input(screen, text, size))
+    return;
+
+  auto const screens = window_broadcast_screens(window);
+  if (g_list_find(screens, screen)) {
+    broadcasting = true;
+    for (auto l = screens; l; l = l->next) {
+      if (l->data != screen)
+        vte_terminal_feed_child(VTE_TERMINAL(l->data), text, gssize(size));
+    }
+    broadcasting = false;
+  }
+  g_list_free(screens);
+}
+
+static void
+broadcast_paste_cb(GObject* source,
+                   GAsyncResult* result,
+                   void* user_data)
+{
+  gs_unref_object auto window = TERMINAL_WINDOW(user_data);
+  gs_free char* text = gdk_clipboard_read_text_finish(GDK_CLIPBOARD(source), result, nullptr);
+  if (!text || window->disposed)
+    return;
+
+  // Every terminal pastes for itself, so that each uses bracketed paste
+  // if its program asked for it.
+  auto const screens = window_broadcast_screens(window);
+  broadcasting = true;
+  for (auto l = screens; l; l = l->next)
+    vte_terminal_paste_text(VTE_TERMINAL(l->data), text);
+  broadcasting = false;
+  g_list_free(screens);
+}
+
+/* Pastes into all terminals that get broadcast input, if the active one does.
+ * Returns: whether it did */
+static bool
+window_paste_broadcast(TerminalWindow* window)
+{
+  if (window->broadcast_mode == BROADCAST_OFF)
+    return false;
+
+  auto const screens = window_broadcast_screens(window);
+  auto const active = g_list_find(screens, window->active_screen) != nullptr;
+  g_list_free(screens);
+  if (!active)
+    return false;
+
+  gdk_clipboard_read_text_async(window->clipboard, nullptr,
+                                broadcast_paste_cb, g_object_ref(window));
+  return true;
+}
+
+/* Shows which terminals get the input: a banner, and a frame around them */
+static void
+window_update_broadcast(TerminalWindow* window)
+{
+  if (window->disposed || !window->broadcast_banner)
+    return;
+
+  auto const all = terminal_notebook_list_screens(window->notebook);
+  auto const screens = window_broadcast_screens(window);
+  for (auto l = all; l; l = l->next)
+    terminal_tab_set_screen_css_class(TERMINAL_SCREEN(l->data), "broadcast",
+                                      g_list_find(screens, l->data) != nullptr);
+
+  auto const n = g_list_length(screens);
+  if (window->broadcast_mode == BROADCAST_OFF) {
+    adw_banner_set_revealed(window->broadcast_banner, false);
+  } else {
+    gs_free char* title = n == 0
+      ? g_strdup(_("Broadcasting input, but no terminal takes part"))
+      : g_strdup_printf(g_dngettext(GETTEXT_PACKAGE,
+                                    "Input goes to %u terminal",
+                                    "Input goes to %u terminals", n), n);
+    adw_banner_set_title(window->broadcast_banner, title);
+    adw_banner_set_revealed(window->broadcast_banner, true);
+  }
+
+  auto const receive = window->active_screen &&
+    !terminal_screen_get_broadcast_excluded(window->active_screen);
+  g_simple_action_set_state(lookup_action(window, "broadcast-receive"),
+                            g_variant_new_boolean(receive));
+  g_simple_action_set_enabled(lookup_action(window, "broadcast-receive"),
+                              window->broadcast_mode != BROADCAST_OFF);
+
+  g_list_free(screens);
+  g_list_free(all);
+}
+
+static void
+action_broadcast_cb(GSimpleAction* action,
+                    GVariant* parameter,
+                    gpointer user_data)
+{
+  // The same mode again turns broadcasting off, for toggling with a shortcut
+  gs_unref_variant auto state = g_action_get_state(G_ACTION(action));
+  if (g_variant_equal(state, parameter))
+    g_action_change_state(G_ACTION(action), g_variant_new_string("off"));
+  else
+    g_action_change_state(G_ACTION(action), parameter);
+}
+
+static void
+action_broadcast_state_cb(GSimpleAction* action,
+                          GVariant* state,
+                          gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const mode = g_variant_get_string(state, nullptr);
+
+  if (g_str_equal(mode, "tab"))
+    window->broadcast_mode = BROADCAST_TAB;
+  else if (g_str_equal(mode, "window"))
+    window->broadcast_mode = BROADCAST_WINDOW;
+  else
+    window->broadcast_mode = BROADCAST_OFF;
+
+  g_simple_action_set_state(action, state);
+  window_update_broadcast(window);
+}
+
+static void
+action_broadcast_receive_state_cb(GSimpleAction* action,
+                                  GVariant* state,
+                                  gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (!window->active_screen)
+    return;
+
+  terminal_screen_set_broadcast_excluded(window->active_screen,
+                                         !g_variant_get_boolean(state));
+  window_update_broadcast(window);
+}
+
 static void
 request_clipboard_contents_for_paste (TerminalWindow *window,
                                       gboolean paste_as_uris)
@@ -976,6 +1159,9 @@ request_clipboard_contents_for_paste (TerminalWindow *window,
                                     data);
     return;
   } else if (gdk_content_formats_contain_gtype (targets, G_TYPE_STRING)) {
+    if (window_paste_broadcast (window))
+      return;
+
     vte_terminal_paste_clipboard (VTE_TERMINAL (window->active_screen));
   }
 }
@@ -2001,6 +2187,27 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
     menu_append (pane_section, _("_Zoom Pane"), "win.zoom-pane");
     menu_append (pane_section, _("Close P_ane"), "win.close-pane");
   }
+
+  gs_unref_object GMenu *broadcast_menu = g_menu_new ();
+  static char const* const broadcast_modes[][2] = {
+    { "off", N_("_Off") },
+    { "tab", N_("To All Panes in This _Tab") },
+    { "window", N_("To All Terminals in This _Window") },
+  };
+  for (auto const& mode : broadcast_modes) {
+    gs_unref_object GMenuItem *item = g_menu_item_new (_(mode[1]), nullptr);
+    g_menu_item_set_action_and_target (item, "win.broadcast", "s", mode[0]);
+    menu_append_item (broadcast_menu, item);
+  }
+  if (window->broadcast_mode != BROADCAST_OFF) {
+    gs_unref_object GMenu *receive_section = g_menu_new ();
+    menu_append (receive_section, _("_Include This Terminal"), "win.broadcast-receive");
+    g_menu_append_section (broadcast_menu, nullptr, G_MENU_MODEL (receive_section));
+  }
+  gs_unref_object GMenuItem *broadcast_item = g_menu_item_new (_("_Broadcast Input"), nullptr);
+  g_menu_item_set_submenu (broadcast_item, G_MENU_MODEL (broadcast_menu));
+  g_menu_append_item (pane_section, broadcast_item);
+
   g_menu_append_section (menu, nullptr, G_MENU_MODEL (pane_section));
 
   /* New Terminal section */
@@ -2471,6 +2678,8 @@ terminal_window_init (TerminalWindow *window)
     { "profile",             nullptr /* changes state */,   "s",  "''",      action_profile_state_cb         },
     { "read-only",           nullptr /* toggles state */,   nullptr, "false",   action_read_only_state_cb       },
     { "zoom-pane",           nullptr /* toggles state */,   nullptr, "false",   action_zoom_pane_state_cb       },
+    { "broadcast",           action_broadcast_cb,           "s",  "'off'",   action_broadcast_state_cb       },
+    { "broadcast-receive",   nullptr /* toggles state */,   nullptr, "true",    action_broadcast_receive_state_cb },
   };
   static GActionEntry const notebook_context_action_entries[] = {
     { "notebook-tab-close",      action_notebook_tab_close_cb,      nullptr, nullptr, nullptr },
@@ -2582,6 +2791,12 @@ terminal_window_init (TerminalWindow *window)
 
   g_signal_connect_swapped (window->find_bar, "notify::has-search",
                             G_CALLBACK (terminal_window_update_search_sensitivity), window);
+
+  window->broadcast_banner = ADW_BANNER (adw_banner_new (""));
+  adw_banner_set_button_label (window->broadcast_banner, _("_Stop"));
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (window->broadcast_banner), "win.broadcast");
+  gtk_actionable_set_action_target (GTK_ACTIONABLE (window->broadcast_banner), "s", "off");
+  gtk_box_prepend (GTK_BOX (window->main_vbox), GTK_WIDGET (window->broadcast_banner));
 
   g_signal_connect_object (terminal_app_get_profiles_list (app),
                            "child-changed::" TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY,
@@ -3141,6 +3356,8 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
                     G_CALLBACK (screen_command_finished_cb), window);
   g_signal_connect (screen, "prompts-changed",
                     G_CALLBACK (screen_prompts_changed_cb), window);
+  g_signal_connect (screen, "commit",
+                    G_CALLBACK (screen_commit_cb), window);
 
   terminal_window_update_tabs_actions_sensitivity (window);
   terminal_window_update_search_sensitivity(window);
@@ -3239,6 +3456,10 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_prompts_changed_cb,
                                         window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_commit_cb,
+                                        window);
+  terminal_tab_set_screen_css_class (screen, "broadcast", false);
   terminal_app_withdraw_command_notification (terminal_app_get (), screen);
 
   /* We already got a switch-page signal whose handler sets the active tab to the

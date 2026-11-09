@@ -57,6 +57,32 @@
         <attribute name="target">down</attribute>
 	<attribute name="accel"></attribute>
       </item>
+      <submenu>
+        <attribute name="label" translatable="yes">_Broadcast Input</attribute>
+        <section>
+          <item>
+            <attribute name="label" translatable="yes">_Off</attribute>
+            <attribute name="action">win.broadcast</attribute>
+            <attribute name="target">off</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes">To All Panes in This _Tab</attribute>
+            <attribute name="action">win.broadcast</attribute>
+            <attribute name="target">tab</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes">To All Terminals in This _Window</attribute>
+            <attribute name="action">win.broadcast</attribute>
+            <attribute name="target">window</attribute>
+          </item>
+        </section>
+        <section>
+          <item>
+            <attribute name="label" translatable="yes">_Include This Terminal</attribute>
+            <attribute name="action">win.broadcast-receive</attribute>
+          </item>
+        </section>
+      </submenu>
       <item>
         <attribute name="label" translatable="yes">_Full Screen</attribute>
         <attribute name="action">win.toggle-fullscreen</attribute>
