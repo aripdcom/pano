@@ -26,11 +26,11 @@
 
 G_BEGIN_DECLS
 
-#define GNOME_TERMINAL_ICON_NAME "org.gnome.Terminal"
+#define PANO_ICON_NAME "com.aripd.Pano"
 
-#define GNOME_TERMINAL_ICON_SYMBOLIC_NAME GNOME_TERMINAL_ICON_NAME "-symbolic"
+#define PANO_ICON_SYMBOLIC_NAME PANO_ICON_NAME "-symbolic"
 
-#define TERMINAL_RESOURCES_PATH_PREFIX "/org/gnome/terminal"
+#define TERMINAL_RESOURCES_PATH_PREFIX "/com/aripd/pano"
 
 #define MONOSPACE_FONT_KEY_NAME                 "monospace-font-name"
 

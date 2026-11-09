@@ -106,14 +106,14 @@ msgstr "Klávesové zkratky"
 #: C/adv-keyboard-shortcuts.page:36
 msgid ""
 "Keyboard shortcuts are combinations of keys that allow you to perform "
-"actions, such as opening the settings dialog or accessing a feature inside "
-"<app>Terminal</app> quickly. These shortcuts can be modified to suit your "
-"preferences."
+"actions, such as opening the settings dialog or accessing a feature "
+"inside <app>Pano Terminal</app> quickly. These shortcuts can be "
+"modified to suit your preferences."
 msgstr ""
-"Klávesové zkratky jsou kombinace kláves, které umožňují rychle provádět "
-"různé činnosti, třeba otevření okna s nastavením nebo spuštění nějaké funkce "
-"v <app>Terminálu</app>. Můžete si je upravovat, aby lépe vyhovovaly vašim "
-"potřebám."
+"Klávesové zkratky jsou kombinace kláves, které umožňují rychle "
+"provádět různé činnosti, třeba otevření okna s nastavením nebo "
+"spuštění nějaké funkce v <app>Pano Terminal</app>. Můžete si je "
+"upravovat, aby lépe vyhovovaly vašim potřebám."
 
 #. (itstool) path: page/p
 #: C/adv-keyboard-shortcuts.page:41
@@ -790,13 +790,15 @@ msgstr "Barevná schémata"
 #. (itstool) path: page/p
 #: C/app-colors.page:35
 msgid ""
-"If you do not like the default <app>Terminal</app> theme, you may want to "
-"change the colors that are used for the text and background. You can use "
-"colors from your theme, select one of the presets or use a custom scheme."
+"If you do not like the default <app>Pano Terminal</app> theme, you may "
+"want to change the colors that are used for the text and background. "
+"You can use colors from your theme, select one of the presets or use a "
+"custom scheme."
 msgstr ""
-"Pokud se vám nelíbí výchozí barvy motivu <app>Terminálu</app>, můžete si "
-"barvu textu a pozadí změnit. Barvy můžete použít ze systémového motivu, "
-"vybrat si z přednastavených nebo použít nějaké vlastní."
+"Pokud se vám nelíbí výchozí barvy motivu <app>Pano Terminal</app>, "
+"můžete si barvu textu a pozadí změnit. Barvy můžete použít ze "
+"systémového motivu, vybrat si z přednastavených nebo použít nějaké "
+"vlastní."
 
 #. (itstool) path: section/title
 #: C/app-colors.page:40
@@ -886,9 +888,11 @@ msgstr "Vlastní barevné schéma"
 #. (itstool) path: section/p
 #: C/app-colors.page:102
 msgid ""
-"You can use custom colors for the text and background in <app>Terminal</app>:"
+"You can use custom colors for the text and background in <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"V <app>Terminálu</app> můžete použít vlastní barvy pro text a pozadí takto:"
+"V <app>Pano Terminal</app> můžete použít vlastní barvy pro text a "
+"pozadí takto:"
 
 #. (itstool) path: item/p
 #: C/app-colors.page:118
@@ -953,22 +957,23 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-colors.page:149
 msgid ""
-"Traditionally terminal emulators offered a 16 color palette, this is what "
-"you can alter here. <app>Terminal</app> supports an extended set of 256 "
-"colors, but the additional 240 colors cannot be edited here."
+"Traditionally terminal emulators offered a 16 color palette, this is "
+"what you can alter here. <app>Pano Terminal</app> supports an extended "
+"set of 256 colors, but the additional 240 colors cannot be edited "
+"here."
 msgstr ""
-"Emulátory terminálů tradičně nabízí paletu s 16 barvami, což zde můžete "
-"změnit. <app>Terminál</app> podporuje rozšířenou sadu 256 barev, ale "
-"dodatečných 240 barev zde nemůžete upravovat."
+"Emulátory terminálů tradičně nabízí paletu s 16 barvami, což zde "
+"můžete změnit. <app>Pano Terminal</app> podporuje rozšířenou sadu 256 "
+"barev, ale dodatečných 240 barev zde nemůžete upravovat."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:153
 msgid ""
-"<app>Terminal</app> even offers direct access to over 16 million colors, "
-"this is called “true color” mode."
+"<app>Pano Terminal</app> even offers direct access to over 16 million "
+"colors, this is called “true color” mode."
 msgstr ""
-"<app>Terminál</app> také nabízí přímý přístup k více jak 16 miliónům barev, "
-"což se nazývá režim „true color“ (pravé barvy)."
+"<app>Pano Terminal</app> také nabízí přímý přístup k více jak 16 "
+"miliónům barev, což se nazývá režim „true color“ (pravé barvy)."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:156
@@ -1030,11 +1035,11 @@ msgstr "Změna kurzoru"
 #. (itstool) path: page/p
 #: C/app-cursor.page:36
 msgid ""
-"<app>Terminal</app> has three cursors from which to choose. To select your "
-"preferred cursor:"
+"<app>Pano Terminal</app> has three cursors from which to choose. To "
+"select your preferred cursor:"
 msgstr ""
-"Aplikace <app>Terminál</app> má tři různé kurzory, ze kterých si můžete "
-"vybírat. Volbu provedete následovně:"
+"Aplikace <app>Pano Terminal</app> má tři různé kurzory, ze kterých si "
+"můžete vybírat. Volbu provedete následovně:"
 
 #. (itstool) path: item/p
 #: C/app-cursor.page:49 C/app-fonts.page:54 C/app-fonts.page:78
@@ -1085,11 +1090,13 @@ msgstr "Změna fontu a stylu"
 #. (itstool) path: page/p
 #: C/app-fonts.page:35
 msgid ""
-"When you work with a lot of <app>Terminal</app> text, you may want to change "
-"the default font to your preference. You have the following options:"
+"When you work with a lot of <app>Pano Terminal</app> text, you may "
+"want to change the default font to your preference. You have the "
+"following options:"
 msgstr ""
-"Pokud v <app>Terminálu</app> pracujete s velkým množstvím textu, můžná si "
-"budete chtít přizpůsobit písmo svým potřebám. Možnosti máte následující:"
+"Pokud v <app>Pano Terminal</app> pracujete s velkým množstvím textu, "
+"můžná si budete chtít přizpůsobit písmo svým potřebám. Možnosti máte "
+"následující:"
 
 #. (itstool) path: section/title
 #: C/app-fonts.page:40
@@ -1167,14 +1174,14 @@ msgstr "Rozestup řádků a znaků"
 #. (itstool) path: section/p
 #: C/app-fonts.page:108
 msgid ""
-"<app>Terminal</app> allows you to pull its characters apart for improved "
-"readability. Line spacing and character spacing can be adjusted from 1.0 "
-"(the regular look) to 2.0 (“double spacing”), including fractional values in "
-"between."
+"<app>Pano Terminal</app> allows you to pull its characters apart for "
+"improved readability. Line spacing and character spacing can be "
+"adjusted from 1.0 (the regular look) to 2.0 (“double spacing”), "
+"including fractional values in between."
 msgstr ""
-"<app>Terminál</app> umožňuje pro zvýšení čitelnosti oddálit znaky od sebe. "
-"Rozestup řádků a znaků se dá měnit od 1,0 (běžný vzhled) pro 2,0 („dvojité "
-"rozestupy“), včetně necelých hodnot v uvedeném rozmezí."
+"<app>Pano Terminal</app> umožňuje pro zvýšení čitelnosti oddálit znaky "
+"od sebe. Rozestup řádků a znaků se dá měnit od 1,0 (běžný vzhled) pro "
+"2,0 („dvojité rozestupy“), včetně necelých hodnot v uvedeném rozmezí."
 
 #. (itstool) path: item/p
 #: C/app-fonts.page:126
@@ -1211,24 +1218,27 @@ msgstr "Režim celé obrazovky"
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:34
-msgid "Fullscreen mode allows <app>Terminal</app> to use the entire screen."
+msgid ""
+"Fullscreen mode allows <app>Pano Terminal</app> to use the entire "
+"screen."
 msgstr ""
-"Režim celé obrazovky vám umožní používat <app>Terminál</app> přes celou "
-"obrazovku."
+"Režim celé obrazovky vám umožní používat <app>Pano Terminal</app> přes "
+"celou obrazovku."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:36
 msgid ""
 "This mode is useful if you have a device with limited screen space and "
-"intend to work in <app>Terminal</app> for a long duration, or are working "
-"with long lines of terminal output. It temporarily hides the window "
-"decoration, allowing you to view more <link xref=\"pref-scrolling"
-"\">scrollback lines</link> on the screen."
+"intend to work in <app>Pano Terminal</app> for a long duration, or are "
+"working with long lines of terminal output. It temporarily hides the "
+"window decoration, allowing you to view more <link "
+"xref=\"pref-scrolling\">scrollback lines</link> on the screen."
 msgstr ""
-"Jde o užitečnou věc, když máte zařízení s málo místem na obrazovce a hodláte "
-"v <app>Terminálu</app> pracovat delší dobu nebo s delšímy řádky na výstupu. "
-"V režimu celé obrazovky se dočasně skryjí prvky okna, takže na obrazovce "
-"můžete vidět více <link xref=\"pref-scrolling\">zapamatovaných řádků</link>."
+"Jde o užitečnou věc, když máte zařízení s málo místem na obrazovce a "
+"hodláte v <app>Pano Terminal</app> pracovat delší dobu nebo s delšímy "
+"řádky na výstupu. V režimu celé obrazovky se dočasně skryjí prvky "
+"okna, takže na obrazovce můžete vidět více <link "
+"xref=\"pref-scrolling\">zapamatovaných řádků</link>."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:42
@@ -1256,11 +1266,11 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-fullscreen.page:57
 msgid ""
-"If you have more than one <app>Terminal</app> tab open, the tab bar will be "
-"visible in the fullscreen mode."
+"If you have more than one <app>Pano Terminal</app> tab open, the tab "
+"bar will be visible in the fullscreen mode."
 msgstr ""
-"V případě, že máte v <app>Terminálu</app> otevřenu více než jednu kartu, "
-"budou viditelná také ouška karet."
+"V případě, že máte v <app>Pano Terminal</app> otevřenu více než jednu "
+"kartu, budou viditelná také ouška karet."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:61
@@ -1278,34 +1288,37 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/app-terminal-sizes.page:29
-msgid "Change the <app>Terminal</app> window size."
-msgstr "Jak si změnit velikost okna s <app>Terminálem</app>."
+msgid "Change the <app>Pano Terminal</app> window size."
+msgstr "Jak si změnit velikost okna s <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/app-terminal-sizes.page:33
-msgid "<app>Terminal</app> sizes"
-msgstr "Velikosti <app>Terminálu</app>"
+msgid "<app>Pano Terminal</app> sizes"
+msgstr "Velikosti <app>Pano Terminal</app>"
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:35
 msgid ""
 "If you work with certain command line applications that have minimum "
-"terminal size requirements in order to display correctly, or if you want to "
-"view long lines of terminal output with minimal line breaks on your display, "
-"you may require <app>Terminal</app> windows to be of a particular size."
+"terminal size requirements in order to display correctly, or if you "
+"want to view long lines of terminal output with minimal line breaks on "
+"your display, you may require <app>Pano Terminal</app> windows to be "
+"of a particular size."
 msgstr ""
-"Pokud pracujete s nějakými aplikacemi pro příkazový řádek, které mají určité "
-"minimální požadavky na velikost terminálu, aby se jejich výstupy zobrazovaly "
-"správně a nebo chcete vidět dlouhé výstupní řádky co nejméněkrát zalomené, "
-"může se vám hodit nastavení konkrétní velikosti okna <app>Terminálu</app>."
+"Pokud pracujete s nějakými aplikacemi pro příkazový řádek, které mají "
+"určité minimální požadavky na velikost terminálu, aby se jejich "
+"výstupy zobrazovaly správně a nebo chcete vidět dlouhé výstupní řádky "
+"co nejméněkrát zalomené, může se vám hodit nastavení konkrétní "
+"velikosti okna <app>Pano Terminal</app>."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:41
 msgid ""
-"You can change the <app>Terminal</app> window size to some preset values:"
+"You can change the <app>Pano Terminal</app> window size to some preset "
+"values:"
 msgstr ""
-"Velikost okna <app>Terminálu</app> můžete změnit na jednu z předdefinovaných "
-"hodnot:"
+"Velikost okna <app>Pano Terminal</app> můžete změnit na jednu z "
+"předdefinovaných hodnot:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:46
@@ -1344,25 +1357,26 @@ msgstr "<gui style=\"menuitem\">132 × 43</gui>"
 #. (itstool) path: note/p
 #: C/app-terminal-sizes.page:69
 msgid ""
-"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu access "
-"keys</gui></link>, you can access this menu by pressing <keyseq><key>Alt</"
-"key><key>T</key></keyseq> and then pressing <key>1</key> to switch the "
-"<app>Terminal</app> window to size <gui>80×24</gui> and so on."
+"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu "
+"access keys</gui></link>, you can access this menu by pressing "
+"<keyseq><key>Alt</key><key>T</key></keyseq> and then pressing "
+"<key>1</key> to switch the <app>Pano Terminal</app> window to size "
+"<gui>80×24</gui> and so on."
 msgstr ""
 "Pokud máte povolené <link xref=\"pref-keyboard-access\"><gui>klávesové "
 "zkratky nabídky</gui></link>, můžete se k této nabídce rychle dostat "
-"zmáčknutím <keyseq><key>Alt</key><key>T</key></keyseq> a následně zmáčknutím "
-"<key>1</key> přepnete velikost okna <app>Terminálu</app> na <gui>80 × 24</"
-"gui> apod."
+"zmáčknutím <keyseq><key>Alt</key><key>T</key></keyseq> a následně "
+"zmáčknutím <key>1</key> přepnete velikost okna <app>Pano "
+"Terminal</app> na <gui>80 × 24</gui> apod."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:76
 msgid ""
-"If you require custom size <app>Terminal</app> windows, you can also set the "
-"default window size according to your requirements:"
+"If you require custom size <app>Pano Terminal</app> windows, you can "
+"also set the default window size according to your requirements:"
 msgstr ""
-"V případě, že požadujete vlastní velikost okna <app>Terminálu</app>, máte "
-"možnost si výchozí velikost upravit dle potřeb:"
+"V případě, že požadujete vlastní velikost okna <app>Pano "
+"Terminal</app>, máte možnost si výchozí velikost upravit dle potřeb:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:92
@@ -1389,8 +1403,8 @@ msgstr "Přiblížení a oddálení"
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:34
-msgid "To increase <app>Terminal</app> text size:"
-msgstr "Pro zvětšení textu v <app>Terminálu</app>:"
+msgid "To increase <app>Pano Terminal</app> text size:"
+msgstr "Pro zvětšení textu v <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:38
@@ -1405,8 +1419,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:44
-msgid "To decrease <app>Terminal</app> text size:"
-msgstr "Pro zmenšení textu v <app>Terminálu</app>:"
+msgid "To decrease <app>Pano Terminal</app> text size:"
+msgstr "Pro zmenšení textu v <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:48
@@ -1421,8 +1435,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:54
-msgid "To restore <app>Terminal</app> text to default size:"
-msgstr "Pro obnovení výchozí velikosti textu v <app>Terminálu</app>:"
+msgid "To restore <app>Pano Terminal</app> text to default size:"
+msgstr "Pro obnovení výchozí velikosti textu v <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:58
@@ -1442,8 +1456,10 @@ msgstr "2013 – 2014"
 
 #. (itstool) path: info/desc
 #: C/gs-execute-commands.page:31
-msgid "Launch programs or run commands using <app>Terminal</app>."
-msgstr "Jak spustit program nebo příkaz pomocí aplikace <app>Terminál</app>."
+msgid "Launch programs or run commands using <app>Pano Terminal</app>."
+msgstr ""
+"Jak spustit program nebo příkaz pomocí aplikace <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/gs-execute-commands.page:34
@@ -1453,13 +1469,14 @@ msgstr "Spuštění příkazu"
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:36
 msgid ""
-"Any input entered in the <app>Terminal</app> to be executed is referred to "
-"as a <em>command</em>. You can run both command line and graphical user "
-"interface (GUI) programs from the terminal."
+"Any input entered in the <app>Pano Terminal</app> to be executed is "
+"referred to as a <em>command</em>. You can run both command line and "
+"graphical user interface (GUI) programs from the terminal."
 msgstr ""
-"Libovolný vstup zadaný do <app>Terminálu</app> bude proveden, jako by to byl "
-"<em>příkaz</em>. Z terminálu můžete spouštět programy jak pro příkazový "
-"řádek (CLI), tak pro grafické uživatelské rozhraní (GUI)."
+"Libovolný vstup zadaný do <app>Pano Terminal</app> bude proveden, jako "
+"by to byl <em>příkaz</em>. Z terminálu můžete spouštět programy jak "
+"pro příkazový řádek (CLI), tak pro grafické uživatelské rozhraní "
+"(GUI)."
 
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:40
@@ -1468,8 +1485,8 @@ msgstr "Příkaz spustíte následovně:"
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:44
-msgid "Type the command in the <app>Terminal</app> prompt."
-msgstr "Napiště příkaz za systémovou výzvu <app>Terminálu</app>."
+msgid "Type the command in the <app>Pano Terminal</app> prompt."
+msgstr "Napiště příkaz za systémovou výzvu <app>Pano Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:47
@@ -1479,16 +1496,17 @@ msgstr "Zmáčknutím klávesy <key>Enter</key> jej spusťte."
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:51
 msgid ""
-"If you have a program that ends abruptly without any warning or error, you "
-"may want to run it in <app>Terminal</app>. This will allow the program to "
-"output any error or debugging messages to the <app>Terminal</app> window. "
-"This information can be helpful when filing a bug report."
+"If you have a program that ends abruptly without any warning or error, "
+"you may want to run it in <app>Pano Terminal</app>. This will allow "
+"the program to output any error or debugging messages to the <app>Pano "
+"Terminal</app> window. This information can be helpful when filing a "
+"bug report."
 msgstr ""
 "V případě, že narazíte na program, který se nečekaně ukončuje bez "
-"jakéhokoliv chybového hlášení, můžete jej zkusit spustit z <app>Terminálu</"
-"app>. Tím programu umožníte vypsat chybové nebo ladicí hlášení do "
-"terminálového okna. Taková informace je užitečná, když vyplňujete chybové "
-"hlášení."
+"jakéhokoliv chybového hlášení, můžete jej zkusit spustit z <app>Pano "
+"Terminal</app>. Tím programu umožníte vypsat chybové nebo ladicí "
+"hlášení do terminálového okna. Taková informace je užitečná, když "
+"vyplňujete chybové hlášení."
 
 #. (itstool) path: note/p
 #: C/gs-execute-commands.page:57
@@ -1502,10 +1520,10 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/gs-tabs.page:30
-msgid "Enable, add, remove and reorder <app>Terminal</app> tabs."
+msgid "Enable, add, remove and reorder <app>Pano Terminal</app> tabs."
 msgstr ""
-"Jak povolit, přidávat a odebírat karty <app>Terminálu</app> a měnit jejich "
-"pořadí."
+"Jak povolit, přidávat a odebírat karty <app>Pano Terminal</app> a "
+"měnit jejich pořadí."
 
 #. (itstool) path: page/title
 #: C/gs-tabs.page:33
@@ -1515,19 +1533,19 @@ msgstr "Použití karet"
 #. (itstool) path: page/p
 #: C/gs-tabs.page:35
 msgid ""
-"The tab bar is shown at the top a <app>Terminal</app> window that has "
-"multiple tabs open (it looks like a row of buttons). Click on a tab to "
-"switch to it. You can open multiple tabs to manage your work in "
-"<app>Terminal</app>. This will allow you to multi-task with activities such "
-"as running programs, browsing directories and editing text files in a single "
-"<app>Terminal</app> window."
+"The tab bar is shown at the top a <app>Pano Terminal</app> window that "
+"has multiple tabs open (it looks like a row of buttons). Click on a "
+"tab to switch to it. You can open multiple tabs to manage your work in "
+"<app>Pano Terminal</app>. This will allow you to multi-task with "
+"activities such as running programs, browsing directories and editing "
+"text files in a single <app>Pano Terminal</app> window."
 msgstr ""
-"V okně <app>Terminálu</app>, který má otevřeno více karet, se zobrazí lišta "
-"s oušky karet (vypadá jako řada tlačítek). Na kartu můžete kliknout a tím se "
-"na ni přepnout. Otevření více karet vám zpřehlední vaši práci v "
-"<app>Terminálu</app>. Můžete provádět naráz více činností, jako je spouštění "
-"programů, procházení složek a úprava textů a to vše v rámci jediného okna "
-"<app>Terminálu</app>."
+"V okně <app>Pano Terminal</app>, který má otevřeno více karet, se "
+"zobrazí lišta s oušky karet (vypadá jako řada tlačítek). Na kartu "
+"můžete kliknout a tím se na ni přepnout. Otevření více karet vám "
+"zpřehlední vaši práci v <app>Pano Terminal</app>. Můžete provádět "
+"naráz více činností, jako je spouštění programů, procházení složek a "
+"úprava textů a to vše v rámci jediného okna <app>Pano Terminal</app>."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:43
@@ -1536,10 +1554,10 @@ msgstr "Otevření nové karty"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:45
-msgid "To open a new tab inside your current <app>Terminal</app> window:"
+msgid "To open a new tab inside your current <app>Pano Terminal</app> window:"
 msgstr ""
-"Když si chcete v okně svého současného <app>Terminálu</app> otevřít novou "
-"kartu:"
+"Když si chcete v okně svého současného <app>Pano Terminal</app> "
+"otevřít novou kartu:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:48
@@ -1555,10 +1573,11 @@ msgstr "Odebrání karty"
 #. (itstool) path: section/p
 #: C/gs-tabs.page:87
 msgid ""
-"To close an existing tab inside your current <app>Terminal</app> window:"
+"To close an existing tab inside your current <app>Pano Terminal</app> "
+"window:"
 msgstr ""
 "Když chcete zavřít některou ze stávajích karet v aktuálním okně "
-"<app>Terminálu</app>:"
+"<app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:92
@@ -1651,13 +1670,15 @@ msgstr "Jim Campbell"
 
 #. (itstool) path: info/desc
 #: C/index.page:30
-msgid "Set up and use the highly customizable GNOME terminal emulator."
+#, fuzzy
+msgid "Set up and use the highly customizable Pano Terminal emulator."
 msgstr ""
 "Nastavení a používání vysoce přizpůsobitelného terminálového emulátoru GNOME."
 
 #. (itstool) path: page/title
 #: C/index.page:34
-msgid "<_:media-1/> Terminal Help"
+#, fuzzy
+msgid "<_:media-1/> Pano Terminal Help"
 msgstr "<_:media-1/> Nápověda k Terminálu"
 
 #. (itstool) path: section/title
@@ -1692,7 +1713,8 @@ msgstr "Řešení problémů"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:29
-msgid "Learn about the GNOME terminal emulator."
+#, fuzzy
+msgid "Learn about the Pano Terminal emulator."
 msgstr "Informace o terminálovém emulátoru GNOME."
 
 #. (itstool) path: page/title
@@ -1703,30 +1725,33 @@ msgstr "Úvod"
 #. (itstool) path: page/p
 #: C/introduction.page:34
 msgid ""
-"<app>Terminal</app> is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your system."
+"<app>Pano Terminal</app> is a terminal emulator application for "
+"accessing a UNIX shell environment which can be used to run programs "
+"available on your system."
 msgstr ""
-"Aplikace <app>Terminál</app> je emulátor terminálu pro přístup k prostředí "
-"unixového shellu, který můžete používat ke spouštění programů dostupných ve "
-"vašem systému."
+"Aplikace <app>Pano Terminal</app> je emulátor terminálu pro přístup k "
+"prostředí unixového shellu, který můžete používat ke spouštění "
+"programů dostupných ve vašem systému."
 
 #. (itstool) path: page/p
 #: C/introduction.page:38
 msgid ""
-"<app>Terminal</app> supports escape sequences that control cursor position "
-"and colors."
+"<app>Pano Terminal</app> supports escape sequences that control cursor "
+"position and colors."
 msgstr ""
-"Aplikace <app>Terminál</app> podporuje únikové sekvence (sekvence escape), "
-"které řídí umístění kurzoru a barvy."
+"Aplikace <app>Pano Terminal</app> podporuje únikové sekvence (sekvence "
+"escape), které řídí umístění kurzoru a barvy."
 
 #. (itstool) path: figure/title
 #: C/introduction.page:42
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Terminál GNOME"
 
 #. (itstool) path: figure/desc
 #: C/introduction.page:43
-msgid "Screenshot of GNOME <app>Terminal</app>"
+#, fuzzy
+msgid "Screenshot of <app>Pano Terminal</app>"
 msgstr "Snímek obrazovky s aplikací <app>Terminál</app> GNOME"
 
 #. (itstool) path: figure/media
@@ -1736,12 +1761,8 @@ msgstr "Snímek obrazovky s aplikací <app>Terminál</app> GNOME"
 #. whatever you like once you have updated your copy of the file.
 #: C/introduction.page:44
 msgctxt "_"
-msgid ""
-"external ref='figures/gnome-terminal.png' "
-"md5='50826cb88874cf2c3d96ddf0c58d0c05'"
-msgstr ""
-"external ref='figures/gnome-terminal.png' "
-"md5='50826cb88874cf2c3d96ddf0c58d0c05'"
+msgid "external ref='figures/pano.png' md5='50826cb88874cf2c3d96ddf0c58d0c05'"
+msgstr "external ref='figures/pano.png' md5='50826cb88874cf2c3d96ddf0c58d0c05'"
 
 #. (itstool) path: p/link
 #: C/legal.xml:4
@@ -1813,13 +1834,14 @@ msgstr "Seznámení s terminálem"
 #. (itstool) path: page/p
 #: C/overview.page:26
 msgid ""
-"<app>Terminal</app> is a terminal program for <gui>GNOME</gui>. The "
-"following terms and their descriptions will help you to be familiar with "
-"<app>Terminal</app> and its capabilities."
+"<app>Pano Terminal</app> is a terminal program for <gui>GNOME</gui>. "
+"The following terms and their descriptions will help you to be "
+"familiar with <app>Pano Terminal</app> and its capabilities."
 msgstr ""
-"Aplikace <app>Terminál</app> je terminálový program pro <gui>GNOME</gui>. "
-"Následující slovníček pojmů vám pomůže se zorientovat v možnostech a "
-"funkcích, které vám aplikace <app>Terminál</app> nabízí."
+"Aplikace <app>Pano Terminal</app> je terminálový program pro "
+"<gui>GNOME</gui>. Následující slovníček pojmů vám pomůže se "
+"zorientovat v možnostech a funkcích, které vám aplikace <app>Pano "
+"Terminal</app> nabízí."
 
 #. (itstool) path: item/title
 #: C/overview.page:32
@@ -1889,11 +1911,13 @@ msgstr "VTE"
 
 #. (itstool) path: item/p
 #: C/overview.page:56
+#, fuzzy
 msgid ""
-"Virtual Terminal Environment (VTE) is a terminal emulator which emulates a "
-"text terminal inside a graphical user interface (GUI) environment. "
-"<app>Terminal</app> is largely based on the <app>VTE</app>. <app>VTE</app> "
-"has widgets that implement a fully functional terminal emulator."
+"Virtual Terminal Environment (VTE) is a terminal emulator which "
+"emulates a text terminal inside a graphical user interface (GUI) "
+"environment. <app>Pano Terminal</app> is largely based on the "
+"<app>VTE</app>. <app>VTE</app> has widgets that implement a fully "
+"functional terminal emulator."
 msgstr ""
 "Virtual Terminal Environment (VTE), česky „prostředí virtuálního terminálu“, "
 "je terminálový emulátor, který emuluje textový terminál v prostředí "
@@ -1991,8 +2015,8 @@ msgstr ""
 
 #. (itstool) path: page/title
 #: C/pref.page:18
-msgid "<app>Terminal</app> preferences"
-msgstr "Předvolby <app>Terminálu</app>"
+msgid "<app>Pano Terminal</app> preferences"
+msgstr "Předvolby <app>Pano Terminal</app>"
 
 #. (itstool) path: section/title
 #: C/pref.page:21
@@ -2011,8 +2035,8 @@ msgstr "Předvolby profilu"
 
 #. (itstool) path: info/desc
 #: C/pref-bell.page:29
-msgid "Enable audible notification in <app>Terminal</app>."
-msgstr "Jak zapnout zvuková upozornění v <app>Terminálu</app>."
+msgid "Enable audible notification in <app>Pano Terminal</app>."
+msgstr "Jak zapnout zvuková upozornění v <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/pref-bell.page:33
@@ -2022,11 +2046,11 @@ msgstr "Nastavení hlasitého zvonku"
 #. (itstool) path: page/p
 #: C/pref-bell.page:35
 msgid ""
-"<app>Terminal</app> can sound an audible bell to indicate events in "
-"<app>Terminal</app> windows and tabs."
+"<app>Pano Terminal</app> can sound an audible bell to indicate events "
+"in <app>Pano Terminal</app> windows and tabs."
 msgstr ""
-"<app>Terminál</app> umí vydávat zvuková upozornění, která oznamují události "
-"v oknech a kartách <app>Terminálu</app>."
+"<app>Pano Terminal</app> umí vydávat zvuková upozornění, která "
+"oznamují události v oknech a kartách <app>Pano Terminal</app>."
 
 #. (itstool) path: page/p
 #: C/pref-bell.page:38
@@ -2056,11 +2080,11 @@ msgstr "2013 – 2014"
 #. (itstool) path: info/desc
 #: C/pref-custom-exit.page:31
 msgid ""
-"Set the behavior of <app>Terminal</app> when a custom command or the default "
-"shell exits."
+"Set the behavior of <app>Pano Terminal</app> when a custom command or "
+"the default shell exits."
 msgstr ""
-"Jak nastavit chování <app>Terminálu</app> při ukončení vlastního příkazu "
-"nebo výchozího shellu."
+"Jak nastavit chování <app>Pano Terminal</app> při ukončení vlastního "
+"příkazu nebo výchozího shellu."
 
 #. (itstool) path: page/title
 #: C/pref-custom-exit.page:35
@@ -2114,24 +2138,26 @@ msgstr "Nastavení se po zvolení automaticky uloží."
 #. (itstool) path: note/p
 #: C/pref-custom-exit.page:71
 msgid ""
-"If you have <link xref=\"pref-custom-command\">set a custom command</link> "
-"that is non-interactive, have set the exit behavior to <gui>Exit the "
-"terminal</gui>, and have set the profile to be the default profile, "
-"<app>Terminal</app> may exit before you can see the output of the command."
+"If you have <link xref=\"pref-custom-command\">set a custom "
+"command</link> that is non-interactive, have set the exit behavior to "
+"<gui>Exit the terminal</gui>, and have set the profile to be the "
+"default profile, <app>Pano Terminal</app> may exit before you can see "
+"the output of the command."
 msgstr ""
 "V případě, že máte <link xref=\"pref-custom-command\">nastaven vlastní "
-"příkaz</link>, který není interaktivní a máte nastaveno chování <gui>Ukončit "
-"terminál</gui> a příslušný profil nastavený jako výchozí, může se stát, že "
-"<app>Terminál</app> skončí dřív, než vůbec uvidíte nějaký výstup z daného "
-"příkazu."
+"příkaz</link>, který není interaktivní a máte nastaveno chování "
+"<gui>Ukončit terminál</gui> a příslušný profil nastavený jako výchozí, "
+"může se stát, že <app>Pano Terminal</app> skončí dřív, než vůbec "
+"uvidíte nějaký výstup z daného příkazu."
 
 #. (itstool) path: info/desc
 #: C/pref-custom-command.page:32
 msgid ""
-"Set <app>Terminal</app> to run a command or a different shell on startup."
+"Set <app>Pano Terminal</app> to run a command or a different shell on "
+"startup."
 msgstr ""
-"Jak nastavit <app>Terminál</app>, aby po spuštění provedl příkaz nebo "
-"spustil jiný shell."
+"Jak nastavit <app>Pano Terminal</app>, aby po spuštění provedl příkaz "
+"nebo spustil jiný shell."
 
 #. (itstool) path: page/title
 #: C/pref-custom-command.page:36
@@ -2154,11 +2180,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:43
 msgid ""
-"You can set <app>Terminal</app> to run a command when it starts up instead "
-"of awaiting input from you:"
+"You can set <app>Pano Terminal</app> to run a command when it starts "
+"up instead of awaiting input from you:"
 msgstr ""
-"Aplikaci <app>Terminál</app> si můžete nastavit tak, aby po svém spuštění "
-"nečekala na váš vstup, ale rovnou spustila nějaký příkaz:"
+"Aplikaci <app>Pano Terminal</app> si můžete nastavit tak, aby po svém "
+"spuštění nečekala na váš vstup, ale rovnou spustila nějaký příkaz:"
 
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:59
@@ -2184,11 +2210,11 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:68
 msgid ""
-"Open a new <app>Terminal</app> tab or window to see how the custom shell or "
-"command executes."
+"Open a new <app>Pano Terminal</app> tab or window to see how the "
+"custom shell or command executes."
 msgstr ""
-"Otevřete novou kartu nebo okno <app>Terminálu</app> a podívejte se, jestli "
-"se vlastní shell nebo příkaz spustí."
+"Otevřete novou kartu nebo okno <app>Pano Terminal</app> a podívejte "
+"se, jestli se vlastní shell nebo příkaz spustí."
 
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:73
@@ -2212,8 +2238,10 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-keyboard-access.page:30
-msgid "Navigate around <app>Terminal</app> menus using keyboard keys."
-msgstr "Jak se pohybovat po nabídkách <app>Terminálu</app> pomocí klávesnice."
+msgid "Navigate around <app>Pano Terminal</app> menus using keyboard keys."
+msgstr ""
+"Jak se pohybovat po nabídkách <app>Pano Terminal</app> pomocí "
+"klávesnice."
 
 #. (itstool) path: page/title
 #: C/pref-keyboard-access.page:33
@@ -2231,24 +2259,24 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/pref-keyboard-access.page:39
 msgid ""
-"Right click in the <app>Terminal</app> window and select <gui style="
-"\"checkbox\">Show Menubar</gui> to display the menubar."
+"Right click in the <app>Pano Terminal</app> window and select <gui "
+"style=\"checkbox\">Show Menubar</gui> to display the menubar."
 msgstr ""
-"Klikněte pravým tlačítkem do okna <app>Terminálu</app> a vyberte <gui style="
-"\"checkbox\">Zobrazovat nabídkovou lištu</gui>."
+"Klikněte pravým tlačítkem do okna <app>Pano Terminal</app> a vyberte "
+"<gui style=\"checkbox\">Zobrazovat nabídkovou lištu</gui>."
 
 #. (itstool) path: page/p
 #: C/pref-keyboard-access.page:43
 msgid ""
-"You can navigate the <app>Terminal</app> menu using a combination of keys "
-"that are called <em>mnemonics</em> or a special key that takes you directly "
-"to the first menu in the menubar which is called the <em>menu accelerator "
-"key</em>."
+"You can navigate the <app>Pano Terminal</app> menu using a combination "
+"of keys that are called <em>mnemonics</em> or a special key that takes "
+"you directly to the first menu in the menubar which is called the "
+"<em>menu accelerator key</em>."
 msgstr ""
-"Po nabídkách <app>Terminálu</app> se můžete pohybovat pomocí klávesových "
-"zkratek, které se nazývají <em>mnemotechnické</em> nebo <em>horké</em> "
-"klávesy a pomocí speciální klávesy, tzv. <app>klávesové zkratky nabídky</"
-"app>, kterou se dostanete přímo na první položku v nabídce."
+"Po nabídkách <app>Pano Terminal</app> se můžete pohybovat pomocí "
+"klávesových zkratek, které se nazývají <em>mnemotechnické</em> nebo "
+"<em>horké</em> klávesy a pomocí speciální klávesy, tzv. <app>Pano "
+"Terminal</app>, kterou se dostanete přímo na první položku v nabídce."
 
 #. (itstool) path: section/title
 #: C/pref-keyboard-access.page:49
@@ -2258,13 +2286,15 @@ msgstr "Horké klávesy"
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:51
 msgid ""
-"<app>Terminal</app> menu can be accessed by combining the <key>Alt</key> key "
-"and a letter of the menu item. The letter that you need to use to access the "
-"menu will be underlined when you hold down the <key>Alt</key>."
+"<app>Pano Terminal</app> menu can be accessed by combining the "
+"<key>Alt</key> key and a letter of the menu item. The letter that you "
+"need to use to access the menu will be underlined when you hold down "
+"the <key>Alt</key>."
 msgstr ""
-"Do nabídky aplikace <app>Terminál</app> se můžete dostat kombinací klávesy "
-"<key>Alt</key> a písmene z položky nabídky. Abyste věděli, které písmeno "
-"použít, stačí klávesu <key>Alt</key> podržet a písmeno se podtrhne."
+"Do nabídky aplikace <app>Pano Terminal</app> se můžete dostat "
+"kombinací klávesy <key>Alt</key> a písmene z položky nabídky. Abyste "
+"věděli, které písmeno použít, stačí klávesu <key>Alt</key> podržet a "
+"písmeno se podtrhne."
 
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:56
@@ -2318,8 +2348,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-login-shell.page:30
-msgid "Start a login shell in <app>Terminal</app>."
-msgstr "Jak spusti přihlašovací shell v <app>Terminálu</app>."
+msgid "Start a login shell in <app>Pano Terminal</app>."
+msgstr "Jak spusti přihlašovací shell v <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/pref-login-shell.page:33
@@ -2403,11 +2433,13 @@ msgstr "Spuštění přihlašovacího shellu"
 #. (itstool) path: section/p
 #: C/pref-login-shell.page:72
 msgid ""
-"You can allow <app>Terminal</app> to start a login shell. Your default shell "
-"will be started with a dash character prepended to its name."
+"You can allow <app>Pano Terminal</app> to start a login shell. Your "
+"default shell will be started with a dash character prepended to its "
+"name."
 msgstr ""
-"Můžete <app>Terminálu</app> dovolit spouštět přihlašovací shell. Váš výchozí "
-"shell pak bude spuštěn se znakem pomlčka přidaným před jeho název."
+"Můžete <app>Pano Terminal</app> dovolit spouštět přihlašovací shell. "
+"Váš výchozí shell pak bude spuštěn se znakem pomlčka přidaným před "
+"jeho název."
 
 #. (itstool) path: item/p
 #: C/pref-login-shell.page:92
@@ -2445,11 +2477,11 @@ msgstr "Když chcete nabídkovou lištu zobrazit:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:43
 msgid ""
-"Right click in <app>Terminal</app> and select <gui style=\"menuitem\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Show Menubar</gui>."
 msgstr ""
-"Klikněte pravým tlačítkem do <app>Terminálu</app> a vyberte <gui style="
-"\"menuitem\">Zobrazit nabídkovou lištu</gui>."
+"Klikněte pravým tlačítkem do <app>Pano Terminal</app> a vyberte <gui "
+"style=\"menuitem\">Zobrazit nabídkovou lištu</gui>."
 
 #. (itstool) path: page/p
 #: C/pref-menubar.page:48
@@ -2459,11 +2491,11 @@ msgstr "Když chcete nabídkovou lištu skrýt:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:51
 msgid ""
-"Right click in <app>Terminal</app> and deselect <gui style=\"checkbox\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and deselect <gui "
+"style=\"checkbox\">Show Menubar</gui>."
 msgstr ""
-"Klikněte pravým tlačítkem do <app>Terminálu</app> a vyberte <gui style="
-"\"checkbox\">Zobrazovat nabídkovou lištu</gui>."
+"Klikněte pravým tlačítkem do <app>Pano Terminal</app> a vyberte <gui "
+"style=\"checkbox\">Zobrazovat nabídkovou lištu</gui>."
 
 #. (itstool) path: note/p
 #: C/pref-menubar.page:71
@@ -2486,12 +2518,14 @@ msgstr "Správa profilů"
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:40
+#, fuzzy
 msgid ""
-"A profile is a collection of <app>Terminal</app> settings. <app>Terminal</"
-"app> supports multiple profiles. You can configure <app>Terminal</app> "
-"profiles to <link xref=\"pref-custom-command\">run a custom command or "
-"shell</link>, set a profile exclusively to connect to remote computers using "
-"SSH or set a profile that launches a <app>GNU Screen</app> session."
+"A profile is a collection of <app>Pano Terminal</app> settings. "
+"<app>Pano Terminal</app> supports multiple profiles. You can configure "
+"<app>Pano Terminal</app> profiles to <link "
+"xref=\"pref-custom-command\">run a custom command or shell</link>, set "
+"a profile exclusively to connect to remote computers using SSH or set "
+"a profile that launches a <app>GNU Screen</app> session."
 msgstr ""
 "Profil je sada nastavení aplikace <app>Terminál</app>. Podporována je práce "
 "s více profily. Můžete si nadefinovat profily <app>Terminálu</app> pro <link "
@@ -2501,8 +2535,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:47
-msgid "The available <app>Terminal</app> settings include:"
-msgstr "Dostupná nastavení <app>Terminálu</app> zahrnují:"
+msgid "The available <app>Pano Terminal</app> settings include:"
+msgstr "Dostupná nastavení <app>Pano Terminal</app> zahrnují:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:51
@@ -2536,14 +2570,15 @@ msgstr "Výběr profilu"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:68
 msgid ""
-"If you have two or more profiles defined, you can change the profile in your "
-"current <app>Terminal</app> tab or window by selecting a profile from "
-"<guiseq><gui style=\"menu\">Terminal</gui> <gui style=\"menuitem\">Change "
-"Profile</gui></guiseq>."
+"If you have two or more profiles defined, you can change the profile "
+"in your current <app>Pano Terminal</app> tab or window by selecting a "
+"profile from <guiseq><gui style=\"menu\">Terminal</gui> <gui "
+"style=\"menuitem\">Change Profile</gui></guiseq>."
 msgstr ""
-"Pokud máte dva nebo více profilů, můžete profil ve svém aktuálním okně nebo "
-"kartě <app>Terminálu</app> změnit výběrem v <guiseq><gui style=\"menu"
-"\">Terminál</gui> <gui style=\"menuitem\">Změnit profil</gui></guiseq>."
+"Pokud máte dva nebo více profilů, můžete profil ve svém aktuálním okně "
+"nebo kartě <app>Pano Terminal</app> změnit výběrem v <guiseq><gui "
+"style=\"menu\">Terminál</gui> <gui style=\"menuitem\">Změnit "
+"profil</gui></guiseq>."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:76
@@ -2553,10 +2588,11 @@ msgstr "Vytvoření nového profilu"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:78
 msgid ""
-"To create a new profile with the default settings of <app>Terminal</app>:"
+"To create a new profile with the default settings of <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"Když chcete vytvořit nový profil s výchozími nastaveními <app>Terminálu</"
-"app>:"
+"Když chcete vytvořit nový profil s výchozími nastaveními <app>Pano "
+"Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:83 C/pref-profiles.page:112 C/pref-profiles.page:162
@@ -2652,21 +2688,22 @@ msgstr "Úprava profilu"
 #. (itstool) path: note/p
 #: C/pref-profiles.page:149
 msgid ""
-"If the default profile is edited, it cannot be restored to its original "
-"settings! If you have not already created any other <app>Terminal</app> "
-"profiles and have customized the default profile, <app>Terminal</app> "
-"<em>may</em> become unusable should any settings cause problems. It is "
-"recommended that you <link xref=\"#create-profile-from-existing\">create a "
-"copy of the default profile</link> then edit the copy to create a custom "
-"profile."
+"If the default profile is edited, it cannot be restored to its "
+"original settings! If you have not already created any other <app>Pano "
+"Terminal</app> profiles and have customized the default profile, "
+"<app>Pano Terminal</app> <em>may</em> become unusable should any "
+"settings cause problems. It is recommended that you <link "
+"xref=\"#create-profile-from-existing\">create a copy of the default "
+"profile</link> then edit the copy to create a custom profile."
 msgstr ""
-"Když upravíte výchozí profil, nelze jej již obnovit do původního nastavení! "
-"Pokud již nemáte vytvořen nějaký další profil <app>Terminálu</app> a máte "
-"upravený výchozí profil, <em>může</em> se stát, že některé nastavení způsobí "
-"problémy a <app>Terminál</app> se stane nepoužitelným. Proto se doporučuje "
-"<link xref=\"#create-profile-from-existing\">vytvořit kopii výchozího "
-"profilu</link> a k vytvoření profilu uzpůsobeného vlastním potřebám použít "
-"tuto kopii."
+"Když upravíte výchozí profil, nelze jej již obnovit do původního "
+"nastavení! Pokud již nemáte vytvořen nějaký další profil <app>Pano "
+"Terminal</app> a máte upravený výchozí profil, <em>může</em> se stát, "
+"že některé nastavení způsobí problémy a <app>Pano Terminal</app> se "
+"stane nepoužitelným. Proto se doporučuje <link "
+"xref=\"#create-profile-from-existing\">vytvořit kopii výchozího "
+"profilu</link> a k vytvoření profilu uzpůsobeného vlastním potřebám "
+"použít tuto kopii."
 
 #. (itstool) path: section/p
 #: C/pref-profiles.page:158
@@ -2690,44 +2727,46 @@ msgstr "Jakmile je požadovaný profil vybrán, můžete: "
 #. (itstool) path: item/p
 #: C/pref-profiles.page:175
 msgid ""
-"Select <link xref=\"app-fonts\">font</link>, <link xref=\"app-cursor"
-"\">cursor shapes</link> and <link xref=\"app-terminal-sizes\"><app>Terminal</"
-"app> size</link>."
+"Select <link xref=\"app-fonts\">font</link>, <link "
+"xref=\"app-cursor\">cursor shapes</link> and <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> size</link>."
 msgstr ""
-"Vyberte si <link xref=\"app-fonts\">písmo</link>, <link xref=\"app-cursor"
-"\">tvar kurzoru</link> a <link xref=\"app-terminal-sizes\">velikost "
-"<app>Terminálu</app></link>."
+"Vyberte si <link xref=\"app-fonts\">písmo</link>, <link "
+"xref=\"app-cursor\">tvar kurzoru</link> a <link "
+"xref=\"app-terminal-sizes\">velikost <app>Pano Terminal</app></link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:180
 msgid ""
-"You may also change behavior of <app>Terminal</app> on <link xref=\"pref-"
-"custom-exit\">command exit</link>, set a <link xref=\"pref-login-shell"
-"\">custom login shell</link> or change <link xref=\"pref-scrolling"
-"\">scrollbar preferences</link>."
+"You may also change behavior of <app>Pano Terminal</app> on <link "
+"xref=\"pref-custom-exit\">command exit</link>, set a <link "
+"xref=\"pref-login-shell\">custom login shell</link> or change <link "
+"xref=\"pref-scrolling\">scrollbar preferences</link>."
 msgstr ""
-"Můžete také změnit chování <app>Terminálu</app> při <link xref=\"pref-custom-"
-"exit\">ukončení příkazu</link>, nastavit si <link xref=\"pref-login-shell"
-"\">vlastní shell</link> nebo změnit <link xref=\"pref-scrolling\">předvolby "
-"posouvání</link>."
+"Můžete také změnit chování <app>Pano Terminal</app> při <link "
+"xref=\"pref-custom-exit\">ukončení příkazu</link>, nastavit si <link "
+"xref=\"pref-login-shell\">vlastní shell</link> nebo změnit <link "
+"xref=\"pref-scrolling\">předvolby posouvání</link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:186
 msgid ""
-"To change the <app>Terminal</app> background and text colors, see <link xref="
-"\"app-colors\"><app>Terminal</app> color schemes</link>."
+"To change the <app>Pano Terminal</app> background and text colors, see "
+"<link xref=\"app-colors\"><app>Pano Terminal</app> color "
+"schemes</link>."
 msgstr ""
-"Informace o změně barvy pozadí a textu <app>Terminálu</app> najdete v tématu "
-"<link xref=\"app-colors\">barevná schémata <app>Terminálu</app></link>."
+"Informace o změně barvy pozadí a textu <app>Pano Terminal</app> "
+"najdete v tématu <link xref=\"app-colors\">barevná schémata <app>Pano "
+"Terminal</app></link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:190
 msgid ""
-"Changes to profile are saved immediately. To return to <app>Terminal</app>, "
-"click <gui style=\"button\">Close</gui>."
+"Changes to profile are saved immediately. To return to <app>Pano "
+"Terminal</app>, click <gui style=\"button\">Close</gui>."
 msgstr ""
-"Změny prováděné v profilu se ihned ukládají. Pro návrat do <app>Terminálu</"
-"app> klikněte na <gui style=\"button\">Zavřít</gui>."
+"Změny prováděné v profilu se ihned ukládají. Pro návrat do <app>Pano "
+"Terminal</app> klikněte na <gui style=\"button\">Zavřít</gui>."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:198
@@ -2812,17 +2851,19 @@ msgstr ""
 #. (itstool) path: section/p
 #: C/pref-profiles.page:265
 msgid ""
-"The default profile is used when <app>Terminal</app> could not otherwise "
-"decide which profile to use. For example, <app>Terminal</app> is started up "
-"freshly and opens its first terminal window. In contrast, when you use a "
-"menu entry or keyboard shortcut of <app>Terminal</app> to open a new "
-"terminal, the profile of the existing terminal is used."
+"The default profile is used when <app>Pano Terminal</app> could not "
+"otherwise decide which profile to use. For example, <app>Pano "
+"Terminal</app> is started up freshly and opens its first terminal "
+"window. In contrast, when you use a menu entry or keyboard shortcut of "
+"<app>Pano Terminal</app> to open a new terminal, the profile of the "
+"existing terminal is used."
 msgstr ""
-"Výchozí profil se použije, když se nemůže <app>Terminál</app> rozhodnout pro "
-"jiný profil. Například, <app>Terminál</app> je čistě spuštěný a otevře své "
-"první terminálové okno. Oproti tomu, když použijete k otevření nového "
-"terminálu položku nabídky nebo klávesovou zkratku <app>Terminálu</app>, "
-"použije se profil stávajícího terminálu."
+"Výchozí profil se použije, když se nemůže <app>Pano Terminal</app> "
+"rozhodnout pro jiný profil. Například, <app>Pano Terminal</app> je "
+"čistě spuštěný a otevře své první terminálové okno. Oproti tomu, když "
+"použijete k otevření nového terminálu položku nabídky nebo klávesovou "
+"zkratku <app>Pano Terminal</app>, použije se profil stávajícího "
+"terminálu."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:277
@@ -2858,21 +2899,23 @@ msgstr "Znaky vypadají příliš úzké"
 #. (itstool) path: page/p
 #: C/pref-profile-char-width.page:30
 msgid ""
-"Some characters, such as some Greek letters and Asian logograms, can take up "
-"either one or two cells in a terminal window. These characters are often "
-"referred to as <em>ambiguous characters</em>. By default, these characters "
-"are displayed with a narrow width in <app>Terminal</app>, which looks better "
-"in situations where perfect layout is important, such as in ASCII art. You "
-"can change your profile preferences to display ambiguous characters as wide, "
-"which can be better if you are reading running prose."
+"Some characters, such as some Greek letters and Asian logograms, can "
+"take up either one or two cells in a terminal window. These characters "
+"are often referred to as <em>ambiguous characters</em>. By default, "
+"these characters are displayed with a narrow width in <app>Pano "
+"Terminal</app>, which looks better in situations where perfect layout "
+"is important, such as in ASCII art. You can change your profile "
+"preferences to display ambiguous characters as wide, which can be "
+"better if you are reading running prose."
 msgstr ""
 "Některé znaky, jako řecká písmena nebo asijské symbolické znaky, mohou "
-"zabírat v terminálovém okně buď jednu buňku nebo dvě. Tyto znaky jsou často "
-"označovány jako <em>nejednoznačné znaky</em>. Standardně se tyto znaky "
-"zobrazují v <app>Terminálu</app> v úzké šířce, což vypadá lépe v situacích, "
-"kdy je podstatné správné rozložení (například pro ASCII art). Můžete si ale "
-"změnit předvolby svého profilu, aby se nejednoznačné znaky zobrazovaly jako "
-"široké, což může být vhodnější při čtení ubíhajícího textu."
+"zabírat v terminálovém okně buď jednu buňku nebo dvě. Tyto znaky jsou "
+"často označovány jako <em>nejednoznačné znaky</em>. Standardně se tyto "
+"znaky zobrazují v <app>Pano Terminal</app> v úzké šířce, což vypadá "
+"lépe v situacích, kdy je podstatné správné rozložení (například pro "
+"ASCII art). Můžete si ale změnit předvolby svého profilu, aby se "
+"nejednoznačné znaky zobrazovaly jako široké, což může být vhodnější "
+"při čtení ubíhajícího textu."
 
 #. (itstool) path: item/p
 #: C/pref-profile-char-width.page:48 C/pref-profile-encoding.page:46
@@ -3104,23 +3147,26 @@ msgstr "Okna a karty"
 #. (itstool) path: note/p
 #: C/pref-tab-window.page:32
 msgid ""
-"This setting only applies when the <link xref=\"pref-menubar\">menubar is "
-"enabled</link>, or when <app>Terminal</app> is started from the command line "
-"and neither the <cmd>--tab</cmd> nor the <cmd>--window</cmd> options are "
-"passed."
+"This setting only applies when the <link xref=\"pref-menubar\">menubar "
+"is enabled</link>, or when <app>Pano Terminal</app> is started from "
+"the command line and neither the <cmd>--tab</cmd> nor the "
+"<cmd>--window</cmd> options are passed."
 msgstr ""
-"Toto nastavení se použije, jen když <link xref=\"pref-menubar\">je zapnutá "
-"nabídková lišta</link>, nebo když je <app>Terminal</app> spuštěný z "
-"příkazové řádky a to buď s volbou <cmd>--tab</cmd> nebo <cmd>--window</cmd>."
+"Toto nastavení se použije, jen když <link xref=\"pref-menubar\">je "
+"zapnutá nabídková lišta</link>, nebo když je <app>Pano Terminal</app> "
+"spuštěný z příkazové řádky a to buď s volbou <cmd>--tab</cmd> nebo "
+"<cmd>--window</cmd>."
 
 #. (itstool) path: page/p
 #: C/pref-tab-window.page:37
 msgid ""
-"You can choose whether to open a new tab or a new <app>Terminal</app> window "
-"when you use <gui style=\"menuitem\">New Terminal</gui>."
+"You can choose whether to open a new tab or a new <app>Pano "
+"Terminal</app> window when you use <gui style=\"menuitem\">New "
+"Terminal</gui>."
 msgstr ""
 "Můžete si zvolit, jestli se při použití <gui style=\"menuitem\">Nový "
-"terminál</gui> má otevřít nová karta nebo nové okno s <app>Terminálem</app>."
+"terminál</gui> má otevřít nová karta nebo nové okno s <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: steps/title
 #: C/pref-tab-window.page:41
@@ -3202,11 +3248,11 @@ msgstr "Když chcete používat režim, kdy je povoleno jen čtení:"
 #. (itstool) path: item/p
 #: C/pref-user-input.page:37
 msgid ""
-"Right click in the <app>Terminal</app> window or press the menu button in "
-"the top-right corner of the window."
+"Right click in the <app>Pano Terminal</app> window or press the menu "
+"button in the top-right corner of the window."
 msgstr ""
-"Klikněte pravým tlačítkem do okna <app>Terminál</app>, nebo zmáčkněte "
-"tlačítko nabídky v pravém horním rohu okna."
+"Klikněte pravým tlačítkem do okna <app>Pano Terminal</app>, nebo "
+"zmáčkněte tlačítko nabídky v pravém horním rohu okna."
 
 #. (itstool) path: item/p
 #: C/pref-user-input.page:41
@@ -3226,29 +3272,29 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/prob-reset.page:24
 msgid ""
-"How do I recover my <app>Terminal</app> screen when it becomes stuck or has "
-"lot of strange symbols on it?"
+"How do I recover my <app>Pano Terminal</app> screen when it becomes "
+"stuck or has lot of strange symbols on it?"
 msgstr ""
-"Jak obnovit obrazovku svého <app>Terminálu</app>, když zamrzne nebo se na ní "
-"objeví podivné znaky."
+"Jak obnovit obrazovku svého <app>Pano Terminal</app>, když zamrzne "
+"nebo se na ní objeví podivné znaky."
 
 #. (itstool) path: page/title
 #: C/prob-reset.page:28
-msgid "Reset your <app>Terminal</app> state"
-msgstr "Inicializace výstupu <app>Terminálu</app>"
+msgid "Reset your <app>Pano Terminal</app> state"
+msgstr "Inicializace výstupu <app>Pano Terminal</app>"
 
 #. (itstool) path: page/p
 #: C/prob-reset.page:30
 msgid ""
-"After viewing a non-text file by mistake, or launching some command, it can "
-"happen the <app>Terminal</app> screen is unresponsive, has strange letters "
-"printed when you press keys. You can recover your <app>Terminal</app> in the "
-"following ways:"
+"After viewing a non-text file by mistake, or launching some command, "
+"it can happen the <app>Pano Terminal</app> screen is unresponsive, has "
+"strange letters printed when you press keys. You can recover your "
+"<app>Pano Terminal</app> in the following ways:"
 msgstr ""
 "Když omylem zobrazíte netextový soubor nebo spustíte některý nevhodný "
-"příkaz, může se stát, že obrazovka <app>Terminálu</app> přestane reagovat "
-"nebo se na ní při mačkání kláves objevují podivné znaky. Do původního stavu "
-"ji můžete uvést následujícími způsoby:"
+"příkaz, může se stát, že obrazovka <app>Pano Terminal</app> přestane "
+"reagovat nebo se na ní při mačkání kláves objevují podivné znaky. Do "
+"původního stavu ji můžete uvést následujícími způsoby:"
 
 #. (itstool) path: section/title
 #: C/prob-reset.page:36
@@ -3257,8 +3303,8 @@ msgstr "Inicializace"
 
 #. (itstool) path: section/p
 #: C/prob-reset.page:38
-msgid "Reset <app>Terminal</app> screen."
-msgstr "Inicializujte obrazovku <app>Terminálu</app>."
+msgid "Reset <app>Pano Terminal</app> screen."
+msgstr "Inicializujte obrazovku <app>Pano Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:42
@@ -3284,15 +3330,16 @@ msgstr "Inicializace a vymazání"
 #. (itstool) path: section/p
 #: C/prob-reset.page:56
 msgid ""
-"In addition to resetting your <app>Terminal</app>, <gui style=\"menuitem"
-"\">Reset and Clear</gui> clears the visible <app>Terminal</app> screen space "
-"and the scrollback contents. To <gui style=\"menuitem\">Reset and Clear</"
-"gui> your <app>Terminal</app>:"
+"In addition to resetting your <app>Pano Terminal</app>, <gui "
+"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Pano "
+"Terminal</app> screen space and the scrollback contents. To <gui "
+"style=\"menuitem\">Reset and Clear</gui> your <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"<gui style=\"menuitem\">Inicializovat a vymazat</gui>, mimo inicializace "
-"<app>Terminálu</app>, provede navíc i vymazání viditelné části obrazovky s "
-"terminálovým výstupem a historie výpisu, na kterou se můžete posouvat zpět. "
-"Když tak chcete učinit:"
+"<gui style=\"menuitem\">Inicializovat a vymazat</gui>, mimo "
+"inicializace <app>Pano Terminal</app>, provede navíc i vymazání "
+"viditelné části obrazovky s terminálovým výstupem a historie výpisu, "
+"na kterou se můžete posouvat zpět. Když tak chcete učinit:"
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:63
@@ -3316,8 +3363,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/txt-copy-paste.page:29
-msgid "Copy and paste text in <app>Terminal</app>."
-msgstr "Jak kopírovat a vkládat text v <app>Terminálu</app>."
+msgid "Copy and paste text in <app>Pano Terminal</app>."
+msgstr "Jak kopírovat a vkládat text v <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/txt-copy-paste.page:33
@@ -3327,11 +3374,11 @@ msgstr "Kopírování a vkládání"
 #. (itstool) path: page/p
 #: C/txt-copy-paste.page:35
 msgid ""
-"You can copy and paste text in <app>Terminal</app> in a similar way to other "
-"applications. However, the keyboard shortcuts differ."
+"You can copy and paste text in <app>Pano Terminal</app> in a similar "
+"way to other applications. However, the keyboard shortcuts differ."
 msgstr ""
-"Kopírovat a vkládat text můžete v <app>Terminálu</app> obdobně jako v "
-"ostatních aplikacích, akorát klávesové zkratky jsou jiné."
+"Kopírovat a vkládat text můžete v <app>Pano Terminal</app> obdobně "
+"jako v ostatních aplikacích, akorát klávesové zkratky jsou jiné."
 
 #. (itstool) path: item/title
 #: C/txt-copy-paste.page:40
@@ -3374,13 +3421,14 @@ msgstr "<gui>Vložit</gui>"
 #. (itstool) path: item/p
 #: C/txt-copy-paste.page:54
 msgid ""
-"Right click in the <app>Terminal</app> and select <gui style=\"menuitem"
-"\">Paste</gui>. Alternatively, you can press <keyseq><key>Shift</"
-"key><key>Ctrl</key><key>V</key></keyseq>."
+"Right click in the <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Paste</gui>. Alternatively, you can press "
+"<keyseq><key>Shift</key><key>Ctrl</key><key>V</key></keyseq>."
 msgstr ""
-"Klikněte v <app>Terminálu</app> pravým tlačítkem a vyberte <guiseq><gui "
-"style=\"menuitem\">Vložit</gui></guiseq>. Případně můžete zmáčknout "
-"<keyseq><key>Shift</key> <key>Ctrl</key> <key>V</key></keyseq>."
+"Klikněte v <app>Pano Terminal</app> pravým tlačítkem a vyberte "
+"<guiseq><gui style=\"menuitem\">Vložit</gui></guiseq>. Případně můžete "
+"zmáčknout <keyseq><key>Shift</key> <key>Ctrl</key> "
+"<key>V</key></keyseq>."
 
 #. (itstool) path: note/p
 #: C/txt-copy-paste.page:62
@@ -3404,15 +3452,17 @@ msgstr "Hypertextové odkazy a e-mailové adresy"
 #. (itstool) path: page/p
 #: C/txt-links.page:32
 msgid ""
-"<app>Terminal</app> parses the terminal output and automatically detects "
-"snippets of text that are web addresses or email addresses. Web and email "
-"addresses are automatically highlighted when you point your cursor to the "
-"text, indicating that the link can be opened in an application."
+"<app>Pano Terminal</app> parses the terminal output and automatically "
+"detects snippets of text that are web addresses or email addresses. "
+"Web and email addresses are automatically highlighted when you point "
+"your cursor to the text, indicating that the link can be opened in an "
+"application."
 msgstr ""
-"Aplikace <app>Terminál</app> analyzuje terminálový výstup a automaticky "
-"určuje, které části textu jsou webovými nebo e-mailovými adresami. Tyto "
-"adresy jsou potom automaticky zvýrazňovány, když na ně najedete ukazatelem. "
-"Tím se vám dá najevo, že jde o odkaz, který můžete otevřít v jiné aplikaci."
+"Aplikace <app>Pano Terminal</app> analyzuje terminálový výstup a "
+"automaticky určuje, které části textu jsou webovými nebo e-mailovými "
+"adresami. Tyto adresy jsou potom automaticky zvýrazňovány, když na ně "
+"najedete ukazatelem. Tím se vám dá najevo, že jde o odkaz, který "
+"můžete otevřít v jiné aplikaci."
 
 #. (itstool) path: page/p
 #: C/txt-links.page:37
@@ -3446,8 +3496,8 @@ msgstr "Abyste zkopírovali hypertextový odkaz:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:52
-msgid "Right click on the link in <app>Terminal</app>."
-msgstr "Klikněte pravým tlačítkem na odkaz v <app>Terminálu</app>."
+msgid "Right click on the link in <app>Pano Terminal</app>."
+msgstr "Klikněte pravým tlačítkem na odkaz v <app>Pano Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:55
@@ -3490,8 +3540,10 @@ msgstr "Abyste zkopírovali e-mailovou adresu:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:85
-msgid "Right click on the email address in <app>Terminal</app>."
-msgstr "Klikněte pravým tlačítkem na e-mailovou adresu v <app>Terminálu</app>."
+msgid "Right click on the email address in <app>Pano Terminal</app>."
+msgstr ""
+"Klikněte pravým tlačítkem na e-mailovou adresu v <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:88
@@ -3516,8 +3568,8 @@ msgstr "Vyberte <gui style=\"menuitem\">Odeslat e-mail…</gui>"
 
 #. (itstool) path: info/desc
 #: C/txt-search.page:29
-msgid "Search the <app>Terminal</app> output."
-msgstr "Jak vyhledávat ve výstupech <app>Terminálu</app>."
+msgid "Search the <app>Pano Terminal</app> output."
+msgstr "Jak vyhledávat ve výstupech <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/txt-search.page:33
@@ -3526,8 +3578,8 @@ msgstr "Hledání textu"
 
 #. (itstool) path: page/p
 #: C/txt-search.page:35
-msgid "You can search text in the <app>Terminal</app> output:"
-msgstr "Ve výstupu <app>Terminálu</app> můžete vyhledávat text:"
+msgid "You can search text in the <app>Pano Terminal</app> output:"
+msgstr "Ve výstupu <app>Pano Terminal</app> můžete vyhledávat text:"
 
 #. (itstool) path: item/p
 #: C/txt-search.page:39
@@ -3575,15 +3627,16 @@ msgstr "<gui style=\"checkbox\">Hledat pouze celá slova</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:61
 msgid ""
-"<app>Terminal</app> will look for the entire keyword and will ignore results "
-"that partially match your search keyword. For example, if you have searched "
-"for “cat”, <app>Terminal</app> will show only results that match this "
-"keyword exactly and omit results such as “bobcat”."
+"<app>Pano Terminal</app> will look for the entire keyword and will "
+"ignore results that partially match your search keyword. For example, "
+"if you have searched for “cat”, <app>Pano Terminal</app> will show "
+"only results that match this keyword exactly and omit results such as "
+"“bobcat”."
 msgstr ""
-"<app>Terminál</app> bude hledat pouze celá slova a bude ignorovat výsledky, "
-"kdy vaše hledané slovo tvoří pouze část jiného. Například když budete hledat "
-"„oko“, zobrazí se pouze výsledky přesně s tímto slovem a např. „okolo“ se "
-"vynechá."
+"<app>Pano Terminal</app> bude hledat pouze celá slova a bude ignorovat "
+"výsledky, kdy vaše hledané slovo tvoří pouze část jiného. Například "
+"když budete hledat „oko“, zobrazí se pouze výsledky přesně s tímto "
+"slovem a např. „okolo“ se vynechá."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:68
@@ -3593,13 +3646,13 @@ msgstr "<gui style=\"checkbox\">Porovnávat jako regulární výraz</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:69
 msgid ""
-"You can use regular expression patterns, also known as regex patterns, in "
-"your search keywords. <app>Terminal</app> will display the results that "
-"match these search terms."
+"You can use regular expression patterns, also known as regex patterns, "
+"in your search keywords. <app>Pano Terminal</app> will display the "
+"results that match these search terms."
 msgstr ""
 "Při hledání můžete používat vzory regulárních výrazů, často označované "
-"zkráceně regex. <app>Terminál</app> zobrazí výsledky, které odpovídají "
-"hledanému vzoru."
+"zkráceně regex. <app>Pano Terminal</app> zobrazí výsledky, které "
+"odpovídají hledanému vzoru."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:74
@@ -3609,23 +3662,26 @@ msgstr "<gui style=\"checkbox\">Pokračovat od začátku</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:75
 msgid ""
-"<app>Terminal</app> searches from your current location in the scrollback to "
-"the end of available terminal output and then restarts the search."
+"<app>Pano Terminal</app> searches from your current location in the "
+"scrollback to the end of available terminal output and then restarts "
+"the search."
 msgstr ""
-"<app>Terminál</app> hledá od aktuálního místa do konce dostupného výstupu a "
-"při zapnutí této volby pak pokračuje od začátku terminálového výstupu."
+"<app>Pano Terminal</app> hledá od aktuálního místa do konce dostupného "
+"výstupu a při zapnutí této volby pak pokračuje od začátku "
+"terminálového výstupu."
 
 #. (itstool) path: note/p
 #: C/txt-search.page:82
 msgid ""
-"If you expect to work with a lot of <app>Terminal</app> output, increase the "
-"<link xref=\"pref-scrolling#lines\">scrollback lines</link> to a higher "
-"limit to allow <app>Terminal</app> to search further back."
+"If you expect to work with a lot of <app>Pano Terminal</app> output, "
+"increase the <link xref=\"pref-scrolling#lines\">scrollback "
+"lines</link> to a higher limit to allow <app>Pano Terminal</app> to "
+"search further back."
 msgstr ""
-"Pokud plánujete práci s velkým množstvím terminálového výstupu, zvyšte počet "
-"<link xref=\"pref-scrolling#lines\">zapamatovaných řádků</link>, čímž "
-"umožníte <app>Terminálu</app> vrátit se při hledání více zpět do historie "
-"výstupu."
+"Pokud plánujete práci s velkým množstvím terminálového výstupu, zvyšte "
+"počet <link xref=\"pref-scrolling#lines\">zapamatovaných řádků</link>, "
+"čímž umožníte <app>Pano Terminal</app> vrátit se při hledání více zpět "
+"do historie výstupu."
 
 #. (itstool) path: credit/years
 #: C/txt-select-text.page:20
@@ -3688,10 +3744,10 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/txt-select-text.page:51
 msgid ""
-"If you are running an application in <app>Terminal</app> which accepts mouse "
-"input, you need to use the <key>Shift</key> modifier for the <app>Terminal</"
-"app> to catch the mouse input."
+"If you are running an application in <app>Pano Terminal</app> which "
+"accepts mouse input, you need to use the <key>Shift</key> modifier for "
+"the <app>Pano Terminal</app> to catch the mouse input."
 msgstr ""
-"V případě, že máte v <app>Terminálu</app> spuštěnou aplikaci, která pracuje "
-"s myší, musíte navíc použít modifikátor <key>Shift</key>, aby vstup od myši "
-"zachytil <app>Terminál</app>."
+"V případě, že máte v <app>Pano Terminal</app> spuštěnou aplikaci, "
+"která pracuje s myší, musíte navíc použít modifikátor "
+"<key>Shift</key>, aby vstup od myši zachytil <app>Pano Terminal</app>."

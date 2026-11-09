@@ -77,9 +77,11 @@ msgid "GPL-3.0+"
 msgstr "GPL-3.0+"
 
 #: data/org.gnome.Terminal.metainfo.xml.in:40
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "Program Terminal GNOME je program, ki omogoča dostop do okolja lupine UNIX "
 "in omogoča zaganjanje programov, dostopnih v sistemu."
@@ -174,7 +176,8 @@ msgstr "gnome-terminal"
 #: data/org.gnome.Terminal.metainfo.xml.in:71
 #: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:51
 #: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:53
-msgid "GNOME Terminal Developers"
+#, fuzzy
+msgid "Pano Terminal Developers"
 msgstr "Razvijalci Terminala GNOME"
 
 #: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:34
@@ -866,8 +869,8 @@ msgid "Whether windows should have rounded corners"
 msgstr "Ali naj imajo okna zaobljena oglišča"
 
 #: src/org.gnome.Terminal.gschema.xml:722
-msgid "Always check whether GNOME Terminal is the default terminal"
-msgstr "Vedno preveri, ali je GNOME Terminal privzet terminalski programi"
+msgid "Always check whether Pano Terminal is the default terminal"
+msgstr "Vedno preveri, ali je Pano Terminal privzet terminalski programi"
 
 #: src/search-popover.ui:5 src/search-popover.ui:26 src/terminal-accels.cc:153
 #: src/terminal-headerbar.ui:66
@@ -1209,11 +1212,13 @@ msgid "_About"
 msgstr "_O programu"
 
 #: src/terminal-nautilus.cc:543
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Odpri v _oddaljenem terminalu"
 
 #: src/terminal-nautilus.cc:545
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Odpri v _krajevnem terminalu"
 
 #: src/terminal-nautilus.cc:549 src/terminal-nautilus.cc:560
@@ -1225,11 +1230,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Odpri trenutno odprto mapo v terminalu"
 
 #: src/terminal-nautilus.cc:557
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Odpri _v terminalu"
 
 #: src/terminal-nautilus.cc:567
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Odpri _terminal"
 
 #: src/terminal-nautilus.cc:568
@@ -1261,10 +1268,10 @@ msgid "C_lose Terminal"
 msgstr "_Zapri terminal"
 
 #: src/terminal-options.cc:324
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
 "Možnost »%s« je opuščena in bo najverjetneje odstranjena iz kasnejših "
 "različic programa."
@@ -1280,8 +1287,8 @@ msgstr ""
 "izvajanje."
 
 #: src/terminal-options.cc:345 src/terminal-options.cc:358
-#, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "V tej različici terminala možnost »%s« ni več podprta."
 
 #: src/terminal-options.cc:430
@@ -1472,11 +1479,13 @@ msgid "COMMAND"
 msgstr "UKAZ"
 
 #: src/terminal-options.cc:1636
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "GNOME posnemovalnik terminala"
 
 #: src/terminal-options.cc:1637
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Pokaži možnosti GNOME terminala"
 
 #: src/terminal-options.cc:1647
@@ -2204,7 +2213,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Posnemovalnik terminala za namizje GNOME"
 
 #: src/terminal-util.cc:270
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME terminal"
 
 #: src/terminal-util.cc:279
@@ -2221,29 +2231,33 @@ msgstr "Ni mogoče odpreti naslova »%s«"
 
 #: src/terminal-util.cc:408
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
-"Program GNOME Terminal je prosta programska oprema; lahko jo izmenjujete in "
-"spreminjate pod pogoji Splošnega javnega dovoljenja GNU, kot ga izdaja Free "
-"Software Foundation; različica 2 ali kasnejše različice."
+"Program Pano Terminal je prosta programska oprema; lahko jo "
+"izmenjujete in spreminjate pod pogoji Splošnega javnega dovoljenja "
+"GNU, kot ga izdaja Free Software Foundation; različica 2 ali kasnejše "
+"različice."
 
 #: src/terminal-util.cc:412
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
-"GNOME Terminal se širi v upanju, da bo uporaben, vendar brez kakršnekoli "
-"garancije. Za več podrobnosti si oglejte GNU Splošno javno licenco."
+"Pano Terminal se širi v upanju, da bo uporaben, vendar brez "
+"kakršnekoli garancije. Za več podrobnosti si oglejte GNU Splošno javno "
+"licenco."
 
 #: src/terminal-util.cc:416
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see &lt;http://www.gnu.org/licenses/&gt;."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see "
+"&lt;http://www.gnu.org/licenses/&gt;."
 msgstr ""
 "Skupaj s programom bi morali dobiti tudi kopijo Splošnega javnega dovoljenja "
 "GNU. V primeru, da je niste, si oglejte &lt;http://www.gnu.org/licenses/&gt;"
@@ -2329,8 +2343,8 @@ msgid "Leave Full Screen"
 msgstr "Zapusti celozaslonski način"
 
 #: src/terminal-window.cc:2184
-msgid "Set GNOME Terminal as your default terminal?"
-msgstr "Ali želite nastaviti GNOME Terminal kot privzeti terminalski program?"
+msgid "Set Pano Terminal as your default terminal?"
+msgstr "Ali želite nastaviti Pano Terminal kot privzeti terminalski program?"
 
 #: src/terminal-window.cc:2189
 msgid "_Yes"

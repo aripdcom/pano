@@ -26,14 +26,14 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Enable audible notification in <app>Terminal</app>.</desc>
+    <desc>Enable audible notification in <app>Pano Terminal</app>.</desc>
 
   </info>
 
   <title>Set audible bell</title>
 
-  <p><app>Terminal</app> can sound an audible bell to indicate events in
-  <app>Terminal</app> windows and tabs.</p>
+  <p><app>Pano Terminal</app> can sound an audible bell to indicate events in
+  <app>Pano Terminal</app> windows and tabs.</p>
 
   <p>To be notified of these events:</p>
   <steps>

@@ -87,7 +87,7 @@ profiles_sources = files(
 
 settings_dbus_sources = gnome.gdbus_codegen(
   'terminal-settings-bridge-generated',
-  'org.gnome.Terminal.SettingsBridge.xml',
+  'com.aripd.Pano.SettingsBridge.xml',
   autocleanup: 'all',
   install_header: false,
   interface_prefix: gt_dns_name,
@@ -436,7 +436,7 @@ if get_option('nautilus_extension')
   ]
 
   nautilus_extension = shared_library(
-     'terminal-nautilus',
+     'pano-terminal-nautilus',
      cpp_args: nautilus_cxxflags,
      dependencies: nautilus_deps,
      include_directories: nautilus_incs,
@@ -472,7 +472,7 @@ test_regex = executable(
 )
 
 test_env = [
-  'GNOME_TERMINAL_DEBUG=0',
+  'PANO_DEBUG=0',
   'VTE_DEBUG=0',
 ]
 

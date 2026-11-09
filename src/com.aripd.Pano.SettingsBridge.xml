@@ -18,7 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <node>
-  <interface name="org.gnome.Terminal.SettingsBridge">
+  <interface name="com.aripd.Pano.SettingsBridge">
     <annotation name="org.gtk.GDBus.C.Name" value="SettingsBridge" />
 
     <method name="get_permission">

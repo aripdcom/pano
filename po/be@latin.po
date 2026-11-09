@@ -1857,7 +1857,8 @@ msgstr ""
 "\"--profile\"\n"
 
 #: ../src/terminal-options.c:187 ../src/terminal-window.c:3472
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Terminał GNOME"
 
 #: ../src/terminal-options.c:208
@@ -2007,11 +2008,13 @@ msgid "ZOOM"
 msgstr "MAŠTAB"
 
 #: ../src/terminal-options.c:1303 ../src/terminal-options.c:1306
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Terminalny emulatar GNOME"
 
 #: ../src/terminal-options.c:1307
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Pakažy opcyi Terminału GNOME"
 
 #: ../src/terminal-options.c:1317
@@ -2086,11 +2089,12 @@ msgstr ""
 "%s"
 
 #: ../src/terminal-util.c:317
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "Terminał GNOME heta svabodnaja prahrama; ty možaš raspaŭsiudžvać jaje i/albo "
 "madyfikavać zhodna z umovami Ahulnaj hramadzkaj licenzii GNU (GNU GPL), "
@@ -2098,11 +2102,12 @@ msgstr ""
 "versii 2 albo (pry žadańni) luboj paźniejšaj."
 
 #: ../src/terminal-util.c:321
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Terminał GNOME raspaŭsiudžvajecca sa spadziavańniami, što jon budzie "
 "karysnym, ale BIEŹ NIJAKICH HARANTYJAŬ; navat biez harantavańnia PRYDATNAŚCI "
@@ -2110,10 +2115,12 @@ msgstr ""
 "hramadzkaj licenzii GNU (GNU GPL)."
 
 #: ../src/terminal-util.c:325
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 "
-"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 "Ty musiŭ atrymać kopiju Ahulnaj hramadzkaj licenzii GNU (GNU GPL) razam z "
 "Totemam; kali ty nie atrymaŭ jaje, napišy pra heta (pa-anhielsku) pa "

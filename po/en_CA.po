@@ -1977,9 +1977,11 @@ msgstr ""
 #: ../src/terminal-profile.c:1881
 #, c-format
 msgid ""
-"GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
-"GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 
 #: ../src/terminal-profile.c:2184
 #, c-format
@@ -2318,8 +2320,8 @@ msgid "Close All _Tabs"
 msgstr "Close All _Tabs"
 
 #: ../src/terminal-window.c:2833
-msgid "GNOME Terminal"
-msgstr "GNOME Terminal"
+msgid "Pano Terminal"
+msgstr "Pano Terminal"
 
 #: ../src/terminal-window.c:2834
 msgid "A terminal emulator for the GNOME desktop"

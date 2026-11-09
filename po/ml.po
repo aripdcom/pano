@@ -42,9 +42,11 @@ msgid "Use the command line"
 msgstr "കമാന്‍ഡ് ലൈന്‍ ഉപയോഗിക്കുക"
 
 #: ../org.gnome.Terminal.appdata.xml.in.h:3
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "ഗ്നോം ടെര്‍മിനല്‍ എന്നത് സിസ്റ്റത്തില്‍ ലഭ്യമായ പ്രോഗ്രാമുകള്‍ പ്രവര്‍ത്തിപ്പിക്കാനായി യുണിക്സ് ഷെല്‍ "
 "പരിസ്ഥിതി ലഭ്യമാക്കാന്‍ കഴിയുന്ന ഒരു ടെര്‍മിനല്‍ എമുലേറ്റര്‍ ആപ്ലിക്കേഷനാണ്."
@@ -1701,11 +1703,13 @@ msgid "_Inspector"
 msgstr "പരിശോധകന്‍ (_I)"
 
 #: ../src/terminal-nautilus.c:534
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "ദൂരെയുള്ള ടെര്‍മിനലില്‍ _തുറക്കുക"
 
 #: ../src/terminal-nautilus.c:536
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "തദ്ദേശ ടെര്‍മിനലില്‍ തുറക്കുക (_L)"
 
 #: ../src/terminal-nautilus.c:540 ../src/terminal-nautilus.c:551
@@ -1717,11 +1721,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "ഇപ്പോള്‍ തുറന്നിരിക്കുന്ന ഫോള്‍ഡര്‍ ഒരു ടെര്‍മിനല്‍ തുറക്കുക"
 
 #: ../src/terminal-nautilus.c:548
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "ടെര്‍മിനലില്‍ തുറക്കുക (_e)"
 
 #: ../src/terminal-nautilus.c:558
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "ടെര്‍മിനല്‍ തുറക്കുക (_e)"
 
 #: ../src/terminal-nautilus.c:559
@@ -1745,10 +1751,10 @@ msgid "C_lose Terminal"
 msgstr "ടെര്‍മിനല്‍ അടയ്ക്കുക (_l)"
 
 #: ../src/terminal-options.c:281
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
 "“%s” എന്ന ഐച്ഛികം ഗ്നോം ടെര്‍മിനലിന്റെ ഈ പതിപ്പ് പിന്‍തുണയ്ക്കുന്നില്ല. അടുത്ത പതിപ്പില്‍ ഇത് എടുത്ത് "
 "കളഞ്ഞേക്കും."
@@ -1762,8 +1768,8 @@ msgid ""
 msgstr ""
 
 #: ../src/terminal-options.c:302 ../src/terminal-options.c:315
-#, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "\"%s\" എന്ന ഐച്ഛികം ഗ്നോം ടെര്‍മിനലിന്റെ ഈ പതിപ്പിൽ പിന്‍തുണയ്ക്കുന്നില്ല."
 
 #: ../src/terminal-options.c:387
@@ -1961,11 +1967,13 @@ msgid "COMMAND"
 msgstr "COMMAND"
 
 #: ../src/terminal-options.c:1619
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
 #: ../src/terminal-options.c:1620
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
 #: ../src/terminal-options.c:1630
@@ -2143,7 +2151,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "ഗ്നോം പണിയിടത്തിനുള്ള ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
 #: ../src/terminal-util.c:236
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍"
 
 #: ../src/terminal-util.c:246
@@ -2161,31 +2170,34 @@ msgid "Could not open the address “%s”"
 msgstr "മേല്‍വിലാസം “%s” തുറക്കുവാന്‍ സാധിച്ചില്ല"
 
 #: ../src/terminal-util.c:390
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "ഗ്നോം ടെര്‍മിനല്‍ ഒരു സ്വതന്ത്ര സോഫ്റ്റ്‌വെയറാണു്, നിങ്ങള്‍ക്കതു് പുനര്‍വിതരണം നടത്തുകയോ സ്വതന്ത്ര "
 "സോഫ്റ്റ്‌വെയര്‍ ഫൌണ്ടേഷന്‍ പ്രസിദ്ധീകരിച്ച ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് ലക്കം 3 ഓ അതിനേക്കാള്‍ പുതിയ "
 "പതിപ്പോ (നിങ്ങളുടെ ഇഷ്ടപ്രകാരം) പ്രകാരം ഭേദഗതി വരുത്താവുന്നതോ ആണു്."
 
 #: ../src/terminal-util.c:394
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "ഗ്നോം ടെര്‍മിനല്‍ നിങ്ങള്‍ക്കു് പ്രയോജനപ്പെടും എന്ന പ്രതീക്ഷയില്‍ വിതരണം ചെയ്യുന്നതാണു്.പക്ഷേ, ഇതിന് "
 "ഒരു വാറണ്ടിയും ലഭ്യമല്ല; വ്യാപാരയോഗ്യതയോ ഒരു പ്രത്യേക കാര്യത്തിനു്ചേരുന്നതാണെന്നോ ഉള്ള "
 "പരോക്ഷമായ ഒരു വാറണ്ടി പോലും ഇല്ല. കൂടുതല്‍ വിവരങ്ങള്‍ക്കു് ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് കാണുക."
 
 #: ../src/terminal-util.c:398
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "നിങ്ങള്‍ക്കു് ഗ്നോം ടെര്‍മിനലിനൊപ്പം ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സിന്റെ ഒരു പകര്‍പ്പു "
 "ലഭിച്ചിട്ടുണ്ടായിരിയ്ക്കണം. ഇല്ലെങ്കില്‍, ഈ വിലാസം കാണുക <http://www.gnu.org/licenses/>."

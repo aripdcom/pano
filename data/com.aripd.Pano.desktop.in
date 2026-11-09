@@ -1,14 +1,15 @@
 [Desktop Entry]
-Name=Terminal
+Name=Pano Terminal
+GenericName=Terminal
 Comment=Use the command line
-Keywords=shell;prompt;command;commandline;cmd;
-TryExec=gnome-terminal
-Exec=gnome-terminal
-Icon=org.gnome.Terminal
+Keywords=terminal;shell;prompt;command;commandline;cmd;
+TryExec=pano-terminal
+Exec=pano-terminal
+Icon=com.aripd.Pano
 Type=Application
 Categories=GNOME;GTK;System;TerminalEmulator;
 StartupNotify=true
-StartupWMClass=Gnome-terminal
+StartupWMClass=Pano
 SingleMainWindow=false
 Actions=new-window;preferences;
 X-ExecArg=--
@@ -20,8 +21,8 @@ X-KDE-AuthorizeAction=shell_access
 
 [Desktop Action new-window]
 Name=New Window
-Exec=gnome-terminal --window
+Exec=pano-terminal --window
 
 [Desktop Action preferences]
 Name=Preferences
-Exec=gnome-terminal --preferences
+Exec=pano-terminal --preferences

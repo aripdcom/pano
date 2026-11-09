@@ -122,7 +122,8 @@ msgstr "FD"
 msgid "Wait until the child exits"
 msgstr "Oota, kuni alamprotsess väljub"
 
-msgid "GNOME Terminal Client"
+#, fuzzy
+msgid "Pano Terminal Client"
 msgstr "GNOME terminaliklient"
 
 msgid "Global options:"
@@ -1098,10 +1099,12 @@ msgstr "Tai"
 msgid "Current Locale"
 msgstr "Käesolev lokaat"
 
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Ava _kaugterminalis"
 
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Ava k_ohalikus terminalis"
 
 msgid "Open the currently selected folder in a terminal"
@@ -1110,10 +1113,12 @@ msgstr "Praegu valitud kataloogi avamine terminalis"
 msgid "Open the currently open folder in a terminal"
 msgstr "Praeguse kataloogi avamine terminalis"
 
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Ava t_erminalis"
 
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Ava t_erminal"
 
 msgid "Open a terminal"
@@ -1141,11 +1146,11 @@ msgid "Open the terminal file manager Midnight Commander"
 msgstr "Terminali failihalduri Midnight Commander avamine"
 
 #, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
-msgstr "Valik \"%s\" ei ole selles gnome-terminali versioonis enam toetatud."
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
+msgstr "Valik \"%s\" ei ole selles Pano Terminali versioonis enam toetatud."
 
-msgid "GNOME Terminal"
-msgstr "GNOME Terminal"
+msgid "Pano Terminal"
+msgstr "Pano Terminal"
 
 #, c-format
 msgid "Argument to \"%s\" is not a valid command: %s"
@@ -1214,11 +1219,11 @@ msgstr "Selle võtme argumendi käivitamine terminalis"
 msgid "PROFILE-NAME"
 msgstr "PROFIILI-NIMI"
 
-msgid "GNOME Terminal Emulator"
-msgstr "GNOME Terminaliemulaator"
+msgid "Pano Terminal Emulator"
+msgstr "Pano Terminaliemulaator"
 
-msgid "Show GNOME Terminal options"
-msgstr "GNOME Terminali valikute näitamine"
+msgid "Show Pano Terminal options"
+msgstr "Pano Terminali valikute näitamine"
 
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
@@ -1322,32 +1327,32 @@ msgid "Could not open the address “%s”"
 msgstr "Aadressi „%s“ pole võimalik avada"
 
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
-"GNOME Terminal on vaba tarkvara. Te võite seda edasi levitada ja/või muuta "
-"vastavalt GNU Üldise Avaliku Litsentsi tingimustele, nagu need on Vaba "
-"Tarkvara Fondi poolt avaldatud; kas Litsentsi versioon number 3 või "
-"(vastavalt Teie valikule) ükskõik milline hilisem versioon."
+"Pano Terminal on vaba tarkvara. Te võite seda edasi levitada ja/või "
+"muuta vastavalt GNU Üldise Avaliku Litsentsi tingimustele, nagu need "
+"on Vaba Tarkvara Fondi poolt avaldatud; kas Litsentsi versioon number "
+"3 või (vastavalt Teie valikule) ükskõik milline hilisem versioon."
 
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
-"GNOME Terminali levitatakse lootuses, et see on kasulik, kuid ILMA IGASUGUSE "
-"GARANTIITA; isegi KESKMISE/TAVALISE KVALITEEDIGARANTIITA või SOBIVUSELE "
-"TEATUD KINDLAKS EESMÄRGIKS. Üksikasjade suhtes vaata GNU Üldist Avalikku "
-"Litsentsi."
+"Pano Terminali levitatakse lootuses, et see on kasulik, kuid ILMA "
+"IGASUGUSE GARANTIITA; isegi KESKMISE/TAVALISE KVALITEEDIGARANTIITA või "
+"SOBIVUSELE TEATUD KINDLAKS EESMÄRGIKS. Üksikasjade suhtes vaata GNU "
+"Üldist Avalikku Litsentsi."
 
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
-"Te peaks olema saanud GNU Üldise Avaliku Litsentsi koopia koos GNOME "
+"Te peaks olema saanud GNU Üldise Avaliku Litsentsi koopia koos Pano "
 "Terminaliga. Kui mitte, siis vaadake <http://www.gnu.org/licenses/>."
 
 msgid "Could not save contents"

@@ -23,9 +23,9 @@
 
   <title>Overview of a terminal</title>
 
-  <p><app>Terminal</app> is a terminal program for <gui>GNOME</gui>. The
+  <p><app>Pano Terminal</app> is a terminal program for <gui>GNOME</gui>. The
   following terms and their descriptions will help you to be familiar with
-  <app>Terminal</app> and its capabilities.</p>
+  <app>Pano Terminal</app> and its capabilities.</p>
 
   <terms>
     <item>
@@ -55,7 +55,7 @@
       <title>VTE</title>
       <p>Virtual Terminal Environment (VTE) is a terminal emulator which
       emulates a text terminal inside a graphical user interface (GUI)
-      environment. <app>Terminal</app> is largely based on the <app>VTE</app>.
+      environment. <app>Pano Terminal</app> is largely based on the <app>VTE</app>.
       <app>VTE</app> has widgets that implement a fully functional terminal
       emulator.</p>
     </item>

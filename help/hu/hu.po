@@ -108,13 +108,14 @@ msgstr "Gyorsbillentyűk"
 #: C/adv-keyboard-shortcuts.page:36
 msgid ""
 "Keyboard shortcuts are combinations of keys that allow you to perform "
-"actions, such as opening the settings dialog or accessing a feature inside "
-"<app>Terminal</app> quickly. These shortcuts can be modified to suit your "
-"preferences."
+"actions, such as opening the settings dialog or accessing a feature "
+"inside <app>Pano Terminal</app> quickly. These shortcuts can be "
+"modified to suit your preferences."
 msgstr ""
-"A gyorsbillentyűkkel gyorsan hajthat végre olyan műveleteket, mint például a "
-"beállítások ablak megnyitása vagy a <app>Terminál</app> egy funkciójának "
-"elérése. Ezek a gyorsbillentyűk ízlés szerint módosíthatók."
+"A gyorsbillentyűkkel gyorsan hajthat végre olyan műveleteket, mint "
+"például a beállítások ablak megnyitása vagy a <app>Pano Terminal</app> "
+"egy funkciójának elérése. Ezek a gyorsbillentyűk ízlés szerint "
+"módosíthatók."
 
 #. (itstool) path: page/p
 #: C/adv-keyboard-shortcuts.page:41
@@ -637,14 +638,15 @@ msgstr "Színsémák"
 #. (itstool) path: page/p
 #: C/app-colors.page:35
 msgid ""
-"If you do not like the default <app>Terminal</app> theme, you may want to "
-"change the colors that are used for the text and background. You can use "
-"colors from your theme, select one of the presets or use a custom scheme."
+"If you do not like the default <app>Pano Terminal</app> theme, you may "
+"want to change the colors that are used for the text and background. "
+"You can use colors from your theme, select one of the presets or use a "
+"custom scheme."
 msgstr ""
-"Ha az alapértelmezett <app>Terminál</app> séma nem nyerte el tetszését, "
-"módosíthatja a szöveghez és a háttérhez használt színeket. Használhatja az "
-"asztali környezet témájának színeit, választhat az előre beállítottak közül, "
-"vagy létrehozhat sajátot is."
+"Ha az alapértelmezett <app>Pano Terminal</app> séma nem nyerte el "
+"tetszését, módosíthatja a szöveghez és a háttérhez használt színeket. "
+"Használhatja az asztali környezet témájának színeit, választhat az "
+"előre beállítottak közül, vagy létrehozhat sajátot is."
 
 #. (itstool) path: section/title
 #: C/app-colors.page:40
@@ -737,9 +739,11 @@ msgstr "Egyéni színséma"
 #. (itstool) path: section/p
 #: C/app-colors.page:103
 msgid ""
-"You can use custom colors for the text and background in <app>Terminal</app>:"
+"You can use custom colors for the text and background in <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"Egyéni színeket is használhat a <app>Terminál</app> szövegéhez és hátteréhez:"
+"Egyéni színeket is használhat a <app>Pano Terminal</app> szövegéhez és "
+"hátteréhez:"
 
 #. (itstool) path: item/p
 #: C/app-colors.page:119
@@ -804,22 +808,23 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-colors.page:150
 msgid ""
-"Traditionally terminal emulators offered a 16 color palette, this is what "
-"you can alter here. <app>Terminal</app> supports an extended set of 256 "
-"colors, but the additional 240 colors cannot be edited here."
+"Traditionally terminal emulators offered a 16 color palette, this is "
+"what you can alter here. <app>Pano Terminal</app> supports an extended "
+"set of 256 colors, but the additional 240 colors cannot be edited "
+"here."
 msgstr ""
 "Hagyományosan a terminálemulátorok 16 színű palettát kínáltak, itt ezt "
-"módosítja. A <app>Terminál</app> bővített, 256 színű választékot támogat, de "
-"a többi 240 szín itt nem szerkeszthető."
+"módosítja. A <app>Pano Terminal</app> bővített, 256 színű választékot "
+"támogat, de a többi 240 szín itt nem szerkeszthető."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:154
 msgid ""
-"<app>Terminal</app> even offers direct access to over 16 million colors, "
-"this is called “true color” mode."
+"<app>Pano Terminal</app> even offers direct access to over 16 million "
+"colors, this is called “true color” mode."
 msgstr ""
-"A <app>Terminál</app> ráadásul közvetlen hozzáférést kínál több mint 16 "
-"millió színhez, ezt „true color” módnak hívják."
+"A <app>Pano Terminal</app> ráadásul közvetlen hozzáférést kínál több "
+"mint 16 millió színhez, ezt „true color” módnak hívják."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:157
@@ -882,11 +887,11 @@ msgstr "Kurzor megváltoztatása"
 #. (itstool) path: page/p
 #: C/app-cursor.page:36
 msgid ""
-"<app>Terminal</app> has three cursors from which to choose. To select your "
-"preferred cursor:"
+"<app>Pano Terminal</app> has three cursors from which to choose. To "
+"select your preferred cursor:"
 msgstr ""
-"A <app>Terminál</app> háromféle kurzort kínál. Az előnyben részesített "
-"kurzor kiválasztása:"
+"A <app>Pano Terminal</app> háromféle kurzort kínál. Az előnyben "
+"részesített kurzor kiválasztása:"
 
 #. (itstool) path: item/p
 #: C/app-cursor.page:49 C/app-fonts.page:54 C/app-fonts.page:78
@@ -936,11 +941,13 @@ msgstr "Betűkészlet és stílus módosítása"
 #. (itstool) path: page/p
 #: C/app-fonts.page:35
 msgid ""
-"When you work with a lot of <app>Terminal</app> text, you may want to change "
-"the default font to your preference. You have the following options:"
+"When you work with a lot of <app>Pano Terminal</app> text, you may "
+"want to change the default font to your preference. You have the "
+"following options:"
 msgstr ""
-"Ha a <app>Terminálban</app> sok szöveggel dolgozik, akkor megváltoztathatja "
-"a betűkészletet a kedvencére. A következő lehetőségei vannak:"
+"Ha a <app>Pano Terminal</app> sok szöveggel dolgozik, akkor "
+"megváltoztathatja a betűkészletet a kedvencére. A következő "
+"lehetőségei vannak:"
 
 #. (itstool) path: section/title
 #: C/app-fonts.page:40
@@ -1022,14 +1029,14 @@ msgstr "Sorköz és betűköz"
 #. (itstool) path: section/p
 #: C/app-fonts.page:108
 msgid ""
-"<app>Terminal</app> allows you to pull its characters apart for improved "
-"readability. Line spacing and character spacing can be adjusted from 1.0 "
-"(the regular look) to 2.0 (“double spacing”), including fractional values in "
-"between."
+"<app>Pano Terminal</app> allows you to pull its characters apart for "
+"improved readability. Line spacing and character spacing can be "
+"adjusted from 1.0 (the regular look) to 2.0 (“double spacing”), "
+"including fractional values in between."
 msgstr ""
-"A <app>Terminál</app> lehetővé teszi a karakterek széthúzását a jobb "
-"olvashatóság érdekében. A sorköz és betűköz 1,0 (normál kinézet) és 2,0 "
-"(dupla köz) között módosíthatók, beleértve a tört értékeket is."
+"A <app>Pano Terminal</app> lehetővé teszi a karakterek széthúzását a "
+"jobb olvashatóság érdekében. A sorköz és betűköz 1,0 (normál kinézet) "
+"és 2,0 (dupla köz) között módosíthatók, beleértve a tört értékeket is."
 
 #. (itstool) path: item/p
 #: C/app-fonts.page:126
@@ -1065,25 +1072,28 @@ msgstr "Teljes képernyős munkamenet"
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:34
-msgid "Fullscreen mode allows <app>Terminal</app> to use the entire screen."
+msgid ""
+"Fullscreen mode allows <app>Pano Terminal</app> to use the entire "
+"screen."
 msgstr ""
-"A teljes képernyős módban a <app>Terminál</app> a teljes képernyőterületet "
-"használhatja."
+"A teljes képernyős módban a <app>Pano Terminal</app> a teljes "
+"képernyőterületet használhatja."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:36
 msgid ""
 "This mode is useful if you have a device with limited screen space and "
-"intend to work in <app>Terminal</app> for a long duration, or are working "
-"with long lines of terminal output. It temporarily hides the window "
-"decoration, allowing you to view more <link xref=\"pref-"
-"scrolling\">scrollback lines</link> on the screen."
+"intend to work in <app>Pano Terminal</app> for a long duration, or are "
+"working with long lines of terminal output. It temporarily hides the "
+"window decoration, allowing you to view more <link "
+"xref=\"pref-scrolling\">scrollback lines</link> on the screen."
 msgstr ""
-"Ez a mód akkor hasznos, ha kevés a rendelkezésre álló képernyőterület, és "
-"hosszabb ideig tervez a <app>Terminállal</app> dolgozni, vagy hosszú "
-"kimeneti sorokra számít. Ez ideiglenesen elrejti az ablakdekorációkat, "
-"lehetővé téve több <link xref=\"pref-scrolling\">visszagörgetési sor</link> "
-"megjelenítését a képernyőn."
+"Ez a mód akkor hasznos, ha kevés a rendelkezésre álló képernyőterület, "
+"és hosszabb ideig tervez a <app>Pano Terminal</app> dolgozni, vagy "
+"hosszú kimeneti sorokra számít. Ez ideiglenesen elrejti az "
+"ablakdekorációkat, lehetővé téve több <link "
+"xref=\"pref-scrolling\">visszagörgetési sor</link> megjelenítését a "
+"képernyőn."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:42
@@ -1112,11 +1122,11 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-fullscreen.page:57
 msgid ""
-"If you have more than one <app>Terminal</app> tab open, the tab bar will be "
-"visible in the fullscreen mode."
+"If you have more than one <app>Pano Terminal</app> tab open, the tab "
+"bar will be visible in the fullscreen mode."
 msgstr ""
-"Ha több <app>Terminállap</app> is nyitva van, akkor a lapsáv is látható lesz "
-"a teljes képernyős módban."
+"Ha több <app>Pano Terminal</app> is nyitva van, akkor a lapsáv is "
+"látható lesz a teljes képernyős módban."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:61
@@ -1135,34 +1145,37 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/app-terminal-sizes.page:29
-msgid "Change the <app>Terminal</app> window size."
-msgstr "A <app>Terminál</app> ablak méretének megváltoztatása."
+msgid "Change the <app>Pano Terminal</app> window size."
+msgstr "A <app>Pano Terminal</app> ablak méretének megváltoztatása."
 
 #. (itstool) path: page/title
 #: C/app-terminal-sizes.page:33
-msgid "<app>Terminal</app> sizes"
-msgstr "<app>Terminálméretek</app>"
+msgid "<app>Pano Terminal</app> sizes"
+msgstr "<app>Pano Terminal</app>"
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:35
 msgid ""
 "If you work with certain command line applications that have minimum "
-"terminal size requirements in order to display correctly, or if you want to "
-"view long lines of terminal output with minimal line breaks on your display, "
-"you may require <app>Terminal</app> windows to be of a particular size."
+"terminal size requirements in order to display correctly, or if you "
+"want to view long lines of terminal output with minimal line breaks on "
+"your display, you may require <app>Pano Terminal</app> windows to be "
+"of a particular size."
 msgstr ""
 "Ha olyan parancssori alkalmazásokat használ, amelyek megfelelő "
 "megjelenítéséhez egy minimális terminálméret szükséges, vagy ha hosszú "
-"kimeneti sorokat szeretne látni minél kevesebb sortöréssel, akkor szüksége "
-"lehet a <app>Terminál</app> ablakok adott méretűre állítására."
+"kimeneti sorokat szeretne látni minél kevesebb sortöréssel, akkor "
+"szüksége lehet a <app>Pano Terminal</app> ablakok adott méretűre "
+"állítására."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:41
 msgid ""
-"You can change the <app>Terminal</app> window size to some preset values:"
+"You can change the <app>Pano Terminal</app> window size to some preset "
+"values:"
 msgstr ""
-"A <app>Terminál</app> ablak méretét megváltoztathatja néhány előre "
-"beállított értékre:"
+"A <app>Pano Terminal</app> ablak méretét megváltoztathatja néhány "
+"előre beállított értékre:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:46
@@ -1201,25 +1214,28 @@ msgstr "<gui style=\"menuitem\">132×43</gui>"
 #. (itstool) path: note/p
 #: C/app-terminal-sizes.page:69
 msgid ""
-"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu access "
-"keys</gui></link>, you can access this menu by pressing <keyseq><key>Alt</"
-"key><key>T</key></keyseq> and then pressing <key>1</key> to switch the "
-"<app>Terminal</app> window to size <gui>80×24</gui> and so on."
+"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu "
+"access keys</gui></link>, you can access this menu by pressing "
+"<keyseq><key>Alt</key><key>T</key></keyseq> and then pressing "
+"<key>1</key> to switch the <app>Pano Terminal</app> window to size "
+"<gui>80×24</gui> and so on."
 msgstr ""
-"Ha bekapcsolta a <link xref=\"pref-keyboard-access\"><gui>Menü-hívóbetűket</"
-"gui></link>, akkor ezt a menüt az <keyseq><key>Alt</key><key>T</key></"
-"keyseq> billentyűkombináció megnyomásával, majd az <key>1</key> billentyű "
-"megnyomásával érheti el, hogy a <app>Terminál</app> ablakot <gui>80×24</gui> "
-"méretűre állítsa, és így tovább."
+"Ha bekapcsolta a <link "
+"xref=\"pref-keyboard-access\"><gui>Menü-hívóbetűket</gui></link>, "
+"akkor ezt a menüt az <keyseq><key>Alt</key><key>T</key></keyseq> "
+"billentyűkombináció megnyomásával, majd az <key>1</key> billentyű "
+"megnyomásával érheti el, hogy a <app>Pano Terminal</app> ablakot "
+"<gui>80×24</gui> méretűre állítsa, és így tovább."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:76
 msgid ""
-"If you require custom size <app>Terminal</app> windows, you can also set the "
-"default window size according to your requirements:"
+"If you require custom size <app>Pano Terminal</app> windows, you can "
+"also set the default window size according to your requirements:"
 msgstr ""
-"Ha egyéni méretű <app>Terminál</app> ablakokra van szüksége, akkor saját "
-"igényei szerint is beállíthatja az alapértelmezett ablakméretet:"
+"Ha egyéni méretű <app>Pano Terminal</app> ablakokra van szüksége, "
+"akkor saját igényei szerint is beállíthatja az alapértelmezett "
+"ablakméretet:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:92
@@ -1246,8 +1262,8 @@ msgstr "Nagyítás és kicsinyítés"
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:34
-msgid "To increase <app>Terminal</app> text size:"
-msgstr "A <app>Terminál</app> szövegméretének növelése:"
+msgid "To increase <app>Pano Terminal</app> text size:"
+msgstr "A <app>Pano Terminal</app> szövegméretének növelése:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:38
@@ -1262,8 +1278,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:44
-msgid "To decrease <app>Terminal</app> text size:"
-msgstr "A <app>Terminál</app> szövegméretének csökkentése:"
+msgid "To decrease <app>Pano Terminal</app> text size:"
+msgstr "A <app>Pano Terminal</app> szövegméretének csökkentése:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:48
@@ -1278,8 +1294,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:54
-msgid "To restore <app>Terminal</app> text to default size:"
-msgstr "A <app>Terminál</app> alap szövegméretének visszaállítása:"
+msgid "To restore <app>Pano Terminal</app> text to default size:"
+msgstr "A <app>Pano Terminal</app> alap szövegméretének visszaállítása:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:58
@@ -1299,8 +1315,10 @@ msgstr "2013-2014"
 
 #. (itstool) path: info/desc
 #: C/gs-execute-commands.page:31
-msgid "Launch programs or run commands using <app>Terminal</app>."
-msgstr "Programok indítása vagy parancsok futtatása a <app>Terminállal</app>."
+msgid "Launch programs or run commands using <app>Pano Terminal</app>."
+msgstr ""
+"Programok indítása vagy parancsok futtatása a <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/gs-execute-commands.page:34
@@ -1310,13 +1328,13 @@ msgstr "Parancs végrehajtása"
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:36
 msgid ""
-"Any input entered in the <app>Terminal</app> to be executed is referred to "
-"as a <em>command</em>. You can run both command line and graphical user "
-"interface (GUI) programs from the terminal."
+"Any input entered in the <app>Pano Terminal</app> to be executed is "
+"referred to as a <em>command</em>. You can run both command line and "
+"graphical user interface (GUI) programs from the terminal."
 msgstr ""
-"A <app>Terminálba</app> végrehajtási céllal beírt szövegeket <em>parancsnak</"
-"em> nevezzük. A terminálból egyaránt futtathat parancssori és grafikus "
-"felületű programokat."
+"A <app>Pano Terminal</app> végrehajtási céllal beírt szövegeket "
+"<em>parancsnak</em> nevezzük. A terminálból egyaránt futtathat "
+"parancssori és grafikus felületű programokat."
 
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:40
@@ -1325,8 +1343,8 @@ msgstr "Parancsok végrehajtása:"
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:44
-msgid "Type the command in the <app>Terminal</app> prompt."
-msgstr "Írja be a parancsot a <app>Terminál</app> promptja után."
+msgid "Type the command in the <app>Pano Terminal</app> prompt."
+msgstr "Írja be a parancsot a <app>Pano Terminal</app> promptja után."
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:47
@@ -1336,16 +1354,17 @@ msgstr "Nyomja meg az <key>Enter</key> billentyűt a végrehajtásához."
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:51
 msgid ""
-"If you have a program that ends abruptly without any warning or error, you "
-"may want to run it in <app>Terminal</app>. This will allow the program to "
-"output any error or debugging messages to the <app>Terminal</app> window. "
-"This information can be helpful when filing a bug report."
+"If you have a program that ends abruptly without any warning or error, "
+"you may want to run it in <app>Pano Terminal</app>. This will allow "
+"the program to output any error or debugging messages to the <app>Pano "
+"Terminal</app> window. This information can be helpful when filing a "
+"bug report."
 msgstr ""
 "Ha egy program váratlanul megszakad bármilyen figyelmeztetés vagy hiba "
-"nélkül, akkor érdemes elindítani a <app>Terminálban</app> is. Ez lehetővé "
-"teszi a programnak a hiba- vagy hibakeresési üzeneteinek kiírását a "
-"<app>Terminál</app> ablakába. Ezek az információk hibajelentés küldéséhez "
-"lehetnek hasznosak."
+"nélkül, akkor érdemes elindítani a <app>Pano Terminal</app> is. Ez "
+"lehetővé teszi a programnak a hiba- vagy hibakeresési üzeneteinek "
+"kiírását a <app>Pano Terminal</app> ablakába. Ezek az információk "
+"hibajelentés küldéséhez lehetnek hasznosak."
 
 #. (itstool) path: note/p
 #: C/gs-execute-commands.page:57
@@ -1359,10 +1378,10 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/gs-tabs.page:30
-msgid "Enable, add, remove and reorder <app>Terminal</app> tabs."
+msgid "Enable, add, remove and reorder <app>Pano Terminal</app> tabs."
 msgstr ""
-"A <app>Terminál</app> lapjainak engedélyezése, hozzáadása, eltávolítása és "
-"átrendezése."
+"A <app>Pano Terminal</app> lapjainak engedélyezése, hozzáadása, "
+"eltávolítása és átrendezése."
 
 #. (itstool) path: page/title
 #: C/gs-tabs.page:33
@@ -1372,19 +1391,20 @@ msgstr "Lapok használata"
 #. (itstool) path: page/p
 #: C/gs-tabs.page:35
 msgid ""
-"The tab bar is shown at the top a <app>Terminal</app> window that has "
-"multiple tabs open (it looks like a row of buttons). Click on a tab to "
-"switch to it. You can open multiple tabs to manage your work in "
-"<app>Terminal</app>. This will allow you to multi-task with activities such "
-"as running programs, browsing directories and editing text files in a single "
-"<app>Terminal</app> window."
+"The tab bar is shown at the top a <app>Pano Terminal</app> window that "
+"has multiple tabs open (it looks like a row of buttons). Click on a "
+"tab to switch to it. You can open multiple tabs to manage your work in "
+"<app>Pano Terminal</app>. This will allow you to multi-task with "
+"activities such as running programs, browsing directories and editing "
+"text files in a single <app>Pano Terminal</app> window."
 msgstr ""
-"A lapsáv a több nyitott lapot tartalmazó <app>Terminál</app> ablak tetején "
-"jelenik meg, és egy gombsorozatra hasonlít, amelyekre kattintva válthat a "
-"lapok között. Több lapot nyithat a <app>Terminálban</app> végzett munkája "
-"rendszerezésére. Ez lehetővé teszi több tevékenység végzését, például "
-"programok futtatását, könyvtárak tallózását és szövegfájlok szerkesztését "
-"egyetlen <app>Terminál</app> ablakban."
+"A lapsáv a több nyitott lapot tartalmazó <app>Pano Terminal</app> "
+"ablak tetején jelenik meg, és egy gombsorozatra hasonlít, amelyekre "
+"kattintva válthat a lapok között. Több lapot nyithat a <app>Pano "
+"Terminal</app> végzett munkája rendszerezésére. Ez lehetővé teszi több "
+"tevékenység végzését, például programok futtatását, könyvtárak "
+"tallózását és szövegfájlok szerkesztését egyetlen <app>Pano "
+"Terminal</app> ablakban."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:43
@@ -1393,8 +1413,8 @@ msgstr "Új lap megnyitása"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:45
-msgid "To open a new tab inside your current <app>Terminal</app> window:"
-msgstr "Új lap megnyitása az aktuális <app>Terminál</app> ablakban:"
+msgid "To open a new tab inside your current <app>Pano Terminal</app> window:"
+msgstr "Új lap megnyitása az aktuális <app>Pano Terminal</app> ablakban:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:48
@@ -1411,8 +1431,9 @@ msgstr "Lap eltávolítása"
 #. (itstool) path: section/p
 #: C/gs-tabs.page:87
 msgid ""
-"To close an existing tab inside your current <app>Terminal</app> window:"
-msgstr "Meglévő lap bezárása az aktuális <app>Terminál</app> ablakban:"
+"To close an existing tab inside your current <app>Pano Terminal</app> "
+"window:"
+msgstr "Meglévő lap bezárása az aktuális <app>Pano Terminal</app> ablakban:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:92
@@ -1507,14 +1528,16 @@ msgstr "Jim Campbell"
 
 #. (itstool) path: info/desc
 #: C/index.page:30
-msgid "Set up and use the highly customizable GNOME terminal emulator."
+#, fuzzy
+msgid "Set up and use the highly customizable Pano Terminal emulator."
 msgstr ""
 "A részletesen személyre szabható GNOME terminálemulátor beállítása és "
 "használata."
 
 #. (itstool) path: page/title
 #: C/index.page:34
-msgid "<_:media-1/> Terminal Help"
+#, fuzzy
+msgid "<_:media-1/> Pano Terminal Help"
 msgstr "<_:media-1/> Terminál súgója"
 
 #. (itstool) path: section/title
@@ -1549,7 +1572,8 @@ msgstr "Hibaelhárítás"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:29
-msgid "Learn about the GNOME terminal emulator."
+#, fuzzy
+msgid "Learn about the Pano Terminal emulator."
 msgstr "A GNOME Terminálemulátor megismerése."
 
 #. (itstool) path: page/title
@@ -1560,21 +1584,22 @@ msgstr "Bevezetés"
 #. (itstool) path: page/p
 #: C/introduction.page:34
 msgid ""
-"<app>Terminal</app> is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your system."
+"<app>Pano Terminal</app> is a terminal emulator application for "
+"accessing a UNIX shell environment which can be used to run programs "
+"available on your system."
 msgstr ""
-"A <app>Terminál</app> egy terminálemulátor alkalmazás UNIX parancsértelmező "
-"környezet eléréséhez, amelynek használatával a rendszerén elérhető "
-"programokat futtathatja."
+"A <app>Pano Terminal</app> egy terminálemulátor alkalmazás UNIX "
+"parancsértelmező környezet eléréséhez, amelynek használatával a "
+"rendszerén elérhető programokat futtathatja."
 
 #. (itstool) path: page/p
 #: C/introduction.page:38
 msgid ""
-"<app>Terminal</app> supports escape sequences that control cursor position "
-"and colors."
+"<app>Pano Terminal</app> supports escape sequences that control cursor "
+"position and colors."
 msgstr ""
-"A <app>Terminál</app> támogatja a kurzorpozíciót és -színeket befolyásoló "
-"ún. escape-szekvenciákat."
+"A <app>Pano Terminal</app> támogatja a kurzorpozíciót és -színeket "
+"befolyásoló ún. escape-szekvenciákat."
 
 #. (itstool) path: figure/title
 #: C/introduction.page:42
@@ -1585,7 +1610,8 @@ msgstr "Terminál"
 
 #. (itstool) path: figure/desc
 #: C/introduction.page:43
-msgid "Screenshot of GNOME <app>Terminal</app>"
+#, fuzzy
+msgid "Screenshot of <app>Pano Terminal</app>"
 msgstr "A GNOME <app>Terminál</app>"
 
 #. (itstool) path: figure/media
@@ -1599,12 +1625,8 @@ msgstr "A GNOME <app>Terminál</app>"
 #| "external ref='figures/gnome-terminal.png' "
 #| "md5='50826cb88874cf2c3d96ddf0c58d0c05'"
 msgctxt "_"
-msgid ""
-"external ref='figures/gnome-terminal.png' "
-"md5='44213071a02d8e193ef33f6987afa39a'"
-msgstr ""
-"external ref='figures/gnome-terminal.png' "
-"md5='8bc0f09f3bc2d0dca33a337085b49d0b'"
+msgid "external ref='figures/pano.png' md5='44213071a02d8e193ef33f6987afa39a'"
+msgstr "external ref='figures/pano.png' md5='8bc0f09f3bc2d0dca33a337085b49d0b'"
 
 #. (itstool) path: p/link
 #: C/legal.xml:4
@@ -1676,13 +1698,13 @@ msgstr "A terminál bemutatása"
 #. (itstool) path: page/p
 #: C/overview.page:26
 msgid ""
-"<app>Terminal</app> is a terminal program for <gui>GNOME</gui>. The "
-"following terms and their descriptions will help you to be familiar with "
-"<app>Terminal</app> and its capabilities."
+"<app>Pano Terminal</app> is a terminal program for <gui>GNOME</gui>. "
+"The following terms and their descriptions will help you to be "
+"familiar with <app>Pano Terminal</app> and its capabilities."
 msgstr ""
-"A <app>Terminál</app> a <gui>GNOME</gui> terminálprogramja. A következő "
-"kifejezések és leírásaik segíteni fogják a <app>Terminál</app> és "
-"képességeinek megismerését."
+"A <app>Pano Terminal</app> a <gui>GNOME</gui> terminálprogramja. A "
+"következő kifejezések és leírásaik segíteni fogják a <app>Pano "
+"Terminal</app> és képességeinek megismerését."
 
 #. (itstool) path: item/title
 #: C/overview.page:32
@@ -1752,11 +1774,13 @@ msgstr "VTE"
 
 #. (itstool) path: item/p
 #: C/overview.page:56
+#, fuzzy
 msgid ""
-"Virtual Terminal Environment (VTE) is a terminal emulator which emulates a "
-"text terminal inside a graphical user interface (GUI) environment. "
-"<app>Terminal</app> is largely based on the <app>VTE</app>. <app>VTE</app> "
-"has widgets that implement a fully functional terminal emulator."
+"Virtual Terminal Environment (VTE) is a terminal emulator which "
+"emulates a text terminal inside a graphical user interface (GUI) "
+"environment. <app>Pano Terminal</app> is largely based on the "
+"<app>VTE</app>. <app>VTE</app> has widgets that implement a fully "
+"functional terminal emulator."
 msgstr ""
 "A virtuális terminálkörnyezet (VTE) egy olyan terminálemulátor, amely "
 "grafikus környezetben emulál egy szöveges terminált. A <app>Terminál</app> "
@@ -1855,8 +1879,8 @@ msgstr ""
 
 #. (itstool) path: page/title
 #: C/pref.page:18
-msgid "<app>Terminal</app> preferences"
-msgstr "A <app>Terminál</app> beállításai"
+msgid "<app>Pano Terminal</app> preferences"
+msgstr "A <app>Pano Terminal</app> beállításai"
 
 #. (itstool) path: section/title
 #: C/pref.page:21
@@ -1875,8 +1899,8 @@ msgstr "Profil beállításai"
 
 #. (itstool) path: info/desc
 #: C/pref-bell.page:29
-msgid "Enable audible notification in <app>Terminal</app>."
-msgstr "Hallható értesítés beállítása a <app>Terminálban</app>."
+msgid "Enable audible notification in <app>Pano Terminal</app>."
+msgstr "Hallható értesítés beállítása a <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/pref-bell.page:33
@@ -1886,11 +1910,11 @@ msgstr "Csengetés beállítása"
 #. (itstool) path: page/p
 #: C/pref-bell.page:35
 msgid ""
-"<app>Terminal</app> can sound an audible bell to indicate events in "
-"<app>Terminal</app> windows and tabs."
+"<app>Pano Terminal</app> can sound an audible bell to indicate events "
+"in <app>Pano Terminal</app> windows and tabs."
 msgstr ""
-"A <app>Terminál</app> képes hallható értesítést adni a <app>Terminál</app> "
-"ablakaiban és lapjain bekövetkező események jelzésére."
+"A <app>Pano Terminal</app> képes hallható értesítést adni a <app>Pano "
+"Terminal</app> ablakaiban és lapjain bekövetkező események jelzésére."
 
 #. (itstool) path: page/p
 #: C/pref-bell.page:38
@@ -1920,11 +1944,11 @@ msgstr "2013-2014"
 #. (itstool) path: info/desc
 #: C/pref-custom-exit.page:31
 msgid ""
-"Set the behavior of <app>Terminal</app> when a custom command or the default "
-"shell exits."
+"Set the behavior of <app>Pano Terminal</app> when a custom command or "
+"the default shell exits."
 msgstr ""
-"A <app>Terminál</app> viselkedésének beállítása egyéni parancs vagy az "
-"alapértelmezett parancsértelmező kilépésekor."
+"A <app>Pano Terminal</app> viselkedésének beállítása egyéni parancs "
+"vagy az alapértelmezett parancsértelmező kilépésekor."
 
 #. (itstool) path: page/title
 #: C/pref-custom-exit.page:35
@@ -1978,24 +2002,26 @@ msgstr "A beállítás automatikusan mentésre kerül."
 #. (itstool) path: note/p
 #: C/pref-custom-exit.page:71
 msgid ""
-"If you have <link xref=\"pref-custom-command\">set a custom command</link> "
-"that is non-interactive, have set the exit behavior to <gui>Exit the "
-"terminal</gui>, and have set the profile to be the default profile, "
-"<app>Terminal</app> may exit before you can see the output of the command."
+"If you have <link xref=\"pref-custom-command\">set a custom "
+"command</link> that is non-interactive, have set the exit behavior to "
+"<gui>Exit the terminal</gui>, and have set the profile to be the "
+"default profile, <app>Pano Terminal</app> may exit before you can see "
+"the output of the command."
 msgstr ""
-"Ha <link xref=\"pref-custom-command\">beállított egy egyéni parancsot</"
-"link>, amely nem interaktív, a kilépési viselkedésként a <gui>Kilépés a "
-"terminálból</gui> lehetőséget választotta, és a profilt alapértelmezettként "
-"jelölte ki, akkor a <app>Terminál</app> még azelőtt kiléphet, hogy a parancs "
-"kimenetét elolvashatná."
+"Ha <link xref=\"pref-custom-command\">beállított egy egyéni "
+"parancsot</link>, amely nem interaktív, a kilépési viselkedésként a "
+"<gui>Kilépés a terminálból</gui> lehetőséget választotta, és a profilt "
+"alapértelmezettként jelölte ki, akkor a <app>Pano Terminal</app> még "
+"azelőtt kiléphet, hogy a parancs kimenetét elolvashatná."
 
 #. (itstool) path: info/desc
 #: C/pref-custom-command.page:32
 msgid ""
-"Set <app>Terminal</app> to run a command or a different shell on startup."
+"Set <app>Pano Terminal</app> to run a command or a different shell on "
+"startup."
 msgstr ""
-"A <app>Terminál</app> beállítása parancs vagy eltérő parancsértelmező "
-"futtatására induláskor."
+"A <app>Pano Terminal</app> beállítása parancs vagy eltérő "
+"parancsértelmező futtatására induláskor."
 
 #. (itstool) path: page/title
 #: C/pref-custom-command.page:36
@@ -2018,11 +2044,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:43
 msgid ""
-"You can set <app>Terminal</app> to run a command when it starts up instead "
-"of awaiting input from you:"
+"You can set <app>Pano Terminal</app> to run a command when it starts "
+"up instead of awaiting input from you:"
 msgstr ""
-"A <app>Terminál</app> beállítható, hogy az elindításakor egy parancsot "
-"futtasson, ahelyett hogy parancs bevitelére várna:"
+"A <app>Pano Terminal</app> beállítható, hogy az elindításakor egy "
+"parancsot futtasson, ahelyett hogy parancs bevitelére várna:"
 
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:59
@@ -2051,10 +2077,10 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:68
 msgid ""
-"Open a new <app>Terminal</app> tab or window to see how the custom shell or "
-"command executes."
+"Open a new <app>Pano Terminal</app> tab or window to see how the "
+"custom shell or command executes."
 msgstr ""
-"Nyisson egy új <app>Terminál</app> lapot vagy ablakot az egyéni "
+"Nyisson egy új <app>Pano Terminal</app> lapot vagy ablakot az egyéni "
 "parancsértelmező vagy parancs végrehajtásának teszteléséhez."
 
 #. (itstool) path: page/p
@@ -2079,8 +2105,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-keyboard-access.page:30
-msgid "Navigate around <app>Terminal</app> menus using keyboard keys."
-msgstr "Navigálás a <app>Terminál</app> menüiben billentyűkkel."
+msgid "Navigate around <app>Pano Terminal</app> menus using keyboard keys."
+msgstr "Navigálás a <app>Pano Terminal</app> menüiben billentyűkkel."
 
 #. (itstool) path: page/title
 #: C/pref-keyboard-access.page:33
@@ -2099,24 +2125,25 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/pref-keyboard-access.page:39
 msgid ""
-"Right click in the <app>Terminal</app> window and select <gui "
+"Right click in the <app>Pano Terminal</app> window and select <gui "
 "style=\"checkbox\">Show Menubar</gui> to display the menubar."
 msgstr ""
-"Kattintson a jobb egérgombbal a <app>Terminál</app> ablakra, és jelölje be a "
-"<gui style=\"checkbox\">Menü megjelenítése</gui> jelölőnégyzetet a menüsáv "
-"megjelenítéséhez."
+"Kattintson a jobb egérgombbal a <app>Pano Terminal</app> ablakra, és "
+"jelölje be a <gui style=\"checkbox\">Menü megjelenítése</gui> "
+"jelölőnégyzetet a menüsáv megjelenítéséhez."
 
 #. (itstool) path: page/p
 #: C/pref-keyboard-access.page:43
 msgid ""
-"You can navigate the <app>Terminal</app> menu using a combination of keys "
-"that are called <em>mnemonics</em> or a special key that takes you directly "
-"to the first menu in the menubar which is called the <em>menu accelerator "
-"key</em>."
+"You can navigate the <app>Pano Terminal</app> menu using a combination "
+"of keys that are called <em>mnemonics</em> or a special key that takes "
+"you directly to the first menu in the menubar which is called the "
+"<em>menu accelerator key</em>."
 msgstr ""
-"A <app>Terminál</app> menüt használhatja <em>hívóbetűknek</em> nevezett "
-"billentyűkombinációkkal, vagy egy speciális, <em>menüelérés billentyűjének</"
-"em> nevezett billentyűvel, amely a menüsáv első menüjét nyitja meg."
+"A <app>Pano Terminal</app> menüt használhatja <em>hívóbetűknek</em> "
+"nevezett billentyűkombinációkkal, vagy egy speciális, <em>menüelérés "
+"billentyűjének</em> nevezett billentyűvel, amely a menüsáv első "
+"menüjét nyitja meg."
 
 #. (itstool) path: section/title
 #: C/pref-keyboard-access.page:49
@@ -2126,13 +2153,15 @@ msgstr "Hívóbetűk"
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:51
 msgid ""
-"<app>Terminal</app> menu can be accessed by combining the <key>Alt</key> key "
-"and a letter of the menu item. The letter that you need to use to access the "
-"menu will be underlined when you hold down the <key>Alt</key>."
+"<app>Pano Terminal</app> menu can be accessed by combining the "
+"<key>Alt</key> key and a letter of the menu item. The letter that you "
+"need to use to access the menu will be underlined when you hold down "
+"the <key>Alt</key>."
 msgstr ""
-"A <app>Terminál</app> menüje elérhető az <key>Alt</key> billentyű és a "
-"menüpont egy bizonyos betűjének együttes lenyomásával. A használandó betű "
-"aláhúzásra kerül az <key>Alt</key> lenyomva tartásakor."
+"A <app>Pano Terminal</app> menüje elérhető az <key>Alt</key> billentyű "
+"és a menüpont egy bizonyos betűjének együttes lenyomásával. A "
+"használandó betű aláhúzásra kerül az <key>Alt</key> lenyomva "
+"tartásakor."
 
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:56
@@ -2188,8 +2217,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-login-shell.page:30
-msgid "Start a login shell in <app>Terminal</app>."
-msgstr "Bejelentkezési parancsértelmező indítása a <app>Terminálban</app>."
+msgid "Start a login shell in <app>Pano Terminal</app>."
+msgstr "Bejelentkezési parancsértelmező indítása a <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/pref-login-shell.page:33
@@ -2273,12 +2302,13 @@ msgstr "Bejelentkezési parancsértelmező indítása"
 #. (itstool) path: section/p
 #: C/pref-login-shell.page:72
 msgid ""
-"You can allow <app>Terminal</app> to start a login shell. Your default shell "
-"will be started with a dash character prepended to its name."
+"You can allow <app>Pano Terminal</app> to start a login shell. Your "
+"default shell will be started with a dash character prepended to its "
+"name."
 msgstr ""
-"Engedélyezheti a <app>Terminál</app> számára bejelentkezési parancsértelmező "
-"indítását. Az alapértelmezett parancsértelmező kerül elindítására, a nevét "
-"kötőjellel kezdve."
+"Engedélyezheti a <app>Pano Terminal</app> számára bejelentkezési "
+"parancsértelmező indítását. Az alapértelmezett parancsértelmező kerül "
+"elindítására, a nevét kötőjellel kezdve."
 
 #. (itstool) path: item/p
 #: C/pref-login-shell.page:92
@@ -2316,11 +2346,11 @@ msgstr "A menüsáv megjelenítéséhez:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:43
 msgid ""
-"Right click in <app>Terminal</app> and select <gui style=\"menuitem\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Show Menubar</gui>."
 msgstr ""
-"Kattintson a jobb egérgombbal a <app>Terminálban</app>, és válassza a <gui "
-"style=\"menuitem\">Menü megjelenítése</gui> menüpontot."
+"Kattintson a jobb egérgombbal a <app>Pano Terminal</app>, és válassza "
+"a <gui style=\"menuitem\">Menü megjelenítése</gui> menüpontot."
 
 #. (itstool) path: page/p
 #: C/pref-menubar.page:48
@@ -2330,11 +2360,12 @@ msgstr "A menüsáv elrejtéséhez:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:51
 msgid ""
-"Right click in <app>Terminal</app> and deselect <gui style=\"checkbox\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and deselect <gui "
+"style=\"checkbox\">Show Menubar</gui>."
 msgstr ""
-"Kattintson a jobb egérgombbal a <app>Terminálban</app>, és szüntesse meg a "
-"<gui style=\"checkbox\">Menü megjelenítése</gui> menüpont kijelölését."
+"Kattintson a jobb egérgombbal a <app>Pano Terminal</app>, és szüntesse "
+"meg a <gui style=\"checkbox\">Menü megjelenítése</gui> menüpont "
+"kijelölését."
 
 #. (itstool) path: note/p
 #: C/pref-menubar.page:71
@@ -2357,12 +2388,14 @@ msgstr "Profilok kezelése"
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:40
+#, fuzzy
 msgid ""
-"A profile is a collection of <app>Terminal</app> settings. <app>Terminal</"
-"app> supports multiple profiles. You can configure <app>Terminal</app> "
-"profiles to <link xref=\"pref-custom-command\">run a custom command or "
-"shell</link>, set a profile exclusively to connect to remote computers using "
-"SSH or set a profile that launches a <app>GNU Screen</app> session."
+"A profile is a collection of <app>Pano Terminal</app> settings. "
+"<app>Pano Terminal</app> supports multiple profiles. You can configure "
+"<app>Pano Terminal</app> profiles to <link "
+"xref=\"pref-custom-command\">run a custom command or shell</link>, set "
+"a profile exclusively to connect to remote computers using SSH or set "
+"a profile that launches a <app>GNU Screen</app> session."
 msgstr ""
 "A <app>Terminál</app> beállításainak halmazát profilnak nevezzük. A "
 "<app>Terminál</app> támogatja több profil használatát. Beállíthat "
@@ -2373,8 +2406,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:47
-msgid "The available <app>Terminal</app> settings include:"
-msgstr "A <app>Terminál</app> elérhető beállításai közé tartoznak:"
+msgid "The available <app>Pano Terminal</app> settings include:"
+msgstr "A <app>Pano Terminal</app> elérhető beállításai közé tartoznak:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:51
@@ -2408,15 +2441,16 @@ msgstr "Profil kiválasztása"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:68
 msgid ""
-"If you have two or more profiles defined, you can change the profile in your "
-"current <app>Terminal</app> tab or window by selecting a profile from "
-"<guiseq><gui style=\"menu\">Terminal</gui> <gui style=\"menuitem\">Change "
-"Profile</gui></guiseq>."
+"If you have two or more profiles defined, you can change the profile "
+"in your current <app>Pano Terminal</app> tab or window by selecting a "
+"profile from <guiseq><gui style=\"menu\">Terminal</gui> <gui "
+"style=\"menuitem\">Change Profile</gui></guiseq>."
 msgstr ""
-"Ha legalább két profilt beállított, akkor megváltoztathatja az aktuális "
-"<app>Terminállapon</app> vagy -ablakban használt profilt a <guiseq><gui "
-"style=\"menu\">Terminál</gui> <gui style=\"menuitem\">Profil "
-"megváltoztatása</gui></guiseq> menüpont használatával."
+"Ha legalább két profilt beállított, akkor megváltoztathatja az "
+"aktuális <app>Pano Terminal</app> vagy -ablakban használt profilt a "
+"<guiseq><gui style=\"menu\">Terminál</gui> <gui "
+"style=\"menuitem\">Profil megváltoztatása</gui></guiseq> menüpont "
+"használatával."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:76
@@ -2426,9 +2460,10 @@ msgstr "Új profil létrehozása"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:78
 msgid ""
-"To create a new profile with the default settings of <app>Terminal</app>:"
+"To create a new profile with the default settings of <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"Új profil létrehozásához a <app>Terminál</app> alapértelmezett "
+"Új profil létrehozásához a <app>Pano Terminal</app> alapértelmezett "
 "beállításaival:"
 
 #. (itstool) path: item/p
@@ -2527,21 +2562,22 @@ msgstr "Profil szerkesztése"
 #. (itstool) path: note/p
 #: C/pref-profiles.page:149
 msgid ""
-"If the default profile is edited, it cannot be restored to its original "
-"settings! If you have not already created any other <app>Terminal</app> "
-"profiles and have customized the default profile, <app>Terminal</app> "
-"<em>may</em> become unusable should any settings cause problems. It is "
-"recommended that you <link xref=\"#create-profile-from-existing\">create a "
-"copy of the default profile</link> then edit the copy to create a custom "
-"profile."
+"If the default profile is edited, it cannot be restored to its "
+"original settings! If you have not already created any other <app>Pano "
+"Terminal</app> profiles and have customized the default profile, "
+"<app>Pano Terminal</app> <em>may</em> become unusable should any "
+"settings cause problems. It is recommended that you <link "
+"xref=\"#create-profile-from-existing\">create a copy of the default "
+"profile</link> then edit the copy to create a custom profile."
 msgstr ""
-"Ha az alapértelmezett profilt szerkeszti, az nem állítható vissza az eredeti "
-"beállításokra. Ha még nem hozott létre más <app>Terminál</app> profilokat, "
-"és személyre szabta az alapértelmezett profilt, akkor a <app>Terminál</app> "
-"használhatatlanná <em>válhat</em>, ha a beállítások problémát okoznak. "
-"Javasoljuk, hogy <link xref=\"#create-profile-from-existing\">készítsen "
-"másolatot az alapértelmezett profilról</link>, majd szerkessze a másolatot "
-"az egyéni profil létrehozásához."
+"Ha az alapértelmezett profilt szerkeszti, az nem állítható vissza az "
+"eredeti beállításokra. Ha még nem hozott létre más <app>Pano "
+"Terminal</app> profilokat, és személyre szabta az alapértelmezett "
+"profilt, akkor a <app>Pano Terminal</app> használhatatlanná "
+"<em>válhat</em>, ha a beállítások problémát okoznak. Javasoljuk, hogy "
+"<link xref=\"#create-profile-from-existing\">készítsen másolatot az "
+"alapértelmezett profilról</link>, majd szerkessze a másolatot az "
+"egyéni profil létrehozásához."
 
 #. (itstool) path: section/p
 #: C/pref-profiles.page:158
@@ -2565,45 +2601,48 @@ msgstr "A kívánt profil kiválasztása után:"
 #. (itstool) path: item/p
 #: C/pref-profiles.page:175
 msgid ""
-"Select <link xref=\"app-fonts\">font</link>, <link xref=\"app-"
-"cursor\">cursor shapes</link> and <link xref=\"app-terminal-"
-"sizes\"><app>Terminal</app> size</link>."
+"Select <link xref=\"app-fonts\">font</link>, <link "
+"xref=\"app-cursor\">cursor shapes</link> and <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> size</link>."
 msgstr ""
 "Beállíthatja a <link xref=\"app-fonts\">betűkészletet</link>, <link "
-"xref=\"app-cursor\">kurzoralakot</link> és <link xref=\"app-terminal-"
-"sizes\"><app>Terminálméretet</app></link>."
+"xref=\"app-cursor\">kurzoralakot</link> és <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app></link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:180
 msgid ""
-"You may also change behavior of <app>Terminal</app> on <link xref=\"pref-"
-"custom-exit\">command exit</link>, set a <link xref=\"pref-login-"
-"shell\">custom login shell</link> or change <link xref=\"pref-"
-"scrolling\">scrollbar preferences</link>."
+"You may also change behavior of <app>Pano Terminal</app> on <link "
+"xref=\"pref-custom-exit\">command exit</link>, set a <link "
+"xref=\"pref-login-shell\">custom login shell</link> or change <link "
+"xref=\"pref-scrolling\">scrollbar preferences</link>."
 msgstr ""
-"Megváltoztathatja a <app>Terminál</app> viselkedését a <link xref=\"pref-"
-"custom-exit\">parancs kilépésekor</link>, beállíthat <link xref=\"pref-login-"
-"shell\">egyéni bejelentkezési parancsértelmezőt</link>, vagy "
-"megváltoztathatja a <link xref=\"pref-scrolling\">görgetési beállításokat</"
-"link> is."
+"Megváltoztathatja a <app>Pano Terminal</app> viselkedését a <link "
+"xref=\"pref-custom-exit\">parancs kilépésekor</link>, beállíthat <link "
+"xref=\"pref-login-shell\">egyéni bejelentkezési "
+"parancsértelmezőt</link>, vagy megváltoztathatja a <link "
+"xref=\"pref-scrolling\">görgetési beállításokat</link> is."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:186
 msgid ""
-"To change the <app>Terminal</app> background and text colors, see <link "
-"xref=\"app-colors\"><app>Terminal</app> color schemes</link>."
+"To change the <app>Pano Terminal</app> background and text colors, see "
+"<link xref=\"app-colors\"><app>Pano Terminal</app> color "
+"schemes</link>."
 msgstr ""
-"A <app>Terminál</app> háttér- és szövegszíneinek módosításához lásd a <link "
-"xref=\"app-colors\"><app>Terminál</app> színsémái</link> oldalt."
+"A <app>Pano Terminal</app> háttér- és szövegszíneinek módosításához "
+"lásd a <link xref=\"app-colors\"><app>Pano Terminal</app> "
+"színsémái</link> oldalt."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:190
 msgid ""
-"Changes to profile are saved immediately. To return to <app>Terminal</app>, "
-"click <gui style=\"button\">Close</gui>."
+"Changes to profile are saved immediately. To return to <app>Pano "
+"Terminal</app>, click <gui style=\"button\">Close</gui>."
 msgstr ""
-"A profil módosításai azonnal mentésre kerülnek. A <app>Terminálhoz</app> "
-"való visszatéréshez kattintson a <gui style=\"button\">Bezárás</gui> gombra."
+"A profil módosításai azonnal mentésre kerülnek. A <app>Pano "
+"Terminal</app> való visszatéréshez kattintson a <gui "
+"style=\"button\">Bezárás</gui> gombra."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:198
@@ -2692,18 +2731,19 @@ msgstr ""
 #. (itstool) path: section/p
 #: C/pref-profiles.page:265
 msgid ""
-"The default profile is used when <app>Terminal</app> could not otherwise "
-"decide which profile to use. For example, <app>Terminal</app> is started up "
-"freshly and opens its first terminal window. In contrast, when you use a "
-"menu entry or keyboard shortcut of <app>Terminal</app> to open a new "
-"terminal, the profile of the existing terminal is used."
+"The default profile is used when <app>Pano Terminal</app> could not "
+"otherwise decide which profile to use. For example, <app>Pano "
+"Terminal</app> is started up freshly and opens its first terminal "
+"window. In contrast, when you use a menu entry or keyboard shortcut of "
+"<app>Pano Terminal</app> to open a new terminal, the profile of the "
+"existing terminal is used."
 msgstr ""
-"Az alapértelmezett profil akkor kerül felhasználásra, ha a <app>Terminál</"
-"app> nem tudja, melyik profilt kellene használnia. Például ha a "
-"<app>Terminál</app> frissen lett indítva, és az első terminálablakát nyitja "
-"meg. Ha ellenben a <app>Terminál</app> menüpontjának vagy "
-"gyorsbillentyűjének használatával indít új terminált, akkor a meglévő "
-"terminál profilja kerül felhasználásra."
+"Az alapértelmezett profil akkor kerül felhasználásra, ha a <app>Pano "
+"Terminal</app> nem tudja, melyik profilt kellene használnia. Például "
+"ha a <app>Pano Terminal</app> frissen lett indítva, és az első "
+"terminálablakát nyitja meg. Ha ellenben a <app>Pano Terminal</app> "
+"menüpontjának vagy gyorsbillentyűjének használatával indít új "
+"terminált, akkor a meglévő terminál profilja kerül felhasználásra."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:277
@@ -2743,21 +2783,23 @@ msgstr "A karakterek túl keskenyek"
 #. (itstool) path: page/p
 #: C/pref-profile-char-width.page:30
 msgid ""
-"Some characters, such as some Greek letters and Asian logograms, can take up "
-"either one or two cells in a terminal window. These characters are often "
-"referred to as <em>ambiguous characters</em>. By default, these characters "
-"are displayed with a narrow width in <app>Terminal</app>, which looks better "
-"in situations where perfect layout is important, such as in ASCII art. You "
-"can change your profile preferences to display ambiguous characters as wide, "
-"which can be better if you are reading running prose."
+"Some characters, such as some Greek letters and Asian logograms, can "
+"take up either one or two cells in a terminal window. These characters "
+"are often referred to as <em>ambiguous characters</em>. By default, "
+"these characters are displayed with a narrow width in <app>Pano "
+"Terminal</app>, which looks better in situations where perfect layout "
+"is important, such as in ASCII art. You can change your profile "
+"preferences to display ambiguous characters as wide, which can be "
+"better if you are reading running prose."
 msgstr ""
-"Bizonyos karakterek, például görög betűk és ázsiai logogramok egy vagy két "
-"cellát foglalhatnak a terminálablakban. Ezeket sokszor <em>nem egyértelmű "
-"karaktereknek</em> is nevezik. Alapesetben ezek a karakterek keskeny "
-"szélességben jelennek meg a <app>Terminálban</app>, ami jobban néz ki ha az "
-"elrendezés fontos, például ASCII art esetén. A profil beállításai közt "
-"megváltoztathatja, hogy a nem egyértelmű karaktereket szélesként jelenítsék "
-"meg, ami folyószöveg esetén jobb lehet."
+"Bizonyos karakterek, például görög betűk és ázsiai logogramok egy vagy "
+"két cellát foglalhatnak a terminálablakban. Ezeket sokszor <em>nem "
+"egyértelmű karaktereknek</em> is nevezik. Alapesetben ezek a "
+"karakterek keskeny szélességben jelennek meg a <app>Pano "
+"Terminal</app>, ami jobban néz ki ha az elrendezés fontos, például "
+"ASCII art esetén. A profil beállításai közt megváltoztathatja, hogy a "
+"nem egyértelmű karaktereket szélesként jelenítsék meg, ami folyószöveg "
+"esetén jobb lehet."
 
 #. (itstool) path: item/p
 #: C/pref-profile-char-width.page:48 C/pref-profile-encoding.page:46
@@ -2990,24 +3032,26 @@ msgstr "Ablakok és lapok"
 #. (itstool) path: note/p
 #: C/pref-tab-window.page:32
 msgid ""
-"This setting only applies when the <link xref=\"pref-menubar\">menubar is "
-"enabled</link>, or when <app>Terminal</app> is started from the command line "
-"and neither the <cmd>--tab</cmd> nor the <cmd>--window</cmd> options are "
-"passed."
+"This setting only applies when the <link xref=\"pref-menubar\">menubar "
+"is enabled</link>, or when <app>Pano Terminal</app> is started from "
+"the command line and neither the <cmd>--tab</cmd> nor the "
+"<cmd>--window</cmd> options are passed."
 msgstr ""
-"Ez a beállítás csak akkor érvényes, ha a <link xref=\"pref-menubar\">menüsáv "
-"engedélyezve van</link>, vagy ha a <app>Terminál</app> parancssorból lett "
-"indítva, és sem a <cmd>--tab</cmd>, sem a <cmd>--window</cmd> kapcsoló nem "
-"lett átadva."
+"Ez a beállítás csak akkor érvényes, ha a <link "
+"xref=\"pref-menubar\">menüsáv engedélyezve van</link>, vagy ha a "
+"<app>Pano Terminal</app> parancssorból lett indítva, és sem a "
+"<cmd>--tab</cmd>, sem a <cmd>--window</cmd> kapcsoló nem lett átadva."
 
 #. (itstool) path: page/p
 #: C/pref-tab-window.page:37
 msgid ""
-"You can choose whether to open a new tab or a new <app>Terminal</app> window "
-"when you use <gui style=\"menuitem\">New Terminal</gui>."
+"You can choose whether to open a new tab or a new <app>Pano "
+"Terminal</app> window when you use <gui style=\"menuitem\">New "
+"Terminal</gui>."
 msgstr ""
-"Megadhatja, hogy új lap vagy új <app>Terminál</app> ablak nyíljon meg az "
-"<gui style=\"menuitem\">Új terminál</gui> menüpont használatkor."
+"Megadhatja, hogy új lap vagy új <app>Pano Terminal</app> ablak nyíljon "
+"meg az <gui style=\"menuitem\">Új terminál</gui> menüpont "
+"használatkor."
 
 #. (itstool) path: steps/title
 #: C/pref-tab-window.page:41
@@ -3092,11 +3136,11 @@ msgstr "A csak olvasható mód használatához:"
 #. (itstool) path: item/p
 #: C/pref-user-input.page:37
 msgid ""
-"Right click in the <app>Terminal</app> window or press the menu button in "
-"the top-right corner of the window."
+"Right click in the <app>Pano Terminal</app> window or press the menu "
+"button in the top-right corner of the window."
 msgstr ""
-"Kattintson a jobb egérgombbal a <app>Terminál</app> ablakban, vagy nyomja "
-"meg az ablak jobb felső sarkában lévő menügombot."
+"Kattintson a jobb egérgombbal a <app>Pano Terminal</app> ablakban, "
+"vagy nyomja meg az ablak jobb felső sarkában lévő menügombot."
 
 #. (itstool) path: item/p
 #: C/pref-user-input.page:41
@@ -3117,29 +3161,30 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/prob-reset.page:24
 msgid ""
-"How do I recover my <app>Terminal</app> screen when it becomes stuck or has "
-"lot of strange symbols on it?"
+"How do I recover my <app>Pano Terminal</app> screen when it becomes "
+"stuck or has lot of strange symbols on it?"
 msgstr ""
-"Hogyan állíthatom vissza a <app>Terminál</app> kimenetét, amikor sok "
-"szimbólum vagy összezavarodott kimenet látszik?"
+"Hogyan állíthatom vissza a <app>Pano Terminal</app> kimenetét, amikor "
+"sok szimbólum vagy összezavarodott kimenet látszik?"
 
 #. (itstool) path: page/title
 #: C/prob-reset.page:28
-msgid "Reset your <app>Terminal</app> state"
-msgstr "A <app>Terminál</app> állapotának alaphelyzetbe állítása"
+msgid "Reset your <app>Pano Terminal</app> state"
+msgstr "A <app>Pano Terminal</app> állapotának alaphelyzetbe állítása"
 
 #. (itstool) path: page/p
 #: C/prob-reset.page:30
 msgid ""
-"After viewing a non-text file by mistake, or launching some command, it can "
-"happen the <app>Terminal</app> screen is unresponsive, has strange letters "
-"printed when you press keys. You can recover your <app>Terminal</app> in the "
-"following ways:"
+"After viewing a non-text file by mistake, or launching some command, "
+"it can happen the <app>Pano Terminal</app> screen is unresponsive, has "
+"strange letters printed when you press keys. You can recover your "
+"<app>Pano Terminal</app> in the following ways:"
 msgstr ""
-"Ha véletlenül megjelenít egy nem szöveges fájlt, vagy elindít egy parancsot, "
-"megtörténhet, hogy a <app>Terminál</app> kimenet nem válaszol és fura betűk "
-"kerülnek kiírásra, amikor különböző billentyűket nyom le. Ebben az esetben a "
-"következő módokon állíthatja vissza a <app>Terminál</app> kimenetét:"
+"Ha véletlenül megjelenít egy nem szöveges fájlt, vagy elindít egy "
+"parancsot, megtörténhet, hogy a <app>Pano Terminal</app> kimenet nem "
+"válaszol és fura betűk kerülnek kiírásra, amikor különböző "
+"billentyűket nyom le. Ebben az esetben a következő módokon állíthatja "
+"vissza a <app>Pano Terminal</app> kimenetét:"
 
 #. (itstool) path: section/title
 #: C/prob-reset.page:36
@@ -3148,8 +3193,8 @@ msgstr "Visszaállítás"
 
 #. (itstool) path: section/p
 #: C/prob-reset.page:38
-msgid "Reset <app>Terminal</app> screen."
-msgstr "A <app>Terminál</app> képernyőjének alaphelyzetbe állítása."
+msgid "Reset <app>Pano Terminal</app> screen."
+msgstr "A <app>Pano Terminal</app> képernyőjének alaphelyzetbe állítása."
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:42
@@ -3176,16 +3221,18 @@ msgstr "Visszaállítás és törlés"
 #. (itstool) path: section/p
 #: C/prob-reset.page:56
 msgid ""
-"In addition to resetting your <app>Terminal</app>, <gui "
-"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Terminal</"
-"app> screen space and the scrollback contents. To <gui "
-"style=\"menuitem\">Reset and Clear</gui> your <app>Terminal</app>:"
+"In addition to resetting your <app>Pano Terminal</app>, <gui "
+"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Pano "
+"Terminal</app> screen space and the scrollback contents. To <gui "
+"style=\"menuitem\">Reset and Clear</gui> your <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"A <app>Terminál</app> alaphelyzetbe visszaállításán túl a <gui "
-"style=\"menuitem\">Visszaállítás és törlés</gui> menüpont kiválasztásakor a "
-"látható <app>Terminál</app> képernyő és a visszagörgetési előzmények is "
-"törlésre kerülnek. A <app>Terminál</app> kimenet <gui "
-"style=\"menuitem\">Visszaállításához és törléséhez</gui> tegye a következőt:"
+"A <app>Pano Terminal</app> alaphelyzetbe visszaállításán túl a <gui "
+"style=\"menuitem\">Visszaállítás és törlés</gui> menüpont "
+"kiválasztásakor a látható <app>Pano Terminal</app> képernyő és a "
+"visszagörgetési előzmények is törlésre kerülnek. A <app>Pano "
+"Terminal</app> kimenet <gui style=\"menuitem\">Visszaállításához és "
+"törléséhez</gui> tegye a következőt:"
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:63
@@ -3209,8 +3256,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/txt-copy-paste.page:29
-msgid "Copy and paste text in <app>Terminal</app>."
-msgstr "Szöveg másolása és beillesztése a <app>Terminálban</app>."
+msgid "Copy and paste text in <app>Pano Terminal</app>."
+msgstr "Szöveg másolása és beillesztése a <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/txt-copy-paste.page:33
@@ -3220,11 +3267,11 @@ msgstr "Másolás és beillesztés"
 #. (itstool) path: page/p
 #: C/txt-copy-paste.page:35
 msgid ""
-"You can copy and paste text in <app>Terminal</app> in a similar way to other "
-"applications. However, the keyboard shortcuts differ."
+"You can copy and paste text in <app>Pano Terminal</app> in a similar "
+"way to other applications. However, the keyboard shortcuts differ."
 msgstr ""
-"A <app>Terminálban</app> más alkalmazásokhoz hasonló módon másolhat és "
-"illeszthet be szöveget. Azonban a gyorsbillentyűk eltérnek."
+"A <app>Pano Terminal</app> más alkalmazásokhoz hasonló módon másolhat "
+"és illeszthet be szöveget. Azonban a gyorsbillentyűk eltérnek."
 
 #. (itstool) path: item/title
 #: C/txt-copy-paste.page:40
@@ -3267,13 +3314,14 @@ msgstr "<gui>Beillesztés</gui>"
 #. (itstool) path: item/p
 #: C/txt-copy-paste.page:54
 msgid ""
-"Right click in the <app>Terminal</app> and select <gui "
+"Right click in the <app>Pano Terminal</app> and select <gui "
 "style=\"menuitem\">Paste</gui>. Alternatively, you can press "
 "<keyseq><key>Shift</key><key>Ctrl</key><key>V</key></keyseq>."
 msgstr ""
-"Kattintson a jobb egérgombbal a <app>Terminálban</app>, és válassza a <gui "
-"style=\"menuitem\">Beillesztés</gui> menüpontot. Ennek alternatívájaként "
-"megnyomhatja a <keyseq><key>Ctrl</key><key>Shift</key><key>V</key></keyseq> "
+"Kattintson a jobb egérgombbal a <app>Pano Terminal</app>, és válassza "
+"a <gui style=\"menuitem\">Beillesztés</gui> menüpontot. Ennek "
+"alternatívájaként megnyomhatja a "
+"<keyseq><key>Ctrl</key><key>Shift</key><key>V</key></keyseq> "
 "billentyűkombinációt is."
 
 #. (itstool) path: note/p
@@ -3298,15 +3346,16 @@ msgstr "Hiperhivatkozások és e-mail címek"
 #. (itstool) path: page/p
 #: C/txt-links.page:32
 msgid ""
-"<app>Terminal</app> parses the terminal output and automatically detects "
-"snippets of text that are web addresses or email addresses. Web and email "
-"addresses are automatically highlighted when you point your cursor to the "
-"text, indicating that the link can be opened in an application."
+"<app>Pano Terminal</app> parses the terminal output and automatically "
+"detects snippets of text that are web addresses or email addresses. "
+"Web and email addresses are automatically highlighted when you point "
+"your cursor to the text, indicating that the link can be opened in an "
+"application."
 msgstr ""
-"A <app>Terminál</app> feldolgozza a terminálkimenetet, és automatikusan "
-"felismeri a web- vagy e-mail címeket. A web- és e-mail címek automatikusan "
-"kiemelésre kerülnek, amikor a mutatót a szövegre viszi, ezzel jelezve, hogy "
-"a hivatkozás megnyitható egy alkalmazásban."
+"A <app>Pano Terminal</app> feldolgozza a terminálkimenetet, és "
+"automatikusan felismeri a web- vagy e-mail címeket. A web- és e-mail "
+"címek automatikusan kiemelésre kerülnek, amikor a mutatót a szövegre "
+"viszi, ezzel jelezve, hogy a hivatkozás megnyitható egy alkalmazásban."
 
 #. (itstool) path: page/p
 #: C/txt-links.page:37
@@ -3340,8 +3389,10 @@ msgstr "Hiperhivatkozás másolása:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:52
-msgid "Right click on the link in <app>Terminal</app>."
-msgstr "Kattintson a jobb egérgombbal a hivatkozásra a <app>Terminálban</app>."
+msgid "Right click on the link in <app>Pano Terminal</app>."
+msgstr ""
+"Kattintson a jobb egérgombbal a hivatkozásra a <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:55
@@ -3386,9 +3437,10 @@ msgstr "E-mail cím másolása:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:85
-msgid "Right click on the email address in <app>Terminal</app>."
+msgid "Right click on the email address in <app>Pano Terminal</app>."
 msgstr ""
-"Kattintson a jobb egérgombbal az e-mail címre a <app>Terminálban</app>."
+"Kattintson a jobb egérgombbal az e-mail címre a <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:88
@@ -3413,8 +3465,8 @@ msgstr "Válassza az <gui style=\"menuitem\">E-mail küldése</gui> menüpontot.
 
 #. (itstool) path: info/desc
 #: C/txt-search.page:29
-msgid "Search the <app>Terminal</app> output."
-msgstr "Keresés a <app>Terminál</app> kimenetben."
+msgid "Search the <app>Pano Terminal</app> output."
+msgstr "Keresés a <app>Pano Terminal</app> kimenetben."
 
 #. (itstool) path: page/title
 #: C/txt-search.page:33
@@ -3423,8 +3475,8 @@ msgstr "Szöveg keresése"
 
 #. (itstool) path: page/p
 #: C/txt-search.page:35
-msgid "You can search text in the <app>Terminal</app> output:"
-msgstr "A <app>Terminálban</app> megjelenő kimenetben kereshet szöveget:"
+msgid "You can search text in the <app>Pano Terminal</app> output:"
+msgstr "A <app>Pano Terminal</app> megjelenő kimenetben kereshet szöveget:"
 
 #. (itstool) path: item/p
 #: C/txt-search.page:39
@@ -3473,16 +3525,17 @@ msgstr "<gui style=\"checkbox\">Csak teljes szóra</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:61
 msgid ""
-"<app>Terminal</app> will look for the entire keyword and will ignore results "
-"that partially match your search keyword. For example, if you have searched "
-"for “cat”, <app>Terminal</app> will show only results that match this "
-"keyword exactly and omit results such as “bobcat”."
+"<app>Pano Terminal</app> will look for the entire keyword and will "
+"ignore results that partially match your search keyword. For example, "
+"if you have searched for “cat”, <app>Pano Terminal</app> will show "
+"only results that match this keyword exactly and omit results such as "
+"“bobcat”."
 msgstr ""
-"A <app>Terminál</app> a teljes kulcsszót fogja keresni, és figyelmen kívül "
-"hagyja a kulcsszóra részben illeszkedő találatokat. Ha például a „gnome”szót "
-"kereste, a <app>Terminál</app> csak a pontosan erre a kulcsszóra illeszkedő "
-"találatokat jeleníti meg, és kihagyja az olyan találatokat, mint például a "
-"„gnome-terminal”."
+"A <app>Pano Terminal</app> a teljes kulcsszót fogja keresni, és "
+"figyelmen kívül hagyja a kulcsszóra részben illeszkedő találatokat. Ha "
+"például a „gnome”szót kereste, a <app>Pano Terminal</app> csak a "
+"pontosan erre a kulcsszóra illeszkedő találatokat jeleníti meg, és "
+"kihagyja az olyan találatokat, mint például a „gnome-terminal”."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:68
@@ -3492,13 +3545,13 @@ msgstr "<gui style=\"checkbox\">Illesztés reguláris kifejezésként</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:69
 msgid ""
-"You can use regular expression patterns, also known as regex patterns, in "
-"your search keywords. <app>Terminal</app> will display the results that "
-"match these search terms."
+"You can use regular expression patterns, also known as regex patterns, "
+"in your search keywords. <app>Pano Terminal</app> will display the "
+"results that match these search terms."
 msgstr ""
 "A kulcsszavak kereséséhez használhat reguláris kifejezésként megadott "
-"mintákat is. A <app>Terminál</app> az ilyen keresőkifejezésekre illeszkedő "
-"találatokat jeleníti csak meg."
+"mintákat is. A <app>Pano Terminal</app> az ilyen keresőkifejezésekre "
+"illeszkedő találatokat jeleníti csak meg."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:74
@@ -3508,22 +3561,26 @@ msgstr "<gui style=\"checkbox\">Körbe</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:75
 msgid ""
-"<app>Terminal</app> searches from your current location in the scrollback to "
-"the end of available terminal output and then restarts the search."
+"<app>Pano Terminal</app> searches from your current location in the "
+"scrollback to the end of available terminal output and then restarts "
+"the search."
 msgstr ""
-"A <app>Terminál</app> a visszagörgetési sorok közt az aktuális helytől az "
-"elérhető terminálkimenet végéig keres, majd újrakezdi a keresést."
+"A <app>Pano Terminal</app> a visszagörgetési sorok közt az aktuális "
+"helytől az elérhető terminálkimenet végéig keres, majd újrakezdi a "
+"keresést."
 
 #. (itstool) path: note/p
 #: C/txt-search.page:82
 msgid ""
-"If you expect to work with a lot of <app>Terminal</app> output, increase the "
-"<link xref=\"pref-scrolling#lines\">scrollback lines</link> to a higher "
-"limit to allow <app>Terminal</app> to search further back."
+"If you expect to work with a lot of <app>Pano Terminal</app> output, "
+"increase the <link xref=\"pref-scrolling#lines\">scrollback "
+"lines</link> to a higher limit to allow <app>Pano Terminal</app> to "
+"search further back."
 msgstr ""
-"Ha várhatóan sok <app>Terminál</app> kimenettel fog dolgozni, akkor növelje "
-"meg a <link xref=\"pref-scrolling#lines\">visszagörgetési sorok</link> "
-"számát, hogy a <app>Terminál</app> több korábbi kimenetben kereshessen."
+"Ha várhatóan sok <app>Pano Terminal</app> kimenettel fog dolgozni, "
+"akkor növelje meg a <link "
+"xref=\"pref-scrolling#lines\">visszagörgetési sorok</link> számát, "
+"hogy a <app>Pano Terminal</app> több korábbi kimenetben kereshessen."
 
 #. (itstool) path: credit/years
 #: C/txt-select-text.page:20
@@ -3586,10 +3643,10 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/txt-select-text.page:51
 msgid ""
-"If you are running an application in <app>Terminal</app> which accepts mouse "
-"input, you need to use the <key>Shift</key> modifier for the <app>Terminal</"
-"app> to catch the mouse input."
+"If you are running an application in <app>Pano Terminal</app> which "
+"accepts mouse input, you need to use the <key>Shift</key> modifier for "
+"the <app>Pano Terminal</app> to catch the mouse input."
 msgstr ""
-"Ha a <app>Terminálban</app> egérbevitelt elfogadó alkalmazást futtat, akkor "
-"nyomva kell tartani a <key>Shift</key> billentyűt, hogy a <app>Terminál</"
-"app> elfogja az egérbevitelt."
+"Ha a <app>Pano Terminal</app> egérbevitelt elfogadó alkalmazást "
+"futtat, akkor nyomva kell tartani a <key>Shift</key> billentyűt, hogy "
+"a <app>Pano Terminal</app> elfogja az egérbevitelt."

@@ -114,14 +114,15 @@ msgstr "Tastenkombinationen"
 #: C/adv-keyboard-shortcuts.page:36
 msgid ""
 "Keyboard shortcuts are combinations of keys that allow you to perform "
-"actions, such as opening the settings dialog or accessing a feature inside "
-"<app>Terminal</app> quickly. These shortcuts can be modified to suit your "
-"preferences."
+"actions, such as opening the settings dialog or accessing a feature "
+"inside <app>Pano Terminal</app> quickly. These shortcuts can be "
+"modified to suit your preferences."
 msgstr ""
-"Tastenkombinationen sind Kombinationen von Tasten, die es Ihnen ermöglichen, "
-"bestimmte Aktionen schnell auszuführen, wie z.B. das Öffnen des "
-"Einstellungen-Dialogs oder Zugriff auf Funktionen des <app>Terminals</app>. "
-"Die Tastenkombinationen können nach Ihren Wünschen angepasst werden."
+"Tastenkombinationen sind Kombinationen von Tasten, die es Ihnen "
+"ermöglichen, bestimmte Aktionen schnell auszuführen, wie z.B. das "
+"Öffnen des Einstellungen-Dialogs oder Zugriff auf Funktionen des "
+"<app>Pano Terminal</app>. Die Tastenkombinationen können nach Ihren "
+"Wünschen angepasst werden."
 
 #. (itstool) path: page/p
 #: C/adv-keyboard-shortcuts.page:41
@@ -809,13 +810,15 @@ msgstr "Farbschemata"
 #. (itstool) path: page/p
 #: C/app-colors.page:35
 msgid ""
-"If you do not like the default <app>Terminal</app> theme, you may want to "
-"change the colors that are used for the text and background. You can use "
-"colors from your theme, select one of the presets or use a custom scheme."
+"If you do not like the default <app>Pano Terminal</app> theme, you may "
+"want to change the colors that are used for the text and background. "
+"You can use colors from your theme, select one of the presets or use a "
+"custom scheme."
 msgstr ""
-"Wenn Ihnen das voreingestellte <app>Terminal</app>-Thema nicht gefällt, so "
-"können Sie die Farben von Text und Hintergrund anpassen. Sie können Farben "
-"Ihres Themas, eine der Vorgaben oder ein eigenes Schema verwenden."
+"Wenn Ihnen das voreingestellte <app>Pano Terminal</app>-Thema nicht "
+"gefällt, so können Sie die Farben von Text und Hintergrund anpassen. "
+"Sie können Farben Ihres Themas, eine der Vorgaben oder ein eigenes "
+"Schema verwenden."
 
 #. (itstool) path: section/title
 #: C/app-colors.page:40
@@ -907,10 +910,11 @@ msgstr "Eigenes Farbschema"
 #. (itstool) path: section/p
 #: C/app-colors.page:103
 msgid ""
-"You can use custom colors for the text and background in <app>Terminal</app>:"
+"You can use custom colors for the text and background in <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"Sie können eigene Farben für Text und Hintergrund im <app>Terminal</app> "
-"verwenden:"
+"Sie können eigene Farben für Text und Hintergrund im <app>Pano "
+"Terminal</app> verwenden:"
 
 #. (itstool) path: item/p
 #: C/app-colors.page:119
@@ -976,23 +980,24 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-colors.page:150
 msgid ""
-"Traditionally terminal emulators offered a 16 color palette, this is what "
-"you can alter here. <app>Terminal</app> supports an extended set of 256 "
-"colors, but the additional 240 colors cannot be edited here."
+"Traditionally terminal emulators offered a 16 color palette, this is "
+"what you can alter here. <app>Pano Terminal</app> supports an extended "
+"set of 256 colors, but the additional 240 colors cannot be edited "
+"here."
 msgstr ""
-"Traditionell bieten Terminal-Emulatoren eine Farbpalette mit 16 Farben. Dies "
-"können Sie hier ändern. <app>Terminal</app> unterstützt eine erweiterte "
-"Menge von 256 Farben. Die zusätzlichen 240 Farben können an dieser Stelle "
-"nicht bearbeitet werden."
+"Traditionell bieten Terminal-Emulatoren eine Farbpalette mit 16 "
+"Farben. Dies können Sie hier ändern. <app>Pano Terminal</app> "
+"unterstützt eine erweiterte Menge von 256 Farben. Die zusätzlichen 240 "
+"Farben können an dieser Stelle nicht bearbeitet werden."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:154
 msgid ""
-"<app>Terminal</app> even offers direct access to over 16 million colors, "
-"this is called “true color” mode."
+"<app>Pano Terminal</app> even offers direct access to over 16 million "
+"colors, this is called “true color” mode."
 msgstr ""
-"<app>Terminal</app> ermöglicht sogar direkten Zugriff auf über 16 Millionen "
-"Farben. Dies wird »true color« (Echtfarben)-Modus genannt."
+"<app>Pano Terminal</app> ermöglicht sogar direkten Zugriff auf über 16 "
+"Millionen Farben. Dies wird »true color« (Echtfarben)-Modus genannt."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:157
@@ -1058,11 +1063,11 @@ msgstr "Eingabemarke ändern"
 #. (itstool) path: page/p
 #: C/app-cursor.page:36
 msgid ""
-"<app>Terminal</app> has three cursors from which to choose. To select your "
-"preferred cursor:"
+"<app>Pano Terminal</app> has three cursors from which to choose. To "
+"select your preferred cursor:"
 msgstr ""
-"<app>Terminal</app> hat drei Eingabemarken, aus denen Sie wählen können. So "
-"wählen Sie die gewünschte Eingabemarke:"
+"<app>Pano Terminal</app> hat drei Eingabemarken, aus denen Sie wählen "
+"können. So wählen Sie die gewünschte Eingabemarke:"
 
 #. (itstool) path: item/p
 #: C/app-cursor.page:49 C/app-fonts.page:54 C/app-fonts.page:78
@@ -1113,12 +1118,13 @@ msgstr "Schrift und Schriftart ändern"
 #. (itstool) path: page/p
 #: C/app-fonts.page:35
 msgid ""
-"When you work with a lot of <app>Terminal</app> text, you may want to change "
-"the default font to your preference. You have the following options:"
+"When you work with a lot of <app>Pano Terminal</app> text, you may "
+"want to change the default font to your preference. You have the "
+"following options:"
 msgstr ""
-"Wenn Sie mit viel Text im <app>Terminal</app> arbeiten, so können Sie die "
-"voreingestellte Schrift nach Ihrem Geschmack anpassen. Es gibt die folgenden "
-"Möglichkeiten:"
+"Wenn Sie mit viel Text im <app>Pano Terminal</app> arbeiten, so können "
+"Sie die voreingestellte Schrift nach Ihrem Geschmack anpassen. Es gibt "
+"die folgenden Möglichkeiten:"
 
 #. (itstool) path: section/title
 #: C/app-fonts.page:40
@@ -1201,15 +1207,15 @@ msgstr "Zeilenabstand und Zeichenabstand"
 #. (itstool) path: section/p
 #: C/app-fonts.page:108
 msgid ""
-"<app>Terminal</app> allows you to pull its characters apart for improved "
-"readability. Line spacing and character spacing can be adjusted from 1.0 "
-"(the regular look) to 2.0 (“double spacing”), including fractional values in "
-"between."
+"<app>Pano Terminal</app> allows you to pull its characters apart for "
+"improved readability. Line spacing and character spacing can be "
+"adjusted from 1.0 (the regular look) to 2.0 (“double spacing”), "
+"including fractional values in between."
 msgstr ""
-"<app>Terminal</app> kann einen Abstand zwischen Zeichen setzen, um die "
-"Lesbarkeit zu verbessern. Zeilenabstand und Zeichenabstand werden mit Werten "
-"in Form von Kommazahlen zwischen 1,0 (normaler Abstand) und 2,0 (doppelter "
-"Abstand) festgelegt."
+"<app>Pano Terminal</app> kann einen Abstand zwischen Zeichen setzen, "
+"um die Lesbarkeit zu verbessern. Zeilenabstand und Zeichenabstand "
+"werden mit Werten in Form von Kommazahlen zwischen 1,0 (normaler "
+"Abstand) und 2,0 (doppelter Abstand) festgelegt."
 
 #. (itstool) path: item/p
 #: C/app-fonts.page:126
@@ -1246,25 +1252,28 @@ msgstr "Sitzung im Vollbild-Modus"
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:34
-msgid "Fullscreen mode allows <app>Terminal</app> to use the entire screen."
+msgid ""
+"Fullscreen mode allows <app>Pano Terminal</app> to use the entire "
+"screen."
 msgstr ""
-"Der Vollbild-Modus ermöglicht es <app>Terminal</app>, den ganzen Bildschirm "
-"zu verwenden."
+"Der Vollbild-Modus ermöglicht es <app>Pano Terminal</app>, den ganzen "
+"Bildschirm zu verwenden."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:36
 msgid ""
 "This mode is useful if you have a device with limited screen space and "
-"intend to work in <app>Terminal</app> for a long duration, or are working "
-"with long lines of terminal output. It temporarily hides the window "
-"decoration, allowing you to view more <link xref=\"pref-scrolling"
-"\">scrollback lines</link> on the screen."
+"intend to work in <app>Pano Terminal</app> for a long duration, or are "
+"working with long lines of terminal output. It temporarily hides the "
+"window decoration, allowing you to view more <link "
+"xref=\"pref-scrolling\">scrollback lines</link> on the screen."
 msgstr ""
-"Dieser Modus ist sinnvoll, wenn Sie ein Gerät mit kleiner Bildschirmgröße "
-"besitzen und über einen längeren Zeitraum mit <app>Terminal</app> arbeiten "
-"möchten oder mit langen Zeilen in der Textausgabe kämpfen. Er verbirgt "
-"zeitweise die Fensterdekoration, so dass Sie mehr vom <link xref=\"pref-"
-"scrolling\">Zeilenspeicher</link> sehen können."
+"Dieser Modus ist sinnvoll, wenn Sie ein Gerät mit kleiner "
+"Bildschirmgröße besitzen und über einen längeren Zeitraum mit "
+"<app>Pano Terminal</app> arbeiten möchten oder mit langen Zeilen in "
+"der Textausgabe kämpfen. Er verbirgt zeitweise die Fensterdekoration, "
+"so dass Sie mehr vom <link "
+"xref=\"pref-scrolling\">Zeilenspeicher</link> sehen können."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:42
@@ -1293,11 +1302,11 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-fullscreen.page:57
 msgid ""
-"If you have more than one <app>Terminal</app> tab open, the tab bar will be "
-"visible in the fullscreen mode."
+"If you have more than one <app>Pano Terminal</app> tab open, the tab "
+"bar will be visible in the fullscreen mode."
 msgstr ""
-"Wenn mehr als ein Reiter im <app>Terminal</app> geöffnet ist, so erscheint "
-"die Reiterleiste im Vollbild-Modus."
+"Wenn mehr als ein Reiter im <app>Pano Terminal</app> geöffnet ist, so "
+"erscheint die Reiterleiste im Vollbild-Modus."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:61
@@ -1315,35 +1324,37 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/app-terminal-sizes.page:29
-msgid "Change the <app>Terminal</app> window size."
-msgstr "Ändern Sie die Fenstergröße des <app>Terminals</app>."
+msgid "Change the <app>Pano Terminal</app> window size."
+msgstr "Ändern Sie die Fenstergröße des <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/app-terminal-sizes.page:33
-msgid "<app>Terminal</app> sizes"
-msgstr "<app>Terminal</app>-Größen"
+msgid "<app>Pano Terminal</app> sizes"
+msgstr "<app>Pano Terminal</app>-Größen"
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:35
 msgid ""
 "If you work with certain command line applications that have minimum "
-"terminal size requirements in order to display correctly, or if you want to "
-"view long lines of terminal output with minimal line breaks on your display, "
-"you may require <app>Terminal</app> windows to be of a particular size."
+"terminal size requirements in order to display correctly, or if you "
+"want to view long lines of terminal output with minimal line breaks on "
+"your display, you may require <app>Pano Terminal</app> windows to be "
+"of a particular size."
 msgstr ""
-"Wenn Sie mit bestimmten Anwendungen auf der Befehlszeile arbeiten, die eine "
-"bestimmte Mindestgröße des Terminals für ordnungsgemäße Darstellung "
-"erfordern, oder wenn Sie sehr lange Zeilen in der Ausgabe mit nur wenigen "
-"Zeilenumbrüchen wünschen, so sind <app>Terminal</app>-Fenster einer "
-"bestimmten Größe erforderlich."
+"Wenn Sie mit bestimmten Anwendungen auf der Befehlszeile arbeiten, die "
+"eine bestimmte Mindestgröße des Terminals für ordnungsgemäße "
+"Darstellung erfordern, oder wenn Sie sehr lange Zeilen in der Ausgabe "
+"mit nur wenigen Zeilenumbrüchen wünschen, so sind <app>Pano "
+"Terminal</app>-Fenster einer bestimmten Größe erforderlich."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:41
 msgid ""
-"You can change the <app>Terminal</app> window size to some preset values:"
+"You can change the <app>Pano Terminal</app> window size to some preset "
+"values:"
 msgstr ""
-"Sie können die Fenstergröße von <app>Terminal</app> auf einige vorgegebene "
-"Werte einstellen:"
+"Sie können die Fenstergröße von <app>Pano Terminal</app> auf einige "
+"vorgegebene Werte einstellen:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:46
@@ -1382,26 +1393,28 @@ msgstr "<gui style=\"menuitem\">132×43</gui>"
 #. (itstool) path: note/p
 #: C/app-terminal-sizes.page:69
 msgid ""
-"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu access "
-"keys</gui></link>, you can access this menu by pressing <keyseq><key>Alt</"
-"key><key>T</key></keyseq> and then pressing <key>1</key> to switch the "
-"<app>Terminal</app> window to size <gui>80×24</gui> and so on."
+"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu "
+"access keys</gui></link>, you can access this menu by pressing "
+"<keyseq><key>Alt</key><key>T</key></keyseq> and then pressing "
+"<key>1</key> to switch the <app>Pano Terminal</app> window to size "
+"<gui>80×24</gui> and so on."
 msgstr ""
-"Wenn Sie <link xref=\"pref-keyboard-access\"><gui>Menü-Tastenkombinationen</"
-"gui></link> aktiviert haben, können Sie dieses Menü durch Drücken von "
+"Wenn Sie <link "
+"xref=\"pref-keyboard-access\"><gui>Menü-Tastenkombinationen</gui></lin"
+"k> aktiviert haben, können Sie dieses Menü durch Drücken von "
 "<keyseq><key>Alt</key><key>T</key></keyseq> gefolgt von <key>1</key> "
-"aktivieren, um die Fenstergröße des <app>Terminal</app>s auf <gui>80×24</"
-"gui> umzustellen, usw."
+"aktivieren, um die Fenstergröße des <app>Pano Terminal</app>s auf "
+"<gui>80×24</gui> umzustellen, usw."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:76
 msgid ""
-"If you require custom size <app>Terminal</app> windows, you can also set the "
-"default window size according to your requirements:"
+"If you require custom size <app>Pano Terminal</app> windows, you can "
+"also set the default window size according to your requirements:"
 msgstr ""
-"Wenn Sie eine individuelle Größe des <app>Terminal</app>-Fensters "
-"bevorzugen, so können Sie die voreingestellte Fenstergröße entsprechend "
-"Ihrer Wünsche einstellen:"
+"Wenn Sie eine individuelle Größe des <app>Pano Terminal</app>-Fensters "
+"bevorzugen, so können Sie die voreingestellte Fenstergröße "
+"entsprechend Ihrer Wünsche einstellen:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:92
@@ -1428,8 +1441,8 @@ msgstr "Vergrößern und verkleinern"
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:34
-msgid "To increase <app>Terminal</app> text size:"
-msgstr "So vergrößern Sie den Text im <app>Terminal</app>:"
+msgid "To increase <app>Pano Terminal</app> text size:"
+msgstr "So vergrößern Sie den Text im <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:38
@@ -1444,8 +1457,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:44
-msgid "To decrease <app>Terminal</app> text size:"
-msgstr "So verkleinern Sie den Text im <app>Terminal</app>:"
+msgid "To decrease <app>Pano Terminal</app> text size:"
+msgstr "So verkleinern Sie den Text im <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:48
@@ -1460,9 +1473,10 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:54
-msgid "To restore <app>Terminal</app> text to default size:"
+msgid "To restore <app>Pano Terminal</app> text to default size:"
 msgstr ""
-"So stellen Sie die voreingestellte Größe im <app>Terminal</app> wieder her:"
+"So stellen Sie die voreingestellte Größe im <app>Pano Terminal</app> "
+"wieder her:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:58
@@ -1482,9 +1496,10 @@ msgstr "2013-2014"
 
 #. (itstool) path: info/desc
 #: C/gs-execute-commands.page:31
-msgid "Launch programs or run commands using <app>Terminal</app>."
+msgid "Launch programs or run commands using <app>Pano Terminal</app>."
 msgstr ""
-"Ein Programm starten oder einen Befehl mit <app>Terminal</app> ausführen."
+"Ein Programm starten oder einen Befehl mit <app>Pano Terminal</app> "
+"ausführen."
 
 #. (itstool) path: page/title
 #: C/gs-execute-commands.page:34
@@ -1494,14 +1509,14 @@ msgstr "Einen Befehl ausführen"
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:36
 msgid ""
-"Any input entered in the <app>Terminal</app> to be executed is referred to "
-"as a <em>command</em>. You can run both command line and graphical user "
-"interface (GUI) programs from the terminal."
+"Any input entered in the <app>Pano Terminal</app> to be executed is "
+"referred to as a <em>command</em>. You can run both command line and "
+"graphical user interface (GUI) programs from the terminal."
 msgstr ""
-"Jegliche Eingabe, die ins <app>Terminal</app> zum Ausführen eingegeben wird, "
-"wird als ein <em>Befehl</em> angesehen. Sie können sowohl "
-"Befehlszeilenprogramme als auch Programme mit grafischer Benutzeroberfläche "
-"im Terminal ausführen."
+"Jegliche Eingabe, die ins <app>Pano Terminal</app> zum Ausführen "
+"eingegeben wird, wird als ein <em>Befehl</em> angesehen. Sie können "
+"sowohl Befehlszeilenprogramme als auch Programme mit grafischer "
+"Benutzeroberfläche im Terminal ausführen."
 
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:40
@@ -1510,9 +1525,10 @@ msgstr "So führen Sie Befehle aus:"
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:44
-msgid "Type the command in the <app>Terminal</app> prompt."
+msgid "Type the command in the <app>Pano Terminal</app> prompt."
 msgstr ""
-"Geben Sie den Befehl in die Eingabeaufforderung von <app>Terminal</app> ein."
+"Geben Sie den Befehl in die Eingabeaufforderung von <app>Pano "
+"Terminal</app> ein."
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:47
@@ -1522,16 +1538,18 @@ msgstr "Drücken Sie zum Ausführen die <key>Eingabetaste</key>."
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:51
 msgid ""
-"If you have a program that ends abruptly without any warning or error, you "
-"may want to run it in <app>Terminal</app>. This will allow the program to "
-"output any error or debugging messages to the <app>Terminal</app> window. "
-"This information can be helpful when filing a bug report."
+"If you have a program that ends abruptly without any warning or error, "
+"you may want to run it in <app>Pano Terminal</app>. This will allow "
+"the program to output any error or debugging messages to the <app>Pano "
+"Terminal</app> window. This information can be helpful when filing a "
+"bug report."
 msgstr ""
-"Wenn es ein Programm gibt, das abrupt ohne Warnung oder Fehler schließt, so "
-"wollen Sie es möglicherweise in <app>Terminal</app> ausführen. Dies "
-"ermöglicht, dass das Programm Fehler und Fehlerdiagnose-Nachrichten im "
-"<app>Terminal</app>-Fenster ausgibt. Diese Informationen sind oft hilfreich "
-"beim Erstellen eines neuen Fehlerberichts."
+"Wenn es ein Programm gibt, das abrupt ohne Warnung oder Fehler "
+"schließt, so wollen Sie es möglicherweise in <app>Pano Terminal</app> "
+"ausführen. Dies ermöglicht, dass das Programm Fehler und "
+"Fehlerdiagnose-Nachrichten im <app>Pano Terminal</app>-Fenster "
+"ausgibt. Diese Informationen sind oft hilfreich beim Erstellen eines "
+"neuen Fehlerberichts."
 
 #. (itstool) path: note/p
 #: C/gs-execute-commands.page:57
@@ -1545,10 +1563,10 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/gs-tabs.page:30
-msgid "Enable, add, remove and reorder <app>Terminal</app> tabs."
+msgid "Enable, add, remove and reorder <app>Pano Terminal</app> tabs."
 msgstr ""
-"<app>Terminal</app>-Reiter aktivieren, hinzufügen, entfernen und neu "
-"anordnen."
+"<app>Pano Terminal</app>-Reiter aktivieren, hinzufügen, entfernen und "
+"neu anordnen."
 
 #. (itstool) path: page/title
 #: C/gs-tabs.page:33
@@ -1559,20 +1577,21 @@ msgstr "Reiter verwenden"
 #. (itstool) path: page/p
 #: C/gs-tabs.page:35
 msgid ""
-"The tab bar is shown at the top a <app>Terminal</app> window that has "
-"multiple tabs open (it looks like a row of buttons). Click on a tab to "
-"switch to it. You can open multiple tabs to manage your work in "
-"<app>Terminal</app>. This will allow you to multi-task with activities such "
-"as running programs, browsing directories and editing text files in a single "
-"<app>Terminal</app> window."
+"The tab bar is shown at the top a <app>Pano Terminal</app> window that "
+"has multiple tabs open (it looks like a row of buttons). Click on a "
+"tab to switch to it. You can open multiple tabs to manage your work in "
+"<app>Pano Terminal</app>. This will allow you to multi-task with "
+"activities such as running programs, browsing directories and editing "
+"text files in a single <app>Pano Terminal</app> window."
 msgstr ""
 "Die Reiterleiste erscheint oben als eine Reihe von Knöpfen in allen "
-"<app>Terminal</app>-Fenstern, die mehrere Reiter offen haben. Klicken Sie "
-"auf einen Knopf, um zu dem entsprechenden Reitern zu wechseln. Es können "
-"mehrere Reiter geöffnet werden, um Ihr Arbeiten mit <app>Terminal</app> zu "
-"erleichtern. Dies ermöglicht es Ihnen, gleichzeitig mehrere Aufgaben wie das "
-"Ausführen von Programmen, Durchsuchen von Ordnern und Bearbeiten von "
-"Textdateien in einem einzigen <app>Terminal</app>-Fenster zu erledigen."
+"<app>Pano Terminal</app>-Fenstern, die mehrere Reiter offen haben. "
+"Klicken Sie auf einen Knopf, um zu dem entsprechenden Reitern zu "
+"wechseln. Es können mehrere Reiter geöffnet werden, um Ihr Arbeiten "
+"mit <app>Pano Terminal</app> zu erleichtern. Dies ermöglicht es Ihnen, "
+"gleichzeitig mehrere Aufgaben wie das Ausführen von Programmen, "
+"Durchsuchen von Ordnern und Bearbeiten von Textdateien in einem "
+"einzigen <app>Pano Terminal</app>-Fenster zu erledigen."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:43
@@ -1581,9 +1600,10 @@ msgstr "Einen neuen Reiter öffnen"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:45
-msgid "To open a new tab inside your current <app>Terminal</app> window:"
+msgid "To open a new tab inside your current <app>Pano Terminal</app> window:"
 msgstr ""
-"So öffnen Sie einen neuen Reiter im aktuellen <app>Terminal</app>fenster:"
+"So öffnen Sie einen neuen Reiter im aktuellen <app>Pano "
+"Terminal</app>fenster:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:48
@@ -1599,10 +1619,11 @@ msgstr "Einen Reiter entfernen"
 #. (itstool) path: section/p
 #: C/gs-tabs.page:87
 msgid ""
-"To close an existing tab inside your current <app>Terminal</app> window:"
+"To close an existing tab inside your current <app>Pano Terminal</app> "
+"window:"
 msgstr ""
-"So schließen Sie einen offenen Reiter im aktuellen <app>Terminal</app>-"
-"Fenster:"
+"So schließen Sie einen offenen Reiter im aktuellen <app>Pano "
+"Terminal</app>-Fenster:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:92
@@ -1700,14 +1721,16 @@ msgstr "Jim Campbell"
 
 #. (itstool) path: info/desc
 #: C/index.page:30
-msgid "Set up and use the highly customizable GNOME terminal emulator."
+#, fuzzy
+msgid "Set up and use the highly customizable Pano Terminal emulator."
 msgstr ""
 "Den hochgradig anpassbaren GNOME Terminal-Emulator einrichten und ihn "
 "verwenden."
 
 #. (itstool) path: page/title
 #: C/index.page:34
-msgid "<_:media-1/> Terminal Help"
+#, fuzzy
+msgid "<_:media-1/> Pano Terminal Help"
 msgstr "<_:media-1/> Terminal-Handbuch"
 
 #. (itstool) path: section/title
@@ -1742,7 +1765,8 @@ msgstr "Fehlersuche"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:29
-msgid "Learn about the GNOME terminal emulator."
+#, fuzzy
+msgid "Learn about the Pano Terminal emulator."
 msgstr "Erfahren Sie mehr über den GNOME Terminal-Emulator."
 
 #. (itstool) path: page/title
@@ -1753,30 +1777,33 @@ msgstr "Einführung"
 #. (itstool) path: page/p
 #: C/introduction.page:34
 msgid ""
-"<app>Terminal</app> is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your system."
+"<app>Pano Terminal</app> is a terminal emulator application for "
+"accessing a UNIX shell environment which can be used to run programs "
+"available on your system."
 msgstr ""
-"<app>Terminal</app> ist ein Terminal-Emulator zum Zugang zu einer UNIX-Shell-"
-"Umgebung, die dazu verwendet wird, um auf Ihrem System vorhandene Programme "
-"auszuführen."
+"<app>Pano Terminal</app> ist ein Terminal-Emulator zum Zugang zu einer "
+"UNIX-Shell-Umgebung, die dazu verwendet wird, um auf Ihrem System "
+"vorhandene Programme auszuführen."
 
 #. (itstool) path: page/p
 #: C/introduction.page:38
 msgid ""
-"<app>Terminal</app> supports escape sequences that control cursor position "
-"and colors."
+"<app>Pano Terminal</app> supports escape sequences that control cursor "
+"position and colors."
 msgstr ""
-"<app>Terminal</app> unterstützt Escape-Sequenzen, welche die Position der "
-"Eingabemarke und Farben steuern."
+"<app>Pano Terminal</app> unterstützt Escape-Sequenzen, welche die "
+"Position der Eingabemarke und Farben steuern."
 
 #. (itstool) path: figure/title
 #: C/introduction.page:42
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME-Terminal"
 
 #. (itstool) path: figure/desc
 #: C/introduction.page:43
-msgid "Screenshot of GNOME <app>Terminal</app>"
+#, fuzzy
+msgid "Screenshot of <app>Pano Terminal</app>"
 msgstr "Bildschirmfoto eines GNOME <app>Terminal</app>s"
 
 #. (itstool) path: figure/media
@@ -1785,10 +1812,9 @@ msgstr "Bildschirmfoto eines GNOME <app>Terminal</app>s"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/introduction.page:44
+#, fuzzy
 msgctxt "_"
-msgid ""
-"external ref='figures/gnome-terminal.png' "
-"md5='44213071a02d8e193ef33f6987afa39a'"
+msgid "external ref='figures/pano.png' md5='44213071a02d8e193ef33f6987afa39a'"
 msgstr "ok'"
 
 #. (itstool) path: p/link
@@ -1862,13 +1888,14 @@ msgstr "Überblick über ein Terminal"
 #. (itstool) path: page/p
 #: C/overview.page:26
 msgid ""
-"<app>Terminal</app> is a terminal program for <gui>GNOME</gui>. The "
-"following terms and their descriptions will help you to be familiar with "
-"<app>Terminal</app> and its capabilities."
+"<app>Pano Terminal</app> is a terminal program for <gui>GNOME</gui>. "
+"The following terms and their descriptions will help you to be "
+"familiar with <app>Pano Terminal</app> and its capabilities."
 msgstr ""
-"<app>Terminal</app> ist ein Terminal-Programm für <gui>GNOME</gui>. Die "
-"folgenden Begriffe und ihre Erklärungen helfen Ihnen dabei, sich mit "
-"<app>Terminal</app> und seinen Möglichkeiten vertraut zu machen."
+"<app>Pano Terminal</app> ist ein Terminal-Programm für "
+"<gui>GNOME</gui>. Die folgenden Begriffe und ihre Erklärungen helfen "
+"Ihnen dabei, sich mit <app>Pano Terminal</app> und seinen "
+"Möglichkeiten vertraut zu machen."
 
 #. (itstool) path: item/title
 #: C/overview.page:32
@@ -1938,11 +1965,13 @@ msgstr "VTE"
 
 #. (itstool) path: item/p
 #: C/overview.page:56
+#, fuzzy
 msgid ""
-"Virtual Terminal Environment (VTE) is a terminal emulator which emulates a "
-"text terminal inside a graphical user interface (GUI) environment. "
-"<app>Terminal</app> is largely based on the <app>VTE</app>. <app>VTE</app> "
-"has widgets that implement a fully functional terminal emulator."
+"Virtual Terminal Environment (VTE) is a terminal emulator which "
+"emulates a text terminal inside a graphical user interface (GUI) "
+"environment. <app>Pano Terminal</app> is largely based on the "
+"<app>VTE</app>. <app>VTE</app> has widgets that implement a fully "
+"functional terminal emulator."
 msgstr ""
 "Virtual Terminal Environment (VTE) ist ein Terminal-Emulator, der ein Text-"
 "Terminal in einer grafischen Benutzeroberfläche (GUI) emuliert. "
@@ -2043,8 +2072,8 @@ msgstr ""
 
 #. (itstool) path: page/title
 #: C/pref.page:18
-msgid "<app>Terminal</app> preferences"
-msgstr "<app>Terminal</app>-Einstellungen"
+msgid "<app>Pano Terminal</app> preferences"
+msgstr "<app>Pano Terminal</app>-Einstellungen"
 
 #. (itstool) path: section/title
 #: C/pref.page:21
@@ -2063,8 +2092,8 @@ msgstr "Profileinstellungen"
 
 #. (itstool) path: info/desc
 #: C/pref-bell.page:29
-msgid "Enable audible notification in <app>Terminal</app>."
-msgstr "Hörbare Benachrichtigungen in <app>Terminal</app> aktivieren."
+msgid "Enable audible notification in <app>Pano Terminal</app>."
+msgstr "Hörbare Benachrichtigungen in <app>Pano Terminal</app> aktivieren."
 
 #. (itstool) path: page/title
 #: C/pref-bell.page:33
@@ -2074,11 +2103,12 @@ msgstr "Hörbare Glocke einstellen"
 #. (itstool) path: page/p
 #: C/pref-bell.page:35
 msgid ""
-"<app>Terminal</app> can sound an audible bell to indicate events in "
-"<app>Terminal</app> windows and tabs."
+"<app>Pano Terminal</app> can sound an audible bell to indicate events "
+"in <app>Pano Terminal</app> windows and tabs."
 msgstr ""
-"<app>Terminal</app> kann eine Glocke erklingen lassen, um Ereignisse in "
-"Fenstern und Reitern von <app>Terminal</app> anzudeuten."
+"<app>Pano Terminal</app> kann eine Glocke erklingen lassen, um "
+"Ereignisse in Fenstern und Reitern von <app>Pano Terminal</app> "
+"anzudeuten."
 
 #. (itstool) path: page/p
 #: C/pref-bell.page:38
@@ -2108,11 +2138,12 @@ msgstr "2013-2014"
 #. (itstool) path: info/desc
 #: C/pref-custom-exit.page:31
 msgid ""
-"Set the behavior of <app>Terminal</app> when a custom command or the default "
-"shell exits."
+"Set the behavior of <app>Pano Terminal</app> when a custom command or "
+"the default shell exits."
 msgstr ""
-"Das Verhalten von <app>Terminal</app> festlegen, wenn ein "
-"benutzerdefinierter Befehl oder die voreingestellte Shell beendet wird."
+"Das Verhalten von <app>Pano Terminal</app> festlegen, wenn ein "
+"benutzerdefinierter Befehl oder die voreingestellte Shell beendet "
+"wird."
 
 #. (itstool) path: page/title
 #: C/pref-custom-exit.page:35
@@ -2168,24 +2199,27 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/pref-custom-exit.page:71
 msgid ""
-"If you have <link xref=\"pref-custom-command\">set a custom command</link> "
-"that is non-interactive, have set the exit behavior to <gui>Exit the "
-"terminal</gui>, and have set the profile to be the default profile, "
-"<app>Terminal</app> may exit before you can see the output of the command."
+"If you have <link xref=\"pref-custom-command\">set a custom "
+"command</link> that is non-interactive, have set the exit behavior to "
+"<gui>Exit the terminal</gui>, and have set the profile to be the "
+"default profile, <app>Pano Terminal</app> may exit before you can see "
+"the output of the command."
 msgstr ""
 "Wenn Sie einen <link xref=\"pref-custom-command\">benutzerdefinierten "
-"Befehl</link> festgelegt haben, der nicht-interaktiv ist, und das Verhalten "
-"beim Beenden auf <gui>Das Terminal beenden</gui> eingestellt ist und das "
-"Profil auf das Standard-Profil eingestellt ist, dann könnte <app>Terminal</"
-"app> sich beenden, bevor Sie die Ausgabe des Befehls gesehen haben."
+"Befehl</link> festgelegt haben, der nicht-interaktiv ist, und das "
+"Verhalten beim Beenden auf <gui>Das Terminal beenden</gui> eingestellt "
+"ist und das Profil auf das Standard-Profil eingestellt ist, dann "
+"könnte <app>Pano Terminal</app> sich beenden, bevor Sie die Ausgabe "
+"des Befehls gesehen haben."
 
 #. (itstool) path: info/desc
 #: C/pref-custom-command.page:32
 msgid ""
-"Set <app>Terminal</app> to run a command or a different shell on startup."
+"Set <app>Pano Terminal</app> to run a command or a different shell on "
+"startup."
 msgstr ""
-"Festlegen, dass <app>Terminal</app> einen Befehl oder eine andere Shell beim "
-"Start ausführt."
+"Festlegen, dass <app>Pano Terminal</app> einen Befehl oder eine andere "
+"Shell beim Start ausführt."
 
 #. (itstool) path: page/title
 #: C/pref-custom-command.page:36
@@ -2208,11 +2242,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:43
 msgid ""
-"You can set <app>Terminal</app> to run a command when it starts up instead "
-"of awaiting input from you:"
+"You can set <app>Pano Terminal</app> to run a command when it starts "
+"up instead of awaiting input from you:"
 msgstr ""
-"Sie können festlegen, dass <app>Terminal</app> beim Programmstart einen "
-"Befehl ausführt, anstatt auf eine Eingabe von Ihnen zu warten:"
+"Sie können festlegen, dass <app>Pano Terminal</app> beim Programmstart "
+"einen Befehl ausführt, anstatt auf eine Eingabe von Ihnen zu warten:"
 
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:59
@@ -2240,12 +2274,12 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:68
 msgid ""
-"Open a new <app>Terminal</app> tab or window to see how the custom shell or "
-"command executes."
+"Open a new <app>Pano Terminal</app> tab or window to see how the "
+"custom shell or command executes."
 msgstr ""
-"Öffnen Sie einen neuen Reiter in <app>Terminal</app> oder ein neues Fenster, "
-"um zu sehen, wie eine benutzerdefinierte Shell oder ein Befehl ausgeführt "
-"wird."
+"Öffnen Sie einen neuen Reiter in <app>Pano Terminal</app> oder ein "
+"neues Fenster, um zu sehen, wie eine benutzerdefinierte Shell oder ein "
+"Befehl ausgeführt wird."
 
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:73
@@ -2270,8 +2304,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-keyboard-access.page:30
-msgid "Navigate around <app>Terminal</app> menus using keyboard keys."
-msgstr "In den Menüs von <app>Terminal</app> mit der Tastatur arbeiten."
+msgid "Navigate around <app>Pano Terminal</app> menus using keyboard keys."
+msgstr "In den Menüs von <app>Pano Terminal</app> mit der Tastatur arbeiten."
 
 #. (itstool) path: page/title
 #: C/pref-keyboard-access.page:33
@@ -2290,25 +2324,26 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/pref-keyboard-access.page:39
 msgid ""
-"Right click in the <app>Terminal</app> window and select <gui style="
-"\"checkbox\">Show Menubar</gui> to display the menubar."
+"Right click in the <app>Pano Terminal</app> window and select <gui "
+"style=\"checkbox\">Show Menubar</gui> to display the menubar."
 msgstr ""
-"Klicken Sie mit der rechten Maustaste in das <app>Terminal</app>-Fenster und "
-"wählen Sie <gui style=\"checkbox\">Menüleiste anzeigen</gui>, um die "
-"Menüleiste anzuzeigen."
+"Klicken Sie mit der rechten Maustaste in das <app>Pano "
+"Terminal</app>-Fenster und wählen Sie <gui "
+"style=\"checkbox\">Menüleiste anzeigen</gui>, um die Menüleiste "
+"anzuzeigen."
 
 #. (itstool) path: page/p
 #: C/pref-keyboard-access.page:43
 msgid ""
-"You can navigate the <app>Terminal</app> menu using a combination of keys "
-"that are called <em>mnemonics</em> or a special key that takes you directly "
-"to the first menu in the menubar which is called the <em>menu accelerator "
-"key</em>."
+"You can navigate the <app>Pano Terminal</app> menu using a combination "
+"of keys that are called <em>mnemonics</em> or a special key that takes "
+"you directly to the first menu in the menubar which is called the "
+"<em>menu accelerator key</em>."
 msgstr ""
-"Sie können in dem Menü von <app>Terminal</app> mit einer Kombination von "
-"Tasten arbeiten, die <em>Mnemonic</em> genannt wird oder mit einer "
-"Sondertaste, welche sofort das erste Menü in der Menüleiste öffnet und "
-"<em>Menü-Tastenkürzel</em> genannt wird."
+"Sie können in dem Menü von <app>Pano Terminal</app> mit einer "
+"Kombination von Tasten arbeiten, die <em>Mnemonic</em> genannt wird "
+"oder mit einer Sondertaste, welche sofort das erste Menü in der "
+"Menüleiste öffnet und <em>Menü-Tastenkürzel</em> genannt wird."
 
 #. (itstool) path: section/title
 #: C/pref-keyboard-access.page:49
@@ -2318,14 +2353,15 @@ msgstr "Mnemonics"
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:51
 msgid ""
-"<app>Terminal</app> menu can be accessed by combining the <key>Alt</key> key "
-"and a letter of the menu item. The letter that you need to use to access the "
-"menu will be underlined when you hold down the <key>Alt</key>."
+"<app>Pano Terminal</app> menu can be accessed by combining the "
+"<key>Alt</key> key and a letter of the menu item. The letter that you "
+"need to use to access the menu will be underlined when you hold down "
+"the <key>Alt</key>."
 msgstr ""
-"Auf das <app>Terminal</app>-Menü können Sie mit einer Kombination aus "
-"<key>Alt</key> und einem Buchstaben des Menüeintrags zugreifen. Der "
-"Buchstabe für den Zugriff auf das Menü wird unterstrichen, sobald Sie die "
-"Taste <key>Alt</key> gedrückt halten."
+"Auf das <app>Pano Terminal</app>-Menü können Sie mit einer Kombination "
+"aus <key>Alt</key> und einem Buchstaben des Menüeintrags zugreifen. "
+"Der Buchstabe für den Zugriff auf das Menü wird unterstrichen, sobald "
+"Sie die Taste <key>Alt</key> gedrückt halten."
 
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:56
@@ -2382,8 +2418,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-login-shell.page:30
-msgid "Start a login shell in <app>Terminal</app>."
-msgstr "Eine Login-Shell in <app>Terminal</app> starten."
+msgid "Start a login shell in <app>Pano Terminal</app>."
+msgstr "Eine Login-Shell in <app>Pano Terminal</app> starten."
 
 #. (itstool) path: page/title
 #: C/pref-login-shell.page:33
@@ -2465,12 +2501,13 @@ msgstr "Eine Login-Shell starten"
 #. (itstool) path: section/p
 #: C/pref-login-shell.page:72
 msgid ""
-"You can allow <app>Terminal</app> to start a login shell. Your default shell "
-"will be started with a dash character prepended to its name."
+"You can allow <app>Pano Terminal</app> to start a login shell. Your "
+"default shell will be started with a dash character prepended to its "
+"name."
 msgstr ""
-"Sie können dem <app>Terminal</app> erlauben, eine Login-Shell zu starten. "
-"Ihre voreingestellte Shell wird mit einem dem Namen vorangestellten "
-"Bindestrich gestartet."
+"Sie können dem <app>Pano Terminal</app> erlauben, eine Login-Shell zu "
+"starten. Ihre voreingestellte Shell wird mit einem dem Namen "
+"vorangestellten Bindestrich gestartet."
 
 #. (itstool) path: item/p
 #: C/pref-login-shell.page:92
@@ -2508,11 +2545,11 @@ msgstr "So zeigen Sie die Menüleiste an:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:43
 msgid ""
-"Right click in <app>Terminal</app> and select <gui style=\"menuitem\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Show Menubar</gui>."
 msgstr ""
-"Klicken Sie mit der rechten Maustaste in das <app>Terminal</app> und wählen "
-"Sie <gui style=\"menuitem\">Menüleiste anzeigen</gui>."
+"Klicken Sie mit der rechten Maustaste in das <app>Pano Terminal</app> "
+"und wählen Sie <gui style=\"menuitem\">Menüleiste anzeigen</gui>."
 
 #. (itstool) path: page/p
 #: C/pref-menubar.page:48
@@ -2522,11 +2559,12 @@ msgstr "So verbergen Sie die Menüleiste:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:51
 msgid ""
-"Right click in <app>Terminal</app> and deselect <gui style=\"checkbox\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and deselect <gui "
+"style=\"checkbox\">Show Menubar</gui>."
 msgstr ""
-"Klicken Sie mit der rechten Maustaste in das <app>Terminal</app> und "
-"deaktivieren Sie <gui style=\"checkbox\">Menüleiste anzeigen</gui>."
+"Klicken Sie mit der rechten Maustaste in das <app>Pano Terminal</app> "
+"und deaktivieren Sie <gui style=\"checkbox\">Menüleiste "
+"anzeigen</gui>."
 
 #. (itstool) path: note/p
 #: C/pref-menubar.page:71
@@ -2549,12 +2587,14 @@ msgstr "Verwalten von Profilen"
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:40
+#, fuzzy
 msgid ""
-"A profile is a collection of <app>Terminal</app> settings. <app>Terminal</"
-"app> supports multiple profiles. You can configure <app>Terminal</app> "
-"profiles to <link xref=\"pref-custom-command\">run a custom command or "
-"shell</link>, set a profile exclusively to connect to remote computers using "
-"SSH or set a profile that launches a <app>GNU Screen</app> session."
+"A profile is a collection of <app>Pano Terminal</app> settings. "
+"<app>Pano Terminal</app> supports multiple profiles. You can configure "
+"<app>Pano Terminal</app> profiles to <link "
+"xref=\"pref-custom-command\">run a custom command or shell</link>, set "
+"a profile exclusively to connect to remote computers using SSH or set "
+"a profile that launches a <app>GNU Screen</app> session."
 msgstr ""
 "Ein Profil ist eine Sammlung von <app>Terminal</app>-Einstellungen. "
 "<app>Terminal</app> unterstützt mehrere Profile. Sie können <app>Terminal</"
@@ -2566,8 +2606,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:47
-msgid "The available <app>Terminal</app> settings include:"
-msgstr "Verfügbare <app>Terminal</app>-Einstellungen sind unter anderem:"
+msgid "The available <app>Pano Terminal</app> settings include:"
+msgstr "Verfügbare <app>Pano Terminal</app>-Einstellungen sind unter anderem:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:51
@@ -2601,15 +2641,15 @@ msgstr "Wählen Sie ein Profil aus"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:68
 msgid ""
-"If you have two or more profiles defined, you can change the profile in your "
-"current <app>Terminal</app> tab or window by selecting a profile from "
-"<guiseq><gui style=\"menu\">Terminal</gui> <gui style=\"menuitem\">Change "
-"Profile</gui></guiseq>."
+"If you have two or more profiles defined, you can change the profile "
+"in your current <app>Pano Terminal</app> tab or window by selecting a "
+"profile from <guiseq><gui style=\"menu\">Terminal</gui> <gui "
+"style=\"menuitem\">Change Profile</gui></guiseq>."
 msgstr ""
-"Sofern Sie mehrere Profile definiert haben, wechseln Sie das Profil Ihres "
-"aktuellen <app>Terminal</app>-Reiters oder -Fensters, indem Sie ein Profil "
-"unter <guiseq><gui style=\"menu\">Terminal</gui><gui style=\"menuitem"
-"\">Profil wechseln</gui></guiseq> auswählen."
+"Sofern Sie mehrere Profile definiert haben, wechseln Sie das Profil "
+"Ihres aktuellen <app>Pano Terminal</app>-Reiters oder -Fensters, indem "
+"Sie ein Profil unter <guiseq><gui style=\"menu\">Terminal</gui><gui "
+"style=\"menuitem\">Profil wechseln</gui></guiseq> auswählen."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:76
@@ -2619,10 +2659,11 @@ msgstr "Ein neues Profil anlegen"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:78
 msgid ""
-"To create a new profile with the default settings of <app>Terminal</app>:"
+"To create a new profile with the default settings of <app>Pano "
+"Terminal</app>:"
 msgstr ""
 "So legen Sie ein neues Profil mit den Vorgabe-Einstellungen von "
-"<app>Terminal</app> an:"
+"<app>Pano Terminal</app> an:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:83 C/pref-profiles.page:112 C/pref-profiles.page:162
@@ -2724,21 +2765,23 @@ msgstr "Ein Profil bearbeiten"
 #. (itstool) path: note/p
 #: C/pref-profiles.page:149
 msgid ""
-"If the default profile is edited, it cannot be restored to its original "
-"settings! If you have not already created any other <app>Terminal</app> "
-"profiles and have customized the default profile, <app>Terminal</app> "
-"<em>may</em> become unusable should any settings cause problems. It is "
-"recommended that you <link xref=\"#create-profile-from-existing\">create a "
-"copy of the default profile</link> then edit the copy to create a custom "
-"profile."
+"If the default profile is edited, it cannot be restored to its "
+"original settings! If you have not already created any other <app>Pano "
+"Terminal</app> profiles and have customized the default profile, "
+"<app>Pano Terminal</app> <em>may</em> become unusable should any "
+"settings cause problems. It is recommended that you <link "
+"xref=\"#create-profile-from-existing\">create a copy of the default "
+"profile</link> then edit the copy to create a custom profile."
 msgstr ""
 "Wenn das Standard-Profil bearbeitet wird, kann es nicht auf die "
-"ursprünglichen Einstellungen zurückgesetzt werden! Falls Sie kein anderes "
-"<app>Terminal</app>-Profil angelegt haben und das Standard-Profil verändert "
-"wurde, <em>könnte</em> <app>Terminal</app> unbrauchbar werden, falls einige "
-"Einstellungen Probleme verursachen. Es wird empfohlen, dass Sie <link xref="
-"\"#create-profile-from-existing\">eine Kopie des Standard-Profils erstellen</"
-"link> und dann die Kopie zum Erstellen eines angepassten Profils verwenden."
+"ursprünglichen Einstellungen zurückgesetzt werden! Falls Sie kein "
+"anderes <app>Pano Terminal</app>-Profil angelegt haben und das "
+"Standard-Profil verändert wurde, <em>könnte</em> <app>Pano "
+"Terminal</app> unbrauchbar werden, falls einige Einstellungen Probleme "
+"verursachen. Es wird empfohlen, dass Sie <link "
+"xref=\"#create-profile-from-existing\">eine Kopie des Standard-Profils "
+"erstellen</link> und dann die Kopie zum Erstellen eines angepassten "
+"Profils verwenden."
 
 #. (itstool) path: section/p
 #: C/pref-profiles.page:158
@@ -2763,45 +2806,48 @@ msgstr "Sobald das gewünschte Profil ausgewählt wurde, können Sie:"
 #. (itstool) path: item/p
 #: C/pref-profiles.page:175
 msgid ""
-"Select <link xref=\"app-fonts\">font</link>, <link xref=\"app-cursor"
-"\">cursor shapes</link> and <link xref=\"app-terminal-sizes\"><app>Terminal</"
-"app> size</link>."
+"Select <link xref=\"app-fonts\">font</link>, <link "
+"xref=\"app-cursor\">cursor shapes</link> and <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> size</link>."
 msgstr ""
-"Wählen Sie <link xref=\"app-fonts\">Schrift</link>, <link xref=\"app-cursor"
-"\">Form der Eingabemarke</link> und <link xref=\"app-terminal-sizes"
-"\"><app>Terminal</app>größe</link> aus."
+"Wählen Sie <link xref=\"app-fonts\">Schrift</link>, <link "
+"xref=\"app-cursor\">Form der Eingabemarke</link> und <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app>größe</link> aus."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:180
 msgid ""
-"You may also change behavior of <app>Terminal</app> on <link xref=\"pref-"
-"custom-exit\">command exit</link>, set a <link xref=\"pref-login-shell"
-"\">custom login shell</link> or change <link xref=\"pref-scrolling"
-"\">scrollbar preferences</link>."
+"You may also change behavior of <app>Pano Terminal</app> on <link "
+"xref=\"pref-custom-exit\">command exit</link>, set a <link "
+"xref=\"pref-login-shell\">custom login shell</link> or change <link "
+"xref=\"pref-scrolling\">scrollbar preferences</link>."
 msgstr ""
-"Passen Sie bei Bedarf das Verhalten von <app>Terminal</app> bei <link xref="
-"\"pref-custom-exit\">Befehlsende</link> an, legen Sie eine <link xref=\"pref-"
-"login-shell\">benutzerdefinierte Login-Shell</link> fest oder ändern Sie die "
-"<link xref=\"pref-scrolling\">Einstellungen der Bildlaufleiste</link>."
+"Passen Sie bei Bedarf das Verhalten von <app>Pano Terminal</app> bei "
+"<link xref=\"pref-custom-exit\">Befehlsende</link> an, legen Sie eine "
+"<link xref=\"pref-login-shell\">benutzerdefinierte Login-Shell</link> "
+"fest oder ändern Sie die <link xref=\"pref-scrolling\">Einstellungen "
+"der Bildlaufleiste</link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:186
 msgid ""
-"To change the <app>Terminal</app> background and text colors, see <link xref="
-"\"app-colors\"><app>Terminal</app> color schemes</link>."
+"To change the <app>Pano Terminal</app> background and text colors, see "
+"<link xref=\"app-colors\"><app>Pano Terminal</app> color "
+"schemes</link>."
 msgstr ""
-"Um den Hintergrund und Textfarben in <app>Terminal</app> zu ändern, lesen "
-"Sie bitte über <link xref=\"app-colors\">Farbschemata in <app>Terminal</"
-"app></link>."
+"Um den Hintergrund und Textfarben in <app>Pano Terminal</app> zu "
+"ändern, lesen Sie bitte über <link xref=\"app-colors\">Farbschemata in "
+"<app>Pano Terminal</app></link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:190
 msgid ""
-"Changes to profile are saved immediately. To return to <app>Terminal</app>, "
-"click <gui style=\"button\">Close</gui>."
+"Changes to profile are saved immediately. To return to <app>Pano "
+"Terminal</app>, click <gui style=\"button\">Close</gui>."
 msgstr ""
-"Änderungen werden sofort gespeichert. Klicken Sie auf <gui style=\"button"
-"\">Schließen</gui>, um zu <app>Terminal</app> zurückzukehren."
+"Änderungen werden sofort gespeichert. Klicken Sie auf <gui "
+"style=\"button\">Schließen</gui>, um zu <app>Pano Terminal</app> "
+"zurückzukehren."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:198
@@ -2890,18 +2936,20 @@ msgstr ""
 #. (itstool) path: section/p
 #: C/pref-profiles.page:265
 msgid ""
-"The default profile is used when <app>Terminal</app> could not otherwise "
-"decide which profile to use. For example, <app>Terminal</app> is started up "
-"freshly and opens its first terminal window. In contrast, when you use a "
-"menu entry or keyboard shortcut of <app>Terminal</app> to open a new "
-"terminal, the profile of the existing terminal is used."
+"The default profile is used when <app>Pano Terminal</app> could not "
+"otherwise decide which profile to use. For example, <app>Pano "
+"Terminal</app> is started up freshly and opens its first terminal "
+"window. In contrast, when you use a menu entry or keyboard shortcut of "
+"<app>Pano Terminal</app> to open a new terminal, the profile of the "
+"existing terminal is used."
 msgstr ""
-"Das voreingestellte Profil wird verwendet, wenn <app>Terminal</app> nicht "
-"anderweitig entscheiden konnte, welches Profil verwendet werden soll. Zum "
-"Beispiel, wenn <app>Terminal</app> neu startet und das erste Terminal-"
-"Fenster öffnet. Wenn Sie im Gegensatz dazu einen Menüeintrag oder ein "
-"Tastenkürzel in <app>Terminal</app> verwenden, um ein neues Terminal zu "
-"öffnen, wird das Profil des bestehenden Terminals übernommen."
+"Das voreingestellte Profil wird verwendet, wenn <app>Pano "
+"Terminal</app> nicht anderweitig entscheiden konnte, welches Profil "
+"verwendet werden soll. Zum Beispiel, wenn <app>Pano Terminal</app> neu "
+"startet und das erste Terminal-Fenster öffnet. Wenn Sie im Gegensatz "
+"dazu einen Menüeintrag oder ein Tastenkürzel in <app>Pano "
+"Terminal</app> verwenden, um ein neues Terminal zu öffnen, wird das "
+"Profil des bestehenden Terminals übernommen."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:277
@@ -2937,22 +2985,24 @@ msgstr "Zeichen sind zu schmal"
 #. (itstool) path: page/p
 #: C/pref-profile-char-width.page:30
 msgid ""
-"Some characters, such as some Greek letters and Asian logograms, can take up "
-"either one or two cells in a terminal window. These characters are often "
-"referred to as <em>ambiguous characters</em>. By default, these characters "
-"are displayed with a narrow width in <app>Terminal</app>, which looks better "
-"in situations where perfect layout is important, such as in ASCII art. You "
-"can change your profile preferences to display ambiguous characters as wide, "
-"which can be better if you are reading running prose."
+"Some characters, such as some Greek letters and Asian logograms, can "
+"take up either one or two cells in a terminal window. These characters "
+"are often referred to as <em>ambiguous characters</em>. By default, "
+"these characters are displayed with a narrow width in <app>Pano "
+"Terminal</app>, which looks better in situations where perfect layout "
+"is important, such as in ASCII art. You can change your profile "
+"preferences to display ambiguous characters as wide, which can be "
+"better if you are reading running prose."
 msgstr ""
-"Einige Zeichen, wie z.B. griechische Buchstaben und asiatische Logogramme, "
-"können entweder eine oder zwei Zellen in einem Terminal-Fenster belegen. "
-"Diese Zeichen werden oft als <em>mehrdeutige Zeichen</em> bezeichnet. Per "
-"Voreinstellung werden diese Zeichen mit schmaler Breite in <app>Terminal</"
-"app> dargestellt. In einigen Situationen sieht dies besser aus, z.B. bei "
-"ASCII-Kunst, die ein perfektes Layout erfordert. Beim Lesen von Fließtexten "
-"ist eine breite Darstellung der mehrdeutigen Zeichen jedoch häufig besser. "
-"Sie können die Profileinstellungen jederzeit Ihren Bedürfnissen anpassen."
+"Einige Zeichen, wie z.B. griechische Buchstaben und asiatische "
+"Logogramme, können entweder eine oder zwei Zellen in einem "
+"Terminal-Fenster belegen. Diese Zeichen werden oft als <em>mehrdeutige "
+"Zeichen</em> bezeichnet. Per Voreinstellung werden diese Zeichen mit "
+"schmaler Breite in <app>Pano Terminal</app> dargestellt. In einigen "
+"Situationen sieht dies besser aus, z.B. bei ASCII-Kunst, die ein "
+"perfektes Layout erfordert. Beim Lesen von Fließtexten ist eine breite "
+"Darstellung der mehrdeutigen Zeichen jedoch häufig besser. Sie können "
+"die Profileinstellungen jederzeit Ihren Bedürfnissen anpassen."
 
 #. (itstool) path: item/p
 #: C/pref-profile-char-width.page:48 C/pref-profile-encoding.page:46
@@ -3188,25 +3238,27 @@ msgstr "Fenster und Reiter"
 #. (itstool) path: note/p
 #: C/pref-tab-window.page:32
 msgid ""
-"This setting only applies when the <link xref=\"pref-menubar\">menubar is "
-"enabled</link>, or when <app>Terminal</app> is started from the command line "
-"and neither the <cmd>--tab</cmd> nor the <cmd>--window</cmd> options are "
-"passed."
+"This setting only applies when the <link xref=\"pref-menubar\">menubar "
+"is enabled</link>, or when <app>Pano Terminal</app> is started from "
+"the command line and neither the <cmd>--tab</cmd> nor the "
+"<cmd>--window</cmd> options are passed."
 msgstr ""
-"Diese Einstellung ist nur anwendbar, wenn die <link xref=\"pref-menubar"
-"\">Menüleiste aktiviert ist</link> oder das <app>Terminal</app> aus einer "
-"Befehlszeile gestartet wurde und als Optionen weder <cmd>--tab</cmd> noch "
-"<cmd>--window</cmd> übergeben wurden."
+"Diese Einstellung ist nur anwendbar, wenn die <link "
+"xref=\"pref-menubar\">Menüleiste aktiviert ist</link> oder das "
+"<app>Pano Terminal</app> aus einer Befehlszeile gestartet wurde und "
+"als Optionen weder <cmd>--tab</cmd> noch <cmd>--window</cmd> übergeben "
+"wurden."
 
 #. (itstool) path: page/p
 #: C/pref-tab-window.page:37
 msgid ""
-"You can choose whether to open a new tab or a new <app>Terminal</app> window "
-"when you use <gui style=\"menuitem\">New Terminal</gui>."
+"You can choose whether to open a new tab or a new <app>Pano "
+"Terminal</app> window when you use <gui style=\"menuitem\">New "
+"Terminal</gui>."
 msgstr ""
-"Entscheiden Sie, ob ein neuer Reiter oder ein neues <app>Terminal</app>-"
-"Fenster geöffnet werden soll, wenn Sie <gui style=\"menuitem\">Terminal "
-"öffnen</gui> wählen."
+"Entscheiden Sie, ob ein neuer Reiter oder ein neues <app>Pano "
+"Terminal</app>-Fenster geöffnet werden soll, wenn Sie <gui "
+"style=\"menuitem\">Terminal öffnen</gui> wählen."
 
 #. (itstool) path: steps/title
 #: C/pref-tab-window.page:41
@@ -3290,11 +3342,12 @@ msgstr "So verwenden Sie den schreibgeschützten Modus:"
 #. (itstool) path: item/p
 #: C/pref-user-input.page:37
 msgid ""
-"Right click in the <app>Terminal</app> window or press the menu button in "
-"the top-right corner of the window."
+"Right click in the <app>Pano Terminal</app> window or press the menu "
+"button in the top-right corner of the window."
 msgstr ""
-"Klicken Sie mit der rechten Maustaste in das <app>Terminal</app>-Fenster "
-"oder klicken Sie auf den Menüknopf in der rechten oberen Ecke des Fensters."
+"Klicken Sie mit der rechten Maustaste in das <app>Pano "
+"Terminal</app>-Fenster oder klicken Sie auf den Menüknopf in der "
+"rechten oberen Ecke des Fensters."
 
 #. (itstool) path: item/p
 #: C/pref-user-input.page:41
@@ -3315,30 +3368,30 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/prob-reset.page:24
 msgid ""
-"How do I recover my <app>Terminal</app> screen when it becomes stuck or has "
-"lot of strange symbols on it?"
+"How do I recover my <app>Pano Terminal</app> screen when it becomes "
+"stuck or has lot of strange symbols on it?"
 msgstr ""
-"Wie kann ich meinen <app>Terminal</app>-Bildschirm retten, wenn er "
-"eingefroren ist oder viele seltsame Symbole darauf erscheinen?"
+"Wie kann ich meinen <app>Pano Terminal</app>-Bildschirm retten, wenn "
+"er eingefroren ist oder viele seltsame Symbole darauf erscheinen?"
 
 #. (itstool) path: page/title
 #: C/prob-reset.page:28
-msgid "Reset your <app>Terminal</app> state"
-msgstr "Das <app>Terminal</app> zurücksetzen"
+msgid "Reset your <app>Pano Terminal</app> state"
+msgstr "Das <app>Pano Terminal</app> zurücksetzen"
 
 #. (itstool) path: page/p
 #: C/prob-reset.page:30
 msgid ""
-"After viewing a non-text file by mistake, or launching some command, it can "
-"happen the <app>Terminal</app> screen is unresponsive, has strange letters "
-"printed when you press keys. You can recover your <app>Terminal</app> in the "
-"following ways:"
+"After viewing a non-text file by mistake, or launching some command, "
+"it can happen the <app>Pano Terminal</app> screen is unresponsive, has "
+"strange letters printed when you press keys. You can recover your "
+"<app>Pano Terminal</app> in the following ways:"
 msgstr ""
 "Nach dem versehentlichen Betrachten einer Nicht-Text-Datei oder dem "
 "Ausführen eines Befehls kann es passieren, dass der Bildschirm von "
-"<app>Terminal</app> nicht mehr reagiert oder bei der Tastatureingabe "
-"seltsame Zeichen ausgegeben werden. Sie können <app>Terminal</app> auf eine "
-"der folgenden Arten wieder retten:"
+"<app>Pano Terminal</app> nicht mehr reagiert oder bei der "
+"Tastatureingabe seltsame Zeichen ausgegeben werden. Sie können "
+"<app>Pano Terminal</app> auf eine der folgenden Arten wieder retten:"
 
 #. (itstool) path: section/title
 #: C/prob-reset.page:36
@@ -3347,8 +3400,8 @@ msgstr "Zurücksetzen"
 
 #. (itstool) path: section/p
 #: C/prob-reset.page:38
-msgid "Reset <app>Terminal</app> screen."
-msgstr "<app>Terminal</app>-Bildschirm zurücksetzen."
+msgid "Reset <app>Pano Terminal</app> screen."
+msgstr "<app>Pano Terminal</app>-Bildschirm zurücksetzen."
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:42
@@ -3375,16 +3428,18 @@ msgstr "Zurücksetzen und löschen"
 #. (itstool) path: section/p
 #: C/prob-reset.page:56
 msgid ""
-"In addition to resetting your <app>Terminal</app>, <gui style=\"menuitem"
-"\">Reset and Clear</gui> clears the visible <app>Terminal</app> screen space "
-"and the scrollback contents. To <gui style=\"menuitem\">Reset and Clear</"
-"gui> your <app>Terminal</app>:"
+"In addition to resetting your <app>Pano Terminal</app>, <gui "
+"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Pano "
+"Terminal</app> screen space and the scrollback contents. To <gui "
+"style=\"menuitem\">Reset and Clear</gui> your <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"Zusätzlich zum Zurücksetzen Ihres <app>Terminals</app> können Sie mit <gui "
-"style=\"menuitem\">Zurücksetzen und löschen</gui> den sichtbaren "
-"<app>Terminal</app>-Bildschirmbereich und den Zeilenpuffer von sämtlicher "
-"Ausgabe löschen. So führen Sie <gui style=\"menuitem\">Zurücksetzen und "
-"löschen</gui> in Ihrem <app>Terminal</app> aus:"
+"Zusätzlich zum Zurücksetzen Ihres <app>Pano Terminal</app> können Sie "
+"mit <gui style=\"menuitem\">Zurücksetzen und löschen</gui> den "
+"sichtbaren <app>Pano Terminal</app>-Bildschirmbereich und den "
+"Zeilenpuffer von sämtlicher Ausgabe löschen. So führen Sie <gui "
+"style=\"menuitem\">Zurücksetzen und löschen</gui> in Ihrem <app>Pano "
+"Terminal</app> aus:"
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:63
@@ -3408,8 +3463,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/txt-copy-paste.page:29
-msgid "Copy and paste text in <app>Terminal</app>."
-msgstr "Text im <app>Terminal</app> kopieren und einfügen."
+msgid "Copy and paste text in <app>Pano Terminal</app>."
+msgstr "Text im <app>Pano Terminal</app> kopieren und einfügen."
 
 #. (itstool) path: page/title
 #: C/txt-copy-paste.page:33
@@ -3419,11 +3474,12 @@ msgstr "Kopieren und Einfügen"
 #. (itstool) path: page/p
 #: C/txt-copy-paste.page:35
 msgid ""
-"You can copy and paste text in <app>Terminal</app> in a similar way to other "
-"applications. However, the keyboard shortcuts differ."
+"You can copy and paste text in <app>Pano Terminal</app> in a similar "
+"way to other applications. However, the keyboard shortcuts differ."
 msgstr ""
-"Sie können Text im <app>Terminal</app> ähnlich wie in anderen Anwendungen "
-"kopieren und einfügen. Die Tastenkombinationen sind jedoch andere."
+"Sie können Text im <app>Pano Terminal</app> ähnlich wie in anderen "
+"Anwendungen kopieren und einfügen. Die Tastenkombinationen sind jedoch "
+"andere."
 
 #. (itstool) path: item/title
 #: C/txt-copy-paste.page:40
@@ -3466,13 +3522,14 @@ msgstr "<gui>Einfügen</gui>"
 #. (itstool) path: item/p
 #: C/txt-copy-paste.page:54
 msgid ""
-"Right click in the <app>Terminal</app> and select <gui style=\"menuitem"
-"\">Paste</gui>. Alternatively, you can press <keyseq><key>Shift</"
-"key><key>Ctrl</key><key>V</key></keyseq>."
+"Right click in the <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Paste</gui>. Alternatively, you can press "
+"<keyseq><key>Shift</key><key>Ctrl</key><key>V</key></keyseq>."
 msgstr ""
-"Klicken Sie mit der rechten Maustaste ins <app>Terminal</app> und wählen Sie "
-"<gui style=\"menuitem\">Einfügen</gui>. Alternativ können Sie "
-"<keyseq><key>Umschalt</key><key>Strg</key><key>V</key></keyseq> drücken."
+"Klicken Sie mit der rechten Maustaste ins <app>Pano Terminal</app> und "
+"wählen Sie <gui style=\"menuitem\">Einfügen</gui>. Alternativ können "
+"Sie <keyseq><key>Umschalt</key><key>Strg</key><key>V</key></keyseq> "
+"drücken."
 
 #. (itstool) path: note/p
 #: C/txt-copy-paste.page:62
@@ -3497,15 +3554,17 @@ msgstr "Verweise und E-Mail-Adressen"
 #. (itstool) path: page/p
 #: C/txt-links.page:32
 msgid ""
-"<app>Terminal</app> parses the terminal output and automatically detects "
-"snippets of text that are web addresses or email addresses. Web and email "
-"addresses are automatically highlighted when you point your cursor to the "
-"text, indicating that the link can be opened in an application."
+"<app>Pano Terminal</app> parses the terminal output and automatically "
+"detects snippets of text that are web addresses or email addresses. "
+"Web and email addresses are automatically highlighted when you point "
+"your cursor to the text, indicating that the link can be opened in an "
+"application."
 msgstr ""
-"<app>Terminal</app> analysiert die Ausgabe und erkennt automatisch "
-"Textstellen, die Web-Adressen oder E-Mail-Adressen sind. Diese werden "
-"automatisch hervorgehoben, wenn Sie mit dem Mauszeiger über den Text fahren, "
-"um anzuzeigen, dass Sie den Verweis in einer Anwendung öffnen können."
+"<app>Pano Terminal</app> analysiert die Ausgabe und erkennt "
+"automatisch Textstellen, die Web-Adressen oder E-Mail-Adressen sind. "
+"Diese werden automatisch hervorgehoben, wenn Sie mit dem Mauszeiger "
+"über den Text fahren, um anzuzeigen, dass Sie den Verweis in einer "
+"Anwendung öffnen können."
 
 #. (itstool) path: page/p
 #: C/txt-links.page:37
@@ -3540,9 +3599,10 @@ msgstr "So kopieren Sie einen Verweis:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:52
-msgid "Right click on the link in <app>Terminal</app>."
+msgid "Right click on the link in <app>Pano Terminal</app>."
 msgstr ""
-"Klicken Sie mit der rechten Maustaste auf den Verweis im <app>Terminal</app>."
+"Klicken Sie mit der rechten Maustaste auf den Verweis im <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:55
@@ -3585,10 +3645,10 @@ msgstr "So kopieren Sie eine E-Mail-Adresse:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:85
-msgid "Right click on the email address in <app>Terminal</app>."
+msgid "Right click on the email address in <app>Pano Terminal</app>."
 msgstr ""
 "Klicken Sie mit der rechten Maustaste auf die E-Mail-Adresse im "
-"<app>Terminal</app>."
+"<app>Pano Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:88
@@ -3613,8 +3673,8 @@ msgstr "Wählen Sie <gui style=\"menuitem\">E-Mail senden an …</gui> aus."
 
 #. (itstool) path: info/desc
 #: C/txt-search.page:29
-msgid "Search the <app>Terminal</app> output."
-msgstr "Die Ausgaben im <app>Terminal</app> durchsuchen."
+msgid "Search the <app>Pano Terminal</app> output."
+msgstr "Die Ausgaben im <app>Pano Terminal</app> durchsuchen."
 
 #. (itstool) path: page/title
 #: C/txt-search.page:33
@@ -3623,8 +3683,10 @@ msgstr "Nach Text suchen"
 
 #. (itstool) path: page/p
 #: C/txt-search.page:35
-msgid "You can search text in the <app>Terminal</app> output:"
-msgstr "So suchen Sie nach einem Text in der Ausgabe von <app>Terminal</app>:"
+msgid "You can search text in the <app>Pano Terminal</app> output:"
+msgstr ""
+"So suchen Sie nach einem Text in der Ausgabe von <app>Pano "
+"Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/txt-search.page:39
@@ -3674,15 +3736,17 @@ msgstr "<gui style=\"checkbox\">Nur vollständige Wörter berücksichtigen</gui>
 #. (itstool) path: item/p
 #: C/txt-search.page:61
 msgid ""
-"<app>Terminal</app> will look for the entire keyword and will ignore results "
-"that partially match your search keyword. For example, if you have searched "
-"for “cat”, <app>Terminal</app> will show only results that match this "
-"keyword exactly and omit results such as “bobcat”."
+"<app>Pano Terminal</app> will look for the entire keyword and will "
+"ignore results that partially match your search keyword. For example, "
+"if you have searched for “cat”, <app>Pano Terminal</app> will show "
+"only results that match this keyword exactly and omit results such as "
+"“bobcat”."
 msgstr ""
-"<app>Terminal</app> sucht nach dem vollständigen Suchbegriff und ignoriert "
-"Ergebnisse mit teilweiser Übereinstimmung. Wenn Sie zum Beispiel nach »Glas« "
-"suchen, so zeigt <app>Terminal</app> nur Ergebnisse an, die exakt mit dem "
-"Suchbegriff übereinstimmen und ignoriert Ergebnisse wie z.B. »Fensterglas«."
+"<app>Pano Terminal</app> sucht nach dem vollständigen Suchbegriff und "
+"ignoriert Ergebnisse mit teilweiser Übereinstimmung. Wenn Sie zum "
+"Beispiel nach »Glas« suchen, so zeigt <app>Pano Terminal</app> nur "
+"Ergebnisse an, die exakt mit dem Suchbegriff übereinstimmen und "
+"ignoriert Ergebnisse wie z.B. »Fensterglas«."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:68
@@ -3692,13 +3756,14 @@ msgstr "<gui style=\"checkbox\">Als regulären Ausdruck verarbeiten</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:69
 msgid ""
-"You can use regular expression patterns, also known as regex patterns, in "
-"your search keywords. <app>Terminal</app> will display the results that "
-"match these search terms."
+"You can use regular expression patterns, also known as regex patterns, "
+"in your search keywords. <app>Pano Terminal</app> will display the "
+"results that match these search terms."
 msgstr ""
-"Sie können in Ihrem Suchbegriff Muster mit regulären Ausdrücken verwenden, "
-"die auch als Regex-Muster bekannt sind. <app>Terminal</app> zeigt die "
-"Ergebnisse an, die diesen Suchbegriffen entsprechen."
+"Sie können in Ihrem Suchbegriff Muster mit regulären Ausdrücken "
+"verwenden, die auch als Regex-Muster bekannt sind. <app>Pano "
+"Terminal</app> zeigt die Ergebnisse an, die diesen Suchbegriffen "
+"entsprechen."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:74
@@ -3710,23 +3775,26 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/txt-search.page:75
 msgid ""
-"<app>Terminal</app> searches from your current location in the scrollback to "
-"the end of available terminal output and then restarts the search."
+"<app>Pano Terminal</app> searches from your current location in the "
+"scrollback to the end of available terminal output and then restarts "
+"the search."
 msgstr ""
-"<app>Terminal</app> sucht ab der aktuellen Position im Zeilenspeicher bis "
-"zum Ende der verfügbaren Terminalausgabe und beginnt dann die Suche wieder "
-"von oben."
+"<app>Pano Terminal</app> sucht ab der aktuellen Position im "
+"Zeilenspeicher bis zum Ende der verfügbaren Terminalausgabe und "
+"beginnt dann die Suche wieder von oben."
 
 #. (itstool) path: note/p
 #: C/txt-search.page:82
 msgid ""
-"If you expect to work with a lot of <app>Terminal</app> output, increase the "
-"<link xref=\"pref-scrolling#lines\">scrollback lines</link> to a higher "
-"limit to allow <app>Terminal</app> to search further back."
+"If you expect to work with a lot of <app>Pano Terminal</app> output, "
+"increase the <link xref=\"pref-scrolling#lines\">scrollback "
+"lines</link> to a higher limit to allow <app>Pano Terminal</app> to "
+"search further back."
 msgstr ""
-"Wenn Sie mit einer längeren Ausgabe in <app>Terminal</app> rechnen, so "
-"vergrößern Sie den <link xref=\"pref-scrolling#lines\">Zeilenspeicher</"
-"link>, um mit <app>Terminal</app> weiter zurück suchen zu können."
+"Wenn Sie mit einer längeren Ausgabe in <app>Pano Terminal</app> "
+"rechnen, so vergrößern Sie den <link "
+"xref=\"pref-scrolling#lines\">Zeilenspeicher</link>, um mit <app>Pano "
+"Terminal</app> weiter zurück suchen zu können."
 
 #. (itstool) path: credit/years
 #: C/txt-select-text.page:20
@@ -3789,13 +3857,13 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/txt-select-text.page:51
 msgid ""
-"If you are running an application in <app>Terminal</app> which accepts mouse "
-"input, you need to use the <key>Shift</key> modifier for the <app>Terminal</"
-"app> to catch the mouse input."
+"If you are running an application in <app>Pano Terminal</app> which "
+"accepts mouse input, you need to use the <key>Shift</key> modifier for "
+"the <app>Pano Terminal</app> to catch the mouse input."
 msgstr ""
-"Wenn Sie im <app>Terminal</app> eine Anwendung starten, die Mauseingaben "
-"annimmt, müssen Sie die <key>Umschalt</key>-Taste verwenden, damit das "
-"<app>Terminal</app> die Mauseingabe abfängt."
+"Wenn Sie im <app>Pano Terminal</app> eine Anwendung starten, die "
+"Mauseingaben annimmt, müssen Sie die <key>Umschalt</key>-Taste "
+"verwenden, damit das <app>Pano Terminal</app> die Mauseingabe abfängt."
 
 #~ msgid ""
 #~ "Select <guiseq><gui style=\"menu\">Edit</gui> <gui style=\"menuitem"

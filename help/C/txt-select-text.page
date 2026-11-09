@@ -48,9 +48,9 @@
   </terms>
 
   <note style="tip">
-    <p>If you are running an application in <app>Terminal</app> which accepts
+    <p>If you are running an application in <app>Pano Terminal</app> which accepts
     mouse input, you need to use the <key>Shift</key> modifier for the
-    <app>Terminal</app> to catch the mouse input.</p>
+    <app>Pano Terminal</app> to catch the mouse input.</p>
   </note>
 
 </page>

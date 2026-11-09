@@ -30,11 +30,11 @@
 
 <note style="tip">
   <p>This setting only applies when the <link xref="pref-menubar">menubar is
-  enabled</link>, or when <app>Terminal</app> is started from the command line and
+  enabled</link>, or when <app>Pano Terminal</app> is started from the command line and
   neither the <cmd>--tab</cmd> nor the <cmd>--window</cmd> options are passed.</p>
 </note>
 
-  <p>You can choose whether to open a new tab or a new <app>Terminal</app>
+  <p>You can choose whether to open a new tab or a new <app>Pano Terminal</app>
   window when you use <gui style="menuitem">New Terminal</gui>.</p>
 
   <steps>

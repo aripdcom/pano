@@ -180,7 +180,7 @@ init_server (int argc,
     chdir ("/");
 #pragma GCC diagnostic pop
 
-  g_set_prgname ("gnome-terminal-server");
+  g_set_prgname ("pano-terminal-server");
   g_set_application_name (_("Terminal"));
 
   gs_free_option_context auto context = g_option_context_new(nullptr);

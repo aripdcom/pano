@@ -51,7 +51,7 @@
 #include "terminal-version.hh"
 #include "terminal-libgsystem.hh"
 
-#define GNOME_TERMINAL_ISSUE_URL "https://gitlab.gnome.org/GNOME/gnome-terminal/issues"
+#define PANO_ISSUE_URL "https://github.com/aripdcom/pano/issues"
 
 static void
 response_cb(GtkWindow* window,
@@ -160,9 +160,9 @@ terminal_util_show_help (GtkWindow *transient_parent,
   gs_free char *uri;
 
   if (topic) {
-    uri = g_strdup_printf ("help:gnome-terminal/%s", topic);
+    uri = g_strdup_printf ("help:pano-terminal/%s", topic);
   } else {
-    uri = g_strdup ("help:gnome-terminal");
+    uri = g_strdup ("help:pano-terminal");
   }
 
   if (!open_url (nullptr, uri, GDK_CURRENT_TIME, &error))
@@ -173,7 +173,7 @@ terminal_util_show_help (GtkWindow *transient_parent,
 }
 
 #define ABOUT_GROUP "About"
-#define ABOUT_URL "https://wiki.gnome.org/Apps/Terminal"
+#define ABOUT_URL "https://pano.aripd.com"
 #define EMAILIFY(string) (g_strdelimit ((string), "%", '@'))
 
 void
@@ -185,7 +185,8 @@ terminal_util_show_about (void)
     "Copyright © 2006 Guilherme de S. Pastore\n"
     "Copyright © 2007–2024 Christian Persch\n"
     "Copyright © 2013–2019 Egmont Koblinger\n"
-    "Copyright © 2023 Christian Hergert";
+    "Copyright © 2023 Christian Hergert\n"
+    "Copyright © 2026 aripdcem";
   char *licence_text;
   GKeyFile *key_file;
   GBytes *bytes;
@@ -243,16 +244,7 @@ terminal_util_show_about (void)
 
   licence_text = terminal_util_get_licence_text ();
 
-  /* gnome 46 corresponds to g-t 4.0.x. After that, gnome version
-   * increases by 1 while the g-t minor version increases by 2 between
-   * stable releases.
-   */
-  auto const gnome_version =
-    46 + ((TERMINAL_MAJOR_VERSION > 3) ? ((TERMINAL_MINOR_VERSION + 1) / 2) : 0);
-
-  version = g_strdup_printf (_("Version %s for GNOME %d"),
-                             VERSION,
-                             gnome_version);
+  version = g_strdup (VERSION);
 
   vte_version = g_strdup_printf (_("Using VTE version %u.%u.%u"),
                                  vte_get_major_version (),
@@ -267,7 +259,7 @@ terminal_util_show_about (void)
   dialog = (GtkWindow*)g_object_new (ADW_TYPE_ABOUT_WINDOW,
                          /* Hold the application while the window is shown */
                          "application", terminal_app_get (),
-                         "application-name", _("GNOME Terminal"),
+                         "application-name", "Pano Terminal",
                          "copyright", copyright,
                          "comments", comment,
                          "version", version,
@@ -277,8 +269,8 @@ terminal_util_show_about (void)
                          "license", licence_text,
                          "website", ABOUT_URL,
                          "translator-credits", _("translator-credits"),
-                         "application-icon", GNOME_TERMINAL_ICON_NAME,
-                         "issue-url", GNOME_TERMINAL_ISSUE_URL,
+                         "application-icon", PANO_ICON_NAME,
+                         "issue-url", PANO_ISSUE_URL,
                          nullptr);
 
   gtk_window_present (dialog);
@@ -405,16 +397,16 @@ char *
 terminal_util_get_licence_text (void)
 {
   const gchar *license[] = {
-    N_("GNOME Terminal is free software: you can redistribute it and/or modify "
+    N_("Pano Terminal is free software: you can redistribute it and/or modify "
        "it under the terms of the GNU General Public License as published by "
        "the Free Software Foundation, either version 3 of the License, or "
        "(at your option) any later version."),
-    N_("GNOME Terminal is distributed in the hope that it will be useful, "
+    N_("Pano Terminal is distributed in the hope that it will be useful, "
        "but WITHOUT ANY WARRANTY; without even the implied warranty of "
        "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "
        "GNU General Public License for more details."),
     N_("You should have received a copy of the GNU General Public License "
-       "along with GNOME Terminal.  If not, see &lt;http://www.gnu.org/licenses/&gt;.")
+       "along with Pano Terminal.  If not, see &lt;http://www.gnu.org/licenses/&gt;.")
   };
 
   return g_strjoin ("\n\n", _(license[0]), _(license[1]), _(license[2]), nullptr);
@@ -1105,7 +1097,7 @@ terminal_util_timestamp_info (const char *str)
     num /= 1000;
 
   /* Fun: use inclusive interval so you can right-click on these numbers
-   * right here and check the human-readable time in gnome-terminal.
+   * right here and check the human-readable time in Pano.
    * (They're Sep 9 2001 and Nov 20 2286 by the way.) */
   if (num < 1000000000 || num > 9999999999)
     return nullptr;
@@ -1122,7 +1114,7 @@ terminal_util_timestamp_info (const char *str)
  * @uri: The URI to verify and maybe fixup
  * @error: a #GError that is returned in case of errors
  *
- * Checks if gnome-terminal should attempt to handle the given URI,
+ * Checks if Pano should attempt to handle the given URI,
  * and rewrites if necessary.
  *
  * Currently URIs of "file://some-other-host/..." are refused because
@@ -1133,7 +1125,7 @@ terminal_util_timestamp_info (const char *str)
  * avoid potential confusion around short hostname vs. fqdn, and to
  * work around bug 781800 (LibreOffice bug 107461).
  *
- * Returns: The possibly rewritten URI if gnome-terminal should attempt
+ * Returns: The possibly rewritten URI if Pano should attempt
  *   to handle it, nullptr if it should refuse to handle.
  */
 char *
@@ -1233,7 +1225,7 @@ char *terminal_util_hyperlink_uri_label (const char *uri)
   return g_utf8_make_valid (unesc, -1);
 }
 
-#define TERMINAL_CACHE_DIR                 "gnome-terminal"
+#define TERMINAL_CACHE_DIR                 "pano-terminal"
 #define TERMINAL_PRINT_SETTINGS_FILENAME   "print-settings.ini"
 #define TERMINAL_PRINT_SETTINGS_GROUP_NAME "Print Settings"
 #define TERMINAL_PAGE_SETUP_GROUP_NAME     "Page Setup"

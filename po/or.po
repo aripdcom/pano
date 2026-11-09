@@ -148,7 +148,8 @@ msgid "Wait until the child exits"
 msgstr "ତଳ ସ୍ତର ପ୍ରସ୍ଥାନ କଲା ପର୍ଯ୍ୟନ୍ତ ଅପେକ୍ଷା କରନ୍ତୁ"
 
 #: ../src/client.c:391
-msgid "GNOME Terminal Client"
+#, fuzzy
+msgid "Pano Terminal Client"
 msgstr "GNOME ଟର୍ମିନାଲ କ୍ଲାଏଣ୍ଟ"
 
 #: ../src/client.c:395
@@ -1502,11 +1503,13 @@ msgid "Current Locale"
 msgstr "ପ୍ରଚଳିତ ଲୋକେଲ"
 
 #: ../src/terminal-nautilus.c:463
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "ସୁଦୂର ଟର୍ମିନାଲରେ ଖୋଲନ୍ତୁ (_R)"
 
 #: ../src/terminal-nautilus.c:465
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "ସ୍ଥାନିୟ ଟର୍ମିନାଲରେ ଖୋଲନ୍ତୁ (_L)"
 
 #: ../src/terminal-nautilus.c:469 ../src/terminal-nautilus.c:480
@@ -1519,11 +1522,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "ବର୍ତ୍ତମାନ ଖୋଲାହୋଇଥିବା ଫୋଲଡରକୁ ଟର୍ମିନାଲରେ ଖୋଲନ୍ତୁ"
 
 #: ../src/terminal-nautilus.c:477 ../src/terminal-nautilus.c:491
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "ଟର୍ମିନାଲରେ ଖୋଲନ୍ତୁ (_e)"
 
 #: ../src/terminal-nautilus.c:488
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "ଟର୍ମିନାଲ ଖୋଲନ୍ତୁ (_e)"
 
 #: ../src/terminal-nautilus.c:489
@@ -1558,12 +1563,14 @@ msgstr "ଟର୍ମିନାଲ ଫାଇଲ ପରିଚାଳକ ମଧ୍ଯ
 
 #: ../src/terminal-options.c:224
 #, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
 msgstr ""
-"ବିକଳ୍ପ \"%s\" ବର୍ତ୍ତମାନ gnome-terminal ର ଏହି ସଂସ୍କରଣରେ ସହାୟତାପ୍ରାପ୍ତ ନୁହଁ।"
+"ବିକଳ୍ପ \"%s\" ବର୍ତ୍ତମାନ Pano Terminal ର ଏହି ସଂସ୍କରଣରେ ସହାୟତାପ୍ରାପ୍ତ "
+"ନୁହଁ।"
 
 #: ../src/terminal-options.c:235 ../src/terminal-util.c:234
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME ଟର୍ମିନାଲ"
 
 #: ../src/terminal-options.c:275
@@ -1655,11 +1662,13 @@ msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
 #: ../src/terminal-options.c:1442 ../src/terminal-options.c:1448
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "GNOME ଟର୍ମିନାଲ ଯାନ୍ତ୍ରାନୁକାରୀ"
 
 #: ../src/terminal-options.c:1449
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "GNOME ଟର୍ମିନାଲ ବିକଳ୍ପଗୁଡ଼ିକୁ ଦର୍ଶାନ୍ତୁ"
 
 #: ../src/terminal-options.c:1459
@@ -1784,35 +1793,35 @@ msgstr "ଠିକଣା “%s”କୁ ଖୋଲି ହେଲା ନାହିଁ
 
 #: ../src/terminal-util.c:391
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 
 #: ../src/terminal-util.c:395
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 
 #: ../src/terminal-util.c:399
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and

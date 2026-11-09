@@ -18,7 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <node>
-  <interface name="org.gnome.Terminal.Factory0">
+  <interface name="com.aripd.Pano.Factory0">
     <annotation name="org.gtk.GDBus.C.Name" value="Factory" />
     <method name="CreateInstance">
       <arg type="a{sv}" name="options" direction="in" />
@@ -26,7 +26,7 @@
     </method>
   </interface>
 
-  <interface name="org.gnome.Terminal.Terminal0">
+  <interface name="com.aripd.Pano.Terminal0">
     <annotation name="org.gtk.GDBus.C.Name" value="Receiver" />
     <method name="Exec">
       <annotation name="org.gtk.GDBus.C.UnixFD" value="true" />

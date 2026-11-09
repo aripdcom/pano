@@ -26,19 +26,19 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Change the <app>Terminal</app> window size.</desc>
+    <desc>Change the <app>Pano Terminal</app> window size.</desc>
 
   </info>
 
-  <title><app>Terminal</app> sizes</title>
+  <title><app>Pano Terminal</app> sizes</title>
 
   <p>If you work with certain command line applications that have minimum
   terminal size requirements in order to display correctly, or if you want to
   view long lines of terminal output with minimal line breaks on your
-  display, you may require <app>Terminal</app> windows to be of a particular
+  display, you may require <app>Pano Terminal</app> windows to be of a particular
   size.</p>
 
-  <p>You can change the <app>Terminal</app> window size to some preset
+  <p>You can change the <app>Pano Terminal</app> window size to some preset
   values:</p>
   
   <steps>
@@ -69,11 +69,11 @@
     <p>If you have enabled <link xref="pref-keyboard-access"><gui>Menu access
     keys</gui></link>, you can access this menu by pressing
     <keyseq><key>Alt</key><key>T</key></keyseq> and then pressing <key>1</key>
-    to switch the <app>Terminal</app> window to size <gui>80×24</gui> and so
+    to switch the <app>Pano Terminal</app> window to size <gui>80×24</gui> and so
     on.</p>
   </note>
 
-  <p>If you require custom size <app>Terminal</app> windows, you can also set
+  <p>If you require custom size <app>Pano Terminal</app> windows, you can also set
   the default window size according to your requirements:</p>
 
   <steps>

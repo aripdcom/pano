@@ -1941,8 +1941,10 @@ msgstr ""
 "\": %s\n"
 
 #: ../src/terminal-profile.c:1813
-#, c-format
-msgid "GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+#, fuzzy, c-format
+msgid ""
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 "Gërma me emrin \"%s\" e përcaktuar në databazën e konfigurimit të terminalit "
 "GNOME nuk është e vlefshme\n"
@@ -2295,11 +2297,12 @@ msgid "Close All _Tabs"
 msgstr "Mbyll të Gjitha _Skedat"
 
 #: ../src/terminal-window.c:2871
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "Terminali i GNOME është program i lirë; ju mund t'a rishpërndani dhe/ose "
 "ndryshoni atë sipas kushteve të Liçencës Publike të Përgjithshme GNU sikurse "
@@ -2308,11 +2311,12 @@ msgstr ""
 
 # (pofilter) acronyms: acronyms should not be translated: WITHOUT, ANY, WARRANTY, MERCHANTABILITY, FITNESS, FOR, PARTICULAR, PURPOSE
 #: ../src/terminal-window.c:2875
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Terminali i GNOME shpërndahet me dëshirën që të jetë i vlefshëm për ju, por "
 "PA ASNJË LLOJ GARANCIE; pa garancinë preçize të SHITJES apo PËRDORIMIT PËR "
@@ -2321,17 +2325,20 @@ msgstr ""
 
 # (pofilter) sentencecount: The number of sentences differ: 1 versus 2
 #: ../src/terminal-window.c:2879
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 "
-"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 "Së bashku me Terminalin GNOME duhet të keni marrë edhe një kopje të Liçencës "
 "Publike të Përgjithshme GNU. Nëse jo, kërkoje tek Free Software Foundation, "
 "Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 
 #: ../src/terminal-window.c:2889
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Terminali i GNOME"
 
 #: ../src/terminal-window.c:2891
@@ -2706,11 +2713,13 @@ msgid "Set the last specified tab as the active one in its window"
 msgstr "Zgjidh si aktiv në dritaren e tij skedën e fundit të specifikuar"
 
 #: ../src/terminal.c:3574 ../src/terminal.c:3577
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Emulator i terminalit GNOME"
 
 #: ../src/terminal.c:3578
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Shfaq opsionet e terminalit GNOME"
 
 # (pofilter) singlequoting: checks whether singlequoting is consistent between the two strings

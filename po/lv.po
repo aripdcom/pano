@@ -109,9 +109,11 @@ msgid "org.gnome.Terminal.desktop"
 msgstr "org.gnome.Terminal.desktop"
 
 #: data/org.gnome.Terminal.metainfo.xml.in:41
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "GNOME terminālis ir termināļa emulācijas lietotne, lai piekļūtu UNIX čaulas "
 "videi, ko var izmantot, lai palaist sistēmā pieejamās programmas."
@@ -1879,11 +1881,13 @@ msgid "_Contents"
 msgstr "_Saturs"
 
 #: src/terminal-nautilus.cc:542
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Atvē_rt attālinātā terminālī"
 
 #: src/terminal-nautilus.cc:544
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Atvērt vietējā terminā_lī"
 
 #: src/terminal-nautilus.cc:548 src/terminal-nautilus.cc:559
@@ -1895,11 +1899,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Atvērt pašlaik atvērto mapi terminālī"
 
 #: src/terminal-nautilus.cc:556
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Atvērt t_erminālī"
 
 #: src/terminal-nautilus.cc:566
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Atvērt t_ermināli"
 
 #: src/terminal-nautilus.cc:567
@@ -1913,11 +1919,11 @@ msgstr "Aizvērt terminā_li"
 #: src/terminal-options.cc:307
 #, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
-"Opcija “%s” ir novecojusi un tā varētu tikt izņemta nākamajā gnome-terminal "
-"versijā."
+"Opcija “%s” ir novecojusi un tā varētu tikt izņemta nākamajā Pano "
+"Terminal versijā."
 
 #. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
 #: src/terminal-options.cc:318
@@ -1931,8 +1937,8 @@ msgstr ""
 
 #: src/terminal-options.cc:328 src/terminal-options.cc:341
 #, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
-msgstr "Šī gnome-terminal versija vairs neatbalsta opciju “%s”."
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
+msgstr "Šī Pano Terminal versija vairs neatbalsta opciju “%s”."
 
 #: src/terminal-options.cc:413
 #, c-format
@@ -2123,11 +2129,13 @@ msgid "COMMAND"
 msgstr "KOMANDA"
 
 #: src/terminal-options.cc:1654
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "GNOME terminālis"
 
 #: src/terminal-options.cc:1655
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Rādīt GNOME termināļa opcijas"
 
 #: src/terminal-options.cc:1665
@@ -2301,7 +2309,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Termināļa emulators GNOME darbvirsmai"
 
 #: src/terminal-util.cc:247
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME terminālis"
 
 #: src/terminal-util.cc:257
@@ -2317,30 +2326,32 @@ msgstr "Nevarēja atvērt adresi “%s”"
 
 #: src/terminal-util.cc:401
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
-"GNOME Terminal ir brīva programmatūra — jūs varat to izplatīt citiem un "
-"mainīt, ievērojot GNU General Public License, ko publicējis Free Software "
-"Foundation, noteikumus, tās trešajā vai vēlākā versijā (pēc izvēles)."
+"Pano Terminal ir brīva programmatūra — jūs varat to izplatīt citiem un "
+"mainīt, ievērojot GNU General Public License, ko publicējis Free "
+"Software Foundation, noteikumus, tās trešajā vai vēlākā versijā (pēc "
+"izvēles)."
 
 #: src/terminal-util.cc:405
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
-"GNOME Terminal tiek izplatīts cerībā, ka būs noderīgs, bet BEZ JEBKĀDAS "
+"Pano Terminal tiek izplatīts cerībā, ka būs noderīgs, bet BEZ JEBKĀDAS "
 "GARANTIJAS. Pat bez netiešas garantijas, ka tas būs izmantojams kādam "
 "mērķim. Vairāk informācijas lasiet GNU General Public License."
 
 #: src/terminal-util.cc:409
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Jums vajadzēja saņemt GNU Vispārējo Publisko Licenci ar GNOME termināli. Ja "
 "nē, skatiet <http://www.gnu.org/licenses/>."

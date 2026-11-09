@@ -34,9 +34,11 @@ msgid "Use the command line"
 msgstr "ប្រើ​បន្ទាត់​ពាក្យបញ្ជា"
 
 #: ../gnome-terminal.appdata.xml.in.h:3
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "ស្ថានីយ GNOME គឺជា​ស្ថានីយ​កម្មវិធី​និម្មិត​សម្រាប់​ចូល​ដំណើរការ​បរិស្ថាន "
 "UNIX សែល ដែល​អាច​ត្រូវ​បាន​ប្រើ​ដើម្បី​ដំណើរការ​កម្មវិធី​ដែល​មាន​នៅ​លើ​ប្រព័"
@@ -171,7 +173,8 @@ msgid "Wait until the child exits"
 msgstr "រង់ចាំ​រហូត​ដល់​កូន​ចេញ"
 
 #: ../src/client.c:391
-msgid "GNOME Terminal Client"
+#, fuzzy
+msgid "Pano Terminal Client"
 msgstr "ម៉ាស៊ីន​កូន​ស្ថានីយ GNOME"
 
 #: ../src/client.c:395
@@ -1537,11 +1540,13 @@ msgid "Current Locale"
 msgstr "Locale បច្ចុប្បន្ន"
 
 #: ../src/terminal-nautilus.c:600
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "បើក​នៅ​ក្នុង​ស្ថានីយ​ពីចម្ងាយ"
 
 #: ../src/terminal-nautilus.c:602
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "បើក​នៅ​ក្នុង​ស្ថានីយ​មូលដ្ឋាន"
 
 #: ../src/terminal-nautilus.c:606 ../src/terminal-nautilus.c:617
@@ -1554,11 +1559,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "បើក​ថត​ដែល​បើក​បច្ចុប្បន្ន​នៅ​ក្នុង​ស្ថានីយ"
 
 #: ../src/terminal-nautilus.c:614 ../src/terminal-nautilus.c:628
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "បើក​នៅ​ក្នុង​ស្ថានីយ"
 
 #: ../src/terminal-nautilus.c:625
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "បើក​ស្ថានីយ"
 
 #: ../src/terminal-nautilus.c:626
@@ -1594,12 +1601,13 @@ msgid "Open the terminal file manager Midnight Commander"
 msgstr "បើក​កម្មវិធី​គ្រប់គ្រង​ឯកសារ​ស្ថានីយ Midnight Commander"
 
 #: ../src/terminal-options.c:224 ../src/terminal-options.c:237
-#, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
 msgstr "ជម្រើស \"%s\" មិន​គាំទ្រ​នៅ​ក្នុង​កំណែ​ស្ថានីយ​ gnome នេះ​ទៀត​ទេ។"
 
 #: ../src/terminal-options.c:249 ../src/terminal-util.c:217
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "ស្ថានីយ GNOME"
 
 #: ../src/terminal-options.c:289
@@ -1691,11 +1699,13 @@ msgid "PROFILE-NAME"
 msgstr "ឈ្មោះ​ទម្រង់"
 
 #: ../src/terminal-options.c:1269 ../src/terminal-options.c:1275
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "វត្ថុ​ត្រាប់តាម​ស្ថានីយ GNOME"
 
 #: ../src/terminal-options.c:1276
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "បង្ហាញ​ជម្រើស​ស្ថានីយ GNOME"
 
 #: ../src/terminal-options.c:1286
@@ -1821,16 +1831,17 @@ msgid "Could not open the address “%s”"
 msgstr "មិន​អាច​បើក​អាសយដ្ឋាន “%s”"
 
 #: ../src/terminal-util.c:369
+#, fuzzy
 #| msgid ""
 #| "GNOME Terminal is free software; you can redistribute it and/or modify it "
 #| "under the terms of the GNU General Public License as published by the "
 #| "Free Software Foundation; either version 3 of the License, or (at your "
 #| "option) any later version."
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "ស្ថានីយ GNOME គឺជា​កម្មវិធី​ឥត​គិត​ថ្លៃ៖ អ្នក​អាច​ចែកចាយ​បន្ត "
 "និង/ឬ​កែប្រែ​វា​ដោយ​ស្ថិតនៅ​ក្រោម​លក្ខខណ្ឌ​អាជ្ញាប័ណ្ណ​សាធារណៈ​ទូទៅ GNU "
@@ -1838,11 +1849,12 @@ msgstr ""
 "(តាម​ជម្រើស​​របស់​អ្នក) កំណែ​ក្រោយ​ណាមួយ​ទៀត។"
 
 #: ../src/terminal-util.c:373
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "ស្ថានីយ GNOME ត្រូវ​បាន​ចែកចាយ​ដោយ​សង្ឃឹម​ថា​នឹង​មាន​ប្រយោជន៍ "
 "ប៉ុន្តែ​មិន​មាន​ការ​ធានា​ណាមួយ​ឡើយ សូម្បី​​ការ​ធានា​អំពី​ការ​ធ្វើ​អាជីវកម្ម "
@@ -1850,13 +1862,14 @@ msgstr ""
 "សូម​មើល​អាជ្ញាប័ណ្ណ​សាធារណៈ​ទូទៅ GNU ។"
 
 #: ../src/terminal-util.c:377
+#, fuzzy
 #| msgid ""
 #| "You should have received a copy of the GNU General Public License along "
 #| "with GNOME Terminal; if not, write to the Free Software Foundation, Inc., "
 #| "51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "អ្នក​គួរតែ​ទទួល​បាន​ច្បាប់​ចម្លង​អាជ្ញាប័ណ្ណ​សាធារណៈ​ទូទៅ GNU "
 "ដែល​ជាប់​មក​ជាមួយ​ស្ថានីយ GNOME ។ ប្រសិនបើ​មិន​បាន​ទទួល​ទេ សូម​ចូល​ទៅ "

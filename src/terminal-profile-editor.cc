@@ -1178,7 +1178,7 @@ terminal_profile_editor_class_init (TerminalProfileEditorClass *klass)
   gtk_widget_class_install_action (widget_class, "compatibility.reset", nullptr, terminal_profile_editor_reset_compatibility);
   gtk_widget_class_install_action (widget_class, "profile.select-custom-font", nullptr, terminal_profile_editor_select_custon_font);
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/profile-editor.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/profile-editor.ui");
 
   gtk_widget_class_bind_template_callback (widget_class, terminal_profile_editor_palette_index_changed);
 

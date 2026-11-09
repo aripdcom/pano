@@ -16,7 +16,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <gresources>
-  <gresource prefix="/org/gnome/terminal">
+  <gresource prefix="/com/aripd/pano">
     <file compressed="true" preprocess="xml-stripblanks">icons/enter-keyboard-shortcut.svg</file>
     <file alias="css/terminal.css" compressed="true">terminal.common.css</file>
     <file alias="ui/accel-dialog.ui" compressed="true" preprocess="xml-stripblanks">terminal-accel-dialog.ui</file>

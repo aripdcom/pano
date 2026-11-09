@@ -1972,8 +1972,8 @@ msgstr ""
 "সহ আপনি নতুন প্রোফাইল নির্মাণ নতুন '--profile' অপশনটি ব্যবহার করতে পারেন\n"
 
 #: ../src/terminal-options.c:188 ../src/terminal-window.c:3708
-msgid "GNOME Terminal"
-msgstr "GNOME Terminal"
+msgid "Pano Terminal"
+msgstr "Pano Terminal"
 
 #: ../src/terminal-options.c:208
 #, c-format
@@ -2127,12 +2127,14 @@ msgstr "বড় আকারে প্রদর্শন "
 
 # Translated by sadia
 #: ../src/terminal-options.c:1355 ../src/terminal-options.c:1358
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "জিনোম টার্মিনাল এমুলেটর"
 
 # Translated by sadia
 #: ../src/terminal-options.c:1359
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "জিনোম টার্মিনাল সংক্রান্ত অপশন প্রদর্শন করা হবে"
 
 #: ../src/terminal-options.c:1369
@@ -2203,11 +2205,12 @@ msgstr "“%s” ঠিকানা খোলা যায়নি"
 
 # Translated by sadia
 #: ../src/terminal-util.c:365
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "জিনোম টার্মিনাল একটি মুক্ত সফ্টওয়্যার; মুক্ত সফটওয়্যার ফাউন্ডেশন দ্বারা প্রকাশিত GNU "
 "General Public License-র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা যাবে; লাইসেন্সের "
@@ -2215,11 +2218,12 @@ msgstr ""
 
 # Translated by sadia
 #: ../src/terminal-util.c:369
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "জিনোম টার্মিনাল বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত হবেন, কিন্তু "
 "এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো সুনির্দিষ্ট কর্ম সাধনের "
@@ -2227,10 +2231,12 @@ msgstr ""
 
 # Translated by sadia
 #: ../src/terminal-util.c:373
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 "
-"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 "জিনোম টার্মিনাল এর সাথে GNU General Public License-র একটি প্রতিলিপি উপলব্ধ হওয়া "
 "উচিত; না থাকলে নিম্নলিখিত ঠিকানায় লিখে তা সংগ্রহ করুন Free Software Foundation, "

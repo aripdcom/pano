@@ -71,9 +71,11 @@ msgid "GPL-3.0+"
 msgstr "GPL-3.0+"
 
 #: data/org.gnome.Terminal.metainfo.xml.in:40
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "Το Τερματικό του GNOME είναι μια εφαρμογή εξομοιωτή τερματικού για την "
 "πρόσβαση σε ένα περιβάλλον κελύφους UNIX που μπορεί να χρησιμοποιηθεί για "
@@ -855,7 +857,8 @@ msgstr ""
 "θέση"
 
 #: src/org.gnome.Terminal.gschema.xml:711
-msgid "Always check whether GNOME Terminal is the default terminal"
+#, fuzzy
+msgid "Always check whether Pano Terminal is the default terminal"
 msgstr ""
 "Να γίνεται πάντα έλεγχος εάν το Τερματικό του GNOME είναι η προεπιλεγμένη "
 "εφαρμογή τερματικού"
@@ -1921,11 +1924,13 @@ msgid "_Contents"
 msgstr "_Περιεχόμενα"
 
 #: src/terminal-nautilus.cc:542
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Άνοιγμα στο απομακρυσμένο τ_ερματικό"
 
 #: src/terminal-nautilus.cc:544
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Άνοιγμα στο τοπικό τ_ερματικό"
 
 #: src/terminal-nautilus.cc:548 src/terminal-nautilus.cc:559
@@ -1937,11 +1942,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Άνοιγμα του τωρινού ανοιγμένου φακέλου σε ένα τερματικό"
 
 #: src/terminal-nautilus.cc:556
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Άνοιγμα στο τ_ερματικό"
 
 #: src/terminal-nautilus.cc:566
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Άνοιγμα τ_ερματικού"
 
 #: src/terminal-nautilus.cc:567
@@ -1955,11 +1962,11 @@ msgstr "Κλείσιμο τε_ρματικού"
 #: src/terminal-options.cc:332
 #, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
-"Η επιλογή «%s» είναι παρωχημένη και μπορεί να αφερεθεί σε επόμενη έκδοση του "
-"gnome-terminal."
+"Η επιλογή «%s» είναι παρωχημένη και μπορεί να αφερεθεί σε επόμενη "
+"έκδοση του Pano Terminal."
 
 #. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
 #: src/terminal-options.cc:343
@@ -1972,8 +1979,8 @@ msgstr ""
 "γραμμή εντολών για εκτέλεση μετά από αυτήν."
 
 #: src/terminal-options.cc:353 src/terminal-options.cc:366
-#, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
 "Δεν υποστηρίζεται πλέον η επιλογή «%s» σε αυτή την έκδοση του τερματικού "
 "GNOME."
@@ -2178,11 +2185,13 @@ msgid "COMMAND"
 msgstr "ΕΝΤΟΛΗ"
 
 #: src/terminal-options.cc:1701
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Προσομοίωση τερματικού GNOME"
 
 #: src/terminal-options.cc:1702
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Εμφάνιση επιλογών τερματικού GNOME"
 
 #: src/terminal-options.cc:1712
@@ -2357,7 +2366,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Προσομοιωτής τερματικού για την επιφάνεια εργασίας του GNOME"
 
 #: src/terminal-util.cc:252
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Τερματικό GNOME"
 
 #: src/terminal-util.cc:262
@@ -2379,23 +2389,25 @@ msgstr "Αδυναμία ανοίγματος της διεύθυνσης “%s�
 
 #: src/terminal-util.cc:406
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
-"Το GNOME Terminal είναι ελεύθερο λογισμικό· επιτρέπεται η αναδιανομή ή/και "
-"τροποποίησή του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU -GNU "
-"General Public License- όπως αυτή δημοσιεύεται από το Ίδρυμα Ελεύθερου "
-"Λογισμικού -Free Software Foundation- είτε της έκδοσης 3 της άδειας, είτε "
-"(κατ' επιλογήν) οποιασδήποτε μεταγενέστερης έκδοσης."
+"Το Pano Terminal είναι ελεύθερο λογισμικό· επιτρέπεται η αναδιανομή "
+"ή/και τροποποίησή του υπό τους όρους της Γενικής Άδειας Δημόσιας "
+"Χρήσης GNU -GNU General Public License- όπως αυτή δημοσιεύεται από το "
+"Ίδρυμα Ελεύθερου Λογισμικού -Free Software Foundation- είτε της "
+"έκδοσης 3 της άδειας, είτε (κατ' επιλογήν) οποιασδήποτε μεταγενέστερης "
+"έκδοσης."
 
 #: src/terminal-util.cc:410
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Αυτή η εργασία διανέμεται με την ελπίδα ότι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ "
 "ΚΑΜΙΑ ΑΠΟΛΥΤΩΣ ΕΓΓΥΗΣΗ - χωρίς ακόμη και την έμμεση εγγύηση ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ "
@@ -2403,9 +2415,10 @@ msgstr ""
 "τη Γενική Άδεια Δημόσιας Χρήσης GNU."
 
 #: src/terminal-util.cc:414
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης "
 "GNU μαζί με αυτό το τερματικό GNOME. Εάν όχι, επισκεφθείτε το <http://www."
@@ -2472,7 +2485,8 @@ msgid "L_eave Full Screen"
 msgstr "Έ_ξοδος από την πλήρη οθόνη"
 
 #: src/terminal-window.cc:2291
-msgid "Set GNOME Terminal as your default terminal?"
+#, fuzzy
+msgid "Set Pano Terminal as your default terminal?"
 msgstr "Ορισμός του Τερματικού GNOME ως προεπιλεγμένη εφαρμογή τερματικού;"
 
 #: src/terminal-window.cc:2297

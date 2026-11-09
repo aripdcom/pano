@@ -270,10 +270,11 @@ char const* const*
 terminal_client_get_environment_prefix_filters (void)
 {
   static char const* filters[] = {
-    "GNOME_TERMINAL_",
+    "PANO_",
     // "VTE_", ?
 
     /* other terminals */
+    "GNOME_TERMINAL_",
     "ALACRITTY_",
     "CONTOUR_",
     "FOOT_",

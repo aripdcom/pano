@@ -34,9 +34,11 @@ msgid "Use the command line"
 msgstr "কমান্ড শাৰী ব্যৱহাৰ কৰক"
 
 #: ../gnome-terminal.appdata.xml.in.h:3
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "GNOME টাৰ্মিনেল এটা UNIX শ্বেল পৰিৱেশ অভিগম কৰিবলে এটা টাৰ্মিনেল ইমুলেটৰ "
 "এপ্লিকেচন যাক আপোনাৰ চিস্টেমত উপলব্ধ প্ৰগ্ৰামসমূহ চলাবলে ব্যৱহাৰ কৰিব পাৰি।"
@@ -1521,11 +1523,13 @@ msgid "Thai"
 msgstr "থাই"
 
 #: ../src/terminal-nautilus.c:601
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "দূৰৱৰ্তী টাৰ্মিনেলত খোলক (_R)"
 
 #: ../src/terminal-nautilus.c:603
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "স্থানীয় টাৰ্মিনেলত খোলক (_L)"
 
 #: ../src/terminal-nautilus.c:607 ../src/terminal-nautilus.c:618
@@ -1538,11 +1542,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "বৰ্তমানে খোলা ফোল্ডাৰ এটা টাৰ্মিনেলত খোলক"
 
 #: ../src/terminal-nautilus.c:615 ../src/terminal-nautilus.c:629
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "টাৰ্মিনেলত খোলক (_e)"
 
 #: ../src/terminal-nautilus.c:626
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "টাৰ্মিনেল খোলক (_e)"
 
 #: ../src/terminal-nautilus.c:627
@@ -1577,11 +1583,12 @@ msgstr "টাৰ্মিনেল ফাইল ব্যৱস্থাপক 
 
 #: ../src/terminal-options.c:224 ../src/terminal-options.c:237
 #, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
-msgstr "gnome-terminal ৰ এই সংস্কৰণত বিকল্প \"%s\" সমৰ্থিত নহয়।"
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
+msgstr "Pano Terminal ৰ এই সংস্কৰণত বিকল্প \"%s\" সমৰ্থিত নহয়।"
 
 #: ../src/terminal-options.c:249 ../src/terminal-util.c:217
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME টাৰ্মিনেল"
 
 #: ../src/terminal-options.c:289
@@ -1674,11 +1681,13 @@ msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
 #: ../src/terminal-options.c:1269 ../src/terminal-options.c:1275
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "GNOME টাৰ্মিনেল ইমুলেটৰ"
 
 #: ../src/terminal-options.c:1276
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "GNOME টাৰ্মিনেল বিকল্পসমূহ দেখুৱাওক"
 
 #: ../src/terminal-options.c:1286
@@ -1808,11 +1817,12 @@ msgid "Could not open the address “%s”"
 msgstr "“%s” ঠিকনা খোলা নাযায়"
 
 #: ../src/terminal-util.c:369
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "GNOME টাৰ্মিনেল এটা বিনামুলিয়া চফ্টৱেৰ: আপুনি Free Software Foundation ৰ "
 "দ্বাৰা "
@@ -1822,11 +1832,12 @@ msgstr ""
 "পৰৱৰ্তী সংস্কৰণ।"
 
 #: ../src/terminal-util.c:373
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "GNOME  টাৰ্মিনেল এইটো আশাত বিলোৱা হৈছে যে ই ব্যৱহাৰযোগ্য হ'ব, কিন্তু কোনো "
 "ৱাৰেন্টি "
@@ -1834,9 +1845,10 @@ msgstr ""
 "নথকাকৈ। অধিক যানিবলৈ  GNU General Public License চাওক।"
 
 #: ../src/terminal-util.c:377
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "আপুনি GNOME টাৰ্মিনেলৰ সৈতে GNU General Public License ৰ এটা কপি পাব লাগে।  "
 "যদি নাই পোৱা, <http://www.gnu.org/licenses/> চাওক।"

@@ -149,7 +149,8 @@ msgid "Wait until the child exits"
 msgstr ""
 
 #: ../src/client.c:392
-msgid "GNOME Terminal Client"
+#, fuzzy
+msgid "Pano Terminal Client"
 msgstr "Cliant Teirminéil GNOME"
 
 #: ../src/client.c:396
@@ -1372,11 +1373,13 @@ msgid "Current Locale"
 msgstr "Logchaighdeán Reatha"
 
 #: ../src/terminal-nautilus.c:599
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Oscail i g_Cianteirminéal"
 
 #: ../src/terminal-nautilus.c:601
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Oscail i dTeirminéal _Logánta"
 
 #: ../src/terminal-nautilus.c:605 ../src/terminal-nautilus.c:616
@@ -1389,11 +1392,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr ""
 
 #: ../src/terminal-nautilus.c:613 ../src/terminal-nautilus.c:627
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Oscail i d_Teirminéal"
 
 #: ../src/terminal-nautilus.c:624
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Oscail _Teirminéal"
 
 #: ../src/terminal-nautilus.c:625
@@ -1426,11 +1431,12 @@ msgstr ""
 
 #: ../src/terminal-options.c:224
 #, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
 msgstr ""
 
 #: ../src/terminal-options.c:235 ../src/terminal-util.c:221
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Teirminéal GNOME"
 
 #: ../src/terminal-options.c:275
@@ -1521,11 +1527,13 @@ msgid "PROFILE-NAME"
 msgstr "AINM-PRÓIFÍLE"
 
 #: ../src/terminal-options.c:1442 ../src/terminal-options.c:1448
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Aithriseoir Teirminéil GNOME"
 
 #: ../src/terminal-options.c:1449
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Taispeáin roghanna Teirminéal GNOME"
 
 #: ../src/terminal-options.c:1459
@@ -1656,11 +1664,12 @@ msgid "Could not open the address “%s”"
 msgstr "Níorbh fhéidir an seoladh \"%s\" a oscailt"
 
 #: ../src/terminal-util.c:379
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "Is bogearraí saor é Teirminéal GNOME: is féidir leat é a athdháileadh agus/"
 "nó é a athrú faoi théarmaí an GNU General Public License mar foilsíodh é ag "
@@ -1668,11 +1677,12 @@ msgstr ""
 "leagan níos déanaí."
 
 #: ../src/terminal-util.c:383
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Dáileadh Teirminéal GNOME le súil go mbeidh sé úsáideach, ach GAN AON "
 "BHARÁNTA; gan an baránta intuigthe INDÍOLTÓIREACHTA nó OIRIÚNACHTA D'FHEIDHM "
@@ -1680,9 +1690,10 @@ msgstr ""
 "mionsonraí."
 
 #: ../src/terminal-util.c:387
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Ba chóir go bhfuair tú cóip den GNU General Public License in éineacht le "
 "Teirminéal GNOME.  Mura bhfuair tú é, féach <http://www.gnu.org/licenses/>."

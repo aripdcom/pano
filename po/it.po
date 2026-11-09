@@ -55,9 +55,11 @@ msgid "Preferences"
 msgstr "Preferenze"
 
 #: data/org.gnome.Terminal.metainfo.xml.in:37
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "Il terminale di GNOME è un emulatore di terminale per accedere all'ambiente "
 "shell UNIX che può essere usato per eseguire programmi disponibili nel "
@@ -773,8 +775,8 @@ msgstr ""
 "all'ultima posizione"
 
 #: src/org.gnome.Terminal.gschema.xml:711
-msgid "Always check whether GNOME Terminal is the default terminal"
-msgstr "Controlla sempre se GNOME Terminal è il terminale predefinito"
+msgid "Always check whether Pano Terminal is the default terminal"
+msgstr "Controlla sempre se Pano Terminal è il terminale predefinito"
 
 #. Open new terminal in new window
 #: src/preferences.ui:14
@@ -1844,11 +1846,13 @@ msgid "_Contents"
 msgstr "_Sommario"
 
 #: src/terminal-nautilus.cc:539
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Apri nel terminale _remoto"
 
 #: src/terminal-nautilus.cc:541
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Apri nel terminale _locale"
 
 #: src/terminal-nautilus.cc:545 src/terminal-nautilus.cc:556
@@ -1860,11 +1864,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Apre la cartella attualmente in uso in un terminale"
 
 #: src/terminal-nautilus.cc:553
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Apri nel _terminale"
 
 #: src/terminal-nautilus.cc:563
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Apri _terminale"
 
 #: src/terminal-nautilus.cc:564
@@ -1876,10 +1882,10 @@ msgid "C_lose Terminal"
 msgstr "Chiudi _terminale"
 
 #: src/terminal-options.cc:320
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
 "L'opzione «%s» è deprecata e potrebbe essere rimossa in una futura versione "
 "del terminale di GNOME."
@@ -1895,8 +1901,8 @@ msgstr ""
 "dopo di esso."
 
 #: src/terminal-options.cc:341 src/terminal-options.cc:354
-#, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
 "L'opzione «%s» non è più disponibile in questa versione del terminale di "
 "GNOME."
@@ -2094,11 +2100,13 @@ msgid "COMMAND"
 msgstr "COMANDO"
 
 #: src/terminal-options.cc:1671
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Emulatore di terminale GNOME"
 
 #: src/terminal-options.cc:1672
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Mostra le opzioni del terminale di GNOME"
 
 #: src/terminal-options.cc:1682
@@ -2272,7 +2280,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Un emulatore di terminale per l'ambiente GNOME"
 
 #: src/terminal-util.cc:252
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Terminale di GNOME"
 
 #: src/terminal-util.cc:262
@@ -2293,32 +2302,33 @@ msgstr "Impossibile aprire l'indirizzo «%s»"
 
 #: src/terminal-util.cc:406
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
-"GNOME Terminal è software libero; è possibile ridistribuirlo e/o modificarlo "
-"secondo i termini previsti dalla licenza GNU General Public License così "
-"come pubblicata dalla Free Software Foundation, versione 3 della Licenza o "
-"(a scelta) una versione più recente."
+"Pano Terminal è software libero; è possibile ridistribuirlo e/o "
+"modificarlo secondo i termini previsti dalla licenza GNU General "
+"Public License così come pubblicata dalla Free Software Foundation, "
+"versione 3 della Licenza o (a scelta) una versione più recente."
 
 #: src/terminal-util.cc:410
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
-"GNOME Terminal è distribuito nella speranza che possa risultare utile, ma "
-"SENZA ALCUNA GARANZIA, nemmeno la garanzia implicita di COMMERCIABILITÀ o "
-"APPLICABILITÀ PER UNO SCOPO PARTICOLARE. Per maggiori dettagli consultare la "
-"GNU General Public License."
+"Pano Terminal è distribuito nella speranza che possa risultare utile, "
+"ma SENZA ALCUNA GARANZIA, nemmeno la garanzia implicita di "
+"COMMERCIABILITÀ o APPLICABILITÀ PER UNO SCOPO PARTICOLARE. Per "
+"maggiori dettagli consultare la GNU General Public License."
 
 #: src/terminal-util.cc:414
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Una copia della GNU General Public License dovrebbe essere stata fornita con "
 "questo programma. In caso contrario consultare la pagina <http://www.gnu.org/"
@@ -2385,8 +2395,8 @@ msgid "L_eave Full Screen"
 msgstr "Finestra nor_male"
 
 #: src/terminal-window.cc:2291
-msgid "Set GNOME Terminal as your default terminal?"
-msgstr "Impostare GNOME Terminal come terminale predefinito?"
+msgid "Set Pano Terminal as your default terminal?"
+msgstr "Impostare Pano Terminal come terminale predefinito?"
 
 #: src/terminal-window.cc:2297
 msgid "_Yes"

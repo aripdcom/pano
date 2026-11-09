@@ -213,7 +213,7 @@ terminal_profile_row_class_init (TerminalProfileRowClass *klass)
                                    nullptr,
                                    terminal_profile_row_make_default);
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/profile-row.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/profile-row.ui");
 
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileRow, default_label);
 }

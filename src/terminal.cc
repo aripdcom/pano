@@ -160,16 +160,16 @@ handle_factory_error (const char *service_name,
 
   switch (exit_status) {
   case _EXIT_FAILURE_WRONG_ID:
-    terminal_printerr ("You tried to run gnome-terminal-server with elevated privileged. This is not supported.\n");
+    terminal_printerr ("You tried to run pano-terminal-server with elevated privileged. This is not supported.\n");
     break;
   case _EXIT_FAILURE_NO_UTF8:
-    terminal_printerr ("The environment that gnome-terminal-server was launched with specified a non-UTF-8 locale. This is not supported.\n");
+    terminal_printerr ("The environment that pano-terminal-server was launched with specified a non-UTF-8 locale. This is not supported.\n");
     break;
   case _EXIT_FAILURE_UNSUPPORTED_LOCALE:
-    terminal_printerr ("The environment that gnome-terminal-server was launched with specified an unsupported locale.\n");
+    terminal_printerr ("The environment that pano-terminal-server was launched with specified an unsupported locale.\n");
     break;
   case _EXIT_FAILURE_GTK_INIT:
-    terminal_printerr ("The environment that gnome-terminal-server was launched with most likely contained an incorrect or unset \"DISPLAY\" variable.\n");
+    terminal_printerr ("The environment that pano-terminal-server was launched with most likely contained an incorrect or unset \"DISPLAY\" variable.\n");
     break;
   default:
     break;
@@ -575,7 +575,7 @@ main (int argc, char **argv)
 
   g_log_set_writer_func (terminal_log_writer, nullptr, nullptr);
 
-  g_set_prgname ("gnome-terminal");
+  g_set_prgname ("pano-terminal");
 
   setlocale (LC_ALL, "");
 

@@ -26,13 +26,13 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Search the <app>Terminal</app> output.</desc>
+    <desc>Search the <app>Pano Terminal</app> output.</desc>
 
   </info>
 
   <title>Search for text</title>
 
-  <p>You can search text in the <app>Terminal</app> output:</p>
+  <p>You can search text in the <app>Pano Terminal</app> output:</p>
 
   <steps>
     <item>
@@ -58,30 +58,30 @@
     </item>
     <item>
       <title><gui style="checkbox">Match entire word only</gui></title>
-      <p><app>Terminal</app> will look for the entire keyword and will ignore
+      <p><app>Pano Terminal</app> will look for the entire keyword and will ignore
       results that partially match your search keyword. For example, if
-      you have searched for “cat”, <app>Terminal</app> will show only
+      you have searched for “cat”, <app>Pano Terminal</app> will show only
       results that match this keyword exactly and omit results such as
       “bobcat”.</p>
     </item>
     <item>
       <title><gui style="checkbox">Match as regular expression</gui></title>
       <p>You can use regular expression patterns, also known as regex
-      patterns, in your search keywords. <app>Terminal</app> will display
+      patterns, in your search keywords. <app>Pano Terminal</app> will display
       the results that match these search terms.</p>
     </item>
     <item>
       <title><gui style="checkbox">Wrap around</gui></title>
-      <p><app>Terminal</app> searches from your current location in the
+      <p><app>Pano Terminal</app> searches from your current location in the
       scrollback to the end of available terminal output and then restarts the
       search.</p>
     </item>
   </terms>
 
   <note style="tip">
-    <p>If you expect to work with a lot of <app>Terminal</app> output, increase
+    <p>If you expect to work with a lot of <app>Pano Terminal</app> output, increase
     the <link xref="pref-scrolling#lines">scrollback lines</link> to
-    a higher limit to allow <app>Terminal</app> to search further back.</p>
+    a higher limit to allow <app>Pano Terminal</app> to search further back.</p>
   </note>
 
 </page>

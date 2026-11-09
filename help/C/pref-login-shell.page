@@ -27,7 +27,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Start a login shell in <app>Terminal</app>.</desc>
+    <desc>Start a login shell in <app>Pano Terminal</app>.</desc>
   </info>
 
   <title>Login shells</title>
@@ -69,7 +69,7 @@
   <section id="login-shell-howto">
     <title>Start a login shell</title>
 
-    <p>You can allow <app>Terminal</app> to start a login shell. Your default
+    <p>You can allow <app>Pano Terminal</app> to start a login shell. Your default
     shell will be started with a dash character prepended to its name.</p>
 
     <steps>

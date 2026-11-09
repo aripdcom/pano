@@ -2040,9 +2040,10 @@ msgstr ""
 "Tsy afaka naka ny sary afara \"%s\" ho an'ny profiln'ny terminal \"%s\": %s\n"
 
 #: ../src/terminal-profile.c:1894
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 "Terminaln'ny GNOME: tsy mety ny anaran'endri-tsoratra \"%s\" voafaritra "
 "anatin'ny soratra fototry ny kirakira\n"
@@ -2406,7 +2407,8 @@ msgid "Close All _Tabs"
 msgstr "Hidio ny _vakizoro rehetra"
 
 #: ../src/terminal-window.c:2908
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Terminaln'ny GNOME"
 
 #: ../src/terminal-window.c:2910

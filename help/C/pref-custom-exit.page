@@ -28,7 +28,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Set the behavior of <app>Terminal</app> when a custom command or the default shell exits.</desc>
+    <desc>Set the behavior of <app>Pano Terminal</app> when a custom command or the default shell exits.</desc>
 
   </info>
 
@@ -71,7 +71,7 @@
     <p>If you have <link xref="pref-custom-command">set a custom command</link>
     that is non-interactive, have set the exit behavior to <gui>Exit the
     terminal</gui>, and have set the profile to be the default profile,
-    <app>Terminal</app> may exit before you can see the output of the
+    <app>Pano Terminal</app> may exit before you can see the output of the
     command.</p>
   </note>
 

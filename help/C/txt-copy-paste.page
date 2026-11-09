@@ -26,13 +26,13 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Copy and paste text in <app>Terminal</app>.</desc>
+    <desc>Copy and paste text in <app>Pano Terminal</app>.</desc>
 
   </info>
 
   <title>Copy and paste</title>
 
-  <p>You can copy and paste text in <app>Terminal</app> in a similar way to
+  <p>You can copy and paste text in <app>Pano Terminal</app> in a similar way to
   other applications. However, the keyboard shortcuts differ.</p>
 
   <terms>
@@ -51,7 +51,7 @@
     </item>
     <item>
       <title><gui>Paste</gui></title>
-      <p>Right click in the <app>Terminal</app> and select
+      <p>Right click in the <app>Pano Terminal</app> and select
       <gui style="menuitem">Paste</gui>. Alternatively, you
       can press
       <keyseq><key>Shift</key><key>Ctrl</key><key>V</key></keyseq>.</p>

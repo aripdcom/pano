@@ -27,13 +27,13 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Set up and use the highly customizable GNOME terminal
+    <desc>Set up and use the highly customizable Pano Terminal
     emulator.</desc>
   </info>
 
   <title>
     <media type="image" width="48px" height="48px" its:translate="no"
-      src="figures/org.gnome.Terminal.svg" /> Terminal Help
+      src="figures/com.aripd.Pano.svg" /> Pano Terminal Help
   </title>
 
   <section id="getting-started" style="2column">

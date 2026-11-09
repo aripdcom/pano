@@ -746,7 +746,7 @@ terminal_settings_list_class_init (TerminalSettingsListClass *klass)
  * @backend: (nullable): a #GSettingsBackend, or %NULL
  * @schema_source: a #GSettingsSchemaSource
  * @path: the settings path for the list
- * @schema_id: the schema of the list, equal to or derived from "org.gnome.Terminal.SettingsList"
+ * @schema_id: the schema of the list, equal to or derived from "com.aripd.Pano.SettingsList"
  * @child_schema_id: the schema of the list children
  * @flags: list flags
  *

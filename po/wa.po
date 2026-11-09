@@ -1976,9 +1976,10 @@ msgstr ""
 "terminå: %s\n"
 
 #: ../src/terminal-profile.c:1881
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 "Terminå di GNOME: li fonte di no «%s» defineye dins l' båze di dnêyes "
 "d' apontiaedje n' est nén valide\n"
@@ -2323,7 +2324,8 @@ msgid "Close All _Tabs"
 msgstr "Clôre _totes les linwetes"
 
 #: ../src/terminal-window.c:2881
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Terminå di GNOME"
 
 #: ../src/terminal-window.c:2883

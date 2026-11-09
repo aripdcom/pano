@@ -1777,8 +1777,10 @@ msgid "Failed to load background image \"%s\" for terminal profile \"%s\": %s\n"
 msgstr ""
 
 #: ../src/terminal-profile.c:1894
-#, c-format
-msgid "GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+#, fuzzy, c-format
+msgid ""
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 "Termînala GNOME: navê curenivîsa \"%s\" ya di danegeha veavakirinê de ye "
 "nedernasdar e\n"
@@ -2112,7 +2114,8 @@ msgid "Close All _Tabs"
 msgstr "Hemû _Hilfirînan Bigire"
 
 #: ../src/terminal-window.c:2908
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Termînala GNOME"
 
 #: ../src/terminal-window.c:2910

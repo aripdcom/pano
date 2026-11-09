@@ -1854,8 +1854,10 @@ msgstr ""
 ": %s\n"
 
 #: ../src/terminal-profile.c:1870
-#, c-format
-msgid "GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+#, fuzzy, c-format
+msgid ""
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 "ГНОМЕ-терминал: Тохируулгын өгөгдлийн баазад тогтоосон бичгийн нэр »%s« "
 "хүчингүй\n"
@@ -2185,7 +2187,8 @@ msgid "Close All _Tabs"
 msgstr "Бүх хавтсыг _хаах уу?"
 
 #: ../src/terminal-window.c:2740
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "ГНОМЕ-Терминал"
 
 #: ../src/terminal-window.c:2744

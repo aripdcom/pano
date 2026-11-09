@@ -102,13 +102,12 @@ msgstr "키보드 바로 가기 키"
 #: C/adv-keyboard-shortcuts.page:36
 msgid ""
 "Keyboard shortcuts are combinations of keys that allow you to perform "
-"actions, such as opening the settings dialog or accessing a feature inside "
-"<app>Terminal</app> quickly. These shortcuts can be modified to suit your "
-"preferences."
+"actions, such as opening the settings dialog or accessing a feature "
+"inside <app>Pano Terminal</app> quickly. These shortcuts can be "
+"modified to suit your preferences."
 msgstr ""
-"키보드 바로 가기 키는 설정 대화상자 열기 또는 <app>터미널</app> 내부 기능 신"
-"속 접근을 할 수 있는 키 조합입니다. 이 바로 가기 키는 기본 설정에서 알맞게 수"
-"정할 수 있습니다."
+"키보드 바로 가기 키는 설정 대화상자 열기 또는 <app>Pano Terminal</app> 내부 기능 신속 접근을 할 수 "
+"있는 키 조합입니다. 이 바로 가기 키는 기본 설정에서 알맞게 수정할 수 있습니다."
 
 #. (itstool) path: page/p
 #: C/adv-keyboard-shortcuts.page:41
@@ -782,13 +781,13 @@ msgstr "색상표"
 #. (itstool) path: page/p
 #: C/app-colors.page:35
 msgid ""
-"If you do not like the default <app>Terminal</app> theme, you may want to "
-"change the colors that are used for the text and background. You can use "
-"colors from your theme, select one of the presets or use a custom scheme."
+"If you do not like the default <app>Pano Terminal</app> theme, you may "
+"want to change the colors that are used for the text and background. "
+"You can use colors from your theme, select one of the presets or use a "
+"custom scheme."
 msgstr ""
-"기본 <app>터미널</app> 테마를 별로 좋아하지 않는다면, 원하는대로 텍스트 및 배"
-"경 색상을 바꿀 수 있습니다. 테마 색상을 활용할 수도 있고, 개별 색상 표의사전 "
-"설정 값 중 하나를 설정할 수도 있습니다."
+"기본 <app>Pano Terminal</app> 테마를 별로 좋아하지 않는다면, 원하는대로 텍스트 및 배경 색상을 바꿀 수 "
+"있습니다. 테마 색상을 활용할 수도 있고, 개별 색상 표의사전 설정 값 중 하나를 설정할 수도 있습니다."
 
 #. (itstool) path: section/title
 #: C/app-colors.page:40
@@ -879,8 +878,9 @@ msgstr "개별 설정 색상표"
 #. (itstool) path: section/p
 #: C/app-colors.page:103
 msgid ""
-"You can use custom colors for the text and background in <app>Terminal</app>:"
-msgstr "<app>터미널</app>의 개별 글자 및 배경색을 사용할 수 있습니다:"
+"You can use custom colors for the text and background in <app>Pano "
+"Terminal</app>:"
+msgstr "<app>Pano Terminal</app>의 개별 글자 및 배경색을 사용할 수 있습니다:"
 
 #. (itstool) path: item/p
 #: C/app-colors.page:119
@@ -944,22 +944,22 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-colors.page:150
 msgid ""
-"Traditionally terminal emulators offered a 16 color palette, this is what "
-"you can alter here. <app>Terminal</app> supports an extended set of 256 "
-"colors, but the additional 240 colors cannot be edited here."
+"Traditionally terminal emulators offered a 16 color palette, this is "
+"what you can alter here. <app>Pano Terminal</app> supports an extended "
+"set of 256 colors, but the additional 240 colors cannot be edited "
+"here."
 msgstr ""
-"예전 터미널 에뮬레이터는 16가지 색상을 제공하는데, 여러분이 이 색상을 바꿀 "
-"수 있습니다. <app>터미널</app> 프로그램에서는 256 확장 색상을 지원하지만 추"
-"가 240가지 색상은 편집할 수 없습니다."
+"예전 터미널 에뮬레이터는 16가지 색상을 제공하는데, 여러분이 이 색상을 바꿀 수 있습니다. <app>Pano "
+"Terminal</app> 프로그램에서는 256 확장 색상을 지원하지만 추가 240가지 색상은 편집할 수 없습니다."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:154
 msgid ""
-"<app>Terminal</app> even offers direct access to over 16 million colors, "
-"this is called “true color” mode."
+"<app>Pano Terminal</app> even offers direct access to over 16 million "
+"colors, this is called “true color” mode."
 msgstr ""
-"<app>터미널</app>은 1600만 가지 다른 색상을 표현할 수도 있는데, 이 색상 표현 "
-"상태를 “트루 컬러” 모드라고 합니다."
+"<app>Pano Terminal</app>은 1600만 가지 다른 색상을 표현할 수도 있는데, 이 색상 표현 상태를 “트루 "
+"컬러” 모드라고 합니다."
 
 #. (itstool) path: note/p
 #: C/app-colors.page:157
@@ -1019,11 +1019,9 @@ msgstr "커서 모양 바꾸기"
 #. (itstool) path: page/p
 #: C/app-cursor.page:36
 msgid ""
-"<app>Terminal</app> has three cursors from which to choose. To select your "
-"preferred cursor:"
-msgstr ""
-"<app>터미널</app>에서는 세가지 모양의 커서를 선택할 수 있습니다. 원하는 커서"
-"를 선택하려면:"
+"<app>Pano Terminal</app> has three cursors from which to choose. To "
+"select your preferred cursor:"
+msgstr "<app>Pano Terminal</app>에서는 세가지 모양의 커서를 선택할 수 있습니다. 원하는 커서를 선택하려면:"
 
 #. (itstool) path: item/p
 #: C/app-cursor.page:49 C/app-fonts.page:54 C/app-fonts.page:78
@@ -1073,11 +1071,12 @@ msgstr "글꼴 및 모양새 바꾸기"
 #. (itstool) path: page/p
 #: C/app-fonts.page:35
 msgid ""
-"When you work with a lot of <app>Terminal</app> text, you may want to change "
-"the default font to your preference. You have the following options:"
+"When you work with a lot of <app>Pano Terminal</app> text, you may "
+"want to change the default font to your preference. You have the "
+"following options:"
 msgstr ""
-"수많은 <app>터미널</app> 글씨를 다룰 때, 기본 설정에서 기본 글꼴을 바꿀 수 있"
-"습니다. 다음 선택 항목을 따르십시오:"
+"수많은 <app>Pano Terminal</app> 글씨를 다룰 때, 기본 설정에서 기본 글꼴을 바꿀 수 있습니다. 다음 선택 "
+"항목을 따르십시오:"
 
 #. (itstool) path: section/title
 #: C/app-fonts.page:40
@@ -1153,14 +1152,13 @@ msgstr "줄 간격과 문자 간격"
 #. (itstool) path: section/p
 #: C/app-fonts.page:108
 msgid ""
-"<app>Terminal</app> allows you to pull its characters apart for improved "
-"readability. Line spacing and character spacing can be adjusted from 1.0 "
-"(the regular look) to 2.0 (“double spacing”), including fractional values in "
-"between."
+"<app>Pano Terminal</app> allows you to pull its characters apart for "
+"improved readability. Line spacing and character spacing can be "
+"adjusted from 1.0 (the regular look) to 2.0 (“double spacing”), "
+"including fractional values in between."
 msgstr ""
-"<app>터미널</app>에서는 글자 하나하나를 쉽게 알아볼 수 있도록 글자 간격을 줄 "
-"수 있습니다. 줄 간격과 문자 간격을 1.0부터 2.0(“두배 간격”)까지 소수점을 아"
-"래 자리 수를 바꿔 조절할 수 있습니다."
+"<app>Pano Terminal</app>에서는 글자 하나하나를 쉽게 알아볼 수 있도록 글자 간격을 줄 수 있습니다. 줄 "
+"간격과 문자 간격을 1.0부터 2.0(“두배 간격”)까지 소수점을 아래 자리 수를 바꿔 조절할 수 있습니다."
 
 #. (itstool) path: item/p
 #: C/app-fonts.page:126
@@ -1193,23 +1191,23 @@ msgstr "전체 화면 세션"
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:34
-msgid "Fullscreen mode allows <app>Terminal</app> to use the entire screen."
-msgstr ""
-"전체 화면 모드를 설정하여 <app>터미널</app>로 화면 전체를 활용할 수 있습니다."
+msgid ""
+"Fullscreen mode allows <app>Pano Terminal</app> to use the entire "
+"screen."
+msgstr "전체 화면 모드를 설정하여 <app>Pano Terminal</app>로 화면 전체를 활용할 수 있습니다."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:36
 msgid ""
 "This mode is useful if you have a device with limited screen space and "
-"intend to work in <app>Terminal</app> for a long duration, or are working "
-"with long lines of terminal output. It temporarily hides the window "
-"decoration, allowing you to view more <link xref=\"pref-"
-"scrolling\">scrollback lines</link> on the screen."
+"intend to work in <app>Pano Terminal</app> for a long duration, or are "
+"working with long lines of terminal output. It temporarily hides the "
+"window decoration, allowing you to view more <link "
+"xref=\"pref-scrolling\">scrollback lines</link> on the screen."
 msgstr ""
-"이 모드는 <app>터미널</app>을 오랫동안 다루면서 좁은 공간을 지닌 장치를 사용"
-"하려 하거나, 긴 터미널 출력 내용을 다루려 할 경우 요긴하게 쓸만합니다. 임시"
-"로 화면에 더 많은 <link xref=\"pref-scrolling\">스크롤 행</link>을 보여주는 "
-"창 테두리를 숨깁니다."
+"이 모드는 <app>Pano Terminal</app>을 오랫동안 다루면서 좁은 공간을 지닌 장치를 사용하려 하거나, 긴 "
+"터미널 출력 내용을 다루려 할 경우 요긴하게 쓸만합니다. 임시로 화면에 더 많은 <link "
+"xref=\"pref-scrolling\">스크롤 행</link>을 보여주는 창 테두리를 숨깁니다."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:42
@@ -1235,11 +1233,9 @@ msgstr "메뉴 모음을 숨기기 전에는 전체 화면 모드에서도 나�
 #. (itstool) path: note/p
 #: C/app-fullscreen.page:57
 msgid ""
-"If you have more than one <app>Terminal</app> tab open, the tab bar will be "
-"visible in the fullscreen mode."
-msgstr ""
-"<app>터미널</app> 탭을 하나 이상 열어두었다면, 탭 표시줄이 전체 화면 모드에서"
-"도 나타납니다."
+"If you have more than one <app>Pano Terminal</app> tab open, the tab "
+"bar will be visible in the fullscreen mode."
+msgstr "<app>Pano Terminal</app> 탭을 하나 이상 열어두었다면, 탭 표시줄이 전체 화면 모드에서도 나타납니다."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:61
@@ -1257,31 +1253,32 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/app-terminal-sizes.page:29
-msgid "Change the <app>Terminal</app> window size."
-msgstr "<app>터미널</app>의 창 크기를 바꿉니다."
+msgid "Change the <app>Pano Terminal</app> window size."
+msgstr "<app>Pano Terminal</app>의 창 크기를 바꿉니다."
 
 #. (itstool) path: page/title
 #: C/app-terminal-sizes.page:33
-msgid "<app>Terminal</app> sizes"
-msgstr "<app>Terminal</app> 크기"
+msgid "<app>Pano Terminal</app> sizes"
+msgstr "<app>Pano Terminal</app> 크기"
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:35
 msgid ""
 "If you work with certain command line applications that have minimum "
-"terminal size requirements in order to display correctly, or if you want to "
-"view long lines of terminal output with minimal line breaks on your display, "
-"you may require <app>Terminal</app> windows to be of a particular size."
+"terminal size requirements in order to display correctly, or if you "
+"want to view long lines of terminal output with minimal line breaks on "
+"your display, you may require <app>Pano Terminal</app> windows to be "
+"of a particular size."
 msgstr ""
-"어떤 명령행 프로그램이 올바르게 나타나도록 최소한의 터미널 크기를 필요로 한다"
-"거나, 줄바꿈 없이 화면에 긴 줄의 터미널 출력을 보려면, <app>터미널</app> 창"
-"을 개별 크기로 설정해야합니다."
+"어떤 명령행 프로그램이 올바르게 나타나도록 최소한의 터미널 크기를 필요로 한다거나, 줄바꿈 없이 화면에 긴 줄의 터미널 출력을 "
+"보려면, <app>Pano Terminal</app> 창을 개별 크기로 설정해야합니다."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:41
 msgid ""
-"You can change the <app>Terminal</app> window size to some preset values:"
-msgstr "<app>터미널</app> 창 크기를 개별 지정 값으로 설정할 수 있습니다:"
+"You can change the <app>Pano Terminal</app> window size to some preset "
+"values:"
+msgstr "<app>Pano Terminal</app> 창 크기를 개별 지정 값으로 설정할 수 있습니다:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:46
@@ -1320,24 +1317,23 @@ msgstr "<gui style=\"menuitem\">132×43</gui>"
 #. (itstool) path: note/p
 #: C/app-terminal-sizes.page:69
 msgid ""
-"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu access "
-"keys</gui></link>, you can access this menu by pressing <keyseq><key>Alt</"
-"key><key>T</key></keyseq> and then pressing <key>1</key> to switch the "
-"<app>Terminal</app> window to size <gui>80×24</gui> and so on."
+"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu "
+"access keys</gui></link>, you can access this menu by pressing "
+"<keyseq><key>Alt</key><key>T</key></keyseq> and then pressing "
+"<key>1</key> to switch the <app>Pano Terminal</app> window to size "
+"<gui>80×24</gui> and so on."
 msgstr ""
-"<link xref=\"pref-keyboard-access\"><gui>메뉴 접근 키</gui></link>를 활성화했"
-"다면, <keyseq><key>Alt</key><key>T</key></keyseq> 키를 눌러 메뉴를 띄운 후 "
-"<key>1</key>을 눌러 <gui>80×24</gui> 크기를 지닌 <app>터미널</app> 창을 열 "
+"<link xref=\"pref-keyboard-access\"><gui>메뉴 접근 키</gui></link>를 활성화했다면, "
+"<keyseq><key>Alt</key><key>T</key></keyseq> 키를 눌러 메뉴를 띄운 후 "
+"<key>1</key>을 눌러 <gui>80×24</gui> 크기를 지닌 <app>Pano Terminal</app> 창을 열 "
 "수 있습니다."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:76
 msgid ""
-"If you require custom size <app>Terminal</app> windows, you can also set the "
-"default window size according to your requirements:"
-msgstr ""
-"개별 크기 <app>터미널</app> 창이 필요하다면, 원하는 크기대로 기본 창 크기를 "
-"설정할 수 있습니다:"
+"If you require custom size <app>Pano Terminal</app> windows, you can "
+"also set the default window size according to your requirements:"
+msgstr "개별 크기 <app>Pano Terminal</app> 창이 필요하다면, 원하는 크기대로 기본 창 크기를 설정할 수 있습니다:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:92
@@ -1363,8 +1359,8 @@ msgstr "확대 및 축소"
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:34
-msgid "To increase <app>Terminal</app> text size:"
-msgstr "<app>터미널</app> 글자 크기를 늘이려면:"
+msgid "To increase <app>Pano Terminal</app> text size:"
+msgstr "<app>Pano Terminal</app> 글자 크기를 늘이려면:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:38
@@ -1378,8 +1374,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:44
-msgid "To decrease <app>Terminal</app> text size:"
-msgstr "<app>터미널</app> 글자 크기를 줄이려면:"
+msgid "To decrease <app>Pano Terminal</app> text size:"
+msgstr "<app>Pano Terminal</app> 글자 크기를 줄이려면:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:48
@@ -1393,8 +1389,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:54
-msgid "To restore <app>Terminal</app> text to default size:"
-msgstr "<app>Terminal</app> 글자를 기본 크기로 복원하려면:"
+msgid "To restore <app>Pano Terminal</app> text to default size:"
+msgstr "<app>Pano Terminal</app> 글자를 기본 크기로 복원하려면:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:58
@@ -1413,8 +1409,8 @@ msgstr "2013–2014"
 
 #. (itstool) path: info/desc
 #: C/gs-execute-commands.page:31
-msgid "Launch programs or run commands using <app>Terminal</app>."
-msgstr "<app>터미널</app>에서 프로그램 또는 명령을 실행합니다."
+msgid "Launch programs or run commands using <app>Pano Terminal</app>."
+msgstr "<app>Pano Terminal</app>에서 프로그램 또는 명령을 실행합니다."
 
 #. (itstool) path: page/title
 #: C/gs-execute-commands.page:34
@@ -1424,13 +1420,12 @@ msgstr "명령 실행"
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:36
 msgid ""
-"Any input entered in the <app>Terminal</app> to be executed is referred to "
-"as a <em>command</em>. You can run both command line and graphical user "
-"interface (GUI) programs from the terminal."
+"Any input entered in the <app>Pano Terminal</app> to be executed is "
+"referred to as a <em>command</em>. You can run both command line and "
+"graphical user interface (GUI) programs from the terminal."
 msgstr ""
-"<app>터미널</app>에서 실행할 입력 내용은 <em>명령</em>으로 간주합니다. 명령"
-"행 프로그램 또는 그래픽 사용자 인터페이스(GUI) 프로그램을 터미널에서 실행할 "
-"수 있습니다."
+"<app>Pano Terminal</app>에서 실행할 입력 내용은 <em>명령</em>으로 간주합니다. 명령행 프로그램 또는 "
+"그래픽 사용자 인터페이스(GUI) 프로그램을 터미널에서 실행할 수 있습니다."
 
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:40
@@ -1439,8 +1434,8 @@ msgstr "명령을 실행하려면:"
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:44
-msgid "Type the command in the <app>Terminal</app> prompt."
-msgstr "<app>Terminal</app> 프롬프트에서 명령을 입력하십시오."
+msgid "Type the command in the <app>Pano Terminal</app> prompt."
+msgstr "<app>Pano Terminal</app> 프롬프트에서 명령을 입력하십시오."
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:47
@@ -1450,15 +1445,15 @@ msgstr "<key>Enter</key>키를 눌러 실행하십시오."
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:51
 msgid ""
-"If you have a program that ends abruptly without any warning or error, you "
-"may want to run it in <app>Terminal</app>. This will allow the program to "
-"output any error or debugging messages to the <app>Terminal</app> window. "
-"This information can be helpful when filing a bug report."
+"If you have a program that ends abruptly without any warning or error, "
+"you may want to run it in <app>Pano Terminal</app>. This will allow "
+"the program to output any error or debugging messages to the <app>Pano "
+"Terminal</app> window. This information can be helpful when filing a "
+"bug report."
 msgstr ""
-"어떤 경고 또는 오류 없이 갑자기 프로그램이 끝난다면 <app>터미널</app>에서 실"
-"행해보고자 할지도 모릅니다. 이렇게 하면 <app>터미널</app> 창에 실행 프로그램"
-"의 오류 메시지 또는 디버깅 메시지를 출력할 수 있습니다. 여기서 나오는 정보는 "
-"버그 보고서를 제출할 때 도움을 줍니다."
+"어떤 경고 또는 오류 없이 갑자기 프로그램이 끝난다면 <app>Pano Terminal</app>에서 실행해보고자 할지도 "
+"모릅니다. 이렇게 하면 <app>Pano Terminal</app> 창에 실행 프로그램의 오류 메시지 또는 디버깅 메시지를 "
+"출력할 수 있습니다. 여기서 나오는 정보는 버그 보고서를 제출할 때 도움을 줍니다."
 
 #. (itstool) path: note/p
 #: C/gs-execute-commands.page:57
@@ -1471,8 +1466,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/gs-tabs.page:30
-msgid "Enable, add, remove and reorder <app>Terminal</app> tabs."
-msgstr "<app>터미널</app> 탭을 활성화, 추가, 제거하고 순서를 바꿉니다."
+msgid "Enable, add, remove and reorder <app>Pano Terminal</app> tabs."
+msgstr "<app>Pano Terminal</app> 탭을 활성화, 추가, 제거하고 순서를 바꿉니다."
 
 #. (itstool) path: page/title
 #: C/gs-tabs.page:33
@@ -1482,18 +1477,17 @@ msgstr "탭 사용"
 #. (itstool) path: page/p
 #: C/gs-tabs.page:35
 msgid ""
-"The tab bar is shown at the top a <app>Terminal</app> window that has "
-"multiple tabs open (it looks like a row of buttons). Click on a tab to "
-"switch to it. You can open multiple tabs to manage your work in "
-"<app>Terminal</app>. This will allow you to multi-task with activities such "
-"as running programs, browsing directories and editing text files in a single "
-"<app>Terminal</app> window."
+"The tab bar is shown at the top a <app>Pano Terminal</app> window that "
+"has multiple tabs open (it looks like a row of buttons). Click on a "
+"tab to switch to it. You can open multiple tabs to manage your work in "
+"<app>Pano Terminal</app>. This will allow you to multi-task with "
+"activities such as running programs, browsing directories and editing "
+"text files in a single <app>Pano Terminal</app> window."
 msgstr ""
-"열어 둔 여러 탭(단추를 일렬로 배치한 것 같은 모양새)을 보여주는 탭 표시줄은 "
-"터미널 창의 상단에 있습니다. 전환하려는 대상 탭을 눌러보십시오. <app>터미널</"
-"app>에서 다루려는 탭을 여러 개 열어둘 수 있습니다. 프로그램 실행, 디렉터리 탐"
-"색, 텍스트 파일 편집 활동을 단일 <app>터미널</app> 창에서 다중 작업으로 처리"
-"할 수 있게 합니다."
+"열어 둔 여러 탭(단추를 일렬로 배치한 것 같은 모양새)을 보여주는 탭 표시줄은 터미널 창의 상단에 있습니다. 전환하려는 대상 "
+"탭을 눌러보십시오. <app>Pano Terminal</app>에서 다루려는 탭을 여러 개 열어둘 수 있습니다. 프로그램 "
+"실행, 디렉터리 탐색, 텍스트 파일 편집 활동을 단일 <app>Pano Terminal</app> 창에서 다중 작업으로 처리할 "
+"수 있게 합니다."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:43
@@ -1502,8 +1496,8 @@ msgstr "탭 열기"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:45
-msgid "To open a new tab inside your current <app>Terminal</app> window:"
-msgstr "<app>터미널</app> 창에 새 탭을 열려면:"
+msgid "To open a new tab inside your current <app>Pano Terminal</app> window:"
+msgstr "<app>Pano Terminal</app> 창에 새 탭을 열려면:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:48
@@ -1519,8 +1513,9 @@ msgstr "탭 제거"
 #. (itstool) path: section/p
 #: C/gs-tabs.page:87
 msgid ""
-"To close an existing tab inside your current <app>Terminal</app> window:"
-msgstr "<app>터미널</app> 창의 기존 탭을 닫으려면:"
+"To close an existing tab inside your current <app>Pano Terminal</app> "
+"window:"
+msgstr "<app>Pano Terminal</app> 창의 기존 탭을 닫으려면:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:92
@@ -1611,14 +1606,16 @@ msgstr "Jim Campbell"
 
 #. (itstool) path: info/desc
 #: C/index.page:30
-msgid "Set up and use the highly customizable GNOME terminal emulator."
+#, fuzzy
+msgid "Set up and use the highly customizable Pano Terminal emulator."
 msgstr ""
 "사용자의 취향대로 자유 자재로 설정할 수 있는 그놈 터미널 에뮬레이터를 설정하"
 "고 사용하세요."
 
 #. (itstool) path: page/title
 #: C/index.page:34
-msgid "<_:media-1/> Terminal Help"
+#, fuzzy
+msgid "<_:media-1/> Pano Terminal Help"
 msgstr "<_:media-1/> 터미널 도움말"
 
 #. (itstool) path: section/title
@@ -1653,7 +1650,8 @@ msgstr "문제 해결"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:29
-msgid "Learn about the GNOME terminal emulator."
+#, fuzzy
+msgid "Learn about the Pano Terminal emulator."
 msgstr "그놈 터미널 편집기 사용법을 배웁니다."
 
 #. (itstool) path: page/title
@@ -1664,29 +1662,30 @@ msgstr "도입부"
 #. (itstool) path: page/p
 #: C/introduction.page:34
 msgid ""
-"<app>Terminal</app> is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your system."
+"<app>Pano Terminal</app> is a terminal emulator application for "
+"accessing a UNIX shell environment which can be used to run programs "
+"available on your system."
 msgstr ""
-"<app>터미널</app>은 시스템에 있는 프로그램을 실행할 수 있는 유닉스 셸 환경에 "
-"접근할 때 사용하는 터미널 에뮬레이터 프로그램입니다."
+"<app>Pano Terminal</app>은 시스템에 있는 프로그램을 실행할 수 있는 유닉스 셸 환경에 접근할 때 사용하는 "
+"터미널 에뮬레이터 프로그램입니다."
 
 #. (itstool) path: page/p
 #: C/introduction.page:38
 msgid ""
-"<app>Terminal</app> supports escape sequences that control cursor position "
-"and colors."
-msgstr ""
-"<app>터미널</app> 에서는 커서 위지와 색을 다루는 이스케이프 시퀀스를 지원합니"
-"다."
+"<app>Pano Terminal</app> supports escape sequences that control cursor "
+"position and colors."
+msgstr "<app>Pano Terminal</app> 에서는 커서 위지와 색을 다루는 이스케이프 시퀀스를 지원합니다."
 
 #. (itstool) path: figure/title
 #: C/introduction.page:42
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "그놈 터미널"
 
 #. (itstool) path: figure/desc
 #: C/introduction.page:43
-msgid "Screenshot of GNOME <app>Terminal</app>"
+#, fuzzy
+msgid "Screenshot of <app>Pano Terminal</app>"
 msgstr "그놈 <app>터미널</app> 스크린샷"
 
 #. (itstool) path: figure/media
@@ -1696,12 +1695,8 @@ msgstr "그놈 <app>터미널</app> 스크린샷"
 #. whatever you like once you have updated your copy of the file.
 #: C/introduction.page:44
 msgctxt "_"
-msgid ""
-"external ref='figures/gnome-terminal.png' "
-"md5='50826cb88874cf2c3d96ddf0c58d0c05'"
-msgstr ""
-"external ref='figures/gnome-terminal.png' "
-"md5='50826cb88874cf2c3d96ddf0c58d0c05'"
+msgid "external ref='figures/pano.png' md5='50826cb88874cf2c3d96ddf0c58d0c05'"
+msgstr "external ref='figures/pano.png' md5='50826cb88874cf2c3d96ddf0c58d0c05'"
 
 #. (itstool) path: p/link
 #: C/legal.xml:4
@@ -1773,12 +1768,12 @@ msgstr "터미널 개요"
 #. (itstool) path: page/p
 #: C/overview.page:26
 msgid ""
-"<app>Terminal</app> is a terminal program for <gui>GNOME</gui>. The "
-"following terms and their descriptions will help you to be familiar with "
-"<app>Terminal</app> and its capabilities."
+"<app>Pano Terminal</app> is a terminal program for <gui>GNOME</gui>. "
+"The following terms and their descriptions will help you to be "
+"familiar with <app>Pano Terminal</app> and its capabilities."
 msgstr ""
-"<app>터미널</app>은 <gui>그놈</gui>용 터미널 프로그램입니다. 다음 용어와 설명"
-"은 <app>터미널</app>과 기능에 익숙해지는데 도움을 줍니다."
+"<app>Pano Terminal</app>은 <gui>그놈</gui>용 터미널 프로그램입니다. 다음 용어와 설명은 "
+"<app>Pano Terminal</app>과 기능에 익숙해지는데 도움을 줍니다."
 
 #. (itstool) path: item/title
 #: C/overview.page:32
@@ -1845,11 +1840,13 @@ msgstr "VTE"
 
 #. (itstool) path: item/p
 #: C/overview.page:56
+#, fuzzy
 msgid ""
-"Virtual Terminal Environment (VTE) is a terminal emulator which emulates a "
-"text terminal inside a graphical user interface (GUI) environment. "
-"<app>Terminal</app> is largely based on the <app>VTE</app>. <app>VTE</app> "
-"has widgets that implement a fully functional terminal emulator."
+"Virtual Terminal Environment (VTE) is a terminal emulator which "
+"emulates a text terminal inside a graphical user interface (GUI) "
+"environment. <app>Pano Terminal</app> is largely based on the "
+"<app>VTE</app>. <app>VTE</app> has widgets that implement a fully "
+"functional terminal emulator."
 msgstr ""
 "가상 터미널 환경(VTE)은 그래픽 사용자 인터페이스(GUI)  환경에서 텍스트 터미널"
 "을 흉내내는 터미널 에뮬레이터입니다. <app>터미널</app> 은 <app>VTE</app>의 상"
@@ -1940,8 +1937,8 @@ msgstr ""
 
 #. (itstool) path: page/title
 #: C/pref.page:18
-msgid "<app>Terminal</app> preferences"
-msgstr "<app>터미널</app> 기본 설정"
+msgid "<app>Pano Terminal</app> preferences"
+msgstr "<app>Pano Terminal</app> 기본 설정"
 
 #. (itstool) path: section/title
 #: C/pref.page:21
@@ -1960,8 +1957,8 @@ msgstr "프로파일 기본 설정"
 
 #. (itstool) path: info/desc
 #: C/pref-bell.page:29
-msgid "Enable audible notification in <app>Terminal</app>."
-msgstr "<app>터미널</app>의 음성 알림을 활성화합니다."
+msgid "Enable audible notification in <app>Pano Terminal</app>."
+msgstr "<app>Pano Terminal</app>의 음성 알림을 활성화합니다."
 
 #. (itstool) path: page/title
 #: C/pref-bell.page:33
@@ -1971,11 +1968,11 @@ msgstr "음성 알림 설정"
 #. (itstool) path: page/p
 #: C/pref-bell.page:35
 msgid ""
-"<app>Terminal</app> can sound an audible bell to indicate events in "
-"<app>Terminal</app> windows and tabs."
+"<app>Pano Terminal</app> can sound an audible bell to indicate events "
+"in <app>Pano Terminal</app> windows and tabs."
 msgstr ""
-"<app>터미널</app>에서는 <app>터미널</app> 창과 탭의 동작을 나타내는 청각 알"
-"림 소리를 낼 수 있습니다."
+"<app>Pano Terminal</app>에서는 <app>Pano Terminal</app> 창과 탭의 동작을 나타내는 청각 "
+"알림 소리를 낼 수 있습니다."
 
 #. (itstool) path: page/p
 #: C/pref-bell.page:38
@@ -2005,10 +2002,9 @@ msgstr "2013-2014"
 #. (itstool) path: info/desc
 #: C/pref-custom-exit.page:31
 msgid ""
-"Set the behavior of <app>Terminal</app> when a custom command or the default "
-"shell exits."
-msgstr ""
-"개별 명령 또는 기본 셸이 끝날 때의 <app>터미널</app> 동작을 설정합니다."
+"Set the behavior of <app>Pano Terminal</app> when a custom command or "
+"the default shell exits."
+msgstr "개별 명령 또는 기본 셸이 끝날 때의 <app>Pano Terminal</app> 동작을 설정합니다."
 
 #. (itstool) path: page/title
 #: C/pref-custom-exit.page:35
@@ -2062,22 +2058,22 @@ msgstr "항목을 선택하면 설정을 자동으로 저장합니다."
 #. (itstool) path: note/p
 #: C/pref-custom-exit.page:71
 msgid ""
-"If you have <link xref=\"pref-custom-command\">set a custom command</link> "
-"that is non-interactive, have set the exit behavior to <gui>Exit the "
-"terminal</gui>, and have set the profile to be the default profile, "
-"<app>Terminal</app> may exit before you can see the output of the command."
+"If you have <link xref=\"pref-custom-command\">set a custom "
+"command</link> that is non-interactive, have set the exit behavior to "
+"<gui>Exit the terminal</gui>, and have set the profile to be the "
+"default profile, <app>Pano Terminal</app> may exit before you can see "
+"the output of the command."
 msgstr ""
-"비 대화식 <link xref=\"pref-custom-command\">사용자 명령을 설정</link> 했다"
-"면, <gui>터미널 끝내기</gui> 설정으로 끝내기 동작을 설정하시고 명령 출력을 "
-"볼 수 있기 전에  <app>터미널</app>이 빠져나가도록 하는 프로파일을 기본 프로파"
-"일로 설정하십시오."
+"비 대화식 <link xref=\"pref-custom-command\">사용자 명령을 설정</link> 했다면, "
+"<gui>터미널 끝내기</gui> 설정으로 끝내기 동작을 설정하시고 명령 출력을 볼 수 있기 전에  <app>Pano "
+"Terminal</app>이 빠져나가도록 하는 프로파일을 기본 프로파일로 설정하십시오."
 
 #. (itstool) path: info/desc
 #: C/pref-custom-command.page:32
 msgid ""
-"Set <app>Terminal</app> to run a command or a different shell on startup."
-msgstr ""
-"<app>터미널</app>을 시작할 때 명령 또는 다른 셸을 실행하도록 설정합니다."
+"Set <app>Pano Terminal</app> to run a command or a different shell on "
+"startup."
+msgstr "<app>Pano Terminal</app>을 시작할 때 명령 또는 다른 셸을 실행하도록 설정합니다."
 
 #. (itstool) path: page/title
 #: C/pref-custom-command.page:36
@@ -2099,11 +2095,9 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:43
 msgid ""
-"You can set <app>Terminal</app> to run a command when it starts up instead "
-"of awaiting input from you:"
-msgstr ""
-"입력을 기다리는 대신 시작할 때 명령을 실행하도록 <app>터미널</app>을 설정할 "
-"수 있습니다:"
+"You can set <app>Pano Terminal</app> to run a command when it starts "
+"up instead of awaiting input from you:"
+msgstr "입력을 기다리는 대신 시작할 때 명령을 실행하도록 <app>Pano Terminal</app>을 설정할 수 있습니다:"
 
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:59
@@ -2128,11 +2122,9 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:68
 msgid ""
-"Open a new <app>Terminal</app> tab or window to see how the custom shell or "
-"command executes."
-msgstr ""
-"<app>터미널</app> 새 탭 또는 새 창을 열어 사용자 지정 셸 또는 멍령 실행 모습"
-"을 보십시오."
+"Open a new <app>Pano Terminal</app> tab or window to see how the "
+"custom shell or command executes."
+msgstr "<app>Pano Terminal</app> 새 탭 또는 새 창을 열어 사용자 지정 셸 또는 멍령 실행 모습을 보십시오."
 
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:73
@@ -2155,8 +2147,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-keyboard-access.page:30
-msgid "Navigate around <app>Terminal</app> menus using keyboard keys."
-msgstr "키보드 키로 <app>터미널</app> 메뉴를 둘러봅니다."
+msgid "Navigate around <app>Pano Terminal</app> menus using keyboard keys."
+msgstr "키보드 키로 <app>Pano Terminal</app> 메뉴를 둘러봅니다."
 
 #. (itstool) path: page/title
 #: C/pref-keyboard-access.page:33
@@ -2173,23 +2165,22 @@ msgstr "메뉴 모음이 나타난 창에만 키 입력의 반응이 나타납�
 #. (itstool) path: note/p
 #: C/pref-keyboard-access.page:39
 msgid ""
-"Right click in the <app>Terminal</app> window and select <gui "
+"Right click in the <app>Pano Terminal</app> window and select <gui "
 "style=\"checkbox\">Show Menubar</gui> to display the menubar."
 msgstr ""
-"<app>터미널</app> 에 마우스 커서를 가져다 놓고 오른쪽 단추를 누른 후 <gui "
+"<app>Pano Terminal</app> 에 마우스 커서를 가져다 놓고 오른쪽 단추를 누른 후 <gui "
 "style=\"menuitem\">메뉴 모음 보이기</gui>를 선택하십시오."
 
 #. (itstool) path: page/p
 #: C/pref-keyboard-access.page:43
 msgid ""
-"You can navigate the <app>Terminal</app> menu using a combination of keys "
-"that are called <em>mnemonics</em> or a special key that takes you directly "
-"to the first menu in the menubar which is called the <em>menu accelerator "
-"key</em>."
+"You can navigate the <app>Pano Terminal</app> menu using a combination "
+"of keys that are called <em>mnemonics</em> or a special key that takes "
+"you directly to the first menu in the menubar which is called the "
+"<em>menu accelerator key</em>."
 msgstr ""
-"<em>접근 키</em> 라고 하는 키 조합 또는 <em>메뉴 단축키</em>라고 하는 메뉴 모"
-"음의 첫번째 항목에 바로 접근할 수 있는 특수키를 활용하여 <app>터미널</app> 메"
-"뉴를 찾아볼 수 있습니다."
+"<em>접근 키</em> 라고 하는 키 조합 또는 <em>메뉴 단축키</em>라고 하는 메뉴 모음의 첫번째 항목에 바로 접근할 "
+"수 있는 특수키를 활용하여 <app>Pano Terminal</app> 메뉴를 찾아볼 수 있습니다."
 
 #. (itstool) path: section/title
 #: C/pref-keyboard-access.page:49
@@ -2199,13 +2190,13 @@ msgstr "접근 키"
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:51
 msgid ""
-"<app>Terminal</app> menu can be accessed by combining the <key>Alt</key> key "
-"and a letter of the menu item. The letter that you need to use to access the "
-"menu will be underlined when you hold down the <key>Alt</key>."
+"<app>Pano Terminal</app> menu can be accessed by combining the "
+"<key>Alt</key> key and a letter of the menu item. The letter that you "
+"need to use to access the menu will be underlined when you hold down "
+"the <key>Alt</key>."
 msgstr ""
-"<app>터미널</app> 메뉴는 <key>Alt</key>키 및 메뉴 항목의 단어를 조합하여 접근"
-"할 수 있습니다. 메뉴에 접근할 때 필요한 문자에는 <key>Alt</key>키를 누르면 밑"
-"줄이 나타납니다."
+"<app>Pano Terminal</app> 메뉴는 <key>Alt</key>키 및 메뉴 항목의 단어를 조합하여 접근할 수 "
+"있습니다. 메뉴에 접근할 때 필요한 문자에는 <key>Alt</key>키를 누르면 밑줄이 나타납니다."
 
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:56
@@ -2257,8 +2248,8 @@ msgstr "<gui style=\"checkbox\">메뉴 단축키 활성화</gui>를 표시하십
 
 #. (itstool) path: info/desc
 #: C/pref-login-shell.page:30
-msgid "Start a login shell in <app>Terminal</app>."
-msgstr "<app>터미널</app> 에서 로그인 셸을 시작합니다."
+msgid "Start a login shell in <app>Pano Terminal</app>."
+msgstr "<app>Pano Terminal</app> 에서 로그인 셸을 시작합니다."
 
 #. (itstool) path: page/title
 #: C/pref-login-shell.page:33
@@ -2337,11 +2328,12 @@ msgstr "로그인 셸 시작하기"
 #. (itstool) path: section/p
 #: C/pref-login-shell.page:72
 msgid ""
-"You can allow <app>Terminal</app> to start a login shell. Your default shell "
-"will be started with a dash character prepended to its name."
+"You can allow <app>Pano Terminal</app> to start a login shell. Your "
+"default shell will be started with a dash character prepended to its "
+"name."
 msgstr ""
-"<app>터미널</app> 프로그램에서 로그인 셸을 시작할 수 있습니다. 기본 셸은 이"
-"름 앞에 대시 문자를 붙여 시작합니다."
+"<app>Pano Terminal</app> 프로그램에서 로그인 셸을 시작할 수 있습니다. 기본 셸은 이름 앞에 대시 문자를 "
+"붙여 시작합니다."
 
 #. (itstool) path: item/p
 #: C/pref-login-shell.page:92
@@ -2379,10 +2371,10 @@ msgstr "메뉴 모음을 표시하려면:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:43
 msgid ""
-"Right click in <app>Terminal</app> and select <gui style=\"menuitem\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Show Menubar</gui>."
 msgstr ""
-"<app>터미널</app> 에 마우스 커서를 가져다 놓고 오른쪽 단추를 누른 후  <gui "
+"<app>Pano Terminal</app> 에 마우스 커서를 가져다 놓고 오른쪽 단추를 누른 후  <gui "
 "style=\"menuitem\">메뉴 모음 보이기</gui>를 선택하십시오."
 
 #. (itstool) path: page/p
@@ -2393,10 +2385,10 @@ msgstr "메뉴 모음을 숨기려면:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:51
 msgid ""
-"Right click in <app>Terminal</app> and deselect <gui style=\"checkbox\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and deselect <gui "
+"style=\"checkbox\">Show Menubar</gui>."
 msgstr ""
-"<app>터미널</app> 에 마우스 커서를 가져다 놓고 오른쪽 단추를 누른 후 <gui "
+"<app>Pano Terminal</app> 에 마우스 커서를 가져다 놓고 오른쪽 단추를 누른 후 <gui "
 "style=\"menuitem\">메뉴 모음 보이기</gui>를 선택하십시오."
 
 #. (itstool) path: note/p
@@ -2420,12 +2412,14 @@ msgstr "프로파일 관리"
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:40
+#, fuzzy
 msgid ""
-"A profile is a collection of <app>Terminal</app> settings. <app>Terminal</"
-"app> supports multiple profiles. You can configure <app>Terminal</app> "
-"profiles to <link xref=\"pref-custom-command\">run a custom command or "
-"shell</link>, set a profile exclusively to connect to remote computers using "
-"SSH or set a profile that launches a <app>GNU Screen</app> session."
+"A profile is a collection of <app>Pano Terminal</app> settings. "
+"<app>Pano Terminal</app> supports multiple profiles. You can configure "
+"<app>Pano Terminal</app> profiles to <link "
+"xref=\"pref-custom-command\">run a custom command or shell</link>, set "
+"a profile exclusively to connect to remote computers using SSH or set "
+"a profile that launches a <app>GNU Screen</app> session."
 msgstr ""
 "프로파일은 <app>터미널</app> 설정의 모음입니다. <app>터미널</app>에서는 여러 "
 "프로파일을 지원합니다. <app>터미널</app> 프로파일에서 <link xref=\"pref-"
@@ -2435,8 +2429,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:47
-msgid "The available <app>Terminal</app> settings include:"
-msgstr "다음 항목을 <app>터미널</app> 에서 설정할 수 있습니다:"
+msgid "The available <app>Pano Terminal</app> settings include:"
+msgstr "다음 항목을 <app>Pano Terminal</app> 에서 설정할 수 있습니다:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:51
@@ -2469,14 +2463,14 @@ msgstr "프로파일 선택"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:68
 msgid ""
-"If you have two or more profiles defined, you can change the profile in your "
-"current <app>Terminal</app> tab or window by selecting a profile from "
-"<guiseq><gui style=\"menu\">Terminal</gui> <gui style=\"menuitem\">Change "
-"Profile</gui></guiseq>."
+"If you have two or more profiles defined, you can change the profile "
+"in your current <app>Pano Terminal</app> tab or window by selecting a "
+"profile from <guiseq><gui style=\"menu\">Terminal</gui> <gui "
+"style=\"menuitem\">Change Profile</gui></guiseq>."
 msgstr ""
-"둘 이상의 프로파일을 정의해두었다면, <guiseq><gui style=\"menu\">터미널</"
-"gui> <gui style=\"menuitem\">프로파일 바꾸기</gui></guiseq> 에서 현재 <app>터"
-"미널</app> 탭 또는 창의 프로파일을 바꿀 수 있습니다."
+"둘 이상의 프로파일을 정의해두었다면, <guiseq><gui style=\"menu\">터미널</gui> <gui "
+"style=\"menuitem\">프로파일 바꾸기</gui></guiseq> 에서 현재 <app>Pano "
+"Terminal</app> 탭 또는 창의 프로파일을 바꿀 수 있습니다."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:76
@@ -2486,8 +2480,9 @@ msgstr "새 프로파일 만들기"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:78
 msgid ""
-"To create a new profile with the default settings of <app>Terminal</app>:"
-msgstr "<app>터미널</app> 기본 설정으로 새 프로파일을 만들려면:"
+"To create a new profile with the default settings of <app>Pano "
+"Terminal</app>:"
+msgstr "<app>Pano Terminal</app> 기본 설정으로 새 프로파일을 만들려면:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:83 C/pref-profiles.page:112 C/pref-profiles.page:162
@@ -2578,20 +2573,19 @@ msgstr "프로파일 편집"
 #. (itstool) path: note/p
 #: C/pref-profiles.page:149
 msgid ""
-"If the default profile is edited, it cannot be restored to its original "
-"settings! If you have not already created any other <app>Terminal</app> "
-"profiles and have customized the default profile, <app>Terminal</app> "
-"<em>may</em> become unusable should any settings cause problems. It is "
-"recommended that you <link xref=\"#create-profile-from-existing\">create a "
-"copy of the default profile</link> then edit the copy to create a custom "
-"profile."
+"If the default profile is edited, it cannot be restored to its "
+"original settings! If you have not already created any other <app>Pano "
+"Terminal</app> profiles and have customized the default profile, "
+"<app>Pano Terminal</app> <em>may</em> become unusable should any "
+"settings cause problems. It is recommended that you <link "
+"xref=\"#create-profile-from-existing\">create a copy of the default "
+"profile</link> then edit the copy to create a custom profile."
 msgstr ""
-"기본 프로파일을 편집하면 원래 설정으로 복원할 수 없습니다! 다른 <app>터미널</"
-"app> 프로파일을 만들지 않았고 기본 프로파일 값을 바꾸었다면 <app>터미널</app>"
-"에서는 문제를 일으키는 어떤 설정으로 말미암아 사용하지 못<em>할 수</em>도 있"
-"습니다. <link xref=\"#create-profile-from-existing\">기본 프로파일 사본 만들"
-"기</link>를 진행한 후 만들어 둔 개별 프로파일 사본을 편집하는 방안을 추천합니"
-"다."
+"기본 프로파일을 편집하면 원래 설정으로 복원할 수 없습니다! 다른 <app>Pano Terminal</app> 프로파일을 "
+"만들지 않았고 기본 프로파일 값을 바꾸었다면 <app>Pano Terminal</app>에서는 문제를 일으키는 어떤 설정으로 "
+"말미암아 사용하지 못<em>할 수</em>도 있습니다. <link "
+"xref=\"#create-profile-from-existing\">기본 프로파일 사본 만들기</link>를 진행한 후 "
+"만들어 둔 개별 프로파일 사본을 편집하는 방안을 추천합니다."
 
 #. (itstool) path: section/p
 #: C/pref-profiles.page:158
@@ -2615,42 +2609,44 @@ msgstr "원하는 프로파일을 선택하면 다음을 할 수 있습니다:"
 #. (itstool) path: item/p
 #: C/pref-profiles.page:175
 msgid ""
-"Select <link xref=\"app-fonts\">font</link>, <link xref=\"app-"
-"cursor\">cursor shapes</link> and <link xref=\"app-terminal-"
-"sizes\"><app>Terminal</app> size</link>."
+"Select <link xref=\"app-fonts\">font</link>, <link "
+"xref=\"app-cursor\">cursor shapes</link> and <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> size</link>."
 msgstr ""
-"<link xref=\"app-fonts\">글꼴</link>, <link xref=\"app-cursor\">커서 모양</"
-"link>, <link xref=\"app-terminal-sizes\"><app>터미널</app> 크기</link>를 선택"
-"합니다."
+"<link xref=\"app-fonts\">글꼴</link>, <link xref=\"app-cursor\">커서 "
+"모양</link>, <link xref=\"app-terminal-sizes\"><app>Pano Terminal</app> "
+"크기</link>를 선택합니다."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:180
 msgid ""
-"You may also change behavior of <app>Terminal</app> on <link xref=\"pref-"
-"custom-exit\">command exit</link>, set a <link xref=\"pref-login-"
-"shell\">custom login shell</link> or change <link xref=\"pref-"
-"scrolling\">scrollbar preferences</link>."
+"You may also change behavior of <app>Pano Terminal</app> on <link "
+"xref=\"pref-custom-exit\">command exit</link>, set a <link "
+"xref=\"pref-login-shell\">custom login shell</link> or change <link "
+"xref=\"pref-scrolling\">scrollbar preferences</link>."
 msgstr ""
-"<link xref=\"pref-custom-exit\">명령이 끝날 때</link>, <link xref=\"pref-"
-"login-shell\">개별 로그인 셸</link>설정, <link xref=\"pref-scrolling\">스크"
-"롤 막대 기본 설정</link> 에서 <app>터미널</app> 동작을 바꿀 수 있습니다."
+"<link xref=\"pref-custom-exit\">명령이 끝날 때</link>, <link "
+"xref=\"pref-login-shell\">개별 로그인 셸</link>설정, <link "
+"xref=\"pref-scrolling\">스크롤 막대 기본 설정</link> 에서 <app>Pano "
+"Terminal</app> 동작을 바꿀 수 있습니다."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:186
 msgid ""
-"To change the <app>Terminal</app> background and text colors, see <link "
-"xref=\"app-colors\"><app>Terminal</app> color schemes</link>."
+"To change the <app>Pano Terminal</app> background and text colors, see "
+"<link xref=\"app-colors\"><app>Pano Terminal</app> color "
+"schemes</link>."
 msgstr ""
-"<app>터미널</app>의 배경색 및 글자색을 바꾸려면 <link xref=\"app-"
-"colors\"><app>터미널</app> 색 팔레트</link>를 참고하십시오."
+"<app>Pano Terminal</app>의 배경색 및 글자색을 바꾸려면 <link "
+"xref=\"app-colors\"><app>Pano Terminal</app> 색 팔레트</link>를 참고하십시오."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:190
 msgid ""
-"Changes to profile are saved immediately. To return to <app>Terminal</app>, "
-"click <gui style=\"button\">Close</gui>."
+"Changes to profile are saved immediately. To return to <app>Pano "
+"Terminal</app>, click <gui style=\"button\">Close</gui>."
 msgstr ""
-"프로파일에서 바뀐 값을 즉시 저장합니다. <app>터미널</app>로 돌아가려면 <gui "
+"프로파일에서 바뀐 값을 즉시 저장합니다. <app>Pano Terminal</app>로 돌아가려면 <gui "
 "stype=\"button\">닫기</gui>를 누르십시오."
 
 #. (itstool) path: section/title
@@ -2735,16 +2731,16 @@ msgstr ""
 #. (itstool) path: section/p
 #: C/pref-profiles.page:265
 msgid ""
-"The default profile is used when <app>Terminal</app> could not otherwise "
-"decide which profile to use. For example, <app>Terminal</app> is started up "
-"freshly and opens its first terminal window. In contrast, when you use a "
-"menu entry or keyboard shortcut of <app>Terminal</app> to open a new "
-"terminal, the profile of the existing terminal is used."
+"The default profile is used when <app>Pano Terminal</app> could not "
+"otherwise decide which profile to use. For example, <app>Pano "
+"Terminal</app> is started up freshly and opens its first terminal "
+"window. In contrast, when you use a menu entry or keyboard shortcut of "
+"<app>Pano Terminal</app> to open a new terminal, the profile of the "
+"existing terminal is used."
 msgstr ""
-"기본 프로파일은 <app>터미널</app>에서 어떤 프로파일을 사용해야 할 지 모를 때 "
-"사용합니다. 예를 들면 <app>터미널</app>을 새로 시작하여 첫 터미널 창을 열었"
-"을 때입니다. 반면에 <app>터미널</app> 의 메뉴 항목 또는 바로 가기 키로 새 터"
-"미널을 열면 기존 터미널의 프로파일을 엽니다."
+"기본 프로파일은 <app>Pano Terminal</app>에서 어떤 프로파일을 사용해야 할 지 모를 때 사용합니다. 예를 "
+"들면 <app>Pano Terminal</app>을 새로 시작하여 첫 터미널 창을 열었을 때입니다. 반면에 <app>Pano "
+"Terminal</app> 의 메뉴 항목 또는 바로 가기 키로 새 터미널을 열면 기존 터미널의 프로파일을 엽니다."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:277
@@ -2780,20 +2776,19 @@ msgstr "문자가 너무 좁게 보입"
 #. (itstool) path: page/p
 #: C/pref-profile-char-width.page:30
 msgid ""
-"Some characters, such as some Greek letters and Asian logograms, can take up "
-"either one or two cells in a terminal window. These characters are often "
-"referred to as <em>ambiguous characters</em>. By default, these characters "
-"are displayed with a narrow width in <app>Terminal</app>, which looks better "
-"in situations where perfect layout is important, such as in ASCII art. You "
-"can change your profile preferences to display ambiguous characters as wide, "
-"which can be better if you are reading running prose."
+"Some characters, such as some Greek letters and Asian logograms, can "
+"take up either one or two cells in a terminal window. These characters "
+"are often referred to as <em>ambiguous characters</em>. By default, "
+"these characters are displayed with a narrow width in <app>Pano "
+"Terminal</app>, which looks better in situations where perfect layout "
+"is important, such as in ASCII art. You can change your profile "
+"preferences to display ambiguous characters as wide, which can be "
+"better if you are reading running prose."
 msgstr ""
-"일부 문자, 그리스 문자 및 아시아 표의 문자의 경우 터미널 창에서 한 칸 내지는 "
-"두 칸을 차지할 수 있습니다. 이 문자는 보통 <em>불분명한 너비 문자</em>라고 합"
-"니다. 기본적으로 ASCII 아트와 같이 완벽한 배치가 중요한 상황에서 이 문자는 "
-"<app>터미널</app>에서 반각으로 표시합니다. 장문의 글을 살펴볼 때 더 나아보일 "
-"수 있도록 프로파일 기본 설정에서 불분명한 너비 문자를 전각으로 표현하도록 설"
-"정값을 바꿀 수 있습니다."
+"일부 문자, 그리스 문자 및 아시아 표의 문자의 경우 터미널 창에서 한 칸 내지는 두 칸을 차지할 수 있습니다. 이 문자는 "
+"보통 <em>불분명한 너비 문자</em>라고 합니다. 기본적으로 ASCII 아트와 같이 완벽한 배치가 중요한 상황에서 이 "
+"문자는 <app>Pano Terminal</app>에서 반각으로 표시합니다. 장문의 글을 살펴볼 때 더 나아보일 수 있도록 "
+"프로파일 기본 설정에서 불분명한 너비 문자를 전각으로 표현하도록 설정값을 바꿀 수 있습니다."
 
 #. (itstool) path: item/p
 #: C/pref-profile-char-width.page:48 C/pref-profile-encoding.page:46
@@ -3016,23 +3011,24 @@ msgstr "창 및 탭"
 #. (itstool) path: note/p
 #: C/pref-tab-window.page:32
 msgid ""
-"This setting only applies when the <link xref=\"pref-menubar\">menubar is "
-"enabled</link>, or when <app>Terminal</app> is started from the command line "
-"and neither the <cmd>--tab</cmd> nor the <cmd>--window</cmd> options are "
-"passed."
+"This setting only applies when the <link xref=\"pref-menubar\">menubar "
+"is enabled</link>, or when <app>Pano Terminal</app> is started from "
+"the command line and neither the <cmd>--tab</cmd> nor the "
+"<cmd>--window</cmd> options are passed."
 msgstr ""
-"이 설정은 <link xref=\"pref-menubar\">메뉴 모음을 활성</link> 상태로 두었거"
-"나 <app>터미널</app>을 <cmd>--tab</cmd> 옵션 또는 <cmd>--window</cmd>없이 명"
-"령행에서 실행했을 때 반영됩니다."
+"이 설정은 <link xref=\"pref-menubar\">메뉴 모음을 활성</link> 상태로 두었거나 <app>Pano "
+"Terminal</app>을 <cmd>--tab</cmd> 옵션 또는 <cmd>--window</cmd>없이 명령행에서 "
+"실행했을 때 반영됩니다."
 
 #. (itstool) path: page/p
 #: C/pref-tab-window.page:37
 msgid ""
-"You can choose whether to open a new tab or a new <app>Terminal</app> window "
-"when you use <gui style=\"menuitem\">New Terminal</gui>."
+"You can choose whether to open a new tab or a new <app>Pano "
+"Terminal</app> window when you use <gui style=\"menuitem\">New "
+"Terminal</gui>."
 msgstr ""
-"<gui style=\"menuitem\">새 터미널</gui> 항목을 선택하여 새 탭 또는 새 <app>터"
-"미널</app> 창을 열 수 있습니다."
+"<gui style=\"menuitem\">새 터미널</gui> 항목을 선택하여 새 탭 또는 새 <app>Pano "
+"Terminal</app> 창을 열 수 있습니다."
 
 #. (itstool) path: steps/title
 #: C/pref-tab-window.page:41
@@ -3113,11 +3109,11 @@ msgstr "읽기 전용 모드를 사용하려면:"
 #. (itstool) path: item/p
 #: C/pref-user-input.page:37
 msgid ""
-"Right click in the <app>Terminal</app> window or press the menu button in "
-"the top-right corner of the window."
+"Right click in the <app>Pano Terminal</app> window or press the menu "
+"button in the top-right corner of the window."
 msgstr ""
-"<app>터미널</app> 창에 마우스 커서를 두고 오른쪽 단추를 누르거나, 창 우측 상"
-"단의 메뉴 단추를 누르십시오."
+"<app>Pano Terminal</app> 창에 마우스 커서를 두고 오른쪽 단추를 누르거나, 창 우측 상단의 메뉴 단추를 "
+"누르십시오."
 
 #. (itstool) path: item/p
 #: C/pref-user-input.page:41
@@ -3137,27 +3133,26 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/prob-reset.page:24
 msgid ""
-"How do I recover my <app>Terminal</app> screen when it becomes stuck or has "
-"lot of strange symbols on it?"
-msgstr ""
-"<app>터미널</app> 화면이 멈추거나 이상한 문자가 나오면 어떻게 복구할까요?"
+"How do I recover my <app>Pano Terminal</app> screen when it becomes "
+"stuck or has lot of strange symbols on it?"
+msgstr "<app>Pano Terminal</app> 화면이 멈추거나 이상한 문자가 나오면 어떻게 복구할까요?"
 
 #. (itstool) path: page/title
 #: C/prob-reset.page:28
-msgid "Reset your <app>Terminal</app> state"
-msgstr "<app>터미널</app> 상태 초기화"
+msgid "Reset your <app>Pano Terminal</app> state"
+msgstr "<app>Pano Terminal</app> 상태 초기화"
 
 #. (itstool) path: page/p
 #: C/prob-reset.page:30
 msgid ""
-"After viewing a non-text file by mistake, or launching some command, it can "
-"happen the <app>Terminal</app> screen is unresponsive, has strange letters "
-"printed when you press keys. You can recover your <app>Terminal</app> in the "
-"following ways:"
+"After viewing a non-text file by mistake, or launching some command, "
+"it can happen the <app>Pano Terminal</app> screen is unresponsive, has "
+"strange letters printed when you press keys. You can recover your "
+"<app>Pano Terminal</app> in the following ways:"
 msgstr ""
-"텍스트가 들어있지 않은 파일을 실수로 열거나 일부 명령을 실행했을 경우, 키를 "
-"누를 때마다 <app>터미널</app> 화면에 이상한 문자가 찍히면서 응답하지 않을 수 "
-"있습니다. 다음과 같은 방법으로 <app>터미널</app>을 복구할 수 있습니다:"
+"텍스트가 들어있지 않은 파일을 실수로 열거나 일부 명령을 실행했을 경우, 키를 누를 때마다 <app>Pano "
+"Terminal</app> 화면에 이상한 문자가 찍히면서 응답하지 않을 수 있습니다. 다음과 같은 방법으로 <app>Pano "
+"Terminal</app>을 복구할 수 있습니다:"
 
 #. (itstool) path: section/title
 #: C/prob-reset.page:36
@@ -3166,8 +3161,8 @@ msgstr "리셋"
 
 #. (itstool) path: section/p
 #: C/prob-reset.page:38
-msgid "Reset <app>Terminal</app> screen."
-msgstr "<app>터미널</app> 화면을 리셋합니다."
+msgid "Reset <app>Pano Terminal</app> screen."
+msgstr "<app>Pano Terminal</app> 화면을 리셋합니다."
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:42
@@ -3192,14 +3187,15 @@ msgstr "리셋하고 비움"
 #. (itstool) path: section/p
 #: C/prob-reset.page:56
 msgid ""
-"In addition to resetting your <app>Terminal</app>, <gui "
-"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Terminal</"
-"app> screen space and the scrollback contents. To <gui "
-"style=\"menuitem\">Reset and Clear</gui> your <app>Terminal</app>:"
+"In addition to resetting your <app>Pano Terminal</app>, <gui "
+"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Pano "
+"Terminal</app> screen space and the scrollback contents. To <gui "
+"style=\"menuitem\">Reset and Clear</gui> your <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"<app>터미널</app> 리셋 말고도, <gui style=\"menuitem\">리셋하고 비움</gui>으"
-"로 <app>터미널</app> 화면 공간과 이전 내용을 모두 지웁니다. <app>터미널</"
-"app> 에서 <gui style=\"menuitem\">리셋하고 비움</gui>을 실행하려면:"
+"<app>Pano Terminal</app> 리셋 말고도, <gui style=\"menuitem\">리셋하고 "
+"비움</gui>으로 <app>Pano Terminal</app> 화면 공간과 이전 내용을 모두 지웁니다. <app>Pano "
+"Terminal</app> 에서 <gui style=\"menuitem\">리셋하고 비움</gui>을 실행하려면:"
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:63
@@ -3222,8 +3218,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/txt-copy-paste.page:29
-msgid "Copy and paste text in <app>Terminal</app>."
-msgstr "<app>터미널</app> 에서 글 내용을 복사하고 붙여넣습니다."
+msgid "Copy and paste text in <app>Pano Terminal</app>."
+msgstr "<app>Pano Terminal</app> 에서 글 내용을 복사하고 붙여넣습니다."
 
 #. (itstool) path: page/title
 #: C/txt-copy-paste.page:33
@@ -3233,11 +3229,11 @@ msgstr "복사하고 붙여넣기"
 #. (itstool) path: page/p
 #: C/txt-copy-paste.page:35
 msgid ""
-"You can copy and paste text in <app>Terminal</app> in a similar way to other "
-"applications. However, the keyboard shortcuts differ."
+"You can copy and paste text in <app>Pano Terminal</app> in a similar "
+"way to other applications. However, the keyboard shortcuts differ."
 msgstr ""
-"다른 프로그램과 동일한 방식으로 <app>터미널</app> 에서 복사하고 붙여넣을 수 "
-"있지만 키보드 바로 가기 키가 약간 다릅니다."
+"다른 프로그램과 동일한 방식으로 <app>Pano Terminal</app> 에서 복사하고 붙여넣을 수 있지만 키보드 바로 "
+"가기 키가 약간 다릅니다."
 
 #. (itstool) path: item/title
 #: C/txt-copy-paste.page:40
@@ -3278,13 +3274,14 @@ msgstr "<gui>붙여넣기</gui>"
 #. (itstool) path: item/p
 #: C/txt-copy-paste.page:54
 msgid ""
-"Right click in the <app>Terminal</app> and select <gui "
+"Right click in the <app>Pano Terminal</app> and select <gui "
 "style=\"menuitem\">Paste</gui>. Alternatively, you can press "
 "<keyseq><key>Shift</key><key>Ctrl</key><key>V</key></keyseq>."
 msgstr ""
-"<app>터미널</app> 창에 마우스 커서를 올려두고 오른쪽 단추를 누른 후 <gui "
-"style=\"menuitem\">붙여넣기</gui>를 선택하십시오. 대신, <keyseq><key>Ctrl</"
-"key><key>Shift</key><key>V</key></keyseq> 키를 누를 수 있습니다."
+"<app>Pano Terminal</app> 창에 마우스 커서를 올려두고 오른쪽 단추를 누른 후 <gui "
+"style=\"menuitem\">붙여넣기</gui>를 선택하십시오. 대신, "
+"<keyseq><key>Ctrl</key><key>Shift</key><key>V</key></keyseq> 키를 누를 수 "
+"있습니다."
 
 #. (itstool) path: note/p
 #: C/txt-copy-paste.page:62
@@ -3308,14 +3305,14 @@ msgstr "하이퍼링크와 전자메일 주소"
 #. (itstool) path: page/p
 #: C/txt-links.page:32
 msgid ""
-"<app>Terminal</app> parses the terminal output and automatically detects "
-"snippets of text that are web addresses or email addresses. Web and email "
-"addresses are automatically highlighted when you point your cursor to the "
-"text, indicating that the link can be opened in an application."
+"<app>Pano Terminal</app> parses the terminal output and automatically "
+"detects snippets of text that are web addresses or email addresses. "
+"Web and email addresses are automatically highlighted when you point "
+"your cursor to the text, indicating that the link can be opened in an "
+"application."
 msgstr ""
-"<app>터미널</app>은 터미널 출력을 해석하여 웹 주소 또는 메일 주소 텍스트 부분"
-"을 자동으로 감지합니다. 프로그램으로 열 수 있는 링크 텍스트를 커서로 가리키"
-"면 웹 주소와 메일 주소의 경우 자동으로 강조합니다."
+"<app>Pano Terminal</app>은 터미널 출력을 해석하여 웹 주소 또는 메일 주소 텍스트 부분을 자동으로 "
+"감지합니다. 프로그램으로 열 수 있는 링크 텍스트를 커서로 가리키면 웹 주소와 메일 주소의 경우 자동으로 강조합니다."
 
 #. (itstool) path: page/p
 #: C/txt-links.page:37
@@ -3349,9 +3346,8 @@ msgstr "하이퍼 링크를 복사하려면:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:52
-msgid "Right click on the link in <app>Terminal</app>."
-msgstr ""
-"<app>터미널</app> 에서 링크에 마우스 커서를 두고 오른쪽 단추를 누르십시오."
+msgid "Right click on the link in <app>Pano Terminal</app>."
+msgstr "<app>Pano Terminal</app> 에서 링크에 마우스 커서를 두고 오른쪽 단추를 누르십시오."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:55
@@ -3394,10 +3390,8 @@ msgstr "전자메일 주소를 복사하려면:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:85
-msgid "Right click on the email address in <app>Terminal</app>."
-msgstr ""
-"<app>터미널</app> 에서 전자메일 주소에 마우스 커서를 두고 오른쪽 단추를 누르"
-"십시오."
+msgid "Right click on the email address in <app>Pano Terminal</app>."
+msgstr "<app>Pano Terminal</app> 에서 전자메일 주소에 마우스 커서를 두고 오른쪽 단추를 누르십시오."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:88
@@ -3421,8 +3415,8 @@ msgstr "<gui style=\"menuitem\">메일 보내기…</gui>를 선택하십시오.
 
 #. (itstool) path: info/desc
 #: C/txt-search.page:29
-msgid "Search the <app>Terminal</app> output."
-msgstr "<app>터미널</app> 출력 내용을 검색하십시오."
+msgid "Search the <app>Pano Terminal</app> output."
+msgstr "<app>Pano Terminal</app> 출력 내용을 검색하십시오."
 
 #. (itstool) path: page/title
 #: C/txt-search.page:33
@@ -3431,8 +3425,8 @@ msgstr "텍스트 검색"
 
 #. (itstool) path: page/p
 #: C/txt-search.page:35
-msgid "You can search text in the <app>Terminal</app> output:"
-msgstr "<app>터미널</app> 출력 내용에서 글 내용을 검색할 수 있습니다:"
+msgid "You can search text in the <app>Pano Terminal</app> output:"
+msgstr "<app>Pano Terminal</app> 출력 내용에서 글 내용을 검색할 수 있습니다:"
 
 #. (itstool) path: item/p
 #: C/txt-search.page:39
@@ -3479,15 +3473,15 @@ msgstr "<gui style=\"checkbox\">전체가 맞는 단어만</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:61
 msgid ""
-"<app>Terminal</app> will look for the entire keyword and will ignore results "
-"that partially match your search keyword. For example, if you have searched "
-"for “cat”, <app>Terminal</app> will show only results that match this "
-"keyword exactly and omit results such as “bobcat”."
+"<app>Pano Terminal</app> will look for the entire keyword and will "
+"ignore results that partially match your search keyword. For example, "
+"if you have searched for “cat”, <app>Pano Terminal</app> will show "
+"only results that match this keyword exactly and omit results such as "
+"“bobcat”."
 msgstr ""
-"<app>터미널</app> 에서 전체 검색 단어와 일치하는 대상을 찾고 검색 단어와 부분"
-"적으로 일치하는 결과는 무시합니다. “cat”을 검색하면, <app>터미널</app> 에서"
-"는 이 검색 단어와 완전히 일치하는 결과만 보여주고 “bobcat”같은 결과는 생략합"
-"니다."
+"<app>Pano Terminal</app> 에서 전체 검색 단어와 일치하는 대상을 찾고 검색 단어와 부분적으로 일치하는 "
+"결과는 무시합니다. “cat”을 검색하면, <app>Pano Terminal</app> 에서는 이 검색 단어와 완전히 일치하는 "
+"결과만 보여주고 “bobcat”같은 결과는 생략합니다."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:68
@@ -3497,12 +3491,12 @@ msgstr "<gui style=\"checkbox\">정규식</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:69
 msgid ""
-"You can use regular expression patterns, also known as regex patterns, in "
-"your search keywords. <app>Terminal</app> will display the results that "
-"match these search terms."
+"You can use regular expression patterns, also known as regex patterns, "
+"in your search keywords. <app>Pano Terminal</app> will display the "
+"results that match these search terms."
 msgstr ""
-"정규 표현식이라고 하는 정규식을 검색 단어로 사용할 수 있습니다. <app>터미널</"
-"app> 은 정규식에 일치하는 단어 결과를 표시합니다."
+"정규 표현식이라고 하는 정규식을 검색 단어로 사용할 수 있습니다. <app>Pano Terminal</app> 은 정규식에 "
+"일치하는 단어 결과를 표시합니다."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:74
@@ -3512,22 +3506,24 @@ msgstr "<gui style=\"checkbox\">끝까지 가면 처음부터</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:75
 msgid ""
-"<app>Terminal</app> searches from your current location in the scrollback to "
-"the end of available terminal output and then restarts the search."
+"<app>Pano Terminal</app> searches from your current location in the "
+"scrollback to the end of available terminal output and then restarts "
+"the search."
 msgstr ""
-"<app>터미널</app> 에서는 스크롤 가능 처음 영역 부터 터미널 출력 끝까지 검색"
-"을 진행하며 검색 결과 마지막에 도달하면 검색을 다시 시작합니다."
+"<app>Pano Terminal</app> 에서는 스크롤 가능 처음 영역 부터 터미널 출력 끝까지 검색을 진행하며 검색 결과 "
+"마지막에 도달하면 검색을 다시 시작합니다."
 
 #. (itstool) path: note/p
 #: C/txt-search.page:82
 msgid ""
-"If you expect to work with a lot of <app>Terminal</app> output, increase the "
-"<link xref=\"pref-scrolling#lines\">scrollback lines</link> to a higher "
-"limit to allow <app>Terminal</app> to search further back."
+"If you expect to work with a lot of <app>Pano Terminal</app> output, "
+"increase the <link xref=\"pref-scrolling#lines\">scrollback "
+"lines</link> to a higher limit to allow <app>Pano Terminal</app> to "
+"search further back."
 msgstr ""
-"더 많은 <app>터미널</app> 출력 내용을 다루려면 <link xref=\"pref-"
-"scrolling#lines\">스크롤 제한 범위</link> 값을 더 높은 값으로 설정하여 <app>"
-"터미널</app>이 더 이전의 출력 범위에서 검색할 수 있게 하십시오."
+"더 많은 <app>Pano Terminal</app> 출력 내용을 다루려면 <link "
+"xref=\"pref-scrolling#lines\">스크롤 제한 범위</link> 값을 더 높은 값으로 설정하여 "
+"<app>Pano Terminal</app>이 더 이전의 출력 범위에서 검색할 수 있게 하십시오."
 
 #. (itstool) path: credit/years
 #: C/txt-select-text.page:20
@@ -3588,12 +3584,12 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/txt-select-text.page:51
 msgid ""
-"If you are running an application in <app>Terminal</app> which accepts mouse "
-"input, you need to use the <key>Shift</key> modifier for the <app>Terminal</"
-"app> to catch the mouse input."
+"If you are running an application in <app>Pano Terminal</app> which "
+"accepts mouse input, you need to use the <key>Shift</key> modifier for "
+"the <app>Pano Terminal</app> to catch the mouse input."
 msgstr ""
-"마우스 입력을 받아들이는 프로그램을 <app>터미널</app>에서 실행중이라면 마우"
-"스 입력을 잡을 때 <app>터미널</app>에서 <key>Shift</key> 키를 사용해야합니다."
+"마우스 입력을 받아들이는 프로그램을 <app>Pano Terminal</app>에서 실행중이라면 마우스 입력을 잡을 때 "
+"<app>Pano Terminal</app>에서 <key>Shift</key> 키를 사용해야합니다."
 
 #~ msgid ""
 #~ "Select <guiseq><gui style=\"menu\">Edit</gui> <gui "

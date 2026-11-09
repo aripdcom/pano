@@ -43,7 +43,7 @@ _terminal_debug_init(void)
     { "focus",         TERMINAL_DEBUG_FOCUS         },
   };
 
-  _terminal_debug_flags = TerminalDebugFlags(g_parse_debug_string (g_getenv ("GNOME_TERMINAL_DEBUG"),
+  _terminal_debug_flags = TerminalDebugFlags(g_parse_debug_string (g_getenv ("PANO_DEBUG"),
 								   keys, G_N_ELEMENTS (keys)));
 
 #endif /* ENABLE_DEBUG */

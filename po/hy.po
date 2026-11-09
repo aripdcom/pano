@@ -1468,7 +1468,8 @@ msgstr ""
 
 #: ../src/terminal-options.c:187
 #: ../src/terminal-window.c:3472
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "ԳՆՈՄ Տերմինալ"
 
 #: ../src/terminal-options.c:208
@@ -1615,12 +1616,12 @@ msgstr ""
 #: ../src/terminal-options.c:1303
 #: ../src/terminal-options.c:1306
 #, fuzzy
-msgid "GNOME Terminal Emulator"
+msgid "Pano Terminal Emulator"
 msgstr "ԳՆՈՄ Տերմինալ"
 
 #: ../src/terminal-options.c:1307
 #, fuzzy
-msgid "Show GNOME Terminal options"
+msgid "Show Pano Terminal options"
 msgstr "ԳՆՈՄ Տերմինալ"
 
 #: ../src/terminal-options.c:1317
@@ -1684,15 +1685,27 @@ msgid ""
 msgstr ""
 
 #: ../src/terminal-util.c:317
-msgid "GNOME Terminal is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
+msgid ""
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr ""
 
 #: ../src/terminal-util.c:321
-msgid "GNOME Terminal is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
+msgid ""
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 
 #: ../src/terminal-util.c:325
-msgid "You should have received a copy of the GNU General Public License along with GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgid ""
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 
 #: ../src/terminal-window.c:419

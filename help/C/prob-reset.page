@@ -21,21 +21,21 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>How do I recover my <app>Terminal</app> screen when it becomes stuck
+    <desc>How do I recover my <app>Pano Terminal</app> screen when it becomes stuck
     or has lot of strange symbols on it?</desc>
   </info>
 
-  <title>Reset your <app>Terminal</app> state</title>
+  <title>Reset your <app>Pano Terminal</app> state</title>
 
   <p>After viewing a non-text file by mistake, or launching some command, it can
-  happen the <app>Terminal</app> screen is unresponsive, has strange letters
-  printed when you press keys. You can recover your <app>Terminal</app> in
+  happen the <app>Pano Terminal</app> screen is unresponsive, has strange letters
+  printed when you press keys. You can recover your <app>Pano Terminal</app> in
   the following ways:</p>
 
   <section id="reset">
     <title>Reset</title>
 
-    <p>Reset <app>Terminal</app> screen.</p>
+    <p>Reset <app>Pano Terminal</app> screen.</p>
 
     <steps>
       <item>
@@ -53,10 +53,10 @@
   <section id="reset-clear">
     <title>Reset and Clear</title>
 
-    <p>In addition to resetting your <app>Terminal</app>,
+    <p>In addition to resetting your <app>Pano Terminal</app>,
     <gui style="menuitem">Reset and Clear</gui> clears the visible
-    <app>Terminal</app> screen space and the scrollback contents. To
-    <gui style="menuitem">Reset and Clear</gui> your <app>Terminal</app>:</p>
+    <app>Pano Terminal</app> screen space and the scrollback contents. To
+    <gui style="menuitem">Reset and Clear</gui> your <app>Pano Terminal</app>:</p>
 
     <steps>
       <item>

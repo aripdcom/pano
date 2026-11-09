@@ -30,7 +30,7 @@
   <p>Some characters, such as some Greek letters and Asian logograms, can take
   up either one or two cells in a terminal window. These characters are often
   referred to as <em>ambiguous characters</em>. By default, these characters
-  are displayed with a narrow width in <app>Terminal</app>, which looks better
+  are displayed with a narrow width in <app>Pano Terminal</app>, which looks better
   in situations where perfect layout is important, such as in ASCII art. You
   can change your profile preferences to display ambiguous characters as wide,
   which can be better if you are reading running prose.</p>

@@ -529,7 +529,7 @@ terminal_search_popover_class_init (TerminalSearchPopoverClass *klass)
 
   g_object_class_install_properties (gobject_class, G_N_ELEMENTS (pspecs), pspecs);
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/search-popover.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/search-popover.ui");
   gtk_widget_class_bind_template_child_private (widget_class, TerminalSearchPopover, search_entry);
   gtk_widget_class_bind_template_child_private (widget_class, TerminalSearchPopover, search_prev_button);
   gtk_widget_class_bind_template_child_private (widget_class, TerminalSearchPopover, search_next_button);

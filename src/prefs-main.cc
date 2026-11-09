@@ -142,7 +142,7 @@ main(int argc,
     chdir("/");
 #pragma GCC diagnostic pop
 
-  g_set_prgname("gnome-terminal-preferences");
+  g_set_prgname("pano-terminal-preferences");
   g_set_application_name(_("Terminal Preferences"));
 
   gs_free_option_context auto context = g_option_context_new(nullptr);
@@ -254,7 +254,7 @@ main(int argc,
     return EXIT_FAILURE;
   }
 
-  // If started from gnome-terminal-server, the "preferences" action
+  // If started from pano-terminal-server, the "preferences" action
   // will be activated to actually show the preferences dialogue. However
   // if started directly, need to show the dialogue right now.
   if (!connection) {

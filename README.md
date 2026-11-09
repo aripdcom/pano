@@ -1,7 +1,7 @@
-Pano
-====
+Pano Terminal
+=============
 
-Pano is a terminal emulator for the GNOME desktop, built with GTK 4,
+Pano Terminal is a terminal emulator for the GNOME desktop, built with GTK 4,
 libadwaita and VTE.
 
 Website: https://pano.aripd.com
@@ -11,10 +11,13 @@ It focuses on power-user features that GNOME Terminal does not offer, such
 as flexible tab placement and, on the roadmap, split panes, session restore
 and background transparency.
 
-> **Status:** early development. The code has not been renamed yet, so the
-> built programs are still called `gnome-terminal` and `gnome-terminal-server`
-> and use the `org.gnome.Terminal` application ID. Renaming is tracked in the
-> issue tracker.
+> **Status:** early development. There are no packages yet; build it from
+> source as described below.
+
+Pano Terminal can be installed next to GNOME Terminal. It uses its own
+programs (`pano-terminal`, `pano-terminal-server`), application ID
+(`com.aripd.Pano`) and settings (`/com/aripd/pano/`), so the two do not share
+profiles or preferences.
 
 Features
 --------
@@ -64,18 +67,18 @@ Pano uses a D-Bus activated server, so the client cannot simply be run from
 the build directory. Start the server with a test application ID, then open a
 window in it within 10 seconds:
 ```
-./_build/src/gnome-terminal-server --app-id test.Pano &
-./_build/src/gnome-terminal --app-id test.Pano
+./_build/src/pano-terminal-server --app-id test.Pano &
+./_build/src/pano-terminal --app-id test.Pano
 ```
 
 Debugging
 ---------
 
-Configure with `-Ddbg=true` and set `GNOME_TERMINAL_DEBUG` to the debug
-categories you want, for example:
+Configure with `-Ddbg=true` and set `PANO_DEBUG` to the debug categories
+you want, for example:
 ```
-GNOME_TERMINAL_DEBUG=selection,draw ./_build/src/gnome-terminal-server [...]
-GNOME_TERMINAL_DEBUG=all ./_build/src/gnome-terminal-server [...]
+PANO_DEBUG=selection,draw ./_build/src/pano-terminal-server [...]
+PANO_DEBUG=all ./_build/src/pano-terminal-server [...]
 ```
 The categories are listed in [`TerminalDebugFlags`](src/terminal-debug.hh).
 

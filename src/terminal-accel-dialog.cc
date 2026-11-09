@@ -353,7 +353,7 @@ terminal_accel_dialog_class_init (TerminalAccelDialogClass *klass)
 
   g_object_class_install_properties (object_class, N_PROPS, properties);
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/accel-dialog.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/accel-dialog.ui");
 
   gtk_widget_class_bind_template_child (widget_class, TerminalAccelDialog, stack);
   gtk_widget_class_bind_template_child (widget_class, TerminalAccelDialog, selection_label);

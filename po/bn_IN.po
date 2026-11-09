@@ -55,9 +55,11 @@ msgid "Use the command line"
 msgstr "কমান্ড লাইন ব্যবহার করুন"
 
 #: org.gnome.Terminal.appdata.xml.in:41
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "GNOME টার্মিন্যাল হল একটি UNIX সেল এনভায়রনমেন্ট অ্যাক্সেস করার একটি টার্মিন্যাল "
 "ইমিউলেটর অ্যাপ্লিকেশন যা আপনার সিস্টেমে উপলব্ধ প্রোগ্রামগুলি চালাতে ব্যবহার করা যেতে "
@@ -1884,11 +1886,13 @@ msgid "_Contents"
 msgstr "বিষয়বস্তু (_C)"
 
 #: src/terminal-nautilus.c:534
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "রিমোট টার্মিনালে খুলুন (_R)"
 
 #: src/terminal-nautilus.c:536
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "স্থানীয় টার্মিনালে খুলুন (_L)"
 
 #: src/terminal-nautilus.c:540 src/terminal-nautilus.c:551
@@ -1900,11 +1904,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "একটি টার্মিনালে বর্তমানে নির্বাচিত ফোল্ডার খুলুন"
 
 #: src/terminal-nautilus.c:548
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "টার্মিনালে খুলুন (_e)"
 
 #: src/terminal-nautilus.c:558
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "টার্মিনাল খুলুন (_e)"
 
 #: src/terminal-nautilus.c:559
@@ -1916,12 +1922,12 @@ msgid "C_lose Terminal"
 msgstr "টার্মিন্যাল বন্ধ করুন (_l)"
 
 #: src/terminal-options.c:307
-#, c-format
+#, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" is no longer supported in this version of gnome-terminal."
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
 "\"%s\" বিকল্পটি অবজ্ঞা করা হয়েছে এবং জিনোম-টার্মিনালের পরবর্তী সংস্করণে মুছে ফেলা "
 "হতে পারে।"
@@ -1936,10 +1942,10 @@ msgstr ""
 "বিকল্পগুলি শেষ করতে \"%s\" ব্যবহার করুন এবং এর পরে কার্যকর করতে কমান্ড লাইনটি দিন।"
 
 #: src/terminal-options.c:328 src/terminal-options.c:341
-#, c-format
+#, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" is no longer supported in this version of gnome-terminal."
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "জিনোম-টার্মিনালের এই সংস্করণে \"%s\" বিকল্পটি আর সমর্থিত নয়।"
 
 #: src/terminal-options.c:413
@@ -2144,12 +2150,12 @@ msgid "COMMAND"
 msgstr "COMMAND"
 
 #: src/terminal-options.c:1654
-msgid "GNOME Terminal Emulator"
-msgstr "GNOME Terminal এমুলেটর"
+msgid "Pano Terminal Emulator"
+msgstr "Pano Terminal এমুলেটর"
 
 #: src/terminal-options.c:1655
-msgid "Show GNOME Terminal options"
-msgstr "GNOME Terminal সংক্রান্ত বিবিধ বিকল্প প্রদর্শন করা হবে"
+msgid "Show Pano Terminal options"
+msgstr "Pano Terminal সংক্রান্ত বিবিধ বিকল্প প্রদর্শন করা হবে"
 
 #: src/terminal-options.c:1665
 msgid ""
@@ -2330,8 +2336,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "GNOME ডেস্কটপে ব্যবহাযোগ্য একটি টার্মিন্যাল এমুলেটর"
 
 #: src/terminal-util.c:236
-msgid "GNOME Terminal"
-msgstr "GNOME Terminal"
+msgid "Pano Terminal"
+msgstr "Pano Terminal"
 
 #: src/terminal-util.c:246
 msgid "translator-credits"
@@ -2343,31 +2349,34 @@ msgid "Could not open the address “%s”"
 msgstr "“%s” লক্ষ্যবস্তু খোলা যায়নি"
 
 #: src/terminal-util.c:390
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "GNOME টার্মিন্যাল একটি মুক্ত সফ্টওয়্যার: Free Software Foundation দ্বারা প্রকাশিত "
 "GNU General Public License'র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা যাবে: "
 "লাইনসেন্সের সংস্করণ ৩ অথবা (আপনার সুবিধানুযায়ী) ঊর্ধ্বতন কোনো সংস্করণের অধীন।"
 
 #: src/terminal-util.c:394
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Sound Juicer বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত হবেন, কিন্তু "
 "এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো সুনির্দিষ্ট কর্ম সাধনের "
 "জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে GNU General Public License পড়ুন।"
 
 #: src/terminal-util.c:398
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "GNOME টার্মিন্যালের সঙ্গে আপনি নিশ্চয় GNU জেনারেল পাবলিক লাইসেন্সের একটি অনুলিপি "
 "পেয়েছেন।  না পেয়ে থাকলে, দেখুন <http://www.gnu.org/licenses/>।"

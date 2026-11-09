@@ -2261,7 +2261,8 @@ msgstr "Kuri Ibirimo Mbuganyuma Ishusho kugirango Ibijyana"
 #: ../src/terminal-profile.c:1870
 #, fuzzy, c-format
 msgid ""
-"GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr "Intego- nyuguti Izina: Gushyiraho in Iboneza Ububikoshingiro ni OYA"
 
 #: ../src/terminal-profile.c:2171
@@ -2621,7 +2622,7 @@ msgid "Close All _Tabs"
 msgstr "Funga za simbuka zose"
 
 #: ../src/terminal-window.c:2740
-msgid "GNOME Terminal"
+msgid "Pano Terminal"
 msgstr ""
 
 #: ../src/terminal-window.c:2744

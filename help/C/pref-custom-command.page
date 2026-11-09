@@ -29,7 +29,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Set <app>Terminal</app> to run a command or a different shell on startup.</desc>
+    <desc>Set <app>Pano Terminal</app> to run a command or a different shell on startup.</desc>
 
   </info>
 
@@ -40,7 +40,7 @@
   <app>top</app> or a command line shell. The default shell is usually
   <app>Bash</app>.</p>
 
-  <p>You can set <app>Terminal</app> to run a command when it starts up instead
+  <p>You can set <app>Pano Terminal</app> to run a command when it starts up instead
   of awaiting input from you:</p>
 
   <steps>
@@ -65,7 +65,7 @@
       inherited from the terminal as it is a child process of the terminal.</p>
     </item>
     <item>
-      <p>Open a new <app>Terminal</app> tab or window to see how the custom
+      <p>Open a new <app>Pano Terminal</app> tab or window to see how the custom
       shell or command executes.</p>
     </item>
   </steps>

@@ -77,11 +77,12 @@ msgstr "GPL-3.0+"
 
 #: data/org.gnome.Terminal.metainfo.xml.in:40
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
-"GNOME Terminal er ein terminalemulator som gjev deg eit UNIX-skalmiljø, der "
-"du kan køyre programma som finst på systemet."
+"Pano Terminal er ein terminalemulator som gjev deg eit UNIX-skalmiljø, "
+"der du kan køyre programma som finst på systemet."
 
 #: data/org.gnome.Terminal.metainfo.xml.in:41
 msgid ""
@@ -938,8 +939,8 @@ msgstr ""
 "plassering"
 
 #: src/org.gnome.Terminal.gschema.xml:717
-msgid "Always check whether GNOME Terminal is the default terminal"
-msgstr "Alltid sjekk om GNOME Terminal er standardterminalen"
+msgid "Always check whether Pano Terminal is the default terminal"
+msgstr "Alltid sjekk om Pano Terminal er standardterminalen"
 
 #. Open new terminal in new window
 #: src/preferences.ui:14
@@ -2087,13 +2088,15 @@ msgid "_Contents"
 msgstr "_Innhald"
 
 #: src/terminal-nautilus.cc:542
+#, fuzzy
 #| msgid "Open _Terminal"
-msgid "Open in _Remote Terminal"
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "_Opne i fjernterminal"
 
 #: src/terminal-nautilus.cc:544
+#, fuzzy
 #| msgid "Open _Terminal"
-msgid "Open in _Local Terminal"
+msgid "Open in Pano Terminal (_Local)"
 msgstr "_Opne i lokal terminal"
 
 #: src/terminal-nautilus.cc:548 src/terminal-nautilus.cc:559
@@ -2105,13 +2108,15 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Opne mappa som er open akkurat no i ein terminal"
 
 #: src/terminal-nautilus.cc:556
+#, fuzzy
 #| msgid "Open _Terminal"
-msgid "Open in T_erminal"
+msgid "Open in Pano _Terminal"
 msgstr "_Opne i Terminal"
 
 #: src/terminal-nautilus.cc:566
+#, fuzzy
 #| msgid "Open _Terminal"
-msgid "Open T_erminal"
+msgid "Open Pano _Terminal"
 msgstr "_Opne Terminal"
 
 #: src/terminal-nautilus.cc:567
@@ -2126,11 +2131,11 @@ msgstr "_Lukk terminal"
 #: src/terminal-options.cc:333
 #, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
-"Valet «%s» er utgått og kan verte fjerna i ei seinare versjon av gnome-"
-"terminal."
+"Valet «%s» er utgått og kan verte fjerna i ei seinare versjon av Pano "
+"Terminal."
 
 #. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
 #: src/terminal-options.cc:344
@@ -2143,9 +2148,10 @@ msgstr ""
 
 #: src/terminal-options.cc:354 src/terminal-options.cc:367
 #, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
-"Valet «%s» vert ikkje lenger støtta i denne versjonen av gnome-terminal."
+"Valet «%s» vert ikkje lenger støtta i denne versjonen av Pano "
+"Terminal."
 
 #: src/terminal-options.cc:439
 #, c-format
@@ -2358,12 +2364,12 @@ msgid "COMMAND"
 msgstr "KOMMANDO"
 
 #: src/terminal-options.cc:1718
-msgid "GNOME Terminal Emulator"
-msgstr "GNOME Terminalemulator"
+msgid "Pano Terminal Emulator"
+msgstr "Pano Terminalemulator"
 
 #: src/terminal-options.cc:1719
-msgid "Show GNOME Terminal options"
-msgstr "Vis brukarval for GNOME Terminal"
+msgid "Show Pano Terminal options"
+msgstr "Vis brukarval for Pano Terminal"
 
 #: src/terminal-options.cc:1729
 msgid ""
@@ -2544,8 +2550,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Ein terminalemulator for GNOME-skrivebordet"
 
 #: src/terminal-util.cc:268
-msgid "GNOME Terminal"
-msgstr "GNOME Terminal"
+msgid "Pano Terminal"
+msgstr "Pano Terminal"
 
 #: src/terminal-util.cc:278
 msgid "translator-credits"
@@ -2567,23 +2573,27 @@ msgstr "Klarte ikkje opne adressa «%s»"
 #| "Free Software Foundation; either version 2 of the License, or (at your "
 #| "option) any later version."
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
-msgstr "GNOME Terminal er fri programvare: du kan spreie ho vidare og/eller endre ho under vilkåra i GNU General Public License slik den er publisert av Free Software Foundation, anten versjon 3 av lisensen, eller (etter ditt val) nokon seinare versjon."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
+msgstr ""
+"Pano Terminal er fri programvare: du kan spreie ho vidare og/eller "
+"endre ho under vilkåra i GNU General Public License slik den er "
+"publisert av Free Software Foundation, anten versjon 3 av lisensen, "
+"eller (etter ditt val) nokon seinare versjon."
 
 #: src/terminal-util.cc:426
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
-"GNOME Terminal vert distribuert i håp om at programmet er nyttig, men utan "
-"NOKON GARANTI, ikkje eingong underforstått garanti om at det er SALBART "
-"eller PASSAR TIL EIT BESTEMT FØREMÅL. Sjå GNU General Public License for "
-"fleire detaljar."
+"Pano Terminal vert distribuert i håp om at programmet er nyttig, men "
+"utan NOKON GARANTI, ikkje eingong underforstått garanti om at det er "
+"SALBART eller PASSAR TIL EIT BESTEMT FØREMÅL. Sjå GNU General Public "
+"License for fleire detaljar."
 
 #: src/terminal-util.cc:430
 #| msgid ""
@@ -2591,9 +2601,11 @@ msgstr ""
 #| "with GNOME Terminal; if not, write to the Free Software Foundation, Inc., "
 #| "51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
-msgstr "Du burde ha fått ein kopi av GNU General Public License saman med GNOME Terminal.  Om ikkje, sjå <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Du burde ha fått ein kopi av GNU General Public License saman med Pano "
+"Terminal.  Om ikkje, sjå <http://www.gnu.org/licenses/>."
 
 #: src/terminal-util.cc:1165
 msgid "“file” scheme with remote hostname not supported"
@@ -2662,8 +2674,8 @@ msgid "L_eave Full Screen"
 msgstr "_Gå ut av fullskjerm"
 
 #: src/terminal-window.cc:2293
-msgid "Set GNOME Terminal as your default terminal?"
-msgstr "Set GNOME Terminal som standardterminalen din?"
+msgid "Set Pano Terminal as your default terminal?"
+msgstr "Set Pano Terminal som standardterminalen din?"
 
 #: src/terminal-window.cc:2299
 msgid "_Yes"

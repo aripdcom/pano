@@ -1615,7 +1615,8 @@ msgstr "Опцијата „%s“ веќе не е поддржана во ов�
 
 #: ../src/terminal-options.c:188
 #: ../src/terminal-window.c:4062
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME терминал"
 
 #: ../src/terminal-options.c:208
@@ -1774,11 +1775,13 @@ msgstr "ZOOM"
 
 #: ../src/terminal-options.c:1355
 #: ../src/terminal-options.c:1358
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "GNOME емулатор за терминал"
 
 #: ../src/terminal-options.c:1359
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Покажи ги опциите на GNOME терминал"
 
 #: ../src/terminal-options.c:1369
@@ -1864,21 +1867,41 @@ msgid "Could not open the address “%s”"
 msgstr "Не можам да ја отворам адресата „%s“"
 
 #: ../src/terminal-util.c:364
+#, fuzzy
 #| msgid ""
 #| "GNOME Terminal is free software; you can redistribute it and/or modify it "
 #| "under the terms of the GNU General Public License as published by the "
 #| "Free Software Foundation; either version 2 of the License, or (at your "
 #| "option) any later version."
-msgid "GNOME Terminal is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version."
+msgid ""
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 3 of the License, or (at "
+"your option) any later version."
 msgstr "GNOME терминал е слободен софтвер; можете да го редистрибуирате/менувате под условите објаснети во  GNU General Public License објавена од страна на Free Software Foundation; или верзија 3 или секоја понова верзија на лиценцата."
 
 #: ../src/terminal-util.c:368
-msgid "GNOME Terminal is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
-msgstr "GNOME Terminal се дистрибуира со надеж дека ќе биде корисен, но без НИКАКВА гаранција; нема ни СТОКОВНОСТ или УПОТРЕБА ЗА НЕКОЈА НАМЕНА.  Видете ја GNU General Public License за повеќе детали."
+msgid ""
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
+msgstr ""
+"Pano Terminal се дистрибуира со надеж дека ќе биде корисен, но без "
+"НИКАКВА гаранција; нема ни СТОКОВНОСТ или УПОТРЕБА ЗА НЕКОЈА НАМЕНА.  "
+"Видете ја GNU General Public License за повеќе детали."
 
 #: ../src/terminal-util.c:372
-msgid "You should have received a copy of the GNU General Public License along with GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Заедно со GNOME Terminal треба да добиете и копија од општата и јавна GNU лицененца; доколку ја нема лиценцата пишете и на Фондацијата заслободен софтвер на следнава адреса: 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+msgid ""
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
+msgstr ""
+"Заедно со Pano Terminal треба да добиете и копија од општата и јавна "
+"GNU лицененца; доколку ја нема лиценцата пишете и на Фондацијата "
+"заслободен софтвер на следнава адреса: 59 Temple Place, Suite 330, "
+"Boston, MA  02111-1307  USA"
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and

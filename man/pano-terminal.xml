@@ -27,27 +27,27 @@
   of the GNU Free Documentation License along with this program.
   If not, see <https://www.gnu.org/licenses/>.
 -->
-<refentry id="gnome-terminal.1">
+<refentry id="pano-terminal.1">
   <refentryinfo>
-    <title>gnome-terminal</title>
-    <date>June 2020</date>
-    <productname>GNOME</productname>
+    <title>pano-terminal</title>
+    <date>November 2026</date>
+    <productname>Pano Terminal</productname>
   </refentryinfo>
 
   <refmeta>
-    <refentrytitle>gnome-terminal</refentrytitle>
+    <refentrytitle>pano-terminal</refentrytitle>
     <manvolnum>1</manvolnum>
     <refmiscinfo class="manual">User Commands</refmiscinfo>
   </refmeta>
 
   <refnamediv>
-    <refname>gnome-terminal</refname>
+    <refname>pano-terminal</refname>
     <refpurpose>A terminal emulator for GNOME</refpurpose>
   </refnamediv>
 
   <refsynopsisdiv>
     <cmdsynopsis>
-      <command>gnome-terminal</command>
+      <command>pano-terminal</command>
       <group rep="repeat"><replaceable>OPTION</replaceable></group>
       <group>-- <replaceable>PROGRAM</replaceable> <group rep="repeat"><replaceable>ARG</replaceable></group></group>
     </cmdsynopsis>
@@ -57,7 +57,7 @@
   <refsect1>
     <title>DESCRIPTION</title>
     <para>
-      <command>gnome-terminal</command> is a terminal emulator application for
+      <command>pano-terminal</command> is a terminal emulator application for
       accessing a UNIX shell environment which can be used to run programs
       available on your system. It supports several profiles, multiple tabs and
       implements several keyboard shortcuts.
@@ -190,14 +190,14 @@
             This option is deprecated. Instead, use <option>--</option>
             to terminate the options, and put the program and arguments to
             execute after it: for example, instead of
-            <userinput>gnome-terminal -e "python3 -q"</userinput>, prefer to use
-            <userinput>gnome-terminal -- python3 -q</userinput>.
+            <userinput>pano-terminal -e "python3 -q"</userinput>, prefer to use
+            <userinput>pano-terminal -- python3 -q</userinput>.
           </para>
           <para>
             Note that the <replaceable>COMMAND</replaceable> is not run via
             a shell: it is split into words and executed as a program. If
             shell syntax is required, use the form
-            <userinput>gnome-terminal -- sh -c '...'</userinput>.
+            <userinput>pano-terminal -- sh -c '...'</userinput>.
           </para>
         </listitem>
       </varlistentry>
@@ -212,8 +212,8 @@
           <para>
             This option is deprecated: use <option>--</option> instead.
             For example, instead of
-            <userinput>gnome-terminal -x python3 -q</userinput>, prefer to use
-            <userinput>gnome-terminal -- python3 -q</userinput>.
+            <userinput>pano-terminal -x python3 -q</userinput>, prefer to use
+            <userinput>pano-terminal -- python3 -q</userinput>.
           </para>
         </listitem>
       </varlistentry>
@@ -400,9 +400,8 @@
   <refsect1>
     <title>BUGS</title>
     <para>
-      Please read
-      <ulink url="https://wiki.gnome.org/Apps/Terminal/ReportingBugs"></ulink>
-      on how to report bugs.
+      Please report bugs at
+      <ulink url="https://github.com/aripdcom/pano/issues"></ulink>.
     </para>
   </refsect1>
 
@@ -411,14 +410,14 @@
     <para>
       To run a terminal containing an interactive Python prompt:
       <literallayout>
-        gnome-terminal --title=Python -- python3 -q
+        pano-terminal --title=Python -- python3 -q
       </literallayout>
     </para>
     <para>
       To interpret shell syntax in a terminal, either write it in a
       separate shell script, or use <literal>sh -c</literal>:
       <literallayout>
-        gnome-terminal -- sh -c 'if [ "$(id -u)" = 0 ]; then ...'
+        pano-terminal -- sh -c 'if [ "$(id -u)" = 0 ]; then ...'
       </literallayout>
     </para>
   </refsect1>
@@ -427,9 +426,7 @@
     <title>SEE ALSO</title>
     <para>
       For further information, visit the website
-      <ulink url="https://wiki.gnome.org/Apps/Terminal"></ulink>. There's a
-      list of frequently asked questions at
-      <ulink url="https://wiki.gnome.org/Apps/Terminal/FAQ"></ulink>.
+      <ulink url="https://pano.aripd.com"></ulink>.
     </para>
   </refsect1>
 </refentry>

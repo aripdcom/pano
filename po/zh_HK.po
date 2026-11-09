@@ -35,11 +35,10 @@ msgstr "使用命令列"
 
 #: ../gnome-terminal.appdata.xml.in.h:3
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
-msgstr ""
-"GNOME Terminal 是用來存取 UNIX shell 環境的終端機模擬程式，可以用來執行你系統"
-"上可用的程式。"
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
+msgstr "Pano Terminal 是用來存取 UNIX shell 環境的終端機模擬程式，可以用來執行你系統上可用的程式。"
 
 #: ../gnome-terminal.appdata.xml.in.h:4
 msgid ""
@@ -1478,11 +1477,13 @@ msgid "Thai"
 msgstr "泰語"
 
 #: ../src/terminal-nautilus.c:601
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "在遠端終端機開啟(_R)"
 
 #: ../src/terminal-nautilus.c:603
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "在本地端終端機開啟(_L)"
 
 #: ../src/terminal-nautilus.c:607 ../src/terminal-nautilus.c:618
@@ -1495,11 +1496,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "在終端機中開啟目前開啟的資料夾"
 
 #: ../src/terminal-nautilus.c:615 ../src/terminal-nautilus.c:629
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "以終端機開啟(_E)"
 
 #: ../src/terminal-nautilus.c:626
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "開啟終端機(_E)"
 
 #: ../src/terminal-nautilus.c:627
@@ -1532,11 +1535,12 @@ msgstr "開啟終端機檔案管理程式 Midnight Commander"
 
 #: ../src/terminal-options.c:224 ../src/terminal-options.c:237
 #, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
-msgstr "選項「%s」在這個版本的 gnome-terminal 已不再支援。"
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
+msgstr "選項「%s」在這個版本的 Pano Terminal 已不再支援。"
 
 #: ../src/terminal-options.c:249 ../src/terminal-util.c:217
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME 終端機"
 
 #: ../src/terminal-options.c:289
@@ -1627,11 +1631,13 @@ msgid "PROFILE-NAME"
 msgstr "設定組合名稱"
 
 #: ../src/terminal-options.c:1269 ../src/terminal-options.c:1275
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "GNOME 終端機模擬器"
 
 #: ../src/terminal-options.c:1276
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "顯示 GNOME 終端機選項"
 
 #: ../src/terminal-options.c:1286
@@ -1763,30 +1769,33 @@ msgid "Could not open the address “%s”"
 msgstr "無法開啟位址「%s」"
 
 #: ../src/terminal-util.c:369
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "GNOME 終端機是自由軟件；你可以遵照自由軟件基金會 (Free Software Foundation) "
 "出版的 GNU 通用公共許可證條款 (GNU General Public License) 第三版來修改和重新"
 "發布這一程式，或者自由選擇使用任何更新的版本。"
 
 #: ../src/terminal-util.c:373
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "發布 GNOME 終端機的目的是希望它有用，但沒有任何擔保。甚至沒有適合特定目的而隱"
 "含的擔保。更詳細的情況請參閱 GNU 通用公共許可證。"
 
 #: ../src/terminal-util.c:377
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "你應該已經和程式一起收到一份 GNU 通用公共許可證的副本。如果還沒有，請參訪 "
 "<http://www.gnu.org/licenses/>。"

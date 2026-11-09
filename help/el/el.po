@@ -114,14 +114,15 @@ msgstr "Συντομεύσεις πληκτρολογίου"
 #: C/adv-keyboard-shortcuts.page:35
 msgid ""
 "Keyboard shortcuts are combinations of keys that allow you to perform "
-"actions, such as opening the settings dialog or accessing a feature inside "
-"<app>Terminal</app> quickly. These shortcuts can be modified to suit your "
-"preferences."
+"actions, such as opening the settings dialog or accessing a feature "
+"inside <app>Pano Terminal</app> quickly. These shortcuts can be "
+"modified to suit your preferences."
 msgstr ""
-"Οι συντομεύσεις πληκτρολογίου είναι συνδυασμοί πλήκτρων που επιτρέπουν την "
-"εκτέλεση ενεργειών, όπως το άνοιγμα του διαλόγου ρυθμίσεων ή τη γρήγορη "
-"πρόσβαση μιας λειτουργίας μέσα από το <app>Τερματικό</app>. Αυτές οι "
-"συντομεύσεις μπορούν να τροποποιηθούν για να ικανοποιούν τις προτιμήσεις σας."
+"Οι συντομεύσεις πληκτρολογίου είναι συνδυασμοί πλήκτρων που επιτρέπουν "
+"την εκτέλεση ενεργειών, όπως το άνοιγμα του διαλόγου ρυθμίσεων ή τη "
+"γρήγορη πρόσβαση μιας λειτουργίας μέσα από το <app>Pano "
+"Terminal</app>. Αυτές οι συντομεύσεις μπορούν να τροποποιηθούν για να "
+"ικανοποιούν τις προτιμήσεις σας."
 
 #. (itstool) path: page/p
 #: C/adv-keyboard-shortcuts.page:40
@@ -751,15 +752,16 @@ msgstr "Συνδυασμοί χρωμάτων"
 #. (itstool) path: page/p
 #: C/app-colors.page:34
 msgid ""
-"If you do not like the default <app>Terminal</app> theme, you may want to "
-"change the colors that are used for the text and background. You can use "
-"colors from your theme, select one of the presets or use a custom scheme."
+"If you do not like the default <app>Pano Terminal</app> theme, you may "
+"want to change the colors that are used for the text and background. "
+"You can use colors from your theme, select one of the presets or use a "
+"custom scheme."
 msgstr ""
-"Εάν δεν σας αρέσει το προεπιλεγμένο θέμα του <app>Τερματικού</app>, ίσως να "
-"θέλετε να αλλάξετε τα χρησιμοποιούμενα χρώματα για το κείμενο και το "
-"παρασκήνιο. Μπορείτε να χρησιμοποιήσετε χρώματα από το θέμα σας, να "
-"επιλέξετε μία από τις προεπιλογές ή να χρησιμοποιήσετε ένα προσαρμοσμένο "
-"σχήμα."
+"Εάν δεν σας αρέσει το προεπιλεγμένο θέμα του <app>Pano Terminal</app>, "
+"ίσως να θέλετε να αλλάξετε τα χρησιμοποιούμενα χρώματα για το κείμενο "
+"και το παρασκήνιο. Μπορείτε να χρησιμοποιήσετε χρώματα από το θέμα "
+"σας, να επιλέξετε μία από τις προεπιλογές ή να χρησιμοποιήσετε ένα "
+"προσαρμοσμένο σχήμα."
 
 #. (itstool) path: section/title
 #: C/app-colors.page:39
@@ -837,10 +839,11 @@ msgstr "Προσαρμοσμένος συνδυασμός χρωμάτων"
 #. (itstool) path: section/p
 #: C/app-colors.page:89
 msgid ""
-"You can use custom colors for the text and background in <app>Terminal</app>:"
+"You can use custom colors for the text and background in <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"Μπορείτε να χρησιμοποιήσετε προσαρμοσμένα χρώματα για το κείμενο και το "
-"παρασκήνιο στο <app>Τερματικό</app>:"
+"Μπορείτε να χρησιμοποιήσετε προσαρμοσμένα χρώματα για το κείμενο και "
+"το παρασκήνιο στο <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-colors.page:99
@@ -923,11 +926,11 @@ msgstr "Αλλαγή δρομέα"
 #. (itstool) path: page/p
 #: C/app-cursor.page:34
 msgid ""
-"<app>Terminal</app> has three cursors from which to choose. To select your "
-"preferred cursor:"
+"<app>Pano Terminal</app> has three cursors from which to choose. To "
+"select your preferred cursor:"
 msgstr ""
-"Το <app>Τερματικό</app> έχει τρεις δρομείς για να διαλέξετε. Για να επιλέξτε "
-"τον προτιμώμενο δρομέα σας:"
+"Το <app>Pano Terminal</app> έχει τρεις δρομείς για να διαλέξετε. Για "
+"να επιλέξτε τον προτιμώμενο δρομέα σας:"
 
 #. (itstool) path: item/p
 #: C/app-cursor.page:39 C/app-fonts.page:62
@@ -985,10 +988,11 @@ msgstr "Κατά την επιλογή του δρομέα, η επιλογή σ
 #. (itstool) path: item/p
 #: C/app-cursor.page:63
 msgid ""
-"To return to <app>Terminal</app>, click <gui style=\"button\">Close</gui>."
+"To return to <app>Pano Terminal</app>, click <gui "
+"style=\"button\">Close</gui>."
 msgstr ""
-"Για να επιστρέψετε στο <app>Τερματικό</app>, πατήστε <gui style=\"button"
-"\">Κλείσιμο</gui>."
+"Για να επιστρέψετε στο <app>Pano Terminal</app>, πατήστε <gui "
+"style=\"button\">Κλείσιμο</gui>."
 
 #. (itstool) path: info/desc
 #: C/app-fonts.page:28
@@ -1005,12 +1009,13 @@ msgstr "Αλλαγή γραμματοσειράς και τεχνοτροπία�
 #. (itstool) path: page/p
 #: C/app-fonts.page:34
 msgid ""
-"When you work with a lot of <app>Terminal</app> text, you may want to change "
-"the default font to your preference. You have the following options:"
+"When you work with a lot of <app>Pano Terminal</app> text, you may "
+"want to change the default font to your preference. You have the "
+"following options:"
 msgstr ""
-"Όταν δουλεύετε με πολύ κείμενο στο <app>Τερματικό</app>, ίσως θελήσετε να "
-"αλλάξετε την προεπιλεγμένη γραμματοσειρά στην προτίμησή σας. Έχετε τις "
-"παρακάτω επιλογές:"
+"Όταν δουλεύετε με πολύ κείμενο στο <app>Pano Terminal</app>, ίσως "
+"θελήσετε να αλλάξετε την προεπιλεγμένη γραμματοσειρά στην προτίμησή "
+"σας. Έχετε τις παρακάτω επιλογές:"
 
 #. (itstool) path: section/title
 #: C/app-fonts.page:39
@@ -1105,12 +1110,12 @@ msgstr "Έντονο κείμενο"
 #. (itstool) path: section/p
 #: C/app-fonts.page:95
 msgid ""
-"<app>Terminal</app> allows your shell to process text such as the prompt, "
-"directory names or man page headings to appear in bold style."
+"<app>Pano Terminal</app> allows your shell to process text such as the "
+"prompt, directory names or man page headings to appear in bold style."
 msgstr ""
-"Το <app>Τερματικό</app> επιτρέπει στο κέλυφός σας να επεξεργαστείτε κείμενο "
-"όπως η προτροπή, τα ονόματα καταλόγου ή οι κεφαλίδες σελίδας εγχειριδίου για "
-"να εμφανιστεί με έντονη τεχνοτροπία."
+"Το <app>Pano Terminal</app> επιτρέπει στο κέλυφός σας να "
+"επεξεργαστείτε κείμενο όπως η προτροπή, τα ονόματα καταλόγου ή οι "
+"κεφαλίδες σελίδας εγχειριδίου για να εμφανιστεί με έντονη τεχνοτροπία."
 
 #. (itstool) path: item/p
 #: C/app-fonts.page:100
@@ -1151,26 +1156,28 @@ msgstr "Συνεδρία πλήρους οθόνης"
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:33
-msgid "Fullscreen mode allows <app>Terminal</app> to use the entire screen."
+msgid ""
+"Fullscreen mode allows <app>Pano Terminal</app> to use the entire "
+"screen."
 msgstr ""
-"Η λειτουργία πλήρους οθόνης επιτρέπει στο <app>Τερματικό</app> να "
+"Η λειτουργία πλήρους οθόνης επιτρέπει στο <app>Pano Terminal</app> να "
 "χρησιμοποιήσει όλη την οθόνη."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:35
 msgid ""
 "This mode is useful if you have a device with limited screen space and "
-"intend to work in <app>Terminal</app> for a long duration, or are working "
-"with long lines of terminal output. It temporarily hides the window "
-"decoration, allowing you to view more <link xref=\"pref-scrolling"
-"\">scrollback lines</link> on the screen."
+"intend to work in <app>Pano Terminal</app> for a long duration, or are "
+"working with long lines of terminal output. It temporarily hides the "
+"window decoration, allowing you to view more <link "
+"xref=\"pref-scrolling\">scrollback lines</link> on the screen."
 msgstr ""
-"Αυτή η κατάσταση είναι χρήσιμη εάν έχετε μια συσκευή με περιορισμένο χώρο "
-"οθόνης και σκοπεύετε να δουλέψετε στο <app>Τερματικό</app> για μεγάλη "
-"διάρκεια, ή εάν δουλεύετε με μεγάλες γραμμές της εξόδου τερματικού. Κρύβει "
-"προσωρινά τη διακόσμηση του παραθύρου, επιτρέποντας σας να προβάλετε "
-"περισσότερες <link xref=\"pref-scrolling\">γραμμές οπισθοκύλισης</link> στην "
-"οθόνη."
+"Αυτή η κατάσταση είναι χρήσιμη εάν έχετε μια συσκευή με περιορισμένο "
+"χώρο οθόνης και σκοπεύετε να δουλέψετε στο <app>Pano Terminal</app> "
+"για μεγάλη διάρκεια, ή εάν δουλεύετε με μεγάλες γραμμές της εξόδου "
+"τερματικού. Κρύβει προσωρινά τη διακόσμηση του παραθύρου, επιτρέποντας "
+"σας να προβάλετε περισσότερες <link xref=\"pref-scrolling\">γραμμές "
+"οπισθοκύλισης</link> στην οθόνη."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:41
@@ -1198,11 +1205,12 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-fullscreen.page:56
 msgid ""
-"If you have more than one <app>Terminal</app> tab open, the tab bar will be "
-"visible in the fullscreen mode."
+"If you have more than one <app>Pano Terminal</app> tab open, the tab "
+"bar will be visible in the fullscreen mode."
 msgstr ""
-"Εάν έχετε περισσότερες από μία καρτέλες <app>Τερματικού</app> ανοικτές, η "
-"γραμμή καρτελών θα είναι ορατή στην κατάσταση πλήρους οθόνης."
+"Εάν έχετε περισσότερες από μία καρτέλες <app>Pano Terminal</app> "
+"ανοικτές, η γραμμή καρτελών θα είναι ορατή στην κατάσταση πλήρους "
+"οθόνης."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:60
@@ -1223,35 +1231,37 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/app-terminal-sizes.page:28
-msgid "Change the <app>Terminal</app> window size"
-msgstr "Αλλάξτε το μεγέθος παραθύρου του <app>Τερματικού</app>"
+msgid "Change the <app>Pano Terminal</app> window size"
+msgstr "Αλλάξτε το μεγέθος παραθύρου του <app>Pano Terminal</app>"
 
 #. (itstool) path: page/title
 #: C/app-terminal-sizes.page:32
-msgid "<app>Terminal</app> sizes"
-msgstr "Μεγέθη <app>Τερματικού</app>"
+msgid "<app>Pano Terminal</app> sizes"
+msgstr "Μεγέθη <app>Pano Terminal</app>"
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:34
 msgid ""
 "If you work with certain command line applications that have minimum "
-"terminal size requirements in order to display correctly, or if you want to "
-"view long lines of terminal output with minimal line breaks on your display, "
-"you may require <app>Terminal</app> windows to be of a particular size."
+"terminal size requirements in order to display correctly, or if you "
+"want to view long lines of terminal output with minimal line breaks on "
+"your display, you may require <app>Pano Terminal</app> windows to be "
+"of a particular size."
 msgstr ""
 "Εάν δουλεύετε με συγκεκριμένες εφαρμογές γραμμής εντολών που έχουν "
-"απαιτήσεις ελάχιστου μεγέθους τερματικού για να εμφανίζονται σωστά, ή εάν "
-"θέλετε να προβάλετε μεγάλες γραμμές εξόδου τερματικού με ελάχιστες αλλαγές "
-"γραμμών στην οθόνη σας, ίσως χρειαστεί τα παράθυρα του <app>Τερματικού</app> "
-"να είναι συγκεκριμένου μεγέθους."
+"απαιτήσεις ελάχιστου μεγέθους τερματικού για να εμφανίζονται σωστά, ή "
+"εάν θέλετε να προβάλετε μεγάλες γραμμές εξόδου τερματικού με ελάχιστες "
+"αλλαγές γραμμών στην οθόνη σας, ίσως χρειαστεί τα παράθυρα του "
+"<app>Pano Terminal</app> να είναι συγκεκριμένου μεγέθους."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:40
 msgid ""
-"You can change the <app>Terminal</app> window size to some preset values:"
+"You can change the <app>Pano Terminal</app> window size to some preset "
+"values:"
 msgstr ""
-"Μπορείτε να αλλάξετε το μέγεθος του παραθύρου του <app>Τερματικού</app> σε "
-"μερικές προκαθορισμένες τιμές:"
+"Μπορείτε να αλλάξετε το μέγεθος του παραθύρου του <app>Pano "
+"Terminal</app> σε μερικές προκαθορισμένες τιμές:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:45
@@ -1286,26 +1296,28 @@ msgstr "<gui style=\"menuitem\">132×43</gui>"
 #. (itstool) path: note/p
 #: C/app-terminal-sizes.page:67
 msgid ""
-"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu access "
-"keys</gui></link>, you can access this menu by pressing <keyseq><key>Alt</"
-"key><key>T</key></keyseq> and then pressing <key>1</key> to open a "
-"<app>Terminal</app> window of size <gui>80×24</gui> and so on."
+"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu "
+"access keys</gui></link>, you can access this menu by pressing "
+"<keyseq><key>Alt</key><key>T</key></keyseq> and then pressing "
+"<key>1</key> to open a <app>Pano Terminal</app> window of size "
+"<gui>80×24</gui> and so on."
 msgstr ""
-"Εάν έχετε ενεργοποιήσει <link xref=\"pref-keyboard-access\"><gui>Πλήκτρα "
-"πρόσβασης μενού</gui></link>, μπορείτε να προσπελάσετε αυτό το μενού "
-"πατώντας <keyseq><key>Alt</key><key>T</key></keyseq> και μετά να πατήσετε "
-"<key>1</key> για να ανοίξετε ένα παράθυρο <app>Τερματικού</app> μεγέθους "
-"<gui>80×24</gui> και ούτω καθεξής."
+"Εάν έχετε ενεργοποιήσει <link "
+"xref=\"pref-keyboard-access\"><gui>Πλήκτρα πρόσβασης "
+"μενού</gui></link>, μπορείτε να προσπελάσετε αυτό το μενού πατώντας "
+"<keyseq><key>Alt</key><key>T</key></keyseq> και μετά να πατήσετε "
+"<key>1</key> για να ανοίξετε ένα παράθυρο <app>Pano Terminal</app> "
+"μεγέθους <gui>80×24</gui> και ούτω καθεξής."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:74
 msgid ""
-"If you require custom size <app>Terminal</app> windows, you can also set the "
-"window size according to your requirements:"
+"If you require custom size <app>Pano Terminal</app> windows, you can "
+"also set the window size according to your requirements:"
 msgstr ""
-"Εάν θέλετε προσαρμοσμένο μέγεθος για τα παράθυρα του <app>Τερματικού σας</"
-"app>, μπορείτε επίσης να ορίσετε το μέγεθος παραθύρου σύμφωνα με τις "
-"απαιτήσεις σας:"
+"Εάν θέλετε προσαρμοσμένο μέγεθος για τα παράθυρα του <app>Pano "
+"Terminal</app>, μπορείτε επίσης να ορίσετε το μέγεθος παραθύρου "
+"σύμφωνα με τις απαιτήσεις σας:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:83
@@ -1337,8 +1349,8 @@ msgstr "Μεγέθυνση και σμίκρυνση"
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:33
-msgid "To increase <app>Terminal</app> text size:"
-msgstr "Για να αυξήσετε το μέγεθος κειμένου του <app>Τερματικού</app>:"
+msgid "To increase <app>Pano Terminal</app> text size:"
+msgstr "Για να αυξήσετε το μέγεθος κειμένου του <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:37
@@ -1352,8 +1364,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:43
-msgid "To decrease <app>Terminal</app> text size:"
-msgstr "Για να μειώσετε το μέγεθος κειμένου του <app>Τερματικού</app>:"
+msgid "To decrease <app>Pano Terminal</app> text size:"
+msgstr "Για να μειώσετε το μέγεθος κειμένου του <app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:47
@@ -1367,10 +1379,10 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:53
-msgid "To restore <app>Terminal</app> text to default size:"
+msgid "To restore <app>Pano Terminal</app> text to default size:"
 msgstr ""
-"Για να επαναφέρετε το κείμενο του <app>Τερματικού</app> στο προεπιλεγμένο "
-"μέγεθος:"
+"Για να επαναφέρετε το κείμενο του <app>Pano Terminal</app> στο "
+"προεπιλεγμένο μέγεθος:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:57
@@ -1389,9 +1401,10 @@ msgstr "2013–2014"
 
 #. (itstool) path: info/desc
 #: C/gs-execute-commands.page:31
-msgid "Launch programs or run commands using <app>Terminal</app>"
+msgid "Launch programs or run commands using <app>Pano Terminal</app>"
 msgstr ""
-"Εκτελέστε προγράμματα ή εντολές χρησιμοποιώντας το <app>Τερματικό</app>"
+"Εκτελέστε προγράμματα ή εντολές χρησιμοποιώντας το <app>Pano "
+"Terminal</app>"
 
 #. (itstool) path: page/title
 #: C/gs-execute-commands.page:34
@@ -1401,14 +1414,14 @@ msgstr "Εκτέλεση εντολής"
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:36
 msgid ""
-"Any input entered in the <app>Terminal</app> to be executed is referred to "
-"as a <em>command</em>. You can run both command line and graphical user "
-"interface (GUI) programs from the terminal."
+"Any input entered in the <app>Pano Terminal</app> to be executed is "
+"referred to as a <em>command</em>. You can run both command line and "
+"graphical user interface (GUI) programs from the terminal."
 msgstr ""
-"Οποιαδήποτε εισαγωγή καταχωρίστηκε στο <app>Τερματικό</app> για να "
+"Οποιαδήποτε εισαγωγή καταχωρίστηκε στο <app>Pano Terminal</app> για να "
 "εκτελεστεί αναφέρεται ως <em>εντολή</em>. Μπορείτε να τρέξετε και "
-"προγράμματα γραμμής εντολών και προγράμματα διεπαφής χρήστη (GUI) από το "
-"τερματικό."
+"προγράμματα γραμμής εντολών και προγράμματα διεπαφής χρήστη (GUI) από "
+"το τερματικό."
 
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:40
@@ -1417,8 +1430,8 @@ msgstr "Για να εκτελέσετε εντολές:"
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:44
-msgid "Type the command in the <app>Terminal</app> prompt."
-msgstr "Πληκτρολογήστε την εντολή στο <app>Τερματικό</app>."
+msgid "Type the command in the <app>Pano Terminal</app> prompt."
+msgstr "Πληκτρολογήστε την εντολή στο <app>Pano Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:47
@@ -1428,16 +1441,18 @@ msgstr "Πατήστε <key>Enter</key> για να την εκτελέσετε.
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:51
 msgid ""
-"If you have a program that ends abruptly without any warning or error, you "
-"may want to run it in <app>Terminal</app>. This will allow the program to "
-"output any error or debugging messages to the <app>Terminal</app> window. "
-"This information can be helpful when filing a bug report."
+"If you have a program that ends abruptly without any warning or error, "
+"you may want to run it in <app>Pano Terminal</app>. This will allow "
+"the program to output any error or debugging messages to the <app>Pano "
+"Terminal</app> window. This information can be helpful when filing a "
+"bug report."
 msgstr ""
-"Εάν έχετε ένα πρόγραμμα που τελειώνει απότομα χωρίς καμία προειδοποίηση ή "
-"σφάλμα, ίσως να θελήσετε να το εκτελέσετε σε <app>Τερματικό</app>. Αυτό θα "
-"επιτρέψει στο πρόγραμμα να εμφανίσει οποιοδήποτε σφάλμα ή μηνύματα "
-"αποσφαλμάτωσης στο παράθυρο του <app>Τερματικού</app>. Αυτές οι πληροφορίες "
-"μπορούν να είναι χρήσιμες όταν στέλνετε μια αναφορά σφάλματος."
+"Εάν έχετε ένα πρόγραμμα που τελειώνει απότομα χωρίς καμία "
+"προειδοποίηση ή σφάλμα, ίσως να θελήσετε να το εκτελέσετε σε <app>Pano "
+"Terminal</app>. Αυτό θα επιτρέψει στο πρόγραμμα να εμφανίσει "
+"οποιοδήποτε σφάλμα ή μηνύματα αποσφαλμάτωσης στο παράθυρο του "
+"<app>Pano Terminal</app>. Αυτές οι πληροφορίες μπορούν να είναι "
+"χρήσιμες όταν στέλνετε μια αναφορά σφάλματος."
 
 #. (itstool) path: note/p
 #: C/gs-execute-commands.page:57
@@ -1451,10 +1466,10 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/gs-tabs.page:29
-msgid "Enable, add, remove and reorder <app>Terminal</app> tabs."
+msgid "Enable, add, remove and reorder <app>Pano Terminal</app> tabs."
 msgstr ""
 "Ενεργοποίηση, προσθήκη, αφαίρεση και αναδιάταξη των καρτελών του "
-"<app>Τερματικού</app>."
+"<app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/gs-tabs.page:32
@@ -1474,20 +1489,21 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/gs-tabs.page:38
 msgid ""
-"The tab bar is shown at the top a <app>Terminal</app> window that has "
-"multiple tabs open (it looks like a row of buttons). Click on a tab to "
-"switch to it. You can open multiple tabs to manage your work in "
-"<app>Terminal</app>. This will allow you to multi-task with activities such "
-"as running programs, browsing directories and editing text files in a single "
-"<app>Terminal</app> window."
+"The tab bar is shown at the top a <app>Pano Terminal</app> window that "
+"has multiple tabs open (it looks like a row of buttons). Click on a "
+"tab to switch to it. You can open multiple tabs to manage your work in "
+"<app>Pano Terminal</app>. This will allow you to multi-task with "
+"activities such as running programs, browsing directories and editing "
+"text files in a single <app>Pano Terminal</app> window."
 msgstr ""
-"Η γραμμή καρτελών εμφανίζεται στην κορυφή ενός παραθύρου <app>Τερματικού</"
-"app> που έχει πολλαπλές καρτέλες ανοικτές (φαίνεται ως μια γραμμή κουμπιών). "
-"Πατήστε σε μια καρτέλα για να την αλλάξετε. Μπορείτε να ανοίξετε πολλές "
-"καρτέλες για να διαχειριστείτε την εργασία σας στο <app>Τερματικό</app>. "
-"Αυτό θα επιτρέψει τις πολλαπλές εργασίες με ενέργειες όπως εκτέλεση "
-"προγραμμάτων, περιήγηση καταλόγων και επεξεργασία αρχείων κειμένου σε ένα "
-"ενιαίο παράθυρο <app>Τερματικού</app>."
+"Η γραμμή καρτελών εμφανίζεται στην κορυφή ενός παραθύρου <app>Pano "
+"Terminal</app> που έχει πολλαπλές καρτέλες ανοικτές (φαίνεται ως μια "
+"γραμμή κουμπιών). Πατήστε σε μια καρτέλα για να την αλλάξετε. Μπορείτε "
+"να ανοίξετε πολλές καρτέλες για να διαχειριστείτε την εργασία σας στο "
+"<app>Pano Terminal</app>. Αυτό θα επιτρέψει τις πολλαπλές εργασίες με "
+"ενέργειες όπως εκτέλεση προγραμμάτων, περιήγηση καταλόγων και "
+"επεξεργασία αρχείων κειμένου σε ένα ενιαίο παράθυρο <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:46
@@ -1496,10 +1512,10 @@ msgstr "Άνοιγμα νέας καρτέλας"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:48
-msgid "To open a new tab inside your current <app>Terminal</app> window:"
+msgid "To open a new tab inside your current <app>Pano Terminal</app> window:"
 msgstr ""
-"Για να ανοίξετε μια νέα καρτέλα μέσα στο τρέχον παράθυρο του "
-"<app>Τερματικού</app>:"
+"Για να ανοίξετε μια νέα καρτέλα μέσα στο τρέχον παράθυρο του <app>Pano "
+"Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:51
@@ -1514,10 +1530,11 @@ msgstr "Αφαίρεση καρτέλας"
 #. (itstool) path: section/p
 #: C/gs-tabs.page:90
 msgid ""
-"To close an existing tab inside your current <app>Terminal</app> window:"
+"To close an existing tab inside your current <app>Pano Terminal</app> "
+"window:"
 msgstr ""
 "Για να κλείσετε μια υπάρχουσα καρτέλα μέσα στο τρέχον παράθυρο του "
-"<app>Τερματικού</app>:"
+"<app>Pano Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:95
@@ -1593,8 +1610,10 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:135
-msgid "Move a tab to another <app>Terminal</app> window"
-msgstr "Μετακινήστε μια καρτέλα σε ένα άλλο παράθυρο του <app>Τερματικού</app>"
+msgid "Move a tab to another <app>Pano Terminal</app> window"
+msgstr ""
+"Μετακινήστε μια καρτέλα σε ένα άλλο παράθυρο του <app>Pano "
+"Terminal</app>"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:137
@@ -1614,23 +1633,25 @@ msgstr "Τοποθετήστε την δίπλα από άλλες καρτέλ�
 #. (itstool) path: note/p
 #: C/gs-tabs.page:154
 msgid ""
-"You can move a tab from one window to another by dragging the tab to the "
-"<gui>Activities</gui> hot-corner of the <gui>GNOME Shell</gui>. This will "
-"reveal each of the open <app>Terminal</app> windows. You can release the tab "
-"that you are holding over the desired <app>Terminal</app> window."
+"You can move a tab from one window to another by dragging the tab to "
+"the <gui>Activities</gui> hot-corner of the <gui>GNOME Shell</gui>. "
+"This will reveal each of the open <app>Pano Terminal</app> windows. "
+"You can release the tab that you are holding over the desired "
+"<app>Pano Terminal</app> window."
 msgstr ""
 "Μπορείτε να μετακινήσετε μια καρτέλα από ένα παράθυρο σε ένα άλλο "
 "μεταφέροντας την καρτέλα στην καυτή γωνία <gui>Ενέργειες</gui> του "
-"<gui>κελύφους GNOME</gui>. Αυτό θα αποκαλύψει καθένα από τα ανοικτά παράθυρα "
-"του <app>Τερματικού</app>. Μπορείτε να απελευθερώσετε την καρτέλα που "
-"κρατάτε πάνω από το επιθυμητό παράθυρο του <app>Τερματικού</app>."
+"<gui>κελύφους GNOME</gui>. Αυτό θα αποκαλύψει καθένα από τα ανοικτά "
+"παράθυρα του <app>Pano Terminal</app>. Μπορείτε να απελευθερώσετε την "
+"καρτέλα που κρατάτε πάνω από το επιθυμητό παράθυρο του <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:163
-msgid "Move a tab to create a new <app>Terminal</app> window"
+msgid "Move a tab to create a new <app>Pano Terminal</app> window"
 msgstr ""
 "Μετακίνηση μιας καρτέλας για τη δημιουργία ενός νέου παραθύρου του "
-"<app>Τερματικού</app>"
+"<app>Pano Terminal</app>"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:165
@@ -1639,9 +1660,10 @@ msgstr "Για τη δημιουργία ενός νέου παραθύρου α
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:171
-msgid "Drag the tab out of the current <app>Terminal</app> window."
+msgid "Drag the tab out of the current <app>Pano Terminal</app> window."
 msgstr ""
-"Μεταφέρτε την καρτέλα έξω από το τρέχον παράθυρο του <app>Τερματικού</app>."
+"Μεταφέρτε την καρτέλα έξω από το τρέχον παράθυρο του <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: info/title
 #: C/index.page:8
@@ -1662,14 +1684,16 @@ msgstr "Jim Campbell"
 
 #. (itstool) path: info/desc
 #: C/index.page:29
-msgid "Set up and use the highly customizable GNOME terminal emulator."
+#, fuzzy
+msgid "Set up and use the highly customizable Pano Terminal emulator."
 msgstr ""
 "Ρυθμίστε και χρησιμοποιήστε τον έντονα προσαρμόσιμο προσομοιωτή τερματικού "
 "GNOME."
 
 #. (itstool) path: page/title
 #: C/index.page:33
-msgid "<_:media-1/> Terminal Help"
+#, fuzzy
+msgid "<_:media-1/> Pano Terminal Help"
 msgstr "<_:media-1/> Βοήθεια Τερματικού"
 
 #. (itstool) path: section/title
@@ -1709,16 +1733,13 @@ msgstr "Επίλυση προβλημάτων"
 #. whatever you like once you have updated your copy of the file.
 #: C/introduction.page:44
 msgctxt "_"
-msgid ""
-"external ref='figures/gnome-terminal.png' "
-"md5='835c028558c16a9c263aaacfe5a1f81d'"
-msgstr ""
-"external ref='figures/gnome-terminal.png' "
-"md5='835c028558c16a9c263aaacfe5a1f81d'"
+msgid "external ref='figures/pano.png' md5='835c028558c16a9c263aaacfe5a1f81d'"
+msgstr "external ref='figures/pano.png' md5='835c028558c16a9c263aaacfe5a1f81d'"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:29
-msgid "Learn about the GNOME terminal emulator."
+#, fuzzy
+msgid "Learn about the Pano Terminal emulator."
 msgstr "Μάθετε για τον προσομοιωτή τερματικού GNOME."
 
 #. (itstool) path: page/title
@@ -1729,30 +1750,34 @@ msgstr "Εισαγωγή"
 #. (itstool) path: page/p
 #: C/introduction.page:34
 msgid ""
-"<app>Terminal</app> is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your system."
+"<app>Pano Terminal</app> is a terminal emulator application for "
+"accessing a UNIX shell environment which can be used to run programs "
+"available on your system."
 msgstr ""
-"Το <app>Τερματικό</app> είναι ένας εξομοιωτής τερματικού για πρόσβαση ενός "
-"περιβάλλοντος κελύφους UNIX, που μπορεί να χρησιμοποιηθεί για εκτέλεση των "
-"διαθέσιμων προγραμμάτων στο σύστημά σας."
+"Το <app>Pano Terminal</app> είναι ένας εξομοιωτής τερματικού για "
+"πρόσβαση ενός περιβάλλοντος κελύφους UNIX, που μπορεί να "
+"χρησιμοποιηθεί για εκτέλεση των διαθέσιμων προγραμμάτων στο σύστημά "
+"σας."
 
 #. (itstool) path: page/p
 #: C/introduction.page:38
 msgid ""
-"<app>Terminal</app> supports escape sequences that control cursor position "
-"and colors."
+"<app>Pano Terminal</app> supports escape sequences that control cursor "
+"position and colors."
 msgstr ""
-"Το <app>Τερματικό</app> υποστηρίζει ακολουθίες διαφυγής που ελέγχουν τη θέση "
-"του δρομέα και τα χρώματα."
+"Το <app>Pano Terminal</app> υποστηρίζει ακολουθίες διαφυγής που "
+"ελέγχουν τη θέση του δρομέα και τα χρώματα."
 
 #. (itstool) path: figure/title
 #: C/introduction.page:42
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Τερματικό GNOME"
 
 #. (itstool) path: figure/desc
 #: C/introduction.page:43
-msgid "Screenshot of GNOME <app>Terminal</app>"
+#, fuzzy
+msgid "Screenshot of <app>Pano Terminal</app>"
 msgstr "Στιγμιότυπο του <app>Τερματικού</app> GNOME"
 
 #. (itstool) path: p/link
@@ -1827,13 +1852,14 @@ msgstr "Επισκόπηση ενός τερματικού"
 #. (itstool) path: page/p
 #: C/overview.page:26
 msgid ""
-"<app>Terminal</app> is a terminal program for <gui>GNOME</gui>. The "
-"following terms and their descriptions will help you to be familiar with "
-"<app>Terminal</app> and its capabilities."
+"<app>Pano Terminal</app> is a terminal program for <gui>GNOME</gui>. "
+"The following terms and their descriptions will help you to be "
+"familiar with <app>Pano Terminal</app> and its capabilities."
 msgstr ""
-"Το <app>Τερματικό</app> είναι ένα πρόγραμμα τερματικού για το <gui>GNOME</"
-"gui>. Οι ακόλουθοι όροι και οι περιγραφές τους θα σας βοηθήσουν να "
-"εξοικειωθείτε με το <app>Τερματικό</app> και τις δυνατότητές του."
+"Το <app>Pano Terminal</app> είναι ένα πρόγραμμα τερματικού για το "
+"<gui>GNOME</gui>. Οι ακόλουθοι όροι και οι περιγραφές τους θα σας "
+"βοηθήσουν να εξοικειωθείτε με το <app>Pano Terminal</app> και τις "
+"δυνατότητές του."
 
 #. (itstool) path: item/title
 #: C/overview.page:32
@@ -1903,11 +1929,13 @@ msgstr "VTE"
 
 #. (itstool) path: item/p
 #: C/overview.page:56
+#, fuzzy
 msgid ""
-"Virtual Terminal Environment (VTE) is a terminal emulator which emulates a "
-"text terminal inside a graphical user interface (GUI) environment. "
-"<app>Terminal</app> is largely based on the <app>VTE</app>. <app>VTE</app> "
-"has widgets that implement a fully functional terminal emulator."
+"Virtual Terminal Environment (VTE) is a terminal emulator which "
+"emulates a text terminal inside a graphical user interface (GUI) "
+"environment. <app>Pano Terminal</app> is largely based on the "
+"<app>VTE</app>. <app>VTE</app> has widgets that implement a fully "
+"functional terminal emulator."
 msgstr ""
 "Περιβάλλον εικονικού τερματικού (VTE) είναι ένας εξομοιωτής τερματικού που "
 "εξομοιώνει ένα τερματικό κειμένου μέσα σε ένα περιβάλλον γραφικής διεπαφής "
@@ -2006,13 +2034,13 @@ msgstr ""
 
 #. (itstool) path: page/title
 #: C/pref.page:18
-msgid "<app>Terminal</app> preferences"
-msgstr "Προτιμήσεις <app>Τερματικού</app>"
+msgid "<app>Pano Terminal</app> preferences"
+msgstr "Προτιμήσεις <app>Pano Terminal</app>"
 
 #. (itstool) path: info/desc
 #: C/pref-bell.page:28
-msgid "Enable audible notification in <app>Terminal</app>"
-msgstr "Ενεργοποιήστε την ηχητική ειδοποίηση στο <app>Τερματικό</app>"
+msgid "Enable audible notification in <app>Pano Terminal</app>"
+msgstr "Ενεργοποιήστε την ηχητική ειδοποίηση στο <app>Pano Terminal</app>"
 
 #. (itstool) path: page/title
 #: C/pref-bell.page:32
@@ -2022,18 +2050,19 @@ msgstr "Ορισμός ηχητικού κουδουνιού"
 #. (itstool) path: page/p
 #: C/pref-bell.page:34
 msgid ""
-"<app>Terminal</app> can sound an audible bell to indicate events in "
-"<app>Terminal</app> windows and tabs. For example, the bell will sound when "
-"the <key>Tab</key> is pressed to auto-complete a command, when a command has "
-"finished executing, or when a command ends execution with a warning, error "
-"or notification."
+"<app>Pano Terminal</app> can sound an audible bell to indicate events "
+"in <app>Pano Terminal</app> windows and tabs. For example, the bell "
+"will sound when the <key>Tab</key> is pressed to auto-complete a "
+"command, when a command has finished executing, or when a command ends "
+"execution with a warning, error or notification."
 msgstr ""
-"Το <app>Τερματικό</app> μπορεί να δώσει μια ακουστική ειδοποίηση για να "
-"δείξει συμβάντα στα παράθυρα και τις καρτέλες του <app>Τερματικού</app>. Για "
-"παράδειγμα, το κουδούνι θα ηχήσει όταν ο <key>στηλοθέτης</key> είναι "
-"πατημένος για αυτόματη συμπλήρωση μιας εντολής, όταν μια εντολή έχει "
-"τελειώσει την εκτέλεσή της, ή όταν μια εντολή τελειώνει την εκτέλεση με μια "
-"προειδοποίηση, ένα σφάλμα ή μια ειδοποίηση."
+"Το <app>Pano Terminal</app> μπορεί να δώσει μια ακουστική ειδοποίηση "
+"για να δείξει συμβάντα στα παράθυρα και τις καρτέλες του <app>Pano "
+"Terminal</app>. Για παράδειγμα, το κουδούνι θα ηχήσει όταν ο "
+"<key>στηλοθέτης</key> είναι πατημένος για αυτόματη συμπλήρωση μιας "
+"εντολής, όταν μια εντολή έχει τελειώσει την εκτέλεσή της, ή όταν μια "
+"εντολή τελειώνει την εκτέλεση με μια προειδοποίηση, ένα σφάλμα ή μια "
+"ειδοποίηση."
 
 #. (itstool) path: page/p
 #: C/pref-bell.page:40
@@ -2072,11 +2101,11 @@ msgstr "2013-2014"
 #. (itstool) path: info/desc
 #: C/pref-custom-exit.page:30
 msgid ""
-"Set the behavior of <app>Terminal</app> when a custom command or the default "
-"shell exits."
+"Set the behavior of <app>Pano Terminal</app> when a custom command or "
+"the default shell exits."
 msgstr ""
-"Ορίστε τη συμπεριφορά του <app>Τερματικού</app> όταν μια προσαρμοσμένη "
-"εντολή ή το προεπιλεγμένο κέλυφος εξέρχεται."
+"Ορίστε τη συμπεριφορά του <app>Pano Terminal</app> όταν μια "
+"προσαρμοσμένη εντολή ή το προεπιλεγμένο κέλυφος εξέρχεται."
 
 #. (itstool) path: page/title
 #: C/pref-custom-exit.page:34
@@ -2133,24 +2162,27 @@ msgstr "Η ρύθμιση θα αποθηκευτεί αυτόματα όταν 
 #. (itstool) path: note/p
 #: C/pref-custom-exit.page:64
 msgid ""
-"If you have <link xref=\"pref-custom-command\">set a custom command</link> "
-"that is non-interactive, have set the exit behavior to <gui>Exit the "
-"terminal</gui>, and have set the profile to be the default profile, "
-"<app>Terminal</app> may exit before you can see the output of the command."
+"If you have <link xref=\"pref-custom-command\">set a custom "
+"command</link> that is non-interactive, have set the exit behavior to "
+"<gui>Exit the terminal</gui>, and have set the profile to be the "
+"default profile, <app>Pano Terminal</app> may exit before you can see "
+"the output of the command."
 msgstr ""
 "Εάν έχετε <link xref=\"pref-custom-command\">ορίσει μια προσαρμοσμένη "
-"εντολή</link> που δεν είναι διαδραστική και έχετε ορίσει τη συμπεριφορά "
-"εξόδου σε <gui>Έξοδος από το τερματικό</gui>, καθώς και την κατατομή να "
-"είναι η προεπιλεγμένο προφίλ, το <app>Τερματικό</app> μπορεί να εξέλθει πριν "
-"να μπορέσετε να δείτε την έξοδο της εντολής."
+"εντολή</link> που δεν είναι διαδραστική και έχετε ορίσει τη "
+"συμπεριφορά εξόδου σε <gui>Έξοδος από το τερματικό</gui>, καθώς και "
+"την κατατομή να είναι η προεπιλεγμένο προφίλ, το <app>Pano "
+"Terminal</app> μπορεί να εξέλθει πριν να μπορέσετε να δείτε την έξοδο "
+"της εντολής."
 
 #. (itstool) path: info/desc
 #: C/pref-custom-command.page:31
 msgid ""
-"Set <app>Terminal</app> to run a command or a different shell on startup."
+"Set <app>Pano Terminal</app> to run a command or a different shell on "
+"startup."
 msgstr ""
-"Ορίστε το <app>Τερματικό</app> να εκτελέσει μια εντολή ή ένα διαφορετικό "
-"κέλυφος στη εκκίνηση."
+"Ορίστε το <app>Pano Terminal</app> να εκτελέσει μια εντολή ή ένα "
+"διαφορετικό κέλυφος στη εκκίνηση."
 
 #. (itstool) path: page/title
 #: C/pref-custom-command.page:35
@@ -2173,11 +2205,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:42
 msgid ""
-"You can set <app>Terminal</app> to run a command when it starts up instead "
-"of awaiting input from you:"
+"You can set <app>Pano Terminal</app> to run a command when it starts "
+"up instead of awaiting input from you:"
 msgstr ""
-"Μπορείτε να ορίσετε το <app>Τερματικό</app> να εκτελέσει μια εντολή όταν "
-"ξεκινά αντί να περιμένει μια εισαγωγή από εσάς:"
+"Μπορείτε να ορίσετε το <app>Pano Terminal</app> να εκτελέσει μια "
+"εντολή όταν ξεκινά αντί να περιμένει μια εισαγωγή από εσάς:"
 
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:52
@@ -2207,11 +2239,12 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:61
 msgid ""
-"Open a new <app>Terminal</app> tab or window to see how the custom shell or "
-"command executes."
+"Open a new <app>Pano Terminal</app> tab or window to see how the "
+"custom shell or command executes."
 msgstr ""
-"Ανοίξτε μια νέα καρτέλα <app>Τερματικού</app> ή παραθύρου για να δείτε πώς "
-"το προσαρμοσμένο κέλυφος ή η προσαρμοσμένη εντολή εκτελείται."
+"Ανοίξτε μια νέα καρτέλα <app>Pano Terminal</app> ή παραθύρου για να "
+"δείτε πώς το προσαρμοσμένο κέλυφος ή η προσαρμοσμένη εντολή "
+"εκτελείται."
 
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:66
@@ -2246,12 +2279,12 @@ msgstr "Κωδικοποίηση χαρακτήρων"
 #. (itstool) path: page/p
 #: C/pref-encoding.page:33
 msgid ""
-"The default <em>character encoding</em> is usually UTF-8. You may want to "
-"change character encoding in <app>Terminal</app> if you:"
+"The default <em>character encoding</em> is usually UTF-8. You may want "
+"to change character encoding in <app>Pano Terminal</app> if you:"
 msgstr ""
-"Η προεπιλεγμένη <em>κωδικοποίηση χαρακτήρων</em> είναι συνήθως UTF-8. Ίσως "
-"θελήσετε να αλλάξετε την κωδικοποίηση χαρακτήρων στο <app>Τερματικό</app> "
-"εάν:"
+"Η προεπιλεγμένη <em>κωδικοποίηση χαρακτήρων</em> είναι συνήθως UTF-8. "
+"Ίσως θελήσετε να αλλάξετε την κωδικοποίηση χαρακτήρων στο <app>Pano "
+"Terminal</app> εάν:"
 
 #. (itstool) path: item/p
 #: C/pref-encoding.page:38
@@ -2325,11 +2358,11 @@ msgstr "Επιλέξτε τις κωδικοποιήσεις που θέλετε
 #. (itstool) path: item/p
 #: C/pref-encoding.page:81
 msgid ""
-"Click <gui style=\"button\">Close</gui> to quit the dialog and return to "
-"<app>Terminal</app>."
+"Click <gui style=\"button\">Close</gui> to quit the dialog and return "
+"to <app>Pano Terminal</app>."
 msgstr ""
 "Πατήστε <gui style=\"button\">Κλείσιμο</gui> για να εγκαταλείψετε τον "
-"διάλογο και να επιστρέψετε στο <app>Τερματικό</app>."
+"διάλογο και να επιστρέψετε στο <app>Pano Terminal</app>."
 
 #. (itstool) path: note/p
 #: C/pref-encoding.page:87 C/pref-profile-encoding.page:52
@@ -2342,10 +2375,10 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-keyboard-access.page:29
-msgid "Navigate around <app>Terminal</app> menus using keyboard keys."
+msgid "Navigate around <app>Pano Terminal</app> menus using keyboard keys."
 msgstr ""
-"Περιηγηθείτε στα μενού του <app>Τερματικού</app> χρησιμοποιώντας τα πλήκτρα "
-"του πληκτρολογίου."
+"Περιηγηθείτε στα μενού του <app>Pano Terminal</app> χρησιμοποιώντας τα "
+"πλήκτρα του πληκτρολογίου."
 
 #. (itstool) path: page/title
 #: C/pref-keyboard-access.page:32
@@ -2364,15 +2397,15 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-keyboard-access.page:39
 msgid ""
-"You can navigate the <app>Terminal</app> menu using a combination of keys "
-"that are called <em>mnemonics</em> or a special key that takes you directly "
-"to the first menu in the menubar which is called a <em>menu accelerator key</"
-"em>."
+"You can navigate the <app>Pano Terminal</app> menu using a combination "
+"of keys that are called <em>mnemonics</em> or a special key that takes "
+"you directly to the first menu in the menubar which is called a "
+"<em>menu accelerator key</em>."
 msgstr ""
-"Μπορείτε να περιηγηθείτε στο μενού του <app>τερματικού</app> χρησιμοποιώντας "
-"έναν συνδυασμό πλήκτρων που λέγονται <em>μνημονικά</em> ή ένα ειδικό πλήκτρο "
-"που σας πάει αμέσως στο πρώτο μενού στη γραμμή μενού που λέγεται <em>πλήκτρο "
-"επιταχυντή μενού</em>."
+"Μπορείτε να περιηγηθείτε στο μενού του <app>Pano Terminal</app> "
+"χρησιμοποιώντας έναν συνδυασμό πλήκτρων που λέγονται "
+"<em>μνημονικά</em> ή ένα ειδικό πλήκτρο που σας πάει αμέσως στο πρώτο "
+"μενού στη γραμμή μενού που λέγεται <em>πλήκτρο επιταχυντή μενού</em>."
 
 #. (itstool) path: section/title
 #: C/pref-keyboard-access.page:45
@@ -2382,14 +2415,16 @@ msgstr "Μνημονικά"
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:47
 msgid ""
-"<app>Terminal</app> menu can be accessed by combining the <key>Alt</key> key "
-"and a letter of the menu item. The letter that you need to use to access the "
-"menu will be underlined when you hold down the <key>Alt</key>."
+"<app>Pano Terminal</app> menu can be accessed by combining the "
+"<key>Alt</key> key and a letter of the menu item. The letter that you "
+"need to use to access the menu will be underlined when you hold down "
+"the <key>Alt</key>."
 msgstr ""
-"Το μενού του <app>Τερματικό</app> μπορεί να προσπελαστεί συνδυάζοντας το "
-"πλήκτρο <key>Alt</key> και ένα γράμμα του στοιχείου μενού. Το γράμμα που "
-"χρειάζεστε να χρησιμοποιήσετε για να προσπελάσετε το μενού θα είναι "
-"υπογραμμισμένο όταν κρατάτε πατημένο το <key>Alt</key>."
+"Το μενού του <app>Pano Terminal</app> μπορεί να προσπελαστεί "
+"συνδυάζοντας το πλήκτρο <key>Alt</key> και ένα γράμμα του στοιχείου "
+"μενού. Το γράμμα που χρειάζεστε να χρησιμοποιήσετε για να προσπελάσετε "
+"το μενού θα είναι υπογραμμισμένο όταν κρατάτε πατημένο το "
+"<key>Alt</key>."
 
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:52
@@ -2482,20 +2517,20 @@ msgstr "Για να επαναφέρετε τη γραμμή μενού:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:50
 msgid ""
-"Right click in <app>Terminal</app> and select <gui style=\"menuitem\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Show Menubar</gui>."
 msgstr ""
-"Με δεξί κλικ στο <app>Τερματικό</app> επιλέξτε <gui style=\"menuitem"
-"\">Εμφάνιση γραμμής μενού</gui>."
+"Με δεξί κλικ στο <app>Pano Terminal</app> επιλέξτε <gui "
+"style=\"menuitem\">Εμφάνιση γραμμής μενού</gui>."
 
 #. (itstool) path: page/p
 #: C/pref-menubar.page:55
 msgid ""
-"To enable the menubar by default in all <app>Terminal</app> windows that you "
-"open:"
+"To enable the menubar by default in all <app>Pano Terminal</app> "
+"windows that you open:"
 msgstr ""
-"Για να ενεργοποιήσετε τη γραμμή μενού από προεπιλογή σε όλα τα παράθυρα του "
-"<app>Τερματικού</app> που ανοίγετε:"
+"Για να ενεργοποιήσετε τη γραμμή μενού από προεπιλογή σε όλα τα "
+"παράθυρα του <app>Pano Terminal</app> που ανοίγετε:"
 
 #. (itstool) path: item/p
 #: C/pref-menubar.page:64
@@ -2525,12 +2560,14 @@ msgstr "Διαχείριση προφίλ"
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:40
+#, fuzzy
 msgid ""
-"A profile is a collection of <app>Terminal</app> settings. <app>Terminal</"
-"app> supports multiple profiles. You can configure <app>Terminal</app> "
-"profiles to <link xref=\"pref-custom-command\">run a custom command or "
-"shell</link>, set a profile exclusively to connect to remote computers using "
-"SSH or set a profile that launches a <app>GNU Screen</app> session."
+"A profile is a collection of <app>Pano Terminal</app> settings. "
+"<app>Pano Terminal</app> supports multiple profiles. You can configure "
+"<app>Pano Terminal</app> profiles to <link "
+"xref=\"pref-custom-command\">run a custom command or shell</link>, set "
+"a profile exclusively to connect to remote computers using SSH or set "
+"a profile that launches a <app>GNU Screen</app> session."
 msgstr ""
 "Ένα προφίλ είναι μια συλλογή ρυθμίσεων του <app>Τερματικού</app>. Το "
 "<app>Τερματικό</app> υποστηρίζει πολλαπλά προφίλ. Μπορείτε να ρυθμίσετε τα "
@@ -2542,8 +2579,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:47
-msgid "The available <app>Terminal</app> settings include:"
-msgstr "Οι διαθέσιμες ρυθμίσεις του <app>Τερματικού</app> περιλαμβάνουν:"
+msgid "The available <app>Pano Terminal</app> settings include:"
+msgstr "Οι διαθέσιμες ρυθμίσεις του <app>Pano Terminal</app> περιλαμβάνουν:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:51
@@ -2589,10 +2626,11 @@ msgstr "Ορισμός προεπιλεγμένου προφίλ"
 #: C/pref-profiles.page:72
 msgid ""
 "The default profile is a collection of profile settings applied on the "
-"launch of every <app>Terminal</app> tab or window."
+"launch of every <app>Pano Terminal</app> tab or window."
 msgstr ""
-"Το προεπιλεγμένο προφίλ είναι μια συλλογή ρυθμίσεων προφίλ που εφαρμόζονται "
-"στην έναρξη κάθε καρτέλας <app>Τερματικού</app> ή παραθύρου."
+"Το προεπιλεγμένο προφίλ είναι μια συλλογή ρυθμίσεων προφίλ που "
+"εφαρμόζονται στην έναρξη κάθε καρτέλας <app>Pano Terminal</app> ή "
+"παραθύρου."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:77 C/pref-profiles.page:170 C/pref-profiles.page:250
@@ -2621,14 +2659,15 @@ msgstr "Επιλογή προφίλ"
 #. (itstool) path: section/p
 #: C/pref-profiles.page:92
 msgid ""
-"You can change the profile in your current <app>Terminal</app> tab or window "
-"by selecting a profile from <guiseq><gui style=\"menu\">Terminal</gui> <gui "
-"style=\"menuitem\">Change Profile</gui></guiseq>."
+"You can change the profile in your current <app>Pano Terminal</app> "
+"tab or window by selecting a profile from <guiseq><gui "
+"style=\"menu\">Terminal</gui> <gui style=\"menuitem\">Change "
+"Profile</gui></guiseq>."
 msgstr ""
 "Μπορείτε να αλλάξετε το προφίλ στην τρέχουσα καρτέλα ή παράθυρο του "
-"<app>Τερματικού</app> επιλέγοντας μια κατατομή από το <guiseq><gui style="
-"\"menu\">Τερματικό</gui> <gui style=\"menuitem\">Αλλαγή προφίλ</gui></"
-"guiseq>."
+"<app>Pano Terminal</app> επιλέγοντας μια κατατομή από το <guiseq><gui "
+"style=\"menu\">Τερματικό</gui> <gui style=\"menuitem\">Αλλαγή "
+"προφίλ</gui></guiseq>."
 
 #. (itstool) path: section/title
 #: C/pref-profiles.page:99
@@ -2798,22 +2837,22 @@ msgstr "Επεξεργασία προφίλ"
 #. (itstool) path: note/p
 #: C/pref-profiles.page:200
 msgid ""
-"If the default profile is edited, it cannot be restored to its original "
-"settings! If you have not already created any other <app>Terminal</app> "
-"profiles and have customized the default profile, <app>Terminal</app> "
-"<em>may</em> become unusable should any settings cause problems. It is "
-"recommended that you <link xref=\"#create-profile-from-existing\">create a "
-"copy of the default profile</link> then edit the copy to create a custom "
-"profile."
+"If the default profile is edited, it cannot be restored to its "
+"original settings! If you have not already created any other <app>Pano "
+"Terminal</app> profiles and have customized the default profile, "
+"<app>Pano Terminal</app> <em>may</em> become unusable should any "
+"settings cause problems. It is recommended that you <link "
+"xref=\"#create-profile-from-existing\">create a copy of the default "
+"profile</link> then edit the copy to create a custom profile."
 msgstr ""
-"Αν το προεπιλεγμένο προφίλ επεξεργασθεί, δεν θα μπορεί να ανακτησεί τις "
-"αρχικές ρυθμίσεις! Αν δεν έχετε ήδη δημιουργήσει οποιαδήποτε άλλα προφίλ για "
-"το <app>Τερματικό</app> και έχετε προσαρμόσει το προεπιλεγμένο προφίλ, το "
-"<app>Τερματικό</app> <em>μπορεί</em> να γίνει άχρηστο αν οποιαδήποτε ρύθμιση "
-"προκαλέσει προβλήματα. Συνιστάται η <link xref=\"#create-profile-from-"
-"existing\">δημιουργία αντιγράφου του προεπιλεγμένου προφίλ</link>, και "
-"έπειτα η επεξεργασία του αντιγράφου για δημιουργία ενός προσαρμοσμένου "
-"προφίλ."
+"Αν το προεπιλεγμένο προφίλ επεξεργασθεί, δεν θα μπορεί να ανακτησεί "
+"τις αρχικές ρυθμίσεις! Αν δεν έχετε ήδη δημιουργήσει οποιαδήποτε άλλα "
+"προφίλ για το <app>Pano Terminal</app> και έχετε προσαρμόσει το "
+"προεπιλεγμένο προφίλ, το <app>Pano Terminal</app> <em>μπορεί</em> να "
+"γίνει άχρηστο αν οποιαδήποτε ρύθμιση προκαλέσει προβλήματα. Συνιστάται "
+"η <link xref=\"#create-profile-from-existing\">δημιουργία αντιγράφου "
+"του προεπιλεγμένου προφίλ</link>, και έπειτα η επεξεργασία του "
+"αντιγράφου για δημιουργία ενός προσαρμοσμένου προφίλ."
 
 #. (itstool) path: section/p
 #: C/pref-profiles.page:209
@@ -2829,45 +2868,48 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-profiles.page:215
 msgid ""
-"Select <link xref=\"app-fonts\">font</link>, <link xref=\"app-cursor"
-"\">cursor shapes</link> and <link xref=\"app-terminal-sizes\"><app>Terminal</"
-"app> size</link>."
+"Select <link xref=\"app-fonts\">font</link>, <link "
+"xref=\"app-cursor\">cursor shapes</link> and <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> size</link>."
 msgstr ""
-"Επιλέξτε <link xref=\"app-fonts\">Γραμματοσειρά</link>, <link xref=\"app-"
-"cursor\">Σχήματα δρομέα</link> και μέγεθος <link xref=\"app-terminal-sizes"
-"\"><app>Τερματικού</app> </link>."
+"Επιλέξτε <link xref=\"app-fonts\">Γραμματοσειρά</link>, <link "
+"xref=\"app-cursor\">Σχήματα δρομέα</link> και μέγεθος <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> </link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:220
 msgid ""
-"You may also change behavior of <app>Terminal</app> on <link xref=\"pref-"
-"custom-exit\">command exit</link>, set a <link xref=\"pref-login-shell"
-"\">custom login shell</link> or change <link xref=\"pref-scrolling"
-"\">scrollbar preferences</link>."
+"You may also change behavior of <app>Pano Terminal</app> on <link "
+"xref=\"pref-custom-exit\">command exit</link>, set a <link "
+"xref=\"pref-login-shell\">custom login shell</link> or change <link "
+"xref=\"pref-scrolling\">scrollbar preferences</link>."
 msgstr ""
-"Μπορεί επίσης να αλλάξετε τη συμπεριφορά του <app>Τερματικού</app> στο <link "
-"xref=\"pref-custom-exit\">εντολή εξόδου</link>, ορίστε ένα <link xref=\"pref-"
-"login-shell\">προσαρμοσμένο κέλυφος σύνδεσης</link> ή αλλάξτε τις <link xref="
-"\"pref-scrolling\">προτιμήσεις γραμμής κύλισης</link>."
+"Μπορεί επίσης να αλλάξετε τη συμπεριφορά του <app>Pano Terminal</app> "
+"στο <link xref=\"pref-custom-exit\">εντολή εξόδου</link>, ορίστε ένα "
+"<link xref=\"pref-login-shell\">προσαρμοσμένο κέλυφος σύνδεσης</link> "
+"ή αλλάξτε τις <link xref=\"pref-scrolling\">προτιμήσεις γραμμής "
+"κύλισης</link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:226
 msgid ""
-"To change the <app>Terminal</app> background and text colors, see <link xref="
-"\"app-colors\"><app>Terminal</app> color schemes</link>."
+"To change the <app>Pano Terminal</app> background and text colors, see "
+"<link xref=\"app-colors\"><app>Pano Terminal</app> color "
+"schemes</link>."
 msgstr ""
-"Για να αλλάξετε το παρασκήνιο και το χρώμα κειμένου του <app>Τερματικού</"
-"app>, δείτε <link xref=\"app-colors\">Συνδυασμοί χρωμάτων του "
-"<app>Τερματικού</app></link>."
+"Για να αλλάξετε το παρασκήνιο και το χρώμα κειμένου του <app>Pano "
+"Terminal</app>, δείτε <link xref=\"app-colors\">Συνδυασμοί χρωμάτων "
+"του <app>Pano Terminal</app></link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:230
 msgid ""
-"Changes to profile are saved immediately. To return to <app>Terminal</app>, "
-"click <gui style=\"button\">Close</gui>."
+"Changes to profile are saved immediately. To return to <app>Pano "
+"Terminal</app>, click <gui style=\"button\">Close</gui>."
 msgstr ""
 "Οι αλλαγές στο προφίλ αποθηκεύονται αμέσως. Για επιστροφή στο "
-"<app>Τερματικό</app>, πατήστε <gui style=\"button\">Κλείσιμο</gui>."
+"<app>Pano Terminal</app>, πατήστε <gui "
+"style=\"button\">Κλείσιμο</gui>."
 
 #. (itstool) path: note/p
 #: C/pref-profiles.page:236
@@ -2959,23 +3001,24 @@ msgstr "Οι χαρακτήρες φαίνονται υπερβολικά στε
 #. (itstool) path: page/p
 #: C/pref-profile-char-width.page:29
 msgid ""
-"Some characters, such as some Greek letters and Asian logograms, can take up "
-"either one or two cells in a terminal window. These characters are often "
-"referred to as <em>ambiguous characters</em>. By default, these characters "
-"are displayed with a narrow width in <app>Terminal</app>, which looks better "
-"in situations where perfect layout is important, such as in ASCII art. You "
-"can change your profile preferences to display ambiguous characters as wide, "
-"which can be better if you are reading running prose."
+"Some characters, such as some Greek letters and Asian logograms, can "
+"take up either one or two cells in a terminal window. These characters "
+"are often referred to as <em>ambiguous characters</em>. By default, "
+"these characters are displayed with a narrow width in <app>Pano "
+"Terminal</app>, which looks better in situations where perfect layout "
+"is important, such as in ASCII art. You can change your profile "
+"preferences to display ambiguous characters as wide, which can be "
+"better if you are reading running prose."
 msgstr ""
 "Κάποιοι χαρακτήρες, όπως κάποια ελληνικά γράμματα και ασιατικά "
 "στενογράμματα, μπορεί να καταλάβουν ή ένα ή δύο κελιά σε ένα παράθυρο "
 "τερματικού. Αυτοί οι χαρακτήρες αναφέρονται συχνά ως <em>διφορούμενοι "
-"χαρακτήρες</em>. Από προεπιλογή, αυτοί οι χαρακτήρες εμφανίζονται με στενό "
-"πλάτος στο <app>τερματικό</app>, που φαίνεται καλύτερα σε καταστάσεις όπου η "
-"τέλεια διάταξη είναι σημαντική, όπως σε τέχνη ASCII. Μπορείτε να αλλάξετε "
-"τις προτιμήσεις προφίλ σας για να εμφανίσετε διφορούμενους χαρακτήρες όσο "
-"πιο πλατείς γίνεται, που μπορεί να είναι καλύτερο αν διαβάζετε τρέχον "
-"πεζογράφημα."
+"χαρακτήρες</em>. Από προεπιλογή, αυτοί οι χαρακτήρες εμφανίζονται με "
+"στενό πλάτος στο <app>Pano Terminal</app>, που φαίνεται καλύτερα σε "
+"καταστάσεις όπου η τέλεια διάταξη είναι σημαντική, όπως σε τέχνη "
+"ASCII. Μπορείτε να αλλάξετε τις προτιμήσεις προφίλ σας για να "
+"εμφανίσετε διφορούμενους χαρακτήρες όσο πιο πλατείς γίνεται, που "
+"μπορεί να είναι καλύτερο αν διαβάζετε τρέχον πεζογράφημα."
 
 #. (itstool) path: item/p
 #: C/pref-profile-char-width.page:39 C/pref-profile-encoding.page:37
@@ -3165,11 +3208,11 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/pref-scrolling.page:114
 msgid ""
-"Using unlimited scrollback can make your <app>Terminal</app> sluggish during "
-"scrolling!"
+"Using unlimited scrollback can make your <app>Pano Terminal</app> "
+"sluggish during scrolling!"
 msgstr ""
 "Χρησιμοποιώντας απεριόριστη οπισθοκύλιση μπορείτε να κάνετε το "
-"<app>Terminal</app> σας αργό κατά τη διάρκεια της κύλισης!"
+"<app>Pano Terminal</app> σας αργό κατά τη διάρκεια της κύλισης!"
 
 #. (itstool) path: credit/years
 #: C/pref-tab-window.page:15
@@ -3190,12 +3233,13 @@ msgstr "Παράθυρα και καρτέλες"
 #. (itstool) path: page/p
 #: C/pref-tab-window.page:30
 msgid ""
-"You can chose whether to open a new tab or a new <app>Terminal</app> window "
-"when you use <gui style=\"menuitem\">Open Terminal</gui>."
+"You can chose whether to open a new tab or a new <app>Pano "
+"Terminal</app> window when you use <gui style=\"menuitem\">Open "
+"Terminal</gui>."
 msgstr ""
-"Μπορείτε να επιλέξετε αν θα ανοίξετε μια νέα καρτέλα ή ένα νέο παράθυρο "
-"<app>Τερματικού</app> όταν χρησιμοποιείτε <gui style=\"menuitem\">Άνοιγμα "
-"τερματικού</gui>."
+"Μπορείτε να επιλέξετε αν θα ανοίξετε μια νέα καρτέλα ή ένα νέο "
+"παράθυρο <app>Pano Terminal</app> όταν χρησιμοποιείτε <gui "
+"style=\"menuitem\">Άνοιγμα τερματικού</gui>."
 
 #. (itstool) path: item/p
 #: C/pref-tab-window.page:35
@@ -3270,11 +3314,11 @@ msgstr "Για να χρησιμοποιήσετε τη λειτουργία μ�
 #. (itstool) path: item/p
 #: C/pref-user-input.page:36
 msgid ""
-"Right click in the <app>Terminal</app> window or select the <gui style=\"menu"
-"\">Terminal</gui> menu."
+"Right click in the <app>Pano Terminal</app> window or select the <gui "
+"style=\"menu\">Terminal</gui> menu."
 msgstr ""
-"Κάντε δεξί κλικ στο παράθυρο του <app>Τερματικού</app> ή επιλέξτε το μενού "
-"του <gui style=\"menu\">Τερματικό</gui> menu."
+"Κάντε δεξί κλικ στο παράθυρο του <app>Pano Terminal</app> ή επιλέξτε "
+"το μενού του <gui style=\"menu\">Τερματικό</gui> menu."
 
 #. (itstool) path: item/p
 #: C/pref-user-input.page:40
@@ -3298,29 +3342,30 @@ msgstr "Προτιμήσεις προφίλ"
 #. (itstool) path: info/desc
 #: C/prob-reset.page:23
 msgid ""
-"How do I recover my <app>Terminal</app> screen when it becomes stuck or has "
-"lot of strange symbols on it?"
+"How do I recover my <app>Pano Terminal</app> screen when it becomes "
+"stuck or has lot of strange symbols on it?"
 msgstr ""
-"Πώς ανακτώ την οθόνη του <app>Τερματικού</app> μου όταν κολλάει ή έχει πολλά "
-"περίεργα σύμβολα σε αυτό;"
+"Πώς ανακτώ την οθόνη του <app>Pano Terminal</app> μου όταν κολλάει ή "
+"έχει πολλά περίεργα σύμβολα σε αυτό;"
 
 #. (itstool) path: page/title
 #: C/prob-reset.page:27
-msgid "Reset your <app>Terminal</app> output"
-msgstr "Επαναφορά της εξόδου του <app>Τερματικού</app> σας"
+msgid "Reset your <app>Pano Terminal</app> output"
+msgstr "Επαναφορά της εξόδου του <app>Pano Terminal</app> σας"
 
 #. (itstool) path: page/p
 #: C/prob-reset.page:29
 msgid ""
-"After viewing a non-text file by mistake, or launching some command, it can "
-"happen the <app>Terminal</app> screen is unresponsive, has strange letters "
-"printed when you press keys. You can recover your <app>Terminal</app> in the "
-"following ways:"
+"After viewing a non-text file by mistake, or launching some command, "
+"it can happen the <app>Pano Terminal</app> screen is unresponsive, has "
+"strange letters printed when you press keys. You can recover your "
+"<app>Pano Terminal</app> in the following ways:"
 msgstr ""
-"Μετά την προβολή ενός αρχείου μη κειμένου κατά λάθος, ή εκκίνηση κάποιας "
-"εντολής, μπορεί η οθόνη του <app>Τερματικού</app> να μην αποκρίνεται, να "
-"έχει περίεργα γράμματα όταν πατάτε τα πλήκτρα. Μπορείτε να ανακτήσετε το "
-"<app>Τερματικό</app> σας με τους εξής τρόπους:"
+"Μετά την προβολή ενός αρχείου μη κειμένου κατά λάθος, ή εκκίνηση "
+"κάποιας εντολής, μπορεί η οθόνη του <app>Pano Terminal</app> να μην "
+"αποκρίνεται, να έχει περίεργα γράμματα όταν πατάτε τα πλήκτρα. "
+"Μπορείτε να ανακτήσετε το <app>Pano Terminal</app> σας με τους εξής "
+"τρόπους:"
 
 #. (itstool) path: section/title
 #: C/prob-reset.page:35
@@ -3329,8 +3374,8 @@ msgstr "Επαναφορά"
 
 #. (itstool) path: section/p
 #: C/prob-reset.page:37
-msgid "Reset <app>Terminal</app> screen."
-msgstr "Επαναφορά της οθόνη του <app>Τερματικού</app>."
+msgid "Reset <app>Pano Terminal</app> screen."
+msgstr "Επαναφορά της οθόνη του <app>Pano Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:41
@@ -3354,15 +3399,17 @@ msgstr "Επαναφορά και καθαρισμός"
 #. (itstool) path: section/p
 #: C/prob-reset.page:54
 msgid ""
-"In addition to resetting your <app>Terminal</app>, <gui style=\"menuitem"
-"\">Reset and Clear</gui> clears the visible <app>Terminal</app> screen space "
-"of all terminal output. To <gui style=\"menuitem\">Reset and Clear</gui> "
-"your <app>Terminal</app>:"
+"In addition to resetting your <app>Pano Terminal</app>, <gui "
+"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Pano "
+"Terminal</app> screen space of all terminal output. To <gui "
+"style=\"menuitem\">Reset and Clear</gui> your <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"Πέρα από την επαναφορά του <app>Τερματικού</app> σας, το <gui style="
-"\"menuitem\">Επαναφορά και καθαρισμός</gui> καθαρίζει τον ορατό χώρο οθόνης "
-"του <app>Τερματικού</app> όλων των εξόδων τερματικού. Για <gui style="
-"\"menuitem\">Επαναφορά και καθαρισμό</gui> του <app>Τερματικού</app> σας:"
+"Πέρα από την επαναφορά του <app>Pano Terminal</app> σας, το <gui "
+"style=\"menuitem\">Επαναφορά και καθαρισμός</gui> καθαρίζει τον ορατό "
+"χώρο οθόνης του <app>Pano Terminal</app> όλων των εξόδων τερματικού. "
+"Για <gui style=\"menuitem\">Επαναφορά και καθαρισμό</gui> του "
+"<app>Pano Terminal</app> σας:"
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:61
@@ -3384,8 +3431,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/txt-copy-paste.page:28
-msgid "Copy and paste text in <app>Terminal</app>."
-msgstr "Αντιγράψτε και επικολλήστε κείμενο στο <app>Τερματικό</app>."
+msgid "Copy and paste text in <app>Pano Terminal</app>."
+msgstr "Αντιγράψτε και επικολλήστε κείμενο στο <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/txt-copy-paste.page:32
@@ -3395,12 +3442,12 @@ msgstr "Αντιγραφή και επικόλληση"
 #. (itstool) path: page/p
 #: C/txt-copy-paste.page:34
 msgid ""
-"You can copy and paste text in <app>Terminal</app> in a similar way to other "
-"applications. However, the keyboard shortcuts differ."
+"You can copy and paste text in <app>Pano Terminal</app> in a similar "
+"way to other applications. However, the keyboard shortcuts differ."
 msgstr ""
-"Μπορείτε να αντιγράψετε και να επικολλήσετε κείμενο στο <app>Τερματικό</app> "
-"με έναν παρόμοιο τρόπο με τις άλλες εφαρμογές. Όμως, οι συντομεύσεις "
-"πληκτρολογίου διαφέρουν."
+"Μπορείτε να αντιγράψετε και να επικολλήσετε κείμενο στο <app>Pano "
+"Terminal</app> με έναν παρόμοιο τρόπο με τις άλλες εφαρμογές. Όμως, οι "
+"συντομεύσεις πληκτρολογίου διαφέρουν."
 
 #. (itstool) path: item/title
 #: C/txt-copy-paste.page:39
@@ -3428,13 +3475,13 @@ msgstr "<gui>Επικόλληση</gui>"
 #. (itstool) path: item/p
 #: C/txt-copy-paste.page:47
 msgid ""
-"Right click in the <app>Terminal</app> and select <gui style=\"menuitem"
-"\">Paste</gui>. Alternatively, you can press <keyseq><key>Ctrl</"
-"key><key>Shift</key><key>V</key></keyseq>."
+"Right click in the <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Paste</gui>. Alternatively, you can press "
+"<keyseq><key>Ctrl</key><key>Shift</key><key>V</key></keyseq>."
 msgstr ""
-"Κάντε δεξί κλικ στο <app>Τερματικό</app> και επιλέξτε <gui style=\"menuitem"
-"\">Επικόλληση</gui>. Εναλλακτικά, μπορείτε να πατήσετε <keyseq><key>Control</"
-"key><key>Shift</key><key>V</key></keyseq>."
+"Κάντε δεξί κλικ στο <app>Pano Terminal</app> και επιλέξτε <gui "
+"style=\"menuitem\">Επικόλληση</gui>. Εναλλακτικά, μπορείτε να πατήσετε "
+"<keyseq><key>Control</key><key>Shift</key><key>V</key></keyseq>."
 
 #. (itstool) path: note/p
 #: C/txt-copy-paste.page:55
@@ -3459,16 +3506,17 @@ msgstr "Υπερσύνδεσμοι και διευθύνσεις αλληλογ�
 #. (itstool) path: page/p
 #: C/txt-links.page:32
 msgid ""
-"<app>Terminal</app> parses the terminal output and automatically detects "
-"snippets of text that are web addresses or email addresses. Web and email "
-"addresses are automatically highlighted when you point your cursor to the "
-"text, indicating that the link can be opened in an application."
+"<app>Pano Terminal</app> parses the terminal output and automatically "
+"detects snippets of text that are web addresses or email addresses. "
+"Web and email addresses are automatically highlighted when you point "
+"your cursor to the text, indicating that the link can be opened in an "
+"application."
 msgstr ""
-"Το <app>Τερματικό</app> αναλύει την έξοδο του τερματικού και ανιχνεύει "
-"αυτόματα τα τμήματα του κειμένου που είναι διευθύνσεις ιστού ή διευθύνσεις "
-"αλληλογραφίας. Οι διευθύνσεις ιστού και αλληλογραφίας επισημαίνονται "
-"αυτόματα όταν δείξετε με τον δρομέα σας το κείμενο, υποδεικνύοντας ότι ο "
-"σύνδεσμος μπορεί να ανοιχτεί σε μια εφαρμογή."
+"Το <app>Pano Terminal</app> αναλύει την έξοδο του τερματικού και "
+"ανιχνεύει αυτόματα τα τμήματα του κειμένου που είναι διευθύνσεις ιστού "
+"ή διευθύνσεις αλληλογραφίας. Οι διευθύνσεις ιστού και αλληλογραφίας "
+"επισημαίνονται αυτόματα όταν δείξετε με τον δρομέα σας το κείμενο, "
+"υποδεικνύοντας ότι ο σύνδεσμος μπορεί να ανοιχτεί σε μια εφαρμογή."
 
 #. (itstool) path: page/p
 #: C/txt-links.page:37
@@ -3502,8 +3550,8 @@ msgstr "Αντιγραφή ενός υπερσυνδέσμου:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:52
-msgid "Right click on the link in <app>Terminal</app>."
-msgstr "Κάντε δεξί κλικ στον σύνδεσμο στο <app>Τερματικό</app>."
+msgid "Right click on the link in <app>Pano Terminal</app>."
+msgstr "Κάντε δεξί κλικ στον σύνδεσμο στο <app>Pano Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:55
@@ -3546,8 +3594,10 @@ msgstr "Αντιγραφή διεύθυνσης αλληλογραφίας:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:85
-msgid "Right click on the email address in <app>Terminal</app>."
-msgstr "Κάντε δεξί κλικ στην ηλεκτρονική διεύθυνση στο <app>Τερματικό</app>."
+msgid "Right click on the email address in <app>Pano Terminal</app>."
+msgstr ""
+"Κάντε δεξί κλικ στην ηλεκτρονική διεύθυνση στο <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:88
@@ -3574,8 +3624,8 @@ msgstr "Επιλέξτε <gui style=\"menuitem\">Αποστολή αλληλογ
 
 #. (itstool) path: info/desc
 #: C/txt-search.page:27
-msgid "Search the <app>Terminal</app> output."
-msgstr "Αναζητήστε στην έξοδο του <app>Τερματικού</app>."
+msgid "Search the <app>Pano Terminal</app> output."
+msgstr "Αναζητήστε στην έξοδο του <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/txt-search.page:31
@@ -3584,8 +3634,10 @@ msgstr "Χρήση της επιλογής <gui style=\"menuitem\">Εύρεση<
 
 #. (itstool) path: page/p
 #: C/txt-search.page:33
-msgid "You can search text in the <app>Terminal</app> output:"
-msgstr "Μπορείτε να αναζητήσετε κείμενο στην έξοδο του <app>τερματικού</app>:"
+msgid "You can search text in the <app>Pano Terminal</app> output:"
+msgstr ""
+"Μπορείτε να αναζητήσετε κείμενο στην έξοδο του <app>Pano "
+"Terminal</app>:"
 
 #. (itstool) path: item/p
 #: C/txt-search.page:37
@@ -3635,16 +3687,18 @@ msgstr "<gui style=\"checkbox\">Ταίριασμα μόνο ολόκληρης �
 #. (itstool) path: item/p
 #: C/txt-search.page:57
 msgid ""
-"<app>Terminal</app> will look for the entire keyword and will ignore results "
-"that partially match your search keyword. For example, if you have searched "
-"for \"gnome\", <app>Terminal</app> will show only results that match this "
-"keyword exactly and omit results such as \"gnome-terminal\"."
+"<app>Pano Terminal</app> will look for the entire keyword and will "
+"ignore results that partially match your search keyword. For example, "
+"if you have searched for \"gnome\", <app>Pano Terminal</app> will show "
+"only results that match this keyword exactly and omit results such as "
+"\"gnome-terminal\"."
 msgstr ""
-"Το <app>Τερματικό</app> θα αναζητήσει όλη τη λέξη-κλειδί και θα παραβλέψει "
-"αποτελέσματα που ταιριάζουν μερικά με τη λέξη-κλειδί της αναζήτησης. Για "
-"παράδειγμα, εάν έχετε αναζητήσει \"εφαρμογή\", το <app>Τερματικό</app> θα "
-"εμφανίσει μόνο τα αποτελέσματα που ταιριάζουν ακριβώς με αυτήν τη λέξη-"
-"κλειδί και θα παραλείψει αποτελέσματα όπως \"εφαρμογή-gnome\"."
+"Το <app>Pano Terminal</app> θα αναζητήσει όλη τη λέξη-κλειδί και θα "
+"παραβλέψει αποτελέσματα που ταιριάζουν μερικά με τη λέξη-κλειδί της "
+"αναζήτησης. Για παράδειγμα, εάν έχετε αναζητήσει \"εφαρμογή\", το "
+"<app>Pano Terminal</app> θα εμφανίσει μόνο τα αποτελέσματα που "
+"ταιριάζουν ακριβώς με αυτήν τη λέξη-κλειδί και θα παραλείψει "
+"αποτελέσματα όπως \"εφαρμογή-gnome\"."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:64
@@ -3654,14 +3708,14 @@ msgstr "<gui style=\"checkbox\">Ταίριασμα ως κανονικής έκ�
 #. (itstool) path: item/p
 #: C/txt-search.page:65
 msgid ""
-"You can use regular expression patterns, also known as regex patterns, in "
-"your search keywords. <app>Terminal</app> will display the results that "
-"match these search terms."
+"You can use regular expression patterns, also known as regex patterns, "
+"in your search keywords. <app>Pano Terminal</app> will display the "
+"results that match these search terms."
 msgstr ""
-"Μπορείτε να χρησιμοποιήσετε κανονικά μοτίβα παράστασης, γνωστά επίσης ως "
-"μοτίβα κανονικής έκφρασης-regex, στις λέξεις-κλειδιά αναζήτησης. Το "
-"<app>Τερματικό</app> θα εμφανίσει τα αποτελέσματα που ταιριάζουν με αυτούς "
-"τους όρους αναζήτησης."
+"Μπορείτε να χρησιμοποιήσετε κανονικά μοτίβα παράστασης, γνωστά επίσης "
+"ως μοτίβα κανονικής έκφρασης-regex, στις λέξεις-κλειδιά αναζήτησης. Το "
+"<app>Pano Terminal</app> θα εμφανίσει τα αποτελέσματα που ταιριάζουν "
+"με αυτούς τους όρους αναζήτησης."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:70
@@ -3671,15 +3725,15 @@ msgstr "<gui style=\"checkbox\">Αναζήτηση προς τα πίσω</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:71
 msgid ""
-"<app>Terminal</app> will search for the keyword from the latest output and "
-"continue the search upwards. This option is recommended when you are looking "
-"for a keyword that could have occurred recently, thus enabling you to find "
-"the keyword quickly."
+"<app>Pano Terminal</app> will search for the keyword from the latest "
+"output and continue the search upwards. This option is recommended "
+"when you are looking for a keyword that could have occurred recently, "
+"thus enabling you to find the keyword quickly."
 msgstr ""
-"Το <app>Τερματικό</app> θα ψάξει για τη λέξη-κλειδί από την τελευταία έξοδο "
-"και θα συνεχίσει την αναζήτηση προς τα πάνω. Αυτή η επιλογή συνιστάται όταν "
-"ψάχνετε μια λέξη-κλειδί που μπορεί να εμφανίστηκε πρόσφατα, έτσι μπορείτε να "
-"βρείτε τη λέξη-κλειδί γρήγορα."
+"Το <app>Pano Terminal</app> θα ψάξει για τη λέξη-κλειδί από την "
+"τελευταία έξοδο και θα συνεχίσει την αναζήτηση προς τα πάνω. Αυτή η "
+"επιλογή συνιστάται όταν ψάχνετε μια λέξη-κλειδί που μπορεί να "
+"εμφανίστηκε πρόσφατα, έτσι μπορείτε να βρείτε τη λέξη-κλειδί γρήγορα."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:77
@@ -3689,24 +3743,26 @@ msgstr "<gui style=\"checkbox\">Αναδίπλωση</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:78
 msgid ""
-"<app>Terminal</app> searches from your current location in the scrollback to "
-"the end of available terminal output and then restarts the search from the "
-"top."
+"<app>Pano Terminal</app> searches from your current location in the "
+"scrollback to the end of available terminal output and then restarts "
+"the search from the top."
 msgstr ""
-"Το <app>Τερματικό</app> αναζητά από την τρέχουσα θέση στην οπισθοκύλιση "
-"μέχρι το τέλος της διαθέσιμης εξόδου τερματικού και έπειτα ξαναρχίζει την "
-"αναζήτηση από την κορυφή."
+"Το <app>Pano Terminal</app> αναζητά από την τρέχουσα θέση στην "
+"οπισθοκύλιση μέχρι το τέλος της διαθέσιμης εξόδου τερματικού και "
+"έπειτα ξαναρχίζει την αναζήτηση από την κορυφή."
 
 #. (itstool) path: note/p
 #: C/txt-search.page:85
 msgid ""
-"If you expect to work with a lot of <app>Terminal</app> output, increase the "
-"<link xref=\"pref-scrolling#lines\">scrollback lines</link> to a higher "
-"limit to allow <app>Terminal</app> to search further back."
+"If you expect to work with a lot of <app>Pano Terminal</app> output, "
+"increase the <link xref=\"pref-scrolling#lines\">scrollback "
+"lines</link> to a higher limit to allow <app>Pano Terminal</app> to "
+"search further back."
 msgstr ""
-"Εάν περιμένετε να δουλέψετε με πολλές εξόδους του <app>τερματικού</app>, "
-"αυξήστε τις <link xref=\"pref-scrolling#lines\">γραμμές οπισθοκύλισης</link> "
-"σε ένα μεγαλύτερο όριο για να επιτρέψετε στο <app>τερματικό</app> να "
+"Εάν περιμένετε να δουλέψετε με πολλές εξόδους του <app>Pano "
+"Terminal</app>, αυξήστε τις <link "
+"xref=\"pref-scrolling#lines\">γραμμές οπισθοκύλισης</link> σε ένα "
+"μεγαλύτερο όριο για να επιτρέψετε στο <app>Pano Terminal</app> να "
 "αναζητήσει παραπέρα προς τα πίσω."
 
 #. (itstool) path: credit/years
@@ -3770,14 +3826,14 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/txt-select-text.page:52
 msgid ""
-"If you are running an application in <app>Terminal</app> which accepts mouse "
-"input, you need to use the <key>Shift</key> modifier for the <app>Terminal</"
-"app> to catch the mouse input."
+"If you are running an application in <app>Pano Terminal</app> which "
+"accepts mouse input, you need to use the <key>Shift</key> modifier for "
+"the <app>Pano Terminal</app> to catch the mouse input."
 msgstr ""
-"Αν εκτελείτε μια εφαρμογή στο <app>Τερματικό</app> όπου δέχεται είσοδο από "
-"το ποντίκι, τότε θα πρέπει να χρησιμοποιήσετε το πλήκτρο <key>Shift</key> "
-"για το τερματικό <app>Terminal</app> για να επιλέξετε την είσοδο του "
-"ποντικιού."
+"Αν εκτελείτε μια εφαρμογή στο <app>Pano Terminal</app> όπου δέχεται "
+"είσοδο από το ποντίκι, τότε θα πρέπει να χρησιμοποιήσετε το πλήκτρο "
+"<key>Shift</key> για το τερματικό <app>Pano Terminal</app> για να "
+"επιλέξετε την είσοδο του ποντικιού."
 
 #~ msgid ""
 #~ "Select <guiseq><gui style=\"menu\">Edit</gui><gui style=\"menuitem"

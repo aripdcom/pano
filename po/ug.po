@@ -142,7 +142,8 @@ msgid "Wait until the child exits"
 msgstr "بالا ئاخىرلاشقۇچە كۈتسۇن"
 
 #: ../src/client.c:391
-msgid "GNOME Terminal Client"
+#, fuzzy
+msgid "Pano Terminal Client"
 msgstr "گىنوم تېرمىنال خېرىدارى"
 
 #: ../src/client.c:395
@@ -1406,11 +1407,13 @@ msgid "Current Locale"
 msgstr "نۆۋەتتىكى يەرلىك تىل"
 
 #: ../src/terminal-nautilus.c:463
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "يىراقتىكى تېرمىنالدا ئاچ(_R)"
 
 #: ../src/terminal-nautilus.c:465
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "يەرلىك تېرمىنالدا ئاچ(_R)"
 
 #: ../src/terminal-nautilus.c:469 ../src/terminal-nautilus.c:480
@@ -1423,11 +1426,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "نۆۋەتتە ئېچىلغان قىسقۇچنى تېرمىنالدا ئاچىدۇ"
 
 #: ../src/terminal-nautilus.c:477 ../src/terminal-nautilus.c:491
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "تېرمىنالدا ئاچ(_E)"
 
 #: ../src/terminal-nautilus.c:488
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "تېرمىنالنى ئاچ(_E)"
 
 #: ../src/terminal-nautilus.c:489
@@ -1460,11 +1465,12 @@ msgstr "تېرمىنالدىكى ھۆججەت باشقۇرغۇ Midnight Commande
 
 #: ../src/terminal-options.c:224
 #, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
-msgstr "تاللانما «%s» نى بۇ نەشردىكى gnome-terminal دا ئىشلەتكىلى بولمايدۇ"
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
+msgstr "تاللانما «%s» نى بۇ نەشردىكى Pano Terminal دا ئىشلەتكىلى بولمايدۇ"
 
 #: ../src/terminal-options.c:235 ../src/terminal-util.c:234
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "گىنوم تېرمىنال"
 
 #: ../src/terminal-options.c:275
@@ -1549,11 +1555,13 @@ msgid "PROFILE-NAME"
 msgstr "سەپلىمە ھۆججەت ئاتى"
 
 #: ../src/terminal-options.c:1442 ../src/terminal-options.c:1448
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "گىنوم تېرمىنال تەقلىدلەشتۈرگۈچ"
 
 #: ../src/terminal-options.c:1449
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "گىنوم تېرمىنال تاللانمىسىنى كۆرسەت"
 
 #: ../src/terminal-options.c:1459
@@ -1669,25 +1677,28 @@ msgid "Could not open the address “%s”"
 msgstr "«%s» مەنزىلنى ئاچالمىدى"
 
 #: ../src/terminal-util.c:391
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr "گىنوم تېرمىنال ئەركىن يۇمشاق دېتال؛ سىز ئەركىن يۇمشاق دېتال ۋەخپىسى تارقاتقان GNU ئادەتتىكى ئاممىۋى ئىجازەتنامە بويىچە ئۇنى قايتا تارقىتىپ ياكى ئۆزگەرتەلەيسىز؛ سىز شۇ ئىجازەت كېلىشىمىنىڭ ئۈچىنچى نەشرى ياكى يۇقىرى نەشرىنى ئىشلىتىڭ."
 
 #: ../src/terminal-util.c:395
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr "گىنوم تېرمىنالنى تارقىتىشتىكى مەقسەت سىزگە قۇلايلىق ئېلىپ كېلىش، ئەمما سودا ياكى باشقا ئالاھىدە قوللىنىشقا نىسبەتەن ھېچقانداق كاپالەت يوق. ھەمدە مۇئەييەن ئىشلىتىشتە سىز ئارزۇ قىلغان نەتىجىگە ئېرىشىشتە كاپالەتكە ئىگە ئەمەس. GNU ئادەتتىكى ئاممىۋى ئىجازەت كېلىشىمىنى كۆرۈپ تېخىمۇ كۆپ تەپسىلاتقا ئېرىشىڭ."
 
 #: ../src/terminal-util.c:399
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr "سىز خالىغان يۇمشاق دېتال ئارقىلىق بىر نۇسخا GNU ئۇنىۋېرسال ئاممىۋى ئىجازەت كېلىشىمىنىڭ كۆپەيتىلگەن نۇسخىسىغا ئېرىشەلەيسىز. ئەگەر بولمىسا <http://www.gnu.org/licenses/> نى زىيارەت قىلىڭ."
 
 #. Translators: This is the label of a menu item to choose a profile.

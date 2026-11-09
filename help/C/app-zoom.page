@@ -31,7 +31,7 @@
 
   <title>Zoom in and zoom out</title>
 
-  <p>To increase <app>Terminal</app> text size:</p>
+  <p>To increase <app>Pano Terminal</app> text size:</p>
 
   <steps>
     <item>
@@ -41,7 +41,7 @@
     </item>
   </steps>
 
-  <p>To decrease <app>Terminal</app> text size:</p>
+  <p>To decrease <app>Pano Terminal</app> text size:</p>
 
   <steps>
     <item>
@@ -51,7 +51,7 @@
     </item>
   </steps>
 
-  <p>To restore <app>Terminal</app> text to default size:</p>
+  <p>To restore <app>Pano Terminal</app> text to default size:</p>
 
   <steps>
     <item>

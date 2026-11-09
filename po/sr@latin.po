@@ -39,9 +39,11 @@ msgid "Use the command line"
 msgstr "Koristite liniju naredbi"
 
 #: ../org.gnome.Terminal.appdata.xml.in.h:3
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "Gnomov terminal je oponašavač terminala za pristup konzolnom okruženju "
 "JUNIKSA koji može biti korišćen za pokretanje programa koji su dostupnni na "
@@ -1714,11 +1716,13 @@ msgid "_Inspector"
 msgstr "_Inspektor"
 
 #: ../src/terminal-nautilus.c:592
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Otvori u _udaljenom terminalu"
 
 #: ../src/terminal-nautilus.c:594
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Otvori u _lokalnom terminalu"
 
 #: ../src/terminal-nautilus.c:598 ../src/terminal-nautilus.c:609
@@ -1731,11 +1735,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Otvara tekući direktorijum u terminalu"
 
 #: ../src/terminal-nautilus.c:606 ../src/terminal-nautilus.c:620
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Otvori u _terminalu"
 
 #: ../src/terminal-nautilus.c:617
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Otvori _terminal"
 
 #: ../src/terminal-nautilus.c:618
@@ -1787,10 +1793,10 @@ msgid "C_lose Terminal"
 msgstr "_Zatvori terminal"
 
 #: ../src/terminal-options.c:284
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
 "Opcija „%s“ je zastarela i verovatno će biti uklonjena u narednim izdanjima "
 "Gnomovog terminala."
@@ -1806,8 +1812,8 @@ msgstr ""
 "nakon toga."
 
 #: ../src/terminal-options.c:305 ../src/terminal-options.c:318
-#, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "Opcija „%s“ više nije podržana u novim izdanjima Gnomovog terminala."
 
 #: ../src/terminal-options.c:390
@@ -1997,11 +2003,13 @@ msgid "COMMAND"
 msgstr "NAREDBA"
 
 #: ../src/terminal-options.c:1619
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Gnomov emulator terminala"
 
 #: ../src/terminal-options.c:1620
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Prikazuje mogućnosti Gnomovog terminala"
 
 #: ../src/terminal-options.c:1630
@@ -2174,7 +2182,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Terminal za Gnomovu radnu površ"
 
 #: ../src/terminal-util.c:236
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Gnomov terminal"
 
 #: ../src/terminal-util.c:246
@@ -2194,11 +2203,12 @@ msgid "Could not open the address “%s”"
 msgstr "Ne mogu da otvorim adresu „%s“"
 
 #: ../src/terminal-util.c:390
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "Gnomov terminal je slobodan softver: možete ga raspodeljivati i/ili menjati "
 "pod uslovima Gnuove Opšte javne licence koju objavljuje Zadužbina slobodnog "
@@ -2206,11 +2216,12 @@ msgstr ""
 "novijeg izdanja."
 
 #: ../src/terminal-util.c:394
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Gnomov terminal se raspodeljuje u nadi da će biti od koristi, ali BEZ IKAKVIH "
 "GARANCIJA; čak i bez primenjene garancije TRŽIŠNE VREDNOSTI ili "
@@ -2218,9 +2229,10 @@ msgstr ""
 "više detalja."
 
 #: ../src/terminal-util.c:398
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Trebali ste da primite primerak Gnuove Opšte javne licence uz Gnomov "
 "terminal; ako niste, pogledajte <http://www.gnu.org/licenses/>."

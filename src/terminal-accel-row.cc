@@ -181,7 +181,7 @@ terminal_accel_row_class_init (TerminalAccelRowClass *klass)
 
   action_row_class->activate = terminal_accel_row_activate;
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/accel-row.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/accel-row.ui");
 
   gtk_widget_class_bind_template_callback (widget_class, accelerator_to_label);
 

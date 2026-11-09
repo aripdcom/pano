@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Pano Terminal preferences icon. Copyright © 2026 aripdcem, CC-BY-SA-3.0 -->
+  <rect x="8" y="16" width="112" height="100" rx="16" fill="#0f0f12"/>
+  <rect x="8" y="12" width="112" height="98" rx="16" fill="#26262b"/>
+  <path d="M24 12h80a16 16 0 0 1 16 16v6H8v-6a16 16 0 0 1 16-16z" fill="#2a7d4f"/>
+  <path d="M28 58h72M28 86h72" fill="none" stroke="#5a5a64" stroke-width="7" stroke-linecap="round"/>
+  <path d="M28 58h24M28 86h52" fill="none" stroke="#5cc98a" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="52" cy="58" r="9" fill="#ececf0"/>
+  <circle cx="80" cy="86" r="9" fill="#ececf0"/>
+</svg>

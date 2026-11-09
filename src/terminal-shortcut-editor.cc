@@ -71,7 +71,7 @@ terminal_shortcut_editor_class_init (TerminalShortcutEditorClass *klass)
   object_class->constructed = terminal_shortcut_editor_constructed;
   object_class->dispose = terminal_shortcut_editor_dispose;
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/shortcut-editor.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/shortcut-editor.ui");
 
   gtk_widget_class_bind_template_child (widget_class, TerminalShortcutEditor, enable_shortcuts);
   gtk_widget_class_bind_template_child (widget_class, TerminalShortcutEditor, page);

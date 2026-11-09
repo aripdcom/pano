@@ -47,8 +47,9 @@ msgstr "Command line kirim"
 
 #: org.gnome.Terminal.appdata.xml.in:41
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 
 #: org.gnome.Terminal.appdata.xml.in:42
@@ -1750,11 +1751,11 @@ msgid "_Contents"
 msgstr ""
 
 #: src/terminal-nautilus.c:533
-msgid "Open in _Remote Terminal"
+msgid "Open in Pano Terminal (_Remote)"
 msgstr ""
 
 #: src/terminal-nautilus.c:535
-msgid "Open in _Local Terminal"
+msgid "Open in Pano Terminal (_Local)"
 msgstr ""
 
 #: src/terminal-nautilus.c:539 src/terminal-nautilus.c:550
@@ -1766,11 +1767,12 @@ msgid "Open the currently open folder in a terminal"
 msgstr ""
 
 #: src/terminal-nautilus.c:547
-msgid "Open in T_erminal"
+msgid "Open in Pano _Terminal"
 msgstr ""
 
 #: src/terminal-nautilus.c:557
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "T_erminal kangpu"
 
 #: src/terminal-nautilus.c:558
@@ -1784,8 +1786,8 @@ msgstr "Terminal kanghap"
 #: src/terminal-options.c:282
 #, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
 
 #. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
@@ -1798,7 +1800,7 @@ msgstr ""
 
 #: src/terminal-options.c:303 src/terminal-options.c:316
 #, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
 
 #: src/terminal-options.c:388
@@ -1983,11 +1985,11 @@ msgid "COMMAND"
 msgstr "COMMAND"
 
 #: src/terminal-options.c:1620
-msgid "GNOME Terminal Emulator"
-msgstr "GNOME Terminal Emulator"
+msgid "Pano Terminal Emulator"
+msgstr "Pano Terminal Emulator"
 
 #: src/terminal-options.c:1621
-msgid "Show GNOME Terminal options"
+msgid "Show Pano Terminal options"
 msgstr ""
 
 #: src/terminal-options.c:1631
@@ -2150,8 +2152,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr ""
 
 #: src/terminal-util.c:236
-msgid "GNOME Terminal"
-msgstr "GNOME Terminal"
+msgid "Pano Terminal"
+msgstr "Pano Terminal"
 
 #: src/terminal-util.c:246
 msgid "translator-credits"
@@ -2164,24 +2166,24 @@ msgstr ""
 
 #: src/terminal-util.c:390
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 
 #: src/terminal-util.c:394
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 
 #: src/terminal-util.c:398
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 
 #: src/terminal-util.c:1157

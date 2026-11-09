@@ -1743,7 +1743,8 @@ msgstr ""
 #: ../src/terminal-profile.c:1870
 #, c-format
 msgid ""
-"GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 
 #: ../src/terminal-profile.c:2171
@@ -2058,7 +2059,8 @@ msgid "Close All _Tabs"
 msgstr "መክፈቻውን ዝጋ"
 
 #: ../src/terminal-window.c:2740
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "የኖም ተርሚናል"
 
 #: ../src/terminal-window.c:2744

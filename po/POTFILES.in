@@ -1,10 +1,10 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/org.gnome.Terminal.desktop.in
-data/org.gnome.Terminal.Preferences.desktop.in
-data/org.gnome.Terminal.metainfo.xml.in
-data/org.gnome.Terminal.Nautilus.metainfo.xml.in
-src/org.gnome.Terminal.gschema.xml
+data/com.aripd.Pano.desktop.in
+data/com.aripd.Pano.Preferences.desktop.in
+data/com.aripd.Pano.metainfo.xml.in
+data/com.aripd.Pano.Nautilus.metainfo.xml.in
+src/com.aripd.Pano.gschema.xml
 src/prefs-main.cc
 src/search-popover.ui
 src/server.cc

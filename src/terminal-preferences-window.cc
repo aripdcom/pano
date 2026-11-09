@@ -417,7 +417,7 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
 
   widget_class->size_allocate = terminal_preferences_window_size_allocate;
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/preferences-window.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/preferences-window.ui");
 
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, accelerator_key);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, add_profile_row);

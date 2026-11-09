@@ -696,7 +696,7 @@ terminal_notebook_class_init (TerminalNotebookClass *klass)
   remove_reorder_bindings (widget_class, GDK_KEY_End);
 
   gtk_widget_class_set_layout_manager_type (widget_class, GTK_TYPE_BIN_LAYOUT);
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/notebook.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/notebook.ui");
 
   gtk_widget_class_bind_template_child (widget_class, TerminalNotebook, tab_view);
 

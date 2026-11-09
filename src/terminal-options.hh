@@ -35,7 +35,7 @@ G_BEGIN_DECLS
 #define TERMINAL_CONFIG_VERSION             (1) /* Bump this for any changes */
 #define TERMINAL_CONFIG_COMPAT_VERSION      (1) /* Bump this for incompatible changes */
 
-#define TERMINAL_CONFIG_GROUP               "GNOME Terminal Configuration"
+#define TERMINAL_CONFIG_GROUP               "Pano Terminal Configuration"
 #define TERMINAL_CONFIG_PROP_VERSION        "Version"
 #define TERMINAL_CONFIG_PROP_COMPAT_VERSION "CompatVersion"
 #define TERMINAL_CONFIG_PROP_WINDOWS        "Windows"

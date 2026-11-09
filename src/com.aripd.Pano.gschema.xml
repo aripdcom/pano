@@ -22,54 +22,54 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<schemalist gettext-domain="gnome-terminal">
+<schemalist gettext-domain="pano-terminal">
 
-   <enum id='org.gnome.Terminal.NewTerminalMode'>
+   <enum id='com.aripd.Pano.NewTerminalMode'>
     <value nick='window' value='0'/>
     <value nick='tab' value='1'/>
   </enum>
 
-  <enum id='org.gnome.Terminal.NewTabPosition'>
+  <enum id='com.aripd.Pano.NewTabPosition'>
     <value nick='last' value='0'/>
     <value nick='next' value='1'/>
   </enum>
 
-  <enum id='org.gnome.Terminal.RoundedCorners'>
+  <enum id='com.aripd.Pano.RoundedCorners'>
     <value nick='none' value='0' />
     <value nick='top' value='1' />
     <value nick='all' value='2' />
   </enum>
 
-   <enum id='org.gnome.Terminal.ScrollbarPolicy'>
+   <enum id='com.aripd.Pano.ScrollbarPolicy'>
     <value nick='always' value='0'/>
     <value nick='overlay' value='1'/>
     <value nick='never' value='2'/>
   </enum>
 
-   <enum id='org.gnome.Terminal.TabsbarPolicy'>
+   <enum id='com.aripd.Pano.TabsbarPolicy'>
     <value nick='always' value='0'/>
     <value nick='automatic' value='1'/>
     <!-- <value nick='never' value='2'/> -->
   </enum>
 
-   <enum id='org.gnome.Terminal.ThemeVariant'>
+   <enum id='com.aripd.Pano.ThemeVariant'>
     <value nick='system' value='0'/>
     <value nick='light'  value='1'/>
     <value nick='dark'   value='2'/>
   </enum>
 
-  <enum id='org.gnome.Terminal.ExitAction'>
+  <enum id='com.aripd.Pano.ExitAction'>
     <value nick='close' value='0'/>
     <value nick='restart' value='1'/>
     <value nick='hold' value='2'/>
   </enum>
 
-  <enum id='org.gnome.Terminal.CJKWidth'>
+  <enum id='com.aripd.Pano.CJKWidth'>
     <value nick='narrow' value='1'/>
     <value nick='wide'   value='2'/>
   </enum>
 
-  <enum id="org.gnome.Terminal.PreserveWorkingDirectory">
+  <enum id="com.aripd.Pano.PreserveWorkingDirectory">
     <value nick="never"  value='0'/>
     <value nick="safe"   value='1'/>
     <value nick="always" value='2'/>
@@ -79,24 +79,24 @@
         using enums from other modules still has some
         problems. Just include a copy here for now.
     -->
-  <enum id='org.gnome.Terminal.EraseBinding'>
+  <enum id='com.aripd.Pano.EraseBinding'>
     <value nick='auto' value='0'/>
     <value nick='ascii-backspace' value='1'/>
     <value nick='ascii-delete' value='2'/>
     <value nick='delete-sequence' value='3'/>
     <value nick='tty' value='4'/>
   </enum>
-  <enum id='org.gnome.Terminal.Cursor.BlinkMode'>
+  <enum id='com.aripd.Pano.Cursor.BlinkMode'>
     <value nick='system' value='0'/>
     <value nick='on' value='1'/>
     <value nick='off' value='2'/>
   </enum>
-  <enum id='org.gnome.Terminal.Cursor.Shape'>
+  <enum id='com.aripd.Pano.Cursor.Shape'>
     <value nick='block' value='0'/>
     <value nick='ibeam' value='1'/>
     <value nick='underline' value='2'/>
   </enum>
-  <enum id='org.gnome.Terminal.TextBlinkMode'>
+  <enum id='com.aripd.Pano.TextBlinkMode'>
     <value nick='never' value='0'/>
     <value nick='focused' value='1'/>
     <value nick='unfocused' value='2'/>
@@ -104,7 +104,7 @@
   </enum>
 
   <!-- Same values as GtkPositionType -->
-  <enum id="org.gnome.Terminal.TabPosition">
+  <enum id="com.aripd.Pano.TabPosition">
     <value nick="left"   value="0" />
     <value nick="right"  value="1" />
     <value nick="top"    value="2" />
@@ -113,7 +113,7 @@
 
   <!-- SettingsList base schema -->
 
-  <schema id="org.gnome.Terminal.SettingsList">
+  <schema id="com.aripd.Pano.SettingsList">
     <key name="list" type="as">
       <default>[]</default>
     </key>
@@ -124,16 +124,16 @@
 
   <!-- Profiles list schema -->
 
-  <schema id="org.gnome.Terminal.ProfilesList" 
-          extends="org.gnome.Terminal.SettingsList"
-          path="/org/gnome/terminal/legacy/profiles:/">
+  <schema id="com.aripd.Pano.ProfilesList" 
+          extends="com.aripd.Pano.SettingsList"
+          path="/com/aripd/pano/legacy/profiles:/">
     <override name="list">['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']</override>
     <override name="default">'b1dcc9dd-5262-4d8d-a863-c897e6d979b9'</override>
   </schema>
 
   <!-- A terminal profile -->
 
-  <schema id="org.gnome.Terminal.Legacy.Profile">
+  <schema id="com.aripd.Pano.Legacy.Profile">
     <key name="visible-name" type="s">
       <!-- Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes. -->
       <default l10n="messages" context="visible-name">'Unnamed'</default>
@@ -241,7 +241,7 @@
       <summary>Default number of rows</summary>
       <description>Number of rows in newly created terminal windows. Has no effect if use_custom_default_size is not enabled.</description>
     </key>
-    <key name="scrollbar-policy" enum="org.gnome.Terminal.ScrollbarPolicy">
+    <key name="scrollbar-policy" enum="com.aripd.Pano.ScrollbarPolicy">
       <default>'always'</default>
       <summary>When to show the scrollbar</summary>
     </key>
@@ -274,7 +274,7 @@
       <summary>Whether to scroll to the bottom when there’s new output</summary>
       <description>If true, whenever there’s new output the terminal will scroll to the bottom.</description>
     </key>
-    <key name="exit-action" enum="org.gnome.Terminal.ExitAction">
+    <key name="exit-action" enum="com.aripd.Pano.ExitAction">
       <default>'close'</default>
       <summary>What to do with the terminal when the child command exits</summary>
       <description>Possible values are “close” to close the terminal, “restart” to restart the command, and “hold” to keep the terminal open with no command running inside.</description>
@@ -284,7 +284,7 @@
       <summary>Whether to launch the command in the terminal as a login shell</summary>
       <description>If true, the command inside the terminal will be launched as a login shell (argv[0] will have a hyphen in front of it).</description>
     </key>
-    <key name="preserve-working-directory" enum="org.gnome.Terminal.PreserveWorkingDirectory">
+    <key name="preserve-working-directory" enum="com.aripd.Pano.PreserveWorkingDirectory">
       <default>'safe'</default>
       <summary>Whether to preserve the working directory when opening a new terminal</summary>
       <description>
@@ -296,16 +296,16 @@
       <summary>Whether to run a custom command instead of the shell</summary>
       <description>If true, the value of the custom_command setting will be used in place of running a shell.</description>
     </key>
-    <key name="cursor-blink-mode" enum="org.gnome.Terminal.Cursor.BlinkMode">
+    <key name="cursor-blink-mode" enum="com.aripd.Pano.Cursor.BlinkMode">
       <default>'system'</default>
       <summary>Whether to blink the cursor</summary>
       <description>The possible values are “system” to use the global cursor blinking settings, or “on” or “off” to set the mode explicitly.</description>
     </key>
-    <key name="cursor-shape" enum="org.gnome.Terminal.Cursor.Shape">
+    <key name="cursor-shape" enum="com.aripd.Pano.Cursor.Shape">
       <default>'block'</default>
       <summary>The cursor appearance</summary>
     </key>
-    <key name="text-blink-mode" enum="org.gnome.Terminal.TextBlinkMode">
+    <key name="text-blink-mode" enum="com.aripd.Pano.TextBlinkMode">
       <default>'always'</default>
       <summary>Possible values are “always” or “never” allow blinking text, or only when the terminal is “focused” or “unfocused”.</summary>
     </key>
@@ -337,11 +337,11 @@
       <default>'Monospace 12'</default>
       <summary>A Pango font name and size</summary>
     </key>
-    <key name="backspace-binding" enum="org.gnome.Terminal.EraseBinding">
+    <key name="backspace-binding" enum="com.aripd.Pano.EraseBinding">
       <default>'ascii-delete'</default>
       <summary>The code sequence the Backspace key generates</summary>
     </key>
-    <key name="delete-binding" enum="org.gnome.Terminal.EraseBinding">
+    <key name="delete-binding" enum="com.aripd.Pano.EraseBinding">
       <default>'delete-sequence'</default>
       <summary>The code sequence the Delete key generates</summary>
     </key>
@@ -361,7 +361,7 @@
       <default>'UTF-8'</default>
       <summary>Which encoding to use</summary>
     </key>
-    <key name="cjk-utf8-ambiguous-width" enum="org.gnome.Terminal.CJKWidth">
+    <key name="cjk-utf8-ambiguous-width" enum="com.aripd.Pano.CJKWidth">
       <default>'narrow'</default>
       <summary>Whether ambiguous-width characters are narrow or wide when using UTF-8 encoding</summary>
     </key>
@@ -369,7 +369,7 @@
 
   <!-- Keybinding settings -->
 
-  <schema id="org.gnome.Terminal.Legacy.Keybindings">
+  <schema id="com.aripd.Pano.Legacy.Keybindings">
     <key name="new-tab" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;t'</default>
       <summary>Keyboard shortcut to open a new tab</summary>
@@ -654,7 +654,7 @@
 
   <!-- Global settings -->
 
-  <schema id="org.gnome.Terminal.Legacy.Settings" path="/org/gnome/terminal/legacy/">
+  <schema id="com.aripd.Pano.Legacy.Settings" path="/com/aripd/pano/legacy/">
 
     <key name="shortcuts-enabled" type="b">
       <default>true</default>
@@ -692,32 +692,32 @@
       <summary>Additional info section items to appear in the context menu</summary>
     </key>
 
-    <key name="new-terminal-mode" enum="org.gnome.Terminal.NewTerminalMode">
+    <key name="new-terminal-mode" enum="com.aripd.Pano.NewTerminalMode">
       <default>'window'</default>
       <summary>Whether to open new terminals as windows or tabs</summary>
     </key>
 
-    <key name="tab-policy" enum="org.gnome.Terminal.TabsbarPolicy">
+    <key name="tab-policy" enum="com.aripd.Pano.TabsbarPolicy">
       <default>'automatic'</default>
       <summary>When to show the tabs bar</summary>
     </key>
 
-    <key name="tab-position" enum="org.gnome.Terminal.TabPosition">
+    <key name="tab-position" enum="com.aripd.Pano.TabPosition">
       <default>'top'</default>
       <summary>The position of the tabs bar</summary>
     </key>
 
-    <key name="theme-variant" enum="org.gnome.Terminal.ThemeVariant">
+    <key name="theme-variant" enum="com.aripd.Pano.ThemeVariant">
       <default>'system'</default>
       <summary>Which theme variant to use</summary>
     </key>
 
-    <key name="new-tab-position" enum="org.gnome.Terminal.NewTabPosition">
+    <key name="new-tab-position" enum="com.aripd.Pano.NewTabPosition">
       <default>'last'</default>
       <summary>Whether new tabs should open next to the current one or at the last position</summary>
     </key>
 
-    <key name="rounded-corners" enum="org.gnome.Terminal.RoundedCorners">
+    <key name="rounded-corners" enum="com.aripd.Pano.RoundedCorners">
       <default>'top'</default>
       <summary>Whether windows should have rounded corners</summary>
     </key>
@@ -726,11 +726,11 @@
 
     <key name="always-check-default-terminal" type="b">
       <default>true</default>
-      <summary>Always check whether GNOME Terminal is the default terminal</summary>
+      <summary>Always check whether Pano Terminal is the default terminal</summary>
     </key>
 
     <!-- Note that changing the following settings will only take effect
-         when gnome-terminal-server is restarted.
+         when pano-terminal-server is restarted.
     -->
 
     <key name="headerbar" type="mb">
@@ -741,9 +741,9 @@
       <default>true</default>
     </key>
 
-   <!-- <child name="profiles" schema="org.gnome.Terminal.ProfilesList" /> -->
+   <!-- <child name="profiles" schema="com.aripd.Pano.ProfilesList" /> -->
 
-   <child name="keybindings" schema="org.gnome.Terminal.Legacy.Keybindings" />
+   <child name="keybindings" schema="com.aripd.Pano.Legacy.Keybindings" />
 
    <key name="schema-version" type="u">
      <default>3</default>

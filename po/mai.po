@@ -1700,11 +1700,11 @@ msgid "Set the last specified tab as the active one in its window"
 msgstr "एहि विंडोमे अंतिम निर्दिष्ट टैबकेँ सक्रिय रूपमे नियत करैत अछि"
 
 #: ../src/terminal.c:1656 ../src/terminal.c:1659
-msgid "GNOME Terminal Emulator"
+msgid "Pano Terminal Emulator"
 msgstr ""
 
 #: ../src/terminal.c:1660
-msgid "Show GNOME Terminal options"
+msgid "Show Pano Terminal options"
 msgstr ""
 
 #: ../src/terminal.c:1817
@@ -1958,29 +1958,31 @@ msgstr "शीर्षक (_T):"
 
 #: ../src/terminal-window.c:3134
 msgid ""
-"GNOME Terminal is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr ""
 
 #: ../src/terminal-window.c:3138
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 
 #: ../src/terminal-window.c:3142
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 "
-"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 
 #: ../src/terminal-window.c:3151
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "गनोम टर्मिनल"
 
 #: ../src/terminal-window.c:3153

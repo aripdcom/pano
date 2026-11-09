@@ -32,7 +32,7 @@
 
   <title>Color schemes</title>
 
-  <p>If you do not like the default <app>Terminal</app> theme, you may want to
+  <p>If you do not like the default <app>Pano Terminal</app> theme, you may want to
   change the colors that are used for the text and background. You can use
   colors from your theme, select one of the presets or use a custom scheme.</p>
 
@@ -101,7 +101,7 @@
     <title>Custom color scheme</title>
 
     <p>You can use custom colors for the text and background in
-    <app>Terminal</app>:</p>
+    <app>Pano Terminal</app>:</p>
 
     <steps>
       <item>
@@ -148,10 +148,10 @@
 
     <note style="tip">
       <p>Traditionally terminal emulators offered a 16 color palette, this is
-      what you can alter here. <app>Terminal</app> supports an extended set of
+      what you can alter here. <app>Pano Terminal</app> supports an extended set of
       256 colors, but the additional 240 colors cannot be edited here.</p>
 
-      <p><app>Terminal</app> even offers direct access to over 16 million
+      <p><app>Pano Terminal</app> even offers direct access to over 16 million
       colors, this is called “true color” mode.</p>
 
       <p>If the changes you make to the palette do not seem to have an effect,

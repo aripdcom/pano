@@ -28,12 +28,12 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Launch programs or run commands using <app>Terminal</app>.</desc>
+    <desc>Launch programs or run commands using <app>Pano Terminal</app>.</desc>
   </info>
 
   <title>Execute a command</title>
 
-  <p>Any input entered in the <app>Terminal</app> to be executed is referred to
+  <p>Any input entered in the <app>Pano Terminal</app> to be executed is referred to
   as a <em>command</em>. You can run both command line and graphical user
   interface (GUI) programs from the terminal.</p>
 
@@ -41,7 +41,7 @@
 
   <steps>
     <item>
-      <p>Type the command in the <app>Terminal</app> prompt.</p>
+      <p>Type the command in the <app>Pano Terminal</app> prompt.</p>
     </item>
     <item>
       <p>Press <key>Enter</key> to execute it.</p>
@@ -49,8 +49,8 @@
   </steps>
 
   <p>If you have a program that ends abruptly without any warning or error,
-  you may want to run it in <app>Terminal</app>. This will allow the program to
-  output any error or debugging messages to the <app>Terminal</app> window. This
+  you may want to run it in <app>Pano Terminal</app>. This will allow the program to
+  output any error or debugging messages to the <app>Pano Terminal</app> window. This
   information can be helpful when filing a bug report.</p>
 
   <note style="tip">

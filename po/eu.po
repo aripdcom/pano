@@ -75,9 +75,11 @@ msgid "GPL-3.0+"
 msgstr "GPL 3.0"
 
 #: data/org.gnome.Terminal.metainfo.xml.in:40
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr "GNOMEren Terminala terminal bat emulatzen duen aplikazio bat da UNIXeko shell-aren ingurunea atzitzeko. Sistemako aplikazioak exekutatzeko erabil daiteke."
 
 #: data/org.gnome.Terminal.metainfo.xml.in:41
@@ -779,8 +781,8 @@ msgid ""
 msgstr "Fitxa berriak uneko fitxaren alboan ala azken aldean irekiko diren"
 
 #: src/org.gnome.Terminal.gschema.xml:717
-msgid "Always check whether GNOME Terminal is the default terminal"
-msgstr "Begiratu beti GNOME Terminala terminal lehenetsia den ala ez"
+msgid "Always check whether Pano Terminal is the default terminal"
+msgstr "Begiratu beti Pano Terminala terminal lehenetsia den ala ez"
 
 #. Open new terminal in new window
 #: src/preferences.ui:14
@@ -1857,11 +1859,13 @@ msgid "_Contents"
 msgstr "_Edukia"
 
 #: src/terminal-nautilus.cc:542
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Ireki _urruneko terminalean"
 
 #: src/terminal-nautilus.cc:544
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Ireki _lokaleko terminalean"
 
 #: src/terminal-nautilus.cc:548 src/terminal-nautilus.cc:559
@@ -1873,11 +1877,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Ireki unean irekitako karpeta terminalean"
 
 #: src/terminal-nautilus.cc:556
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Ireki _terminalean"
 
 #: src/terminal-nautilus.cc:566
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Ireki _terminala"
 
 #: src/terminal-nautilus.cc:567
@@ -1889,10 +1895,10 @@ msgid "C_lose Terminal"
 msgstr "_Itxi terminala"
 
 #: src/terminal-options.cc:333
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr "“%s” aukera zaharkitua dago, eta Terminalaren azken bertsioan kenduta egon daiteke."
 
 #. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
@@ -1905,8 +1911,8 @@ msgstr "Erabili “%s” aukerak amaitzeko eta jarri komando-lerroa honen ondore
 
 #: src/terminal-options.cc:354 src/terminal-options.cc:367
 #, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
-msgstr "“%s” aukera ez da gnome-terminal bertsio honetan gehiago onartuko."
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
+msgstr "“%s” aukera ez da Pano Terminal bertsio honetan gehiago onartuko."
 
 #: src/terminal-options.cc:439
 #, c-format
@@ -2104,12 +2110,12 @@ msgid "COMMAND"
 msgstr "KOMANDOA"
 
 #: src/terminal-options.cc:1718
-msgid "GNOME Terminal Emulator"
-msgstr "GNOME Terminalaren emulatzailea"
+msgid "Pano Terminal Emulator"
+msgstr "Pano Terminalaren emulatzailea"
 
 #: src/terminal-options.cc:1719
-msgid "Show GNOME Terminal options"
-msgstr "Erakutsi GNOME Terminalaren aukerak"
+msgid "Show Pano Terminal options"
+msgstr "Erakutsi Pano Terminalaren aukerak"
 
 #: src/terminal-options.cc:1729
 msgid ""
@@ -2272,7 +2278,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Terminalaren emuladorea GNOMEren mahaigainerako"
 
 #: src/terminal-util.cc:268
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME terminala"
 
 #: src/terminal-util.cc:278
@@ -2286,25 +2293,36 @@ msgstr "Ezin izan da '%s' helbidea ireki"
 
 #: src/terminal-util.cc:422
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
-msgstr "GNOME Terminal librea da; birbana eta/edo alda dezakezu Software Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren 3. bertsioan, edo (nahiago baduzu) beste berriago batean, jasotako baldintzak betez gero."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
+msgstr ""
+"Pano Terminal librea da; birbana eta/edo alda dezakezu Software "
+"Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren 3. "
+"bertsioan, edo (nahiago baduzu) beste berriago batean, jasotako "
+"baldintzak betez gero."
 
 #: src/terminal-util.cc:426
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
-msgstr "GNOME Terminal erabilgarria izango delakoan banatzen da, baina, INOLAKO BERMERIK GABE; era berean, ez da bermatzen beraren EGOKITASUNA MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO ERABILTZEKO. Argibide gehiago nahi izanez gero, ikus GNU Lizentzia Publiko Orokorra."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
+msgstr ""
+"Pano Terminal erabilgarria izango delakoan banatzen da, baina, INOLAKO "
+"BERMERIK GABE; era berean, ez da bermatzen beraren EGOKITASUNA "
+"MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO ERABILTZEKO. Argibide "
+"gehiago nahi izanez gero, ikus GNU Lizentzia Publiko Orokorra."
 
 #: src/terminal-util.cc:430
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
-msgstr "GNOME Terminal programarekin batera GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen; hala ez bada, ikusi <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Pano Terminal programarekin batera GNU Lizentzia Publiko Orokorraren "
+"kopia bat jasoko zenuen; hala ez bada, ikusi "
+"<http://www.gnu.org/licenses/>."
 
 #: src/terminal-util.cc:1165
 msgid "“file” scheme with remote hostname not supported"
@@ -2367,8 +2385,8 @@ msgid "L_eave Full Screen"
 msgstr "_Irten pantaila osotik"
 
 #: src/terminal-window.cc:2293
-msgid "Set GNOME Terminal as your default terminal?"
-msgstr "Ezarri GNOME Terminala zure terminal lehenetsi gisa?"
+msgid "Set Pano Terminal as your default terminal?"
+msgstr "Ezarri Pano Terminala zure terminal lehenetsi gisa?"
 
 #: src/terminal-window.cc:2299
 msgid "_Yes"

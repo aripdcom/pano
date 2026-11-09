@@ -1,5 +1,5 @@
 [Unit]
-Description=GNOME Terminal Server
+Description=Pano Terminal Server
 PartOf=graphical-session.target
 RefuseManualStop=true
 [Service]

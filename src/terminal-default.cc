@@ -532,7 +532,7 @@ main(int argc,
 
   auto idx = 1;
   if (g_str_equal(argv[idx], "--debug")) {
-    g_setenv("GNOME_TERMINAL_DEBUG", "default", true);
+    g_setenv("PANO_DEBUG", "default", true);
     _terminal_debug_init();
     ++idx;
   }

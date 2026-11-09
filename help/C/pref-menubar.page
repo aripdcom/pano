@@ -40,7 +40,7 @@
   <p>To display the menubar:</p>
   <steps>
     <item>
-      <p>Right click in <app>Terminal</app> and select
+      <p>Right click in <app>Pano Terminal</app> and select
       <gui style="menuitem">Show Menubar</gui>.</p>
     </item>
   </steps>
@@ -48,13 +48,13 @@
   <p>To hide the menubar:</p>
   <steps>
     <item>
-      <p>Right click in <app>Terminal</app> and deselect
+      <p>Right click in <app>Pano Terminal</app> and deselect
       <gui style="checkbox">Show Menubar</gui>.</p>
     </item>
   </steps>
 
 <!-- 
-  <p>To enable or disable the menubar by default in all <app>Terminal</app>
+  <p>To enable or disable the menubar by default in all <app>Pano Terminal</app>
   windows that you open:</p>
 
   <steps>

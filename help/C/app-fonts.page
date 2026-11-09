@@ -32,7 +32,7 @@
 
   <title>Change font and style</title>
 
-  <p>When you work with a lot of <app>Terminal</app> text, you may want to
+  <p>When you work with a lot of <app>Pano Terminal</app> text, you may want to
   change the default font to your preference. You have the following
   options:</p>
 
@@ -105,7 +105,7 @@
   <section id="cell-spacing">
   <title>Line spacing and character spacing</title>
 
-  <p><app>Terminal</app> allows you to pull its characters apart for improved
+  <p><app>Pano Terminal</app> allows you to pull its characters apart for improved
   readability. Line spacing and character spacing can be adjusted from 1.0
   (the regular look) to 2.0 (“double spacing”), including fractional values
   in between.</p>

@@ -47,9 +47,11 @@ msgid "Use the command line"
 msgstr "கட்டளை வரியை பயன்படுத்து"
 
 #: ../gnome-terminal.appdata.xml.in.h:3
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "GNOME முனையம் என்பது உங்கள் கணினியில் இருக்கும் நிரல்களை இயக்கப் பயன்படுகின்ற "
 "UNIX ஷெல் ஒன்றை அணுகுவதற்கான முனைய உருவாக்கப் பயன்பாடு."
@@ -1570,11 +1572,13 @@ msgid "Thai"
 msgstr "தாய்"
 
 #: ../src/terminal-nautilus.c:601
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "(_R) தொலை முனையத்தில் திற"
 
 #: ../src/terminal-nautilus.c:603
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "(_L) உள்ளமை முனையத்தில் திற"
 
 #: ../src/terminal-nautilus.c:607 ../src/terminal-nautilus.c:618
@@ -1587,11 +1591,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "இப்போது திறந்துள்ள அடைவை ஒரு முனையத்தில் திற"
 
 #: ../src/terminal-nautilus.c:615 ../src/terminal-nautilus.c:629
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "(_e) முனையத்தில் திற"
 
 #: ../src/terminal-nautilus.c:626
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "(_e) முனையத்தை திற"
 
 #: ../src/terminal-nautilus.c:627
@@ -1626,12 +1632,13 @@ msgid "Open the terminal file manager Midnight Commander"
 msgstr "மிட்நைட் கமாண்டர் முனைய கோப்பு மேலாளரை திறக்கவும்"
 
 #: ../src/terminal-options.c:224 ../src/terminal-options.c:237
-#, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
 msgstr "தேர்வு \"%s\" இந்த பதிப்பு க்னோம் முனையத்தில் ஆதரிக்கப்படவில்லை."
 
 #: ../src/terminal-options.c:249 ../src/terminal-util.c:217
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "கனோம் முனையம்"
 
 #: ../src/terminal-options.c:289
@@ -1725,11 +1732,13 @@ msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
 #: ../src/terminal-options.c:1269 ../src/terminal-options.c:1275
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "க்னோம் முனைய போன்றி"
 
 #: ../src/terminal-options.c:1276
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "க்னோம் முனைய தேர்வுகளை காட்டுக"
 
 #: ../src/terminal-options.c:1286
@@ -1859,11 +1868,12 @@ msgid "Could not open the address “%s”"
 msgstr "“%s” முகவரியை திறக்க முடியவில்லை "
 
 #: ../src/terminal-util.c:369
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "க்னோம் முனையம்  இலவச மென் பொருளாகும். நீங்கள்  இலவச மென் பொருள் அமைப்பினால் "
 "வெளியிடப்பட்ட "
@@ -1871,11 +1881,12 @@ msgstr ""
 "பதிப்புகளையோ நீங்கள் (விருப்பப்படி) மாற்றலாம். அல்லது மீண்டும் பறிமாறலாம்."
 
 #: ../src/terminal-util.c:373
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "க்னோம் முனையம் உபயோகப்படும் என்ற எதிர்பார்ப்புடன் வெளியிடப்படுகிறது. ஆனால் "
 "விற்க தகுதி,"
@@ -1884,9 +1895,10 @@ msgstr ""
 "விவரங்களுக்கு ஜிஎன்யு பொது அனுமதிக்கான விதிகளை பார்க்கவும்."
 
 #: ../src/terminal-util.c:377
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 " இத்துடன் ஜிஎன்யு பொது அனுமதிக்கான விதிகளின் பிரதி உங்களுக்கு "
 "கிடைத்திருக்கவேண்டும். "

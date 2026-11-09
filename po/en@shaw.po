@@ -1917,7 +1917,8 @@ msgstr ""
 "𐑒𐑮𐑦𐑱𐑑 𐑩 𐑐𐑮𐑴𐑓𐑲𐑤 𐑢𐑦𐑞 𐑞 𐑛𐑦𐑟𐑲𐑼𐑛 𐑕𐑧𐑑𐑦𐑙, 𐑯 𐑿𐑕 𐑞 𐑯𐑿 '--profile' 𐑪𐑐𐑖𐑩𐑯\n"
 
 #: ../src/terminal-options.c:188 ../src/terminal-window.c:3876
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
 #, c-format
@@ -2061,11 +2062,13 @@ msgid "ZOOM"
 msgstr "𐑟𐑵𐑥"
 
 #: ../src/terminal-options.c:1355 ../src/terminal-options.c:1358
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑧𐑥𐑿𐑤𐑱𐑑𐑼"
 
 #: ../src/terminal-options.c:1359
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "𐑖𐑴 ·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑪𐑐𐑖𐑩𐑯𐑟"
 
 #: ../src/terminal-options.c:1369
@@ -2151,32 +2154,36 @@ msgid "Could not open the address “%s”"
 msgstr "𐑒𐑫𐑛 𐑯𐑪𐑑 𐑴𐑐𐑩𐑯 𐑞 𐑩𐑛𐑮𐑧𐑕 “%s”"
 
 #: ../src/terminal-util.c:366
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) any "
-"later version."
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑦𐑟 𐑓𐑮𐑰 𐑕𐑪𐑓𐑑𐑢𐑺; 𐑿 𐑒𐑨𐑯 𐑮𐑰𐑛𐑦𐑕𐑑𐑮𐑦𐑚𐑿𐑑 𐑦𐑑 𐑯/𐑹 𐑥𐑪𐑛𐑦𐑓𐑲 𐑦𐑑 𐑳𐑯𐑛𐑼 𐑞 𐑑𐑻𐑥𐑟 𐑝 𐑞 "
 "·𐑜𐑯𐑿 𐑡𐑧𐑯𐑼𐑩𐑤 𐑐𐑳𐑚𐑤𐑦𐑒 𐑤𐑲𐑕𐑩𐑯𐑕 𐑨𐑟 𐑐𐑳𐑚𐑤𐑦𐑖𐑑 𐑚𐑲 𐑞 𐑓𐑮𐑰 𐑕𐑪𐑓𐑑𐑢𐑺 𐑓𐑬𐑯𐑛𐑱𐑖𐑩𐑯; 𐑲𐑞𐑼 𐑝𐑻𐑠𐑩𐑯 2 𐑝 "
 "𐑞 𐑤𐑲𐑕𐑩𐑯𐑕, 𐑹 (𐑨𐑑 𐑿𐑼 𐑪𐑐𐑖𐑩𐑯) 𐑧𐑯𐑦 𐑤𐑱𐑑𐑼 𐑝𐑻𐑠𐑩𐑯."
 
 #: ../src/terminal-util.c:370
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑦𐑟 𐑛𐑦𐑕𐑑𐑮𐑦𐑚𐑿𐑑𐑩𐑛 𐑦𐑯 𐑞 𐑣𐑴𐑐 𐑞𐑨𐑑 𐑦𐑑 𐑢𐑦𐑤 𐑚𐑰 𐑿𐑕𐑓𐑩𐑤, 𐑚𐑳𐑑 𐑢𐑦𐑞𐑬𐑑 𐑧𐑯𐑦 "
 "𐑢𐑪𐑮𐑩𐑯𐑑𐑰; 𐑢𐑦𐑞𐑬𐑑 𐑰𐑝𐑩𐑯 𐑞 𐑦𐑥𐑐𐑤𐑲𐑛 𐑢𐑪𐑮𐑩𐑯𐑑𐑰 𐑝 𐑥𐑻𐑗𐑩𐑯𐑑𐑩𐑚𐑦𐑤𐑦𐑑𐑦 𐑹 𐑓𐑦𐑑𐑯𐑩𐑕 𐑓𐑹 𐑩 𐑐𐑼𐑑𐑦𐑒𐑿𐑤𐑼 "
 "𐑐𐑻𐑐𐑩𐑕.  𐑕𐑰 𐑞 ·𐑜𐑯𐑿 𐑡𐑧𐑯𐑼𐑩𐑤 𐑐𐑳𐑚𐑤𐑦𐑒 𐑤𐑲𐑕𐑩𐑯𐑕 𐑓𐑹 𐑥𐑹 𐑛𐑰𐑑𐑱𐑤𐑟."
 
 #: ../src/terminal-util.c:374
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 "
-"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 "𐑿 𐑖𐑫𐑛 𐑣𐑨𐑝 𐑮𐑦𐑕𐑰𐑝𐑛 𐑩 𐑒𐑪𐑐𐑦 𐑝 𐑞 ·𐑜𐑯𐑿 𐑡𐑧𐑯𐑼𐑩𐑤 𐑐𐑳𐑚𐑤𐑦𐑒 𐑤𐑲𐑕𐑩𐑯𐑕 𐑩𐑤𐑪𐑙 𐑢𐑦𐑞 𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤; "
 "𐑦𐑓 𐑯𐑪𐑑, 𐑮𐑲𐑑 𐑑 𐑞 𐑓𐑮𐑰 𐑕𐑪𐑓𐑑𐑢𐑺 𐑓𐑬𐑯𐑛𐑱𐑖𐑩𐑯, 𐑦𐑙𐑒., 51 ·𐑓𐑮𐑨𐑙𐑒𐑤𐑦𐑯 𐑕𐑑𐑮𐑰𐑑, 𐑓𐑦𐑓𐑔 𐑓𐑤𐑹, "

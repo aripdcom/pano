@@ -34,10 +34,11 @@ msgstr "Emplega la linia de comandos"
 
 #: ../gnome-terminal.appdata.xml.in.h:3
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
-"GNOME Terminal ye una aplicación d'emulación d'a terminal ta accedir a "
+"Pano Terminal ye una aplicación d'emulación d'a terminal ta accedir a "
 "l'entorno de shell d'UNIX, que se puede usar ta executar programas "
 "disponibles en o suyo equipo."
 
@@ -1518,11 +1519,13 @@ msgid "Thai"
 msgstr "Tailandés"
 
 #: ../src/terminal-nautilus.c:601
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Ubrir en una terminal _remota"
 
 #: ../src/terminal-nautilus.c:603
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Ubrir en una terminal _local"
 
 #: ../src/terminal-nautilus.c:607 ../src/terminal-nautilus.c:618
@@ -1535,11 +1538,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Ubrir a carpeta ubierta actualment en una terminal"
 
 #: ../src/terminal-nautilus.c:615 ../src/terminal-nautilus.c:629
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Ubrir en una t_erminal"
 
 #: ../src/terminal-nautilus.c:626
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Ubrir t_erminal"
 
 #: ../src/terminal-nautilus.c:627
@@ -1576,11 +1581,12 @@ msgstr "Ubrir o chestor de fichers d'a terminal Midnight Commander"
 
 #: ../src/terminal-options.c:222 ../src/terminal-options.c:235
 #, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
-msgstr "A opción \"%s\" ya no ye suportada en ista versión de gnome-terminal."
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
+msgstr "A opción \"%s\" ya no ye suportada en ista versión de Pano Terminal."
 
 #: ../src/terminal-options.c:247 ../src/terminal-util.c:229
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Terminal de GNOME"
 
 #: ../src/terminal-options.c:287
@@ -1677,11 +1683,13 @@ msgid "PROFILE-NAME"
 msgstr "NOMBRE-D'O-PERFIL"
 
 #: ../src/terminal-options.c:1239 ../src/terminal-options.c:1245
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Emulador de terminal ta GNOME"
 
 #: ../src/terminal-options.c:1246
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Amuestra as opcions d'a Terminal de GNOME"
 
 #: ../src/terminal-options.c:1256
@@ -1818,22 +1826,23 @@ msgstr "No s'ha puesto ubrir l'adreza \"%s\""
 
 #: ../src/terminal-util.c:381
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
-"GNOME Terminal ye software libre; puetz redistribuir-lo y/u modificar-lo "
-"baixo os termins d'a Licencia Publica Cheneral GNU tal como se publica por a "
-"Free Software Foundation; ya siga la versión 3 d'a Licencia, u (a la tuya "
-"esleción) qualsiquier versión posterior."
+"Pano Terminal ye software libre; puetz redistribuir-lo y/u "
+"modificar-lo baixo os termins d'a Licencia Publica Cheneral GNU tal "
+"como se publica por a Free Software Foundation; ya siga la versión 3 "
+"d'a Licencia, u (a la tuya esleción) qualsiquier versión posterior."
 
 #: ../src/terminal-util.c:385
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Iste programa se distribuye con a esperanza que te siga util, pero SIN GARRA "
 "GUARENCIA; sin mesmo a guarencia implicita de MERCANTILIDAT u IDONEIDAT TA "
@@ -1842,11 +1851,11 @@ msgstr ""
 
 #: ../src/terminal-util.c:389
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Habrías d'haber recibiu una copia d'a Licencia publica Cheneral de GNU "
-"chunto con GNOME Terminal; si no, veye <http://www.gnu.org/licenses/>."
+"chunto con Pano Terminal; si no, veye <http://www.gnu.org/licenses/>."
 
 #: ../src/terminal-window.c:504
 msgid "Could not save contents"

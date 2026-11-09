@@ -30,9 +30,11 @@ msgid "Use the command line"
 msgstr "Истифодаи хати фармон"
 
 #: ../gnome-terminal.appdata.xml.in.h:3
+#, fuzzy
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
 "Терминали GNOME- ин барномаи тақлидгари терминал барои кушодани муҳити "
 "восити UNIX мебошад ва метавонад барои иҷро кардани барномаҳои системаи шумо "
@@ -1476,11 +1478,13 @@ msgid "_Quit"
 msgstr "_Хомӯш кардан"
 
 #: ../src/terminal-nautilus.c:602
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Кушодан дар _Поёнаи дурдаст"
 
 #: ../src/terminal-nautilus.c:604
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Кушодан дар _Поёнаи маҳаллӣ"
 
 #: ../src/terminal-nautilus.c:608 ../src/terminal-nautilus.c:619
@@ -1493,11 +1497,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Кушодани ҷузвдони кушодаи ҷорӣ дар поёна"
 
 #: ../src/terminal-nautilus.c:616 ../src/terminal-nautilus.c:630
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Кушодан дар П_оёна"
 
 #: ../src/terminal-nautilus.c:627
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "П_оёнаро кушоед"
 
 #: ../src/terminal-nautilus.c:628
@@ -1533,13 +1539,14 @@ msgid "Open the terminal file manager Midnight Commander"
 msgstr "Кушодани мудири файли терминали Фармондеҳи Нисфи шаб"
 
 #: ../src/terminal-options.c:222 ../src/terminal-options.c:235
-#, c-format
-msgid "Option \"%s\" is no longer supported in this version of gnome-terminal."
+#, fuzzy, c-format
+msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
 msgstr ""
 "Имконоти \"%s\" дигар дар ин версияи терминали-gnome дастгирӣ намешавад"
 
 #: ../src/terminal-options.c:247 ../src/terminal-util.c:229
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "Терминали GNOME"
 
 #: ../src/terminal-options.c:287
@@ -1635,11 +1642,13 @@ msgid "PROFILE-NAME"
 msgstr "НОМИ-ПРОФИЛ"
 
 #: ../src/terminal-options.c:1264 ../src/terminal-options.c:1270
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Тақлидгари терминали GNOME"
 
 #: ../src/terminal-options.c:1271
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Намоиши имконоти терминали GNOME"
 
 #: ../src/terminal-options.c:1281
@@ -1772,11 +1781,12 @@ msgid "Could not open the address “%s”"
 msgstr "Суроғаи “%s” кушода нашуд"
 
 #: ../src/terminal-util.c:381
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "Терминали GNOME нармафзори ройгон мебошад, шумо метавонед онро дубора таҳия "
 "намоед ва/ё мутобиқи талаботи GNU Иҷозатномаи умумии ҷамъиятӣ, ки аз ҷониби "
@@ -1784,11 +1794,12 @@ msgstr ""
 "версияи дигари он тағйир диҳед."
 
 #: ../src/terminal-util.c:385
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Терминали GNOME бо мақсаде таҳия мешаванд, ки онҳо фоидаовар бошанд, вале БЕ "
 "ЯГОН КАФОЛАТ, ҳатто бе кафолати пешбинишавандаи ФУРӮХТАШАВӢ ё МУТОБИҚАТ БА "
@@ -1796,9 +1807,10 @@ msgstr ""
 "нигаред. "
 
 #: ../src/terminal-util.c:389
+#, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Шумо бояд як нусхаи иҷозатномаи умумии ҷамъиятии GNU-ро ҳамроҳ бо терминали "
 "GNOME дарёфт намоед, дар ғайри ин ҳолат ниг. ба .<http://www.gnu.org/"

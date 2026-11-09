@@ -1742,7 +1742,9 @@ msgstr "\"%s\" පසුබිම් පිළිඹිබුව \"%s\": %s\n"
 
 #: ../src/terminal-profile.c:1894
 #, c-format
-msgid "GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+msgid ""
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 
 #: ../src/terminal-profile.c:2197
@@ -2069,7 +2071,8 @@ msgid "Close All _Tabs"
 msgstr "සියලුම පටිති වසන්න (_T)"
 
 #: ../src/terminal-window.c:2910
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "ග්නෝම් අග්‍රය"
 
 #: ../src/terminal-window.c:2912

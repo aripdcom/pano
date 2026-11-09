@@ -109,13 +109,14 @@ msgstr "Näppäinoikotiet"
 #: C/adv-keyboard-shortcuts.page:35
 msgid ""
 "Keyboard shortcuts are combinations of keys that allow you to perform "
-"actions, such as opening the settings dialog or accessing a feature inside "
-"<app>Terminal</app> quickly. These shortcuts can be modified to suit your "
-"preferences."
+"actions, such as opening the settings dialog or accessing a feature "
+"inside <app>Pano Terminal</app> quickly. These shortcuts can be "
+"modified to suit your preferences."
 msgstr ""
-"Pikanäppäimet ovat näppäinyhdistelmiä, joilla voi suorittaa toimintoja, "
-"kuten asetusikkunan avaamisen, tai käyttää <app>Päätteen</app> ominaisuuksia "
-"nopeasti. Näppäinoikoteitä voi muuttaa omien mieltymysten mukaan."
+"Pikanäppäimet ovat näppäinyhdistelmiä, joilla voi suorittaa "
+"toimintoja, kuten asetusikkunan avaamisen, tai käyttää <app>Pano "
+"Terminal</app> ominaisuuksia nopeasti. Näppäinoikoteitä voi muuttaa "
+"omien mieltymysten mukaan."
 
 #. (itstool) path: page/p
 #: C/adv-keyboard-shortcuts.page:40
@@ -740,13 +741,14 @@ msgstr "Värimallit"
 #. (itstool) path: page/p
 #: C/app-colors.page:34
 msgid ""
-"If you do not like the default <app>Terminal</app> theme, you may want to "
-"change the colors that are used for the text and background. You can use "
-"colors from your theme, select one of the presets or use a custom scheme."
+"If you do not like the default <app>Pano Terminal</app> theme, you may "
+"want to change the colors that are used for the text and background. "
+"You can use colors from your theme, select one of the presets or use a "
+"custom scheme."
 msgstr ""
-"Jos <app>Päätteen</app> oletusvärimalli ei miellytä, tekstin ja taustan "
-"värejä voi muuttaa. Voit käyttää teemasi oletusvärejä, valita yhden "
-"oletusvaihtoehdoista tai luoda oman värimallin."
+"Jos <app>Pano Terminal</app> oletusvärimalli ei miellytä, tekstin ja "
+"taustan värejä voi muuttaa. Voit käyttää teemasi oletusvärejä, valita "
+"yhden oletusvaihtoehdoista tai luoda oman värimallin."
 
 #. (itstool) path: section/title
 #: C/app-colors.page:39
@@ -831,9 +833,11 @@ msgstr "Mukautettu värimalli"
 #. (itstool) path: section/p
 #: C/app-colors.page:89
 msgid ""
-"You can use custom colors for the text and background in <app>Terminal</app>:"
+"You can use custom colors for the text and background in <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"<app>Päätteen</app> tekstin ja tausta värin voi valita vapaasti seuraavasti:"
+"<app>Pano Terminal</app> tekstin ja tausta värin voi valita vapaasti "
+"seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/app-colors.page:99
@@ -914,11 +918,11 @@ msgstr "Kohdistimen muuttaminen"
 #. (itstool) path: page/p
 #: C/app-cursor.page:34
 msgid ""
-"<app>Terminal</app> has three cursors from which to choose. To select your "
-"preferred cursor:"
+"<app>Pano Terminal</app> has three cursors from which to choose. To "
+"select your preferred cursor:"
 msgstr ""
-"<app>Pääte</app> sisältää kolme erilaista kohdistinta. Kohdistimen voi "
-"valita seuraavasti:"
+"<app>Pano Terminal</app> sisältää kolme erilaista kohdistinta. "
+"Kohdistimen voi valita seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/app-cursor.page:39 C/app-fonts.page:62 C/txt-select-text.page:37
@@ -978,10 +982,11 @@ msgstr "Kohdistinvalinta tallennetaan automaattisesti."
 #. (itstool) path: item/p
 #: C/app-cursor.page:63
 msgid ""
-"To return to <app>Terminal</app>, click <gui style=\"button\">Close</gui>."
+"To return to <app>Pano Terminal</app>, click <gui "
+"style=\"button\">Close</gui>."
 msgstr ""
-"Palaa <app>Päätteeseen</app> napsauttamalla <gui style=\"button\">Sulje</"
-"gui>."
+"Palaa <app>Pano Terminal</app> napsauttamalla <gui "
+"style=\"button\">Sulje</gui>."
 
 #. (itstool) path: info/desc
 #: C/app-fonts.page:28
@@ -996,12 +1001,13 @@ msgstr "Vaihda fonttia ja tyyliä"
 #. (itstool) path: page/p
 #: C/app-fonts.page:34
 msgid ""
-"When you work with a lot of <app>Terminal</app> text, you may want to change "
-"the default font to your preference. You have the following options:"
+"When you work with a lot of <app>Pano Terminal</app> text, you may "
+"want to change the default font to your preference. You have the "
+"following options:"
 msgstr ""
 "Päätteen fontti kannattaa vaihtaa omiin tottumuksiin sopivaksi, jos "
-"<app>Päätettä</app> käytetään ahkerasti. Seuraavat vaihtoehdot ovat "
-"käytettävissä:"
+"<app>Pano Terminal</app> käytetään ahkerasti. Seuraavat vaihtoehdot "
+"ovat käytettävissä:"
 
 #. (itstool) path: section/title
 #: C/app-fonts.page:39
@@ -1093,11 +1099,12 @@ msgstr "Lihavoitu teksti"
 #. (itstool) path: section/p
 #: C/app-fonts.page:95
 msgid ""
-"<app>Terminal</app> allows your shell to process text such as the prompt, "
-"directory names or man page headings to appear in bold style."
+"<app>Pano Terminal</app> allows your shell to process text such as the "
+"prompt, directory names or man page headings to appear in bold style."
 msgstr ""
-"<app>Pääte</app> kykenee lihavoimaan komentotulkin ohjeiden mukaisesti "
-"esimerkiksi komentokehotteen, kansioiden nimet ja ohjesivujen otsakkeet."
+"<app>Pano Terminal</app> kykenee lihavoimaan komentotulkin ohjeiden "
+"mukaisesti esimerkiksi komentokehotteen, kansioiden nimet ja "
+"ohjesivujen otsakkeet."
 
 #. (itstool) path: item/p
 #: C/app-fonts.page:100
@@ -1137,24 +1144,27 @@ msgstr "Koko näytön tila"
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:33
-msgid "Fullscreen mode allows <app>Terminal</app> to use the entire screen."
+msgid ""
+"Fullscreen mode allows <app>Pano Terminal</app> to use the entire "
+"screen."
 msgstr ""
-"Koko näytön tilassa <app>Pääte</app> laajennetaan koko ruudun täyttäväksi."
+"Koko näytön tilassa <app>Pano Terminal</app> laajennetaan koko ruudun "
+"täyttäväksi."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:35
 msgid ""
 "This mode is useful if you have a device with limited screen space and "
-"intend to work in <app>Terminal</app> for a long duration, or are working "
-"with long lines of terminal output. It temporarily hides the window "
-"decoration, allowing you to view more <link xref=\"pref-"
-"scrolling\">scrollback lines</link> on the screen."
+"intend to work in <app>Pano Terminal</app> for a long duration, or are "
+"working with long lines of terminal output. It temporarily hides the "
+"window decoration, allowing you to view more <link "
+"xref=\"pref-scrolling\">scrollback lines</link> on the screen."
 msgstr ""
-"Koko näytön tila on hyödyllinen, kun laitteessa on rajatusti ruututilaa ja "
-"<app>Päätettä</app> käytetään pitkiä aikoja, tai jos tulosteen rivit ovat "
-"pitkiä. Koko ruudun tilassa ikkunan reunukset piilotetaan, minkä ansiosta "
-"ruudulle mahtuu suurempi määrä <link xref=\"pref-scrolling\">tulosteen "
-"rivejä</link>."
+"Koko näytön tila on hyödyllinen, kun laitteessa on rajatusti "
+"ruututilaa ja <app>Pano Terminal</app> käytetään pitkiä aikoja, tai "
+"jos tulosteen rivit ovat pitkiä. Koko ruudun tilassa ikkunan reunukset "
+"piilotetaan, minkä ansiosta ruudulle mahtuu suurempi määrä <link "
+"xref=\"pref-scrolling\">tulosteen rivejä</link>."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:41
@@ -1182,11 +1192,11 @@ msgstr ""
 #. (itstool) path: note/p
 #: C/app-fullscreen.page:56
 msgid ""
-"If you have more than one <app>Terminal</app> tab open, the tab bar will be "
-"visible in the fullscreen mode."
+"If you have more than one <app>Pano Terminal</app> tab open, the tab "
+"bar will be visible in the fullscreen mode."
 msgstr ""
-"Jos <app>Päätteessä</app> on useampi välilehti auki, myös välilehtipalkki "
-"näkyy koko näytön tilassa."
+"Jos <app>Pano Terminal</app> on useampi välilehti auki, myös "
+"välilehtipalkki näkyy koko näytön tilassa."
 
 #. (itstool) path: page/p
 #: C/app-fullscreen.page:60
@@ -1208,33 +1218,36 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/app-terminal-sizes.page:28
-msgid "Change the <app>Terminal</app> window size"
-msgstr "<app>Pääte</app>-ikkunan koon muuttaminen"
+msgid "Change the <app>Pano Terminal</app> window size"
+msgstr "<app>Pano Terminal</app>-ikkunan koon muuttaminen"
 
 #. (itstool) path: page/title
 #: C/app-terminal-sizes.page:32
-msgid "<app>Terminal</app> sizes"
-msgstr "<app>Päätteen</app> koko"
+msgid "<app>Pano Terminal</app> sizes"
+msgstr "<app>Pano Terminal</app> koko"
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:34
 msgid ""
 "If you work with certain command line applications that have minimum "
-"terminal size requirements in order to display correctly, or if you want to "
-"view long lines of terminal output with minimal line breaks on your display, "
-"you may require <app>Terminal</app> windows to be of a particular size."
+"terminal size requirements in order to display correctly, or if you "
+"want to view long lines of terminal output with minimal line breaks on "
+"your display, you may require <app>Pano Terminal</app> windows to be "
+"of a particular size."
 msgstr ""
-"<app>Pääteikkunan</app> kokoa voi joutua muuttamaan, jos käytössä on "
-"ohjelmia, jotka vaativat tietyn vähimmäismäärän tilaa toimiakseen oikein tai "
-"joiden tulosterivit ovat niin pitkiä, että niitä joudutaan turhan kapean "
-"ikkunan johdosta jakamaan usealle riville."
+"<app>Pano Terminal</app> kokoa voi joutua muuttamaan, jos käytössä on "
+"ohjelmia, jotka vaativat tietyn vähimmäismäärän tilaa toimiakseen "
+"oikein tai joiden tulosterivit ovat niin pitkiä, että niitä joudutaan "
+"turhan kapean ikkunan johdosta jakamaan usealle riville."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:40
 msgid ""
-"You can change the <app>Terminal</app> window size to some preset values:"
+"You can change the <app>Pano Terminal</app> window size to some preset "
+"values:"
 msgstr ""
-"<app>Pääte-ikkunan</app> koon voi valita muutamien esiasetusten joukosta:"
+"<app>Pano Terminal</app> koon voi valita muutamien esiasetusten "
+"joukosta:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:45
@@ -1269,24 +1282,26 @@ msgstr "<gui style=\"menuitem\">132×43</gui>"
 #. (itstool) path: note/p
 #: C/app-terminal-sizes.page:67
 msgid ""
-"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu access "
-"keys</gui></link>, you can access this menu by pressing <keyseq><key>Alt</"
-"key><key>T</key></keyseq> and then pressing <key>1</key> to open a "
-"<app>Terminal</app> window of size <gui>80×24</gui> and so on."
+"If you have enabled <link xref=\"pref-keyboard-access\"><gui>Menu "
+"access keys</gui></link>, you can access this menu by pressing "
+"<keyseq><key>Alt</key><key>T</key></keyseq> and then pressing "
+"<key>1</key> to open a <app>Pano Terminal</app> window of size "
+"<gui>80×24</gui> and so on."
 msgstr ""
-"Jos <link xref=\"pref-keyboard-access\"><gui>Valikkopalkin pikanäppäimet</"
-"gui></link> ovat käytössä, edellä mainitun valikon voi avata "
-"näppäinyhdistelmällä <keyseq><key>Alt</key><key>P</key></keyseq>. Painamalla "
-"<key>1</key> <app>Pääteikkunan</app> kooksi valitaan <gui>80×24</gui>."
+"Jos <link xref=\"pref-keyboard-access\"><gui>Valikkopalkin "
+"pikanäppäimet</gui></link> ovat käytössä, edellä mainitun valikon voi "
+"avata näppäinyhdistelmällä "
+"<keyseq><key>Alt</key><key>P</key></keyseq>. Painamalla <key>1</key> "
+"<app>Pano Terminal</app> kooksi valitaan <gui>80×24</gui>."
 
 #. (itstool) path: page/p
 #: C/app-terminal-sizes.page:74
 msgid ""
-"If you require custom size <app>Terminal</app> windows, you can also set the "
-"window size according to your requirements:"
+"If you require custom size <app>Pano Terminal</app> windows, you can "
+"also set the window size according to your requirements:"
 msgstr ""
-"Jos tarvittavaa <app>Pääteikkunan</app> kokoa ei löydy luettelosta, sen voi "
-"asettaa manuaalisesti seuraavasti:"
+"Jos tarvittavaa <app>Pano Terminal</app> kokoa ei löydy luettelosta, "
+"sen voi asettaa manuaalisesti seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/app-terminal-sizes.page:83
@@ -1318,8 +1333,8 @@ msgstr "Lähennä ja loitonna"
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:33
-msgid "To increase <app>Terminal</app> text size:"
-msgstr "<app>Päätteen</app> tekstin kokoa voi kasvattaa seuraavasti:"
+msgid "To increase <app>Pano Terminal</app> text size:"
+msgstr "<app>Pano Terminal</app> tekstin kokoa voi kasvattaa seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:37
@@ -1333,8 +1348,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:43
-msgid "To decrease <app>Terminal</app> text size:"
-msgstr "<app>Päätteen</app> tekstin kokoa voi pienentää seuraavasti:"
+msgid "To decrease <app>Pano Terminal</app> text size:"
+msgstr "<app>Pano Terminal</app> tekstin kokoa voi pienentää seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:47
@@ -1348,9 +1363,10 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/app-zoom.page:53
-msgid "To restore <app>Terminal</app> text to default size:"
+msgid "To restore <app>Pano Terminal</app> text to default size:"
 msgstr ""
-"<app>Päätteen</app> tekstin koon voi palauttaa normaaliksi seuraavasti:"
+"<app>Pano Terminal</app> tekstin koon voi palauttaa normaaliksi "
+"seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/app-zoom.page:57
@@ -1374,8 +1390,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/gs-execute-commands.page:31
-msgid "Launch programs or run commands using <app>Terminal</app>"
-msgstr "Ohjelmien käynnistäminen ja ajaminen <app>Päätteestä</app>."
+msgid "Launch programs or run commands using <app>Pano Terminal</app>"
+msgstr "Ohjelmien käynnistäminen ja ajaminen <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/gs-execute-commands.page:34
@@ -1385,13 +1401,13 @@ msgstr "Suorita komento"
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:36
 msgid ""
-"Any input entered in the <app>Terminal</app> to be executed is referred to "
-"as a <em>command</em>. You can run both command line and graphical user "
-"interface (GUI) programs from the terminal."
+"Any input entered in the <app>Pano Terminal</app> to be executed is "
+"referred to as a <em>command</em>. You can run both command line and "
+"graphical user interface (GUI) programs from the terminal."
 msgstr ""
-"Kaikkea suoritustarkoituksessa <app>Päätteeseen</app> kirjoitettua tekstiä "
-"kutsutaan <em>komennoksi</em>. Päätteessä voi ajaa sekä graafisia- (GUI) "
-"että komentorivisovelluksia."
+"Kaikkea suoritustarkoituksessa <app>Pano Terminal</app> kirjoitettua "
+"tekstiä kutsutaan <em>komennoksi</em>. Päätteessä voi ajaa sekä "
+"graafisia- (GUI) että komentorivisovelluksia."
 
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:40
@@ -1400,8 +1416,8 @@ msgstr "Komentoja voi suorittaa seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:44
-msgid "Type the command in the <app>Terminal</app> prompt."
-msgstr "Kirjoita komento <app>Päätteen</app> komentokehotteeseen."
+msgid "Type the command in the <app>Pano Terminal</app> prompt."
+msgstr "Kirjoita komento <app>Pano Terminal</app> komentokehotteeseen."
 
 #. (itstool) path: item/p
 #: C/gs-execute-commands.page:47
@@ -1411,15 +1427,16 @@ msgstr "Suorita se painamalla <key>Enter</key>."
 #. (itstool) path: page/p
 #: C/gs-execute-commands.page:51
 msgid ""
-"If you have a program that ends abruptly without any warning or error, you "
-"may want to run it in <app>Terminal</app>. This will allow the program to "
-"output any error or debugging messages to the <app>Terminal</app> window. "
-"This information can be helpful when filing a bug report."
+"If you have a program that ends abruptly without any warning or error, "
+"you may want to run it in <app>Pano Terminal</app>. This will allow "
+"the program to output any error or debugging messages to the <app>Pano "
+"Terminal</app> window. This information can be helpful when filing a "
+"bug report."
 msgstr ""
-"Jos ohjelma sulkeutuu yhtäkkiä ilman varoitusta tai virheilmoitusta, ohjelma "
-"kannattaa ajaa <app>Päätteessä</app>. Tällöin ohjelma voi tulostaa virhe- "
-"tai vianjäljitysviestejä <app>Päätteeseen</app>, joista voi olla hyötyä "
-"virheraporttia laatiessa."
+"Jos ohjelma sulkeutuu yhtäkkiä ilman varoitusta tai virheilmoitusta, "
+"ohjelma kannattaa ajaa <app>Pano Terminal</app>. Tällöin ohjelma voi "
+"tulostaa virhe- tai vianjäljitysviestejä <app>Pano Terminal</app>, "
+"joista voi olla hyötyä virheraporttia laatiessa."
 
 #. (itstool) path: note/p
 #: C/gs-execute-commands.page:57
@@ -1432,8 +1449,10 @@ msgstr ""
 #: C/gs-tabs.page:30
 #, fuzzy
 #| msgid "Add, remove and reorder <app>Terminal</app> tabs."
-msgid "Enable, add, remove and reorder <app>Terminal</app> tabs."
-msgstr "Lisää, poista tai järjestä <app>Päätteen</app> välilehtiä uudelleen."
+msgid "Enable, add, remove and reorder <app>Pano Terminal</app> tabs."
+msgstr ""
+"Lisää, poista tai järjestä <app>Pano Terminal</app> välilehtiä "
+"uudelleen."
 
 #. (itstool) path: page/title
 #: C/gs-tabs.page:33
@@ -1460,19 +1479,20 @@ msgstr ""
 #| "activities such as running programs, browsing directories and editing "
 #| "text files in a single <app>Terminal</app> window."
 msgid ""
-"The tab bar is shown at the top a <app>Terminal</app> window that has "
-"multiple tabs open (it looks like a row of buttons). Click on a tab to "
-"switch to it. You can open multiple tabs to manage your work in "
-"<app>Terminal</app>. This will allow you to multi-task with activities such "
-"as running programs, browsing directories and editing text files in a single "
-"<app>Terminal</app> window."
+"The tab bar is shown at the top a <app>Pano Terminal</app> window that "
+"has multiple tabs open (it looks like a row of buttons). Click on a "
+"tab to switch to it. You can open multiple tabs to manage your work in "
+"<app>Pano Terminal</app>. This will allow you to multi-task with "
+"activities such as running programs, browsing directories and editing "
+"text files in a single <app>Pano Terminal</app> window."
 msgstr ""
-"Välilehtipalkki (rivi painikkeita) ilmestyy <app>pääteikkunan</app> "
+"Välilehtipalkki (rivi painikkeita) ilmestyy <app>Pano Terminal</app> "
 "yläreunaan, kun useita välilehtiä on käytössä. Välilehteen voi siirtyä "
-"napsauttamalla sitä hiirellä. <app>Päätetyöskentelyn</app> hallintaan voi "
-"käyttää useita välilehtiä. Ne mahdollistavat usean toiminnon samanaikaisen "
-"suorittamisen, kuten ohjelmien ajamisen, hakemistojen selaamisen ja "
-"tekstitiedostojen muokkaamisen yhdessä <app>pääteikkunassa</app>."
+"napsauttamalla sitä hiirellä. <app>Pano Terminal</app> hallintaan voi "
+"käyttää useita välilehtiä. Ne mahdollistavat usean toiminnon "
+"samanaikaisen suorittamisen, kuten ohjelmien ajamisen, hakemistojen "
+"selaamisen ja tekstitiedostojen muokkaamisen yhdessä <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:47
@@ -1481,9 +1501,10 @@ msgstr "Välilehden avaaminen"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:49
-msgid "To open a new tab inside your current <app>Terminal</app> window:"
+msgid "To open a new tab inside your current <app>Pano Terminal</app> window:"
 msgstr ""
-"Nykyiseen <app>Pääteikkunaan</app> voi avata uuden ikkunan seuraavasti:"
+"Nykyiseen <app>Pano Terminal</app> voi avata uuden ikkunan "
+"seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:52
@@ -1500,8 +1521,9 @@ msgstr "Välilehden sulkeminen"
 #. (itstool) path: section/p
 #: C/gs-tabs.page:91
 msgid ""
-"To close an existing tab inside your current <app>Terminal</app> window:"
-msgstr "<app>Pääteikkunan</app> välilehden voi sulkea seuraavasti:"
+"To close an existing tab inside your current <app>Pano Terminal</app> "
+"window:"
+msgstr "<app>Pano Terminal</app> välilehden voi sulkea seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:96
@@ -1589,8 +1611,8 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:136
-msgid "Move a tab to another <app>Terminal</app> window"
-msgstr "Välilehtien siirtäminen toiseen <app>Pääteikkunaan</app>"
+msgid "Move a tab to another <app>Pano Terminal</app> window"
+msgstr "Välilehtien siirtäminen toiseen <app>Pano Terminal</app>"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:138
@@ -1610,20 +1632,21 @@ msgstr "Aseta se ikkunan muiden välilehtien lomaan."
 #. (itstool) path: note/p
 #: C/gs-tabs.page:155
 msgid ""
-"You can move a tab from one window to another by dragging the tab to the "
-"<gui>Activities</gui> hot-corner of the <gui>GNOME Shell</gui>. This will "
-"reveal each of the open <app>Terminal</app> windows. You can release the tab "
-"that you are holding over the desired <app>Terminal</app> window."
+"You can move a tab from one window to another by dragging the tab to "
+"the <gui>Activities</gui> hot-corner of the <gui>GNOME Shell</gui>. "
+"This will reveal each of the open <app>Pano Terminal</app> windows. "
+"You can release the tab that you are holding over the desired "
+"<app>Pano Terminal</app> window."
 msgstr ""
 "<gui>GNOME-shell</gui> -ympäristössä välilehtiä voi raahata ikkunasta "
-"toiseen raahaamalla välilehden <gui>Toimintokulmaan</gui>, mikä tuo jokaisen "
-"avoinna olevan <app>Pääteikkunan</app> näkyviin. Vapauta välilehti haluamasi "
-"<app>pääteikkunan</app> päällä."
+"toiseen raahaamalla välilehden <gui>Toimintokulmaan</gui>, mikä tuo "
+"jokaisen avoinna olevan <app>Pano Terminal</app> näkyviin. Vapauta "
+"välilehti haluamasi <app>Pano Terminal</app> päällä."
 
 #. (itstool) path: section/title
 #: C/gs-tabs.page:164
-msgid "Move a tab to create a new <app>Terminal</app> window"
-msgstr "Välilehden siirtäminen uuteen <app>pääteikkunaan</app>"
+msgid "Move a tab to create a new <app>Pano Terminal</app> window"
+msgstr "Välilehden siirtäminen uuteen <app>Pano Terminal</app>"
 
 #. (itstool) path: section/p
 #: C/gs-tabs.page:166
@@ -1632,8 +1655,8 @@ msgstr "Olemassa olevalle välilehden voi siirtää uuteen ikkunaan seuraavasti:
 
 #. (itstool) path: item/p
 #: C/gs-tabs.page:172
-msgid "Drag the tab out of the current <app>Terminal</app> window."
-msgstr "Raahaa välilehti aktiivisen <app>pääteikkunan</app> ulkopuolelle."
+msgid "Drag the tab out of the current <app>Pano Terminal</app> window."
+msgstr "Raahaa välilehti aktiivisen <app>Pano Terminal</app> ulkopuolelle."
 
 #. (itstool) path: info/title
 #: C/index.page:8
@@ -1654,12 +1677,13 @@ msgstr "Jim Campbell"
 
 #. (itstool) path: info/desc
 #: C/index.page:29
-msgid "Set up and use the highly customizable GNOME terminal emulator."
+msgid "Set up and use the highly customizable Pano Terminal emulator."
 msgstr ""
 
 #. (itstool) path: page/title
 #: C/index.page:33
-msgid "<_:media-1/> Terminal Help"
+#, fuzzy
+msgid "<_:media-1/> Pano Terminal Help"
 msgstr "<_:media-1/> Päätteen ohje"
 
 #. (itstool) path: section/title
@@ -1699,16 +1723,12 @@ msgstr "Ongelmanratkaisu"
 #. whatever you like once you have updated your copy of the file.
 #: C/introduction.page:44
 msgctxt "_"
-msgid ""
-"external ref='figures/gnome-terminal.png' "
-"md5='835c028558c16a9c263aaacfe5a1f81d'"
-msgstr ""
-"external ref='figures/gnome-terminal.png' "
-"md5='835c028558c16a9c263aaacfe5a1f81d'"
+msgid "external ref='figures/pano.png' md5='835c028558c16a9c263aaacfe5a1f81d'"
+msgstr "external ref='figures/pano.png' md5='835c028558c16a9c263aaacfe5a1f81d'"
 
 #. (itstool) path: info/desc
 #: C/introduction.page:29
-msgid "Learn about the GNOME terminal emulator."
+msgid "Learn about the Pano Terminal emulator."
 msgstr ""
 
 #. (itstool) path: page/title
@@ -1719,29 +1739,32 @@ msgstr "Esittely"
 #. (itstool) path: page/p
 #: C/introduction.page:34
 msgid ""
-"<app>Terminal</app> is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your system."
+"<app>Pano Terminal</app> is a terminal emulator application for "
+"accessing a UNIX shell environment which can be used to run programs "
+"available on your system."
 msgstr ""
-"<app>Pääte</app> on ohjelma, joka tarjoaa ohjelmien ajamiseen käytettävän "
-"UNIX-komentokehotteen omassa pääteikkunassa."
+"<app>Pano Terminal</app> on ohjelma, joka tarjoaa ohjelmien ajamiseen "
+"käytettävän UNIX-komentokehotteen omassa pääteikkunassa."
 
 #. (itstool) path: page/p
 #: C/introduction.page:38
 msgid ""
-"<app>Terminal</app> supports escape sequences that control cursor position "
-"and colors."
+"<app>Pano Terminal</app> supports escape sequences that control cursor "
+"position and colors."
 msgstr ""
-"<app>Pääte</app> tukee kohdistimen sijaintia ja värejä muuttavia "
-"ohjausmerkkijonoja."
+"<app>Pano Terminal</app> tukee kohdistimen sijaintia ja värejä "
+"muuttavia ohjausmerkkijonoja."
 
 #. (itstool) path: figure/title
 #: C/introduction.page:42
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME Pääte"
 
 #. (itstool) path: figure/desc
 #: C/introduction.page:43
-msgid "Screenshot of GNOME <app>Terminal</app>"
+#, fuzzy
+msgid "Screenshot of <app>Pano Terminal</app>"
 msgstr "Kuvankaappaus GNOME <app>Päätteestä</app>"
 
 #. (itstool) path: p/link
@@ -1814,13 +1837,13 @@ msgstr "Yleistä päätteistä"
 #. (itstool) path: page/p
 #: C/overview.page:26
 msgid ""
-"<app>Terminal</app> is a terminal program for <gui>GNOME</gui>. The "
-"following terms and their descriptions will help you to be familiar with "
-"<app>Terminal</app> and its capabilities."
+"<app>Pano Terminal</app> is a terminal program for <gui>GNOME</gui>. "
+"The following terms and their descriptions will help you to be "
+"familiar with <app>Pano Terminal</app> and its capabilities."
 msgstr ""
-"<app>Pääte</app> on <gui>GNOME:lle</gui> suunniteltu pääteohjelma. Seuraavat "
-"termit ja niiden kuvaukset helpottavat <app>Päätteen</app> käytön ja sen "
-"ominaisuuksien ymmärtämistä."
+"<app>Pano Terminal</app> on <gui>GNOME:lle</gui> suunniteltu "
+"pääteohjelma. Seuraavat termit ja niiden kuvaukset helpottavat "
+"<app>Pano Terminal</app> käytön ja sen ominaisuuksien ymmärtämistä."
 
 #. (itstool) path: item/title
 #: C/overview.page:32
@@ -1890,11 +1913,13 @@ msgstr "VTE"
 
 #. (itstool) path: item/p
 #: C/overview.page:56
+#, fuzzy
 msgid ""
-"Virtual Terminal Environment (VTE) is a terminal emulator which emulates a "
-"text terminal inside a graphical user interface (GUI) environment. "
-"<app>Terminal</app> is largely based on the <app>VTE</app>. <app>VTE</app> "
-"has widgets that implement a fully functional terminal emulator."
+"Virtual Terminal Environment (VTE) is a terminal emulator which "
+"emulates a text terminal inside a graphical user interface (GUI) "
+"environment. <app>Pano Terminal</app> is largely based on the "
+"<app>VTE</app>. <app>VTE</app> has widgets that implement a fully "
+"functional terminal emulator."
 msgstr ""
 "Virtuaalinen pääteympäristö (Virtual Terminal Environment, VTE) on pääte-"
 "emulaattori, joka emuloi tekstipäätettä graafisessa "
@@ -1990,13 +2015,13 @@ msgstr ""
 
 #. (itstool) path: page/title
 #: C/pref.page:18
-msgid "<app>Terminal</app> preferences"
-msgstr "<app>Päätteen</app> asetukset"
+msgid "<app>Pano Terminal</app> preferences"
+msgstr "<app>Pano Terminal</app> asetukset"
 
 #. (itstool) path: info/desc
 #: C/pref-bell.page:28
-msgid "Enable audible notification in <app>Terminal</app>"
-msgstr "Ota piippausilmoitukset käyttöön <app>Päätteessä</app>"
+msgid "Enable audible notification in <app>Pano Terminal</app>"
+msgstr "Ota piippausilmoitukset käyttöön <app>Pano Terminal</app>"
 
 #. (itstool) path: page/title
 #: C/pref-bell.page:32
@@ -2006,17 +2031,17 @@ msgstr "Käytä piippausilmoituksia"
 #. (itstool) path: page/p
 #: C/pref-bell.page:34
 msgid ""
-"<app>Terminal</app> can sound an audible bell to indicate events in "
-"<app>Terminal</app> windows and tabs. For example, the bell will sound when "
-"the <key>Tab</key> is pressed to auto-complete a command, when a command has "
-"finished executing, or when a command ends execution with a warning, error "
-"or notification."
+"<app>Pano Terminal</app> can sound an audible bell to indicate events "
+"in <app>Pano Terminal</app> windows and tabs. For example, the bell "
+"will sound when the <key>Tab</key> is pressed to auto-complete a "
+"command, when a command has finished executing, or when a command ends "
+"execution with a warning, error or notification."
 msgstr ""
-"<app>Pääte</app> voi soittaa äänimerkin, kun jossain <app>Päätteen</app> "
-"ikkunassa tai välilehdessä tapahtuu muutoksia. Merkkiääni soitetaan "
-"esimerkiksi, kun <key>Tab</key>-näppäintä painetaan komennon "
-"täydentämiseksi, komento päättyy tai komennon suoritus päättyy varoitukseen, "
-"virheeseen tai ilmoitukseen."
+"<app>Pano Terminal</app> voi soittaa äänimerkin, kun jossain <app>Pano "
+"Terminal</app> ikkunassa tai välilehdessä tapahtuu muutoksia. "
+"Merkkiääni soitetaan esimerkiksi, kun <key>Tab</key>-näppäintä "
+"painetaan komennon täydentämiseksi, komento päättyy tai komennon "
+"suoritus päättyy varoitukseen, virheeseen tai ilmoitukseen."
 
 #. (itstool) path: page/p
 #: C/pref-bell.page:40
@@ -2049,10 +2074,10 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/pref-custom-exit.page:29
 msgid ""
-"Set the behavior of <app>Terminal</app> when a custom command or the default "
-"shell exits."
+"Set the behavior of <app>Pano Terminal</app> when a custom command or "
+"the default shell exits."
 msgstr ""
-"Määrittele, miten <app>Pääte</app> käsittelee komennon tai "
+"Määrittele, miten <app>Pano Terminal</app> käsittelee komennon tai "
 "oletuskomentotulkin suorituksen päättymisen."
 
 #. (itstool) path: page/title
@@ -2112,24 +2137,26 @@ msgstr "Muutokset tallennetaan automaattisesti heti, kun valinta on tehty."
 #. (itstool) path: note/p
 #: C/pref-custom-exit.page:64
 msgid ""
-"If you have <link xref=\"pref-custom-command\">set a custom command</link> "
-"that is non-interactive, have set the exit behavior to <gui>Exit the "
-"terminal</gui>, and have set the profile to be the default profile, "
-"<app>Terminal</app> may exit before you can see the output of the command."
+"If you have <link xref=\"pref-custom-command\">set a custom "
+"command</link> that is non-interactive, have set the exit behavior to "
+"<gui>Exit the terminal</gui>, and have set the profile to be the "
+"default profile, <app>Pano Terminal</app> may exit before you can see "
+"the output of the command."
 msgstr ""
-"Jos käytössä on <link xref=\"pref-custom-command\">muu komento</link>, joka "
-"ei ole interaktiivinen, komennon loppumisen yhteydessä suoritettavaksi "
-"toiminnoksi on asetettu <gui>Poistu päätteestä</gui> ja profiiliksi on "
-"valittu oletusprofiili, <app>Pääte</app> saattaa sulkeutua ennen komennon "
-"tulosteen näkymistä."
+"Jos käytössä on <link xref=\"pref-custom-command\">muu komento</link>, "
+"joka ei ole interaktiivinen, komennon loppumisen yhteydessä "
+"suoritettavaksi toiminnoksi on asetettu <gui>Poistu päätteestä</gui> "
+"ja profiiliksi on valittu oletusprofiili, <app>Pano Terminal</app> "
+"saattaa sulkeutua ennen komennon tulosteen näkymistä."
 
 #. (itstool) path: info/desc
 #: C/pref-custom-command.page:30
 msgid ""
-"Set <app>Terminal</app> to run a command or a different shell on startup."
+"Set <app>Pano Terminal</app> to run a command or a different shell on "
+"startup."
 msgstr ""
-"Määrittele, mikä komento tai komentotulkki ajetaan <app>Päätteen</app> "
-"käynnistyessä."
+"Määrittele, mikä komento tai komentotulkki ajetaan <app>Pano "
+"Terminal</app> käynnistyessä."
 
 #. (itstool) path: page/title
 #: C/pref-custom-command.page:34
@@ -2152,11 +2179,12 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:41
 msgid ""
-"You can set <app>Terminal</app> to run a command when it starts up instead "
-"of awaiting input from you:"
+"You can set <app>Pano Terminal</app> to run a command when it starts "
+"up instead of awaiting input from you:"
 msgstr ""
-"<app>Pääte</app> kykenee ajamaan komennon käynnistymisen yhteydessä "
-"automaattisesti ennen komentosyötteen antamista seuraavasti:"
+"<app>Pano Terminal</app> kykenee ajamaan komennon käynnistymisen "
+"yhteydessä automaattisesti ennen komentosyötteen antamista "
+"seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:46 C/pref-title.page:40
@@ -2194,11 +2222,11 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-custom-command.page:60
 msgid ""
-"Open a new <app>Terminal</app> tab or window to see how the custom shell or "
-"command executes."
+"Open a new <app>Pano Terminal</app> tab or window to see how the "
+"custom shell or command executes."
 msgstr ""
-"Avaa uusi <app>Päätteen</app> ikkuna tai välilehti tarkastaaksesi mukautetun "
-"komentotulkin tai komennon toimivuuden."
+"Avaa uusi <app>Pano Terminal</app> ikkuna tai välilehti tarkastaaksesi "
+"mukautetun komentotulkin tai komennon toimivuuden."
 
 #. (itstool) path: page/p
 #: C/pref-custom-command.page:65
@@ -2233,11 +2261,11 @@ msgstr "Merkistökoodaus"
 #. (itstool) path: page/p
 #: C/pref-encoding.page:33
 msgid ""
-"The default <em>character encoding</em> is usually UTF-8. You may want to "
-"change character encoding in <app>Terminal</app> if you:"
+"The default <em>character encoding</em> is usually UTF-8. You may want "
+"to change character encoding in <app>Pano Terminal</app> if you:"
 msgstr ""
-"<em>Oletusmerkistö</em> on yleensä UTF-8. <app>Päätteen</app> merkistöä "
-"kannattaa muuttaa, jos:"
+"<em>Oletusmerkistö</em> on yleensä UTF-8. <app>Pano Terminal</app> "
+"merkistöä kannattaa muuttaa, jos:"
 
 #. (itstool) path: item/p
 #: C/pref-encoding.page:38
@@ -2309,11 +2337,11 @@ msgstr "Valitse valikkoon lisättävät merkistöt."
 #. (itstool) path: item/p
 #: C/pref-encoding.page:81
 msgid ""
-"Click <gui style=\"button\">Close</gui> to quit the dialog and return to "
-"<app>Terminal</app>."
+"Click <gui style=\"button\">Close</gui> to quit the dialog and return "
+"to <app>Pano Terminal</app>."
 msgstr ""
 "Napsauta <gui style=\"button\">Sulje</gui> sulkeaksesi ikkunan ja "
-"palataksesi <app>Päätteeseen</app>."
+"palataksesi <app>Pano Terminal</app>."
 
 #. (itstool) path: note/p
 #: C/pref-encoding.page:87
@@ -2326,8 +2354,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/pref-keyboard-access.page:29
-msgid "Navigate around <app>Terminal</app> menus using keyboard keys."
-msgstr "Selaa <app>Päätteen</app> valikkoja näppäimistön avulla."
+msgid "Navigate around <app>Pano Terminal</app> menus using keyboard keys."
+msgstr "Selaa <app>Pano Terminal</app> valikkoja näppäimistön avulla."
 
 #. (itstool) path: page/title
 #: C/pref-keyboard-access.page:32
@@ -2345,14 +2373,15 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-keyboard-access.page:39
 msgid ""
-"You can navigate the <app>Terminal</app> menu using a combination of keys "
-"that are called <em>mnemonics</em> or a special key that takes you directly "
-"to the first menu in the menubar which is called a <em>menu accelerator key</"
-"em>."
+"You can navigate the <app>Pano Terminal</app> menu using a combination "
+"of keys that are called <em>mnemonics</em> or a special key that takes "
+"you directly to the first menu in the menubar which is called a "
+"<em>menu accelerator key</em>."
 msgstr ""
-"<app>Päätteen</app> valikkoja voi selata <em>valikon pikavalinnoiksi</em> "
-"kutsutuilla näppäinyhdistelmillä tai erityisellä <em>valikkonäppäimeksi</em> "
-"kutsutulla näppäimellä, joka avaa valikkopalkin ensimmäisen valikon."
+"<app>Pano Terminal</app> valikkoja voi selata <em>valikon "
+"pikavalinnoiksi</em> kutsutuilla näppäinyhdistelmillä tai erityisellä "
+"<em>valikkonäppäimeksi</em> kutsutulla näppäimellä, joka avaa "
+"valikkopalkin ensimmäisen valikon."
 
 #. (itstool) path: section/title
 #: C/pref-keyboard-access.page:45
@@ -2362,13 +2391,15 @@ msgstr "Valikon pikavalinnat"
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:47
 msgid ""
-"<app>Terminal</app> menu can be accessed by combining the <key>Alt</key> key "
-"and a letter of the menu item. The letter that you need to use to access the "
-"menu will be underlined when you hold down the <key>Alt</key>."
+"<app>Pano Terminal</app> menu can be accessed by combining the "
+"<key>Alt</key> key and a letter of the menu item. The letter that you "
+"need to use to access the menu will be underlined when you hold down "
+"the <key>Alt</key>."
 msgstr ""
-"<app>Päätteen</app> valikkoja voi käyttää yhdistämällä <key>Alt</key>-"
-"näppäin valikon kohteen kirjaimeen. Valikon avaamiseen vaadittava kirjain "
-"alleviivataan, kun <key>Alt</key>-näppäin painetaan pohjaan."
+"<app>Pano Terminal</app> valikkoja voi käyttää yhdistämällä "
+"<key>Alt</key>-näppäin valikon kohteen kirjaimeen. Valikon avaamiseen "
+"vaadittava kirjain alleviivataan, kun <key>Alt</key>-näppäin painetaan "
+"pohjaan."
 
 #. (itstool) path: section/p
 #: C/pref-keyboard-access.page:52
@@ -2459,17 +2490,18 @@ msgstr "Valikkopalkin voi palauttaa näkyviin seuraavasti:"
 #. (itstool) path: item/p
 #: C/pref-menubar.page:50
 msgid ""
-"Right click in <app>Terminal</app> and select <gui style=\"menuitem\">Show "
-"Menubar</gui>."
+"Right click in <app>Pano Terminal</app> and select <gui "
+"style=\"menuitem\">Show Menubar</gui>."
 msgstr ""
-"Napsauta <app>Päätettä</app> hiiren oikealla painikkeella ja valitse <gui "
-"style=\"menuitem\">Näytä valikkopalkki</gui>."
+"Napsauta <app>Pano Terminal</app> hiiren oikealla painikkeella ja "
+"valitse <gui style=\"menuitem\">Näytä valikkopalkki</gui>."
 
 #. (itstool) path: page/p
 #: C/pref-menubar.page:55
+#, fuzzy
 msgid ""
-"To enable the menubar by default in all <app>Terminal</app> windows that you "
-"open:"
+"To enable the menubar by default in all <app>Pano Terminal</app> "
+"windows that you open:"
 msgstr ""
 "Valikkopalkin voi ottaa käyttöön kaikissa uusissa pääteikkunoissa "
 "seuraavasti:"
@@ -2500,12 +2532,14 @@ msgstr "Profiilien hallinta"
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:39
+#, fuzzy
 msgid ""
-"A profile is a collection of <app>Terminal</app> settings. <app>Terminal</"
-"app> supports multiple profiles. You can configure <app>Terminal</app> "
-"profiles to <link xref=\"pref-custom-command\">run a custom command or "
-"shell</link>, set a profile exclusively to connect to remote computers using "
-"SSH or set a profile that launches a <app>GNU Screen</app> session."
+"A profile is a collection of <app>Pano Terminal</app> settings. "
+"<app>Pano Terminal</app> supports multiple profiles. You can configure "
+"<app>Pano Terminal</app> profiles to <link "
+"xref=\"pref-custom-command\">run a custom command or shell</link>, set "
+"a profile exclusively to connect to remote computers using SSH or set "
+"a profile that launches a <app>GNU Screen</app> session."
 msgstr ""
 "Profiili on joukko <app>Päätteen</app> asetuksia. <app>Pääte</app> tukee "
 "useita profiileja. <app>Päätteen</app> profiilien avulla voi muun muassa "
@@ -2515,8 +2549,8 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/pref-profiles.page:46
-msgid "The available <app>Terminal</app> settings include:"
-msgstr "Profiileihin liitettävät <app>Päätteen</app> asetuksiin sisältyy:"
+msgid "The available <app>Pano Terminal</app> settings include:"
+msgstr "Profiileihin liitettävät <app>Pano Terminal</app> asetuksiin sisältyy:"
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:50
@@ -2560,9 +2594,10 @@ msgstr "Oletusprofiilin asettaminen"
 
 #. (itstool) path: section/p
 #: C/pref-profiles.page:71
+#, fuzzy
 msgid ""
 "The default profile is a collection of profile settings applied on the "
-"launch of every <app>Terminal</app> tab or window."
+"launch of every <app>Pano Terminal</app> tab or window."
 msgstr ""
 "Oletusprofiili on profiili, jonka asetukset otetaan käyttöön aina, kun uusi "
 "välilehti tai ikkuna avataan."
@@ -2595,10 +2630,12 @@ msgstr "Profiilin valitseminen"
 
 #. (itstool) path: section/p
 #: C/pref-profiles.page:91
+#, fuzzy
 msgid ""
-"You can change the profile in your current <app>Terminal</app> tab or window "
-"by selecting a profile from <guiseq><gui style=\"menu\">Terminal</gui> <gui "
-"style=\"menuitem\">Change Profile</gui></guiseq>."
+"You can change the profile in your current <app>Pano Terminal</app> "
+"tab or window by selecting a profile from <guiseq><gui "
+"style=\"menu\">Terminal</gui> <gui style=\"menuitem\">Change "
+"Profile</gui></guiseq>."
 msgstr ""
 "Avoinna olevan välilehden tai ikkunan profiilia voi vaihtaa valitsemalla "
 "<guiseq><gui style=\"menu\">Pääte</gui> <gui style=\"menuitem\">Vaihda "
@@ -2768,18 +2805,19 @@ msgstr "Profiilin muokkaaminen"
 #. (itstool) path: note/p
 #: C/pref-profiles.page:199
 msgid ""
-"If the default profile is edited, it cannot be restored to its original "
-"settings! If you have not already created any other <app>Terminal</app> "
-"profiles and have customized the default profile, <app>Terminal</app> "
-"<em>may</em> become unusable should any settings cause problems. It is "
-"recommended that you <link xref=\"#create-profile-from-existing\">create a "
-"copy of the default profile</link> then edit the copy to create a custom "
-"profile."
+"If the default profile is edited, it cannot be restored to its "
+"original settings! If you have not already created any other <app>Pano "
+"Terminal</app> profiles and have customized the default profile, "
+"<app>Pano Terminal</app> <em>may</em> become unusable should any "
+"settings cause problems. It is recommended that you <link "
+"xref=\"#create-profile-from-existing\">create a copy of the default "
+"profile</link> then edit the copy to create a custom profile."
 msgstr ""
-"Jos oletusprofiilia muokataan, oletusasetuksia ei voi palauttaa! Jos muita "
-"profiileja ei ole olemassa ja oletusprofiilia on muokattu, <app>Pääte</app> "
-"<em>saattaa</em> mennä rikki, jos jokin asetus aiheuttaa ongelmia. On "
-"suositeltavaa <link xref=\"#create-profile-from-existing\">luoda kopio "
+"Jos oletusprofiilia muokataan, oletusasetuksia ei voi palauttaa! Jos "
+"muita profiileja ei ole olemassa ja oletusprofiilia on muokattu, "
+"<app>Pano Terminal</app> <em>saattaa</em> mennä rikki, jos jokin "
+"asetus aiheuttaa ongelmia. On suositeltavaa <link "
+"xref=\"#create-profile-from-existing\">luoda kopio "
 "oletusprofiilista</link> ja muokata oletusprofiilin kopiota."
 
 #. (itstool) path: section/p
@@ -2796,44 +2834,46 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-profiles.page:214
 msgid ""
-"Select <link xref=\"app-fonts\">font</link>, <link xref=\"app-"
-"cursor\">cursor shapes</link> and <link xref=\"app-terminal-"
-"sizes\"><app>Terminal</app> size</link>."
+"Select <link xref=\"app-fonts\">font</link>, <link "
+"xref=\"app-cursor\">cursor shapes</link> and <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> size</link>."
 msgstr ""
-"Valitse <link xref=\"app-fonts\">fontti</link>, <link xref=\"app-"
-"cursor\">kohdistin</link> ja <link xref=\"app-terminal-"
-"sizes\"><app>Päätteen</app> koko</link>."
+"Valitse <link xref=\"app-fonts\">fontti</link>, <link "
+"xref=\"app-cursor\">kohdistin</link> ja <link "
+"xref=\"app-terminal-sizes\"><app>Pano Terminal</app> koko</link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:219
 msgid ""
-"You may also change behavior of <app>Terminal</app> on <link xref=\"pref-"
-"custom-exit\">command exit</link>, set a <link xref=\"pref-login-"
-"shell\">custom login shell</link> or change <link xref=\"pref-"
-"scrolling\">scrollbar preferences</link>."
+"You may also change behavior of <app>Pano Terminal</app> on <link "
+"xref=\"pref-custom-exit\">command exit</link>, set a <link "
+"xref=\"pref-login-shell\">custom login shell</link> or change <link "
+"xref=\"pref-scrolling\">scrollbar preferences</link>."
 msgstr ""
-"Voit myös muuttaa <app>Päätteen</app> <link xref=\"pref-custom-"
-"exit\">lopettamiskomentoa</link>, <link xref=\"pref-login-"
-"shell\">komentotulkkia</link> tai <link xref=\"pref-"
-"scrolling\">vieritysasetuksia</link>."
+"Voit myös muuttaa <app>Pano Terminal</app> <link "
+"xref=\"pref-custom-exit\">lopettamiskomentoa</link>, <link "
+"xref=\"pref-login-shell\">komentotulkkia</link> tai <link "
+"xref=\"pref-scrolling\">vieritysasetuksia</link>."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:225
 msgid ""
-"To change the <app>Terminal</app> background and text colors, see <link "
-"xref=\"app-colors\"><app>Terminal</app> color schemes</link>."
+"To change the <app>Pano Terminal</app> background and text colors, see "
+"<link xref=\"app-colors\"><app>Pano Terminal</app> color "
+"schemes</link>."
 msgstr ""
-"Lue <link xref=\"app-colors\"><app>Päätteen</app> väriteemoista</link> "
-"muuttaaksesi <app>Päätteen</app> taustan ja tekstin värejä."
+"Lue <link xref=\"app-colors\"><app>Pano Terminal</app> "
+"väriteemoista</link> muuttaaksesi <app>Pano Terminal</app> taustan ja "
+"tekstin värejä."
 
 #. (itstool) path: item/p
 #: C/pref-profiles.page:229
 msgid ""
-"Changes to profile are saved immediately. To return to <app>Terminal</app>, "
-"click <gui style=\"button\">Close</gui>."
+"Changes to profile are saved immediately. To return to <app>Pano "
+"Terminal</app>, click <gui style=\"button\">Close</gui>."
 msgstr ""
-"Tehdyt muutokset tallennetaan automaattisesti. Palaa <app>Päätteeseen</app> "
-"<gui style=\"button\">Sulje</gui>-painikkeella."
+"Tehdyt muutokset tallennetaan automaattisesti. Palaa <app>Pano "
+"Terminal</app> <gui style=\"button\">Sulje</gui>-painikkeella."
 
 #. (itstool) path: note/p
 #: C/pref-profiles.page:235
@@ -2931,11 +2971,11 @@ msgstr "Vierityspalkkien näkyvyys"
 #. (itstool) path: section/p
 #: C/pref-scrolling.page:38
 msgid ""
-"You can set the location of the scrollbar, or disable it, in <app>Terminal</"
-"app>:"
+"You can set the location of the scrollbar, or disable it, in <app>Pano "
+"Terminal</app>:"
 msgstr ""
-"<app>Päätteen</app> vierityspalkkien sijaintia voi muuttaa tai ne voi "
-"poistaa käytöstä seuraavasti:"
+"<app>Pano Terminal</app> vierityspalkkien sijaintia voi muuttaa tai ne "
+"voi poistaa käytöstä seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/pref-scrolling.page:43 C/pref-scrolling.page:83 C/pref-scrolling.page:116
@@ -2966,13 +3006,13 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pref-scrolling.page:57
 msgid ""
-"<gui style=\"menuitem\">Visible only when necessary</gui>: Scrollbar is "
-"visible only when terminal output exceeds the length of <app>Terminal</app> "
-"window size."
+"<gui style=\"menuitem\">Visible only when necessary</gui>: Scrollbar "
+"is visible only when terminal output exceeds the length of <app>Pano "
+"Terminal</app> window size."
 msgstr ""
-"<gui style=\"menuitem\">Näkyvissä vain tarvittaessa</gui>: Vierityspalkki on "
-"näkyvissä vain silloin, kun päätteen tuloste on <app>Päätteen</app> ikkunaa "
-"pidempi."
+"<gui style=\"menuitem\">Näkyvissä vain tarvittaessa</gui>: "
+"Vierityspalkki on näkyvissä vain silloin, kun päätteen tuloste on "
+"<app>Pano Terminal</app> ikkunaa pidempi."
 
 #. (itstool) path: item/p
 #: C/pref-scrolling.page:62
@@ -2983,11 +3023,11 @@ msgstr "<gui style=\"menuitem\">Piilotettu</gui>: Vierityspalkkia ei näytetä."
 #. (itstool) path: item/p
 #: C/pref-scrolling.page:68
 msgid ""
-"Your preference is saved immediately. Click <gui style=\"button\">Close</"
-"gui> to return to <app>Terminal</app>."
+"Your preference is saved immediately. Click <gui "
+"style=\"button\">Close</gui> to return to <app>Pano Terminal</app>."
 msgstr ""
-"Asetukset tallennetaan automaattisesti. Palaa <app>Päätteeseen</app> <gui "
-"style=\"button\">Sulje</gui>-painikkeesta."
+"Asetukset tallennetaan automaattisesti. Palaa <app>Pano Terminal</app> "
+"<gui style=\"button\">Sulje</gui>-painikkeesta."
 
 #. (itstool) path: section/title
 #: C/pref-scrolling.page:76
@@ -2997,11 +3037,11 @@ msgstr "Takaisinvieritysrivit"
 #. (itstool) path: section/p
 #: C/pref-scrolling.page:78
 msgid ""
-"<gui>Scrollback</gui> lines indicate the number of <app>Terminal</app> "
-"output lines stored in memory for scrolling."
+"<gui>Scrollback</gui> lines indicate the number of <app>Pano "
+"Terminal</app> output lines stored in memory for scrolling."
 msgstr ""
-"<gui>Takaisinvieritys</gui> määrittää, kuinka monta tulosteriviä <app>Pääte</"
-"app> säilyttää muistissa vieritystä varten."
+"<gui>Takaisinvieritys</gui> määrittää, kuinka monta tulosteriviä "
+"<app>Pano Terminal</app> säilyttää muistissa vieritystä varten."
 
 #. (itstool) path: item/p
 #: C/pref-scrolling.page:88
@@ -3032,10 +3072,11 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/pref-scrolling.page:101
+#, fuzzy
 msgid ""
-"<gui style=\"checkbox\">Unlimited</gui> scrollback lines could potentially "
-"overburden your computer's memory and make <app>Terminal</app> sluggish "
-"during scrolling!"
+"<gui style=\"checkbox\">Unlimited</gui> scrollback lines could "
+"potentially overburden your computer's memory and make <app>Pano "
+"Terminal</app> sluggish during scrolling!"
 msgstr ""
 "<gui style=\"checkbox\">Rajoittamattomat</gui> takaisinvieritysrivit "
 "kuluttavat tietokoneen muistia ja saattavat aiheuttaa viivettä vieritykseen!"
@@ -3048,11 +3089,12 @@ msgstr "Vieritä tulostaessa"
 #. (itstool) path: section/p
 #: C/pref-scrolling.page:111
 msgid ""
-"<app>Terminal</app> can automatically scroll down to the latest output as a "
-"command executes."
+"<app>Pano Terminal</app> can automatically scroll down to the latest "
+"output as a command executes."
 msgstr ""
-"<app>Pääte</app> kykenee automaattisesti vierittämään tulostetta siten, että "
-"viimeisin tulosterivi näkyy aina komennon suorituksen edetessä."
+"<app>Pano Terminal</app> kykenee automaattisesti vierittämään "
+"tulostetta siten, että viimeisin tulosterivi näkyy aina komennon "
+"suorituksen edetessä."
 
 #. (itstool) path: item/p
 #: C/pref-scrolling.page:121
@@ -3067,13 +3109,15 @@ msgstr "Vieritä kirjoitettaessa"
 #. (itstool) path: section/p
 #: C/pref-scrolling.page:130
 msgid ""
-"<gui style=\"checkbox\">Scroll on keystroke</gui>, when enabled allows the "
-"<app>Terminal</app> to scroll down to prompt, on press of any key that can "
-"be an input to prompt, such as an alphabet, numbers, tab key etc."
+"<gui style=\"checkbox\">Scroll on keystroke</gui>, when enabled allows "
+"the <app>Pano Terminal</app> to scroll down to prompt, on press of any "
+"key that can be an input to prompt, such as an alphabet, numbers, tab "
+"key etc."
 msgstr ""
 "<gui style=\"checkbox\">Vieritä kirjoitettaessa</gui> valinnan ollessa "
-"valittuna <app>Pääte</app> vieritetään kehoteriville jokaista "
-"syötenäppäintä, kuten kirjaimia, numeroita tai tabulaattoria, painettaessa."
+"valittuna <app>Pano Terminal</app> vieritetään kehoteriville jokaista "
+"syötenäppäintä, kuten kirjaimia, numeroita tai tabulaattoria, "
+"painettaessa."
 
 #. (itstool) path: item/p
 #: C/pref-scrolling.page:141
@@ -3099,8 +3143,9 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/pref-tab-window.page:29
 msgid ""
-"You can chose whether to open a new tab or a new <app>Terminal</app> window "
-"when you use <gui style=\"menuitem\">Open Terminal</gui>."
+"You can chose whether to open a new tab or a new <app>Pano "
+"Terminal</app> window when you use <gui style=\"menuitem\">Open "
+"Terminal</gui>."
 msgstr ""
 
 #. (itstool) path: item/p
@@ -3139,7 +3184,7 @@ msgstr ""
 #: C/pref-theme.page:23
 #, fuzzy
 #| msgid "Right click on the link in <app>Terminal</app>."
-msgid "Use either the light or dark theme for <app>Terminal</app>."
+msgid "Use either the light or dark theme for <app>Pano Terminal</app>."
 msgstr "Napsauta linkkiä hiiren oikealla painikkeella."
 
 #. (itstool) path: page/title
@@ -3164,31 +3209,34 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/pref-title.page:28
 msgid ""
-"Allow commands to set the title for a <app>Terminal</app> tab or window."
+"Allow commands to set the title for a <app>Pano Terminal</app> tab or "
+"window."
 msgstr ""
-"Anna komentojen muuttaa <app>Päätteen</app> ikkunan tai välilehden otsikkoa."
+"Anna komentojen muuttaa <app>Pano Terminal</app> ikkunan tai "
+"välilehden otsikkoa."
 
 #. (itstool) path: page/title
 #: C/pref-title.page:32
-msgid "<app>Terminal</app> title"
-msgstr "<app>Päätteen</app> otsikko"
+msgid "<app>Pano Terminal</app> title"
+msgstr "<app>Pano Terminal</app> otsikko"
 
 #. (itstool) path: page/p
 #: C/pref-title.page:34
 msgid ""
-"<app>Terminal</app> can allow commands to set the name of your "
-"<app>Terminal</app> tab or window. This title will display at startup or on "
-"opening a new tab."
+"<app>Pano Terminal</app> can allow commands to set the name of your "
+"<app>Pano Terminal</app> tab or window. This title will display at "
+"startup or on opening a new tab."
 msgstr ""
-"<app>Pääte</app> voi antaa komennoille mahdollisuuden nimetä <app>Päätteen</"
-"app> ikkuna tai välilehti. Otsikko näytetään ikkunan tai uuden välilehden "
-"avautuessa."
+"<app>Pano Terminal</app> voi antaa komennoille mahdollisuuden nimetä "
+"<app>Pano Terminal</app> ikkuna tai välilehti. Otsikko näytetään "
+"ikkunan tai uuden välilehden avautuessa."
 
 #. (itstool) path: item/p
 #: C/pref-title.page:45
+#, fuzzy
 msgid ""
 "Next to <gui>Initial title</gui>, enter the title that you wish "
-"<app>Terminal</app> to display."
+"<app>Pano Terminal</app> to display."
 msgstr ""
 "Anna näytettävä otsikko <gui>Otsikko käynnistettäessä</gui> -tekstikenttään."
 
@@ -3205,10 +3253,11 @@ msgstr "<gui>Korvaa alkuperäinen otsikko</gui>"
 #. (itstool) path: item/p
 #: C/pref-title.page:53
 msgid ""
-"Commands executed in <app>Terminal</app> are allowed to replace the initial "
-"title."
+"Commands executed in <app>Pano Terminal</app> are allowed to replace "
+"the initial title."
 msgstr ""
-"<app>Päätteessä</app> ajettavat komennot saavat korvata alkuperäisen otsikon."
+"<app>Pano Terminal</app> ajettavat komennot saavat korvata "
+"alkuperäisen otsikon."
 
 #. (itstool) path: item/title
 #: C/pref-title.page:57
@@ -3256,9 +3305,11 @@ msgstr "Valinta tallennetaan ja otetaan käyttöön automaattisesti."
 #. (itstool) path: item/p
 #: C/pref-title.page:74
 msgid ""
-"Click <gui style=\"button\">Close</gui> to return to <app>Terminal</app>."
+"Click <gui style=\"button\">Close</gui> to return to <app>Pano "
+"Terminal</app>."
 msgstr ""
-"Palaa <app>Päätteeseen</app> <gui style=\"button\">Sulje</gui>-painikkeesta."
+"Palaa <app>Pano Terminal</app> <gui "
+"style=\"button\">Sulje</gui>-painikkeesta."
 
 #. (itstool) path: page/title
 #: C/profile.page:18
@@ -3268,24 +3319,24 @@ msgstr "Profiilin asetukset"
 #. (itstool) path: info/desc
 #: C/prob-reset.page:23
 msgid ""
-"How do I recover my <app>Terminal</app> screen when it becomes stuck or has "
-"lot of strange symbols on it?"
+"How do I recover my <app>Pano Terminal</app> screen when it becomes "
+"stuck or has lot of strange symbols on it?"
 msgstr ""
 
 #. (itstool) path: page/title
 #: C/prob-reset.page:27
 #, fuzzy
 #| msgid "To select a word in <app>Terminal</app> output:"
-msgid "Reset your <app>Terminal</app> output"
-msgstr "Sanan valitseminen <app>Päätteen</app> tulosteesta:"
+msgid "Reset your <app>Pano Terminal</app> output"
+msgstr "Sanan valitseminen <app>Pano Terminal</app> tulosteesta:"
 
 #. (itstool) path: page/p
 #: C/prob-reset.page:29
 msgid ""
-"After viewing a non-text file by mistake, or launching some command, it can "
-"happen the <app>Terminal</app> screen is unresponsive, has strange letters "
-"printed when you press keys. You can recover your <app>Terminal</app> in the "
-"following ways:"
+"After viewing a non-text file by mistake, or launching some command, "
+"it can happen the <app>Pano Terminal</app> screen is unresponsive, has "
+"strange letters printed when you press keys. You can recover your "
+"<app>Pano Terminal</app> in the following ways:"
 msgstr ""
 
 #. (itstool) path: section/title
@@ -3297,8 +3348,8 @@ msgstr ""
 #: C/prob-reset.page:37
 #, fuzzy
 #| msgid "<app>Terminal</app> sizes"
-msgid "Reset <app>Terminal</app> screen."
-msgstr "<app>Päätteen</app> koko"
+msgid "Reset <app>Pano Terminal</app> screen."
+msgstr "<app>Pano Terminal</app> koko"
 
 #. (itstool) path: item/p
 #: C/prob-reset.page:41
@@ -3326,10 +3377,11 @@ msgstr ""
 #. (itstool) path: section/p
 #: C/prob-reset.page:54
 msgid ""
-"In addition to resetting your <app>Terminal</app>, <gui "
-"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Terminal</"
-"app> screen space of all terminal output. To <gui style=\"menuitem\">Reset "
-"and Clear</gui> your <app>Terminal</app>:"
+"In addition to resetting your <app>Pano Terminal</app>, <gui "
+"style=\"menuitem\">Reset and Clear</gui> clears the visible <app>Pano "
+"Terminal</app> screen space of all terminal output. To <gui "
+"style=\"menuitem\">Reset and Clear</gui> your <app>Pano "
+"Terminal</app>:"
 msgstr ""
 
 #. (itstool) path: item/p
@@ -3354,8 +3406,8 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/txt-copy-paste.page:28
-msgid "Copy and paste text in <app>Terminal</app>."
-msgstr "Kopioi ja liitä tekstiä <app>Päätteeseen</app>."
+msgid "Copy and paste text in <app>Pano Terminal</app>."
+msgstr "Kopioi ja liitä tekstiä <app>Pano Terminal</app>."
 
 #. (itstool) path: page/title
 #: C/txt-copy-paste.page:32
@@ -3365,11 +3417,11 @@ msgstr "Kopioi ja liitä"
 #. (itstool) path: page/p
 #: C/txt-copy-paste.page:34
 msgid ""
-"You can copy and paste text in <app>Terminal</app> in a similar way to other "
-"applications. However, the keyboard shortcuts differ."
+"You can copy and paste text in <app>Pano Terminal</app> in a similar "
+"way to other applications. However, the keyboard shortcuts differ."
 msgstr ""
-"<app>Päätteessä</app> tekstiä voi kopioida ja liittää muiden ohjelmien "
-"tavoin. Pikanäppäimissä on kuitenkin eroja."
+"<app>Pano Terminal</app> tekstiä voi kopioida ja liittää muiden "
+"ohjelmien tavoin. Pikanäppäimissä on kuitenkin eroja."
 
 #. (itstool) path: item/title
 #: C/txt-copy-paste.page:39
@@ -3397,14 +3449,14 @@ msgstr "<gui>Liitä</gui>"
 #. (itstool) path: item/p
 #: C/txt-copy-paste.page:47
 msgid ""
-"Right click in the <app>Terminal</app> and select <gui "
+"Right click in the <app>Pano Terminal</app> and select <gui "
 "style=\"menuitem\">Paste</gui>. Alternatively, you can press "
 "<keyseq><key>Ctrl</key><key>Shift</key><key>V</key></keyseq>."
 msgstr ""
-"Napsauta <app>Päätettä</app> hiiren oikealla painikkeella ja valitse <gui "
-"style=\"menuitem\">Liitä</gui>. Vaihtoehtoisesti voit käyttää "
-"näppäinyhdistelmää <keyseq><key>Ctrl</key><key>Vaihto</key><key>V</key></"
-"keyseq>."
+"Napsauta <app>Pano Terminal</app> hiiren oikealla painikkeella ja "
+"valitse <gui style=\"menuitem\">Liitä</gui>. Vaihtoehtoisesti voit "
+"käyttää näppäinyhdistelmää "
+"<keyseq><key>Ctrl</key><key>Vaihto</key><key>V</key></keyseq>."
 
 #. (itstool) path: note/p
 #: C/txt-copy-paste.page:55
@@ -3428,15 +3480,16 @@ msgstr "Linkit ja sähköpostiosoitteet"
 #. (itstool) path: page/p
 #: C/txt-links.page:32
 msgid ""
-"<app>Terminal</app> parses the terminal output and automatically detects "
-"snippets of text that are web addresses or email addresses. Web and email "
-"addresses are automatically highlighted when you point your cursor to the "
-"text, indicating that the link can be opened in an application."
+"<app>Pano Terminal</app> parses the terminal output and automatically "
+"detects snippets of text that are web addresses or email addresses. "
+"Web and email addresses are automatically highlighted when you point "
+"your cursor to the text, indicating that the link can be opened in an "
+"application."
 msgstr ""
-"<app>Pääte</app> tarkistaa tulosteen ja havaitsee automaattisesti ne "
-"tekstinpätkät, jotka ovat verkko- tai sähköpostiosoitteita. Muissa "
-"ohjelmissa avattavat linkit korostetaan automaattisesti, kun osoitin viedään "
-"tekstin ylle."
+"<app>Pano Terminal</app> tarkistaa tulosteen ja havaitsee "
+"automaattisesti ne tekstinpätkät, jotka ovat verkko- tai "
+"sähköpostiosoitteita. Muissa ohjelmissa avattavat linkit korostetaan "
+"automaattisesti, kun osoitin viedään tekstin ylle."
 
 #. (itstool) path: page/p
 #: C/txt-links.page:37
@@ -3470,7 +3523,8 @@ msgstr "Linkin kopiointi:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:52
-msgid "Right click on the link in <app>Terminal</app>."
+#, fuzzy
+msgid "Right click on the link in <app>Pano Terminal</app>."
 msgstr "Napsauta linkkiä hiiren oikealla painikkeella."
 
 #. (itstool) path: item/p
@@ -3514,8 +3568,10 @@ msgstr "Sähköpostiosoitteen kopiointi:"
 
 #. (itstool) path: item/p
 #: C/txt-links.page:85
-msgid "Right click on the email address in <app>Terminal</app>."
-msgstr "Napsauta osoitetta hiiren oikealla painikkeella <app>Päätteessä</app>."
+msgid "Right click on the email address in <app>Pano Terminal</app>."
+msgstr ""
+"Napsauta osoitetta hiiren oikealla painikkeella <app>Pano "
+"Terminal</app>."
 
 #. (itstool) path: item/p
 #: C/txt-links.page:88
@@ -3539,8 +3595,8 @@ msgstr "Valitse <gui style=\"menuitem\">Lähetä sähköpostia…</gui>."
 
 #. (itstool) path: info/desc
 #: C/txt-search.page:27
-msgid "Search the <app>Terminal</app> output."
-msgstr "<app>Päätteen</app> tulosteesta hakeminen."
+msgid "Search the <app>Pano Terminal</app> output."
+msgstr "<app>Pano Terminal</app> tulosteesta hakeminen."
 
 #. (itstool) path: page/title
 #: C/txt-search.page:31
@@ -3549,8 +3605,10 @@ msgstr "<gui style=\"menuitem\">Hakutoiminnon</gui> käyttäminen"
 
 #. (itstool) path: page/p
 #: C/txt-search.page:33
-msgid "You can search text in the <app>Terminal</app> output:"
-msgstr "<app>Päätteen</app> tulosteesta voi etsiä tekstinpätkiä seuraavasti:"
+msgid "You can search text in the <app>Pano Terminal</app> output:"
+msgstr ""
+"<app>Pano Terminal</app> tulosteesta voi etsiä tekstinpätkiä "
+"seuraavasti:"
 
 #. (itstool) path: item/p
 #: C/txt-search.page:37
@@ -3597,15 +3655,17 @@ msgstr "<gui style=\"checkbox\">Etsi kokonaista sanaa</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:57
 msgid ""
-"<app>Terminal</app> will look for the entire keyword and will ignore results "
-"that partially match your search keyword. For example, if you have searched "
-"for \"gnome\", <app>Terminal</app> will show only results that match this "
-"keyword exactly and omit results such as \"gnome-terminal\"."
+"<app>Pano Terminal</app> will look for the entire keyword and will "
+"ignore results that partially match your search keyword. For example, "
+"if you have searched for \"gnome\", <app>Pano Terminal</app> will show "
+"only results that match this keyword exactly and omit results such as "
+"\"gnome-terminal\"."
 msgstr ""
-"<app>Pääte</app> etsii koko hakusanaa ja sivuuttaa vastaavuudet, jotka eivät "
-"vastaa hakusanaa täysin. Jos esimerkiksi haetaan sanalla \"gnome\", "
-"<app>Pääte</app> näyttää vain ne tulokset, jotka täsmäävät tarkasti "
-"hakusanaan ja jättää huomiotta muut tulokset, kuten \"gnome-terminal\"."
+"<app>Pano Terminal</app> etsii koko hakusanaa ja sivuuttaa "
+"vastaavuudet, jotka eivät vastaa hakusanaa täysin. Jos esimerkiksi "
+"haetaan sanalla \"gnome\", <app>Pano Terminal</app> näyttää vain ne "
+"tulokset, jotka täsmäävät tarkasti hakusanaan ja jättää huomiotta muut "
+"tulokset, kuten \"gnome-terminal\"."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:64
@@ -3615,12 +3675,12 @@ msgstr "<gui style=\"checkbox\">Etsi säännöllisenä lausekkeena</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:65
 msgid ""
-"You can use regular expression patterns, also known as regex patterns, in "
-"your search keywords. <app>Terminal</app> will display the results that "
-"match these search terms."
+"You can use regular expression patterns, also known as regex patterns, "
+"in your search keywords. <app>Pano Terminal</app> will display the "
+"results that match these search terms."
 msgstr ""
-"Hakulausekkeessa voi käyttää säännöllisiä lausekkeita. <app>Pääte</app> "
-"näyttää tulokset, jotka täsmäävät hakusanaan."
+"Hakulausekkeessa voi käyttää säännöllisiä lausekkeita. <app>Pano "
+"Terminal</app> näyttää tulokset, jotka täsmäävät hakusanaan."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:70
@@ -3630,14 +3690,15 @@ msgstr "<gui style=\"checkbox\">Etsi taaksepäin</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:71
 msgid ""
-"<app>Terminal</app> will search for the keyword from the latest output and "
-"continue the search upwards. This option is recommended when you are looking "
-"for a keyword that could have occurred recently, thus enabling you to find "
-"the keyword quickly."
+"<app>Pano Terminal</app> will search for the keyword from the latest "
+"output and continue the search upwards. This option is recommended "
+"when you are looking for a keyword that could have occurred recently, "
+"thus enabling you to find the keyword quickly."
 msgstr ""
-"<app>Pääte</app> etsii alimmasta tulosterivistä alkaen ja jatkaa hakua "
-"ylöspäin. Tätä asetusta kannattaa käyttää haun nopeuttamiseksi, jos etsitään "
-"sanaa, joka on mahdollisesti esiintynyt tulosteessa hiljattain."
+"<app>Pano Terminal</app> etsii alimmasta tulosterivistä alkaen ja "
+"jatkaa hakua ylöspäin. Tätä asetusta kannattaa käyttää haun "
+"nopeuttamiseksi, jos etsitään sanaa, joka on mahdollisesti esiintynyt "
+"tulosteessa hiljattain."
 
 #. (itstool) path: item/title
 #: C/txt-search.page:77
@@ -3647,24 +3708,25 @@ msgstr "<gui style=\"checkbox\">Jatka alusta</gui>"
 #. (itstool) path: item/p
 #: C/txt-search.page:78
 msgid ""
-"<app>Terminal</app> searches from your current location in the scrollback to "
-"the end of available terminal output and then restarts the search from the "
-"top."
+"<app>Pano Terminal</app> searches from your current location in the "
+"scrollback to the end of available terminal output and then restarts "
+"the search from the top."
 msgstr ""
-"<app>Pääte</app> suorittaa haun tulosteen nykyisestä kohdasta sen loppuun ja "
-"jatkaa hakua tulosteen alusta."
+"<app>Pano Terminal</app> suorittaa haun tulosteen nykyisestä kohdasta "
+"sen loppuun ja jatkaa hakua tulosteen alusta."
 
 #. (itstool) path: note/p
 #: C/txt-search.page:85
 msgid ""
-"If you expect to work with a lot of <app>Terminal</app> output, increase the "
-"<link xref=\"pref-scrolling#scrollback-lines\">scrollback lines</link> to a "
-"higher limit to allow <app>Terminal</app> to search further back."
+"If you expect to work with a lot of <app>Pano Terminal</app> output, "
+"increase the <link xref=\"pref-scrolling#scrollback-lines\">scrollback "
+"lines</link> to a higher limit to allow <app>Pano Terminal</app> to "
+"search further back."
 msgstr ""
-"Jos <app>Päätteen</app> tulostetta käytetään ahkerasti, <link xref=\"pref-"
-"scrolling#scrollback-lines\">takaisinvieritettävien rivien määrää</link> "
-"kannattaa kasvattaa. Tämä mahdollistaa tulostehistorian sisällön etsimisen "
-"pidemmältä aikaväliltä."
+"Jos <app>Pano Terminal</app> tulostetta käytetään ahkerasti, <link "
+"xref=\"pref-scrolling#scrollback-lines\">takaisinvieritettävien rivien "
+"määrää</link> kannattaa kasvattaa. Tämä mahdollistaa tulostehistorian "
+"sisällön etsimisen pidemmältä aikaväliltä."
 
 #. (itstool) path: info/desc
 #: C/txt-select-text.page:24
@@ -3679,15 +3741,16 @@ msgstr "Tekstin valinta"
 #. (itstool) path: page/p
 #: C/txt-select-text.page:30
 msgid ""
-"You can define selection criteria for text in <app>Terminal</app>. You can "
-"allow <app>Terminal</app> to select only words consisting of letters or "
-"words with combinations of letters, numbers and special characters. To "
-"specify the range of characters that can be selected:"
+"You can define selection criteria for text in <app>Pano "
+"Terminal</app>. You can allow <app>Pano Terminal</app> to select only "
+"words consisting of letters or words with combinations of letters, "
+"numbers and special characters. To specify the range of characters "
+"that can be selected:"
 msgstr ""
-"<app>Päätteessä</app> voi määrittää tekstin valintakriteerit. <app>Pääte</"
-"app> voi valita sanoja, jotka koostuvat pelkistä kirjaimista tai sanoja, "
-"jotka sisältävät kirjaimia, numeroita ja erikoismerkkejä. Nämä merkit voi "
-"määritellä seuraavasti: "
+"<app>Pano Terminal</app> voi määrittää tekstin valintakriteerit. "
+"<app>Pano Terminal</app> voi valita sanoja, jotka koostuvat pelkistä "
+"kirjaimista tai sanoja, jotka sisältävät kirjaimia, numeroita ja "
+"erikoismerkkejä. Nämä merkit voi määritellä seuraavasti: "
 
 #. (itstool) path: item/p
 #: C/txt-select-text.page:42
@@ -3711,15 +3774,15 @@ msgstr "Asetukset tallennetaan automaattisesti."
 #: C/txt-select-text.page:50
 msgid ""
 "Once you have set your selection preference, you can select text in "
-"<app>Terminal</app> in two different ways."
+"<app>Pano Terminal</app> in two different ways."
 msgstr ""
-"Kun valinta-asetus on tehty, <app>Päätteessä</app> voi valita tekstiä "
-"kahdella tavalla."
+"Kun valinta-asetus on tehty, <app>Pano Terminal</app> voi valita "
+"tekstiä kahdella tavalla."
 
 #. (itstool) path: page/p
 #: C/txt-select-text.page:53
-msgid "To select a word in <app>Terminal</app> output:"
-msgstr "Sanan valitseminen <app>Päätteen</app> tulosteesta:"
+msgid "To select a word in <app>Pano Terminal</app> output:"
+msgstr "Sanan valitseminen <app>Pano Terminal</app> tulosteesta:"
 
 #. (itstool) path: item/p
 #: C/txt-select-text.page:57
@@ -3728,8 +3791,8 @@ msgstr "Tuplaklikkaa haluttua sanaa."
 
 #. (itstool) path: page/p
 #: C/txt-select-text.page:61
-msgid "To select a line in <app>Terminal</app> output:"
-msgstr "Rivin valitseminen <app>Päätteen</app> tulosteesta:"
+msgid "To select a line in <app>Pano Terminal</app> output:"
+msgstr "Rivin valitseminen <app>Pano Terminal</app> tulosteesta:"
 
 #. (itstool) path: item/p
 #: C/txt-select-text.page:65

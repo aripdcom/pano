@@ -55,11 +55,12 @@ msgstr "Uzi la komandolinion"
 
 #: org.gnome.Terminal.appdata.xml.in:41
 msgid ""
-"GNOME Terminal is a terminal emulator application for accessing a UNIX shell "
-"environment which can be used to run programs available on your system."
+"Pano Terminal is a terminal emulator application for accessing a UNIX "
+"shell environment which can be used to run programs available on your "
+"system."
 msgstr ""
-"GNOME Terminalo estas terminalimitilo por aliri Uniks-ŝela medio, kiun oni "
-"povas uzi por ruli programojn disponeblajn por via sistemo."
+"Pano Terminalo estas terminalimitilo por aliri Uniks-ŝela medio, kiun "
+"oni povas uzi por ruli programojn disponeblajn por via sistemo."
 
 #: org.gnome.Terminal.appdata.xml.in:42
 msgid ""
@@ -1856,11 +1857,13 @@ msgid "_Contents"
 msgstr "_Enhavoj"
 
 #: src/terminal-nautilus.c:533
-msgid "Open in _Remote Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Remote)"
 msgstr "Malfermi en fora _terminalo"
 
 #: src/terminal-nautilus.c:535
-msgid "Open in _Local Terminal"
+#, fuzzy
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Malfermi en loka _terminalo"
 
 #: src/terminal-nautilus.c:539 src/terminal-nautilus.c:550
@@ -1872,11 +1875,13 @@ msgid "Open the currently open folder in a terminal"
 msgstr "Malfermi la aktuale malfermatan dosierujon en terminalo"
 
 #: src/terminal-nautilus.c:547
-msgid "Open in T_erminal"
+#, fuzzy
+msgid "Open in Pano _Terminal"
 msgstr "Malfermi en _terminalo"
 
 #: src/terminal-nautilus.c:557
-msgid "Open T_erminal"
+#, fuzzy
+msgid "Open Pano _Terminal"
 msgstr "Malfermi _terminalon"
 
 #: src/terminal-nautilus.c:558
@@ -1890,11 +1895,11 @@ msgstr "_Fermi la terminalon"
 #: src/terminal-options.c:307
 #, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of gnome-"
-"terminal."
+"Option “%s” is deprecated and might be removed in a later version of "
+"Pano Terminal."
 msgstr ""
-"Opcio “%s” evitindas kaj oni povus forigi ĝin en venonta versio de gnome-"
-"terminal."
+"Opcio “%s” evitindas kaj oni povus forigi ĝin en venonta versio de "
+"Pano Terminal."
 
 #. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
 #: src/terminal-options.c:318
@@ -1907,8 +1912,8 @@ msgstr ""
 
 #: src/terminal-options.c:328 src/terminal-options.c:341
 #, c-format
-msgid "Option “%s” is no longer supported in this version of gnome-terminal."
-msgstr "Opcio “%s” ne plu estas subtenita en ĉi tiu versio de gnome-terminal."
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
+msgstr "Opcio “%s” ne plu estas subtenita en ĉi tiu versio de Pano Terminal."
 
 #: src/terminal-options.c:413
 #, c-format
@@ -2102,11 +2107,13 @@ msgid "COMMAND"
 msgstr "KOMANDO"
 
 #: src/terminal-options.c:1654
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "Terminalimitilo de GNOME"
 
 #: src/terminal-options.c:1655
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "Montri agordojn de GNOME-Terminalo"
 
 #: src/terminal-options.c:1665
@@ -2275,7 +2282,8 @@ msgid "A terminal emulator for the GNOME desktop"
 msgstr "Terminalimitilo por la GNOME Labortablo"
 
 #: src/terminal-util.c:236
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "GNOME-Terminalo"
 
 #: src/terminal-util.c:246
@@ -2296,11 +2304,12 @@ msgid "Could not open the address “%s”"
 msgstr "Ne eblis malfermi la adreson “%s”"
 
 #: src/terminal-util.c:390
+#, fuzzy
 msgid ""
-"GNOME Terminal is free software: you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation, either version 3 of the License, or (at your option) "
-"any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation, either version 3 of the License, or (at "
+"your option) any later version."
 msgstr ""
 "Terminalo de GNOME estas libera programaro; vi povas disdoni kaj/aŭ modifi "
 "ĝin sub la kondiĉoj de la Ĝenerala Publika Permesilo de GNU eldonite de la "
@@ -2308,11 +2317,12 @@ msgstr ""
 "volo) en iu ajn sekva versio."
 
 #: src/terminal-util.c:394
+#, fuzzy
 msgid ""
-"GNOME Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
-"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 "Terminalo de GNOME estas distribuata kun la espero ke ĝi estos utila, sed "
 "SEN IA AJN GARANTIO; eĉ sen la implica garantio de NEGOCEBLO aŭ ADAPTADO AL "
@@ -2321,11 +2331,11 @@ msgstr ""
 
 #: src/terminal-util.c:398
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
-"Vi devintus ricevi kopion de la Ĝenerala Publika Permesilo de GNU kune kun "
-"GNOME Terminalo.  Se ne, vidu <http://www.gnu.org/licenses/>."
+"Vi devintus ricevi kopion de la Ĝenerala Publika Permesilo de GNU kune "
+"kun Pano Terminalo.  Se ne, vidu <http://www.gnu.org/licenses/>."
 
 #: src/terminal-util.c:1157
 msgid "“file” scheme with remote hostname not supported"

@@ -101,7 +101,7 @@ terminal_headerbar_class_init (TerminalHeaderbarClass *klass)
 
   gobject_class->dispose = terminal_headerbar_dispose;
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/headerbar.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/headerbar.ui");
   gtk_widget_class_set_layout_manager_type (widget_class, GTK_TYPE_BIN_LAYOUT);
   gtk_widget_class_bind_template_child (widget_class, TerminalHeaderbar, headerbar);
   gtk_widget_class_bind_template_child (widget_class, TerminalHeaderbar, menubutton);

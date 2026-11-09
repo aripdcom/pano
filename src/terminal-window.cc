@@ -2252,7 +2252,7 @@ terminal_window_init (TerminalWindow *window)
     gtk_info_bar_set_show_close_button(GTK_INFO_BAR(infobar), true);
     gtk_info_bar_set_message_type(GTK_INFO_BAR(infobar), GTK_MESSAGE_QUESTION);
 
-    auto const question = gtk_label_new (_("Set GNOME Terminal as your default terminal?"));
+    auto const question = gtk_label_new (_("Set Pano Terminal as your default terminal?"));
     gtk_label_set_wrap(GTK_LABEL(question), true);
     gtk_info_bar_add_child(GTK_INFO_BAR(infobar), question);
     gtk_widget_show(question);
@@ -2298,7 +2298,7 @@ terminal_window_init (TerminalWindow *window)
   GdkSurface *surface = gtk_native_get_surface (GTK_NATIVE (window));
   if (GDK_IS_X11_SURFACE (surface)) {
     char role[64];
-    g_snprintf (role, sizeof (role), "gnome-terminal-window-%s", uuidstr);
+    g_snprintf (role, sizeof (role), "pano-terminal-window-%s", uuidstr);
     gdk_x11_surface_set_utf8_property (surface, "WM_WINDOW_ROLE", role);
   }
 #endif
@@ -2404,7 +2404,7 @@ terminal_window_class_init (TerminalWindowClass *klass)
 
   window_class->close_request = terminal_window_close_request;
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/terminal/ui/window.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/window.ui");
 
   gtk_widget_class_bind_template_callback (widget_class, screen_close_request_cb);
   gtk_widget_class_bind_template_callback (widget_class, notebook_screen_switched_cb);

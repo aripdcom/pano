@@ -79,8 +79,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define GNOME_TERMINAL_PREFERENCES_ICON_NAME    "org.gnome.Terminal.Preferences"
-#define GNOME_TERMINAL_PREFERENCES_DESKTOP_NAME "org.gnome.Terminal.Preferences.desktop"
+#define PANO_PREFERENCES_ICON_NAME    "com.aripd.Pano.Preferences"
+#define PANO_PREFERENCES_DESKTOP_NAME "com.aripd.Pano.Preferences.desktop"
 
 #define DESKTOP_INTERFACE_SETTINGS_SCHEMA       "org.gnome.desktop.interface"
 
@@ -440,7 +440,7 @@ terminal_app_check_default(TerminalApp* app)
     return;
 #endif /* TERMINAL_SERVER */
 
-  // Check whether gnome-terminal is the default terminal
+  // Check whether Pano is the default terminal
   // as per XDG-Terminal-Exec.
   app->xte_is_default = terminal_is_default();
 
@@ -568,7 +568,7 @@ terminal_app_update_profile_menus (TerminalApp *app)
 static void
 terminal_app_create_headermenu (TerminalApp *app)
 {
-  terminal_util_load_objects_resource ("/org/gnome/terminal/ui/headerbar-menu.ui",
+  terminal_util_load_objects_resource ("/com/aripd/pano/ui/headerbar-menu.ui",
                                        "headermenu", &app->headermenu,
                                        "set-profile-section", &app->headermenu_set_profile_section,
                                        nullptr);
@@ -757,9 +757,9 @@ terminal_app_startup (GApplication *application)
   if (GDK_IS_X11_DISPLAY (display)) {
     /* Need to set the WM class (bug #685742) */
 # if defined(TERMINAL_SERVER)
-    gdk_x11_display_set_program_class (display, "Gnome-terminal");
+    gdk_x11_display_set_program_class (display, "Pano");
 # elif defined(TERMINAL_PREFERENCES)
-    gdk_x11_display_set_program_class (display, "Gnome-terminal-preferences");
+    gdk_x11_display_set_program_class (display, "Pano-preferences");
 # else
 #  error
 # endif
@@ -845,9 +845,9 @@ terminal_app_constructed(GObject *object)
   terminal_app_init_debug ();
 
 #if defined(TERMINAL_SERVER)
-  gtk_window_set_default_icon_name (GNOME_TERMINAL_ICON_NAME);
+  gtk_window_set_default_icon_name (PANO_ICON_NAME);
 #elif defined(TERMINAL_PREFERENCES)
-  gtk_window_set_default_icon_name(GNOME_TERMINAL_PREFERENCES_ICON_NAME);
+  gtk_window_set_default_icon_name(PANO_PREFERENCES_ICON_NAME);
 #else
 #error
 #endif
@@ -1328,7 +1328,7 @@ terminal_app_edit_preferences(TerminalApp* app,
     uuid = terminal_settings_list_dup_uuid_from_child (app->profiles_list, profile);
 
   gs_unref_object auto appinfo =
-    g_desktop_app_info_new(GNOME_TERMINAL_PREFERENCES_DESKTOP_NAME);
+    g_desktop_app_info_new(PANO_PREFERENCES_DESKTOP_NAME);
   gs_free char* token = nullptr;
   if (appinfo) {
     auto const display = gdk_display_get_default();
@@ -1485,7 +1485,7 @@ terminal_app_get_schema_source(TerminalApp *app)
  * terminal_app_get_global_settings:
  * @app: a #TerminalApp
  *
- * Returns: (tranfer none): the cached #GSettings object for the org.gnome.Terminal.Preferences schema
+ * Returns: (tranfer none): the cached #GSettings object for the com.aripd.Pano.Preferences schema
  */
 GSettings *
 terminal_app_get_global_settings (TerminalApp *app)
@@ -1641,7 +1641,7 @@ terminal_app_get_default_icon(TerminalApp* app)
   g_return_val_if_fail(TERMINAL_IS_APP(app), nullptr);
 
   if (!app->default_icon)
-    app->default_icon = g_themed_icon_new(GNOME_TERMINAL_ICON_NAME);
+    app->default_icon = g_themed_icon_new(PANO_ICON_NAME);
 
   return app->default_icon;
 }
@@ -1652,7 +1652,7 @@ terminal_app_get_default_icon_symbolic(TerminalApp* app)
   g_return_val_if_fail(TERMINAL_IS_APP(app), nullptr);
 
   if (!app->default_icon_symbolic)
-    app->default_icon_symbolic = g_themed_icon_new(GNOME_TERMINAL_ICON_SYMBOLIC_NAME);
+    app->default_icon_symbolic = g_themed_icon_new(PANO_ICON_SYMBOLIC_NAME);
 
   return app->default_icon_symbolic;
 }

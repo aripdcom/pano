@@ -21,7 +21,7 @@ top_builddir="MESON_BUILD_ROOT"
 top_distdir="$MESON_DIST_ROOT"
 
 if ! test -e "${top_srcdir}"/.git; then
-    echo "Must be run from gnome-terminal git checkout"
+    echo "Must be run from a Pano git checkout"
     exit 1
 fi
 

@@ -1409,11 +1409,13 @@ msgstr ""
 
 #: ../src/terminal.c:1657
 #: ../src/terminal.c:1660
-msgid "GNOME Terminal Emulator"
+#, fuzzy
+msgid "Pano Terminal Emulator"
 msgstr "د جنومي پايالی"
 
 #: ../src/terminal.c:1661
-msgid "Show GNOME Terminal options"
+#, fuzzy
+msgid "Show Pano Terminal options"
 msgstr "د جنومي پايالي غوراوي ښودل"
 
 #: ../src/terminal.c:1818
@@ -1666,21 +1668,37 @@ msgid "_Title:"
 msgstr ":سرليک_"
 
 #: ../src/terminal-window.c:3161
-msgid "GNOME Terminal is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
+#, fuzzy
+msgid ""
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr "د جنومي پايالی يو وړيا ساوتری دی؛ تاسو دا ساوتری د جي اېن يو د ټولګړي منښتليک د توکيو له مخې، چې د وړيا ساوتريو د بنسټ له خوا خپور شوی، بيا خپرولی او/يا بدلولی شئ؛ د منښتليک ۲يمه نسخه، او .يا (ستاسو په خوښه) هره نوې نسخه کارولی شئ"
 
 #: ../src/terminal-window.c:3165
-msgid "GNOME Terminal is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
+#, fuzzy
+msgid ""
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ".د جنومي پايالی په دې هيله خپريږي چې تاسې لپاره ګټور ووسيږي، خو پرته له هر ډول ورنټۍ څخه. د نورو خبرتياوو .لپاره د جي اېن يو ټولګړی منښتليک وګورﺉ"
 
 #: ../src/terminal-window.c:3169
-msgid "You should have received a copy of the GNU General Public License along with GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 ":تاسو به د جنومي پايالي سره د جي اېن يو د ټولګړي منښتليک يوه لمېسه ترلاسه کړې وي. که نه، نو د وړيا ساوتريو بنسټ ته ليک ولېږئ\n"
 "Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
 
 #: ../src/terminal-window.c:3178
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "جنومي پايالی"
 
 #: ../src/terminal-window.c:3180

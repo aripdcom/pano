@@ -29,7 +29,7 @@
 
   <title>Hyperlinks and email addresses</title>
 
-  <p><app>Terminal</app> parses the terminal output and automatically detects
+  <p><app>Pano Terminal</app> parses the terminal output and automatically detects
   snippets of text that are web addresses or email addresses. Web and email
   addresses are automatically highlighted when you point your cursor to the
   text, indicating that the link can be opened in an application.</p>
@@ -49,7 +49,7 @@
         <p>Copy a hyperlink:</p>
         <steps>
           <item>
-            <p>Right click on the link in <app>Terminal</app>.</p>
+            <p>Right click on the link in <app>Pano Terminal</app>.</p>
           </item>
           <item>
           <p>Select <gui style="menuitem">Copy Link</gui>.</p>
@@ -82,7 +82,7 @@
         <p>Copy an email address:</p>
         <steps>
           <item>
-            <p>Right click on the email address in <app>Terminal</app>.</p>
+            <p>Right click on the email address in <app>Pano Terminal</app>.</p>
           </item>
           <item>
           <p>Select <gui style="menuitem">Copy Mail Address</gui>.</p>

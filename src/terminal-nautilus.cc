@@ -93,7 +93,7 @@ static GType terminal_nautilus_menu_item_get_type (void);
 
 /* --- */
 
-#define TERMINAL_ICON_NAME "org.gnome.Terminal"
+#define TERMINAL_ICON_NAME "com.aripd.Pano"
 
 typedef enum {
   /* local files. Always open "conventionally", i.e. cd and spawn. */
@@ -540,9 +540,9 @@ terminal_nautilus_menu_item_new (TerminalNautilus *nautilus,
   switch (terminal_file_info) {
     case FILE_INFO_SFTP:
       if (remote_terminal) {
-        name = _("Open in _Remote Terminal");
+        name = _("Open in Pano Terminal (_Remote)");
       } else {
-        name = _("Open in _Local Terminal");
+        name = _("Open in Pano Terminal (_Local)");
       }
 
       if (is_file_item) {
@@ -554,7 +554,7 @@ terminal_nautilus_menu_item_new (TerminalNautilus *nautilus,
 
     case FILE_INFO_LOCAL:
     case FILE_INFO_OTHER:
-      name = _("Open in T_erminal");
+      name = _("Open in Pano _Terminal");
 
       if (is_file_item) {
         tooltip = _("Open the currently selected folder in a terminal");
@@ -564,7 +564,7 @@ terminal_nautilus_menu_item_new (TerminalNautilus *nautilus,
       break;
 
     case FILE_INFO_DESKTOP:
-      name = _("Open T_erminal");
+      name = _("Open Pano _Terminal");
       tooltip = _("Open a terminal");
       break;
 

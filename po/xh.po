@@ -2016,9 +2016,10 @@ msgstr ""
 "terminal \"%s\": %s\n"
 
 #: ../src/terminal-profile.c:1870
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"GNOME Terminal: font name \"%s\" set in configuration database is not valid\n"
+"Pano Terminal: font name \"%s\" set in configuration database is not "
+"valid\n"
 msgstr ""
 "I-Terminal ye-GNOME: igama lefonti \"%s\" emiselwe kwi-database yokumiselwa "
 "kwenkqubo yekhompyutha ayisebenzi\n"
@@ -2358,7 +2359,8 @@ msgid "Close All _Tabs"
 msgstr "Vala Zonke ii-Tabs"
 
 #: ../src/terminal-window.c:2740
-msgid "GNOME Terminal"
+#, fuzzy
+msgid "Pano Terminal"
 msgstr "i-Terminal ye-GNOME"
 
 #: ../src/terminal-window.c:2744

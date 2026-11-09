@@ -1448,8 +1448,8 @@ msgstr ""
 
 #: ../src/terminal-options.c:188
 #: ../src/terminal-window.c:3597
-msgid "GNOME Terminal"
-msgstr "GNOME Terminal"
+msgid "Pano Terminal"
+msgstr "Pano Terminal"
 
 #: ../src/terminal-options.c:208
 #, c-format
@@ -1588,12 +1588,12 @@ msgstr "Gröte"
 
 #: ../src/terminal-options.c:1355
 #: ../src/terminal-options.c:1358
-msgid "GNOME Terminal Emulator"
-msgstr "GNOME Terminal Emulator"
+msgid "Pano Terminal Emulator"
+msgstr "Pano Terminal Emulator"
 
 #: ../src/terminal-options.c:1359
-msgid "Show GNOME Terminal options"
-msgstr "GNOME Terminal Optschoonen opwiesen"
+msgid "Show Pano Terminal options"
+msgstr "Pano Terminal Optschoonen opwiesen"
 
 #: ../src/terminal-options.c:1369
 msgid "Options to open new windows or terminal tabs; more than one of these may be specified:"
@@ -1650,15 +1650,27 @@ msgid "Could not open the address “%s”"
 msgstr ""
 
 #: ../src/terminal-util.c:363
-msgid "GNOME Terminal is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
+msgid ""
+"Pano Terminal is free software; you can redistribute it and/or modify "
+"it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at "
+"your option) any later version."
 msgstr ""
 
 #: ../src/terminal-util.c:367
-msgid "GNOME Terminal is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
+msgid ""
+"Pano Terminal is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of "
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
+"General Public License for more details."
 msgstr ""
 
 #: ../src/terminal-util.c:371
-msgid "You should have received a copy of the GNU General Public License along with GNOME Terminal; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgid ""
+"You should have received a copy of the GNU General Public License "
+"along with Pano Terminal; if not, write to the Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 "
+"USA"
 msgstr ""
 
 #. Translators: This is the label of a menu item to choose a profile.
