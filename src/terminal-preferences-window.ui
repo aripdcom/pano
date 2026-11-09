@@ -400,6 +400,17 @@
                 </property>
               </object>
             </child>
+            <child>
+              <object class="AdwSwitchRow" id="quick_terminal_hide_on_unfocus">
+                <property name="title" translatable="yes">Hide When Another App Is Used</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="quick_terminal_slide">
+                <property name="title" translatable="yes">Slide In From the Top</property>
+                <property name="subtitle" translatable="yes">On X11 only</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

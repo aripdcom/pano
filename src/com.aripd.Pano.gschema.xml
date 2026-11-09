@@ -936,6 +936,17 @@
       <summary>Height of the quick terminal, in percent of the screen</summary>
     </key>
 
+    <key name="quick-terminal-hide-on-unfocus" type="b">
+      <default>false</default>
+      <summary>Whether the quick terminal hides when another application gets the focus</summary>
+    </key>
+
+    <key name="quick-terminal-slide" type="b">
+      <default>true</default>
+      <summary>Whether the quick terminal slides in from the top edge of the screen</summary>
+      <description>Only on X11, where applications can place their windows.</description>
+    </key>
+
     <key name="highlight-root-and-remote" type="b">
       <default>true</default>
       <summary>Whether to show when a terminal runs as root or over SSH</summary>

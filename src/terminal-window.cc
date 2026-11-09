@@ -23,6 +23,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <algorithm>
+
 #include <glib.h>
 #include <glib/gi18n.h>
 
@@ -4821,8 +4823,55 @@ quick_terminal_monitor(TerminalWindow* window)
   return monitor; // the display keeps a reference
 }
 
-/* On X11 the quick terminal goes to the top of the screen. Wayland does
- * not let applications place their windows. */
+#ifdef GDK_WINDOWING_X11
+
+#define QUICK_SLIDE_DURATION_US (180 * G_TIME_SPAN_MILLISECOND)
+
+/* Asks the window manager to keep the quick terminal above other windows */
+static void
+quick_terminal_keep_above(GdkSurface* surface)
+{
+  auto const display = GDK_SURFACE_XDISPLAY(surface);
+  XEvent event{};
+  event.xclient.type = ClientMessage;
+  event.xclient.window = GDK_SURFACE_XID(surface);
+  event.xclient.message_type = XInternAtom(display, "_NET_WM_STATE", false);
+  event.xclient.format = 32;
+  event.xclient.data.l[0] = 1; // _NET_WM_STATE_ADD
+  event.xclient.data.l[1] = long(XInternAtom(display, "_NET_WM_STATE_ABOVE", false));
+  event.xclient.data.l[3] = 1; // from an application
+  XSendEvent(display, DefaultRootWindow(display), false,
+             SubstructureRedirectMask | SubstructureNotifyMask, &event);
+}
+
+/* Moves the quick terminal down from above the top edge, easing out */
+static gboolean
+quick_terminal_slide_cb(GtkWidget* widget,
+                        GdkFrameClock* clock,
+                        void* user_data)
+{
+  auto const surface = gtk_native_get_surface(GTK_NATIVE(widget));
+  auto const start = GPOINTER_TO_SIZE(g_object_get_data(G_OBJECT(widget), "quick-slide-start"));
+  auto const x = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(widget), "quick-slide-x"));
+  auto const top = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(widget), "quick-slide-top"));
+  auto const height = GPOINTER_TO_INT(g_object_get_data(G_OBJECT(widget), "quick-slide-height"));
+  if (!surface || !GDK_IS_X11_SURFACE(surface))
+    return G_SOURCE_REMOVE;
+
+  auto const t = std::clamp(double(gdk_frame_clock_get_frame_time(clock) - gint64(start)) /
+                            double(QUICK_SLIDE_DURATION_US), 0.0, 1.0);
+  auto const eased = 1.0 - (1.0 - t) * (1.0 - t) * (1.0 - t);
+  auto const y = top - int((1.0 - eased) * height);
+  XMoveWindow(GDK_SURFACE_XDISPLAY(surface), GDK_SURFACE_XID(surface), x, y);
+
+  return t < 1.0 ? G_SOURCE_CONTINUE : G_SOURCE_REMOVE;
+}
+
+#endif /* GDK_WINDOWING_X11 */
+
+/* On X11 the quick terminal goes to the top of the screen, above other
+ * windows, maybe sliding in. Wayland does not let applications place their
+ * windows. */
 static void
 quick_terminal_map_cb(TerminalWindow* window)
 {
@@ -4835,13 +4884,60 @@ quick_terminal_map_cb(TerminalWindow* window)
   GdkRectangle geometry;
   gdk_monitor_get_geometry(monitor, &geometry);
   // The window is not allocated yet when it is mapped; use its default size
-  int width = 0;
-  gtk_window_get_default_size(GTK_WINDOW(window), &width, nullptr);
+  int width = 0, height = 0;
+  gtk_window_get_default_size(GTK_WINDOW(window), &width, &height);
   auto const scale = gdk_surface_get_scale_factor(surface);
-  auto const x = geometry.x + (geometry.width - width) / 2;
-  XMoveWindow(GDK_SURFACE_XDISPLAY(surface), GDK_SURFACE_XID(surface),
-              MAX(x, geometry.x) * scale, geometry.y * scale);
+  auto const x = MAX(geometry.x + (geometry.width - width) / 2, geometry.x) * scale;
+  auto const top = geometry.y * scale;
+
+  quick_terminal_keep_above(surface);
+
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  if (!g_settings_get_boolean(settings, TERMINAL_SETTING_QUICK_TERMINAL_SLIDE_KEY) || height <= 0) {
+    XMoveWindow(GDK_SURFACE_XDISPLAY(surface), GDK_SURFACE_XID(surface), x, top);
+    return;
+  }
+
+  auto const object = G_OBJECT(window);
+  g_object_set_data(object, "quick-slide-start", GSIZE_TO_POINTER(gsize(g_get_monotonic_time())));
+  g_object_set_data(object, "quick-slide-x", GINT_TO_POINTER(x));
+  g_object_set_data(object, "quick-slide-top", GINT_TO_POINTER(top));
+  g_object_set_data(object, "quick-slide-height", GINT_TO_POINTER(height * scale));
+  XMoveWindow(GDK_SURFACE_XDISPLAY(surface), GDK_SURFACE_XID(surface), x, top - height * scale);
+  gtk_widget_add_tick_callback(GTK_WIDGET(window), quick_terminal_slide_cb, nullptr, nullptr);
 #endif
+}
+
+/* Hides the quick terminal once the focus has gone to another application;
+ * not for its own dialogs, or the preferences */
+static gboolean
+quick_terminal_unfocus_timeout_cb(void* user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+
+  auto const windows = gtk_application_get_windows(GTK_APPLICATION(terminal_app_get()));
+  for (auto l = windows; l; l = l->next)
+    if (gtk_window_is_active(GTK_WINDOW(l->data)))
+      return G_SOURCE_REMOVE;
+
+  gtk_widget_set_visible(GTK_WIDGET(window), false);
+  return G_SOURCE_REMOVE;
+}
+
+static void
+quick_terminal_is_active_cb(TerminalWindow* window,
+                            GParamSpec* pspec,
+                            void* user_data)
+{
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  if (gtk_window_is_active(GTK_WINDOW(window)) ||
+      !gtk_widget_get_visible(GTK_WIDGET(window)) ||
+      !g_settings_get_boolean(settings, TERMINAL_SETTING_QUICK_TERMINAL_HIDE_ON_UNFOCUS_KEY))
+    return;
+
+  // Let the focus settle first
+  g_timeout_add_full(G_PRIORITY_DEFAULT, 200, quick_terminal_unfocus_timeout_cb,
+                     g_object_ref(window), g_object_unref);
 }
 
 /**
@@ -4889,6 +4985,7 @@ terminal_window_set_quick(TerminalWindow* window,
   if (quick) {
     gtk_widget_add_css_class(GTK_WIDGET(window), "quick-terminal");
     g_signal_connect(window, "map", G_CALLBACK(quick_terminal_map_cb), nullptr);
+    g_signal_connect(window, "notify::is-active", G_CALLBACK(quick_terminal_is_active_cb), nullptr);
     terminal_window_update_quick_size(window);
   }
 }

@@ -155,8 +155,10 @@ Everything GNOME Terminal provides, plus:
 * **Quick terminal**: a terminal that you show and hide with one key. Run
   `pano-terminal --quick` to toggle it; to use a key such as F12, add that
   command in *Settings → Keyboard → View and Customize Shortcuts → Custom
-  Shortcuts*. Set its width and height in *Preferences → Quick Terminal*. On
-  X11 it opens at the top of the screen; on Wayland the desktop places it.
+  Shortcuts*. Set its width and height in *Preferences → Quick Terminal*,
+  where it can also hide by itself when you use another application. On
+  X11 it slides in at the top of the screen and stays above other windows;
+  on Wayland the desktop places it.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.
