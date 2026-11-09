@@ -53,7 +53,8 @@ bool terminal_tab_is_split(TerminalTab* tab);
 void terminal_tab_split(TerminalTab* tab,
                         TerminalScreen* screen,
                         TerminalScreen* new_screen,
-                        GtkOrientation orientation);
+                        GtkOrientation orientation,
+                        double position);
 
 void terminal_tab_remove_screen(TerminalTab* tab,
                                 TerminalScreen* screen);
@@ -70,6 +71,24 @@ void terminal_tab_set_zoomed(TerminalTab* tab,
 bool terminal_tab_get_zoomed(TerminalTab* tab);
 
 TerminalTab *terminal_tab_get_from_screen (TerminalScreen *screen);
+
+/* Saving and restoring the pane layout. A layout is an a{sv} tree: a split
+ * has the keys "split" ('horizontal' or 'vertical'), "position" (the share
+ * of the first child, 0 to 1), "start" and "end"; any other dictionary is a
+ * pane, as returned by the save function.
+ */
+typedef GVariant* (* TerminalTabSaveFunc) (TerminalScreen* screen,
+                                            void* user_data);
+typedef TerminalScreen* (* TerminalTabCreateFunc) (GVariant* pane,
+                                                    void* user_data);
+
+GVariant* terminal_tab_save_layout(TerminalTab* tab,
+                                   TerminalTabSaveFunc save_func,
+                                   void* user_data);
+
+TerminalTab* terminal_tab_new_from_layout(GVariant* layout,
+                                          TerminalTabCreateFunc create_func,
+                                          void* user_data);
 
 void terminal_tab_set_screen_policy(TerminalScreen* screen,
                                     TerminalScrollbarPolicy hpolicy,

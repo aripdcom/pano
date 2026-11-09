@@ -24,6 +24,11 @@
       <arg type="a{sv}" name="options" direction="in" />
       <arg type="o" name="receiver" direction="out" />
     </method>
+    <!-- Opens the saved session if enabled and no window is open -->
+    <method name="RestoreSession">
+      <arg type="a{sv}" name="options" direction="in" />
+      <arg type="b" name="restored" direction="out" />
+    </method>
   </interface>
 
   <interface name="com.aripd.Pano.Terminal0">

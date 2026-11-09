@@ -8,8 +8,8 @@ Website: https://pano.aripd.com
 
 Pano is a fork of [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal).
 It focuses on power-user features that GNOME Terminal does not offer, such
-as flexible tab placement and split panes, and, on the roadmap, session
-restore and background transparency.
+as flexible tab placement, split panes and session restore, and, on the
+roadmap, background transparency.
 
 > **Status:** early development. There are no packages yet; build it from
 > source as described below.
@@ -42,6 +42,14 @@ Everything GNOME Terminal provides, plus:
 
   The focus, divider, zoom and close shortcuts only take effect while a tab
   is split, so programs in the terminal still get Alt+Arrow keys otherwise.
+* **Session restore**: when started without arguments, for example from the
+  application menu, Pano Terminal reopens the windows, tabs and panes that
+  were open when it was last closed, each with a new shell in its previous
+  folder. Running programs are not restored. Turn it off with
+  *Preferences → Behavior → Restore Session*. The session is kept in
+  `~/.local/state/pano-terminal/`.
+* **Remember window size** (optional): open new windows with the size of the
+  last used terminal instead of the initial size of the profile.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.

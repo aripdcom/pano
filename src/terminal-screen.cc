@@ -2322,6 +2322,14 @@ terminal_screen_get_current_dir (TerminalScreen *screen)
   if (uri != nullptr)
     return g_filename_from_uri (uri, nullptr, nullptr);
 
+  /* Without shell integration (OSC 7), ask the system for the working
+   * directory of the shell. This only works on Linux. */
+  if (screen->priv->child_pid > 0) {
+    gs_free char *link = g_strdup_printf ("/proc/%d/cwd", int(screen->priv->child_pid));
+    if (auto const cwd = g_file_read_link (link, nullptr))
+      return cwd;
+  }
+
   ExecData *data = screen->priv->exec_data;
   if (data && data->cwd)
     return g_strdup (data->cwd);

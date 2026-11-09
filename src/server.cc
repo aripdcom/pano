@@ -212,6 +212,9 @@ init_server (int argc,
   /* We stay around a bit after the last window closed */
   g_application_set_inactivity_timeout (app, INACTIVITY_TIMEOUT);
 
+  /* Hear about the end of the desktop session, to save ours in time */
+  g_object_set (app, "register-session", TRUE, nullptr);
+
   *application = app;
   return 0;
 }

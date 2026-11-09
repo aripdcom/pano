@@ -164,6 +164,7 @@ config_h = configuration_data()
 
 config_h.set_quoted('GETTEXT_PACKAGE', gt_gettext_domain)
 config_h.set_quoted('VERSION', gt_version)
+config_h.set_quoted('TERMINAL_PROGRAM_NAME', gt_name)
 config_h.set('ENABLE_DEBUG', enable_debug)
 config_h.set('ENABLE_SEARCH_PROVIDER', get_option('search_provider'))
 

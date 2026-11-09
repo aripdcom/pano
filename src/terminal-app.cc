@@ -50,6 +50,7 @@
 #ifdef TERMINAL_SERVER
 #include "terminal-gdbus.hh"
 #include "terminal-prefs-process.hh"
+#include "terminal-session.hh"
 #include "terminal-tab.hh"
 #include "terminal-screen.hh"
 #include "terminal-window.hh"
@@ -786,6 +787,8 @@ terminal_app_startup (GApplication *application)
   g_signal_connect_swapped (app->profiles_list, "child-changed::" TERMINAL_PROFILE_VISIBLE_NAME_KEY,
                             G_CALLBACK (terminal_app_update_profile_menus), app);
 
+  terminal_session_init();
+
 #endif /* TERMINAL_SERVER */
 
   terminal_app_check_default(app);
@@ -796,6 +799,10 @@ terminal_app_startup (GApplication *application)
 static void
 terminal_app_shutdown (GApplication *application)
 {
+#ifdef TERMINAL_SERVER
+  terminal_session_shutdown();
+#endif
+
   G_APPLICATION_CLASS (terminal_app_parent_class)->shutdown (application);
 
 #ifdef TERMINAL_PREFERENCES

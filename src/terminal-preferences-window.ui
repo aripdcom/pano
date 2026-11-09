@@ -205,6 +205,18 @@
                 </property>
               </object>
             </child>
+            <child>
+              <object class="AdwSwitchRow" id="restore_session">
+                <property name="title" translatable="yes">Restore Session</property>
+                <property name="subtitle" translatable="yes">Reopen the windows, tabs and panes of the last session, each in its previous folder</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="restore_window_size">
+                <property name="title" translatable="yes">Remember Window Size</property>
+                <property name="subtitle" translatable="yes">Open new windows with the size of the last used terminal instead of the initial size of the profile</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

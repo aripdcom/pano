@@ -40,6 +40,8 @@ struct _TerminalPreferencesWindow
   AdwComboRow          *new_terminal_mode;
   GListModel           *new_terminal_modes;
   GtkListBox           *profiles_list_box;
+  AdwSwitchRow         *restore_session;
+  AdwSwitchRow         *restore_window_size;
   AdwComboRow          *rounded_corners;
   GListModel           *rounded_corners_model;
   AdwComboRow          *tab_position;
@@ -315,6 +317,16 @@ terminal_preferences_window_constructed (GObject *object)
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_RESTORE_SESSION_KEY,
+                   self->restore_session,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_RESTORE_WINDOW_SIZE_KEY,
+                   self->restore_window_size,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_ENABLE_MENU_BAR_ACCEL_KEY,
                    self->accelerator_key,
                    "active",
@@ -422,6 +434,8 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, accelerator_key);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, add_profile_row);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, always_check_default);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_session);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_window_size);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_mode);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_modes);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, profiles_list_box);

@@ -772,6 +772,18 @@
 
     <!-- Default terminal -->
 
+    <key name="restore-session" type="b">
+      <default>true</default>
+      <summary>Whether to reopen the windows, tabs and panes of the last session on startup</summary>
+      <description>Applies when Pano Terminal is started without arguments and no window is open. Each terminal gets a new shell in its previous working directory; running programs are not restored.</description>
+    </key>
+
+    <key name="restore-window-size" type="b">
+      <default>false</default>
+      <summary>Whether new windows get the size of the last used terminal</summary>
+      <description>When enabled, new windows use the number of columns and rows of the terminal used last, instead of the initial size of the profile.</description>
+    </key>
+
     <key name="always-check-default-terminal" type="b">
       <default>true</default>
       <summary>Always check whether Pano Terminal is the default terminal</summary>

@@ -397,6 +397,40 @@ handle_show_preferences(TerminalOptions *options,
   }
 }
 
+/* Asks the server to reopen the last session. This only happens when the
+ * server has no window yet and restoring is enabled.
+ *
+ * Returns: %true if the session was restored, so that no new window is needed
+ */
+static bool
+try_restore_session(TerminalOptions* options,
+                    TerminalFactory* factory)
+{
+  GVariantBuilder builder;
+  g_variant_builder_init(&builder, G_VARIANT_TYPE_VARDICT);
+  if (options->startup_id)
+    g_variant_builder_add(&builder, "{sv}",
+                          "desktop-startup-id", g_variant_new_bytestring(options->startup_id));
+  if (options->activation_token)
+    g_variant_builder_add(&builder, "{sv}",
+                          "activation-token", g_variant_new_string(options->activation_token));
+
+  gboolean restored = false;
+  gs_free_error GError* error = nullptr;
+  if (!terminal_factory_call_restore_session_sync(factory,
+                                                  g_variant_builder_end(&builder),
+                                                  &restored,
+                                                  nullptr /* cancellable */,
+                                                  &error)) {
+    // For example an older server; just open a new window
+    _terminal_debug_print(TERMINAL_DEBUG_SERVER,
+                          "Failed to restore the session: %s\n", error->message);
+    return false;
+  }
+
+  return restored;
+}
+
 /**
  * handle_options:
  * @app:
@@ -579,6 +613,9 @@ main (int argc, char **argv)
 
   setlocale (LC_ALL, "");
 
+  // Started without arguments, for example from the application menu
+  auto const plain_launch = argc == 1;
+
   terminal_i18n_init (TRUE);
 
   _terminal_debug_init ();
@@ -609,6 +646,9 @@ main (int argc, char **argv)
     else
       return exit_code;
   }
+
+  if (plain_launch && try_restore_session(options, factory))
+    return EXIT_SUCCESS;
 
   TerminalReceiver *receiver = nullptr;
   if (!handle_options (options, factory, service_name, parent_screen_object_path, &receiver))

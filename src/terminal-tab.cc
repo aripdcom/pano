@@ -22,6 +22,7 @@
 #include "terminal-tab.hh"
 #include "terminal-debug.hh"
 #include "terminal-intl.hh"
+#include "terminal-libgsystem.hh"
 #include "terminal-type-builtins.hh"
 
 #include <gtk/gtk.h>
@@ -583,15 +584,65 @@ terminal_tab_is_split(TerminalTab* tab)
  * @new_screen: a new #TerminalScreen
  * @orientation: %GTK_ORIENTATION_HORIZONTAL to put @new_screen to the
  *   right of @screen, %GTK_ORIENTATION_VERTICAL to put it below
+ * @position: the share of the space that @screen keeps, for example 0.5
  *
  * Splits the pane of @screen in two and puts @new_screen into the new
  * half. The caller should move the focus to @new_screen.
  */
+static void
+paned_apply_position_cb(GtkPaned* paned,
+                        GParamSpec* pspec,
+                        void* user_data)
+{
+  int max_position = 0;
+  g_object_get(paned, "max-position", &max_position, nullptr);
+  if (max_position <= 0)
+    return;
+
+  auto const fraction = *reinterpret_cast<double*>(g_object_get_data(G_OBJECT(paned), "terminal-position"));
+  g_signal_handlers_disconnect_by_func(paned, (void*)paned_apply_position_cb, user_data);
+  gtk_paned_set_position(paned, int(fraction * max_position + 0.5));
+}
+
+/* Sets the position as a share of the available space, now or as soon as
+ * the paned has been allocated.
+ */
+static void
+paned_set_fraction(GtkPaned* paned,
+                   double fraction,
+                   int size)
+{
+  fraction = std::clamp(fraction, 0.05, 0.95);
+
+  if (size > 0) {
+    gtk_paned_set_position(paned, int(fraction * size + 0.5));
+    return;
+  }
+
+  auto const data = g_new(double, 1);
+  *data = fraction;
+  g_object_set_data_full(G_OBJECT(paned), "terminal-position", data, g_free);
+  g_signal_connect(paned, "notify::max-position",
+                   G_CALLBACK(paned_apply_position_cb), nullptr);
+}
+
+static double
+paned_get_fraction(GtkPaned* paned)
+{
+  int max_position = 0;
+  g_object_get(paned, "max-position", &max_position, nullptr);
+  if (max_position <= 0)
+    return 0.5;
+
+  return std::clamp(double(gtk_paned_get_position(paned)) / max_position, 0.0, 1.0);
+}
+
 void
 terminal_tab_split(TerminalTab* tab,
                    TerminalScreen* screen,
                    TerminalScreen* new_screen,
-                   GtkOrientation orientation)
+                   GtkOrientation orientation,
+                   double position)
 {
   g_return_if_fail(TERMINAL_IS_TAB(tab));
   g_return_if_fail(TERMINAL_IS_SCREEN(new_screen));
@@ -620,8 +671,7 @@ terminal_tab_split(TerminalTab* tab,
   g_object_unref(old_pane);
   gtk_paned_set_end_child(paned, GTK_WIDGET(new_pane));
 
-  if (size > 0)
-    gtk_paned_set_position(paned, size / 2);
+  paned_set_fraction(paned, position, size);
 
   tab_track_screen(tab, new_screen);
   g_signal_emit(tab, signals[SCREEN_ADDED], 0, new_screen);
@@ -995,4 +1045,146 @@ terminal_tab_set_active(TerminalTab* tab,
       gtk_widget_set_visible(pane->scrolled_window, active);
   }
   g_list_free(screens);
+}
+
+/* Layouts */
+
+#define LAYOUT_SPLIT "split"
+
+static GVariant*
+save_node(GtkWidget* widget,
+          TerminalTabSaveFunc save_func,
+          void* user_data)
+{
+  if (TERMINAL_IS_PANE(widget))
+    return save_func(TERMINAL_PANE(widget)->screen, user_data);
+
+  if (!GTK_IS_PANED(widget))
+    return nullptr;
+
+  auto const paned = GTK_PANED(widget);
+  auto const start = save_node(gtk_paned_get_start_child(paned), save_func, user_data);
+  auto const end = save_node(gtk_paned_get_end_child(paned), save_func, user_data);
+  if (!start || !end)
+    return start ? start : end;
+
+  GVariantBuilder builder;
+  g_variant_builder_init(&builder, G_VARIANT_TYPE_VARDICT);
+  g_variant_builder_add(&builder, "{sv}", LAYOUT_SPLIT,
+                        g_variant_new_string(gtk_orientable_get_orientation(GTK_ORIENTABLE(paned)) == GTK_ORIENTATION_HORIZONTAL
+                                             ? "horizontal" : "vertical"));
+  g_variant_builder_add(&builder, "{sv}", "position",
+                        g_variant_new_double(paned_get_fraction(paned)));
+  g_variant_builder_add(&builder, "{sv}", "start", start);
+  g_variant_builder_add(&builder, "{sv}", "end", end);
+  return g_variant_builder_end(&builder);
+}
+
+/**
+ * terminal_tab_save_layout:
+ * @tab: a #TerminalTab
+ * @save_func: returns an a{sv} dictionary for a screen
+ * @user_data: data for @save_func
+ *
+ * Returns: (transfer floating): the pane layout of @tab
+ */
+GVariant*
+terminal_tab_save_layout(TerminalTab* tab,
+                         TerminalTabSaveFunc save_func,
+                         void* user_data)
+{
+  g_return_val_if_fail(TERMINAL_IS_TAB(tab), nullptr);
+
+  return save_node(tab->root, save_func, user_data);
+}
+
+static bool
+layout_is_split(GVariant* node)
+{
+  return g_variant_lookup(node, LAYOUT_SPLIT, "&s", nullptr);
+}
+
+static GVariant*
+layout_child(GVariant* node,
+             char const* key)
+{
+  return g_variant_lookup_value(node, key, G_VARIANT_TYPE_VARDICT);
+}
+
+/* Returns: (transfer full): the first pane of @node */
+static GVariant*
+layout_first_pane(GVariant* node)
+{
+  auto pane = g_variant_ref(node);
+  while (layout_is_split(pane)) {
+    auto const start = layout_child(pane, "start");
+    g_variant_unref(pane);
+    if (!start)
+      return nullptr;
+    pane = start;
+  }
+  return pane;
+}
+
+static void
+restore_node(TerminalTab* tab,
+             TerminalScreen* anchor,
+             GVariant* node,
+             TerminalTabCreateFunc create_func,
+             void* user_data)
+{
+  char const* orientation;
+  if (!g_variant_lookup(node, LAYOUT_SPLIT, "&s", &orientation))
+    return; // a pane; @anchor is its screen
+
+  gs_unref_variant GVariant* start = layout_child(node, "start");
+  gs_unref_variant GVariant* end = layout_child(node, "end");
+  if (!start)
+    return;
+
+  gs_unref_variant GVariant* end_pane = end ? layout_first_pane(end) : nullptr;
+  auto const new_screen = end_pane ? create_func(end_pane, user_data) : nullptr;
+  if (!new_screen) {
+    restore_node(tab, anchor, start, create_func, user_data);
+    return;
+  }
+
+  double position;
+  if (!g_variant_lookup(node, "position", "d", &position))
+    position = 0.5;
+
+  terminal_tab_split(tab, anchor, new_screen,
+                     g_str_equal(orientation, "vertical") ? GTK_ORIENTATION_VERTICAL
+                                                          : GTK_ORIENTATION_HORIZONTAL,
+                     position);
+
+  restore_node(tab, anchor, start, create_func, user_data);
+  restore_node(tab, new_screen, end, create_func, user_data);
+}
+
+/**
+ * terminal_tab_new_from_layout:
+ * @layout: a layout from terminal_tab_save_layout()
+ * @create_func: creates a new screen for a pane dictionary
+ * @user_data: data for @create_func
+ *
+ * Returns: (transfer floating) (nullable): a new #TerminalTab with the
+ *   panes of @layout
+ */
+TerminalTab*
+terminal_tab_new_from_layout(GVariant* layout,
+                             TerminalTabCreateFunc create_func,
+                             void* user_data)
+{
+  g_return_val_if_fail(layout != nullptr, nullptr);
+  g_return_val_if_fail(g_variant_is_of_type(layout, G_VARIANT_TYPE_VARDICT), nullptr);
+
+  gs_unref_variant GVariant* first = layout_first_pane(layout);
+  auto const screen = first ? create_func(first, user_data) : nullptr;
+  if (!screen)
+    return nullptr;
+
+  auto const tab = terminal_tab_new(screen);
+  restore_node(tab, screen, layout, create_func, user_data);
+  return tab;
 }

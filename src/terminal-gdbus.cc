@@ -27,6 +27,7 @@
 #include "terminal-defines.hh"
 #include "terminal-util.hh"
 #include "terminal-window.hh"
+#include "terminal-session.hh"
 #include "terminal-libgsystem.hh"
 
 #ifdef GDK_WINDOWING_X11
@@ -513,6 +514,10 @@ terminal_factory_impl_create_instance (TerminalFactory *factory,
 
   /* Now we can create the new screen */
   TerminalScreen *screen = terminal_screen_new (profile, title, zoom);
+
+  /* A new window may get the size of the last used terminal */
+  if (have_new_window && !g_variant_lookup (options, "geometry", "&s", nullptr))
+    terminal_session_apply_window_size (screen);
   auto const tab = terminal_tab_new(screen);
   auto const parent_tab = parent_screen ? terminal_tab_get_from_screen(parent_screen) : nullptr;
   terminal_window_add_tab(window, tab, parent_tab);
@@ -546,10 +551,27 @@ terminal_factory_impl_create_instance (TerminalFactory *factory,
   return TRUE; /* handled */
 }
 
+static gboolean
+terminal_factory_impl_restore_session(TerminalFactory* factory,
+                                      GDBusMethodInvocation* invocation,
+                                      GVariant* options)
+{
+  char const* activation_token = nullptr;
+  char const* startup_id = nullptr;
+  g_variant_lookup(options, "activation-token", "&s", &activation_token);
+  g_variant_lookup(options, "desktop-startup-id", "^&ay", &startup_id);
+
+  auto const restored = terminal_session_restore(activation_token, startup_id);
+  terminal_factory_complete_restore_session(factory, invocation, restored);
+
+  return TRUE; /* handled */
+}
+
 static void
 terminal_factory_impl_iface_init (TerminalFactoryIface *iface)
 {
   iface->handle_create_instance = terminal_factory_impl_create_instance;
+  iface->handle_restore_session = terminal_factory_impl_restore_session;
 }
 
 G_DEFINE_TYPE_WITH_CODE (TerminalFactoryImpl, terminal_factory_impl, TERMINAL_TYPE_FACTORY_SKELETON,

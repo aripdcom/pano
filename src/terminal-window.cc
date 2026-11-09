@@ -42,6 +42,7 @@
 #include "terminal-intl.hh"
 #include "terminal-notebook.hh"
 #include "terminal-schemas.hh"
+#include "terminal-session.hh"
 #include "terminal-tab.hh"
 #include "terminal-tab-sidebar.hh"
 #include "terminal-util.hh"
@@ -342,6 +343,8 @@ terminal_window_new_tab(TerminalWindow* window,
   TerminalScreen *screen = terminal_screen_new (profile,
                                                 nullptr /* title */,
                                                 1.0);
+  if (mode == TERMINAL_NEW_TERMINAL_MODE_WINDOW)
+    terminal_session_apply_window_size (screen);
   auto const tab = terminal_tab_new(screen);
 
   // Now add the new screen to the window.
@@ -702,7 +705,8 @@ action_split_cb(GSimpleAction* action,
   terminal_tab_split(terminal_tab_get_from_screen(parent_screen),
                      parent_screen,
                      screen,
-                     orientation);
+                     orientation,
+                     0.5);
   gtk_widget_grab_focus(GTK_WIDGET(screen));
 
   terminal_screen_reexec_from_screen(screen, parent_screen, nullptr, nullptr);
@@ -2603,6 +2607,10 @@ terminal_window_dispose (GObject *object)
   TerminalWindow *window = TERMINAL_WINDOW (object);
   TerminalApp *app = terminal_app_get ();
 
+  // Before the tabs go away, so that the last window can be restored
+  if (!window->disposed)
+    terminal_session_window_closing (window);
+
   window->disposed = TRUE;
 
   gtk_widget_dispose_template (GTK_WIDGET (window), TERMINAL_TYPE_WINDOW);
@@ -3481,6 +3489,16 @@ terminal_window_in_fullscreen_transition (TerminalWindow *window)
   g_return_val_if_fail (TERMINAL_IS_WINDOW (window), FALSE);
 
   return window->fullscreen_transition != 0;
+}
+
+void
+terminal_window_set_tab_pinned(TerminalWindow* window,
+                               TerminalTab* tab,
+                               bool pinned)
+{
+  g_return_if_fail(TERMINAL_IS_WINDOW(window));
+
+  terminal_notebook_set_tab_pinned(window->notebook, tab, pinned);
 }
 
 bool
