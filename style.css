@@ -214,19 +214,71 @@ section h2 {
   max-width: 680px;
 }
 
-/* Tab position showcase */
+/* Screenshots: the images have their own rounded corners and shadow */
 
-.showcase {
-  background: var(--bg-raised);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
+.hero-shot img {
+  margin: 48px auto 0;
+  width: min(100%, 1100px);
+}
+
+/* Feature rows: text next to a screenshot, alternating sides */
+
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.feature.reverse .feature-text {
+  order: 2;
+}
+
+.feature h2 {
+  margin: 0 0 12px;
+}
+
+.feature p {
+  margin: 0 0 16px;
+  color: var(--fg-muted);
+}
+
+.feature-shot img {
+  width: 100%;
+}
+
+.feature-shot img,
+.hero-shot img {
+  cursor: zoom-in;
+}
+
+.checks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checks li {
+  position: relative;
+  margin: 6px 0;
+  padding-left: 26px;
+}
+
+.checks li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.45em;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(-45deg);
 }
 
 .segmented {
   display: inline-flex;
-  margin-bottom: 20px;
   padding: 4px;
   gap: 4px;
   border-radius: 10px;
@@ -250,22 +302,23 @@ section h2 {
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
 }
 
-.screenshot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-}
-
-.screenshot img {
-  border-radius: 10px;
-}
-
-.showcase figcaption {
-  margin-top: 14px;
-  color: var(--fg-muted);
-  font-size: 0.92rem;
+kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0 0.45em;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: var(--bg-raised);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 0.82em;
+  line-height: 1.6;
   text-align: center;
+}
+
+.more-title {
+  margin: 48px 0 20px;
 }
 
 /* Feature grid */
@@ -294,20 +347,43 @@ section h2 {
   font-size: 0.95rem;
 }
 
-.tag {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 2px 9px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: var(--bg-sunken);
-  color: var(--fg-muted);
+/* Shortcuts */
+
+.shortcut-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  align-items: start;
 }
 
-.tag.done {
-  background: var(--accent-soft);
-  color: var(--accent);
+.shortcuts {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.93rem;
+}
+
+.shortcuts caption {
+  padding: 0 0 8px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.shortcuts td {
+  padding: 8px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.shortcuts tr:first-of-type td {
+  border-top: 0;
+}
+
+.shortcuts td:last-child {
+  text-align: right;
+  white-space: nowrap;
 }
 
 /* Install */
@@ -361,6 +437,17 @@ pre {
 
   .hero {
     padding-top: 56px;
+  }
+}
+
+@media (max-width: 860px) {
+  .feature {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature.reverse .feature-text {
+    order: 0;
   }
 }
 

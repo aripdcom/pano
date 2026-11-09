@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pano Terminal — a terminal for GNOME, your tabs where you want them</title>
-  <meta name="description" content="Pano Terminal is a GTK 4 terminal emulator for GNOME. Put your tabs at the top, bottom, left or right of the window. A fork of GNOME Terminal.">
+  <title>Pano Terminal — the GNOME terminal for power users</title>
+  <meta name="description" content="Pano Terminal is a GTK 4 terminal for GNOME with split panes, tabs on any side, a command palette, quick select, session restore, shell integration and 240 color schemes. A fork of GNOME Terminal.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#fafafb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1d1d21" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Pano Terminal">
-  <meta property="og:description" content="A terminal for GNOME. Put your tabs at the top, bottom, left or right.">
+  <meta property="og:description" content="The GNOME terminal for power users: split panes, tabs on any side, a command palette, quick select and more.">
   <meta property="og:url" content="https://pano.aripd.com/">
-  <meta property="og:image" content="https://pano.aripd.com/images/tabs-left-dark.png">
+  <meta property="og:image" content="https://pano.aripd.com/images/social.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -23,8 +23,8 @@
         Pano Terminal
       </a>
       <nav class="site-nav" aria-label="Main">
-        <a href="#tabs">Tabs</a>
-        <a href="#features" class="optional">Features</a>
+        <a href="#features">Features</a>
+        <a href="#shortcuts" class="optional">Shortcuts</a>
         <a href="#install">Install</a>
         <a href="https://github.com/aripdcom/pano">GitHub</a>
       </nav>
@@ -35,97 +35,233 @@
     <section class="hero">
       <div class="container">
         <span class="badge">Early development</span>
-        <h1>A terminal for GNOME that puts your tabs where you want them</h1>
+        <h1>The GNOME terminal for power users</h1>
         <p>
-          Pano Terminal is a fast, native terminal emulator built with GTK&nbsp;4,
-          libadwaita and VTE. It keeps everything you know from GNOME Terminal
-          and adds the power-user features it leaves out.
+          Pano Terminal is a native terminal built with GTK&nbsp;4, libadwaita
+          and VTE. It keeps everything you know from GNOME Terminal and adds
+          split panes, tabs on any side, a command palette, quick select,
+          shell integration and much more.
         </p>
         <div class="actions">
-          <a class="button primary" href="#install">Build from source</a>
+          <a class="button primary" href="#install">Install</a>
           <a class="button" href="https://github.com/aripdcom/pano">View on GitHub</a>
         </div>
-      </div>
-    </section>
-
-    <section id="tabs">
-      <div class="container">
-        <h2>Tabs on any side</h2>
-        <p class="lead">
-          Place the tab bar at the top, bottom, left or right of the window.
-          On the left and right, tabs become a vertical list, so long titles
-          stay readable even with many tabs open. Change it any time in
-          <em>Preferences → Appearance → Tab Bar Position</em>.
-        </p>
-
-        <figure class="showcase">
-          <div class="segmented" role="group" aria-label="Tab bar position">
-            <button type="button" data-position="top" aria-pressed="false">Top</button>
-            <button type="button" data-position="bottom" aria-pressed="false">Bottom</button>
-            <button type="button" data-position="left" aria-pressed="true">Left</button>
-            <button type="button" data-position="right" aria-pressed="false">Right</button>
-          </div>
-          <div class="screenshot">
-            <picture>
-              <source id="shot-dark" srcset="images/tabs-left-dark.png" media="(prefers-color-scheme: dark)">
-              <img id="shot" src="images/tabs-left-light.png" alt="Pano with the tabs shown as a vertical list on the left">
-            </picture>
-          </div>
-          <figcaption>The terminal keeps its size in rows and columns when you move the tabs.</figcaption>
-        </figure>
+        <picture class="hero-shot">
+          <source srcset="images/tabs-left-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="images/tabs-left-light.webp" width="1236" height="776"
+               alt="Pano Terminal with the tabs in a list on the left and three panes: a git log, a file list and a few commands">
+        </picture>
       </div>
     </section>
 
     <section id="features">
       <div class="container">
-        <h2>Features</h2>
-        <p class="lead">
-          Pano builds on the solid base of GNOME Terminal. New features land
-          one at a time; follow them on the
-          <a href="https://github.com/aripdcom/pano/issues">roadmap</a>.
-        </p>
 
+        <article class="feature" id="tabs">
+          <div class="feature-text">
+            <h2>Tabs on any side</h2>
+            <p>
+              Put the tab bar at the top, at the bottom, or turn it into a
+              list on the left or right, where long titles stay readable even
+              with many tabs. Pin tabs, drag them between windows, move
+              through the list with the keyboard, and get a closed tab back
+              with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>.
+            </p>
+            <div class="segmented" role="group" aria-label="Tab bar position">
+              <button type="button" data-position="top" aria-pressed="false">Top</button>
+              <button type="button" data-position="bottom" aria-pressed="false">Bottom</button>
+              <button type="button" data-position="left" aria-pressed="false">Left</button>
+              <button type="button" data-position="right" aria-pressed="true">Right</button>
+            </div>
+          </div>
+          <picture class="feature-shot">
+            <source id="tabs-dark" srcset="images/tabs-right-dark.webp" media="(prefers-color-scheme: dark)">
+            <img id="tabs-shot" src="images/tabs-right-light.webp" width="1236" height="776" loading="lazy"
+                 alt="The tabs as a vertical list on the right of the window">
+          </picture>
+        </article>
+
+        <article class="feature reverse" id="panes">
+          <div class="feature-text">
+            <h2>Split panes</h2>
+            <p>
+              Split a tab into as many terminals as you like, side by side or
+              stacked, each starting in the folder of the one you split. Move
+              between them with <kbd>Alt</kbd> and the arrow keys, resize them
+              from the keyboard, zoom one to the whole tab, give them all the
+              same size, or move one to its own tab or window.
+            </p>
+            <ul class="checks">
+              <li>The panes you are not typing in are dimmed</li>
+              <li>Optional title bars above the panes</li>
+              <li>The layout comes back with your session</li>
+            </ul>
+          </div>
+          <picture class="feature-shot">
+            <source srcset="images/panes-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="images/panes-light.webp" width="1236" height="776" loading="lazy"
+                 alt="Three panes with a title bar each; the inactive ones are dimmed">
+          </picture>
+        </article>
+
+        <article class="feature" id="palette">
+          <div class="feature-text">
+            <h2>Command palette</h2>
+            <p>
+              Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type a few
+              letters to find any action, open a tab with another profile, or
+              jump to a terminal by its title. Every entry shows its keyboard
+              shortcut, so you learn them along the way.
+            </p>
+          </div>
+          <picture class="feature-shot">
+            <source srcset="images/palette-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="images/palette-light.webp" width="1236" height="776" loading="lazy"
+                 alt="The command palette with “split” typed, offering Split Right and Split Down">
+          </picture>
+        </article>
+
+        <article class="feature reverse" id="quick-select">
+          <div class="feature-text">
+            <h2>Quick select</h2>
+            <p>
+              Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> and every
+              URL, path, git hash, IP address and long number on the screen
+              gets a label. Type the label to copy it, with <kbd>Shift</kbd> to
+              paste it, or with <kbd>Ctrl</kbd> to open it. Add your own
+              patterns, for example for ticket numbers.
+            </p>
+          </div>
+          <picture class="feature-shot">
+            <source srcset="images/quick-select-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="images/quick-select-light.webp" width="1236" height="776" loading="lazy"
+                 alt="Yellow one-letter labels on the commit hashes of a git log">
+          </picture>
+        </article>
+
+        <article class="feature" id="commands">
+          <div class="feature-text">
+            <h2>It knows your commands</h2>
+            <p>
+              Pano Terminal sets up shell integration for bash, zsh and fish
+              by itself, on any distribution. It then knows where each command
+              starts and how it ended:
+            </p>
+            <ul class="checks">
+              <li>A notification when a long command finishes in the background</li>
+              <li>Jump between prompts with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> and <kbd>↓</kbd></li>
+              <li>Copy the output of any command with a right click</li>
+              <li>Marks next to the scrollbar, red for failed commands</li>
+              <li>Watch any terminal for activity or silence, even without it</li>
+            </ul>
+          </div>
+          <picture class="feature-shot">
+            <source srcset="images/prompts-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="images/prompts-light.webp" width="1236" height="776" loading="lazy"
+                 alt="The context menu of a failed command, offering Copy Output of This Command">
+          </picture>
+        </article>
+
+        <article class="feature reverse" id="colors">
+          <div class="feature-text">
+            <h2>Colors that fit</h2>
+            <p>
+              Choose from about 240 color schemes, such as Gruvbox, Nord,
+              Dracula and Solarized, with light and dark variants that follow
+              your system. The header bar and the tabs take the colors of the
+              terminal, so the window looks like one piece.
+            </p>
+            <ul class="checks">
+              <li>Background transparency for each profile</li>
+              <li>A red or purple header bar while you are root or on SSH</li>
+              <li>Your own schemes as simple <code>.palette</code> files</li>
+            </ul>
+          </div>
+          <picture class="feature-shot">
+            <source srcset="images/colors-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="images/colors-light.webp" width="1236" height="776" loading="lazy"
+                 alt="A window in the Gruvbox color scheme, with the header bar in the same colors">
+          </picture>
+        </article>
+
+        <h2 class="more-title">And much more</h2>
         <div class="grid">
           <article class="card">
-            <span class="tag done">Available</span>
-            <h3>Tab bar position</h3>
-            <p>Top, bottom, left or right, with a vertical tab list for the sides.</p>
-          </article>
-          <article class="card">
-            <span class="tag done">Available</span>
-            <h3>Split panes</h3>
-            <p>Run several terminals side by side or stacked in one tab, and move between them with Alt and the arrow keys.</p>
-          </article>
-          <article class="card">
-            <span class="tag done">Available</span>
             <h3>Session restore</h3>
-            <p>Reopen your windows, tabs and panes, each in its previous folder, when you start Pano Terminal again.</p>
+            <p>Start Pano Terminal and get your windows, tabs and panes back, each in its folder.</p>
           </article>
           <article class="card">
-            <span class="tag done">Available</span>
-            <h3>Transparency</h3>
-            <p>Adjustable background opacity for each profile; text, header bar and tabs stay opaque.</p>
+            <h3>Quick terminal</h3>
+            <p>A terminal that drops down from the top of the screen with one key, and hides again.</p>
           </article>
           <article class="card">
-            <span class="tag done">Available</span>
-            <h3>Command notifications</h3>
-            <p>Get notified when a long-running command finishes in a background tab, and jump back to it with a click.</p>
+            <h3>Broadcast input</h3>
+            <p>Type into all panes of a tab, or all terminals of a window, at once.</p>
           </article>
           <article class="card">
-            <span class="tag done">Available</span>
-            <h3>Profiles</h3>
-            <p>Separate fonts, colors, commands and scrolling settings for each kind of work.</p>
+            <h3>Better search</h3>
+            <p>Every match is highlighted, with a count, regular expressions and whole-word search.</p>
           </article>
           <article class="card">
-            <span class="tag done">Available</span>
-            <h3>Native GNOME look</h3>
-            <p>GTK&nbsp;4 and libadwaita, with light and dark styles that follow your system.</p>
+            <h3>Containers</h3>
+            <p>Open tabs in Toolbox and Distrobox containers; new tabs stay in the same container.</p>
           </article>
           <article class="card">
-            <span class="tag done">Available</span>
-            <h3>Search and links</h3>
-            <p>Search the scrollback with regular expressions and open links and hyperlinks with a click.</p>
+            <h3>Profiles to share</h3>
+            <p>Export and import profiles, and bring your profiles and shortcuts over from GNOME Terminal.</p>
           </article>
+          <article class="card">
+            <h3>Your tab titles</h3>
+            <p>Give a terminal a title that programs cannot change, or ignore program titles altogether.</p>
+          </article>
+          <article class="card">
+            <h3>Save contents</h3>
+            <p>Save a terminal with all of its scrollback to a file, without freezing the window.</p>
+          </article>
+          <article class="card">
+            <h3>Small touches</h3>
+            <p>A visual bell, a copy notice, Close Other Tabs, a choice for middle-clicking a tab, and adjustable padding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="shortcuts">
+      <div class="container">
+        <h2>Keyboard shortcuts</h2>
+        <p class="lead">
+          The defaults; change any of them in <em>Preferences → Keyboard
+          Shortcuts</em>, or find the action in the command palette.
+        </p>
+        <div class="shortcut-columns">
+          <table class="shortcuts">
+            <caption>Tabs and windows</caption>
+            <tr><td>New tab</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd></td></tr>
+            <tr><td>New window</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd></td></tr>
+            <tr><td>Close tab</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd></td></tr>
+            <tr><td>Reopen closed tab</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd></td></tr>
+            <tr><td>Previous / next tab</td><td><kbd>Ctrl</kbd>+<kbd>Page&nbsp;Up</kbd> / <kbd>Page&nbsp;Down</kbd></td></tr>
+            <tr><td>Focus the tab list</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd></td></tr>
+            <tr><td>Command palette</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td></tr>
+            <tr><td>Full screen</td><td><kbd>F11</kbd></td></tr>
+          </table>
+          <table class="shortcuts">
+            <caption>Panes</caption>
+            <tr><td>Split right / down</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> / <kbd>D</kbd></td></tr>
+            <tr><td>Move to a pane</td><td><kbd>Alt</kbd>+<kbd>Arrow</kbd></td></tr>
+            <tr><td>Move the divider</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Arrow</kbd></td></tr>
+            <tr><td>Zoom the pane</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td></tr>
+            <tr><td>Close the pane</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd></td></tr>
+          </table>
+          <table class="shortcuts">
+            <caption>Text and commands</caption>
+            <tr><td>Copy / paste</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> / <kbd>V</kbd></td></tr>
+            <tr><td>Quick select</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td></tr>
+            <tr><td>Find</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td></tr>
+            <tr><td>Previous / next prompt</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>↑</kbd> / <kbd>↓</kbd></td></tr>
+            <tr><td>Copy the last output</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd></td></tr>
+            <tr><td>Zoom in / out / reset</td><td><kbd>Ctrl</kbd>+<kbd>+</kbd> / <kbd>−</kbd> / <kbd>0</kbd></td></tr>
+          </table>
         </div>
       </div>
     </section>
@@ -134,21 +270,35 @@
       <div class="container steps">
         <h2>Install</h2>
         <p class="lead">
-          There are no packages yet. Build Pano from source; it is tested
-          with GTK&nbsp;4.24, libadwaita&nbsp;1.10 and VTE&nbsp;0.84.
+          Pano Terminal installs as <code>pano-terminal</code> with its own
+          settings, next to GNOME Terminal. On its first start it offers to
+          copy your GNOME Terminal profiles and shortcuts.
         </p>
 
-        <h3>1. Install the build dependencies</h3>
-        <p>Fedora:</p>
+        <h3>Packages</h3>
+        <p>
+          Every build makes a Fedora RPM and a Debian&nbsp;13 package. Until
+          the first release, download them from the latest run of the
+          <a href="https://github.com/aripdcom/pano/actions/workflows/packages.yml">Packages workflow</a>
+          (sign in to GitHub, open the run and pick <em>rpm</em> or <em>deb</em>
+          under Artifacts), then install the file:
+        </p>
+<pre><code>sudo dnf install ./pano-terminal-*.rpm      # Fedora
+sudo apt install ./pano-terminal_*.deb      # Debian 13</code></pre>
+
+        <h3>Build from source</h3>
+        <p>
+          Pano Terminal needs GTK&nbsp;4.12, libadwaita&nbsp;1.4 and VTE&nbsp;0.80
+          or newer. Install the build dependencies, on Fedora:
+        </p>
 <pre><code>sudo dnf install meson ninja-build gcc-c++ gtk4-devel libadwaita-devel \
     vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel \
     gettext itstool desktop-file-utils libxslt docbook-style-xsl</code></pre>
-        <p>Debian and Ubuntu:</p>
+        <p>On Debian and Ubuntu:</p>
 <pre><code>sudo apt install meson ninja-build g++ libgtk-4-dev libadwaita-1-dev \
     libvte-2.91-gtk4-dev libpcre2-dev uuid-dev gsettings-desktop-schemas-dev \
     gettext itstool desktop-file-utils xsltproc docbook-xsl</code></pre>
-
-        <h3>2. Build and install</h3>
+        <p>Then build and install:</p>
 <pre><code>git clone https://github.com/aripdcom/pano.git
 cd pano
 meson setup _build --prefix=$HOME/.local -Dsearch_provider=false -Dnautilus_extension=false
@@ -156,11 +306,9 @@ ninja -C _build
 ninja -C _build install</code></pre>
 
         <p class="note">
-          If your distribution ships an older VTE, add
-          <code>--force-fallback-for=vte-2.91-gtk4</code> to the
+          If your distribution ships an older VTE, for example Ubuntu 24.04,
+          add <code>--force-fallback-for=vte-2.91-gtk4</code> to the
           <code>meson setup</code> command to build VTE along with Pano.
-          Pano Terminal installs as <code>pano-terminal</code> and keeps its
-          own settings, so it works side by side with GNOME Terminal.
         </p>
       </div>
     </section>
@@ -171,7 +319,7 @@ ninja -C _build install</code></pre>
       <p>
         Pano Terminal is free software under the
         <a href="https://github.com/aripdcom/pano/blob/main/COPYING">GNU GPL v3 or later</a>.
-        Source code and issues on <a href="https://github.com/aripdcom/pano">GitHub</a>.
+        Source code, issues and roadmap on <a href="https://github.com/aripdcom/pano">GitHub</a>.
       </p>
       <p>
         Pano Terminal is a fork of GNOME Terminal and is not affiliated with or
@@ -184,13 +332,13 @@ ninja -C _build install</code></pre>
     // Switch the tab position screenshot. The <picture> element picks the
     // light or dark image from the system color scheme.
     const buttons = document.querySelectorAll(".segmented button");
-    const img = document.getElementById("shot");
-    const dark = document.getElementById("shot-dark");
+    const img = document.getElementById("tabs-shot");
+    const dark = document.getElementById("tabs-dark");
     const labels = {
-      top: "Pano with the tab bar at the top of the window",
-      bottom: "Pano with the tab bar at the bottom of the window",
-      left: "Pano with the tabs shown as a vertical list on the left",
-      right: "Pano with the tabs shown as a vertical list on the right",
+      top: "The tab bar at the top of the window",
+      bottom: "The tab bar at the bottom of the window",
+      left: "The tabs as a vertical list on the left of the window",
+      right: "The tabs as a vertical list on the right of the window",
     };
 
     for (const button of buttons) {
@@ -198,10 +346,16 @@ ninja -C _build install</code></pre>
         const position = button.dataset.position;
         for (const other of buttons)
           other.setAttribute("aria-pressed", String(other === button));
-        dark.srcset = `images/tabs-${position}-dark.png`;
-        img.src = `images/tabs-${position}-light.png`;
+        dark.srcset = `images/tabs-${position}-dark.webp`;
+        img.src = `images/tabs-${position}-light.webp`;
         img.alt = labels[position];
       });
+    }
+
+    // A click on a screenshot shows it in full size, in the style shown
+    for (const shot of document.querySelectorAll(".feature-shot img, .hero-shot img")) {
+      shot.title = "Show in full size";
+      shot.addEventListener("click", () => window.open(shot.currentSrc, "_blank"));
     }
   </script>
 </body>
