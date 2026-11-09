@@ -158,8 +158,15 @@ struct _TerminalScreenPrivate
   /* Rows of the shell prompts, from shell integration; see PromptMark */
   GArray* prompts;
   long prompts_columns; /* the column count the rows are valid for */
+  long row_origin; /* cache for terminal_screen_get_row_origin() */
+  bool row_origin_valid;
   bool precmd_in_batch; /* a prompt was reported in the current batch */
   guint precmd_batch_source;
+
+  /* Search matches to highlight, see terminal_screen_set_search_matches() */
+  GArray* search_matches; /* TerminalSearchMatch */
+  int search_current;
+  long search_columns; /* the column count the matches are valid for */
 };
 
 /* VTE keeps the OSC 133 prompt marks to itself, so remember where the
@@ -189,6 +196,7 @@ enum
   CLOSE_SCREEN,
   COMMAND_FINISHED,
   PROMPTS_CHANGED,
+  COLUMNS_CHANGED,
   LAST_SIGNAL
 };
 
@@ -747,11 +755,70 @@ terminal_screen_scroll_unit(TerminalScreen* screen)
   return double(MAX(vte_terminal_get_char_height(terminal), 1));
 }
 
+/* VTE fills the scroll adjustment relative to the first row it keeps
+ * (Terminal::scroll_limit_lower()), which is not public, while the
+ * cursor position and text ranges use absolute rows. This finds the
+ * absolute row of adjustment value 0.
+ *
+ * The cursor is on the bottom screen, so the origin is one of row-count
+ * candidates; the right one is where the text of the displayed rows
+ * matches the text of the same absolute rows. The last result is tried
+ * first, and a cursor on the last row is preferred.
+ */
+static long
+terminal_screen_get_row_origin(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+  auto const terminal = VTE_TERMINAL(screen);
+  auto const adjustment = terminal_screen_get_vadjustment(screen);
+  auto const unit = terminal_screen_scroll_unit(screen);
+  auto const rows = vte_terminal_get_row_count(terminal);
+  auto const span = long(gtk_adjustment_get_upper(adjustment) / unit + 0.5);
+  auto const top = long(gtk_adjustment_get_value(adjustment) / unit);
+
+  long cursor_row = 0;
+  vte_terminal_get_cursor_position(terminal, nullptr, &cursor_row);
+
+  gs_free char* displayed = vte_terminal_get_text_format(terminal, VTE_FORMAT_TEXT);
+  auto matches = [&](long origin) -> bool {
+    if (origin < 0)
+      return false;
+    gs_free char* text = vte_terminal_get_text_range_format(terminal, VTE_FORMAT_TEXT,
+                                                            origin + top, 0,
+                                                            origin + top + rows, 0,
+                                                            nullptr);
+    return g_strcmp0(text, displayed) == 0;
+  };
+
+  if (priv->row_origin_valid && matches(priv->row_origin))
+    return priv->row_origin;
+
+  for (auto k = rows - 1; k >= 0; --k) {
+    auto const origin = cursor_row - k + rows - span;
+    if (matches(origin)) {
+      priv->row_origin = origin;
+      priv->row_origin_valid = true;
+      return origin;
+    }
+  }
+
+  // No candidate fits; assume the cursor is on the last row
+  return MAX(0l, cursor_row + 1 - span);
+}
+
 static long
 terminal_screen_adjustment_to_row(TerminalScreen* screen,
                                   double value)
 {
-  return long(value / terminal_screen_scroll_unit(screen) + 0.5);
+  return terminal_screen_get_row_origin(screen) +
+    long(value / terminal_screen_scroll_unit(screen) + 0.5);
+}
+
+static double
+terminal_screen_row_to_adjustment(TerminalScreen* screen,
+                                  long row)
+{
+  return double(row - terminal_screen_get_row_origin(screen)) * terminal_screen_scroll_unit(screen);
 }
 
 static gboolean
@@ -998,9 +1065,12 @@ terminal_screen_size_allocate (GtkWidget *widget,
   column_count = vte_terminal_get_column_count (VTE_TERMINAL (screen));
   row_count = vte_terminal_get_row_count (VTE_TERMINAL (screen));
 
-  /* Rewrapped lines invalidate the prompt rows */
-  if (column_count != prev_column_count && terminal_screen_validate_prompts (screen))
-    g_signal_emit (screen, signals[PROMPTS_CHANGED], 0);
+  /* Rewrapped lines invalidate the prompt rows and search matches */
+  if (column_count != prev_column_count) {
+    if (terminal_screen_validate_prompts (screen))
+      g_signal_emit (screen, signals[PROMPTS_CHANGED], 0);
+    g_signal_emit (screen, signals[COLUMNS_CHANGED], 0);
+  }
 
   root = gtk_widget_get_root (widget);
 
@@ -1040,6 +1110,61 @@ terminal_screen_size_allocate (GtkWidget *widget,
   gtk_widget_allocate (priv->drop_highlight, width, height, baseline, nullptr);
 }
 
+/* Draws the search matches over the text: all of them faintly, the current
+ * one stronger. */
+static void
+terminal_screen_snapshot_search_matches (TerminalScreen *screen,
+                                         GtkSnapshot *snapshot)
+{
+  auto const priv = screen->priv;
+  auto const terminal = VTE_TERMINAL (screen);
+
+  if (!priv->search_matches || priv->search_matches->len == 0 ||
+      priv->search_columns != vte_terminal_get_column_count (terminal))
+    return;
+
+  auto const cell_width = double (vte_terminal_get_char_width (terminal));
+  auto const cell_height = double (vte_terminal_get_char_height (terminal));
+  if (cell_width <= 0 || cell_height <= 0)
+    return;
+
+  GtkBorder padding;
+  gtk_style_context_get_padding (gtk_widget_get_style_context (GTK_WIDGET (screen)), &padding);
+
+  // The adjustment counts pixels or rows, from the row origin
+  auto const adjustment = gtk_scrollable_get_vadjustment (GTK_SCROLLABLE (screen));
+  auto const origin = terminal_screen_get_row_origin (screen);
+  auto const top_px = (vte_terminal_get_scroll_unit_is_pixels (terminal)
+                       ? gtk_adjustment_get_value (adjustment)
+                       : gtk_adjustment_get_value (adjustment) * cell_height) + origin * cell_height;
+  auto const first_row = long (top_px / cell_height);
+  auto const last_row = first_row + vte_terminal_get_row_count (terminal) + 1;
+  auto const columns = priv->search_columns;
+
+  static GdkRGBA const match_color = {1.0f, 0.8f, 0.0f, 0.35f};
+  static GdkRGBA const current_color = {1.0f, 0.45f, 0.0f, 0.6f};
+
+  for (auto i = 0u; i < priv->search_matches->len; ++i) {
+    auto const& match = g_array_index (priv->search_matches, TerminalSearchMatch, i);
+    if (match.end_row < first_row || match.start_row > last_row)
+      continue;
+
+    auto const color = int (i) == priv->search_current ? &current_color : &match_color;
+    for (auto row = MAX (match.start_row, first_row); row <= MIN (match.end_row, last_row); ++row) {
+      auto const start_col = row == match.start_row ? match.start_col : 0;
+      auto const end_col = row == match.end_row ? match.end_col : columns;
+      if (end_col <= start_col)
+        continue;
+
+      auto const rect = GRAPHENE_RECT_INIT (float (padding.left + start_col * cell_width),
+                                            float (padding.top + row * cell_height - top_px),
+                                            float ((end_col - start_col) * cell_width),
+                                            float (cell_height));
+      gtk_snapshot_append_color (snapshot, color, &rect);
+    }
+  }
+}
+
 static void
 terminal_screen_snapshot (GtkWidget   *widget,
                           GtkSnapshot *snapshot)
@@ -1048,6 +1173,8 @@ terminal_screen_snapshot (GtkWidget   *widget,
   TerminalScreenPrivate *priv = screen->priv;
 
   GTK_WIDGET_CLASS (terminal_screen_parent_class)->snapshot (widget, snapshot);
+
+  terminal_screen_snapshot_search_matches (screen, snapshot);
 
   gtk_widget_snapshot_child (widget, GTK_WIDGET (priv->drop_highlight), snapshot);
   gtk_widget_snapshot_child (widget, GTK_WIDGET (priv->size_revealer), snapshot);
@@ -1070,6 +1197,7 @@ terminal_screen_init (TerminalScreen *screen)
   priv->uuid = g_strdup (uuidstr);
 
   priv->prompts = g_array_new (false, false, sizeof (PromptMark));
+  priv->search_current = -1;
 
   priv->child_pid = -1;
 
@@ -1255,6 +1383,17 @@ terminal_screen_class_init (TerminalScreenClass *klass)
                   G_TYPE_NONE,
                   3, G_TYPE_STRING, G_TYPE_UINT, G_TYPE_UINT64);
 
+  /* The column count changed, so VTE has rewrapped the lines */
+  signals[COLUMNS_CHANGED] =
+    g_signal_new (I_("columns-changed"),
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  0,
+                  nullptr, nullptr,
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE,
+                  0);
+
   signals[PROMPTS_CHANGED] =
     g_signal_new (I_("prompts-changed"),
                   G_OBJECT_CLASS_TYPE (object_class),
@@ -1416,6 +1555,7 @@ terminal_screen_finalize (GObject *object)
 
   g_slist_free_full (priv->match_tags, (GDestroyNotify) free_tag_data);
   g_clear_pointer (&priv->prompts, g_array_unref);
+  g_clear_pointer (&priv->search_matches, g_array_unref);
 
   g_free (priv->uuid);
 
@@ -3365,7 +3505,6 @@ terminal_screen_scroll_to_prompt(TerminalScreen* screen,
 
   auto const priv = screen->priv;
   auto const adjustment = terminal_screen_get_vadjustment(screen);
-  auto const unit = terminal_screen_scroll_unit(screen);
   auto const top = terminal_screen_adjustment_to_row(screen, gtk_adjustment_get_value(adjustment));
   auto const bottom = terminal_screen_adjustment_to_row(screen,
                                                         gtk_adjustment_get_upper(adjustment) -
@@ -3401,7 +3540,7 @@ terminal_screen_scroll_to_prompt(TerminalScreen* screen,
   if (target < 0)
     return FALSE;
 
-  gtk_adjustment_set_value(adjustment, target * unit);
+  gtk_adjustment_set_value(adjustment, terminal_screen_row_to_adjustment(screen, long(target)));
   return TRUE;
 }
 
@@ -3468,4 +3607,188 @@ terminal_screen_dup_command_output(TerminalScreen* screen)
                                                        vte_terminal_get_column_count(VTE_TERMINAL(screen)),
                                                        nullptr);
   return text ? g_strchomp(text) : nullptr;
+}
+
+/* Search */
+
+/* The number of cells VTE gives to @c; close to VTE's own tables */
+static int
+character_width(gunichar c,
+                bool ambiguous_wide)
+{
+  if (g_unichar_iszerowidth(c))
+    return 0;
+  if (g_unichar_iswide(c) || (ambiguous_wide && g_unichar_iswide_cjk(c)))
+    return 2;
+  return 1;
+}
+
+/* Maps a byte offset in a line of text to a cell */
+struct CellPosition {
+  long row;
+  long col;
+};
+
+/**
+ * terminal_screen_find_matches:
+ * @screen: a #TerminalScreen
+ * @regex: the pattern
+ * @max_matches: stop after this many matches
+ *
+ * Finds all matches of @regex in the scrollback and on the screen. Matches
+ * may span soft-wrapped rows, but not hard line breaks.
+ *
+ * Returns: (transfer full): a #GArray of #TerminalSearchMatch, from top to
+ *   bottom
+ */
+GArray*
+terminal_screen_find_matches(TerminalScreen* screen,
+                             GRegex* regex,
+                             guint max_matches)
+{
+  auto const matches = g_array_new(false, false, sizeof(TerminalSearchMatch));
+
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), matches);
+  g_return_val_if_fail(regex != nullptr, matches);
+
+  auto const terminal = VTE_TERMINAL(screen);
+  auto const columns = vte_terminal_get_column_count(terminal);
+  auto const ambiguous_wide = vte_terminal_get_cjk_ambiguous_width(terminal) == 2;
+
+  // Search at most the last 100000 rows
+  auto const adjustment = terminal_screen_get_vadjustment(screen);
+  auto first_row = terminal_screen_adjustment_to_row(screen, gtk_adjustment_get_lower(adjustment));
+  auto const last_row = terminal_screen_adjustment_to_row(screen, gtk_adjustment_get_upper(adjustment)) - 1;
+  first_row = MAX(first_row, last_row - 100000);
+  if (last_row < first_row || columns <= 0)
+    return matches;
+
+  gsize length = 0;
+  gs_free char* text = vte_terminal_get_text_range_format(terminal, VTE_FORMAT_TEXT,
+                                                          first_row, 0, last_row, columns,
+                                                          &length);
+  if (!text)
+    return matches;
+
+  gs_unref_array GArray* positions = g_array_new(false, false, sizeof(CellPosition));
+
+  auto row = first_row;
+  for (auto line = text; line && *line && matches->len < max_matches; ) {
+    auto const newline = strchr(line, '\n');
+    auto const line_length = newline ? gsize(newline - line) : strlen(line);
+
+    // Where each byte of the line is on the grid; rows wrap like VTE's
+    g_array_set_size(positions, line_length + 1);
+    auto col = 0l;
+    for (auto p = line; p < line + line_length; p = g_utf8_next_char(p)) {
+      auto const c = g_utf8_get_char(p);
+      auto width = c == '\t' ? int(8 - col % 8) : character_width(c, ambiguous_wide);
+      if (width > 0 && col + width > columns && col > 0) {
+        ++row;
+        col = 0;
+        if (c == '\t')
+          width = 8;
+      }
+      for (auto q = p; q < g_utf8_next_char(p); ++q)
+        g_array_index(positions, CellPosition, q - line) = CellPosition{row, col};
+      col += width;
+    }
+    g_array_index(positions, CellPosition, line_length) = CellPosition{row, col};
+
+    gs_free char* line_copy = g_strndup(line, line_length);
+    GMatchInfo* info = nullptr;
+    g_regex_match(regex, line_copy, G_REGEX_MATCH_NOTEMPTY, &info);
+    while (g_match_info_matches(info) && matches->len < max_matches) {
+      int start = 0, end = 0;
+      if (g_match_info_fetch_pos(info, 0, &start, &end) && end > start) {
+        auto const& from = g_array_index(positions, CellPosition, start);
+        // The end is right after the last character of the match
+        auto const last_char = g_utf8_find_prev_char(line_copy, line_copy + end);
+        auto const& last = g_array_index(positions, CellPosition, last_char - line_copy);
+        auto const& after = g_array_index(positions, CellPosition, end);
+        auto const to = after.row == last.row ? after
+          : CellPosition{last.row, last.col + character_width(g_utf8_get_char(last_char), ambiguous_wide)};
+        auto const match = TerminalSearchMatch{from.row, from.col, to.row, to.col};
+        g_array_append_val(matches, match);
+      }
+      g_match_info_next(info, nullptr);
+    }
+    g_match_info_free(info);
+
+    ++row;
+    line = newline ? newline + 1 : nullptr;
+  }
+
+  return matches;
+}
+
+/**
+ * terminal_screen_set_search_matches:
+ * @screen: a #TerminalScreen
+ * @matches: (nullable): a #GArray of #TerminalSearchMatch, or %NULL
+ * @current: the index of the current match, or -1
+ *
+ * Sets the matches to highlight. They are dropped when the column count
+ * changes.
+ */
+void
+terminal_screen_set_search_matches(TerminalScreen* screen,
+                                   GArray* matches,
+                                   int current)
+{
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  auto const priv = screen->priv;
+  if (matches)
+    g_array_ref(matches);
+  g_clear_pointer(&priv->search_matches, g_array_unref);
+  priv->search_matches = matches;
+  priv->search_current = current;
+  priv->search_columns = vte_terminal_get_column_count(VTE_TERMINAL(screen));
+
+  gtk_widget_queue_draw(GTK_WIDGET(screen));
+}
+
+/**
+ * terminal_screen_scroll_to_row:
+ * @screen: a #TerminalScreen
+ * @row: an absolute row
+ *
+ * Scrolls @row into view, to the middle of the screen if it is not visible.
+ */
+void
+terminal_screen_scroll_to_row(TerminalScreen* screen,
+                              long row)
+{
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  auto const adjustment = terminal_screen_get_vadjustment(screen);
+  auto const rows = vte_terminal_get_row_count(VTE_TERMINAL(screen));
+  auto const top = terminal_screen_adjustment_to_row(screen, gtk_adjustment_get_value(adjustment));
+
+  if (row >= top && row < top + rows)
+    return;
+
+  auto const value = CLAMP(terminal_screen_row_to_adjustment(screen, row - rows / 2),
+                           gtk_adjustment_get_lower(adjustment),
+                           gtk_adjustment_get_upper(adjustment) - gtk_adjustment_get_page_size(adjustment));
+  gtk_adjustment_set_value(adjustment, value);
+}
+
+/**
+ * terminal_screen_get_visible_rows:
+ * @screen: a #TerminalScreen
+ * @first_row: (out): the first visible row
+ * @last_row: (out): the last visible row
+ */
+void
+terminal_screen_get_visible_rows(TerminalScreen* screen,
+                                 long* first_row,
+                                 long* last_row)
+{
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  auto const adjustment = terminal_screen_get_vadjustment(screen);
+  *first_row = terminal_screen_adjustment_to_row(screen, gtk_adjustment_get_value(adjustment));
+  *last_row = *first_row + vte_terminal_get_row_count(VTE_TERMINAL(screen)) - 1;
 }

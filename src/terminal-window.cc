@@ -1385,7 +1385,9 @@ action_find_forward_cb (GSimpleAction *action,
   if (window->active_screen == nullptr)
     return;
 
-  vte_terminal_search_find_next (VTE_TERMINAL (window->active_screen));
+  // Show the bar, so that the matches are highlighted
+  gtk_revealer_set_reveal_child (window->find_bar_revealer, true);
+  terminal_find_bar_find (window->find_bar, 1);
 }
 
 static void
@@ -1398,7 +1400,8 @@ action_find_backward_cb (GSimpleAction *action,
   if (window->active_screen == nullptr)
     return;
 
-  vte_terminal_search_find_previous (VTE_TERMINAL (window->active_screen));
+  gtk_revealer_set_reveal_child (window->find_bar_revealer, true);
+  terminal_find_bar_find (window->find_bar, -1);
 }
 
 static void
@@ -1411,8 +1414,7 @@ action_find_clear_cb (GSimpleAction *action,
   if (window->active_screen == nullptr)
     return;
 
-  vte_terminal_search_set_regex (VTE_TERMINAL (window->active_screen), nullptr, 0);
-  vte_terminal_unselect_all (VTE_TERMINAL (window->active_screen));
+  terminal_find_bar_clear (window->find_bar);
 }
 
 static void
@@ -1724,7 +1726,7 @@ terminal_window_update_zoom_sensitivity (TerminalWindow *window)
 static void
 terminal_window_update_search_sensitivity (TerminalWindow *window)
 {
-  auto const can_search = window->active_screen ? vte_terminal_search_get_regex(VTE_TERMINAL(window->active_screen)) != nullptr : false;
+  auto const can_search = window->active_screen && terminal_find_bar_has_search(window->find_bar);
 
   g_simple_action_set_enabled (lookup_action (window, "find-forward"), can_search);
   g_simple_action_set_enabled (lookup_action (window, "find-backward"), can_search);
@@ -2577,6 +2579,9 @@ terminal_window_init (TerminalWindow *window)
   clipboard_targets_changed_cb (app, window->clipboard, window);
   g_signal_connect (app, "clipboard-targets-changed",
                     G_CALLBACK (clipboard_targets_changed_cb), window);
+
+  g_signal_connect_swapped (window->find_bar, "notify::has-search",
+                            G_CALLBACK (terminal_window_update_search_sensitivity), window);
 
   g_signal_connect_object (terminal_app_get_profiles_list (app),
                            "child-changed::" TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY,

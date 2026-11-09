@@ -55,6 +55,20 @@
               </object>
             </child>
             <child>
+              <object class="GtkLabel" id="status">
+                <property name="visible">false</property>
+                <property name="ellipsize">end</property>
+                <property name="max-width-chars">24</property>
+                <style>
+                  <class name="dim-label"/>
+                  <class name="numeric"/>
+                </style>
+                <accessibility>
+                  <property name="label" translatable="yes">Search results</property>
+                </accessibility>
+              </object>
+            </child>
+            <child>
               <object class="GtkBox">
                 <property name="orientation">horizontal</property>
                 <style>
@@ -92,18 +106,21 @@
                           <object class="GtkCheckButton" id="match_case">
                             <property name="label" translatable="yes">Match _Case</property>
                             <property name="use-underline">true</property>
+                            <signal name="toggled" handler="terminal_find_bar_option_toggled_cb" swapped="1"/>
                           </object>
                         </child>
                         <child>
                           <object class="GtkCheckButton" id="whole_words">
                             <property name="label" translatable="yes">Whole _Words</property>
                             <property name="use-underline">true</property>
+                            <signal name="toggled" handler="terminal_find_bar_option_toggled_cb" swapped="1"/>
                           </object>
                         </child>
                         <child>
                           <object class="GtkCheckButton" id="use_regex">
                             <property name="label" translatable="yes">Use _Regular Expressions</property>
                             <property name="use-underline">true</property>
+                            <signal name="toggled" handler="terminal_find_bar_option_toggled_cb" swapped="1"/>
                           </object>
                         </child>
                       </object>

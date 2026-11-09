@@ -143,6 +143,29 @@ gboolean terminal_screen_has_command_output(TerminalScreen* screen);
 
 char* terminal_screen_dup_command_output(TerminalScreen* screen);
 
+/* A search match; the end column is right after the match */
+typedef struct {
+  long start_row;
+  long start_col;
+  long end_row;
+  long end_col;
+} TerminalSearchMatch;
+
+GArray* terminal_screen_find_matches(TerminalScreen* screen,
+                                     GRegex* regex,
+                                     guint max_matches);
+
+void terminal_screen_set_search_matches(TerminalScreen* screen,
+                                        GArray* matches,
+                                        int current);
+
+void terminal_screen_scroll_to_row(TerminalScreen* screen,
+                                   long row);
+
+void terminal_screen_get_visible_rows(TerminalScreen* screen,
+                                      long* first_row,
+                                      long* last_row);
+
 GIcon* terminal_screen_get_icon(TerminalScreen* screen);
 
 GIcon* terminal_screen_get_icon_progress(TerminalScreen* screen);

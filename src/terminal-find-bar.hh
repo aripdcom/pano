@@ -32,5 +32,9 @@ G_DECLARE_FINAL_TYPE (TerminalFindBar, terminal_find_bar, TERMINAL, FIND_BAR, Gt
 TerminalScreen *terminal_find_bar_get_screen (TerminalFindBar  *self);
 void            terminal_find_bar_set_screen (TerminalFindBar  *self,
                                               TerminalScreen *screen);
+void            terminal_find_bar_find       (TerminalFindBar  *self,
+                                              int               direction);
+gboolean        terminal_find_bar_has_search (TerminalFindBar  *self);
+void            terminal_find_bar_clear      (TerminalFindBar  *self);
 
 G_END_DECLS
