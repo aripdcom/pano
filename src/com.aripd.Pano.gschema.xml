@@ -918,6 +918,12 @@
       <summary>How long a command must run, in seconds, before its end is notified</summary>
     </key>
 
+    <key name="silence-duration" type="u">
+      <range min="1" max="86400" />
+      <default>10</default>
+      <summary>How long, in seconds, a terminal monitored for silence must be quiet before that is notified</summary>
+    </key>
+
     <key name="quick-terminal-width" type="u">
       <range min="10" max="100" />
       <default>100</default>

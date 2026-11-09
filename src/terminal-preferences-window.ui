@@ -332,6 +332,21 @@
               </object>
             </child>
             <child>
+              <object class="AdwSpinRow" id="silence_duration">
+                <property name="title" translatable="yes">Silence Duration</property>
+                <property name="subtitle" translatable="yes">How long a terminal monitored for silence must be quiet, in seconds. Turn monitoring on in the context menu of a terminal</property>
+                <property name="numeric">1</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">1</property>
+                    <property name="upper">86400</property>
+                    <property name="step-increment">1</property>
+                    <property name="page-increment">10</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="preserve_container">
                 <property name="title" translatable="yes">Keep New Tabs in the Same Container</property>
                 <property name="subtitle" translatable="yes">New tabs and panes start in the Toolbox or Distrobox container of the terminal they are opened from</property>

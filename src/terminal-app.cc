@@ -1391,6 +1391,36 @@ terminal_app_notify_command_finished(TerminalApp* app,
   g_application_send_notification(G_APPLICATION(app), id, notification);
 }
 
+/**
+ * terminal_app_notify_screen:
+ * @app: the #TerminalApp
+ * @screen: the terminal the notification is about
+ * @title: the title
+ * @body: (nullable): the text
+ *
+ * Sends a notification that leads to @screen when clicked, and that goes
+ * away when the user looks at @screen; it replaces the last one for it.
+ */
+void
+terminal_app_notify_screen(TerminalApp* app,
+                           TerminalScreen* screen,
+                           char const* title,
+                           char const* body)
+{
+  g_return_if_fail(TERMINAL_IS_APP(app));
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  gs_unref_object auto notification = g_notification_new(title);
+  if (body)
+    g_notification_set_body(notification, body);
+  g_notification_set_default_action_and_target(notification,
+                                               "app.focus-screen",
+                                               "s", terminal_screen_get_uuid(screen));
+
+  gs_free char* id = command_notification_id(screen);
+  g_application_send_notification(G_APPLICATION(app), id, notification);
+}
+
 void
 terminal_app_withdraw_command_notification(TerminalApp* app,
                                            TerminalScreen* screen)

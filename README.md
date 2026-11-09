@@ -89,6 +89,12 @@ Everything GNOME Terminal provides, plus:
   sends a desktop notification with the command, its result and how long it
   took, and marks its tab. Click the notification to go to the terminal.
   Change it in *Preferences → Behavior*.
+* **Activity and silence**: turn on *Monitor for Activity* or *Monitor for
+  Silence* in a terminal's context menu, and Pano Terminal marks its tab
+  and notifies you when it prints something, or when it has been quiet for
+  a while (10 seconds by default, see *Preferences → Behavior*), while you
+  are not looking at it. This works with any program, without shell
+  integration.
 * **Shell integration**: notifications, prompt navigation and copying
   command output need a shell that reports its prompts and commands. Pano
   Terminal sets that up by itself for bash, zsh and fish, on every

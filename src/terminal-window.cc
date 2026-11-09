@@ -2331,6 +2331,104 @@ terminal_window_update_terminal_menu (TerminalWindow *window)
   gboolean read_only = !vte_terminal_get_input_enabled (VTE_TERMINAL (window->active_screen));
   g_simple_action_set_state (lookup_action (window, "read-only"),
                              g_variant_new_boolean (read_only));
+
+  gboolean activity, silence;
+  terminal_screen_get_monitoring (window->active_screen, &activity, &silence);
+  g_simple_action_set_state (lookup_action (window, "monitor-activity"),
+                             g_variant_new_boolean (activity));
+  g_simple_action_set_state (lookup_action (window, "monitor-silence"),
+                             g_variant_new_boolean (silence));
+}
+
+static void
+action_monitor_state_cb (GSimpleAction *action,
+                         GVariant *state,
+                         gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW (user_data);
+
+  g_simple_action_set_state (action, state);
+  if (!window->active_screen)
+    return;
+
+  gboolean activity, silence;
+  terminal_screen_get_monitoring (window->active_screen, &activity, &silence);
+  if (g_str_equal (g_action_get_name (G_ACTION (action)), "monitor-activity"))
+    activity = g_variant_get_boolean (state);
+  else
+    silence = g_variant_get_boolean (state);
+  terminal_screen_set_monitoring (window->active_screen, activity, silence);
+}
+
+/* Whether the user can see @screen: in the selected tab of the focused
+ * window, maybe as one of several panes */
+static bool
+window_screen_in_sight (TerminalWindow* window,
+                        TerminalScreen* screen)
+{
+  auto const tab = terminal_tab_get_from_screen (screen);
+  return gtk_window_is_active (GTK_WINDOW (window)) &&
+    tab && tab == window_get_active_tab (window);
+}
+
+#define ACTIVITY_NOTIFIED_KEY "pano-activity-notified"
+
+/* A monitored terminal out of sight printed something: tell once, until
+ * the user looks at it */
+static void
+screen_activity_cb (TerminalScreen* screen,
+                    TerminalWindow* window)
+{
+  if (window_screen_in_sight (window, screen) ||
+      g_object_get_data (G_OBJECT (screen), ACTIVITY_NOTIFIED_KEY))
+    return;
+
+  g_object_set_data (G_OBJECT (screen), ACTIVITY_NOTIFIED_KEY, GINT_TO_POINTER (1));
+  if (auto const tab = terminal_tab_get_from_screen (screen); tab && tab != window_get_active_tab (window))
+    terminal_notebook_set_tab_needs_attention (window->notebook, tab, true);
+
+  terminal_app_notify_screen (terminal_app_get (), screen,
+                              _("Activity in a terminal"),
+                              terminal_screen_get_title (screen));
+}
+
+/* The user looks at the window again: the terminals of its selected tab
+ * may tell about activity again later */
+static void
+window_is_active_changed_cb (TerminalWindow* window,
+                             GParamSpec* pspec,
+                             void* user_data)
+{
+  auto const tab = window_get_active_tab (window);
+  if (!tab || !gtk_window_is_active (GTK_WINDOW (window)))
+    return;
+
+  gs_free_list GList* screens = terminal_tab_list_screens (tab);
+  for (auto l = screens; l; l = l->next)
+    g_object_set_data (G_OBJECT (l->data), ACTIVITY_NOTIFIED_KEY, nullptr);
+}
+
+/* A monitored terminal out of sight went quiet */
+static void
+screen_silence_cb (TerminalScreen* screen,
+                   TerminalWindow* window)
+{
+  if (window_screen_in_sight (window, screen))
+    return;
+
+  if (auto const tab = terminal_tab_get_from_screen (screen); tab && tab != window_get_active_tab (window))
+    terminal_notebook_set_tab_needs_attention (window->notebook, tab, true);
+
+  auto const settings = terminal_app_get_global_settings (terminal_app_get ());
+  auto const seconds = g_settings_get_uint (settings, TERMINAL_SETTING_SILENCE_DURATION_KEY);
+  /* Translators: %s is the title of a terminal, %u a number of seconds */
+  gs_free char* body = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE,
+                                                     "%s\nNo output for %u second",
+                                                     "%s\nNo output for %u seconds",
+                                                     seconds),
+                                        terminal_screen_get_title (screen), seconds);
+  terminal_app_notify_screen (terminal_app_get (), screen,
+                              _("Silence in a terminal"), body);
 }
 
 /* Actions stuff */
@@ -2621,6 +2719,8 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   /* Profile and property section */
   gs_unref_object GMenu *section5 = g_menu_new ();
   menu_append (section5, _("Read-_Only"), "win.read-only");
+  menu_append (section5, _("Monitor for _Activity"), "win.monitor-activity");
+  menu_append (section5, _("Monitor for _Silence"), "win.monitor-silence");
 
   GMenuModel *profiles_menu = terminal_app_get_profilemenu (app);
   if (profiles_menu != nullptr && g_menu_model_get_n_items (profiles_menu) > 1) {
@@ -3366,6 +3466,8 @@ terminal_window_init (TerminalWindow *window)
     { "fullscreen",          nullptr /* toggles state */,   nullptr, "false",   action_fullscreen_state_cb      },
     { "profile",             nullptr /* changes state */,   "s",  "''",      action_profile_state_cb         },
     { "read-only",           nullptr /* toggles state */,   nullptr, "false",   action_read_only_state_cb       },
+    { "monitor-activity",    nullptr /* toggles state */,   nullptr, "false",   action_monitor_state_cb         },
+    { "monitor-silence",     nullptr /* toggles state */,   nullptr, "false",   action_monitor_state_cb         },
     { "zoom-pane",           nullptr /* toggles state */,   nullptr, "false",   action_zoom_pane_state_cb       },
     { "broadcast",           action_broadcast_cb,           "s",  "'off'",   action_broadcast_state_cb       },
     { "broadcast-receive",   nullptr /* toggles state */,   nullptr, "true",    action_broadcast_receive_state_cb },
@@ -3612,6 +3714,8 @@ terminal_window_constructed (GObject *object)
                    G_CALLBACK(window_sync_dim_panes_cb), window);
   g_signal_connect(settings, "changed::" TERMINAL_SETTING_HEADER_BAR_COLORS_KEY,
                    G_CALLBACK(window_header_bar_colors_changed_cb), window);
+  g_signal_connect(window, "notify::is-active",
+                   G_CALLBACK(window_is_active_changed_cb), nullptr);
 }
 
 static void
@@ -4055,6 +4159,7 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
 
   // The user is looking at it now
   terminal_app_withdraw_command_notification (terminal_app_get (), screen);
+  g_object_set_data (G_OBJECT (screen), ACTIVITY_NOTIFIED_KEY, nullptr);
 
   /* set size of window to current grid size */
   if (should_update_window_size(window))
@@ -4128,6 +4233,10 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
                     G_CALLBACK (screen_quick_select_chosen_cb), window);
   g_signal_connect (screen, "colors-changed",
                     G_CALLBACK (screen_colors_changed_cb), window);
+  g_signal_connect (screen, "activity",
+                    G_CALLBACK (screen_activity_cb), window);
+  g_signal_connect (screen, "silence",
+                    G_CALLBACK (screen_silence_cb), window);
   g_signal_connect (screen, "prompts-changed",
                     G_CALLBACK (screen_prompts_changed_cb), window);
   g_signal_connect (screen, "commit",
@@ -4237,6 +4346,12 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_colors_changed_cb,
+                                        window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_activity_cb,
+                                        window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_silence_cb,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_prompts_changed_cb,

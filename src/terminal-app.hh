@@ -86,6 +86,11 @@ void terminal_app_notify_command_finished(TerminalApp* app,
                                           unsigned status,
                                           guint64 duration_ms);
 
+void terminal_app_notify_screen(TerminalApp* app,
+                                TerminalScreen* screen,
+                                char const* title,
+                                char const* body);
+
 void terminal_app_withdraw_command_notification(TerminalApp* app,
                                                 TerminalScreen* screen);
 

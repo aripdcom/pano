@@ -133,6 +133,11 @@ struct _TerminalScreenPrivate
   char* user_title; /* set with Set Title, or nullptr */
   char* initial_title; /* from --title, or nullptr */
   char* directory_title; /* the working directory, when no title is set */
+  /* Monitoring for activity and silence, see terminal_screen_set_monitoring() */
+  gboolean monitor_activity;
+  gboolean monitor_silence;
+  guint silence_source;
+
   /* The colors in use, if not those of the system style */
   gboolean has_custom_colors;
   GdkRGBA custom_foreground;
@@ -235,6 +240,8 @@ enum
   COLUMNS_CHANGED,
   QUICK_SELECT_CHOSEN,
   COLORS_CHANGED,
+  ACTIVITY,
+  SILENCE,
   LAST_SIGNAL
 };
 
@@ -1593,6 +1600,79 @@ terminal_screen_quick_select_focus_cb (TerminalScreen* screen,
     terminal_screen_stop_quick_select (screen);
 }
 
+/* Monitoring for activity and silence */
+
+static gboolean
+terminal_screen_silence_cb (void* user_data)
+{
+  auto const screen = TERMINAL_SCREEN (user_data);
+
+  // Once per quiet spell; the next output starts the count again
+  screen->priv->silence_source = 0;
+  g_signal_emit (screen, signals[SILENCE], 0);
+  return G_SOURCE_REMOVE;
+}
+
+static void
+terminal_screen_restart_silence_count (TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+
+  g_clear_handle_id (&priv->silence_source, g_source_remove);
+  if (!priv->monitor_silence)
+    return;
+
+  auto const settings = terminal_app_get_global_settings (terminal_app_get ());
+  auto const seconds = g_settings_get_uint (settings, TERMINAL_SETTING_SILENCE_DURATION_KEY);
+  priv->silence_source = g_timeout_add_seconds (seconds, terminal_screen_silence_cb, screen);
+}
+
+static void
+terminal_screen_monitor_contents_changed_cb (TerminalScreen* screen,
+                                             void* user_data)
+{
+  auto const priv = screen->priv;
+
+  if (priv->monitor_activity)
+    g_signal_emit (screen, signals[ACTIVITY], 0);
+  if (priv->monitor_silence)
+    terminal_screen_restart_silence_count (screen);
+}
+
+/**
+ * terminal_screen_set_monitoring:
+ * @screen: a #TerminalScreen
+ * @activity: whether to emit ::activity when the terminal prints something
+ * @silence: whether to emit ::silence when it has not printed anything
+ *   for the silence-duration setting
+ */
+void
+terminal_screen_set_monitoring (TerminalScreen* screen,
+                                gboolean activity,
+                                gboolean silence)
+{
+  g_return_if_fail (TERMINAL_IS_SCREEN (screen));
+
+  auto const priv = screen->priv;
+  priv->monitor_activity = activity;
+  if (priv->monitor_silence != silence) {
+    priv->monitor_silence = silence;
+    // A terminal that is quiet already counts from now
+    terminal_screen_restart_silence_count (screen);
+  }
+}
+
+void
+terminal_screen_get_monitoring (TerminalScreen* screen,
+                                gboolean* activity,
+                                gboolean* silence)
+{
+  g_return_if_fail (TERMINAL_IS_SCREEN (screen));
+
+  *activity = screen->priv->monitor_activity;
+  *silence = screen->priv->monitor_silence;
+}
+
 /* Visual bell */
 
 static void
@@ -1737,6 +1817,8 @@ terminal_screen_init (TerminalScreen *screen)
                    G_CALLBACK(terminal_screen_bell_cb), nullptr);
   g_signal_connect(screen, "notify::has-focus",
                    G_CALLBACK(terminal_screen_quick_select_focus_cb), nullptr);
+  g_signal_connect(screen, "contents-changed",
+                   G_CALLBACK(terminal_screen_monitor_contents_changed_cb), nullptr);
 
   g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_CURRENT_DIRECTORY_URI,
                    G_CALLBACK(terminal_screen_cwd_changed_cb), nullptr);
@@ -1918,6 +2000,28 @@ terminal_screen_class_init (TerminalScreenClass *klass)
                   G_TYPE_NONE,
                   0);
 
+  /* The terminal printed something while monitored for activity */
+  signals[ACTIVITY] =
+    g_signal_new (I_("activity"),
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  0,
+                  nullptr, nullptr,
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE,
+                  0);
+
+  /* The terminal has been quiet while monitored for silence */
+  signals[SILENCE] =
+    g_signal_new (I_("silence"),
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  0,
+                  nullptr, nullptr,
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE,
+                  0);
+
   signals[PROMPTS_CHANGED] =
     g_signal_new (I_("prompts-changed"),
                   G_OBJECT_CLASS_TYPE (object_class),
@@ -2035,6 +2139,7 @@ terminal_screen_dispose (GObject *object)
   g_clear_handle_id (&priv->size_dismiss_source, g_source_remove);
   terminal_screen_stop_bell_flash (screen);
   terminal_screen_stop_quick_select (screen);
+  g_clear_handle_id (&priv->silence_source, g_source_remove);
 
   gtk_widget_dispose_template (GTK_WIDGET (object), TERMINAL_TYPE_SCREEN);
 
