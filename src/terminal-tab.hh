@@ -59,6 +59,11 @@ void terminal_tab_split(TerminalTab* tab,
 void terminal_tab_remove_screen(TerminalTab* tab,
                                 TerminalScreen* screen);
 
+TerminalScreen* terminal_tab_take_screen(TerminalTab* tab,
+                                         TerminalScreen* screen);
+
+void terminal_tab_equalize(TerminalTab* tab);
+
 bool terminal_tab_focus_pane(TerminalTab* tab,
                              GtkDirectionType direction);
 

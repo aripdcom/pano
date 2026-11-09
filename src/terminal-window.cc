@@ -972,6 +972,8 @@ terminal_window_update_pane_actions(TerminalWindow* window)
   g_simple_action_set_enabled(lookup_action(window, "split"), tab != nullptr);
   g_simple_action_set_enabled(lookup_action(window, "close-pane"), split);
   g_simple_action_set_enabled(lookup_action(window, "zoom-pane"), split);
+  g_simple_action_set_enabled(lookup_action(window, "equalize-panes"), split);
+  g_simple_action_set_enabled(lookup_action(window, "move-pane"), split);
   g_simple_action_set_enabled(lookup_action(window, "pane-focus"), split && !zoomed);
   g_simple_action_set_enabled(lookup_action(window, "pane-resize"), split && !zoomed);
   // Only take the pane shortcuts away from the terminal when there are panes
@@ -1572,6 +1574,44 @@ detach_tab(TerminalWindow* window,
   terminal_window_parse_geometry (new_window, geometry);
 
   gtk_window_present (GTK_WINDOW (new_window));
+}
+
+static void
+action_equalize_panes_cb(GSimpleAction* action,
+                         GVariant* parameter,
+                         gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (auto const tab = window_get_active_tab(window))
+    terminal_tab_equalize(tab);
+}
+
+/* Moves the active pane, with what runs in it, into a new tab next to its
+ * old one, or into a new window */
+static void
+action_move_pane_cb(GSimpleAction* action,
+                    GVariant* parameter,
+                    gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const screen = window->active_screen;
+  auto const tab = window_get_active_tab(window);
+  if (!screen || !tab || !terminal_tab_is_split(tab))
+    return;
+
+  gs_unref_object auto taken = terminal_tab_take_screen(tab, screen);
+  if (!taken)
+    return;
+
+  auto const new_tab = terminal_tab_new(taken);
+  terminal_notebook_insert_tab(window->notebook, new_tab, tab, false);
+  terminal_notebook_set_active_screen(window->notebook, taken);
+  gtk_widget_grab_focus(GTK_WIDGET(taken));
+
+  if (g_str_equal(g_variant_get_string(parameter, nullptr), "window"))
+    detach_tab(window, new_tab);
+
+  terminal_window_update_pane_actions(window);
 }
 
 static void
@@ -2452,6 +2492,17 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   menu_append_item (pane_section, split_down_item);
   if (auto const tab = window_get_active_tab (window); tab && terminal_tab_is_split (tab)) {
     menu_append (pane_section, _("_Zoom Pane"), "win.zoom-pane");
+    menu_append (pane_section, _("Make Panes the Same _Size"), "win.equalize-panes");
+
+    gs_unref_object GMenu *move_menu = g_menu_new ();
+    gs_unref_object GMenuItem *to_tab_item = g_menu_item_new (_("To a New _Tab"), nullptr);
+    g_menu_item_set_action_and_target (to_tab_item, "win.move-pane", "s", "tab");
+    menu_append_item (move_menu, to_tab_item);
+    gs_unref_object GMenuItem *to_window_item = g_menu_item_new (_("To a New _Window"), nullptr);
+    g_menu_item_set_action_and_target (to_window_item, "win.move-pane", "s", "window");
+    menu_append_item (move_menu, to_window_item);
+    g_menu_append_submenu (pane_section, _("_Move Pane"), G_MENU_MODEL (move_menu));
+
     menu_append (pane_section, _("Close P_ane"), "win.close-pane");
   }
 
@@ -2718,6 +2769,17 @@ window_sync_padding_cb(GSettings* settings,
     else
       gtk_widget_remove_css_class(widget, css_classes[i]);
   }
+}
+
+static void
+window_sync_dim_panes_cb(GSettings* settings,
+                         char const* key,
+                         TerminalWindow* window)
+{
+  if (g_settings_get_boolean(settings, key))
+    gtk_widget_add_css_class(GTK_WIDGET(window), "dim-inactive-panes");
+  else
+    gtk_widget_remove_css_class(GTK_WIDGET(window), "dim-inactive-panes");
 }
 
 static void
@@ -3118,6 +3180,8 @@ terminal_window_init (TerminalWindow *window)
     { "select-all",          action_select_all_cb,       nullptr,   nullptr, nullptr },
     { "size-to",             action_size_to_cb,          "(uu)", nullptr, nullptr },
     { "split",               action_split_cb,            "s",    nullptr, nullptr },
+    { "equalize-panes",      action_equalize_panes_cb,   nullptr, nullptr, nullptr },
+    { "move-pane",           action_move_pane_cb,        "s",    nullptr, nullptr },
     { "tab-detach",          action_tab_detach_cb,       nullptr,   nullptr, nullptr },
     { "tab-move-left",       action_tab_move_left_cb,    nullptr,   nullptr, nullptr },
     { "tab-move-right",      action_tab_move_right_cb,   nullptr,   nullptr, nullptr },
@@ -3386,6 +3450,9 @@ terminal_window_constructed (GObject *object)
   window_sync_padding_cb(settings, TERMINAL_SETTING_TERMINAL_PADDING_KEY, window);
   g_signal_connect(settings, "changed::" TERMINAL_SETTING_TERMINAL_PADDING_KEY,
                    G_CALLBACK(window_sync_padding_cb), window);
+  window_sync_dim_panes_cb(settings, TERMINAL_SETTING_DIM_INACTIVE_PANES_KEY, window);
+  g_signal_connect(settings, "changed::" TERMINAL_SETTING_DIM_INACTIVE_PANES_KEY,
+                   G_CALLBACK(window_sync_dim_panes_cb), window);
 }
 
 static void
@@ -3490,6 +3557,9 @@ terminal_window_dispose (GObject *object)
                                        window);
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_sync_padding_cb,
+                                       window);
+  g_signal_handlers_disconnect_by_func(settings,
+                                       (void*)window_sync_dim_panes_cb,
                                        window);
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_import_offered_changed_cb,

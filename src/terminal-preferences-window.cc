@@ -47,6 +47,8 @@ struct _TerminalPreferencesWindow
   AdwSwitchRow         *notify_command_finished;
   AdwSwitchRow         *toast_on_copy;
   AdwSwitchRow         *ignore_program_titles;
+  AdwSwitchRow         *dim_inactive_panes;
+  AdwSwitchRow         *show_pane_titles;
   AdwSpinRow           *notify_command_min_duration;
   AdwSwitchRow         *restore_session;
   AdwSwitchRow         *preserve_container;
@@ -546,6 +548,16 @@ terminal_preferences_window_constructed (GObject *object)
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_DIM_INACTIVE_PANES_KEY,
+                   self->dim_inactive_panes,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_SHOW_PANE_TITLES_KEY,
+                   self->show_pane_titles,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_IGNORE_PROGRAM_TITLES_KEY,
                    self->ignore_program_titles,
                    "active",
@@ -730,6 +742,8 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_finished);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, toast_on_copy);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, ignore_program_titles);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, dim_inactive_panes);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, show_pane_titles);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_min_duration);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_session);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, preserve_container);

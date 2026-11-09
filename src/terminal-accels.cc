@@ -95,6 +95,8 @@
 #define KEY_SPLIT_DOWN          "split-down"
 #define KEY_CLOSE_PANE          "close-pane"
 #define KEY_ZOOM_PANE           "zoom-pane"
+#define KEY_EQUALIZE_PANES      "equalize-panes"
+#define KEY_MOVE_PANE_TO_TAB    "move-pane-to-tab"
 #define KEY_FOCUS_PANE_LEFT     "focus-pane-left"
 #define KEY_FOCUS_PANE_RIGHT    "focus-pane-right"
 #define KEY_FOCUS_PANE_UP       "focus-pane-up"
@@ -231,6 +233,8 @@ static KeyEntry panes_entries[] = {
   ENTRY      (N_("Split Down"),              KEY_SPLIT_DOWN,        "split",       "s", "'down'" ),
   ENTRY_PANE (N_("Close Pane"),              KEY_CLOSE_PANE,        "close-pane",  nullptr, nullptr),
   ENTRY_PANE (N_("Zoom Pane"),               KEY_ZOOM_PANE,         "zoom-pane",   nullptr, nullptr),
+  ENTRY_PANE (N_("Make Panes the Same Size"), KEY_EQUALIZE_PANES,   "equalize-panes", nullptr, nullptr),
+  ENTRY_PANE (N_("Move Pane to a New Tab"),  KEY_MOVE_PANE_TO_TAB,  "move-pane",   "s", "'tab'"  ),
   ENTRY_PANE (N_("Focus the Pane on the Left"),  KEY_FOCUS_PANE_LEFT,  "pane-focus",  "s", "'left'" ),
   ENTRY_PANE (N_("Focus the Pane on the Right"), KEY_FOCUS_PANE_RIGHT, "pane-focus",  "s", "'right'"),
   ENTRY_PANE (N_("Focus the Pane Above"),    KEY_FOCUS_PANE_UP,     "pane-focus",  "s", "'up'"   ),

@@ -138,6 +138,31 @@ window.terminal-window.translucent terminal-pane scrollbar
   background-color: @window_bg_color;
 }
 
+/* Split panes: the panes other than the active one are dimmed, and the
+ * optional title bars show which one is active */
+window.terminal-window.dim-inactive-panes terminal-pane.inactive > overlay
+{
+  opacity: 0.6;
+}
+
+terminal-pane > .pane-title
+{
+  padding: 2px 8px;
+  font-size: smaller;
+  background-color: alpha(currentColor, 0.06);
+  border-bottom: 1px solid alpha(currentColor, 0.12);
+}
+
+terminal-pane.inactive > .pane-title
+{
+  opacity: 0.6;
+}
+
+terminal-pane:not(.inactive) > .pane-title
+{
+  font-weight: bold;
+}
+
 /* Terminals that get broadcast input */
 terminal-pane.broadcast
 {

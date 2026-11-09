@@ -109,6 +109,8 @@ G_BEGIN_DECLS
 #define TERMINAL_SETTING_NOTIFY_COMMAND_FINISHED_KEY    "notify-command-finished"
 #define TERMINAL_SETTING_TOAST_ON_COPY_KEY              "toast-on-copy"
 #define TERMINAL_SETTING_IGNORE_PROGRAM_TITLES_KEY      "ignore-program-titles"
+#define TERMINAL_SETTING_DIM_INACTIVE_PANES_KEY         "dim-inactive-panes"
+#define TERMINAL_SETTING_SHOW_PANE_TITLES_KEY           "show-pane-titles"
 #define TERMINAL_SETTING_GNOME_TERMINAL_IMPORT_OFFERED_KEY "gnome-terminal-import-offered"
 #define TERMINAL_SETTING_NOTIFY_COMMAND_MIN_DURATION_KEY "notify-command-min-duration"
 #define TERMINAL_SETTING_RESTORE_WINDOW_SIZE_KEY        "restore-window-size"

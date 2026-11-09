@@ -145,6 +145,18 @@
               </object>
             </child>
             <child>
+              <object class="AdwSwitchRow" id="dim_inactive_panes">
+                <property name="title" translatable="yes">Dim Inactive Panes</property>
+                <property name="subtitle" translatable="yes">In a split tab, fade the panes other than the one you type in</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="show_pane_titles">
+                <property name="title" translatable="yes">Show Pane Titles</property>
+                <property name="subtitle" translatable="yes">In a split tab, show the title of each pane above it</property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="highlight_root_and_remote">
                 <property name="title" translatable="yes">Highlight Root and Remote Sessions</property>
                 <property name="subtitle" translatable="yes">Color the header bar and mark the tab while a terminal runs as root or over SSH</property>

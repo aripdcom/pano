@@ -20,6 +20,8 @@
 #include "config.h"
 
 #include "terminal-tab.hh"
+#include "terminal-app.hh"
+#include "terminal-schemas.hh"
 #include "terminal-debug.hh"
 #include "terminal-intl.hh"
 #include "terminal-libgsystem.hh"
@@ -29,7 +31,8 @@
 
 #include <algorithm>
 
-/* TerminalPane: a single terminal with its scrolled window and overlays */
+/* TerminalPane: a single terminal with its scrolled window and overlays,
+ * below an optional title bar */
 
 #define TERMINAL_TYPE_PANE (terminal_pane_get_type())
 
@@ -40,6 +43,7 @@ struct _TerminalPane
   GtkWidget parent_instance;
 
   TerminalScreen* screen; // unowned, child of scrolled_window
+  GtkWidget* title_bar;
   GtkWidget* overlay;
   GtkWidget* scrolled_window;
 };
@@ -49,7 +53,15 @@ G_DEFINE_FINAL_TYPE (TerminalPane, terminal_pane, GTK_TYPE_WIDGET)
 static void
 terminal_pane_init(TerminalPane* pane)
 {
+  pane->title_bar = gtk_label_new(nullptr);
+  gtk_widget_add_css_class(pane->title_bar, "pane-title");
+  gtk_label_set_ellipsize(GTK_LABEL(pane->title_bar), PANGO_ELLIPSIZE_END);
+  gtk_label_set_single_line_mode(GTK_LABEL(pane->title_bar), true);
+  gtk_widget_set_visible(pane->title_bar, false);
+  gtk_widget_set_parent(pane->title_bar, GTK_WIDGET(pane));
+
   pane->overlay = gtk_overlay_new();
+  gtk_widget_set_vexpand(pane->overlay, true);
   gtk_widget_set_parent(pane->overlay, GTK_WIDGET(pane));
 
   pane->scrolled_window =
@@ -66,6 +78,7 @@ terminal_pane_dispose(GObject* object)
   auto const pane = TERMINAL_PANE(object);
 
   pane->screen = nullptr;
+  g_clear_pointer(&pane->title_bar, gtk_widget_unparent);
   g_clear_pointer(&pane->overlay, gtk_widget_unparent);
 
   G_OBJECT_CLASS(terminal_pane_parent_class)->dispose(object);
@@ -79,7 +92,7 @@ terminal_pane_class_init(TerminalPaneClass* klass)
 
   gobject_class->dispose = terminal_pane_dispose;
 
-  gtk_widget_class_set_layout_manager_type(widget_class, GTK_TYPE_BIN_LAYOUT);
+  gtk_widget_class_set_layout_manager_type(widget_class, GTK_TYPE_BOX_LAYOUT);
   gtk_widget_class_set_css_name(widget_class, "terminal-pane");
 }
 
@@ -114,6 +127,9 @@ terminal_pane_new(TerminalScreen* screen,
   auto const pane = TERMINAL_PANE(g_object_new(TERMINAL_TYPE_PANE, nullptr));
 
   pane->screen = screen;
+  gtk_orientable_set_orientation(GTK_ORIENTABLE(gtk_widget_get_layout_manager(GTK_WIDGET(pane))),
+                                 GTK_ORIENTATION_VERTICAL);
+  g_object_bind_property(screen, "title", pane->title_bar, "label", G_BINDING_SYNC_CREATE);
   gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(pane->scrolled_window),
                                 GTK_WIDGET(screen));
   // The real policy is applied from the profile once the screen is rooted
@@ -177,6 +193,8 @@ G_DEFINE_FINAL_TYPE (TerminalTab, terminal_tab, GTK_TYPE_WIDGET)
 
 #define TERMINAL_TAB_CSS_NAME "terminal-tab"
 
+static void tab_update_panes(TerminalTab* tab);
+
 static void
 tab_set_active_screen(TerminalTab* tab,
                       TerminalScreen* screen)
@@ -193,6 +211,7 @@ tab_set_active_screen(TerminalTab* tab,
   tab->active_screen = screen;
   g_binding_group_set_source(tab->bindings, screen);
   g_object_notify_by_pspec(G_OBJECT(tab), pspecs[PROP_SCREEN]);
+  tab_update_panes(tab);
 }
 
 static void
@@ -283,6 +302,36 @@ show_all_panes(GtkWidget* widget)
   }
 }
 
+/* Marks the panes other than the active one, which the CSS may dim, and
+ * shows the panes' title bars if wanted. Both only while the tab is split. */
+static void
+tab_update_panes(TerminalTab* tab)
+{
+  if (!tab->root)
+    return;
+
+  auto const split = g_queue_get_length(&tab->screens) > 1;
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  auto const titles = split && tab->active &&
+    g_settings_get_boolean(settings, TERMINAL_SETTING_SHOW_PANE_TITLES_KEY);
+
+  GList* screens = nullptr;
+  collect_screens(tab->root, &screens);
+  for (auto l = screens; l; l = l->next) {
+    auto const screen = reinterpret_cast<TerminalScreen*>(l->data);
+    auto const pane = pane_from_screen(screen);
+    if (!pane)
+      continue;
+
+    if (split && screen != tab->active_screen)
+      gtk_widget_add_css_class(GTK_WIDGET(pane), "inactive");
+    else
+      gtk_widget_remove_css_class(GTK_WIDGET(pane), "inactive");
+    gtk_widget_set_visible(pane->title_bar, titles);
+  }
+  g_list_free(screens);
+}
+
 static void
 terminal_tab_init (TerminalTab *tab)
 {
@@ -315,6 +364,11 @@ terminal_tab_constructed (GObject *object)
 
   tab_track_screen(tab, screen);
   tab_set_active_screen(tab, screen);
+
+  g_signal_connect_object(terminal_app_get_global_settings(terminal_app_get()),
+                          "changed::" TERMINAL_SETTING_SHOW_PANE_TITLES_KEY,
+                          G_CALLBACK(tab_update_panes), tab,
+                          G_CONNECT_SWAPPED);
 }
 
 static void
@@ -589,19 +643,29 @@ terminal_tab_is_split(TerminalTab* tab)
  * Splits the pane of @screen in two and puts @new_screen into the new
  * half. The caller should move the focus to @new_screen.
  */
+/* The size of @paned along its orientation. Its max-position is less than
+ * that, by the minimum size of its end child. */
+static int
+paned_get_size(GtkPaned* paned)
+{
+  auto const widget = GTK_WIDGET(paned);
+  return gtk_orientable_get_orientation(GTK_ORIENTABLE(paned)) == GTK_ORIENTATION_HORIZONTAL
+    ? gtk_widget_get_width(widget)
+    : gtk_widget_get_height(widget);
+}
+
 static void
 paned_apply_position_cb(GtkPaned* paned,
                         GParamSpec* pspec,
                         void* user_data)
 {
-  int max_position = 0;
-  g_object_get(paned, "max-position", &max_position, nullptr);
-  if (max_position <= 0)
+  auto const size = paned_get_size(paned);
+  if (size <= 0)
     return;
 
   auto const fraction = *reinterpret_cast<double*>(g_object_get_data(G_OBJECT(paned), "terminal-position"));
   g_signal_handlers_disconnect_by_func(paned, (void*)paned_apply_position_cb, user_data);
-  gtk_paned_set_position(paned, int(fraction * max_position + 0.5));
+  gtk_paned_set_position(paned, int(fraction * size + 0.5));
 }
 
 /* Sets the position as a share of the available space, now or as soon as
@@ -629,12 +693,11 @@ paned_set_fraction(GtkPaned* paned,
 static double
 paned_get_fraction(GtkPaned* paned)
 {
-  int max_position = 0;
-  g_object_get(paned, "max-position", &max_position, nullptr);
-  if (max_position <= 0)
+  auto const size = paned_get_size(paned);
+  if (size <= 0)
     return 0.5;
 
-  return std::clamp(double(gtk_paned_get_position(paned)) / max_position, 0.0, 1.0);
+  return std::clamp(double(gtk_paned_get_position(paned)) / size, 0.0, 1.0);
 }
 
 void
@@ -674,30 +737,25 @@ terminal_tab_split(TerminalTab* tab,
   paned_set_fraction(paned, position, size);
 
   tab_track_screen(tab, new_screen);
+  tab_update_panes(tab);
   g_signal_emit(tab, signals[SCREEN_ADDED], 0, new_screen);
 }
 
-/**
- * terminal_tab_remove_screen:
- * @tab: a #TerminalTab
- * @screen: a #TerminalScreen in @tab
- *
- * Closes the pane of @screen. Its space goes to the neighbouring pane.
- * The last pane of a tab cannot be removed; close the tab instead.
+/* Takes the pane of @screen out of the tree; its space goes to the
+ * neighbouring pane. Returns a reference to @screen, no longer parented,
+ * if @keep_screen, else drops it together with the pane.
  */
-void
-terminal_tab_remove_screen(TerminalTab* tab,
-                           TerminalScreen* screen)
+static TerminalScreen*
+tab_remove_pane(TerminalTab* tab,
+                TerminalScreen* screen,
+                bool keep_screen)
 {
-  g_return_if_fail(TERMINAL_IS_TAB(tab));
-  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
-
   auto const pane = pane_from_screen(screen);
-  g_return_if_fail(pane != nullptr);
+  g_return_val_if_fail(pane != nullptr, nullptr);
 
   auto const parent = gtk_widget_get_parent(GTK_WIDGET(pane));
-  g_return_if_fail(GTK_IS_PANED(parent));
-  g_return_if_fail(gtk_widget_is_ancestor(parent, GTK_WIDGET(tab)));
+  g_return_val_if_fail(GTK_IS_PANED(parent), nullptr);
+  g_return_val_if_fail(gtk_widget_is_ancestor(parent, GTK_WIDGET(tab)), nullptr);
 
   terminal_tab_set_zoomed(tab, false);
 
@@ -718,6 +776,12 @@ terminal_tab_remove_screen(TerminalTab* tab,
 
   tab_untrack_screen(tab, screen);
 
+  if (keep_screen) {
+    g_object_ref(screen);
+    gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(pane->scrolled_window), nullptr);
+    pane->screen = nullptr;
+  }
+
   auto const paned = GTK_PANED(parent);
   GtkWidget* sibling = gtk_paned_get_start_child(paned) == GTK_WIDGET(pane)
     ? gtk_paned_get_end_child(paned)
@@ -729,10 +793,99 @@ terminal_tab_remove_screen(TerminalTab* tab,
   else
     gtk_paned_set_end_child(paned, nullptr);
 
-  // This drops the paned, and with it the pane and its screen
+  // This drops the paned, and with it the pane (and its screen)
   auto const old_paned = tab_replace_child(tab, GTK_WIDGET(paned), sibling);
   g_object_unref(sibling);
   g_object_unref(old_paned);
+
+  tab_update_panes(tab);
+
+  return keep_screen ? screen : nullptr;
+}
+
+/**
+ * terminal_tab_remove_screen:
+ * @tab: a #TerminalTab
+ * @screen: a #TerminalScreen in @tab
+ *
+ * Closes the pane of @screen. Its space goes to the neighbouring pane.
+ * The last pane of a tab cannot be removed; close the tab instead.
+ */
+void
+terminal_tab_remove_screen(TerminalTab* tab,
+                           TerminalScreen* screen)
+{
+  g_return_if_fail(TERMINAL_IS_TAB(tab));
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  tab_remove_pane(tab, screen, false);
+}
+
+/**
+ * terminal_tab_take_screen:
+ * @tab: a #TerminalTab
+ * @screen: a #TerminalScreen in @tab, which is split
+ *
+ * Takes the pane of @screen out of @tab, keeping the terminal and what
+ * runs in it, for example to put it into a tab of its own.
+ *
+ * Returns: (transfer full): @screen, without a parent
+ */
+TerminalScreen*
+terminal_tab_take_screen(TerminalTab* tab,
+                         TerminalScreen* screen)
+{
+  g_return_val_if_fail(TERMINAL_IS_TAB(tab), nullptr);
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), nullptr);
+
+  return tab_remove_pane(tab, screen, true);
+}
+
+/* The number of panes side by side in @orientation within @widget */
+static guint
+count_panes_along(GtkWidget* widget,
+                  GtkOrientation orientation)
+{
+  if (GTK_IS_PANED(widget) &&
+      gtk_orientable_get_orientation(GTK_ORIENTABLE(widget)) == orientation)
+    return count_panes_along(gtk_paned_get_start_child(GTK_PANED(widget)), orientation) +
+      count_panes_along(gtk_paned_get_end_child(GTK_PANED(widget)), orientation);
+
+  return 1;
+}
+
+static void
+equalize_node(GtkWidget* widget)
+{
+  if (!GTK_IS_PANED(widget))
+    return;
+
+  auto const paned = GTK_PANED(widget);
+  auto const orientation = gtk_orientable_get_orientation(GTK_ORIENTABLE(widget));
+  auto const start = gtk_paned_get_start_child(paned);
+  auto const end = gtk_paned_get_end_child(paned);
+  auto const n_start = count_panes_along(start, orientation);
+  auto const n_end = count_panes_along(end, orientation);
+
+  paned_set_fraction(paned, double(n_start) / double(n_start + n_end), paned_get_size(paned));
+
+  equalize_node(start);
+  equalize_node(end);
+}
+
+/**
+ * terminal_tab_equalize:
+ * @tab: a #TerminalTab
+ *
+ * Gives the panes in each row and column of @tab the same size.
+ */
+void
+terminal_tab_equalize(TerminalTab* tab)
+{
+  g_return_if_fail(TERMINAL_IS_TAB(tab));
+
+  terminal_tab_set_zoomed(tab, false);
+  equalize_node(tab->root);
 }
 
 /**
@@ -1068,6 +1221,7 @@ terminal_tab_set_active(TerminalTab* tab,
       gtk_widget_set_visible(pane->scrolled_window, active);
   }
   g_list_free(screens);
+  tab_update_panes(tab);
 }
 
 /* Layouts */
