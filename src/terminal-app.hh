@@ -80,6 +80,15 @@ char *terminal_app_dup_screen_object_path (TerminalApp *app,
 TerminalScreen *terminal_app_get_screen_by_uuid (TerminalApp *app,
                                                  const char  *uuid);
 
+void terminal_app_notify_command_finished(TerminalApp* app,
+                                          TerminalScreen* screen,
+                                          char const* command,
+                                          unsigned status,
+                                          guint64 duration_ms);
+
+void terminal_app_withdraw_command_notification(TerminalApp* app,
+                                                TerminalScreen* screen);
+
 TerminalScreen *terminal_app_get_screen_by_object_path (TerminalApp *app,
                                                         const char *object_path);
 

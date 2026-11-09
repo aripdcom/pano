@@ -715,6 +715,25 @@ app_menu_about_cb (GSimpleAction *action,
   terminal_util_show_about ();
 }
 
+/* Activated by clicking a notification; the parameter is a screen UUID */
+static void
+app_focus_screen_cb(GSimpleAction* action,
+                    GVariant* parameter,
+                    gpointer user_data)
+{
+  auto const app = TERMINAL_APP(user_data);
+  auto const screen = terminal_app_get_screen_by_uuid(app, g_variant_get_string(parameter, nullptr));
+  if (!screen)
+    return;
+
+  auto const window = gtk_widget_get_root(GTK_WIDGET(screen));
+  if (!TERMINAL_IS_WINDOW(window))
+    return;
+
+  terminal_window_switch_screen(TERMINAL_WINDOW(window), screen);
+  gtk_window_present(GTK_WINDOW(window));
+}
+
 static void
 app_menu_quit_cb (GSimpleAction *action,
                   GVariant      *parameter,
@@ -774,7 +793,8 @@ terminal_app_startup (GApplication *application)
     { "preferences", app_menu_preferences_cb,   nullptr, nullptr, nullptr },
     { "help",        app_menu_help_cb,          nullptr, nullptr, nullptr },
     { "about",       app_menu_about_cb,         nullptr, nullptr, nullptr },
-    { "quit",        app_menu_quit_cb,          nullptr, nullptr, nullptr }
+    { "quit",        app_menu_quit_cb,          nullptr, nullptr, nullptr },
+    { "focus-screen", app_focus_screen_cb,      "s",     nullptr, nullptr },
   };
 
   g_action_map_add_action_entries (G_ACTION_MAP (application),
@@ -1208,6 +1228,82 @@ terminal_app_new(char const* app_id,
 }
 
 #ifdef TERMINAL_SERVER
+
+#ifdef TERMINAL_SERVER
+
+static char*
+command_notification_id(TerminalScreen* screen)
+{
+  return g_strdup_printf("command-finished-%s", terminal_screen_get_uuid(screen));
+}
+
+static char*
+format_duration(guint64 duration_ms)
+{
+  auto const seconds = unsigned(duration_ms / 1000);
+  if (seconds < 60)
+    return g_strdup_printf(_("%u s"), seconds);
+  if (seconds < 3600)
+    return g_strdup_printf(_("%u min %u s"), seconds / 60, seconds % 60);
+  return g_strdup_printf(_("%u h %u min"), seconds / 3600, (seconds % 3600) / 60);
+}
+
+/**
+ * terminal_app_notify_command_finished:
+ * @app: the #TerminalApp
+ * @screen: the #TerminalScreen the command ran in
+ * @command: (nullable): the command line
+ * @status: the exit status
+ * @duration_ms: how long the command ran
+ *
+ * Sends a desktop notification. Clicking it shows @screen. A newer
+ * notification for the same screen replaces an older one.
+ */
+void
+terminal_app_notify_command_finished(TerminalApp* app,
+                                     TerminalScreen* screen,
+                                     char const* command,
+                                     unsigned status,
+                                     guint64 duration_ms)
+{
+  g_return_if_fail(TERMINAL_IS_APP(app));
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  gs_free char* duration = format_duration(duration_ms);
+  gs_free char* result = status == 0
+    ? g_strdup_printf(_("Finished after %s"), duration)
+    : g_strdup_printf(_("Failed with exit status %u after %s"), status, duration);
+
+  auto what = command;
+  if (!what || !what[0])
+    what = terminal_screen_get_title(screen);
+  gs_free char* body = what && what[0]
+    ? g_strdup_printf("%s\n%s", what, result)
+    : g_strdup(result);
+
+  gs_unref_object auto notification =
+    g_notification_new(status == 0 ? _("Command finished") : _("Command failed"));
+  g_notification_set_body(notification, body);
+  g_notification_set_default_action_and_target(notification,
+                                               "app.focus-screen",
+                                               "s", terminal_screen_get_uuid(screen));
+
+  gs_free char* id = command_notification_id(screen);
+  g_application_send_notification(G_APPLICATION(app), id, notification);
+}
+
+void
+terminal_app_withdraw_command_notification(TerminalApp* app,
+                                           TerminalScreen* screen)
+{
+  g_return_if_fail(TERMINAL_IS_APP(app));
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  gs_free char* id = command_notification_id(screen);
+  g_application_withdraw_notification(G_APPLICATION(app), id);
+}
+
+#endif /* TERMINAL_SERVER */
 
 TerminalScreen *
 terminal_app_get_screen_by_uuid (TerminalApp *app,

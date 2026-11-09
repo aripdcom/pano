@@ -206,6 +206,28 @@
               </object>
             </child>
             <child>
+              <object class="AdwSwitchRow" id="notify_command_finished">
+                <property name="title" translatable="yes">Notify When Commands Finish</property>
+                <property name="subtitle" translatable="yes">When a long command ends in a terminal you are not looking at. Needs shell integration (vte.sh)</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="notify_command_min_duration">
+                <property name="title" translatable="yes">Minimum Command Duration</property>
+                <property name="subtitle" translatable="yes">In seconds</property>
+                <property name="sensitive" bind-source="notify_command_finished" bind-property="active" bind-flags="sync-create"/>
+                <property name="numeric">1</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">1</property>
+                    <property name="upper">86400</property>
+                    <property name="step-increment">1</property>
+                    <property name="page-increment">10</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="restore_session">
                 <property name="title" translatable="yes">Restore Session</property>
                 <property name="subtitle" translatable="yes">Reopen the windows, tabs and panes of the last session, each in its previous folder</property>

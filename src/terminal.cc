@@ -627,7 +627,7 @@ main (int argc, char **argv)
     return exit_code;
   }
 
-  g_set_application_name (_("Terminal"));
+  g_set_application_name ("Pano Terminal");
 
   gs_unref_object TerminalFactory *factory = nullptr;
   gs_free char *service_name = nullptr;

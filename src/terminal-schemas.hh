@@ -97,6 +97,8 @@ G_BEGIN_DECLS
 #define TERMINAL_SETTING_UNIFIED_MENU_KEY               "unified-menu"
 #define TERMINAL_SETTING_ALWAYS_CHECK_DEFAULT_KEY       "always-check-default-terminal"
 #define TERMINAL_SETTING_RESTORE_SESSION_KEY            "restore-session"
+#define TERMINAL_SETTING_NOTIFY_COMMAND_FINISHED_KEY    "notify-command-finished"
+#define TERMINAL_SETTING_NOTIFY_COMMAND_MIN_DURATION_KEY "notify-command-min-duration"
 #define TERMINAL_SETTING_RESTORE_WINDOW_SIZE_KEY        "restore-window-size"
 
 #define TERMINAL_SETTINGS_LIST_LIST_KEY                 "list"

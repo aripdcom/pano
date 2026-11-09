@@ -149,6 +149,11 @@ struct _TerminalScreenPrivate
   VteProgressHint progress_hint;
   double progress_fraction;
   GIcon* icon_progress;
+
+  /* The command running at the prompt, from shell integration */
+  gint64 command_start; /* monotonic time, 0 if none */
+  char* command;
+  guint command_capture_source;
 };
 
 enum
@@ -157,6 +162,7 @@ enum
   SHOW_POPUP_MENU,
   MATCH_CLICKED,
   CLOSE_SCREEN,
+  COMMAND_FINISHED,
   LAST_SIGNAL
 };
 
@@ -658,6 +664,66 @@ terminal_screen_progress_value_changed_cb(TerminalScreen* screen,
   terminal_screen_clear_icon_progress(screen);
 }
 
+static gboolean
+terminal_screen_capture_command_cb(void* user_data)
+{
+  auto const screen = TERMINAL_SCREEN(user_data);
+  auto const priv = screen->priv;
+
+  priv->command_capture_source = 0;
+
+  gs_free char* cmdline = nullptr;
+  if (terminal_screen_has_foreground_process(screen, nullptr, &cmdline) && cmdline) {
+    g_free(priv->command);
+    priv->command = g_steal_pointer(&cmdline);
+  }
+
+  return G_SOURCE_REMOVE;
+}
+
+/* The shell is about to run the command entered at the prompt */
+static void
+terminal_screen_shell_preexec_cb(TerminalScreen* screen,
+                                 char const* prop,
+                                 VteTerminal* terminal)
+{
+  auto const priv = screen->priv;
+
+  priv->command_start = g_get_monotonic_time();
+  g_clear_pointer(&priv->command, g_free);
+
+  // The shell has not started the command yet; look a bit later. Commands
+  // that end before do not run long enough to matter.
+  g_clear_handle_id(&priv->command_capture_source, g_source_remove);
+  priv->command_capture_source = g_timeout_add(500,
+                                               terminal_screen_capture_command_cb,
+                                               screen);
+}
+
+/* The command has returned; the termprop value is its exit status */
+static void
+terminal_screen_shell_postexec_cb(TerminalScreen* screen,
+                                  char const* prop,
+                                  VteTerminal* terminal)
+{
+  auto const priv = screen->priv;
+
+  if (priv->command_start == 0)
+    return;
+
+  g_clear_handle_id(&priv->command_capture_source, g_source_remove);
+
+  uint64_t status = 0;
+  vte_terminal_get_termprop_uint(terminal, VTE_TERMPROP_SHELL_POSTEXEC, &status);
+
+  auto const duration_ms = guint64(g_get_monotonic_time() - priv->command_start) / 1000;
+  priv->command_start = 0;
+
+  gs_free char* command = g_steal_pointer(&priv->command);
+  g_signal_emit(screen, signals[COMMAND_FINISHED], 0,
+                command, guint(status), duration_ms);
+}
+
 static void
 terminal_screen_progress_hint_changed_cb(TerminalScreen* screen,
                                          char const* prop,
@@ -921,6 +987,11 @@ terminal_screen_init (TerminalScreen *screen)
   g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_PROGRESS_HINT,
                    G_CALLBACK(terminal_screen_progress_hint_changed_cb), screen);
 
+  g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_SHELL_PREEXEC,
+                   G_CALLBACK(terminal_screen_shell_preexec_cb), screen);
+  g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_SHELL_POSTEXEC,
+                   G_CALLBACK(terminal_screen_shell_postexec_cb), screen);
+
   app = terminal_app_get ();
   g_signal_connect (terminal_app_get_desktop_interface_settings (app), "changed::" MONOSPACE_FONT_KEY_NAME,
                     G_CALLBACK (terminal_screen_system_font_changed_cb), screen);
@@ -1031,6 +1102,19 @@ terminal_screen_class_init (TerminalScreenClass *klass)
                   G_TYPE_BOOLEAN,
                   3, G_TYPE_STRING, G_TYPE_INT, G_TYPE_UINT);
   
+  /* Emitted when a command entered at the shell prompt has finished, if the
+   * shell reports this (see vte.sh). The command line is nullptr if the
+   * command ended too quickly to see it. */
+  signals[COMMAND_FINISHED] =
+    g_signal_new (I_("command-finished"),
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  0,
+                  nullptr, nullptr,
+                  nullptr /* generic marshaller */,
+                  G_TYPE_NONE,
+                  3, G_TYPE_STRING, G_TYPE_UINT, G_TYPE_UINT64);
+
   signals[CLOSE_SCREEN] =
     g_signal_new (I_("close-screen"),
                   G_OBJECT_CLASS_TYPE (object_class),
@@ -1151,6 +1235,8 @@ terminal_screen_dispose (GObject *object)
 
   g_clear_object(&screen->priv->icon_color);
   g_clear_object(&screen->priv->icon_image);
+  g_clear_handle_id(&priv->command_capture_source, g_source_remove);
+  g_clear_pointer(&priv->command, g_free);
 
   G_OBJECT_CLASS (terminal_screen_parent_class)->dispose (object);
 

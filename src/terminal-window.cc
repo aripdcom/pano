@@ -2006,6 +2006,35 @@ screen_match_clicked_cb (TerminalScreen *screen,
   return TRUE;
 }
 
+/* A command entered at the prompt has finished. Tell the user if it ran for
+ * a while and its terminal is not in sight. */
+static void
+screen_command_finished_cb(TerminalScreen* screen,
+                           char const* command,
+                           unsigned status,
+                           guint64 duration_ms,
+                           TerminalWindow* window)
+{
+  auto const app = terminal_app_get();
+  auto const settings = terminal_app_get_global_settings(app);
+  if (!g_settings_get_boolean(settings, TERMINAL_SETTING_NOTIFY_COMMAND_FINISHED_KEY))
+    return;
+
+  auto const min_duration = g_settings_get_uint(settings, TERMINAL_SETTING_NOTIFY_COMMAND_MIN_DURATION_KEY);
+  if (duration_ms < guint64(min_duration) * 1000)
+    return;
+
+  auto const tab = terminal_tab_get_from_screen(screen);
+  auto const tab_selected = tab && tab == window_get_active_tab(window);
+  if (tab_selected && gtk_window_is_active(GTK_WINDOW(window)))
+    return;
+
+  if (tab && !tab_selected)
+    terminal_notebook_set_tab_needs_attention(window->notebook, tab, true);
+
+  terminal_app_notify_command_finished(app, screen, command, status, duration_ms);
+}
+
 static void
 screen_close_cb (TerminalScreen *screen,
                  TerminalWindow *window)
@@ -2047,7 +2076,7 @@ notebook_update_tabs_menu_cb (GtkMenuButton *button,
 
     title = terminal_screen_get_title (screen);
 
-    item = g_menu_item_new (title && title[0] ? title : _("Terminal"), nullptr);
+    item = g_menu_item_new (title && title[0] ? title : "Pano Terminal", nullptr);
     g_menu_item_set_action_and_target (item, "win.active-tab", "i", i);
     g_menu_append_item (menu, item);
   }
@@ -2773,7 +2802,7 @@ sync_screen_title (TerminalScreen *screen,
 
   title = terminal_screen_get_title (screen);
   gtk_window_set_title (GTK_WINDOW (window),
-                        title && title[0] ? title : _("Terminal"));
+                        title && title[0] ? title : "Pano Terminal");
 }
 
 static void
@@ -2967,7 +2996,7 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
 
   if (!screen) {
     gtk_revealer_set_reveal_child(window->find_bar_revealer, false);
-    gtk_window_set_title(GTK_WINDOW(window), _("Terminal"));
+    gtk_window_set_title(GTK_WINDOW(window), "Pano Terminal");
     terminal_window_update_search_sensitivity(window);
   }
 
@@ -2978,6 +3007,9 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
     return;
 
   sync_screen_title (screen, nullptr, window);
+
+  // The user is looking at it now
+  terminal_app_withdraw_command_notification (terminal_app_get (), screen);
 
   /* set size of window to current grid size */
   if (should_update_window_size(window))
@@ -3042,6 +3074,8 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
 
   g_signal_connect (screen, "close-screen",
                     G_CALLBACK (screen_close_cb), window);
+  g_signal_connect (screen, "command-finished",
+                    G_CALLBACK (screen_command_finished_cb), window);
 
   terminal_window_update_tabs_actions_sensitivity (window);
   terminal_window_update_search_sensitivity(window);
@@ -3134,6 +3168,10 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_close_cb,
                                         window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_command_finished_cb,
+                                        window);
+  terminal_app_withdraw_command_notification (terminal_app_get (), screen);
 
   /* We already got a switch-page signal whose handler sets the active tab to the
    * new active tab, unless this screen was the only one in the notebook, so

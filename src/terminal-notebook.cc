@@ -424,6 +424,9 @@ terminal_notebook_update_active_screen(TerminalNotebook* notebook)
   if (page != nullptr) {
     tab = TERMINAL_TAB(adw_tab_page_get_child (page));
     screen = terminal_tab_get_screen (tab);
+
+    // The user sees the tab now
+    adw_tab_page_set_needs_attention(page, false);
   }
 
   old_active_screen = notebook->active_screen;
@@ -832,6 +835,18 @@ terminal_notebook_transfer_screen(TerminalNotebook* notebook,
                              page,
                              new_notebook->tab_view,
                              position);
+}
+
+void
+terminal_notebook_set_tab_needs_attention(TerminalNotebook* notebook,
+                                          TerminalTab* tab,
+                                          bool needs_attention)
+{
+  g_return_if_fail(TERMINAL_IS_NOTEBOOK(notebook));
+  g_return_if_fail(TERMINAL_IS_TAB(tab));
+
+  if (auto const page = adw_tab_view_get_page(notebook->tab_view, GTK_WIDGET(tab)))
+    adw_tab_page_set_needs_attention(page, needs_attention);
 }
 
 void

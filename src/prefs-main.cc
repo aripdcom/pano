@@ -143,7 +143,7 @@ main(int argc,
 #pragma GCC diagnostic pop
 
   g_set_prgname("pano-terminal-preferences");
-  g_set_application_name(_("Terminal Preferences"));
+  g_set_application_name(_("Pano Terminal Preferences"));
 
   gs_free_option_context auto context = g_option_context_new(nullptr);
   g_option_context_set_translation_domain(context, GETTEXT_PACKAGE);

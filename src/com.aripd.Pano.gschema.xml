@@ -778,6 +778,18 @@
 
     <!-- Default terminal -->
 
+    <key name="notify-command-finished" type="b">
+      <default>true</default>
+      <summary>Whether to notify when a long-running command finishes in the background</summary>
+      <description>Needs a shell that reports its commands, for example bash or zsh with the VTE shell integration (vte.sh).</description>
+    </key>
+
+    <key name="notify-command-min-duration" type="u">
+      <range min="1" max="86400" />
+      <default>10</default>
+      <summary>How long a command must run, in seconds, before its end is notified</summary>
+    </key>
+
     <key name="restore-session" type="b">
       <default>true</default>
       <summary>Whether to reopen the windows, tabs and panes of the last session on startup</summary>

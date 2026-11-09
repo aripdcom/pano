@@ -54,6 +54,14 @@ Everything GNOME Terminal provides, plus:
   *Preferences → Profile → Colors → Background Opacity*. Only the terminal
   background lets the desktop through; text, header bar and tab bars stay
   opaque.
+* **Command notifications**: when a command that ran for a while (10 seconds
+  by default) finishes in a terminal you are not looking at, Pano Terminal
+  sends a desktop notification with the command, its result and how long it
+  took, and marks its tab. Click the notification to go to the terminal.
+  Change it in *Preferences → Behavior*. This needs a shell that reports its
+  commands: bash or zsh with VTE's shell integration. Fedora loads it by
+  default; on Debian and Ubuntu add `. /etc/profile.d/vte-2.91.sh` to
+  `~/.bashrc`.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.
