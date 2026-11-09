@@ -234,6 +234,12 @@
               </object>
             </child>
             <child>
+              <object class="AdwSwitchRow" id="preserve_container">
+                <property name="title" translatable="yes">Keep New Tabs in the Same Container</property>
+                <property name="subtitle" translatable="yes">New tabs and panes start in the Toolbox or Distrobox container of the terminal they are opened from</property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="restore_session">
                 <property name="title" translatable="yes">Restore Session</property>
                 <property name="subtitle" translatable="yes">Reopen the windows, tabs and panes of the last session, each in its previous folder</property>

@@ -43,6 +43,7 @@ struct _TerminalPreferencesWindow
   AdwSwitchRow         *notify_command_finished;
   AdwSpinRow           *notify_command_min_duration;
   AdwSwitchRow         *restore_session;
+  AdwSwitchRow         *preserve_container;
   AdwSwitchRow         *highlight_root_and_remote;
   AdwSpinRow           *quick_terminal_width;
   AdwSpinRow           *quick_terminal_height;
@@ -347,6 +348,11 @@ terminal_preferences_window_constructed (GObject *object)
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_PRESERVE_CONTAINER_KEY,
+                   self->preserve_container,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_RESTORE_SESSION_KEY,
                    self->restore_session,
                    "active",
@@ -467,6 +473,7 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_finished);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_min_duration);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_session);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, preserve_container);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, highlight_root_and_remote);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_width);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_height);

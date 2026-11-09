@@ -88,6 +88,10 @@ Everything GNOME Terminal provides, plus:
   program as root (sudo, su, a root shell), the header bar turns red; while
   it is connected to another computer with ssh or mosh, purple. Such tabs get
   a warning or server icon. Turn it off in *Preferences → Appearance*.
+* **Containers**: open a tab in a Toolbox or Distrobox container from the
+  main menu (*New Tab in Container*). New tabs and panes opened from a
+  terminal in a container start in the same container; turn this off in
+  *Preferences → Behavior*. Containers are found with podman.
 * **Reopen closed tabs**: Ctrl+Shift+Alt+T, the main menu or the Undo button
   of the "Tab closed" notice bring back the last closed tab, with its panes,
   working directories and profiles, where it was. The last ten closed tabs

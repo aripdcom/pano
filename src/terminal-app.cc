@@ -50,6 +50,7 @@
 #ifdef TERMINAL_SERVER
 #include "terminal-gdbus.hh"
 #include "terminal-prefs-process.hh"
+#include "terminal-containers.hh"
 #include "terminal-session.hh"
 #include "terminal-tab.hh"
 #include "terminal-screen.hh"
@@ -146,6 +147,8 @@ struct _TerminalApp
   GMenuModel *profilemenu;
   GMenuModel* headermenu;
   GMenu *headermenu_set_profile_section;
+  GMenu* headermenu_container_section;
+  gint64 containers_updated; // monotonic time
 
   GMenu *set_profile_menu;
 
@@ -573,6 +576,7 @@ terminal_app_create_headermenu (TerminalApp *app)
   terminal_util_load_objects_resource ("/com/aripd/pano/ui/headerbar-menu.ui",
                                        "headermenu", &app->headermenu,
                                        "set-profile-section", &app->headermenu_set_profile_section,
+                                       "container-section", &app->headermenu_container_section,
                                        nullptr);
 
   /* Install profile sections */
@@ -714,6 +718,42 @@ app_menu_about_cb (GSimpleAction *action,
                    gpointer       user_data)
 {
   terminal_util_show_about ();
+}
+
+/* Containers come and go; look again when a window gets active, at most
+ * every few seconds. */
+static void
+terminal_app_update_containers(TerminalApp* app)
+{
+  if (!app->headermenu_container_section)
+    return;
+
+  auto const now = g_get_monotonic_time();
+  if (app->containers_updated && now - app->containers_updated < 5 * G_USEC_PER_SEC)
+    return;
+
+  app->containers_updated = now;
+  terminal_containers_update_menu(app->headermenu_container_section);
+}
+
+static void
+window_is_active_cb(GtkWindow* window,
+                    GParamSpec* pspec,
+                    TerminalApp* app)
+{
+  if (gtk_window_is_active(window))
+    terminal_app_update_containers(app);
+}
+
+static void
+terminal_app_window_added(GtkApplication* application,
+                          GtkWindow* window)
+{
+  auto const parent_class = GTK_APPLICATION_CLASS(g_type_class_peek_parent(G_OBJECT_GET_CLASS(application)));
+  parent_class->window_added(application, window);
+
+  g_signal_connect_object(window, "notify::is-active",
+                          G_CALLBACK(window_is_active_cb), application, GConnectFlags(0));
 }
 
 /* Creates the quick terminal with one terminal in the home directory */
@@ -1075,6 +1115,7 @@ terminal_app_finalize (GObject *object)
   g_clear_object (&app->profilemenu);
   g_clear_object (&app->headermenu);
   g_clear_object (&app->headermenu_set_profile_section);
+  g_clear_object (&app->headermenu_container_section);
   g_clear_object (&app->set_profile_menu);
 
   {
@@ -1257,6 +1298,7 @@ terminal_app_class_init (TerminalAppClass *klass)
 #ifdef TERMINAL_SERVER
   g_application_class->dbus_register = terminal_app_dbus_register;
   g_application_class->dbus_unregister = terminal_app_dbus_unregister;
+  GTK_APPLICATION_CLASS (klass)->window_added = terminal_app_window_added;
 #endif
 
   signals[CLIPBOARD_TARGETS_CHANGED] =
@@ -1594,8 +1636,10 @@ terminal_app_get_profiles_list (TerminalApp *app)
 GMenuModel *
 terminal_app_get_headermenu (TerminalApp *app)
 {
-  if (app->headermenu == nullptr)
+  if (app->headermenu == nullptr) {
     terminal_app_create_headermenu (app);
+    terminal_app_update_containers (app);
+  }
 
   return app->headermenu;
 }

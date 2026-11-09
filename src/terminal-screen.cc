@@ -164,6 +164,10 @@ struct _TerminalScreenPrivate
   bool precmd_in_batch; /* a prompt was reported in the current batch */
   guint precmd_batch_source;
 
+  /* The container to start the shell in, see terminal_screen_set_container() */
+  char* container_runtime;
+  char* container_name;
+
   /* See terminal_screen_update_process_kind() */
   TerminalProcessKind process_kind;
   guint process_kind_source;
@@ -1692,6 +1696,8 @@ terminal_screen_dispose (GObject *object)
   g_clear_handle_id(&priv->precmd_batch_source, g_source_remove);
   g_clear_handle_id(&priv->key_event_source, g_source_remove);
   g_clear_handle_id(&priv->process_kind_source, g_source_remove);
+  g_clear_pointer(&priv->container_runtime, g_free);
+  g_clear_pointer(&priv->container_name, g_free);
   g_clear_pointer(&priv->command, g_free);
 
   G_OBJECT_CLASS (terminal_screen_parent_class)->dispose (object);
@@ -2405,6 +2411,16 @@ terminal_screen_get_child_command (TerminalScreen *screen,
         return FALSE;
 
       *preserve_cwd_p = should_preserve_cwd (preserve_cwd, path_env, exec_argv[0]);
+      *spawn_flags_p = GSpawnFlags(*spawn_flags_p | G_SPAWN_SEARCH_PATH_FROM_ENVP);
+    }
+  else if (as_shell && priv->container_name)
+    {
+      /* The shell of a container, in the same working directory */
+      auto const tool = g_str_equal (priv->container_runtime, "distrobox") ? "distrobox" : "toolbox";
+      char const* const container_argv[] = { tool, "enter", priv->container_name, nullptr };
+      exec_argv = g_strdupv ((char**) container_argv);
+
+      *preserve_cwd_p = TRUE;
       *spawn_flags_p = GSpawnFlags(*spawn_flags_p | G_SPAWN_SEARCH_PATH_FROM_ENVP);
     }
   else if (as_shell)
@@ -4041,4 +4057,65 @@ terminal_screen_get_broadcast_excluded(TerminalScreen* screen)
   g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), FALSE);
 
   return screen->priv->broadcast_excluded;
+}
+
+/* Containers */
+
+/**
+ * terminal_screen_set_container:
+ * @screen: a #TerminalScreen
+ * @runtime: (nullable): "toolbox" or "distrobox"
+ * @name: (nullable): the container, or %NULL for the host
+ *
+ * Makes the shell of @screen start in a container when it is started
+ * next. Explicit commands still run on the host.
+ */
+void
+terminal_screen_set_container(TerminalScreen* screen,
+                              char const* runtime,
+                              char const* name)
+{
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+
+  auto const priv = screen->priv;
+  g_set_str(&priv->container_runtime, name && name[0] ? runtime : nullptr);
+  g_set_str(&priv->container_name, name && name[0] ? name : nullptr);
+}
+
+/**
+ * terminal_screen_get_container:
+ * @screen: a #TerminalScreen
+ * @runtime: (out) (transfer full) (nullable): the runtime
+ * @name: (out) (transfer full) (nullable): the container
+ *
+ * Finds the container the shell of @screen is in: the one it reports
+ * (toolbox does, with OSC 777), else the one it was started in.
+ *
+ * Returns: whether it is in a container
+ */
+gboolean
+terminal_screen_get_container(TerminalScreen* screen,
+                              char** runtime,
+                              char** name)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), FALSE);
+
+  auto const terminal = VTE_TERMINAL(screen);
+  gs_free char* reported_name = vte_terminal_dup_termprop_string(terminal, VTE_TERMPROP_CONTAINER_NAME, nullptr);
+  if (reported_name && reported_name[0]) {
+    gs_free char* reported_runtime = vte_terminal_dup_termprop_string(terminal, VTE_TERMPROP_CONTAINER_RUNTIME, nullptr);
+    *runtime = g_strdup(reported_runtime && g_str_equal(reported_runtime, "distrobox") ? "distrobox" : "toolbox");
+    *name = g_steal_pointer(&reported_name);
+    return TRUE;
+  }
+
+  auto const priv = screen->priv;
+  if (priv->container_name && priv->child_pid > 0) {
+    *runtime = g_strdup(priv->container_runtime);
+    *name = g_strdup(priv->container_name);
+    return TRUE;
+  }
+
+  *runtime = *name = nullptr;
+  return FALSE;
 }

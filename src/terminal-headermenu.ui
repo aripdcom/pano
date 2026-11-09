@@ -62,6 +62,7 @@
         <attribute name="target">down</attribute>
 	<attribute name="accel"></attribute>
       </item>
+      <section id="container-section"/>
       <submenu>
         <attribute name="label" translatable="yes">_Broadcast Input</attribute>
         <section>

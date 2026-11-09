@@ -290,6 +290,22 @@ lookup_action (TerminalWindow *window,
   return G_SIMPLE_ACTION (action);
 }
 
+/* New terminals opened from @parent start in its container, if any */
+static void
+window_preserve_container(TerminalScreen* screen,
+                          TerminalScreen* parent)
+{
+  if (!parent ||
+      !g_settings_get_boolean(terminal_app_get_global_settings(terminal_app_get()),
+                              TERMINAL_SETTING_PRESERVE_CONTAINER_KEY))
+    return;
+
+  gs_free char* runtime = nullptr;
+  gs_free char* name = nullptr;
+  if (terminal_screen_get_container(parent, &runtime, &name))
+    terminal_screen_set_container(screen, runtime, name);
+}
+
 static TerminalTab*
 terminal_window_new_tab(TerminalWindow* window,
                         char const* mode_str,
@@ -359,6 +375,7 @@ terminal_window_new_tab(TerminalWindow* window,
                                                 1.0);
   if (mode == TERMINAL_NEW_TERMINAL_MODE_WINDOW)
     terminal_session_apply_window_size (screen);
+  window_preserve_container (screen, parent_screen);
   auto const tab = terminal_tab_new(screen);
 
   // Now add the new screen to the window.
@@ -444,6 +461,39 @@ terminal_window_tab_overview_create_tab_cb(AdwTabOverview* tab_overview,
 }
 
 /* GAction callbacks */
+
+/* Opens a tab with the default profile in a container; the parameter is
+ * (runtime, name), see terminal-containers.cc */
+static void
+action_new_terminal_in_container_cb(GSimpleAction* action,
+                                    GVariant* parameter,
+                                    gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  char const* runtime;
+  char const* name;
+  g_variant_get(parameter, "(&s&s)", &runtime, &name);
+
+  gs_unref_object auto profile =
+    terminal_settings_list_ref_default_child(terminal_app_get_profiles_list(terminal_app_get()));
+  if (!profile)
+    return;
+
+  auto const parent_screen = window->active_screen;
+  auto const screen = terminal_screen_new(profile, nullptr, 1.0);
+  terminal_screen_set_container(screen, runtime, name);
+
+  auto const tab = terminal_tab_new(screen);
+  terminal_window_add_tab(window, tab, parent_screen ? terminal_tab_get_from_screen(parent_screen) : nullptr);
+  terminal_window_switch_screen(window, screen);
+
+  if (parent_screen) {
+    terminal_screen_reexec_from_screen(screen, parent_screen, nullptr, nullptr);
+  } else {
+    terminal_screen_exec(screen, nullptr, nullptr, true, g_get_home_dir(),
+                         nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+  }
+}
 
 static void
 action_new_terminal_cb (GSimpleAction *action,
@@ -716,6 +766,7 @@ action_split_cb(GSimpleAction* action,
                                           nullptr /* title */,
                                           vte_terminal_get_font_scale(VTE_TERMINAL(parent_screen)));
 
+  window_preserve_container(screen, parent_screen);
   terminal_tab_split(terminal_tab_get_from_screen(parent_screen),
                      parent_screen,
                      screen,
@@ -2762,6 +2813,7 @@ terminal_window_init (TerminalWindow *window)
     { "help",                action_help_cb,             nullptr,   nullptr, nullptr },
     { "inspector",           action_inspector_cb,        nullptr,   nullptr, nullptr },
     { "new-terminal",        action_new_terminal_cb,     "(ss)", nullptr, nullptr },
+    { "new-terminal-in-container", action_new_terminal_in_container_cb, "(ss)", nullptr, nullptr },
     { "open-match",          action_open_match_cb,       nullptr,   nullptr, nullptr },
     { "open-hyperlink",      action_open_hyperlink_cb,   nullptr,   nullptr, nullptr },
     { "pane-focus",          action_pane_focus_cb,       "s",    nullptr, nullptr },

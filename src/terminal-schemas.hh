@@ -99,6 +99,7 @@ G_BEGIN_DECLS
 #define TERMINAL_SETTING_UNIFIED_MENU_KEY               "unified-menu"
 #define TERMINAL_SETTING_ALWAYS_CHECK_DEFAULT_KEY       "always-check-default-terminal"
 #define TERMINAL_SETTING_RESTORE_SESSION_KEY            "restore-session"
+#define TERMINAL_SETTING_PRESERVE_CONTAINER_KEY         "preserve-container"
 #define TERMINAL_SETTING_HIGHLIGHT_ROOT_AND_REMOTE_KEY  "highlight-root-and-remote"
 #define TERMINAL_SETTING_QUICK_TERMINAL_WIDTH_KEY       "quick-terminal-width"
 #define TERMINAL_SETTING_QUICK_TERMINAL_HEIGHT_KEY      "quick-terminal-height"

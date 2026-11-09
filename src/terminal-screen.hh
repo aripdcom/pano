@@ -171,6 +171,14 @@ typedef enum {
 
 TerminalProcessKind terminal_screen_get_process_kind(TerminalScreen* screen);
 
+void terminal_screen_set_container(TerminalScreen* screen,
+                                   char const* runtime,
+                                   char const* name);
+
+gboolean terminal_screen_get_container(TerminalScreen* screen,
+                                       char** runtime,
+                                       char** name);
+
 gboolean terminal_screen_is_user_input(TerminalScreen* screen,
                                        char const* text,
                                        gsize size);

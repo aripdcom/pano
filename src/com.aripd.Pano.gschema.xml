@@ -846,6 +846,12 @@
       <description>Colors the header bar and marks the tab while the foreground program of the terminal runs as root (for example sudo or su) or connects to another computer (ssh, mosh).</description>
     </key>
 
+    <key name="preserve-container" type="b">
+      <default>true</default>
+      <summary>Whether new tabs and panes start in the container of the terminal they are opened from</summary>
+      <description>Works for Toolbox and Distrobox containers. The shell inside the container has to report it (Toolbox does), or the terminal has to be started in it from Pano Terminal.</description>
+    </key>
+
     <key name="restore-session" type="b">
       <default>true</default>
       <summary>Whether to reopen the windows, tabs and panes of the last session on startup</summary>

@@ -129,6 +129,13 @@ save_screen(TerminalScreen* screen,
   g_variant_builder_add(&builder, "{sv}", "zoom",
                         g_variant_new_double(vte_terminal_get_font_scale(VTE_TERMINAL(screen))));
 
+  gs_free char* container_runtime = nullptr;
+  gs_free char* container_name = nullptr;
+  if (terminal_screen_get_container(screen, &container_runtime, &container_name)) {
+    g_variant_builder_add(&builder, "{sv}", "container-runtime", g_variant_new_string(container_runtime));
+    g_variant_builder_add(&builder, "{sv}", "container-name", g_variant_new_string(container_name));
+  }
+
   return g_variant_builder_end(&builder);
 }
 
@@ -449,6 +456,12 @@ restore_screen_cb(GVariant* pane,
     zoom = 1.0;
 
   auto const screen = terminal_screen_new(profile, nullptr, zoom);
+
+  char const* container_runtime = nullptr;
+  char const* container_name = nullptr;
+  if (g_variant_lookup(pane, "container-runtime", "&s", &container_runtime) &&
+      g_variant_lookup(pane, "container-name", "&s", &container_name))
+    terminal_screen_set_container(screen, container_runtime, container_name);
 
   char const* cwd = nullptr;
   g_variant_lookup(pane, "cwd", "&s", &cwd);
