@@ -96,6 +96,9 @@ Everything GNOME Terminal provides, plus:
   main menu (*New Tab in Container*). New tabs and panes opened from a
   terminal in a container start in the same container; turn this off in
   *Preferences → Behavior*. Containers are found with podman.
+* **Close other tabs**: *Close Other Terminals* in a tab's menu closes every
+  other tab except pinned ones, asking once if something still runs in
+  them. Assign a shortcut in *Preferences → Keyboard Shortcuts*.
 * **Reopen closed tabs**: Ctrl+Shift+Alt+T, the main menu or the Undo button
   of the "Tab closed" notice bring back the last closed tab, with its panes,
   working directories and profiles, where it was. The last ten closed tabs

@@ -405,6 +405,10 @@
       <default>'&lt;Control&gt;&lt;Shift&gt;w'</default>
       <summary>Keyboard shortcut to close a tab</summary>
     </key>
+    <key name="close-other-tabs" type="s">
+      <default>'disabled'</default>
+      <summary>Keyboard shortcut to close the tabs other than the current one, except pinned tabs</summary>
+    </key>
     <key name="reopen-closed-tab" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;t'</default>
       <summary>Keyboard shortcut to reopen the last closed tab</summary>

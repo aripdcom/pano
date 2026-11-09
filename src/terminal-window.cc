@@ -78,6 +78,7 @@ struct _TerminalWindow
   int broadcast_mode; /* BroadcastMode */
   TerminalScreen *active_screen;
   TerminalTab* notebook_context_tab; // unowned
+  gboolean closing_confirmed; // close tabs without asking again
 
   /* Size of a character cell in pixels */
   int old_char_width;
@@ -199,6 +200,7 @@ enum class CloseKind {
   WINDOW, // all terminals of the window
   TAB,    // all panes of the tab of the screen
   PANE,   // only the screen
+  OTHER_TABS, // the tabs other than the screen's, except pinned ones
 };
 
 static void terminal_window_update_pane_actions(TerminalWindow* window);
@@ -214,6 +216,8 @@ enum BroadcastMode {
 static gboolean confirm_close_window_or_tab (TerminalWindow *window,
                                              TerminalScreen *screen,
                                              CloseKind kind);
+static void window_close_other_tabs(TerminalWindow* window,
+                                    TerminalTab* tab);
 
 G_DEFINE_FINAL_TYPE (TerminalWindow, terminal_window, ADW_TYPE_APPLICATION_WINDOW)
 
@@ -708,12 +712,67 @@ action_close_cb (GSimpleAction *action,
     if (window->active_screen)
       terminal_notebook_close_tab(window->notebook,
                                   terminal_tab_get_from_screen(window->active_screen));
+  } else if (g_str_equal (mode_str, "other-tabs")) {
+    if (window->active_screen)
+      window_close_other_tabs(window, terminal_tab_get_from_screen(window->active_screen));
   } else if (g_str_equal (mode_str, "window")) {
     if (confirm_close_window_or_tab (window, nullptr, CloseKind::WINDOW))
       return;
 
     gtk_window_destroy (GTK_WINDOW (window));
   }
+}
+
+/* Returns: (transfer container): the tabs that closing the tabs other than
+ * @tab closes; pinned tabs stay */
+static GList*
+window_list_other_tabs(TerminalWindow* window,
+                       TerminalTab* tab)
+{
+  GList* others = nullptr;
+  auto const tabs = terminal_notebook_list_tabs(window->notebook);
+  for (auto l = tabs; l != nullptr; l = l->next) {
+    auto const other = TERMINAL_TAB(l->data);
+    if (other != tab && !terminal_tab_get_pinned(other))
+      others = g_list_prepend(others, other);
+  }
+  g_list_free(tabs);
+
+  return g_list_reverse(others);
+}
+
+static void
+window_close_other_tabs_confirmed(TerminalWindow* window,
+                                  TerminalTab* tab)
+{
+  // The tab may have gone while the user was asked
+  if (!gtk_widget_is_ancestor(GTK_WIDGET(tab), GTK_WIDGET(window->notebook)))
+    return;
+
+  terminal_notebook_set_active_screen(window->notebook, terminal_tab_get_screen(tab));
+
+  // Each tab closes at once, and can be reopened like any closed tab
+  auto const others = window_list_other_tabs(window, tab);
+  window->closing_confirmed = true;
+  for (auto l = others; l != nullptr; l = l->next)
+    terminal_notebook_close_tab(window->notebook, TERMINAL_TAB(l->data));
+  window->closing_confirmed = false;
+  g_list_free(others);
+}
+
+/* Closes the tabs other than @tab, except the pinned ones, asking first if
+ * a process runs in any of them */
+static void
+window_close_other_tabs(TerminalWindow* window,
+                        TerminalTab* tab)
+{
+  if (!tab)
+    return;
+
+  if (confirm_close_window_or_tab(window, terminal_tab_get_screen(tab), CloseKind::OTHER_TABS))
+    return;
+
+  window_close_other_tabs_confirmed(window, tab);
 }
 
 static TerminalTab*
@@ -1948,6 +2007,21 @@ action_notebook_tab_close_cb(GSimpleAction* action,
 }
 
 static void
+action_notebook_tab_close_others_cb(GSimpleAction* action,
+                                    GVariant* parameter,
+                                    void* user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (!window->notebook_context_tab)
+    return;
+
+  auto const tab = window->notebook_context_tab;
+  window->notebook_context_tab = nullptr;
+
+  window_close_other_tabs(window, tab);
+}
+
+static void
 action_notebook_tab_detach_cb(GSimpleAction* action,
                               GVariant* parameter,
                               void* user_data)
@@ -2865,6 +2939,7 @@ terminal_window_init (TerminalWindow *window)
   };
   static GActionEntry const notebook_context_action_entries[] = {
     { "notebook-tab-close",      action_notebook_tab_close_cb,      nullptr, nullptr, nullptr },
+    { "notebook-tab-close-others", action_notebook_tab_close_others_cb, nullptr, nullptr, nullptr },
     { "notebook-tab-detach",     action_notebook_tab_detach_cb,     nullptr, nullptr, nullptr },
     { "notebook-tab-move-left",  action_notebook_tab_move_left_cb,  nullptr, nullptr, nullptr },
     { "notebook-tab-move-right", action_notebook_tab_move_right_cb, nullptr, nullptr, nullptr },
@@ -3322,7 +3397,8 @@ screen_close_request_cb (TerminalNotebook *notebook,
                          TerminalScreen   *screen,
                          TerminalWindow   *window)
 {
-  if (confirm_close_window_or_tab (window, screen, CloseKind::TAB))
+  if (!window->closing_confirmed &&
+      confirm_close_window_or_tab (window, screen, CloseKind::TAB))
     return GDK_EVENT_STOP;
 
   if (auto const tab = terminal_tab_get_from_screen (screen))
@@ -3775,6 +3851,11 @@ notebook_setup_menu_cb(TerminalNotebook* notebook,
   action = lookup_notebook_action(window, "notebook-tab-close");
   g_simple_action_set_enabled(G_SIMPLE_ACTION(action), can_close);
 
+  auto const others = window_list_other_tabs(window, tab);
+  action = lookup_notebook_action(window, "notebook-tab-close-others");
+  g_simple_action_set_enabled(G_SIMPLE_ACTION(action), others != nullptr);
+  g_list_free(others);
+
   action = lookup_notebook_action(window, "notebook-tab-pin");
   g_simple_action_set_enabled(G_SIMPLE_ACTION(action), !pinned);
 
@@ -3954,6 +4035,10 @@ confirm_close_response_cb (GtkWidget      *dialog,
   screen = (TerminalScreen*)g_object_get_data (G_OBJECT (dialog), "close-screen");
   auto const kind = CloseKind(GPOINTER_TO_INT(g_object_get_data(G_OBJECT(dialog), "close-kind")));
   auto const accepted = response == GTK_RESPONSE_ACCEPT;
+  // Destroying the dialog drops its data
+  gs_unref_object auto keep_tab = reinterpret_cast<TerminalTab*>(g_object_get_data(G_OBJECT(dialog), "keep-tab"));
+  if (keep_tab)
+    g_object_ref(keep_tab);
 
   gtk_window_destroy (GTK_WINDOW (dialog));
 
@@ -3965,6 +4050,9 @@ confirm_close_response_cb (GtkWidget      *dialog,
       if (auto const tab = terminal_tab_get_from_screen (screen))
         window_remember_closed_tab (window, tab);
     terminal_notebook_confirm_close (window->notebook, screen, accepted);
+  } else if (kind == CloseKind::OTHER_TABS) {
+    if (accepted)
+      window_close_other_tabs_confirmed (window, keep_tab);
   } else if (accepted)
     g_idle_add_full (G_PRIORITY_DEFAULT,
                      destroy_window_in_main,
@@ -4004,13 +4092,20 @@ confirm_close_window_or_tab (TerminalWindow *window,
   else
     {
       GList* screens = nullptr;
-      if (kind == CloseKind::TAB)
+      if (kind == CloseKind::TAB) {
         screens = terminal_tab_list_screens(terminal_tab_get_from_screen(screen));
-      else
+        // A tab with several panes is closed like a single terminal
+        n_tabs = 1;
+      } else if (kind == CloseKind::OTHER_TABS) {
+        auto const others = window_list_other_tabs(window, terminal_tab_get_from_screen(screen));
+        for (auto l = others; l != nullptr; l = l->next)
+          screens = g_list_concat(screens, terminal_tab_list_screens(TERMINAL_TAB(l->data)));
+        n_tabs = int(g_list_length(others));
+        g_list_free(others);
+      } else {
         screens = terminal_notebook_list_screens(window->notebook);
-
-      // A tab with several panes is closed like a single terminal
-      n_tabs = kind == CloseKind::TAB ? 1 : int(g_list_length(screens));
+        n_tabs = int(g_list_length(screens));
+      }
 
       do_confirm = FALSE;
       for (auto l = screens; l != nullptr; l = l->next)
@@ -4027,31 +4122,50 @@ confirm_close_window_or_tab (TerminalWindow *window,
   if (!do_confirm)
     return FALSE;
 
+  char const* title;
+  char const* text;
+  char const* button;
+  if (kind == CloseKind::OTHER_TABS) {
+    title = n_tabs > 1 ? _("Close the other terminals?") : _("Close the other terminal?");
+    text = n_tabs > 1
+      ? _("There are still processes running in some of the other terminals. "
+          "Closing them will kill all of them.")
+      : _("There is still a process running in the other terminal. "
+          "Closing the terminal will kill it.");
+    button = n_tabs > 1 ? _("C_lose Terminals") : _("C_lose Terminal");
+  } else if (n_tabs > 1) {
+    title = _("Close this window?");
+    text = _("There are still processes running in some terminals in this window. "
+             "Closing the window will kill all of them.");
+    button = _("C_lose Window");
+  } else {
+    title = _("Close this terminal?");
+    text = _("There is still a process running in this terminal. "
+             "Closing the terminal will kill it.");
+    button = _("C_lose Terminal");
+  }
+
   dialog = window->confirm_close_dialog =
     gtk_message_dialog_new (GTK_WINDOW (window),
                             GtkDialogFlags(GTK_DIALOG_MODAL |
                                            GTK_DIALOG_DESTROY_WITH_PARENT),
                             GTK_MESSAGE_WARNING,
                             GTK_BUTTONS_CANCEL,
-                            "%s", n_tabs > 1 ? _("Close this window?") : _("Close this terminal?"));
-
-  if (n_tabs > 1)
-    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-                                              "%s", _("There are still processes running in some terminals in this window. "
-                                                      "Closing the window will kill all of them."));
-  else
-    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-                                              "%s", _("There is still a process running in this terminal. "
-                                                      "Closing the terminal will kill it."));
+                            "%s", title);
+  gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s", text);
 
   gtk_window_set_title (GTK_WINDOW (dialog), ""); 
 
-  GtkWidget *remove_button = gtk_dialog_add_button (GTK_DIALOG (dialog), n_tabs > 1 ? _("C_lose Window") : _("C_lose Terminal"), GTK_RESPONSE_ACCEPT);
+  GtkWidget *remove_button = gtk_dialog_add_button (GTK_DIALOG (dialog), button, GTK_RESPONSE_ACCEPT);
   gtk_style_context_add_class (gtk_widget_get_style_context (remove_button), "destructive-action");
   gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
 
   g_object_set_data (G_OBJECT (dialog), "close-screen", screen);
   g_object_set_data (G_OBJECT (dialog), "close-kind", GINT_TO_POINTER (int(kind)));
+  if (kind == CloseKind::OTHER_TABS)
+    g_object_set_data_full (G_OBJECT (dialog), "keep-tab",
+                            g_object_ref (terminal_tab_get_from_screen (screen)),
+                            g_object_unref);
 
   g_signal_connect_swapped (dialog, "destroy",
                             G_CALLBACK (g_nullify_pointer),

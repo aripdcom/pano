@@ -76,6 +76,11 @@
         <attribute name="action">notebook.notebook-tab-close</attribute>
 	<attribute name="accel"></attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">Close _Other Terminals</attribute>
+        <attribute name="action">notebook.notebook-tab-close-others</attribute>
+	<attribute name="accel"></attribute>
+      </item>
     </section>
   </menu>
 </interface>
