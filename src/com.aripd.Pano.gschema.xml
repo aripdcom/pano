@@ -484,6 +484,18 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to detach current tab</summary>
     </key>
+    <key name="previous-prompt" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;Up'</default>
+      <summary>Keyboard shortcut to scroll to the previous shell prompt</summary>
+    </key>
+    <key name="next-prompt" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;Down'</default>
+      <summary>Keyboard shortcut to scroll to the next shell prompt</summary>
+    </key>
+    <key name="copy-output" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;o'</default>
+      <summary>Keyboard shortcut to copy the output of the last command</summary>
+    </key>
     <key name="split-right" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;r'</default>
       <summary>Keyboard shortcut to split the terminal and open a new one on the right</summary>

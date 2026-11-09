@@ -62,6 +62,10 @@ Everything GNOME Terminal provides, plus:
   commands: bash or zsh with VTE's shell integration. Fedora loads it by
   default; on Debian and Ubuntu add `. /etc/profile.d/vte-2.91.sh` to
   `~/.bashrc`.
+* **Prompt navigation**: with the same shell integration, jump between the
+  prompts of earlier commands with Ctrl+Shift+Up and Ctrl+Shift+Down, and
+  copy the output of the last command with Ctrl+Shift+O or from the context
+  menu. Without shell integration these keys keep their usual meaning.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.

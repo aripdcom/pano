@@ -154,7 +154,32 @@ struct _TerminalScreenPrivate
   gint64 command_start; /* monotonic time, 0 if none */
   char* command;
   guint command_capture_source;
+
+  /* Rows of the shell prompts, from shell integration; see PromptMark */
+  GArray* prompts;
+  long prompts_columns; /* the column count the rows are valid for */
+  bool precmd_in_batch; /* a prompt was reported in the current batch */
+  guint precmd_batch_source;
 };
+
+/* VTE keeps the OSC 133 prompt marks to itself, so remember where the
+ * prompts are. The shell reports a new prompt (vte.shell.precmd) just
+ * before printing it; VTE emits the termprop change after processing the
+ * data it has, so the cursor may already be past the prompt, but it is on
+ * the row of the prompt either way. The rows of the command output are
+ * those between the prompt where the command was entered and the next one.
+ *
+ * VTE reports the termprops of one batch of data in the order of their IDs
+ * (precmd, preexec, postexec), not in the order they arrived. When a quick
+ * command starts and ends within one batch, preexec comes after the precmd
+ * of the next prompt, but belongs to the prompt before.
+ */
+struct PromptMark {
+  long row; /* absolute row of the prompt */
+  bool ran_command; /* a command entered at this prompt was run */
+};
+
+#define MAX_PROMPTS 10000
 
 enum
 {
@@ -163,6 +188,7 @@ enum
   MATCH_CLICKED,
   CLOSE_SCREEN,
   COMMAND_FINISHED,
+  PROMPTS_CHANGED,
   LAST_SIGNAL
 };
 
@@ -254,6 +280,7 @@ static void terminal_screen_menu_popup_action (GtkWidget  *widget,
 static void terminal_screen_queue_idle_exec (TerminalScreen *screen);
 
 static void _terminal_screen_update_scrollbar (TerminalScreen *screen);
+static bool terminal_screen_validate_prompts (TerminalScreen *screen);
 
 static void _terminal_screen_update_kinetic_scrolling (TerminalScreen *screen);
 
@@ -681,6 +708,103 @@ terminal_screen_capture_command_cb(void* user_data)
   return G_SOURCE_REMOVE;
 }
 
+/* Drops prompt marks that are no longer valid: when the column count
+ * changed, VTE has rewrapped the lines and the rows moved. Returns whether
+ * marks were dropped.
+ */
+static bool
+terminal_screen_validate_prompts(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+  auto const columns = vte_terminal_get_column_count(VTE_TERMINAL(screen));
+
+  if (columns == priv->prompts_columns)
+    return false;
+
+  priv->prompts_columns = columns;
+  if (priv->prompts->len == 0)
+    return false;
+
+  g_array_set_size(priv->prompts, 0);
+  return true;
+}
+
+static GtkAdjustment*
+terminal_screen_get_vadjustment(TerminalScreen* screen)
+{
+  return gtk_scrollable_get_vadjustment(GTK_SCROLLABLE(screen));
+}
+
+/* The scroll adjustment counts pixels (see vte_terminal_set_scroll_unit_is_pixels)
+ * or rows; these convert between its values and absolute rows. */
+static double
+terminal_screen_scroll_unit(TerminalScreen* screen)
+{
+  auto const terminal = VTE_TERMINAL(screen);
+  if (!vte_terminal_get_scroll_unit_is_pixels(terminal))
+    return 1.0;
+
+  return double(MAX(vte_terminal_get_char_height(terminal), 1));
+}
+
+static long
+terminal_screen_adjustment_to_row(TerminalScreen* screen,
+                                  double value)
+{
+  return long(value / terminal_screen_scroll_unit(screen) + 0.5);
+}
+
+static gboolean
+terminal_screen_precmd_batch_done_cb(void* user_data)
+{
+  auto const priv = TERMINAL_SCREEN(user_data)->priv;
+
+  priv->precmd_in_batch = false;
+  priv->precmd_batch_source = 0;
+  return G_SOURCE_REMOVE;
+}
+
+/* The shell is about to print a new prompt */
+static void
+terminal_screen_shell_precmd_cb(TerminalScreen* screen,
+                                char const* prop,
+                                VteTerminal* terminal)
+{
+  auto const priv = screen->priv;
+
+  terminal_screen_validate_prompts(screen);
+
+  long row = 0;
+  vte_terminal_get_cursor_position(terminal, nullptr, &row);
+
+  // After a reset or a clear, rows can go back; forget marks at or after
+  // the new prompt, and those that left the scrollback.
+  auto const first_row = terminal_screen_adjustment_to_row(screen,
+                                                           gtk_adjustment_get_lower(terminal_screen_get_vadjustment(screen)));
+  auto n_valid = 0u;
+  for (auto i = 0u; i < priv->prompts->len; ++i) {
+    auto const& mark = g_array_index(priv->prompts, PromptMark, i);
+    if (mark.row >= first_row && mark.row < row)
+      g_array_index(priv->prompts, PromptMark, n_valid++) = mark;
+  }
+  g_array_set_size(priv->prompts, n_valid);
+
+  if (priv->prompts->len >= MAX_PROMPTS)
+    g_array_remove_range(priv->prompts, 0, priv->prompts->len - MAX_PROMPTS + 1);
+
+  auto const mark = PromptMark{row, false};
+  g_array_append_val(priv->prompts, mark);
+
+  // Until the main loop runs again, we are in the same batch
+  priv->precmd_in_batch = true;
+  if (priv->precmd_batch_source == 0)
+    priv->precmd_batch_source = g_idle_add_full(G_PRIORITY_HIGH,
+                                                terminal_screen_precmd_batch_done_cb,
+                                                screen, nullptr);
+
+  g_signal_emit(screen, signals[PROMPTS_CHANGED], 0);
+}
+
 /* The shell is about to run the command entered at the prompt */
 static void
 terminal_screen_shell_preexec_cb(TerminalScreen* screen,
@@ -688,6 +812,14 @@ terminal_screen_shell_preexec_cb(TerminalScreen* screen,
                                  VteTerminal* terminal)
 {
   auto const priv = screen->priv;
+
+  // The command was entered at the last prompt, or at the one before if
+  // the next prompt was reported in the same batch.
+  auto const index = int(priv->prompts->len) - (priv->precmd_in_batch ? 2 : 1);
+  if (index >= 0) {
+    g_array_index(priv->prompts, PromptMark, index).ran_command = true;
+    g_signal_emit(screen, signals[PROMPTS_CHANGED], 0);
+  }
 
   priv->command_start = g_get_monotonic_time();
   g_clear_pointer(&priv->command, g_free);
@@ -866,6 +998,10 @@ terminal_screen_size_allocate (GtkWidget *widget,
   column_count = vte_terminal_get_column_count (VTE_TERMINAL (screen));
   row_count = vte_terminal_get_row_count (VTE_TERMINAL (screen));
 
+  /* Rewrapped lines invalidate the prompt rows */
+  if (column_count != prev_column_count && terminal_screen_validate_prompts (screen))
+    g_signal_emit (screen, signals[PROMPTS_CHANGED], 0);
+
   root = gtk_widget_get_root (widget);
 
   if (terminal_screen_is_active (screen) &&
@@ -933,6 +1069,8 @@ terminal_screen_init (TerminalScreen *screen)
   uuid_unparse (u, uuidstr);
   priv->uuid = g_strdup (uuidstr);
 
+  priv->prompts = g_array_new (false, false, sizeof (PromptMark));
+
   priv->child_pid = -1;
 
   priv->has_progress = false;
@@ -991,6 +1129,8 @@ terminal_screen_init (TerminalScreen *screen)
                    G_CALLBACK(terminal_screen_shell_preexec_cb), screen);
   g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_SHELL_POSTEXEC,
                    G_CALLBACK(terminal_screen_shell_postexec_cb), screen);
+  g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_SHELL_PRECMD,
+                   G_CALLBACK(terminal_screen_shell_precmd_cb), screen);
 
   app = terminal_app_get ();
   g_signal_connect (terminal_app_get_desktop_interface_settings (app), "changed::" MONOSPACE_FONT_KEY_NAME,
@@ -1115,6 +1255,16 @@ terminal_screen_class_init (TerminalScreenClass *klass)
                   G_TYPE_NONE,
                   3, G_TYPE_STRING, G_TYPE_UINT, G_TYPE_UINT64);
 
+  signals[PROMPTS_CHANGED] =
+    g_signal_new (I_("prompts-changed"),
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  0,
+                  nullptr, nullptr,
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE,
+                  0);
+
   signals[CLOSE_SCREEN] =
     g_signal_new (I_("close-screen"),
                   G_OBJECT_CLASS_TYPE (object_class),
@@ -1236,6 +1386,7 @@ terminal_screen_dispose (GObject *object)
   g_clear_object(&screen->priv->icon_color);
   g_clear_object(&screen->priv->icon_image);
   g_clear_handle_id(&priv->command_capture_source, g_source_remove);
+  g_clear_handle_id(&priv->precmd_batch_source, g_source_remove);
   g_clear_pointer(&priv->command, g_free);
 
   G_OBJECT_CLASS (terminal_screen_parent_class)->dispose (object);
@@ -1264,6 +1415,7 @@ terminal_screen_finalize (GObject *object)
   terminal_screen_set_profile (screen, nullptr);
 
   g_slist_free_full (priv->match_tags, (GDestroyNotify) free_tag_data);
+  g_clear_pointer (&priv->prompts, g_array_unref);
 
   g_free (priv->uuid);
 
@@ -3172,4 +3324,148 @@ terminal_screen_get_icon_progress(TerminalScreen* screen)
   g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), nullptr);
 
   return terminal_screen_ensure_icon_progress(screen);
+}
+
+/* Prompts */
+
+/**
+ * terminal_screen_has_prompts:
+ * @screen: a #TerminalScreen
+ *
+ * Returns: whether the shell has reported prompts, so that
+ *   terminal_screen_scroll_to_prompt() can work
+ */
+gboolean
+terminal_screen_has_prompts(TerminalScreen* screen)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), FALSE);
+
+  terminal_screen_validate_prompts(screen);
+  return screen->priv->prompts->len > 0;
+}
+
+/**
+ * terminal_screen_scroll_to_prompt:
+ * @screen: a #TerminalScreen
+ * @direction: -1 for the previous prompt, 1 for the next one
+ *
+ * Scrolls so that the previous or next prompt is the first visible row.
+ * Going past the last prompt scrolls to the bottom.
+ *
+ * Returns: whether the terminal scrolled
+ */
+gboolean
+terminal_screen_scroll_to_prompt(TerminalScreen* screen,
+                                 int direction)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), FALSE);
+
+  if (!terminal_screen_has_prompts(screen))
+    return FALSE;
+
+  auto const priv = screen->priv;
+  auto const adjustment = terminal_screen_get_vadjustment(screen);
+  auto const unit = terminal_screen_scroll_unit(screen);
+  auto const top = terminal_screen_adjustment_to_row(screen, gtk_adjustment_get_value(adjustment));
+  auto const bottom = terminal_screen_adjustment_to_row(screen,
+                                                        gtk_adjustment_get_upper(adjustment) -
+                                                        gtk_adjustment_get_page_size(adjustment));
+
+  double target = -1;
+  if (direction < 0) {
+    // At the bottom, start from the current prompt rather than from the top
+    // of the view, so that the previous command shows first.
+    long anchor = top;
+    if (top >= bottom)
+      vte_terminal_get_cursor_position(VTE_TERMINAL(screen), nullptr, &anchor);
+
+    for (auto i = priv->prompts->len; i > 0; --i) {
+      auto const& mark = g_array_index(priv->prompts, PromptMark, i - 1);
+      if (mark.row < anchor) {
+        target = double(mark.row);
+        break;
+      }
+    }
+  } else {
+    for (auto i = 0u; i < priv->prompts->len; ++i) {
+      auto const& mark = g_array_index(priv->prompts, PromptMark, i);
+      if (mark.row > top) {
+        target = double(MIN(mark.row, bottom));
+        break;
+      }
+    }
+    if (target < 0 && top < bottom)
+      target = double(bottom);
+  }
+
+  if (target < 0)
+    return FALSE;
+
+  gtk_adjustment_set_value(adjustment, target * unit);
+  return TRUE;
+}
+
+/* Finds the rows of the output of the last command that has finished */
+static bool
+terminal_screen_find_command_output(TerminalScreen* screen,
+                                    long* start_row,
+                                    long* end_row)
+{
+  auto const priv = screen->priv;
+
+  terminal_screen_validate_prompts(screen);
+
+  // The last prompt is the current one; its command, if any, is still running
+  for (auto i = priv->prompts->len; i > 1; --i) {
+    auto const& mark = g_array_index(priv->prompts, PromptMark, i - 2);
+    if (!mark.ran_command)
+      continue;
+
+    *start_row = mark.row + 1;
+    *end_row = g_array_index(priv->prompts, PromptMark, i - 1).row - 1;
+    return *end_row >= *start_row;
+  }
+
+  return false;
+}
+
+/**
+ * terminal_screen_has_command_output:
+ * @screen: a #TerminalScreen
+ *
+ * Returns: whether terminal_screen_dup_command_output() has something to
+ *   return
+ */
+gboolean
+terminal_screen_has_command_output(TerminalScreen* screen)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), FALSE);
+
+  long start_row, end_row;
+  return terminal_screen_find_command_output(screen, &start_row, &end_row);
+}
+
+/**
+ * terminal_screen_dup_command_output:
+ * @screen: a #TerminalScreen
+ *
+ * Returns: (transfer full) (nullable): the output of the last finished
+ *   command, without trailing white space
+ */
+char*
+terminal_screen_dup_command_output(TerminalScreen* screen)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), nullptr);
+
+  long start_row, end_row;
+  if (!terminal_screen_find_command_output(screen, &start_row, &end_row))
+    return nullptr;
+
+  auto const text = vte_terminal_get_text_range_format(VTE_TERMINAL(screen),
+                                                       VTE_FORMAT_TEXT,
+                                                       start_row, 0,
+                                                       end_row,
+                                                       vte_terminal_get_column_count(VTE_TERMINAL(screen)),
+                                                       nullptr);
+  return text ? g_strchomp(text) : nullptr;
 }

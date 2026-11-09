@@ -134,6 +134,15 @@ gboolean terminal_screen_has_foreground_process (TerminalScreen *screen,
 
 gboolean terminal_screen_is_active (TerminalScreen *screen);
 
+gboolean terminal_screen_has_prompts(TerminalScreen* screen);
+
+gboolean terminal_screen_scroll_to_prompt(TerminalScreen* screen,
+                                          int direction);
+
+gboolean terminal_screen_has_command_output(TerminalScreen* screen);
+
+char* terminal_screen_dup_command_output(TerminalScreen* screen);
+
 GIcon* terminal_screen_get_icon(TerminalScreen* screen);
 
 GIcon* terminal_screen_get_icon_progress(TerminalScreen* screen);

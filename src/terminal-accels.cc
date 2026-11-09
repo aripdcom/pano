@@ -84,6 +84,9 @@
 #define KEY_ZOOM_NORMAL         "zoom-normal"
 #define KEY_ZOOM_OUT            "zoom-out"
 #define KEY_SWITCH_TAB_PREFIX   "switch-to-tab-"
+#define KEY_PREV_PROMPT         "previous-prompt"
+#define KEY_NEXT_PROMPT         "next-prompt"
+#define KEY_COPY_OUTPUT         "copy-output"
 #define KEY_SPLIT_RIGHT         "split-right"
 #define KEY_SPLIT_DOWN          "split-down"
 #define KEY_CLOSE_PANE          "close-pane"
@@ -136,6 +139,9 @@ typedef struct
   ENTRY_FULL (name, key, action, type, parameter, "win.shadow")
 #define ENTRY_MDI(name, key, action, type, parameter) \
   ENTRY_FULL (name, key, action, type, parameter, "win.shadow-mdi")
+/* Only consumed while the shell reports its prompts */
+#define ENTRY_PROMPT(name, key, action, type, parameter) \
+  ENTRY_FULL (name, key, action, type, parameter, "win.shadow-prompt")
 /* Only consumed while the active tab is split */
 #define ENTRY_PANE(name, key, action, type, parameter) \
   ENTRY_FULL (name, key, action, type, parameter, "win.shadow-pane")
@@ -182,6 +188,9 @@ static KeyEntry terminal_entries[] = {
   ENTRY (N_("Read-Only"),       KEY_READ_ONLY,          "read-only", nullptr, nullptr   ),
   ENTRY (N_("Reset"),           KEY_RESET,              "reset",     "b",  "false"),
   ENTRY (N_("Reset and Clear"), KEY_RESET_AND_CLEAR,    "reset",     "b",  "true" ),
+  ENTRY_PROMPT (N_("Scroll to Previous Prompt"),    KEY_PREV_PROMPT, "scroll-to-prompt", "s", "'previous'"),
+  ENTRY_PROMPT (N_("Scroll to Next Prompt"),        KEY_NEXT_PROMPT, "scroll-to-prompt", "s", "'next'"),
+  ENTRY_PROMPT (N_("Copy Output of Last Command"),  KEY_COPY_OUTPUT, "copy-output",      nullptr, nullptr),
 };
 
 static KeyEntry tabs_entries[] = {
@@ -258,6 +267,7 @@ static KeyEntry global_entries[] = {
 #undef ENTRY
 #undef ENTRY_MDI
 #undef ENTRY_PANE
+#undef ENTRY_PROMPT
 
 static KeyEntryList all_entries[] =
 {

@@ -716,6 +716,58 @@ action_split_cb(GSimpleAction* action,
 }
 
 static void
+action_prompt_cb(GSimpleAction* action,
+                 GVariant* parameter,
+                 gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (!window->active_screen)
+    return;
+
+  auto const direction = g_str_equal(g_variant_get_string(parameter, nullptr), "previous") ? -1 : 1;
+  terminal_screen_scroll_to_prompt(window->active_screen, direction);
+}
+
+static void
+action_copy_output_cb(GSimpleAction* action,
+                      GVariant* parameter,
+                      gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (!window->active_screen)
+    return;
+
+  gs_free char* text = terminal_screen_dup_command_output(window->active_screen);
+  if (text)
+    gdk_clipboard_set_text(window->clipboard, text);
+}
+
+/* Prompt jumping and copying command output need shell integration. The
+ * shortcuts are only taken from the terminal while they can work. */
+static void
+terminal_window_update_prompt_actions(TerminalWindow* window)
+{
+  if (window->disposed)
+    return;
+
+  auto const screen = window->active_screen;
+  auto const has_prompts = screen && terminal_screen_has_prompts(screen);
+  auto const has_output = screen && terminal_screen_has_command_output(screen);
+
+  g_simple_action_set_enabled(lookup_action(window, "scroll-to-prompt"), has_prompts);
+  g_simple_action_set_enabled(lookup_action(window, "copy-output"), has_output);
+  g_simple_action_set_enabled(lookup_action(window, "shadow-prompt"), has_prompts);
+}
+
+static void
+screen_prompts_changed_cb(TerminalScreen* screen,
+                          TerminalWindow* window)
+{
+  if (screen == window->active_screen)
+    terminal_window_update_prompt_actions(window);
+}
+
+static void
 action_close_pane_cb(GSimpleAction* action,
                      GVariant* parameter,
                      gpointer user_data)
@@ -1910,6 +1962,8 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   menu_append (section4, _("_Copy"), "win.copy::text");
   menu_append (section4, _("Copy as _HTML"), "win.copy::html");
   menu_append (section4, _("_Paste"), "win.paste-text");
+  if (terminal_screen_has_command_output (screen))
+    menu_append (section4, _("Copy _Output of Last Command"), "win.copy-output");
   if (g_action_get_enabled (G_ACTION (lookup_action (window, "paste-uris"))))
     menu_append (section4, _("Paste as _Filenames"), "win.paste-uris");
 
@@ -2357,6 +2411,8 @@ terminal_window_init (TerminalWindow *window)
     { "about",               action_about_cb,            nullptr,   nullptr, nullptr },
     { "close",               action_close_cb,            "s",    nullptr, nullptr },
     { "close-pane",          action_close_pane_cb,       nullptr,   nullptr, nullptr },
+    { "copy-output",         action_copy_output_cb,      nullptr,   nullptr, nullptr },
+    { "scroll-to-prompt",    action_prompt_cb,           "s",    nullptr, nullptr },
     { "copy",                action_copy_cb,             "s",    nullptr, nullptr },
     { "copy-hyperlink",      action_copy_hyperlink_cb,   nullptr,   nullptr, nullptr },
     { "copy-match",          action_copy_match_cb,       nullptr,   nullptr, nullptr },
@@ -2404,6 +2460,7 @@ terminal_window_init (TerminalWindow *window)
     { "shadow",              action_shadow_activate_cb,  "s",    nullptr, nullptr },
     { "shadow-mdi",          action_shadow_activate_cb,  "s",    nullptr, nullptr },
     { "shadow-pane",         action_shadow_activate_cb,  "s",    nullptr, nullptr },
+    { "shadow-prompt",       action_shadow_activate_cb,  "s",    nullptr, nullptr },
 
     /* Actions with state */
     { "active-tab",          action_active_tab_set_cb,   "i",  "@i 0",    action_active_tab_state_cb      },
@@ -3027,6 +3084,7 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
   terminal_window_update_search_sensitivity(window);
   terminal_window_update_paste_sensitivity (window);
   terminal_window_update_pane_actions(window);
+  terminal_window_update_prompt_actions(window);
 }
 
 static void
@@ -3076,6 +3134,8 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
                     G_CALLBACK (screen_close_cb), window);
   g_signal_connect (screen, "command-finished",
                     G_CALLBACK (screen_command_finished_cb), window);
+  g_signal_connect (screen, "prompts-changed",
+                    G_CALLBACK (screen_prompts_changed_cb), window);
 
   terminal_window_update_tabs_actions_sensitivity (window);
   terminal_window_update_search_sensitivity(window);
@@ -3170,6 +3230,9 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_command_finished_cb,
+                                        window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_prompts_changed_cb,
                                         window);
   terminal_app_withdraw_command_notification (terminal_app_get (), screen);
 
