@@ -478,6 +478,54 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to detach current tab</summary>
     </key>
+    <key name="split-right" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;r'</default>
+      <summary>Keyboard shortcut to split the terminal and open a new one on the right</summary>
+    </key>
+    <key name="split-down" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;d'</default>
+      <summary>Keyboard shortcut to split the terminal and open a new one below</summary>
+    </key>
+    <key name="close-pane" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;x'</default>
+      <summary>Keyboard shortcut to close the active pane of a split tab</summary>
+    </key>
+    <key name="zoom-pane" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;z'</default>
+      <summary>Keyboard shortcut to show only the active pane of a split tab, or all panes again</summary>
+    </key>
+    <key name="focus-pane-left" type="s">
+      <default>'&lt;Alt&gt;Left'</default>
+      <summary>Keyboard shortcut to move the focus to the pane on the left</summary>
+    </key>
+    <key name="focus-pane-right" type="s">
+      <default>'&lt;Alt&gt;Right'</default>
+      <summary>Keyboard shortcut to move the focus to the pane on the right</summary>
+    </key>
+    <key name="focus-pane-up" type="s">
+      <default>'&lt;Alt&gt;Up'</default>
+      <summary>Keyboard shortcut to move the focus to the pane above</summary>
+    </key>
+    <key name="focus-pane-down" type="s">
+      <default>'&lt;Alt&gt;Down'</default>
+      <summary>Keyboard shortcut to move the focus to the pane below</summary>
+    </key>
+    <key name="resize-pane-left" type="s">
+      <default>'&lt;Alt&gt;&lt;Shift&gt;Left'</default>
+      <summary>Keyboard shortcut to move the divider of the active pane to the left</summary>
+    </key>
+    <key name="resize-pane-right" type="s">
+      <default>'&lt;Alt&gt;&lt;Shift&gt;Right'</default>
+      <summary>Keyboard shortcut to move the divider of the active pane to the right</summary>
+    </key>
+    <key name="resize-pane-up" type="s">
+      <default>'&lt;Alt&gt;&lt;Shift&gt;Up'</default>
+      <summary>Keyboard shortcut to move the divider of the active pane up</summary>
+    </key>
+    <key name="resize-pane-down" type="s">
+      <default>'&lt;Alt&gt;&lt;Shift&gt;Down'</default>
+      <summary>Keyboard shortcut to move the divider of the active pane down</summary>
+    </key>
     <key name="show-tabs-overview" type="s">
       <default>'disabled'</default>
       <summary>Keyboard shortcut to show the tabs overview</summary>

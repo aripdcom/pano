@@ -84,6 +84,18 @@
 #define KEY_ZOOM_NORMAL         "zoom-normal"
 #define KEY_ZOOM_OUT            "zoom-out"
 #define KEY_SWITCH_TAB_PREFIX   "switch-to-tab-"
+#define KEY_SPLIT_RIGHT         "split-right"
+#define KEY_SPLIT_DOWN          "split-down"
+#define KEY_CLOSE_PANE          "close-pane"
+#define KEY_ZOOM_PANE           "zoom-pane"
+#define KEY_FOCUS_PANE_LEFT     "focus-pane-left"
+#define KEY_FOCUS_PANE_RIGHT    "focus-pane-right"
+#define KEY_FOCUS_PANE_UP       "focus-pane-up"
+#define KEY_FOCUS_PANE_DOWN     "focus-pane-down"
+#define KEY_RESIZE_PANE_LEFT    "resize-pane-left"
+#define KEY_RESIZE_PANE_RIGHT   "resize-pane-right"
+#define KEY_RESIZE_PANE_UP      "resize-pane-up"
+#define KEY_RESIZE_PANE_DOWN    "resize-pane-down"
 
 #if 1
 /*
@@ -124,6 +136,9 @@ typedef struct
   ENTRY_FULL (name, key, action, type, parameter, "win.shadow")
 #define ENTRY_MDI(name, key, action, type, parameter) \
   ENTRY_FULL (name, key, action, type, parameter, "win.shadow-mdi")
+/* Only consumed while the active tab is split */
+#define ENTRY_PANE(name, key, action, type, parameter) \
+  ENTRY_FULL (name, key, action, type, parameter, "win.shadow-pane")
 
 static KeyEntry file_entries[] = {
   ENTRY (N_("New Tab"),       KEY_NEW_TAB,       "new-terminal",  "(ss)",  "('tab','current')"   ),
@@ -216,6 +231,21 @@ static KeyEntry tabs_entries[] = {
   ENTRY_MDI (N_("Switch to Last Tab"), KEY_SWITCH_TAB_PREFIX "last", "active-tab", "i", "-1"),
 };
 
+static KeyEntry panes_entries[] = {
+  ENTRY      (N_("Split Right"),             KEY_SPLIT_RIGHT,       "split",       "s", "'right'"),
+  ENTRY      (N_("Split Down"),              KEY_SPLIT_DOWN,        "split",       "s", "'down'" ),
+  ENTRY_PANE (N_("Close Pane"),              KEY_CLOSE_PANE,        "close-pane",  nullptr, nullptr),
+  ENTRY_PANE (N_("Zoom Pane"),               KEY_ZOOM_PANE,         "zoom-pane",   nullptr, nullptr),
+  ENTRY_PANE (N_("Focus the Pane on the Left"),  KEY_FOCUS_PANE_LEFT,  "pane-focus",  "s", "'left'" ),
+  ENTRY_PANE (N_("Focus the Pane on the Right"), KEY_FOCUS_PANE_RIGHT, "pane-focus",  "s", "'right'"),
+  ENTRY_PANE (N_("Focus the Pane Above"),    KEY_FOCUS_PANE_UP,     "pane-focus",  "s", "'up'"   ),
+  ENTRY_PANE (N_("Focus the Pane Below"),    KEY_FOCUS_PANE_DOWN,   "pane-focus",  "s", "'down'" ),
+  ENTRY_PANE (N_("Move Divider Left"),       KEY_RESIZE_PANE_LEFT,  "pane-resize", "s", "'left'" ),
+  ENTRY_PANE (N_("Move Divider Right"),      KEY_RESIZE_PANE_RIGHT, "pane-resize", "s", "'right'"),
+  ENTRY_PANE (N_("Move Divider Up"),         KEY_RESIZE_PANE_UP,    "pane-resize", "s", "'up'"   ),
+  ENTRY_PANE (N_("Move Divider Down"),       KEY_RESIZE_PANE_DOWN,  "pane-resize", "s", "'down'" ),
+};
+
 static KeyEntry help_entries[] = {
   ENTRY (N_("Contents"), KEY_HELP, "help", nullptr, nullptr)
 };
@@ -227,6 +257,7 @@ static KeyEntry global_entries[] = {
 #undef ENTRY_FULL
 #undef ENTRY
 #undef ENTRY_MDI
+#undef ENTRY_PANE
 
 static KeyEntryList all_entries[] =
 {
@@ -236,6 +267,7 @@ static KeyEntryList all_entries[] =
   { search_entries,   G_N_ELEMENTS (search_entries),   N_("Search"),   FALSE },
   { terminal_entries, G_N_ELEMENTS (terminal_entries), N_("Terminal"), FALSE },
   { tabs_entries,     G_N_ELEMENTS (tabs_entries),     N_("Tabs"),     FALSE },
+  { panes_entries,    G_N_ELEMENTS (panes_entries),    N_("Panes"),    FALSE },
   { help_entries,     G_N_ELEMENTS (help_entries),     N_("Help"),     FALSE },
   { global_entries,   G_N_ELEMENTS (global_entries),   N_("Global"),   TRUE  },
 };

@@ -8,8 +8,8 @@ Website: https://pano.aripd.com
 
 Pano is a fork of [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal).
 It focuses on power-user features that GNOME Terminal does not offer, such
-as flexible tab placement and, on the roadmap, split panes, session restore
-and background transparency.
+as flexible tab placement and split panes, and, on the roadmap, session
+restore and background transparency.
 
 > **Status:** early development. There are no packages yet; build it from
 > source as described below.
@@ -27,6 +27,21 @@ Everything GNOME Terminal provides, plus:
 * **Tab bar position**: place the tabs at the top, bottom, left or right of
   the window (*Preferences → Appearance → Tab Bar Position*). Left and right
   show the tabs as a vertical list.
+* **Split panes**: split a tab into several terminals, side by side or one
+  above the other. New panes start in the working directory of the active
+  one. Use the context menu, the main menu or these shortcuts (all can be
+  changed in *Preferences → Shortcuts*):
+
+  | Action                              | Shortcut            |
+  |-------------------------------------|---------------------|
+  | Split right / split down            | Ctrl+Shift+R / Ctrl+Shift+D |
+  | Move the focus to a neighbouring pane | Alt+Arrow keys    |
+  | Move the divider                    | Alt+Shift+Arrow keys |
+  | Zoom the active pane (and back)     | Ctrl+Shift+Z        |
+  | Close the active pane               | Ctrl+Shift+X        |
+
+  The focus, divider, zoom and close shortcuts only take effect while a tab
+  is split, so programs in the terminal still get Alt+Arrow keys otherwise.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.

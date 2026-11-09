@@ -188,8 +188,17 @@ static void     terminal_window_update_zoom_sensitivity   (TerminalWindow *windo
 static void     terminal_window_update_search_sensitivity (TerminalWindow *window);
 static void     terminal_window_update_paste_sensitivity  (TerminalWindow *window);
 static void     terminal_window_show                      (GtkWidget      *widget);
-static gboolean confirm_close_window_or_tab               (TerminalWindow *window,
-                                                           TerminalScreen *screen);
+// What a close confirmation is about
+enum class CloseKind {
+  WINDOW, // all terminals of the window
+  TAB,    // all panes of the tab of the screen
+  PANE,   // only the screen
+};
+
+static void terminal_window_update_pane_actions(TerminalWindow* window);
+static gboolean confirm_close_window_or_tab (TerminalWindow *window,
+                                             TerminalScreen *screen,
+                                             CloseKind kind);
 
 G_DEFINE_FINAL_TYPE (TerminalWindow, terminal_window, ADW_TYPE_APPLICATION_WINDOW)
 
@@ -621,26 +630,160 @@ action_close_cb (GSimpleAction *action,
                  gpointer user_data)
 {
   TerminalWindow *window = (TerminalWindow*)user_data;
-  TerminalScreen *screen;
   const char *mode_str;
 
   terminal_assert_nonnull (parameter);
   g_variant_get (parameter, "&s", &mode_str);
 
-  if (g_str_equal (mode_str, "tab"))
-    screen = window->active_screen;
-  else if (g_str_equal (mode_str, "window"))
-    screen = nullptr;
-  else
-    return;
+  if (g_str_equal (mode_str, "tab")) {
+    // Closes all panes of the tab. The tab view asks for confirmation
+    // through the close request.
+    if (window->active_screen)
+      terminal_notebook_close_tab(window->notebook,
+                                  terminal_tab_get_from_screen(window->active_screen));
+  } else if (g_str_equal (mode_str, "window")) {
+    if (confirm_close_window_or_tab (window, nullptr, CloseKind::WINDOW))
+      return;
 
-  if (confirm_close_window_or_tab (window, screen))
-    return;
-
-  if (screen)
-    terminal_window_remove_screen (window, screen);
-  else
     gtk_window_destroy (GTK_WINDOW (window));
+  }
+}
+
+static TerminalTab*
+window_get_active_tab(TerminalWindow* window)
+{
+  return window->active_screen ? terminal_tab_get_from_screen(window->active_screen) : nullptr;
+}
+
+static bool
+parse_direction(GVariant* parameter,
+                GtkDirectionType* direction)
+{
+  auto const str = g_variant_get_string(parameter, nullptr);
+  if (g_str_equal(str, "left"))
+    *direction = GTK_DIR_LEFT;
+  else if (g_str_equal(str, "right"))
+    *direction = GTK_DIR_RIGHT;
+  else if (g_str_equal(str, "up"))
+    *direction = GTK_DIR_UP;
+  else if (g_str_equal(str, "down"))
+    *direction = GTK_DIR_DOWN;
+  else
+    return false;
+
+  return true;
+}
+
+static void
+action_split_cb(GSimpleAction* action,
+                GVariant* parameter,
+                gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const parent_screen = window->active_screen;
+  if (!parent_screen)
+    return;
+
+  GtkDirectionType direction;
+  if (!parse_direction(parameter, &direction))
+    return;
+
+  auto const orientation = direction == GTK_DIR_DOWN
+    ? GTK_ORIENTATION_VERTICAL
+    : GTK_ORIENTATION_HORIZONTAL;
+
+  // The new terminal gets the profile, zoom and working directory of the
+  // active one.
+  gs_unref_object auto profile = terminal_screen_ref_profile(parent_screen);
+  auto const screen = terminal_screen_new(profile,
+                                          nullptr /* title */,
+                                          vte_terminal_get_font_scale(VTE_TERMINAL(parent_screen)));
+
+  terminal_tab_split(terminal_tab_get_from_screen(parent_screen),
+                     parent_screen,
+                     screen,
+                     orientation);
+  gtk_widget_grab_focus(GTK_WIDGET(screen));
+
+  terminal_screen_reexec_from_screen(screen, parent_screen, nullptr, nullptr);
+
+  terminal_window_update_pane_actions(window);
+}
+
+static void
+action_close_pane_cb(GSimpleAction* action,
+                     GVariant* parameter,
+                     gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const tab = window_get_active_tab(window);
+  if (!tab || !terminal_tab_is_split(tab))
+    return;
+
+  auto const screen = window->active_screen;
+  if (confirm_close_window_or_tab(window, screen, CloseKind::PANE))
+    return;
+
+  terminal_window_remove_screen(window, screen);
+}
+
+static void
+action_pane_focus_cb(GSimpleAction* action,
+                     GVariant* parameter,
+                     gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const tab = window_get_active_tab(window);
+  GtkDirectionType direction;
+  if (tab && parse_direction(parameter, &direction))
+    terminal_tab_focus_pane(tab, direction);
+}
+
+static void
+action_pane_resize_cb(GSimpleAction* action,
+                      GVariant* parameter,
+                      gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const tab = window_get_active_tab(window);
+  GtkDirectionType direction;
+  if (tab && parse_direction(parameter, &direction))
+    terminal_tab_resize_pane(tab, direction);
+}
+
+static void
+action_zoom_pane_state_cb(GSimpleAction* action,
+                          GVariant* state,
+                          gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const tab = window_get_active_tab(window);
+  if (!tab)
+    return;
+
+  terminal_tab_set_zoomed(tab, g_variant_get_boolean(state));
+  terminal_window_update_pane_actions(window);
+}
+
+static void
+terminal_window_update_pane_actions(TerminalWindow* window)
+{
+  if (window->disposed)
+    return;
+
+  auto const tab = window_get_active_tab(window);
+  auto const split = tab && terminal_tab_is_split(tab);
+  auto const zoomed = tab && terminal_tab_get_zoomed(tab);
+
+  g_simple_action_set_enabled(lookup_action(window, "split"), tab != nullptr);
+  g_simple_action_set_enabled(lookup_action(window, "close-pane"), split);
+  g_simple_action_set_enabled(lookup_action(window, "zoom-pane"), split);
+  g_simple_action_set_enabled(lookup_action(window, "pane-focus"), split && !zoomed);
+  g_simple_action_set_enabled(lookup_action(window, "pane-resize"), split && !zoomed);
+  // Only take the pane shortcuts away from the terminal when there are panes
+  g_simple_action_set_enabled(lookup_action(window, "shadow-pane"), split);
+  g_simple_action_set_state(lookup_action(window, "zoom-pane"),
+                            g_variant_new_boolean(zoomed));
 }
 
 static void
@@ -1749,6 +1892,20 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
 
   g_menu_append_section (menu, nullptr, G_MENU_MODEL (section5));
 
+  /* Pane section */
+  gs_unref_object GMenu *pane_section = g_menu_new ();
+  gs_unref_object GMenuItem *split_right_item = g_menu_item_new (_("Split _Right"), nullptr);
+  g_menu_item_set_action_and_target (split_right_item, "win.split", "s", "right");
+  menu_append_item (pane_section, split_right_item);
+  gs_unref_object GMenuItem *split_down_item = g_menu_item_new (_("Split _Down"), nullptr);
+  g_menu_item_set_action_and_target (split_down_item, "win.split", "s", "down");
+  menu_append_item (pane_section, split_down_item);
+  if (auto const tab = window_get_active_tab (window); tab && terminal_tab_is_split (tab)) {
+    menu_append (pane_section, _("_Zoom Pane"), "win.zoom-pane");
+    menu_append (pane_section, _("Close P_ane"), "win.close-pane");
+  }
+  g_menu_append_section (menu, nullptr, G_MENU_MODEL (pane_section));
+
   /* New Terminal section */
   gs_unref_object GMenu *section6 = g_menu_new ();
   if (terminal_app_get_menu_unified (app)) {
@@ -2129,6 +2286,7 @@ terminal_window_init (TerminalWindow *window)
     /* Actions without state */
     { "about",               action_about_cb,            nullptr,   nullptr, nullptr },
     { "close",               action_close_cb,            "s",    nullptr, nullptr },
+    { "close-pane",          action_close_pane_cb,       nullptr,   nullptr, nullptr },
     { "copy",                action_copy_cb,             "s",    nullptr, nullptr },
     { "copy-hyperlink",      action_copy_hyperlink_cb,   nullptr,   nullptr, nullptr },
     { "copy-match",          action_copy_match_cb,       nullptr,   nullptr, nullptr },
@@ -2143,11 +2301,14 @@ terminal_window_init (TerminalWindow *window)
     { "new-terminal",        action_new_terminal_cb,     "(ss)", nullptr, nullptr },
     { "open-match",          action_open_match_cb,       nullptr,   nullptr, nullptr },
     { "open-hyperlink",      action_open_hyperlink_cb,   nullptr,   nullptr, nullptr },
+    { "pane-focus",          action_pane_focus_cb,       "s",    nullptr, nullptr },
+    { "pane-resize",         action_pane_resize_cb,      "s",    nullptr, nullptr },
     { "paste-text",          action_paste_text_cb,       nullptr,   nullptr, nullptr },
     { "paste-uris",          action_paste_uris_cb,       nullptr,   nullptr, nullptr },
     { "reset",               action_reset_cb,            "b",    nullptr, nullptr },
     { "select-all",          action_select_all_cb,       nullptr,   nullptr, nullptr },
     { "size-to",             action_size_to_cb,          "(uu)", nullptr, nullptr },
+    { "split",               action_split_cb,            "s",    nullptr, nullptr },
     { "tab-detach",          action_tab_detach_cb,       nullptr,   nullptr, nullptr },
     { "tab-move-left",       action_tab_move_left_cb,    nullptr,   nullptr, nullptr },
     { "tab-move-right",      action_tab_move_right_cb,   nullptr,   nullptr, nullptr },
@@ -2172,6 +2333,7 @@ terminal_window_init (TerminalWindow *window)
     /* Shadow actions for keybinding comsumption, see comment in terminal-accels.c */
     { "shadow",              action_shadow_activate_cb,  "s",    nullptr, nullptr },
     { "shadow-mdi",          action_shadow_activate_cb,  "s",    nullptr, nullptr },
+    { "shadow-pane",         action_shadow_activate_cb,  "s",    nullptr, nullptr },
 
     /* Actions with state */
     { "active-tab",          action_active_tab_set_cb,   "i",  "@i 0",    action_active_tab_state_cb      },
@@ -2179,6 +2341,7 @@ terminal_window_init (TerminalWindow *window)
     { "fullscreen",          nullptr /* toggles state */,   nullptr, "false",   action_fullscreen_state_cb      },
     { "profile",             nullptr /* changes state */,   "s",  "''",      action_profile_state_cb         },
     { "read-only",           nullptr /* toggles state */,   nullptr, "false",   action_read_only_state_cb       },
+    { "zoom-pane",           nullptr /* toggles state */,   nullptr, "false",   action_zoom_pane_state_cb       },
   };
   static GActionEntry const notebook_context_action_entries[] = {
     { "notebook-tab-close",      action_notebook_tab_close_cb,      nullptr, nullptr, nullptr },
@@ -2494,7 +2657,7 @@ terminal_window_finalize (GObject *object)
 static gboolean
 terminal_window_close_request (GtkWindow *window)
 {
-   return confirm_close_window_or_tab (TERMINAL_WINDOW (window), nullptr);
+   return confirm_close_window_or_tab (TERMINAL_WINDOW (window), nullptr, CloseKind::WINDOW);
 }
 
 static void
@@ -2596,7 +2759,7 @@ screen_close_request_cb (TerminalNotebook *notebook,
                          TerminalScreen   *screen,
                          TerminalWindow   *window)
 {
-  if (confirm_close_window_or_tab (window, screen))
+  if (confirm_close_window_or_tab (window, screen, CloseKind::TAB))
     return GDK_EVENT_STOP;
   return GDK_EVENT_PROPAGATE;
 }
@@ -2631,6 +2794,7 @@ terminal_window_remove_screen (TerminalWindow *window,
                                TerminalScreen *screen)
 {
   terminal_notebook_remove_screen (window->notebook, screen);
+  terminal_window_update_pane_actions(window);
 }
 GList*
 terminal_window_list_tabs (TerminalWindow *window)
@@ -2645,7 +2809,13 @@ should_update_window_size (TerminalWindow *window)
    * windows: if we do, there will be ugly gaps of up to 1 character cell
    * around otherwise tiled windows, and unnecessary SIGWINCHes when
    * switching tabs. */
-  return !(window->realized && window_state_is_snapped(window->window_state));
+  if (window->realized && window_state_is_snapped(window->window_state))
+    return false;
+
+  /* A split tab shares the window between its panes, so the window size
+   * does not follow the grid of one terminal. */
+  auto const tab = window_get_active_tab(window);
+  return !(tab && terminal_tab_is_split(tab));
 }
 
 void
@@ -2725,7 +2895,16 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
                          "[window %p] MDI: setting active tab to screen %p (old active screen %p)\n",
                          window, screen, old_active_screen);
 
-  if (old_active_screen != nullptr && screen != nullptr && should_update_window_size(window)) {
+  /* Moving between panes of a tab, or to or from a split tab, keeps the
+   * window size; the terminals adapt to their space instead. */
+  auto const old_tab = terminal_tab_get_from_screen(old_active_screen);
+  auto const new_tab = terminal_tab_get_from_screen(screen);
+  auto const keep_window_size = (old_tab && old_tab == new_tab) ||
+    (old_tab && terminal_tab_is_split(old_tab)) ||
+    (new_tab && terminal_tab_is_split(new_tab));
+
+  if (old_active_screen != nullptr && screen != nullptr && !keep_window_size &&
+      should_update_window_size(window)) {
     terminal_screen_get_size (old_active_screen, &old_grid_width, &old_grid_height);
 
     /* This is so that we maintain the same grid */
@@ -2751,7 +2930,8 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
     _terminal_debug_print (TERMINAL_DEBUG_GEOMETRY,
                            "[window %p] setting size after flipping notebook pages\n",
                            window);
-  terminal_window_update_size (window);
+  if (!keep_window_size)
+    terminal_window_update_size (window);
 
   terminal_window_update_tabs_actions_sensitivity (window);
   terminal_window_update_terminal_menu (window);
@@ -2760,6 +2940,7 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
   terminal_window_update_zoom_sensitivity (window);
   terminal_window_update_search_sensitivity(window);
   terminal_window_update_paste_sensitivity (window);
+  terminal_window_update_pane_actions(window);
 }
 
 static void
@@ -2811,6 +2992,7 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
   terminal_window_update_tabs_actions_sensitivity (window);
   terminal_window_update_search_sensitivity(window);
   terminal_window_update_paste_sensitivity (window);
+  terminal_window_update_pane_actions(window);
 
 #if 0
   /* FIXMEchpe: wtf is this doing? */
@@ -2857,7 +3039,7 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
     return;
 
   if (window->notebook_context_tab &&
-      screen == terminal_tab_get_screen(window->notebook_context_tab))
+      terminal_tab_get_from_screen(screen) == window->notebook_context_tab)
     window->notebook_context_tab = nullptr;
 
   _terminal_debug_print (TERMINAL_DEBUG_MDI,
@@ -3163,14 +3345,17 @@ confirm_close_response_cb (GtkWidget      *dialog,
   g_assert (TERMINAL_IS_WINDOW (window));
 
   screen = (TerminalScreen*)g_object_get_data (G_OBJECT (dialog), "close-screen");
-
-  terminal_notebook_confirm_close (window->notebook,
-                                   screen,
-                                   response == GTK_RESPONSE_ACCEPT);
+  auto const kind = CloseKind(GPOINTER_TO_INT(g_object_get_data(G_OBJECT(dialog), "close-kind")));
+  auto const accepted = response == GTK_RESPONSE_ACCEPT;
 
   gtk_window_destroy (GTK_WINDOW (dialog));
 
-  if (screen == nullptr)
+  if (kind == CloseKind::PANE) {
+    if (accepted)
+      terminal_window_remove_screen(window, screen);
+  } else if (kind == CloseKind::TAB) {
+    terminal_notebook_confirm_close (window->notebook, screen, accepted);
+  } else if (accepted)
     g_idle_add_full (G_PRIORITY_DEFAULT,
                      destroy_window_in_main,
                      g_object_ref (window),
@@ -3182,7 +3367,8 @@ confirm_close_response_cb (GtkWidget      *dialog,
  */
 static gboolean
 confirm_close_window_or_tab (TerminalWindow *window,
-                             TerminalScreen *screen)
+                             TerminalScreen *screen,
+                             CloseKind kind)
 {
   GtkWidget *dialog;
   gboolean do_confirm;
@@ -3200,32 +3386,32 @@ confirm_close_window_or_tab (TerminalWindow *window,
   if (!do_confirm)
     return FALSE;
 
-  if (screen)
+  if (kind == CloseKind::PANE)
     {
       do_confirm = terminal_screen_has_foreground_process (screen, nullptr, nullptr);
       n_tabs = 1;
     }
   else
     {
-      GList *tabs, *t;
+      GList* screens = nullptr;
+      if (kind == CloseKind::TAB)
+        screens = terminal_tab_list_screens(terminal_tab_get_from_screen(screen));
+      else
+        screens = terminal_notebook_list_screens(window->notebook);
+
+      // A tab with several panes is closed like a single terminal
+      n_tabs = kind == CloseKind::TAB ? 1 : int(g_list_length(screens));
 
       do_confirm = FALSE;
-
-      tabs = terminal_window_list_tabs (window);
-      n_tabs = g_list_length (tabs);
-
-      for (t = tabs; t != nullptr; t = t->next)
+      for (auto l = screens; l != nullptr; l = l->next)
         {
-          TerminalScreen *terminal_screen;
-
-          terminal_screen = terminal_tab_get_screen (TERMINAL_TAB (t->data));
-          if (terminal_screen_has_foreground_process (terminal_screen, nullptr, nullptr))
+          if (terminal_screen_has_foreground_process (TERMINAL_SCREEN (l->data), nullptr, nullptr))
             {
               do_confirm = TRUE;
               break;
             }
         }
-      g_list_free (tabs);
+      g_list_free (screens);
     }
 
   if (!do_confirm)
@@ -3255,6 +3441,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
   gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
 
   g_object_set_data (G_OBJECT (dialog), "close-screen", screen);
+  g_object_set_data (G_OBJECT (dialog), "close-kind", GINT_TO_POINTER (int(kind)));
 
   g_signal_connect_swapped (dialog, "destroy",
                             G_CALLBACK (g_nullify_pointer),
@@ -3274,7 +3461,7 @@ terminal_window_request_close (TerminalWindow *window)
 {
   g_return_if_fail (TERMINAL_IS_WINDOW (window));
 
-  if (confirm_close_window_or_tab (window, nullptr))
+  if (confirm_close_window_or_tab (window, nullptr, CloseKind::WINDOW))
     return;
 
   gtk_window_destroy (GTK_WINDOW (window));

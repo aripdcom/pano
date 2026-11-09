@@ -88,6 +88,22 @@ remove_reorder_bindings (GtkWidgetClass *widget_class,
   remove_binding (widget_class, keypad_keysym, GDK_ALT_MASK);
 }
 
+// The tab forwards the title and icons of its active pane
+static void
+bind_page(TerminalTab* tab,
+          AdwTabPage* page)
+{
+  g_object_bind_property(tab, "title",
+                         page, "title",
+                         G_BINDING_SYNC_CREATE);
+  g_object_bind_property(tab, "icon",
+                         page, "icon",
+                         G_BINDING_SYNC_CREATE);
+  g_object_bind_property(tab, "icon-progress",
+                         page, "indicator-icon",
+                         G_BINDING_SYNC_CREATE);
+}
+
 void
 terminal_notebook_insert_tab(TerminalNotebook *notebook,
                              TerminalTab* tab,
@@ -117,16 +133,7 @@ terminal_notebook_insert_tab(TerminalNotebook *notebook,
                         GTK_WIDGET(tab),
                         ppos < n_pinned ? n_pinned : ppos + 1);
 
-  auto const screen = terminal_tab_get_screen(tab);
-  g_object_bind_property(screen, "title",
-                         page, "title",
-                         G_BINDING_SYNC_CREATE);
-  g_object_bind_property(screen, "icon",
-                         page, "icon",
-                         G_BINDING_SYNC_CREATE);
-  g_object_bind_property(screen, "icon-progress",
-                         page, "indicator-icon",
-                         G_BINDING_SYNC_CREATE);
+  bind_page(tab, page);
 }
 
 void
@@ -142,16 +149,7 @@ terminal_notebook_append_tab(TerminalNotebook *notebook,
     adw_tab_view_append_pinned(notebook->tab_view, GTK_WIDGET(tab)) :
     adw_tab_view_append(notebook->tab_view, GTK_WIDGET(tab));
 
-  auto const screen = terminal_tab_get_screen(tab);
-  g_object_bind_property(screen, "title",
-                         page, "title",
-                         G_BINDING_SYNC_CREATE);
-  g_object_bind_property(screen, "icon",
-                         page, "icon",
-                         G_BINDING_SYNC_CREATE);
-  g_object_bind_property(screen, "icon-progress",
-                         page, "indicator-icon",
-                         G_BINDING_SYNC_CREATE);
+  bind_page(tab, page);
 }
 
 void
@@ -180,7 +178,13 @@ terminal_notebook_remove_screen (TerminalNotebook *notebook,
   g_return_if_fail (TERMINAL_IS_SCREEN (screen));
   g_return_if_fail (gtk_widget_is_ancestor (GTK_WIDGET (screen), GTK_WIDGET (notebook)));
 
-  terminal_notebook_close_tab(notebook, terminal_tab_get_from_screen (screen));
+  auto const tab = terminal_tab_get_from_screen (screen);
+
+  // Close only the pane of a split tab
+  if (terminal_tab_is_split(tab))
+    terminal_tab_remove_screen(tab, screen);
+  else
+    terminal_notebook_close_tab(notebook, tab);
 }
 
 void
@@ -240,8 +244,13 @@ terminal_notebook_set_active_screen (TerminalNotebook *notebook,
   g_return_if_fail (gtk_widget_is_ancestor (GTK_WIDGET (screen), GTK_WIDGET (notebook)));
 
   tab = terminal_tab_get_from_screen (screen);
+  terminal_tab_set_active_screen(tab, screen);
+
   page = adw_tab_view_get_page (notebook->tab_view, GTK_WIDGET (tab));
-  adw_tab_view_set_selected_page (notebook->tab_view, page);
+  if (adw_tab_view_get_selected_page(notebook->tab_view) == page)
+    gtk_widget_grab_focus(GTK_WIDGET(screen));
+  else
+    adw_tab_view_set_selected_page (notebook->tab_view, page);
 }
 
 GList *
@@ -268,15 +277,15 @@ terminal_notebook_list_tabs (TerminalNotebook *notebook)
 GList *
 terminal_notebook_list_screens (TerminalNotebook *notebook)
 {
-  GList *list, *l;
-
   g_return_val_if_fail (TERMINAL_IS_NOTEBOOK (notebook), nullptr);
 
-  list = terminal_notebook_list_tabs (notebook);
-  for (l = list; l != nullptr; l = l->next)
-    l->data = terminal_tab_get_screen ((TerminalTab *) l->data);
+  GList* screens = nullptr;
+  auto const tabs = terminal_notebook_list_tabs (notebook);
+  for (auto l = tabs; l != nullptr; l = l->next)
+    screens = g_list_concat(screens, terminal_tab_list_screens(TERMINAL_TAB(l->data)));
+  g_list_free(tabs);
 
-  return list;
+  return screens;
 }
 
 int
@@ -401,40 +410,78 @@ G_DEFINE_FINAL_TYPE_WITH_CODE (TerminalNotebook, terminal_notebook, GTK_TYPE_WID
 
 /* GtkNotebookClass impl */
 
+// Called when the selected tab changes, and when the active pane of the
+// selected tab changes.
 static void
-terminal_notebook_switch_page (AdwTabView       *tab_view,
-                               GParamSpec       *pspec,
-                               TerminalNotebook *notebook)
+terminal_notebook_update_active_screen(TerminalNotebook* notebook)
 {
   TerminalScreen *old_active_screen;
   TerminalScreen *screen = nullptr;
+  TerminalTab* tab = nullptr;
   AdwTabPage *page;
 
-  g_assert (ADW_TAB_VIEW (tab_view));
-  g_assert (TERMINAL_IS_NOTEBOOK (notebook));
-
-  page = adw_tab_view_get_selected_page (tab_view);
+  page = adw_tab_view_get_selected_page (notebook->tab_view);
   if (page != nullptr) {
-    GtkWidget *child = adw_tab_page_get_child (page);
-    screen = terminal_tab_get_screen (TERMINAL_TAB (child));
+    tab = TERMINAL_TAB(adw_tab_page_get_child (page));
+    screen = terminal_tab_get_screen (tab);
   }
 
   old_active_screen = notebook->active_screen;
   if (screen == old_active_screen)
     return;
 
-  if (old_active_screen)
-    terminal_tab_set_active(terminal_tab_get_from_screen(old_active_screen), false);
-  if (screen)
-    terminal_tab_set_active(terminal_tab_get_from_screen(screen), true);
+  auto const old_tab = terminal_tab_get_from_screen(old_active_screen);
+  if (old_tab != tab) {
+    if (old_tab)
+      terminal_tab_set_active(old_tab, false);
+    if (tab)
+      terminal_tab_set_active(tab, true);
+  }
 
   notebook->active_screen = screen;
 
   g_signal_emit (notebook, signals[SCREEN_SWITCHED], 0, old_active_screen, screen);
   g_object_notify (G_OBJECT (notebook), "active-screen");
 
-  if (screen != nullptr)
+  if (screen != nullptr && !gtk_widget_has_focus(GTK_WIDGET(screen)))
     gtk_widget_grab_focus (GTK_WIDGET (screen));
+}
+
+static void
+terminal_notebook_switch_page (AdwTabView       *tab_view,
+                               GParamSpec       *pspec,
+                               TerminalNotebook *notebook)
+{
+  g_assert (ADW_TAB_VIEW (tab_view));
+  g_assert (TERMINAL_IS_NOTEBOOK (notebook));
+
+  terminal_notebook_update_active_screen(notebook);
+}
+
+static void
+tab_active_screen_changed_cb(TerminalTab* tab,
+                             GParamSpec* pspec,
+                             TerminalNotebook* notebook)
+{
+  auto const page = adw_tab_view_get_selected_page(notebook->tab_view);
+  if (page && adw_tab_page_get_child(page) == GTK_WIDGET(tab))
+    terminal_notebook_update_active_screen(notebook);
+}
+
+static void
+tab_screen_added_cb(TerminalTab* tab,
+                    TerminalScreen* screen,
+                    TerminalNotebook* notebook)
+{
+  g_signal_emit(notebook, signals[SCREEN_ADDED], 0, screen);
+}
+
+static void
+tab_screen_removed_cb(TerminalTab* tab,
+                      TerminalScreen* screen,
+                      TerminalNotebook* notebook)
+{
+  g_signal_emit(notebook, signals[SCREEN_REMOVED], 0, screen);
 }
 
 static void
@@ -443,15 +490,23 @@ terminal_notebook_page_added (AdwTabView       *tab_view,
                               int               position,
                               TerminalNotebook *notebook)
 {
-  GtkWidget *child;
-
   g_assert (ADW_IS_TAB_VIEW (tab_view));
   g_assert (ADW_IS_TAB_PAGE (page));
   g_assert (TERMINAL_IS_NOTEBOOK (notebook));
 
-  child = adw_tab_page_get_child (page);
-  g_signal_emit (notebook, signals[SCREEN_ADDED], 0,
-                 terminal_tab_get_screen (TERMINAL_TAB (child)));
+  auto const tab = TERMINAL_TAB(adw_tab_page_get_child (page));
+
+  g_signal_connect(tab, "notify::screen",
+                   G_CALLBACK(tab_active_screen_changed_cb), notebook);
+  g_signal_connect(tab, "screen-added",
+                   G_CALLBACK(tab_screen_added_cb), notebook);
+  g_signal_connect(tab, "screen-removed",
+                   G_CALLBACK(tab_screen_removed_cb), notebook);
+
+  auto const screens = terminal_tab_list_screens(tab);
+  for (auto l = screens; l; l = l->next)
+    g_signal_emit (notebook, signals[SCREEN_ADDED], 0, l->data);
+  g_list_free(screens);
 }
 
 static void
@@ -460,15 +515,24 @@ terminal_notebook_page_removed (AdwTabView       *tab_view,
                                 int               position,
                                 TerminalNotebook *notebook)
 {
-  GtkWidget *child;
-
   g_assert (ADW_IS_TAB_VIEW (tab_view));
   g_assert (ADW_IS_TAB_PAGE (page));
   g_assert (TERMINAL_IS_NOTEBOOK (notebook));
 
-  child = adw_tab_page_get_child (page);
-  g_signal_emit (notebook, signals[SCREEN_REMOVED], 0,
-                 terminal_tab_get_screen (TERMINAL_TAB (child)));
+  TerminalTab* tab = TERMINAL_TAB(adw_tab_page_get_child (page));
+
+  g_signal_handlers_disconnect_by_func(tab, (void*)tab_active_screen_changed_cb, notebook);
+  g_signal_handlers_disconnect_by_func(tab, (void*)tab_screen_added_cb, notebook);
+  g_signal_handlers_disconnect_by_func(tab, (void*)tab_screen_removed_cb, notebook);
+
+  // The window closes itself when the last screen goes; keep the tab alive
+  // until all of its screens have been announced.
+  g_object_ref(tab);
+  auto const screens = terminal_tab_list_screens(tab);
+  for (auto l = screens; l; l = l->next)
+    g_signal_emit (notebook, signals[SCREEN_REMOVED], 0, l->data);
+  g_list_free(screens);
+  g_object_unref(tab);
 }
 
 static void

@@ -1,6 +1,7 @@
 /*
  * Copyright © 2008, 2010 Christian Persch
  * Copyright © 2023 Christian Hergert
+ * Copyright © 2026 aripdcem
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,32 +30,63 @@ G_BEGIN_DECLS
 
 G_DECLARE_FINAL_TYPE (TerminalTab, terminal_tab, TERMINAL, TAB, GtkWidget)
 
+/*
+ * A tab holds one or more terminals ("panes"), arranged in a tree of
+ * GtkPaned widgets. The active screen is the pane that had the focus last;
+ * the tab forwards its title and icons, and emits "screen-added" and
+ * "screen-removed" when panes are split off or closed.
+ */
+
 TerminalTab* terminal_tab_new (TerminalScreen *screen);
 
 TerminalScreen *terminal_tab_get_screen (TerminalTab *tab);
 
-void terminal_tab_destroy (TerminalTab *tab);
+void terminal_tab_set_active_screen(TerminalTab* tab,
+                                    TerminalScreen* screen);
+
+GList* terminal_tab_list_screens(TerminalTab* tab);
+
+guint terminal_tab_get_n_screens(TerminalTab* tab);
+
+bool terminal_tab_is_split(TerminalTab* tab);
+
+void terminal_tab_split(TerminalTab* tab,
+                        TerminalScreen* screen,
+                        TerminalScreen* new_screen,
+                        GtkOrientation orientation);
+
+void terminal_tab_remove_screen(TerminalTab* tab,
+                                TerminalScreen* screen);
+
+bool terminal_tab_focus_pane(TerminalTab* tab,
+                             GtkDirectionType direction);
+
+bool terminal_tab_resize_pane(TerminalTab* tab,
+                              GtkDirectionType direction);
+
+void terminal_tab_set_zoomed(TerminalTab* tab,
+                             bool zoomed);
+
+bool terminal_tab_get_zoomed(TerminalTab* tab);
 
 TerminalTab *terminal_tab_get_from_screen (TerminalScreen *screen);
 
-void terminal_tab_set_policy (TerminalTab *tab,
-                              TerminalScrollbarPolicy hpolicy,
-                              TerminalScrollbarPolicy vpolicy);
+void terminal_tab_set_screen_policy(TerminalScreen* screen,
+                                    TerminalScrollbarPolicy hpolicy,
+                                    TerminalScrollbarPolicy vpolicy);
 
-void terminal_tab_add_overlay (TerminalTab *tab,
-                               GtkWidget *child);
-void terminal_tab_remove_overlay (TerminalTab *tab,
-                                  GtkWidget *child);
+void terminal_tab_set_screen_kinetic_scrolling(TerminalScreen* screen,
+                                               bool enable);
+
+void terminal_tab_add_screen_overlay(TerminalScreen* screen,
+                                     GtkWidget* child);
+
+void terminal_tab_remove_overlay(GtkWidget* child);
 
 void terminal_tab_set_pinned(TerminalTab* tab,
                              bool pinned);
 
 bool terminal_tab_get_pinned(TerminalTab* tab);
-
-void terminal_tab_set_kinetic_scrolling(TerminalTab* tab,
-                                        bool enable);
-
-bool terminal_tab_get_kinetic_scrolling(TerminalTab* tab);
 
 void terminal_tab_set_active(TerminalTab* tab,
                              bool active);

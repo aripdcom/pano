@@ -46,6 +46,18 @@
 	<attribute name="accel"></attribute>
       </item>
       <item>
+        <attribute name="label" translatable="yes">Split _Right</attribute>
+        <attribute name="action">win.split</attribute>
+        <attribute name="target">right</attribute>
+	<attribute name="accel"></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Split _Down</attribute>
+        <attribute name="action">win.split</attribute>
+        <attribute name="target">down</attribute>
+	<attribute name="accel"></attribute>
+      </item>
+      <item>
         <attribute name="label" translatable="yes">_Full Screen</attribute>
         <attribute name="action">win.toggle-fullscreen</attribute>
 	<attribute name="accel"></attribute>

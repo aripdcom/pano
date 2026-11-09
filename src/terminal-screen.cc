@@ -1977,19 +1977,15 @@ info_bar_response_cb (GtkWidget *info_bar,
                       int response,
                       TerminalScreen *screen)
 {
-  TerminalTab *tab;
-
   gtk_widget_grab_focus (GTK_WIDGET (screen));
-
-  tab = TERMINAL_TAB (gtk_widget_get_ancestor (info_bar, TERMINAL_TYPE_TAB));
 
   switch (response) {
     case GTK_RESPONSE_CANCEL:
-      terminal_tab_remove_overlay (tab, info_bar);
+      terminal_tab_remove_overlay (info_bar);
       g_signal_emit (screen, signals[CLOSE_SCREEN], 0);
       break;
     case RESPONSE_RELAUNCH:
-      terminal_tab_remove_overlay (tab, info_bar);
+      terminal_tab_remove_overlay (info_bar);
       terminal_screen_reexec (screen, nullptr, nullptr, nullptr, nullptr);
       break;
     case RESPONSE_EDIT_PREFERENCES:
@@ -1998,7 +1994,7 @@ info_bar_response_cb (GtkWidget *info_bar,
                                      "custom-command-entry");
       break;
     default:
-      terminal_tab_remove_overlay (tab, info_bar);
+      terminal_tab_remove_overlay (info_bar);
       break;
   }
 }
@@ -2026,8 +2022,7 @@ terminal_screen_show_info_bar (TerminalScreen *screen,
 
   gtk_widget_set_halign (info_bar, GTK_ALIGN_FILL);
   gtk_widget_set_valign (info_bar, GTK_ALIGN_START);
-  terminal_tab_add_overlay(terminal_tab_get_from_screen (screen),
-                                        info_bar);
+  terminal_tab_add_screen_overlay(screen, info_bar);
   terminal_info_bar_set_default_response (TERMINAL_INFO_BAR (info_bar), GTK_RESPONSE_CANCEL);
   gtk_widget_show (info_bar);
 }
@@ -2395,8 +2390,7 @@ terminal_screen_child_exited (VteTerminal *terminal,
 
       gtk_widget_set_halign (info_bar, GTK_ALIGN_FILL);
       gtk_widget_set_valign (info_bar, GTK_ALIGN_START);
-      terminal_tab_add_overlay(terminal_tab_get_from_screen (screen),
-                                            info_bar);
+      terminal_tab_add_screen_overlay(screen, info_bar);
       terminal_info_bar_set_default_response (TERMINAL_INFO_BAR (info_bar), RESPONSE_RELAUNCH);
       gtk_widget_show (info_bar);
       break;
@@ -2798,25 +2792,17 @@ _terminal_screen_update_scrollbar (TerminalScreen *screen)
 {
   TerminalScreenPrivate *priv = screen->priv;
 
-  auto const tab = terminal_tab_get_from_screen (screen);
-  if (tab == nullptr)
-    return;
-
   auto const vpolicy = TerminalScrollbarPolicy(g_settings_get_enum (priv->profile, TERMINAL_PROFILE_SCROLLBAR_POLICY_KEY));
 
-  terminal_tab_set_policy (tab, TERMINAL_SCROLLBAR_POLICY_NEVER, vpolicy);
+  terminal_tab_set_screen_policy (screen, TERMINAL_SCROLLBAR_POLICY_NEVER, vpolicy);
 }
 
 void
 _terminal_screen_update_kinetic_scrolling(TerminalScreen* screen)
 {
-  auto const tab = terminal_tab_get_from_screen (screen);
-  if (tab == nullptr)
-    return;
-
   auto const priv = screen->priv;
   auto const value = g_settings_get_boolean(priv->profile, TERMINAL_PROFILE_KINETIC_SCROLLING_KEY);
-  terminal_tab_set_kinetic_scrolling(tab, value);
+  terminal_tab_set_screen_kinetic_scrolling(screen, value);
 }
 
 void

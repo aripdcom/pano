@@ -124,15 +124,11 @@ handle_get_initial_result_set_cb (TerminalSearchProvider2  *skeleton,
       if (!TERMINAL_IS_WINDOW (l->data))
         continue;
 
+      // Every pane of every tab
       auto tabs = terminal_window_list_tabs (window);
       for (auto t = tabs; t != nullptr; t = t->next)
-        {
-          TerminalTab *tab = TERMINAL_TAB (t->data);
-          TerminalScreen *screen;
-
-          screen = terminal_tab_get_screen (tab);
-          screens = g_list_prepend (screens, screen);
-        }
+        screens = g_list_concat (terminal_tab_list_screens (TERMINAL_TAB (t->data)), screens);
+      g_list_free (tabs);
     }
 
   casefolded_terms = normalize_casefold_and_unaccent_terms (terms);
