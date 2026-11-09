@@ -133,6 +133,11 @@ struct _TerminalScreenPrivate
   char* user_title; /* set with Set Title, or nullptr */
   char* initial_title; /* from --title, or nullptr */
   char* directory_title; /* the working directory, when no title is set */
+  /* The colors in use, if not those of the system style */
+  gboolean has_custom_colors;
+  GdkRGBA custom_foreground;
+  GdkRGBA custom_background;
+
   GtkWidget* bell_flash; /* the visual bell's overlay, while it shows */
   guint bell_flash_source;
 
@@ -229,6 +234,7 @@ enum
   PROMPTS_CHANGED,
   COLUMNS_CHANGED,
   QUICK_SELECT_CHOSEN,
+  COLORS_CHANGED,
   LAST_SIGNAL
 };
 
@@ -1901,6 +1907,17 @@ terminal_screen_class_init (TerminalScreenClass *klass)
                   G_TYPE_NONE,
                   3, G_TYPE_STRING, G_TYPE_INT, G_TYPE_BOOLEAN);
 
+  /* The terminal's colors changed, see terminal_screen_get_custom_colors() */
+  signals[COLORS_CHANGED] =
+    g_signal_new (I_("colors-changed"),
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  0,
+                  nullptr, nullptr,
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE,
+                  0);
+
   signals[PROMPTS_CHANGED] =
     g_signal_new (I_("prompts-changed"),
                   G_OBJECT_CLASS_TYPE (object_class),
@@ -2696,6 +2713,35 @@ update_color_scheme (TerminalScreen *screen)
   vte_terminal_set_color_cursor_foreground (VTE_TERMINAL (screen), cursor_fgp);
   vte_terminal_set_color_highlight (VTE_TERMINAL (screen), highlight_bgp);
   vte_terminal_set_color_highlight_foreground (VTE_TERMINAL (screen), highlight_fgp);
+
+  // The window may color its header bar alike
+  priv->has_custom_colors = scheme != nullptr || !use_theme_colors;
+  priv->custom_foreground = fg;
+  priv->custom_background = bg;
+  priv->custom_background.alpha = 1.0f;
+  g_signal_emit (screen, signals[COLORS_CHANGED], 0);
+}
+
+/**
+ * terminal_screen_get_custom_colors:
+ * @screen: a #TerminalScreen
+ * @foreground: (out): the foreground color
+ * @background: (out): the background color, opaque
+ *
+ * Returns: whether @screen uses colors of its own, from a color scheme or
+ *   its profile, rather than those of the system style
+ */
+gboolean
+terminal_screen_get_custom_colors (TerminalScreen *screen,
+                                   GdkRGBA *foreground,
+                                   GdkRGBA *background)
+{
+  g_return_val_if_fail (TERMINAL_IS_SCREEN (screen), FALSE);
+
+  auto const priv = screen->priv;
+  *foreground = priv->custom_foreground;
+  *background = priv->custom_background;
+  return priv->has_custom_colors;
 }
 
 static void

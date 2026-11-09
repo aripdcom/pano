@@ -74,6 +74,8 @@ struct _TerminalWindow
   AdwToastOverlay* toast_overlay;
   AdwToast* closed_tab_toast; // weak pointer
   AdwToast* copy_toast; // weak pointer
+  GtkCssProvider* colors_provider; // the header bar in the terminal's colors
+  char* colors_class; // the CSS class that selects this window
   GtkWidget *main_vbox;
   GtkWidget* ask_default_infobar;
   GtkWidget* import_infobar;
@@ -963,6 +965,64 @@ window_sync_process_kind(TerminalWindow* window)
     gtk_widget_remove_css_class(widget, "remote-session");
 }
 
+/* Gives the header bar, the tab bar and the tab list the colors of the
+ * active terminal, when it has colors of its own. The colors of root and
+ * remote sessions take precedence. */
+static void
+window_sync_colors(TerminalWindow* window)
+{
+  if (window->disposed)
+    return;
+
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  GdkRGBA fg, bg;
+  auto const custom = window->active_screen &&
+    g_settings_get_boolean(settings, TERMINAL_SETTING_HEADER_BAR_COLORS_KEY) &&
+    terminal_screen_get_custom_colors(window->active_screen, &fg, &bg);
+
+  if (!custom) {
+    gtk_widget_remove_css_class(GTK_WIDGET(window), "terminal-colors");
+    return;
+  }
+
+  if (!window->colors_provider) {
+    static guint n_windows = 0;
+    window->colors_class = g_strdup_printf("pano-window-%u", ++n_windows);
+    gtk_widget_add_css_class(GTK_WIDGET(window), window->colors_class);
+    window->colors_provider = gtk_css_provider_new();
+    gtk_style_context_add_provider_for_display(gtk_widget_get_display(GTK_WIDGET(window)),
+                                               GTK_STYLE_PROVIDER(window->colors_provider),
+                                               GTK_STYLE_PROVIDER_PRIORITY_APPLICATION + 1);
+  }
+
+  gs_free char* fg_str = gdk_rgba_to_string(&fg);
+  gs_free char* bg_str = gdk_rgba_to_string(&bg);
+  gs_free char* css = g_strdup_printf(
+    "window.terminal-window.%1$s.terminal-colors:not(.root-session):not(.remote-session) toolbarview .top-bar,"
+    "window.terminal-window.%1$s.terminal-colors:not(.root-session):not(.remote-session) tabbar .box,"
+    "window.terminal-window.%1$s.terminal-colors:not(.root-session):not(.remote-session) tabsidebar"
+    " { background-color: %2$s; color: %3$s; }",
+    window->colors_class, bg_str, fg_str);
+  gtk_css_provider_load_from_string(window->colors_provider, css);
+  gtk_widget_add_css_class(GTK_WIDGET(window), "terminal-colors");
+}
+
+static void
+screen_colors_changed_cb(TerminalScreen* screen,
+                         TerminalWindow* window)
+{
+  if (screen == window->active_screen)
+    window_sync_colors(window);
+}
+
+static void
+window_header_bar_colors_changed_cb(GSettings* settings,
+                                    char const* key,
+                                    TerminalWindow* window)
+{
+  window_sync_colors(window);
+}
+
 static void
 screen_process_kind_changed_cb(TerminalScreen* screen,
                                GParamSpec* pspec,
@@ -1003,6 +1063,7 @@ terminal_window_update_pane_actions(TerminalWindow* window)
   // Panes come and go with the same calls
   window_sync_translucency(window);
   window_sync_process_kind(window);
+  window_sync_colors(window);
   window_update_broadcast(window);
 }
 
@@ -3549,6 +3610,8 @@ terminal_window_constructed (GObject *object)
   window_sync_dim_panes_cb(settings, TERMINAL_SETTING_DIM_INACTIVE_PANES_KEY, window);
   g_signal_connect(settings, "changed::" TERMINAL_SETTING_DIM_INACTIVE_PANES_KEY,
                    G_CALLBACK(window_sync_dim_panes_cb), window);
+  g_signal_connect(settings, "changed::" TERMINAL_SETTING_HEADER_BAR_COLORS_KEY,
+                   G_CALLBACK(window_header_bar_colors_changed_cb), window);
 }
 
 static void
@@ -3657,6 +3720,15 @@ terminal_window_dispose (GObject *object)
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_sync_dim_panes_cb,
                                        window);
+  g_signal_handlers_disconnect_by_func(settings,
+                                       (void*)window_header_bar_colors_changed_cb,
+                                       window);
+  if (window->colors_provider) {
+    gtk_style_context_remove_provider_for_display(gtk_widget_get_display(GTK_WIDGET(window)),
+                                                  GTK_STYLE_PROVIDER(window->colors_provider));
+    g_clear_object(&window->colors_provider);
+  }
+  g_clear_pointer(&window->colors_class, g_free);
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_import_offered_changed_cb,
                                        window);
@@ -4054,6 +4126,8 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
                     G_CALLBACK (screen_bell_cb), window);
   g_signal_connect (screen, "quick-select-chosen",
                     G_CALLBACK (screen_quick_select_chosen_cb), window);
+  g_signal_connect (screen, "colors-changed",
+                    G_CALLBACK (screen_colors_changed_cb), window);
   g_signal_connect (screen, "prompts-changed",
                     G_CALLBACK (screen_prompts_changed_cb), window);
   g_signal_connect (screen, "commit",
@@ -4160,6 +4234,9 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_quick_select_chosen_cb,
+                                        window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_colors_changed_cb,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_prompts_changed_cb,

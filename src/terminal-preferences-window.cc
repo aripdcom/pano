@@ -49,6 +49,7 @@ struct _TerminalPreferencesWindow
   AdwSwitchRow         *toast_on_copy;
   AdwSwitchRow         *ignore_program_titles;
   AdwSwitchRow         *dim_inactive_panes;
+  AdwSwitchRow         *header_bar_colors;
   AdwSwitchRow         *show_pane_titles;
   AdwSpinRow           *notify_command_min_duration;
   AdwSwitchRow         *restore_session;
@@ -549,6 +550,11 @@ terminal_preferences_window_constructed (GObject *object)
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_HEADER_BAR_COLORS_KEY,
+                   self->header_bar_colors,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_DIM_INACTIVE_PANES_KEY,
                    self->dim_inactive_panes,
                    "active",
@@ -750,6 +756,7 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, toast_on_copy);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, ignore_program_titles);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, dim_inactive_panes);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, header_bar_colors);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, show_pane_titles);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_min_duration);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_session);

@@ -873,6 +873,12 @@
       <summary>Whether the user has been asked to import the settings of GNOME Terminal</summary>
     </key>
 
+    <key name="header-bar-colors" type="b">
+      <default>true</default>
+      <summary>Whether to give the header bar and the tabs the colors of the active terminal</summary>
+      <description>Only when the terminal uses a color scheme or colors of its own, not the system style; the colors for root and remote sessions take precedence.</description>
+    </key>
+
     <key name="dim-inactive-panes" type="b">
       <default>true</default>
       <summary>Whether to dim the panes of a split tab other than the active one</summary>

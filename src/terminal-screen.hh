@@ -213,6 +213,10 @@ typedef enum {
   TERMINAL_QUICK_SELECT_OPEN,
 } TerminalQuickSelectAction;
 
+gboolean terminal_screen_get_custom_colors(TerminalScreen* screen,
+                                           GdkRGBA* foreground,
+                                           GdkRGBA* background);
+
 gboolean terminal_screen_start_quick_select(TerminalScreen* screen);
 
 void terminal_screen_stop_quick_select(TerminalScreen* screen);

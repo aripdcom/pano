@@ -145,6 +145,12 @@
               </object>
             </child>
             <child>
+              <object class="AdwSwitchRow" id="header_bar_colors">
+                <property name="title" translatable="yes">Color the Header Bar Like the Terminal</property>
+                <property name="subtitle" translatable="yes">When the terminal uses a color scheme or colors of its own</property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="dim_inactive_panes">
                 <property name="title" translatable="yes">Dim Inactive Panes</property>
                 <property name="subtitle" translatable="yes">In a split tab, fade the panes other than the one you type in</property>

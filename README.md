@@ -76,6 +76,10 @@ Everything GNOME Terminal provides, plus:
   background is marked instead.
 * **Space around the text**: choose none, small or large padding between
   the terminal text and its edges in *Preferences → Appearance*.
+* **Header bar in the terminal's colors**: when the active terminal uses a
+  color scheme or colors of its own, the header bar, the tab bar and the
+  tab list take its background and text colors, so that the window looks
+  like one piece. Turn it off in *Preferences → Appearance*.
 * **Background transparency**: set the background opacity of each profile in
   *Preferences → Profile → Colors → Background Opacity*. Only the terminal
   background lets the desktop through; text, header bar and tab bars stay
