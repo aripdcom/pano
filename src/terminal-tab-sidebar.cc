@@ -419,13 +419,13 @@ list_drop_cb(GtkDropTarget* target,
   return terminal_tab_sidebar_move_page(sidebar, page, adw_tab_view_get_n_pages(sidebar->view));
 }
 
+/* The list view destroys rows on its own; forget them then */
 static void
-factory_teardown_cb(GtkSignalListItemFactory* factory,
-                    GObject* object,
-                    TerminalTabSidebar* sidebar)
+row_finalized_cb(void* user_data,
+                 GObject* row)
 {
-  if (auto const row = gtk_list_item_get_child(GTK_LIST_ITEM(object)))
-    g_ptr_array_remove(sidebar->rows, row);
+  auto const sidebar = TERMINAL_TAB_SIDEBAR(user_data);
+  g_ptr_array_remove(sidebar->rows, row);
 }
 
 static void
@@ -492,6 +492,7 @@ factory_setup_cb(GtkSignalListItemFactory* factory,
   g_object_set_data_full(G_OBJECT(row), ROW_DATA_KEY, data, row_data_free);
   gtk_list_item_set_child(item, row);
   g_ptr_array_add(sidebar->rows, row);
+  g_object_weak_ref(G_OBJECT(row), row_finalized_cb, sidebar);
 }
 
 static void
@@ -800,7 +801,6 @@ terminal_tab_sidebar_init(TerminalTabSidebar* sidebar)
 
   auto const factory = gtk_signal_list_item_factory_new();
   g_signal_connect(factory, "setup", G_CALLBACK(factory_setup_cb), sidebar);
-  g_signal_connect(factory, "teardown", G_CALLBACK(factory_teardown_cb), sidebar);
   g_signal_connect(factory, "bind", G_CALLBACK(factory_bind_cb), sidebar);
   g_signal_connect(factory, "unbind", G_CALLBACK(factory_unbind_cb), sidebar);
 
@@ -864,7 +864,11 @@ terminal_tab_sidebar_dispose(GObject* object)
   g_clear_pointer(&sidebar->scrolled_window, gtk_widget_unparent);
   g_clear_pointer(&sidebar->handle, gtk_widget_unparent);
   sidebar->list_view = nullptr;
-  g_clear_pointer(&sidebar->rows, g_ptr_array_unref);
+  if (sidebar->rows) {
+    for (auto i = 0u; i < sidebar->rows->len; ++i)
+      g_object_weak_unref(G_OBJECT(g_ptr_array_index(sidebar->rows, i)), row_finalized_cb, sidebar);
+    g_clear_pointer(&sidebar->rows, g_ptr_array_unref);
+  }
 
   G_OBJECT_CLASS(terminal_tab_sidebar_parent_class)->dispose(object);
 }

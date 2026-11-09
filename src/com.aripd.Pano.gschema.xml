@@ -400,6 +400,10 @@
       <default>'&lt;Control&gt;&lt;Shift&gt;w'</default>
       <summary>Keyboard shortcut to close a tab</summary>
     </key>
+    <key name="reopen-closed-tab" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;t'</default>
+      <summary>Keyboard shortcut to reopen the last closed tab</summary>
+    </key>
     <key name="close-window" type="s">
       <default>'&lt;Control&gt;&lt;Shift&gt;q'</default>
       <summary>Keyboard shortcut to close a window</summary>

@@ -843,6 +843,42 @@ terminal_notebook_transfer_screen(TerminalNotebook* notebook,
                              position);
 }
 
+/**
+ * terminal_notebook_insert_tab_at:
+ * @notebook: a #TerminalNotebook
+ * @tab: a new #TerminalTab
+ * @position: the position, or -1 for the end; it is kept out of the
+ *   pinned tabs
+ */
+void
+terminal_notebook_insert_tab_at(TerminalNotebook* notebook,
+                                TerminalTab* tab,
+                                int position)
+{
+  g_return_if_fail(TERMINAL_IS_NOTEBOOK(notebook));
+  g_return_if_fail(TERMINAL_IS_TAB(tab));
+  g_return_if_fail(!gtk_widget_get_parent(GTK_WIDGET(tab)));
+
+  auto const n_pages = adw_tab_view_get_n_pages(notebook->tab_view);
+  auto const n_pinned = adw_tab_view_get_n_pinned_pages(notebook->tab_view);
+  if (position < 0 || position > n_pages)
+    position = n_pages;
+  position = MAX(position, n_pinned);
+
+  auto const page = adw_tab_view_insert(notebook->tab_view, GTK_WIDGET(tab), position);
+  bind_page(tab, page);
+}
+
+int
+terminal_notebook_get_tab_position(TerminalNotebook* notebook,
+                                   TerminalTab* tab)
+{
+  g_return_val_if_fail(TERMINAL_IS_NOTEBOOK(notebook), -1);
+
+  auto const page = adw_tab_view_get_page(notebook->tab_view, GTK_WIDGET(tab));
+  return page ? adw_tab_view_get_page_position(notebook->tab_view, page) : -1;
+}
+
 void
 terminal_notebook_set_tab_needs_attention(TerminalNotebook* notebook,
                                           TerminalTab* tab,

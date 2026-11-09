@@ -26,6 +26,8 @@
               </object>
             </child>
             <property name="content">
+              <object class="AdwToastOverlay" id="toast_overlay">
+              <property name="child">
               <object class="GtkBox" id="content_box">
                 <property name="orientation">horizontal</property>
                 <child>
@@ -57,6 +59,8 @@
                     </child>
                   </object>
                 </child>
+              </object>
+              </property>
               </object>
             </property>
 	    <child type="bottom">

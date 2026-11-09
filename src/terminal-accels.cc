@@ -88,6 +88,7 @@
 #define KEY_NEXT_PROMPT         "next-prompt"
 #define KEY_COPY_OUTPUT         "copy-output"
 #define KEY_FOCUS_TAB_LIST      "focus-tab-list"
+#define KEY_REOPEN_TAB          "reopen-closed-tab"
 #define KEY_BROADCAST_TAB       "broadcast-tab"
 #define KEY_BROADCAST_WINDOW    "broadcast-window"
 #define KEY_SPLIT_RIGHT         "split-right"
@@ -162,6 +163,7 @@ static KeyEntry file_entries[] = {
   ENTRY (N_("Print"),         KEY_PRINT,         "print",         nullptr,    nullptr                  ),
 #endif
   ENTRY (N_("Close Tab"),     KEY_CLOSE_TAB,     "close",         "s",     "'tab'"               ),
+  ENTRY (N_("Reopen Closed Tab"), KEY_REOPEN_TAB, "reopen-tab",     nullptr, nullptr               ),
   ENTRY (N_("Close Window"),  KEY_CLOSE_WINDOW,  "close",         "s",     "'window'"            ),
 };
 

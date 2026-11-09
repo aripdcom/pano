@@ -72,6 +72,13 @@ void terminal_notebook_transfer_screen(TerminalNotebook* notebook,
                                        TerminalNotebook* new_notebook,
                                        int position);
 
+void terminal_notebook_insert_tab_at(TerminalNotebook* notebook,
+                                     TerminalTab* tab,
+                                     int position);
+
+int terminal_notebook_get_tab_position(TerminalNotebook* notebook,
+                                       TerminalTab* tab);
+
 void terminal_notebook_set_tab_needs_attention(TerminalNotebook* notebook,
                                                TerminalTab* tab,
                                                bool needs_attention);

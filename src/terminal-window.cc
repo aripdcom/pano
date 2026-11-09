@@ -69,6 +69,8 @@ struct _TerminalWindow
   GActionMap* notebook_context_action_group; // unowned
   AdwToolbarView *toolbar_view;
   GtkWidget* content_box;
+  AdwToastOverlay* toast_overlay;
+  AdwToast* closed_tab_toast; // weak pointer
   GtkWidget *main_vbox;
   GtkWidget* ask_default_infobar;
   AdwBanner* broadcast_banner;
@@ -969,6 +971,84 @@ clipboard_uris_received_cb (GObject *object,
 
   g_weak_ref_clear (&data->screen_weak_ref);
   g_slice_free (PasteData, data);
+}
+
+/* Reopening closed tabs */
+
+#define MAX_CLOSED_TABS 10
+
+// The last closed tabs of all windows, most recent first: a{sv} with
+// "tab" (see terminal_session_save_tab()) and "position" (i)
+static GQueue closed_tabs = G_QUEUE_INIT;
+
+static void
+update_reopen_tab_actions(void)
+{
+  auto const can_reopen = !g_queue_is_empty(&closed_tabs);
+  for (auto l = gtk_application_get_windows(GTK_APPLICATION(terminal_app_get())); l; l = l->next) {
+    if (!TERMINAL_IS_WINDOW(l->data) || TERMINAL_WINDOW(l->data)->disposed)
+      continue;
+    g_simple_action_set_enabled(lookup_action(TERMINAL_WINDOW(l->data), "reopen-tab"), can_reopen);
+  }
+}
+
+/* Remembers a tab that is about to close, and offers to undo that */
+static void
+window_remember_closed_tab(TerminalWindow* window,
+                           TerminalTab* tab)
+{
+  auto const data = terminal_session_save_tab(tab);
+  if (!data)
+    return;
+
+  GVariantBuilder builder;
+  g_variant_builder_init(&builder, G_VARIANT_TYPE_VARDICT);
+  g_variant_builder_add(&builder, "{sv}", "tab", data);
+  g_variant_builder_add(&builder, "{sv}", "position",
+                        g_variant_new_int32(terminal_notebook_get_tab_position(window->notebook, tab)));
+  g_queue_push_head(&closed_tabs, g_variant_ref_sink(g_variant_builder_end(&builder)));
+
+  while (g_queue_get_length(&closed_tabs) > MAX_CLOSED_TABS)
+    g_variant_unref(reinterpret_cast<GVariant*>(g_queue_pop_tail(&closed_tabs)));
+
+  update_reopen_tab_actions();
+
+  // The window goes away with its last tab. A newer toast replaces an
+  // older one rather than waiting behind it.
+  if (terminal_notebook_get_n_screens(window->notebook) > 1) {
+    if (window->closed_tab_toast)
+      adw_toast_dismiss(window->closed_tab_toast);
+
+    auto const toast = adw_toast_new(_("Tab closed"));
+    adw_toast_set_button_label(toast, _("_Undo"));
+    adw_toast_set_action_name(toast, "win.reopen-tab");
+    window->closed_tab_toast = toast;
+    g_object_add_weak_pointer(G_OBJECT(toast), reinterpret_cast<void**>(&window->closed_tab_toast));
+    adw_toast_overlay_add_toast(window->toast_overlay, toast);
+  }
+}
+
+static void
+action_reopen_tab_cb(GSimpleAction* action,
+                     GVariant* parameter,
+                     gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+
+  if (window->closed_tab_toast)
+    adw_toast_dismiss(window->closed_tab_toast);
+
+  gs_unref_variant auto record = reinterpret_cast<GVariant*>(g_queue_pop_head(&closed_tabs));
+  update_reopen_tab_actions();
+  if (!record)
+    return;
+
+  gs_unref_variant GVariant* data = g_variant_lookup_value(record, "tab", G_VARIANT_TYPE_VARDICT);
+  int position = -1;
+  g_variant_lookup(record, "position", "i", &position);
+
+  if (auto const tab = data ? terminal_session_restore_tab(window, data, position) : nullptr)
+    terminal_window_switch_screen(window, terminal_tab_get_screen(tab));
 }
 
 /* Input broadcasting */
@@ -2635,6 +2715,7 @@ terminal_window_init (TerminalWindow *window)
     { "about",               action_about_cb,            nullptr,   nullptr, nullptr },
     { "close",               action_close_cb,            "s",    nullptr, nullptr },
     { "close-pane",          action_close_pane_cb,       nullptr,   nullptr, nullptr },
+    { "reopen-tab",          action_reopen_tab_cb,       nullptr,   nullptr, nullptr },
     { "copy-output",         action_copy_output_cb,      nullptr,   nullptr, nullptr },
     { "scroll-to-prompt",    action_prompt_cb,           "s",    nullptr, nullptr },
     { "copy",                action_copy_cb,             "s",    nullptr, nullptr },
@@ -2809,6 +2890,9 @@ terminal_window_init (TerminalWindow *window)
   g_signal_connect_swapped (window->find_bar, "notify::has-search",
                             G_CALLBACK (terminal_window_update_search_sensitivity), window);
 
+  g_simple_action_set_enabled (lookup_action (window, "reopen-tab"),
+                               !g_queue_is_empty (&closed_tabs));
+
   g_settings_bind (terminal_app_get_global_settings (app),
                    TERMINAL_SETTING_TAB_SIDEBAR_WIDTH_KEY,
                    window->tab_sidebar, "width",
@@ -2964,6 +3048,7 @@ terminal_window_class_init (TerminalWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, tab_bar);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, tab_overview);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, tab_sidebar);
+  gtk_widget_class_bind_template_child (widget_class, TerminalWindow, toast_overlay);
   gtk_widget_class_bind_template_child (widget_class, TerminalWindow, toolbar_view);
 
   g_type_ensure (TERMINAL_TYPE_HEADERBAR);
@@ -2977,6 +3062,12 @@ terminal_window_dispose (GObject *object)
 {
   TerminalWindow *window = TERMINAL_WINDOW (object);
   TerminalApp *app = terminal_app_get ();
+
+  if (window->closed_tab_toast) {
+    g_object_remove_weak_pointer(G_OBJECT(window->closed_tab_toast),
+                                 reinterpret_cast<void**>(&window->closed_tab_toast));
+    window->closed_tab_toast = nullptr;
+  }
 
   // Before the tabs go away, so that the last window can be restored
   if (!window->disposed)
@@ -3149,6 +3240,9 @@ screen_close_request_cb (TerminalNotebook *notebook,
 {
   if (confirm_close_window_or_tab (window, screen, CloseKind::TAB))
     return GDK_EVENT_STOP;
+
+  if (auto const tab = terminal_tab_get_from_screen (screen))
+    window_remember_closed_tab (window, tab);
   return GDK_EVENT_PROPAGATE;
 }
 
@@ -3174,6 +3268,17 @@ terminal_window_add_tab(TerminalWindow* window,
     terminal_notebook_append_tab(window->notebook, tab, false);
   }
 
+  gtk_widget_grab_focus(GTK_WIDGET(terminal_tab_get_screen(tab)));
+}
+
+void
+terminal_window_insert_tab(TerminalWindow* window,
+                           TerminalTab* tab,
+                           int position)
+{
+  g_return_if_fail(TERMINAL_IS_WINDOW(window));
+
+  terminal_notebook_insert_tab_at(window->notebook, tab, position);
   gtk_widget_grab_focus(GTK_WIDGET(terminal_tab_get_screen(tab)));
 }
 
@@ -3767,6 +3872,9 @@ confirm_close_response_cb (GtkWidget      *dialog,
     if (accepted)
       terminal_window_remove_screen(window, screen);
   } else if (kind == CloseKind::TAB) {
+    if (accepted)
+      if (auto const tab = terminal_tab_get_from_screen (screen))
+        window_remember_closed_tab (window, tab);
     terminal_notebook_confirm_close (window->notebook, screen, accepted);
   } else if (accepted)
     g_idle_add_full (G_PRIORITY_DEFAULT,

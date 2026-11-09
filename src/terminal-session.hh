@@ -18,6 +18,7 @@
 #pragma once
 
 #include "terminal-screen.hh"
+#include "terminal-tab.hh"
 #include "terminal-window.hh"
 
 G_BEGIN_DECLS
@@ -40,5 +41,11 @@ bool terminal_session_restore(char const* activation_token,
                               char const* startup_id);
 
 void terminal_session_apply_window_size(TerminalScreen* screen);
+
+GVariant* terminal_session_save_tab(TerminalTab* tab);
+
+TerminalTab* terminal_session_restore_tab(TerminalWindow* window,
+                                          GVariant* data,
+                                          int position);
 
 G_END_DECLS

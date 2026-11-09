@@ -139,6 +139,35 @@ window_has_free_size(TerminalWindow* window)
     !gtk_window_is_fullscreen(GTK_WINDOW(window));
 }
 
+/**
+ * terminal_session_save_tab:
+ * @tab: a #TerminalTab
+ *
+ * Returns: (transfer floating) (nullable): the panes, working directories
+ *   and profiles of @tab, for terminal_session_restore_tab()
+ */
+GVariant*
+terminal_session_save_tab(TerminalTab* tab)
+{
+  g_return_val_if_fail(TERMINAL_IS_TAB(tab), nullptr);
+
+  auto const layout = terminal_tab_save_layout(tab, save_screen, nullptr);
+  if (!layout)
+    return nullptr;
+
+  auto const screens = terminal_tab_list_screens(tab);
+  auto const active_pane = g_list_index(screens, terminal_tab_get_screen(tab));
+  g_list_free(screens);
+
+  GVariantBuilder builder;
+  g_variant_builder_init(&builder, G_VARIANT_TYPE_VARDICT);
+  g_variant_builder_add(&builder, "{sv}", "layout", layout);
+  g_variant_builder_add(&builder, "{sv}", "active", g_variant_new_int32(MAX(active_pane, 0)));
+  g_variant_builder_add(&builder, "{sv}", "pinned", g_variant_new_boolean(terminal_tab_get_pinned(tab)));
+  g_variant_builder_add(&builder, "{sv}", "zoomed", g_variant_new_boolean(terminal_tab_get_zoomed(tab)));
+  return g_variant_builder_end(&builder);
+}
+
 static GVariant*
 save_window(TerminalWindow* window)
 {
@@ -158,21 +187,8 @@ save_window(TerminalWindow* window)
     if (tab == active_tab)
       active_tab_index = index;
 
-    auto const layout = terminal_tab_save_layout(tab, save_screen, nullptr);
-    if (!layout)
-      continue;
-
-    auto const screens = terminal_tab_list_screens(tab);
-    auto const active_pane = g_list_index(screens, terminal_tab_get_screen(tab));
-    g_list_free(screens);
-
-    GVariantBuilder tab_builder;
-    g_variant_builder_init(&tab_builder, G_VARIANT_TYPE_VARDICT);
-    g_variant_builder_add(&tab_builder, "{sv}", "layout", layout);
-    g_variant_builder_add(&tab_builder, "{sv}", "active", g_variant_new_int32(MAX(active_pane, 0)));
-    g_variant_builder_add(&tab_builder, "{sv}", "pinned", g_variant_new_boolean(terminal_tab_get_pinned(tab)));
-    g_variant_builder_add(&tab_builder, "{sv}", "zoomed", g_variant_new_boolean(terminal_tab_get_zoomed(tab)));
-    g_variant_builder_add_value(&tabs_builder, g_variant_builder_end(&tab_builder));
+    if (auto const tab_data = terminal_session_save_tab(tab))
+      g_variant_builder_add_value(&tabs_builder, tab_data);
   }
   g_list_free(tabs);
 
@@ -442,60 +458,55 @@ restore_screen_cb(GVariant* pane,
   return screen;
 }
 
-static TerminalWindow*
-restore_window(GVariant* data,
-               char const* activation_token,
-               char const* startup_id)
+/**
+ * terminal_session_restore_tab:
+ * @window: a #TerminalWindow
+ * @data: a tab from terminal_session_save_tab()
+ * @position: where to put the tab, or -1 for the end
+ *
+ * Creates the tab with a new shell in every pane, in its old working
+ * directory if that still exists.
+ *
+ * Returns: (transfer none) (nullable): the new tab
+ */
+TerminalTab*
+terminal_session_restore_tab(TerminalWindow* window,
+                             GVariant* data,
+                             int position)
 {
-  gs_unref_variant GVariant* tabs_data = g_variant_lookup_value(data, "tabs", G_VARIANT_TYPE("aa{sv}"));
-  if (!tabs_data || g_variant_n_children(tabs_data) == 0)
+  g_return_val_if_fail(TERMINAL_IS_WINDOW(window), nullptr);
+  g_return_val_if_fail(data != nullptr, nullptr);
+
+  gs_unref_variant GVariant* layout = g_variant_lookup_value(data, "layout", G_VARIANT_TYPE_VARDICT);
+  if (!layout)
     return nullptr;
 
-  auto const window = terminal_window_new(G_APPLICATION(terminal_app_get()));
-  if (activation_token)
-    gtk_window_set_startup_id(GTK_WINDOW(window), activation_token);
-  else if (startup_id)
-    gtk_window_set_startup_id(GTK_WINDOW(window), startup_id);
-
   RestoreContext context{g_ptr_array_new(), g_ptr_array_new_with_free_func(g_free)};
-  gs_unref_ptrarray GPtrArray* tabs = g_ptr_array_new();
-
-  auto const n_tabs = g_variant_n_children(tabs_data);
-  for (gsize i = 0; i < n_tabs; ++i) {
-    gs_unref_variant GVariant* tab_data = g_variant_get_child_value(tabs_data, i);
-    gs_unref_variant GVariant* layout = g_variant_lookup_value(tab_data, "layout", G_VARIANT_TYPE_VARDICT);
-    auto const tab = layout ? terminal_tab_new_from_layout(layout, restore_screen_cb, &context) : nullptr;
-    if (!tab)
-      continue;
-
-    terminal_window_add_tab(window, tab, nullptr);
-    g_ptr_array_add(tabs, tab);
-
-    gboolean pinned;
-    if (g_variant_lookup(tab_data, "pinned", "b", &pinned) && pinned)
-      terminal_window_set_tab_pinned(window, tab, true);
-
-    int active;
-    if (g_variant_lookup(tab_data, "active", "i", &active)) {
-      auto const screens = terminal_tab_list_screens(tab);
-      if (auto const screen = g_list_nth_data(screens, guint(MAX(active, 0))))
-        terminal_tab_set_active_screen(tab, TERMINAL_SCREEN(screen));
-      g_list_free(screens);
-    }
-
-    gboolean zoomed;
-    if (g_variant_lookup(tab_data, "zoomed", "b", &zoomed) && zoomed)
-      terminal_tab_set_zoomed(tab, true);
-  }
-
-  if (tabs->len == 0) {
-    gtk_window_destroy(GTK_WINDOW(window));
+  auto const tab = terminal_tab_new_from_layout(layout, restore_screen_cb, &context);
+  if (!tab) {
     g_ptr_array_unref(context.screens);
     g_ptr_array_unref(context.cwds);
     return nullptr;
   }
 
-  // Start a shell in every pane, in its old directory if it still exists
+  terminal_window_insert_tab(window, tab, position);
+
+  gboolean pinned;
+  if (g_variant_lookup(data, "pinned", "b", &pinned) && pinned)
+    terminal_window_set_tab_pinned(window, tab, true);
+
+  int active;
+  if (g_variant_lookup(data, "active", "i", &active)) {
+    auto const screens = terminal_tab_list_screens(tab);
+    if (auto const screen = g_list_nth_data(screens, guint(MAX(active, 0))))
+      terminal_tab_set_active_screen(tab, TERMINAL_SCREEN(screen));
+    g_list_free(screens);
+  }
+
+  gboolean zoomed;
+  if (g_variant_lookup(data, "zoomed", "b", &zoomed) && zoomed)
+    terminal_tab_set_zoomed(tab, true);
+
   for (guint i = 0; i < context.screens->len; ++i) {
     auto const screen = TERMINAL_SCREEN(g_ptr_array_index(context.screens, i));
     auto cwd = reinterpret_cast<char const*>(g_ptr_array_index(context.cwds, i));
@@ -512,10 +523,42 @@ restore_window(GVariant* data,
                               nullptr, nullptr, nullptr, /* callback */
                               nullptr /* cancellable */,
                               &error))
-      g_warning("Failed to start a terminal of the restored session: %s", error->message);
+      g_warning("Failed to start a restored terminal: %s", error->message);
   }
   g_ptr_array_unref(context.screens);
   g_ptr_array_unref(context.cwds);
+
+  return tab;
+}
+
+static TerminalWindow*
+restore_window(GVariant* data,
+               char const* activation_token,
+               char const* startup_id)
+{
+  gs_unref_variant GVariant* tabs_data = g_variant_lookup_value(data, "tabs", G_VARIANT_TYPE("aa{sv}"));
+  if (!tabs_data || g_variant_n_children(tabs_data) == 0)
+    return nullptr;
+
+  auto const window = terminal_window_new(G_APPLICATION(terminal_app_get()));
+  if (activation_token)
+    gtk_window_set_startup_id(GTK_WINDOW(window), activation_token);
+  else if (startup_id)
+    gtk_window_set_startup_id(GTK_WINDOW(window), startup_id);
+
+  gs_unref_ptrarray GPtrArray* tabs = g_ptr_array_new();
+
+  auto const n_tabs = g_variant_n_children(tabs_data);
+  for (gsize i = 0; i < n_tabs; ++i) {
+    gs_unref_variant GVariant* tab_data = g_variant_get_child_value(tabs_data, i);
+    if (auto const tab = terminal_session_restore_tab(window, tab_data, -1))
+      g_ptr_array_add(tabs, tab);
+  }
+
+  if (tabs->len == 0) {
+    gtk_window_destroy(GTK_WINDOW(window));
+    return nullptr;
+  }
 
   int active_tab;
   if (!g_variant_lookup(data, "active-tab", "i", &active_tab) ||

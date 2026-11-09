@@ -46,6 +46,11 @@
 	<attribute name="accel"></attribute>
       </item>
       <item>
+        <attribute name="label" translatable="yes">Re_open Closed Tab</attribute>
+        <attribute name="action">win.reopen-tab</attribute>
+	<attribute name="accel"></attribute>
+      </item>
+      <item>
         <attribute name="label" translatable="yes">Split _Right</attribute>
         <attribute name="action">win.split</attribute>
         <attribute name="target">right</attribute>

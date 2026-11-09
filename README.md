@@ -78,6 +78,10 @@ Everything GNOME Terminal provides, plus:
   Panes in This Tab* or *To All Terminals in This Window* in the main or
   context menu. A banner shows how many terminals get the input, and they
   are framed; leave single terminals out with *Include This Terminal*.
+* **Reopen closed tabs**: Ctrl+Shift+Alt+T, the main menu or the Undo button
+  of the "Tab closed" notice bring back the last closed tab, with its panes,
+  working directories and profiles, where it was. The last ten closed tabs
+  are kept, also from windows that were closed.
 * **Quick terminal**: a terminal that you show and hide with one key. Run
   `pano-terminal --quick` to toggle it; to use a key such as F12, add that
   command in *Settings → Keyboard → View and Customize Shortcuts → Custom
