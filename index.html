@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pano — a terminal for GNOME, your tabs where you want them</title>
-  <meta name="description" content="Pano is a GTK 4 terminal emulator for GNOME. Put your tabs at the top, bottom, left or right of the window. A fork of GNOME Terminal.">
+  <title>Pano Terminal — a terminal for GNOME, your tabs where you want them</title>
+  <meta name="description" content="Pano Terminal is a GTK 4 terminal emulator for GNOME. Put your tabs at the top, bottom, left or right of the window. A fork of GNOME Terminal.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#fafafb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1d1d21" media="(prefers-color-scheme: dark)">
-  <meta property="og:title" content="Pano">
+  <meta property="og:title" content="Pano Terminal">
   <meta property="og:description" content="A terminal for GNOME. Put your tabs at the top, bottom, left or right.">
   <meta property="og:url" content="https://pano.aripd.com/">
   <meta property="og:image" content="https://pano.aripd.com/images/tabs-left-dark.png">
@@ -20,7 +20,7 @@
     <div class="container">
       <a class="brand" href="#">
         <img src="favicon.svg" alt="">
-        Pano
+        Pano Terminal
       </a>
       <nav class="site-nav" aria-label="Main">
         <a href="#tabs">Tabs</a>
@@ -37,7 +37,7 @@
         <span class="badge">Early development</span>
         <h1>A terminal for GNOME that puts your tabs where you want them</h1>
         <p>
-          Pano is a fast, native terminal emulator built with GTK&nbsp;4,
+          Pano Terminal is a fast, native terminal emulator built with GTK&nbsp;4,
           libadwaita and VTE. It keeps everything you know from GNOME Terminal
           and adds the power-user features it leaves out.
         </p>
@@ -159,8 +159,8 @@ ninja -C _build install</code></pre>
           If your distribution ships an older VTE, add
           <code>--force-fallback-for=vte-2.91-gtk4</code> to the
           <code>meson setup</code> command to build VTE along with Pano.
-          Pano has not been renamed yet, so it still installs as
-          <code>gnome-terminal</code>.
+          Pano Terminal installs as <code>pano-terminal</code> and keeps its
+          own settings, so it works side by side with GNOME Terminal.
         </p>
       </div>
     </section>
@@ -169,12 +169,12 @@ ninja -C _build install</code></pre>
   <footer class="site-footer">
     <div class="container">
       <p>
-        Pano is free software under the
+        Pano Terminal is free software under the
         <a href="https://github.com/aripdcom/pano/blob/main/COPYING">GNU GPL v3 or later</a>.
         Source code and issues on <a href="https://github.com/aripdcom/pano">GitHub</a>.
       </p>
       <p>
-        Pano is a fork of GNOME Terminal and is not affiliated with or
+        Pano Terminal is a fork of GNOME Terminal and is not affiliated with or
         endorsed by the GNOME Foundation.
       </p>
     </div>
