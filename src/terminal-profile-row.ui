@@ -52,6 +52,10 @@
         <attribute name="action">profile.clone</attribute>
       </item>
       <item>
+        <attribute name="label" translatable="yes">E_xport…</attribute>
+        <attribute name="action">profile.export</attribute>
+      </item>
+      <item>
         <attribute name="label" translatable="yes">_Delete</attribute>
         <attribute name="action">profile.delete</attribute>
       </item>

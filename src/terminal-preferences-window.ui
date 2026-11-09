@@ -314,6 +314,23 @@
         <child>
           <object class="AdwPreferencesGroup">
             <property name="title" translatable="yes">Profiles</property>
+            <property name="header-suffix">
+              <object class="GtkButton">
+                <property name="action-name">profile.import</property>
+                <property name="tooltip-text" translatable="yes">Import a profile from a file</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">document-open-symbolic</property>
+                    <property name="label" translatable="yes">_Import…</property>
+                    <property name="use-underline">true</property>
+                  </object>
+                </property>
+              </object>
+            </property>
             <child>
               <object class="GtkListBox" id="profiles_list_box">
                 <style>

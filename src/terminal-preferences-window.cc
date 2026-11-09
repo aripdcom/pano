@@ -23,7 +23,9 @@
 #include "terminal-preferences-list-item.hh"
 #include "terminal-preferences-window.hh"
 #include "terminal-profile-editor.hh"
+#include "terminal-profile-file.hh"
 #include "terminal-profile-row.hh"
+#include "terminal-profiles-list.hh"
 #include "terminal-schemas.hh"
 #include "terminal-shortcut-editor.hh"
 #include "terminal-util.hh"
@@ -153,6 +155,199 @@ terminal_preferences_window_add_profile (GtkWidget  *widget,
 
   terminal_preferences_window_edit_profile (TERMINAL_PREFERENCES_WINDOW (widget), settings);
 #endif
+}
+
+static void
+show_toast (TerminalPreferencesWindow *self,
+            const char                *title)
+{
+  adw_preferences_window_add_toast (ADW_PREFERENCES_WINDOW (self),
+                                    adw_toast_new (title));
+}
+
+static GtkFileDialog *
+new_profile_file_dialog (const char *title)
+{
+  GtkFileDialog *dialog = gtk_file_dialog_new ();
+  gtk_file_dialog_set_title (dialog, title);
+  gtk_file_dialog_set_modal (dialog, true);
+
+  g_autoptr(GtkFileFilter) profiles = gtk_file_filter_new ();
+  gtk_file_filter_set_name (profiles, _("Pano Terminal Profiles"));
+  gtk_file_filter_add_suffix (profiles, TERMINAL_PROFILE_FILE_SUFFIX + 1);
+  g_autoptr(GtkFileFilter) all = gtk_file_filter_new ();
+  gtk_file_filter_set_name (all, _("All Files"));
+  gtk_file_filter_add_pattern (all, "*");
+
+  g_autoptr(GListStore) filters = g_list_store_new (GTK_TYPE_FILE_FILTER);
+  g_list_store_append (filters, profiles);
+  g_list_store_append (filters, all);
+  gtk_file_dialog_set_filters (dialog, G_LIST_MODEL (filters));
+  gtk_file_dialog_set_default_filter (dialog, profiles);
+
+  return dialog;
+}
+
+/* Exporting a profile */
+
+typedef struct {
+  TerminalPreferencesWindow *window;
+  char *name;
+} ExportData;
+
+static void
+export_data_free (ExportData *data)
+{
+  g_object_unref (data->window);
+  g_free (data->name);
+  g_free (data);
+}
+
+static void
+export_written_cb (GObject      *source,
+                   GAsyncResult *result,
+                   gpointer      user_data)
+{
+  ExportData *data = (ExportData *)user_data;
+  g_autoptr(GError) error = nullptr;
+
+  if (g_file_replace_contents_finish (G_FILE (source), result, nullptr, &error)) {
+    /* Translators: %s is the name of a profile */
+    g_autofree char *title = g_strdup_printf (_("Exported “%s”"), data->name);
+    show_toast (data->window, title);
+  } else {
+    /* Translators: %s is an error message */
+    g_autofree char *title = g_strdup_printf (_("Could not export the profile: %s"), error->message);
+    show_toast (data->window, title);
+  }
+
+  export_data_free (data);
+}
+
+static void
+export_save_cb (GObject      *source,
+                GAsyncResult *result,
+                gpointer      user_data)
+{
+  g_autoptr(GSettings) settings = G_SETTINGS (user_data);
+  g_autoptr(GFile) file = gtk_file_dialog_save_finish (GTK_FILE_DIALOG (source), result, nullptr);
+  auto window = TERMINAL_PREFERENCES_WINDOW (g_object_get_data (source, "window"));
+
+  if (file == nullptr) /* cancelled */
+    return;
+
+  gsize length;
+  char *text = terminal_profile_file_export (settings, &length);
+  g_autoptr(GBytes) bytes = g_bytes_new_take (text, length);
+
+  ExportData *data = g_new0 (ExportData, 1);
+  data->window = TERMINAL_PREFERENCES_WINDOW (g_object_ref (window));
+  data->name = g_settings_get_string (settings, "visible-name");
+  g_file_replace_contents_bytes_async (file, bytes, nullptr, false,
+                                       G_FILE_CREATE_REPLACE_DESTINATION,
+                                       nullptr, export_written_cb, data);
+}
+
+void
+terminal_preferences_window_export_profile (TerminalPreferencesWindow *self,
+                                            GSettings                 *settings)
+{
+  g_return_if_fail (TERMINAL_IS_PREFERENCES_WINDOW (self));
+  g_return_if_fail (G_IS_SETTINGS (settings));
+
+  g_autoptr(GtkFileDialog) dialog = new_profile_file_dialog (_("Export Profile"));
+  g_object_set_data_full (G_OBJECT (dialog), "window", g_object_ref (self), g_object_unref);
+
+  g_autofree char *name = g_settings_get_string (settings, "visible-name");
+  /* Keep the name usable as a file name */
+  g_strdelimit (name, "/", '-');
+  g_autofree char *file_name = g_strconcat (name, TERMINAL_PROFILE_FILE_SUFFIX, nullptr);
+  gtk_file_dialog_set_initial_name (dialog, file_name);
+
+  gtk_file_dialog_save (dialog, GTK_WINDOW (self), nullptr,
+                        export_save_cb, g_object_ref (settings));
+}
+
+/* Importing a profile */
+
+static void
+import_loaded_cb (GObject      *source,
+                  GAsyncResult *result,
+                  gpointer      user_data)
+{
+  g_autoptr(TerminalPreferencesWindow) self = TERMINAL_PREFERENCES_WINDOW (user_data);
+  g_autoptr(GError) error = nullptr;
+  g_autofree char *contents = nullptr;
+  gsize length = 0;
+
+  g_autoptr(GKeyFile) file = nullptr;
+  if (g_file_load_contents_finish (G_FILE (source), result, &contents, &length, nullptr, &error))
+    file = terminal_profile_file_load (contents, length, &error);
+
+  if (file == nullptr) {
+    /* Translators: %s is an error message */
+    g_autofree char *title = g_strdup_printf (_("Could not import the profile: %s"), error->message);
+    show_toast (self, title);
+    return;
+  }
+
+  g_autofree char *name = terminal_profile_file_dup_name (file);
+  if (name == nullptr) {
+    g_autofree char *basename = g_file_get_basename (G_FILE (source));
+    if (g_str_has_suffix (basename, TERMINAL_PROFILE_FILE_SUFFIX))
+      basename[strlen (basename) - strlen (TERMINAL_PROFILE_FILE_SUFFIX)] = '\0';
+    name = basename[0] ? g_strdup (basename) : g_strdup (_("Imported Profile"));
+  }
+
+  TerminalApp *app = terminal_app_get ();
+  g_autofree char *uuid = terminal_app_new_profile (app, nullptr, name);
+  g_autoptr(GSettings) settings =
+    terminal_settings_list_ref_child (terminal_app_get_profiles_list (app), uuid);
+  if (settings == nullptr)
+    return;
+
+  guint skipped = terminal_profile_file_apply (file, settings);
+  /* The file may hold an empty name, which the fallback replaces */
+  g_settings_set_string (settings, "visible-name", name);
+
+  g_autofree char *title = nullptr;
+  if (skipped == 0)
+    /* Translators: %s is the name of a profile */
+    title = g_strdup_printf (_("Imported “%s”"), name);
+  else
+    /* Translators: %s is the name of a profile; %u is a number of settings
+     * the profile file had, but which this version does not know or accept */
+    title = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE,
+                                          "Imported “%s”, skipping %u setting",
+                                          "Imported “%s”, skipping %u settings",
+                                          skipped),
+                             name, skipped);
+  show_toast (self, title);
+}
+
+static void
+import_open_cb (GObject      *source,
+                GAsyncResult *result,
+                gpointer      user_data)
+{
+  g_autoptr(TerminalPreferencesWindow) self = TERMINAL_PREFERENCES_WINDOW (user_data);
+  g_autoptr(GFile) file = gtk_file_dialog_open_finish (GTK_FILE_DIALOG (source), result, nullptr);
+
+  if (file == nullptr) /* cancelled */
+    return;
+
+  g_file_load_contents_async (file, nullptr, import_loaded_cb, g_steal_pointer (&self));
+}
+
+static void
+terminal_preferences_window_import_profile (GtkWidget  *widget,
+                                            const char *action_name,
+                                            GVariant   *param)
+{
+  g_autoptr(GtkFileDialog) dialog = new_profile_file_dialog (_("Import Profile"));
+
+  gtk_file_dialog_open (dialog, GTK_WINDOW (widget), nullptr,
+                        import_open_cb, g_object_ref (widget));
 }
 
 static void
@@ -506,6 +701,11 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
                                    "profile.add",
                                    nullptr,
                                    terminal_preferences_window_add_profile);
+
+  gtk_widget_class_install_action (widget_class,
+                                   "profile.import",
+                                   nullptr,
+                                   terminal_preferences_window_import_profile);
 
   gtk_widget_class_install_action (widget_class,
                                    "preferences.reset",

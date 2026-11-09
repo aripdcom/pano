@@ -64,6 +64,19 @@ terminal_profile_row_clone (GtkWidget  *widget,
 }
 
 static void
+terminal_profile_row_export (GtkWidget  *widget,
+                             const char *action_name,
+                             GVariant   *param)
+{
+  GtkWidget *window = gtk_widget_get_ancestor (widget, TERMINAL_TYPE_PREFERENCES_WINDOW);
+  TerminalProfileRow *self = TERMINAL_PROFILE_ROW (widget);
+
+  if (window != nullptr)
+    terminal_preferences_window_export_profile (TERMINAL_PREFERENCES_WINDOW (window),
+                                                self->settings);
+}
+
+static void
 terminal_profile_row_edit (GtkWidget  *widget,
                            const char *action_name,
                            GVariant   *param)
@@ -204,6 +217,10 @@ terminal_profile_row_class_init (TerminalProfileRowClass *klass)
                                    "profile.edit",
                                    nullptr,
                                    terminal_profile_row_edit);
+  gtk_widget_class_install_action (widget_class,
+                                   "profile.export",
+                                   nullptr,
+                                   terminal_profile_row_export);
   gtk_widget_class_install_action (widget_class,
                                    "profile.delete",
                                    nullptr,

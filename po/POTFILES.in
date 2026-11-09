@@ -25,6 +25,7 @@ src/terminal-preferences-window.cc
 src/terminal-preferences-window.ui
 src/terminal-prefs-process.cc
 src/terminal-profile-editor.cc
+src/terminal-profile-file.cc
 src/terminal-profile-editor.ui
 src/terminal-profile-row.cc
 src/terminal-profile-row.ui

@@ -315,6 +315,8 @@ prefs_main_sources = app_sources + client_util_sources + debug_sources + default
   'terminal-preferences-window.hh',
   'terminal-profile-editor.cc',
   'terminal-profile-editor.hh',
+  'terminal-profile-file.cc',
+  'terminal-profile-file.hh',
   'terminal-profile-row.cc',
   'terminal-profile-row.hh',
   'terminal-settings-bridge-backend.cc',
@@ -477,19 +479,38 @@ test_regex = executable(
   install: false,
 )
 
+test_profile_file = executable(
+  'test-profile-file',
+  cpp_args: glib_version_cxxflags,
+  dependencies: [
+    gio_dep,
+    glib_dep,
+  ],
+  include_directories: [top_inc, src_inc,],
+  sources: files(
+    'terminal-profile-file.cc',
+    'terminal-profile-file.hh',
+    'test-profile-file.cc',
+  ),
+  install: false,
+)
+
 test_env = [
   'PANO_DEBUG=0',
   'VTE_DEBUG=0',
+  'TEST_SCHEMA_DIR=' + meson.current_build_dir(),
 ]
 
 test_units = [
   ['regex', test_regex],
+  ['profile-file', test_profile_file],
 ]
 
 foreach test: test_units
   test(
     test[0],
     test[1],
+    depends: reference_schemas,
     env: test_env,
   )
 endforeach

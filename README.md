@@ -60,6 +60,10 @@ Everything GNOME Terminal provides, plus:
   style. Add your own `.palette` files to `~/.local/share/pano-terminal/schemes`
   (*Open Folder* in the same place); the format is described in
   [data/schemes/README.md](data/schemes/README.md), and changes apply at once.
+* **Profile import and export**: save a profile to a `.pano-profile` file
+  with *Export…* in its menu in *Preferences*, and load it on another
+  computer with *Import…* above the list of profiles. The file holds the
+  settings that differ from the defaults, in the format `dconf dump` uses.
 * **Background transparency**: set the background opacity of each profile in
   *Preferences → Profile → Colors → Background Opacity*. Only the terminal
   background lets the desktop through; text, header bar and tab bars stay
