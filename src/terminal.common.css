@@ -28,6 +28,20 @@ window.terminal-window.csd.all-rounded-corners vte-terminal
     padding-bottom: 6px;
 }
 
+/* The terminal-padding setting; "small" is the above. The extra classes
+ * outweigh the rounded corners rule. */
+window.terminal-window.no-padding vte-terminal,
+window.terminal-window.csd.all-rounded-corners.no-padding vte-terminal
+{
+    padding: 0;
+}
+
+window.terminal-window.large-padding vte-terminal,
+window.terminal-window.csd.all-rounded-corners.large-padding vte-terminal
+{
+    padding: 8px 12px;
+}
+
 popover button.model
 {
   padding-left: 16px;

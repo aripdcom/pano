@@ -114,6 +114,37 @@
               </object>
             </child>
             <child>
+              <object class="AdwComboRow" id="terminal_padding">
+                <property name="title" translatable="yes">Space Around the Text</property>
+                <property name="expression">
+                  <lookup name="title" type="TerminalPreferencesListItem"/>
+                </property>
+                <property name="model">
+                  <object class="GListStore" id="terminal_paddings">
+                    <property name="item-type">TerminalPreferencesListItem</property>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes" context="terminal-padding">None</property>
+                        <property name="value">'none'</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes" context="terminal-padding">Small</property>
+                        <property name="value">'small'</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes" context="terminal-padding">Large</property>
+                        <property name="value">'large'</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="highlight_root_and_remote">
                 <property name="title" translatable="yes">Highlight Root and Remote Sessions</property>
                 <property name="subtitle" translatable="yes">Color the header bar and mark the tab while a terminal runs as root or over SSH</property>

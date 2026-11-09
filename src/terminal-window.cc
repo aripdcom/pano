@@ -2781,6 +2781,28 @@ window_sync_rounded_corners_cb(GSettings* settings,
 }
 
 static void
+window_sync_padding_cb(GSettings* settings,
+                       char const* key,
+                       TerminalWindow* window)
+{
+  auto const padding = g_settings_get_enum(settings, key);
+
+  static char const* css_classes[3] = {
+    "no-padding",
+    "small-padding",
+    "large-padding",
+  };
+
+  auto const widget = GTK_WIDGET(window);
+  for (auto i = 0; i < 3; ++i) {
+    if (padding == i)
+      gtk_widget_add_css_class(widget, css_classes[i]);
+    else
+      gtk_widget_remove_css_class(widget, css_classes[i]);
+  }
+}
+
+static void
 window_update_tabs_visibility(TerminalWindow* window)
 {
   auto const position = window->tab_position;
@@ -3379,6 +3401,9 @@ terminal_window_constructed (GObject *object)
   window_sync_rounded_corners_cb(settings, TERMINAL_SETTING_ROUNDED_CORNERS_KEY, window);
   g_signal_connect(settings, "changed::" TERMINAL_SETTING_ROUNDED_CORNERS_KEY,
                    G_CALLBACK(window_sync_rounded_corners_cb), window);
+  window_sync_padding_cb(settings, TERMINAL_SETTING_TERMINAL_PADDING_KEY, window);
+  g_signal_connect(settings, "changed::" TERMINAL_SETTING_TERMINAL_PADDING_KEY,
+                   G_CALLBACK(window_sync_padding_cb), window);
 }
 
 static void
@@ -3480,6 +3505,9 @@ terminal_window_dispose (GObject *object)
   auto const settings = terminal_app_get_global_settings(terminal_app_get());
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_sync_rounded_corners_cb,
+                                       window);
+  g_signal_handlers_disconnect_by_func(settings,
+                                       (void*)window_sync_padding_cb,
                                        window);
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_sync_tab_position_cb,

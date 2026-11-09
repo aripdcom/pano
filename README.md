@@ -67,6 +67,8 @@ Everything GNOME Terminal provides, plus:
 * **Visual bell**: turn on *Flash the Terminal* in *Preferences → Profile →
   Bell* to see the bell instead of, or as well as, hearing it. A tab in the
   background is marked instead.
+* **Space around the text**: choose none, small or large padding between
+  the terminal text and its edges in *Preferences → Appearance*.
 * **Background transparency**: set the background opacity of each profile in
   *Preferences → Profile → Colors → Background Opacity*. Only the terminal
   background lets the desktop through; text, header bar and tab bars stay
