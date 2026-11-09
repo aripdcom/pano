@@ -20,6 +20,7 @@
 #include <glib/gi18n.h>
 
 #include "terminal-app.hh"
+#include "terminal-gnome-terminal-import.hh"
 #include "terminal-preferences-list-item.hh"
 #include "terminal-preferences-window.hh"
 #include "terminal-profile-editor.hh"
@@ -39,6 +40,7 @@ struct _TerminalPreferencesWindow
   AdwSwitchRow         *accelerator_key;
   GtkListBoxRow        *add_profile_row;
   AdwSwitchRow         *always_check_default;
+  AdwActionRow         *import_gnome_terminal_row;
   AdwComboRow          *new_terminal_mode;
   GListModel           *new_terminal_modes;
   GtkListBox           *profiles_list_box;
@@ -357,6 +359,26 @@ terminal_preferences_window_import_profile (GtkWidget  *widget,
 }
 
 static void
+terminal_preferences_window_import_gnome_terminal (GtkWidget  *widget,
+                                                   const char *action_name,
+                                                   GVariant   *param)
+{
+  auto const self = TERMINAL_PREFERENCES_WINDOW (widget);
+  auto const n_profiles = terminal_gnome_terminal_import ();
+
+  g_settings_set_boolean (terminal_app_get_global_settings (terminal_app_get ()),
+                          TERMINAL_SETTING_GNOME_TERMINAL_IMPORT_OFFERED_KEY, true);
+
+  g_autofree char *title =
+    g_strdup_printf (g_dngettext (GETTEXT_PACKAGE,
+                                  "Imported %u profile and the preferences of GNOME Terminal",
+                                  "Imported %u profiles and the preferences of GNOME Terminal",
+                                  n_profiles),
+                     n_profiles);
+  show_toast (self, title);
+}
+
+static void
 terminal_preferences_window_view_shortcuts (GtkWidget  *widget,
                                             const char *action_name,
                                             GVariant   *param)
@@ -596,6 +618,9 @@ terminal_preferences_window_constructed (GObject *object)
                            G_CONNECT_SWAPPED);
   terminal_preferences_window_reload_profiles (self);
 
+  gtk_widget_set_visible (GTK_WIDGET (self->import_gnome_terminal_row),
+                          terminal_gnome_terminal_settings_exist (terminal_app_get_settings_backend (app)));
+
   terminal_util_g_settings_bind_with_mapping (settings,
                                 TERMINAL_SETTING_ROUNDED_CORNERS_KEY,
                                 self->rounded_corners,
@@ -701,6 +726,7 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, accelerator_key);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, add_profile_row);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, always_check_default);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, import_gnome_terminal_row);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_finished);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, toast_on_copy);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, ignore_program_titles);
@@ -748,6 +774,11 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
                                    "profile.import",
                                    nullptr,
                                    terminal_preferences_window_import_profile);
+
+  gtk_widget_class_install_action (widget_class,
+                                   "preferences.import-gnome-terminal",
+                                   nullptr,
+                                   terminal_preferences_window_import_gnome_terminal);
 
   gtk_widget_class_install_action (widget_class,
                                    "preferences.reset",

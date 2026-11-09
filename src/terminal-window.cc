@@ -38,6 +38,7 @@
 #include "terminal-enums.hh"
 #include "terminal-headerbar.hh"
 #include "terminal-find-bar.hh"
+#include "terminal-gnome-terminal-import.hh"
 #include "terminal-icon-button.hh"
 #include "terminal-intl.hh"
 #include "terminal-notebook.hh"
@@ -74,6 +75,7 @@ struct _TerminalWindow
   AdwToast* copy_toast; // weak pointer
   GtkWidget *main_vbox;
   GtkWidget* ask_default_infobar;
+  GtkWidget* import_infobar;
   AdwBanner* broadcast_banner;
   bool quick; /* the quick terminal, see terminal_window_set_quick() */
   int broadcast_mode; /* BroadcastMode */
@@ -2777,6 +2779,76 @@ window_sync_tab_position_cb(GSettings* settings,
   terminal_window_update_size(window);
 }
 
+/* Offering to import GNOME Terminal's settings, until the user answers */
+
+static void
+window_hide_import_infobar(TerminalWindow* window)
+{
+  if (window->import_infobar)
+    gtk_widget_set_visible(window->import_infobar, false);
+}
+
+static void
+window_import_offered_changed_cb(GSettings* settings,
+                                 char const* key,
+                                 TerminalWindow* window)
+{
+  if (g_settings_get_boolean(settings, key))
+    window_hide_import_infobar(window);
+}
+
+static void
+import_infobar_response_cb(GtkInfoBar* infobar,
+                           int response,
+                           TerminalWindow* window)
+{
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+
+  if (response == GTK_RESPONSE_YES) {
+    auto const n_profiles = terminal_gnome_terminal_import();
+    gs_free char* title =
+      g_strdup_printf(g_dngettext(GETTEXT_PACKAGE,
+                                  "Imported %u profile and the preferences of GNOME Terminal",
+                                  "Imported %u profiles and the preferences of GNOME Terminal",
+                                  n_profiles),
+                      n_profiles);
+    adw_toast_overlay_add_toast(window->toast_overlay, adw_toast_new(title));
+    g_settings_set_boolean(settings, TERMINAL_SETTING_GNOME_TERMINAL_IMPORT_OFFERED_KEY, true);
+  } else if (response == GTK_RESPONSE_NO) {
+    g_settings_set_boolean(settings, TERMINAL_SETTING_GNOME_TERMINAL_IMPORT_OFFERED_KEY, true);
+  } else { // GTK_RESPONSE_CLOSE: ask again in the next window
+    window_hide_import_infobar(window);
+  }
+}
+
+static void
+window_offer_import(TerminalWindow* window)
+{
+  auto const app = terminal_app_get();
+  auto const settings = terminal_app_get_global_settings(app);
+  if (g_settings_get_boolean(settings, TERMINAL_SETTING_GNOME_TERMINAL_IMPORT_OFFERED_KEY) ||
+      !terminal_gnome_terminal_settings_exist(terminal_app_get_settings_backend(app)))
+    return;
+
+  auto const infobar = window->import_infobar = gtk_info_bar_new();
+  gtk_info_bar_set_show_close_button(GTK_INFO_BAR(infobar), true);
+  gtk_info_bar_set_message_type(GTK_INFO_BAR(infobar), GTK_MESSAGE_QUESTION);
+
+  auto const question = gtk_label_new(_("Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"));
+  gtk_label_set_wrap(GTK_LABEL(question), true);
+  gtk_label_set_xalign(GTK_LABEL(question), 0.0f);
+  gtk_info_bar_add_child(GTK_INFO_BAR(infobar), question);
+
+  gtk_info_bar_add_button(GTK_INFO_BAR(infobar), _("_Import"), GTK_RESPONSE_YES);
+  gtk_info_bar_add_button(GTK_INFO_BAR(infobar), _("_No"), GTK_RESPONSE_NO);
+  g_signal_connect(infobar, "response",
+                   G_CALLBACK(import_infobar_response_cb), window);
+
+  gtk_box_prepend(GTK_BOX(window->main_vbox), infobar);
+  g_signal_connect(settings, "changed::" TERMINAL_SETTING_GNOME_TERMINAL_IMPORT_OFFERED_KEY,
+                   G_CALLBACK(window_import_offered_changed_cb), window);
+}
+
 static void
 default_infobar_response_cb(GtkInfoBar* infobar,
                             int response,
@@ -3169,6 +3241,8 @@ terminal_window_init (TerminalWindow *window)
                      G_CALLBACK(window_sync_ask_default_terminal_cb), window);
   }
 
+  window_offer_import(window);
+
   /* Maybe make Inspector available */
   action = lookup_action (window, "inspector");
   gtk_debug_settings = terminal_app_get_gtk_debug_settings (app);
@@ -3417,6 +3491,10 @@ terminal_window_dispose (GObject *object)
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_sync_padding_cb,
                                        window);
+  g_signal_handlers_disconnect_by_func(settings,
+                                       (void*)window_import_offered_changed_cb,
+                                       window);
+  window->import_infobar = nullptr;
   g_signal_handlers_disconnect_by_func(settings,
                                        (void*)window_sync_tab_position_cb,
                                        window);

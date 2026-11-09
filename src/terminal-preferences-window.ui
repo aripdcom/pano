@@ -432,6 +432,21 @@
           <object class="AdwPreferencesGroup">
             <property name="title" translatable="yes">Application</property>
             <child>
+              <object class="AdwActionRow" id="import_gnome_terminal_row">
+                <property name="title" translatable="yes">Import from GNOME Terminal</property>
+                <property name="subtitle" translatable="yes">Copy its profiles, keyboard shortcuts and preferences</property>
+                <property name="visible">false</property>
+                <child type="suffix">
+                  <object class="GtkButton">
+                    <property name="label" translatable="yes">_Import</property>
+                    <property name="use-underline">true</property>
+                    <property name="valign">center</property>
+                    <property name="action-name">preferences.import-gnome-terminal</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="always_check_default">
                 <property name="title" translatable="yes">Ask to Remain Default</property>
               </object>

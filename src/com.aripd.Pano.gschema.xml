@@ -845,6 +845,11 @@
 
     <!-- Default terminal -->
 
+    <key name="gnome-terminal-import-offered" type="b">
+      <default>false</default>
+      <summary>Whether the user has been asked to import the settings of GNOME Terminal</summary>
+    </key>
+
     <key name="ignore-program-titles" type="b">
       <default>false</default>
       <summary>Whether to ignore the titles that programs set</summary>

@@ -17,7 +17,9 @@ transparency.
 Pano Terminal can be installed next to GNOME Terminal. It uses its own
 programs (`pano-terminal`, `pano-terminal-server`), application ID
 (`com.aripd.Pano`) and settings (`/com/aripd/pano/`), so the two do not share
-profiles or preferences.
+profiles or preferences. If you have used GNOME Terminal, Pano Terminal offers
+to copy its profiles, keyboard shortcuts and preferences on its first start;
+you can also do that later in *Preferences → Application*.
 
 Features
 --------
