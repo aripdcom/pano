@@ -94,6 +94,7 @@ G_BEGIN_DECLS
 #define TERMINAL_SETTING_TERMINAL_PADDING_KEY           "terminal-padding"
 #define TERMINAL_SETTING_SCHEMA_VERSION                 "schema-version"
 #define TERMINAL_SETTING_SHELL_INTEGRATION_KEY          "shell-integration-enabled"
+#define TERMINAL_SETTING_INJECT_SHELL_INTEGRATION_KEY   "inject-shell-integration"
 #define TERMINAL_SETTING_TAB_POLICY_KEY                 "tab-policy"
 #define TERMINAL_SETTING_TAB_POSITION_KEY               "tab-position"
 #define TERMINAL_SETTING_TAB_SIDEBAR_WIDTH_KEY          "tab-sidebar-width"

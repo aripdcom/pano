@@ -103,4 +103,12 @@ install_subdir(
   install_tag: 'runtime',
 )
 
+# Shell integration, see shell-integration/README.md
+
+install_subdir(
+  'shell-integration',
+  install_dir: gt_prefix / gt_pkgdatadir,
+  install_tag: 'runtime',
+)
+
 subdir('icons')

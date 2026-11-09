@@ -295,6 +295,11 @@ static char**terminal_screen_get_child_environment (TerminalScreen *screen,
                                                     char **path,
                                                     char **shell);
 
+static void terminal_screen_add_shell_integration (TerminalScreen* screen,
+                                                   char** argv,
+                                                   gboolean as_shell,
+                                                   char*** exec_argv_p,
+                                                   char*** envv_p);
 static gboolean terminal_screen_get_child_command (TerminalScreen *screen,
                                                    char          **exec_argv,
                                                    const char     *path_env,
@@ -2038,6 +2043,8 @@ terminal_screen_exec (TerminalScreen *screen,
     return FALSE;
   }
 
+  terminal_screen_add_shell_integration (screen, argv, as_shell, &exec_argv, &envv);
+
   if (!preserve_cwd) {
     cwd = g_get_home_dir ();
     envv = g_environ_unsetenv (envv, "PWD");
@@ -2667,6 +2674,66 @@ terminal_screen_get_child_command (TerminalScreen *screen,
   *exec_argv_p = exec_argv;
 
   return TRUE;
+}
+
+/* Makes the default shell report its prompts and commands, see
+ * data/shell-integration/README.md. @exec_argv is the shell's file and its
+ * argv[0], for G_SPAWN_FILE_AND_ARGV_ZERO. */
+static void
+terminal_screen_add_shell_integration(TerminalScreen* screen,
+                                      char** argv,
+                                      gboolean as_shell,
+                                      char*** exec_argv_p,
+                                      char*** envv_p)
+{
+  auto const priv = screen->priv;
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  if (argv || !as_shell || priv->container_name ||
+      g_settings_get_boolean(priv->profile, TERMINAL_PROFILE_USE_CUSTOM_COMMAND_KEY) ||
+      !g_settings_get_boolean(settings, TERMINAL_SETTING_INJECT_SHELL_INTEGRATION_KEY))
+    return;
+
+  auto const exec_argv = *exec_argv_p;
+  if (!exec_argv || !exec_argv[0] || !exec_argv[1] || exec_argv[2])
+    return;
+
+  gs_free char* dir = g_build_filename(TERM_PKGDATADIR, "shell-integration", nullptr);
+  if (!g_file_test(dir, G_FILE_TEST_IS_DIR))
+    return;
+
+  gs_free char* name = g_path_get_basename(exec_argv[0]);
+  auto const login = g_settings_get_boolean(priv->profile, TERMINAL_PROFILE_LOGIN_SHELL_KEY);
+
+  if (g_str_equal(name, "bash")) {
+    // A login shell reads other files than the one we replace
+    if (login)
+      return;
+
+    char* new_argv[] = {
+      exec_argv[0], exec_argv[1],
+      g_strdup("--rcfile"),
+      g_build_filename(dir, "bash", "pano.bashrc", nullptr),
+      nullptr
+    };
+    g_free(exec_argv);
+    *exec_argv_p = static_cast<char**>(g_memdup2(new_argv, sizeof(new_argv)));
+  } else if (g_str_equal(name, "zsh")) {
+    auto envv = *envv_p;
+    if (auto const zdotdir = g_environ_getenv(envv, "ZDOTDIR"))
+      envv = g_environ_setenv(envv, "PANO_ZDOTDIR", zdotdir, true);
+    gs_free char* zsh_dir = g_build_filename(dir, "zsh", nullptr);
+    *envv_p = g_environ_setenv(envv, "ZDOTDIR", zsh_dir, true);
+  } else if (g_str_equal(name, "fish")) {
+    auto envv = *envv_p;
+    auto const data_dirs = g_environ_getenv(envv, "XDG_DATA_DIRS");
+    if (data_dirs)
+      envv = g_environ_setenv(envv, "PANO_XDG_DATA_DIRS", data_dirs, true);
+    gs_free char* value = g_strconcat(dir, ":",
+                                      data_dirs && data_dirs[0] ? data_dirs : "/usr/local/share:/usr/share",
+                                      nullptr);
+    envv = g_environ_setenv(envv, "XDG_DATA_DIRS", value, true);
+    *envv_p = g_environ_setenv(envv, "PANO_SHELL_INTEGRATION", "1", true);
+  }
 }
 
 static gboolean

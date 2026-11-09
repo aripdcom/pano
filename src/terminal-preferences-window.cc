@@ -45,6 +45,7 @@ struct _TerminalPreferencesWindow
   GListModel           *new_terminal_modes;
   GtkListBox           *profiles_list_box;
   AdwSwitchRow         *notify_command_finished;
+  AdwSwitchRow         *inject_shell_integration;
   AdwSwitchRow         *toast_on_copy;
   AdwSwitchRow         *ignore_program_titles;
   AdwSwitchRow         *dim_inactive_panes;
@@ -563,6 +564,11 @@ terminal_preferences_window_constructed (GObject *object)
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_INJECT_SHELL_INTEGRATION_KEY,
+                   self->inject_shell_integration,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_TOAST_ON_COPY_KEY,
                    self->toast_on_copy,
                    "active",
@@ -740,6 +746,7 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, always_check_default);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, import_gnome_terminal_row);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_finished);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, inject_shell_integration);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, toast_on_copy);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, ignore_program_titles);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, dim_inactive_panes);

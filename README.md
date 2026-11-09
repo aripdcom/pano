@@ -84,11 +84,14 @@ Everything GNOME Terminal provides, plus:
   by default) finishes in a terminal you are not looking at, Pano Terminal
   sends a desktop notification with the command, its result and how long it
   took, and marks its tab. Click the notification to go to the terminal.
-  Change it in *Preferences → Behavior*. This needs a shell that reports its
-  commands: bash or zsh with VTE's shell integration. Fedora loads it by
-  default; on Debian and Ubuntu add `. /etc/profile.d/vte-2.91.sh` to
-  `~/.bashrc`.
-* **Prompt navigation**: with the same shell integration, jump between the
+  Change it in *Preferences → Behavior*.
+* **Shell integration**: notifications, prompt navigation and copying
+  command output need a shell that reports its prompts and commands. Pano
+  Terminal sets that up by itself for bash, zsh and fish, on every
+  distribution, without changing your files; see
+  [data/shell-integration](data/shell-integration/README.md). Turn it off
+  in *Preferences → Behavior*.
+* **Prompt navigation**: with shell integration, jump between the
   prompts of earlier commands with Ctrl+Shift+Up and Ctrl+Shift+Down, and
   copy the output of the last command with Ctrl+Shift+O, or that of any
   command by right-clicking it. Marks next to the scrollbar show where the

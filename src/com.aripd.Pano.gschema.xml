@@ -792,6 +792,13 @@
     <key name="shell-integration-enabled" type="b">
       <default>true</default>
       <summary>Whether the shell integration is enabled</summary>
+      <description>This is about GNOME Shell: whether terminals can be found in its search. See inject-shell-integration for the integration of the shells in the terminals.</description>
+    </key>
+
+    <key name="inject-shell-integration" type="b">
+      <default>true</default>
+      <summary>Whether to add shell integration to bash, zsh and fish</summary>
+      <description>If true, the default shell of a profile is started so that it reports its prompts, commands and working directory, which command notifications, prompt navigation and copying command output need. Custom commands, login bash shells and terminals in containers are left alone.</description>
     </key>
 
     <key name="confirm-close" type="b">

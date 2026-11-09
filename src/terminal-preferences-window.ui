@@ -298,9 +298,15 @@
               </object>
             </child>
             <child>
+              <object class="AdwSwitchRow" id="inject_shell_integration">
+                <property name="title" translatable="yes">Shell Integration</property>
+                <property name="subtitle" translatable="yes">Let bash, zsh and fish report their prompts and commands, for notifications, prompt navigation and copying command output. Applies to new terminals</property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="notify_command_finished">
                 <property name="title" translatable="yes">Notify When Commands Finish</property>
-                <property name="subtitle" translatable="yes">When a long command ends in a terminal you are not looking at. Needs shell integration (vte.sh)</property>
+                <property name="subtitle" translatable="yes">When a long command ends in a terminal you are not looking at. Needs shell integration</property>
               </object>
             </child>
             <child>
