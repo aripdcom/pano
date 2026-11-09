@@ -243,6 +243,42 @@
         </child>
         <child>
           <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Quick Terminal</property>
+            <property name="description" translatable="yes">A terminal that you show and hide with one key. Run “pano-terminal --quick” to toggle it; to use a key, add this command in Settings → Keyboard → Custom Shortcuts.</property>
+            <child>
+              <object class="AdwSpinRow" id="quick_terminal_width">
+                <property name="title" translatable="yes">Width</property>
+                <property name="subtitle" translatable="yes">In percent of the screen</property>
+                <property name="numeric">1</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">10</property>
+                    <property name="upper">100</property>
+                    <property name="step-increment">5</property>
+                    <property name="page-increment">10</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="quick_terminal_height">
+                <property name="title" translatable="yes">Height</property>
+                <property name="subtitle" translatable="yes">In percent of the screen</property>
+                <property name="numeric">1</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">10</property>
+                    <property name="upper">100</property>
+                    <property name="step-increment">5</property>
+                    <property name="page-increment">10</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
             <property name="title" translatable="yes">Keyboard Shortcuts</property>
             <child>
               <object class="AdwSwitchRow" id="accelerator_key">

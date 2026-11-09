@@ -153,6 +153,7 @@ struct _TerminalApp
   GdkContentFormats *clipboard_targets;
 
   GWeakRef prefs_process_ref;
+  GWeakRef quick_window_ref;
 
 #endif /* TERMINAL_SERVER */
 
@@ -715,6 +716,59 @@ app_menu_about_cb (GSimpleAction *action,
   terminal_util_show_about ();
 }
 
+/* Creates the quick terminal with one terminal in the home directory */
+static TerminalWindow*
+terminal_app_new_quick_terminal(TerminalApp* app)
+{
+  gs_unref_object auto profile =
+    terminal_profiles_list_ref_profile_by_uuid(app->profiles_list, nullptr, nullptr);
+  if (!profile)
+    return nullptr;
+
+  auto const window = terminal_window_new(G_APPLICATION(app));
+  terminal_window_set_quick(window, true);
+
+  auto const screen = terminal_screen_new(profile, nullptr, 1.0);
+  terminal_window_add_tab(window, terminal_tab_new(screen), nullptr);
+
+  gs_free_error GError* error = nullptr;
+  if (!terminal_screen_exec(screen, nullptr, nullptr, true, g_get_home_dir(),
+                            nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                            &error))
+    g_warning("Failed to start the quick terminal: %s", error->message);
+
+  return window;
+}
+
+/* Shows the quick terminal, or hides it if it has the focus */
+static void
+app_quick_terminal_cb(GSimpleAction* action,
+                      GVariant* parameter,
+                      gpointer user_data)
+{
+  auto const app = TERMINAL_APP(user_data);
+
+  gs_unref_object auto window = TERMINAL_WINDOW(g_weak_ref_get(&app->quick_window_ref));
+  if (window &&
+      gtk_widget_get_visible(GTK_WIDGET(window)) &&
+      gtk_window_is_active(GTK_WINDOW(window))) {
+    gtk_widget_set_visible(GTK_WIDGET(window), false);
+    return;
+  }
+
+  if (!window) {
+    window = TERMINAL_WINDOW(g_object_ref(terminal_app_new_quick_terminal(app)));
+    if (!window)
+      return;
+    g_weak_ref_set(&app->quick_window_ref, window);
+  } else {
+    // The settings or the screen may have changed while it was hidden
+    terminal_window_update_quick_size(window);
+  }
+
+  gtk_window_present(GTK_WINDOW(window));
+}
+
 /* Activated by clicking a notification; the parameter is a screen UUID */
 static void
 app_focus_screen_cb(GSimpleAction* action,
@@ -791,6 +845,7 @@ terminal_app_startup (GApplication *application)
 #ifdef TERMINAL_SERVER
   GActionEntry const action_entries[] = {
     { "preferences", app_menu_preferences_cb,   nullptr, nullptr, nullptr },
+    { "quick-terminal", app_quick_terminal_cb,  nullptr, nullptr, nullptr },
     { "help",        app_menu_help_cb,          nullptr, nullptr, nullptr },
     { "about",       app_menu_about_cb,         nullptr, nullptr, nullptr },
     { "quit",        app_menu_quit_cb,          nullptr, nullptr, nullptr },
@@ -857,6 +912,7 @@ terminal_app_init (TerminalApp* app)
   adw_init ();
 
   g_weak_ref_init(&app->prefs_process_ref, nullptr);
+  g_weak_ref_init(&app->quick_window_ref, nullptr);
 
   app->screen_map = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, nullptr);
 #endif
@@ -1028,6 +1084,7 @@ terminal_app_finalize (GObject *object)
   }
 
   g_weak_ref_clear(&app->prefs_process_ref);
+  g_weak_ref_clear(&app->quick_window_ref);
 #endif /* TERMINAL_SERVER */
 
   g_clear_object (&app->default_icon);

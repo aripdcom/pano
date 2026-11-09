@@ -74,6 +74,11 @@ Everything GNOME Terminal provides, plus:
   Panes in This Tab* or *To All Terminals in This Window* in the main or
   context menu. A banner shows how many terminals get the input, and they
   are framed; leave single terminals out with *Include This Terminal*.
+* **Quick terminal**: a terminal that you show and hide with one key. Run
+  `pano-terminal --quick` to toggle it; to use a key such as F12, add that
+  command in *Settings → Keyboard → View and Customize Shortcuts → Custom
+  Shortcuts*. Set its width and height in *Preferences → Quick Terminal*. On
+  X11 it opens at the top of the screen; on Wayland the desktop places it.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.

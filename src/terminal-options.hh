@@ -76,6 +76,7 @@ typedef struct
   char    *activation_token;
   char    *display_name;
   gboolean show_preferences;
+  gboolean quick_terminal;
   GList   *initial_windows;
   gboolean default_fullscreen;
   gboolean default_maximize;

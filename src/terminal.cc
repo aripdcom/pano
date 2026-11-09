@@ -375,6 +375,52 @@ handle_show_preferences_remote (TerminalOptions *options,
   return true;
 }
 
+/* Shows the quick terminal, or hides it if it has the focus. This starts the
+ * server if needed, so that a single keyboard shortcut works at any time. */
+static bool
+toggle_quick_terminal(TerminalOptions* options,
+                      char const* service_name)
+{
+  gs_free_error GError* error = nullptr;
+  gs_unref_object GDBusConnection* bus = g_bus_get_sync(G_BUS_TYPE_SESSION, nullptr, &error);
+  if (!bus) {
+    terminal_printerr("Failed to get session bus: %s\n", error->message);
+    return false;
+  }
+
+  gs_free char* object_path = g_strdelimit(g_strdup_printf(".%s", service_name), ".", '/');
+
+  GVariantBuilder builder;
+  g_variant_builder_init(&builder, G_VARIANT_TYPE("(sava{sv})"));
+  g_variant_builder_add(&builder, "s", "quick-terminal");
+  g_variant_builder_open(&builder, G_VARIANT_TYPE("av"));
+  g_variant_builder_close(&builder);
+  g_variant_builder_open(&builder, G_VARIANT_TYPE("a{sv}"));
+  if (options->startup_id)
+    g_variant_builder_add(&builder, "{sv}",
+                          "desktop-startup-id", g_variant_new_string(options->startup_id));
+  if (options->activation_token)
+    g_variant_builder_add(&builder, "{sv}",
+                          "activation-token", g_variant_new_string(options->activation_token));
+  g_variant_builder_close(&builder);
+
+  gs_unref_variant GVariant* result =
+    g_dbus_connection_call_sync(bus, service_name, object_path,
+                                "org.gtk.Actions", "Activate",
+                                g_variant_builder_end(&builder),
+                                G_VARIANT_TYPE("()"),
+                                G_DBUS_CALL_FLAGS_NONE,
+                                30 * 1000 /* ms timeout */,
+                                nullptr /* cancellable */,
+                                &error);
+  if (!result) {
+    terminal_printerr("Failed to toggle the quick terminal: %s\n", error->message);
+    return false;
+  }
+
+  return true;
+}
+
 static void
 handle_show_preferences(TerminalOptions *options,
                         const char *service_name)
@@ -646,6 +692,9 @@ main (int argc, char **argv)
     else
       return exit_code;
   }
+
+  if (options->quick_terminal)
+    return toggle_quick_terminal(options, service_name) ? EXIT_SUCCESS : EXIT_FAILURE;
 
   if (plain_launch && try_restore_session(options, factory))
     return EXIT_SUCCESS;

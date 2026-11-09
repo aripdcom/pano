@@ -214,14 +214,16 @@ session_build(TerminalWindow* closing)
   // Sorted by last use, most recent first. A window that is being destroyed
   // may already be gone from the list.
   GList* windows = nullptr;
+  // The quick terminal is not part of the session.
   for (auto l = gtk_application_get_windows(GTK_APPLICATION(terminal_app_get())); l; l = l->next) {
-    if (TERMINAL_IS_WINDOW(l->data) && l->data != closing)
+    if (TERMINAL_IS_WINDOW(l->data) && l->data != closing &&
+        !terminal_window_is_quick(TERMINAL_WINDOW(l->data)))
       windows = g_list_prepend(windows, l->data);
   }
   windows = g_list_reverse(windows);
 
   // The last window stays in the session
-  if (!windows && closing)
+  if (!windows && closing && !terminal_window_is_quick(closing))
     windows = g_list_prepend(windows, closing);
 
   auto size_saved = false;
@@ -296,7 +298,8 @@ have_terminal_windows(TerminalWindow* except)
 {
   auto const windows = gtk_application_get_windows(GTK_APPLICATION(terminal_app_get()));
   for (auto l = windows; l; l = l->next) {
-    if (TERMINAL_IS_WINDOW(l->data) && l->data != except)
+    if (TERMINAL_IS_WINDOW(l->data) && l->data != except &&
+        !terminal_window_is_quick(TERMINAL_WINDOW(l->data)))
       return true;
   }
   return false;
@@ -394,7 +397,7 @@ terminal_session_shutdown(void)
 void
 terminal_session_window_closing(TerminalWindow* window)
 {
-  if (session_is_frozen())
+  if (session_is_frozen() || terminal_window_is_quick(window))
     return;
 
   session_save(window);

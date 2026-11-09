@@ -72,6 +72,7 @@ struct _TerminalWindow
   GtkWidget *main_vbox;
   GtkWidget* ask_default_infobar;
   AdwBanner* broadcast_banner;
+  bool quick; /* the quick terminal, see terminal_window_set_quick() */
   int broadcast_mode; /* BroadcastMode */
   TerminalScreen *active_screen;
   TerminalTab* notebook_context_tab; // unowned
@@ -3014,7 +3015,13 @@ terminal_window_finalize (GObject *object)
 static gboolean
 terminal_window_close_request (GtkWindow *window)
 {
-   return confirm_close_window_or_tab (TERMINAL_WINDOW (window), nullptr, CloseKind::WINDOW);
+  /* Closing the quick terminal from the window manager only hides it */
+  if (TERMINAL_WINDOW (window)->quick) {
+    gtk_widget_set_visible (GTK_WIDGET (window), false);
+    return TRUE;
+  }
+
+  return confirm_close_window_or_tab (TERMINAL_WINDOW (window), nullptr, CloseKind::WINDOW);
 }
 
 static void
@@ -3170,6 +3177,10 @@ should_update_window_size (TerminalWindow *window)
    * around otherwise tiled windows, and unnecessary SIGWINCHes when
    * switching tabs. */
   if (window->realized && window_state_is_snapped(window->window_state))
+    return false;
+
+  /* The quick terminal has its size from the screen */
+  if (window->quick)
     return false;
 
   /* A split tab shares the window between its panes, so the window size
@@ -3862,6 +3873,99 @@ terminal_window_in_fullscreen_transition (TerminalWindow *window)
   g_return_val_if_fail (TERMINAL_IS_WINDOW (window), FALSE);
 
   return window->fullscreen_transition != 0;
+}
+
+static GdkMonitor*
+quick_terminal_monitor(TerminalWindow* window)
+{
+  auto const display = gtk_widget_get_display(GTK_WIDGET(window));
+  if (auto const surface = gtk_native_get_surface(GTK_NATIVE(window)))
+    if (auto const monitor = gdk_display_get_monitor_at_surface(display, surface))
+      return monitor;
+
+  auto const monitors = gdk_display_get_monitors(display);
+  gs_unref_object auto monitor = GDK_MONITOR(g_list_model_get_item(monitors, 0));
+  return monitor; // the display keeps a reference
+}
+
+/* On X11 the quick terminal goes to the top of the screen. Wayland does
+ * not let applications place their windows. */
+static void
+quick_terminal_map_cb(TerminalWindow* window)
+{
+#ifdef GDK_WINDOWING_X11
+  auto const surface = gtk_native_get_surface(GTK_NATIVE(window));
+  auto const monitor = quick_terminal_monitor(window);
+  if (!GDK_IS_X11_SURFACE(surface) || !monitor)
+    return;
+
+  GdkRectangle geometry;
+  gdk_monitor_get_geometry(monitor, &geometry);
+  // The window is not allocated yet when it is mapped; use its default size
+  int width = 0;
+  gtk_window_get_default_size(GTK_WINDOW(window), &width, nullptr);
+  auto const scale = gdk_surface_get_scale_factor(surface);
+  auto const x = geometry.x + (geometry.width - width) / 2;
+  XMoveWindow(GDK_SURFACE_XDISPLAY(surface), GDK_SURFACE_XID(surface),
+              MAX(x, geometry.x) * scale, geometry.y * scale);
+#endif
+}
+
+/**
+ * terminal_window_update_quick_size:
+ * @window: the quick terminal
+ *
+ * Sizes the quick terminal from the settings, as a share of the screen.
+ */
+void
+terminal_window_update_quick_size(TerminalWindow* window)
+{
+  g_return_if_fail(TERMINAL_IS_WINDOW(window));
+
+  auto const monitor = quick_terminal_monitor(window);
+  if (!monitor)
+    return;
+
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  auto const width = g_settings_get_uint(settings, TERMINAL_SETTING_QUICK_TERMINAL_WIDTH_KEY);
+  auto const height = g_settings_get_uint(settings, TERMINAL_SETTING_QUICK_TERMINAL_HEIGHT_KEY);
+
+  GdkRectangle geometry;
+  gdk_monitor_get_geometry(monitor, &geometry);
+  gtk_window_set_default_size(GTK_WINDOW(window),
+                              geometry.width * int(width) / 100,
+                              geometry.height * int(height) / 100);
+}
+
+/**
+ * terminal_window_set_quick:
+ * @window: a #TerminalWindow
+ * @quick: whether @window is the quick terminal
+ *
+ * The quick terminal is shown and hidden with pano-terminal --quick. Its
+ * size is a share of the screen rather than the terminal grid, closing it
+ * hides it, and it is not part of the saved session.
+ */
+void
+terminal_window_set_quick(TerminalWindow* window,
+                          bool quick)
+{
+  g_return_if_fail(TERMINAL_IS_WINDOW(window));
+
+  window->quick = quick;
+  if (quick) {
+    gtk_widget_add_css_class(GTK_WIDGET(window), "quick-terminal");
+    g_signal_connect(window, "map", G_CALLBACK(quick_terminal_map_cb), nullptr);
+    terminal_window_update_quick_size(window);
+  }
+}
+
+bool
+terminal_window_is_quick(TerminalWindow* window)
+{
+  g_return_val_if_fail(TERMINAL_IS_WINDOW(window), false);
+
+  return window->quick;
 }
 
 void

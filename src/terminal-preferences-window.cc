@@ -43,6 +43,8 @@ struct _TerminalPreferencesWindow
   AdwSwitchRow         *notify_command_finished;
   AdwSpinRow           *notify_command_min_duration;
   AdwSwitchRow         *restore_session;
+  AdwSpinRow           *quick_terminal_width;
+  AdwSpinRow           *quick_terminal_height;
   AdwSwitchRow         *restore_window_size;
   AdwComboRow          *rounded_corners;
   GListModel           *rounded_corners_model;
@@ -329,6 +331,16 @@ terminal_preferences_window_constructed (GObject *object)
                    "value",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_QUICK_TERMINAL_WIDTH_KEY,
+                   self->quick_terminal_width,
+                   "value",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_QUICK_TERMINAL_HEIGHT_KEY,
+                   self->quick_terminal_height,
+                   "value",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_RESTORE_SESSION_KEY,
                    self->restore_session,
                    "active",
@@ -449,6 +461,8 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_finished);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, notify_command_min_duration);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_session);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_width);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_height);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_window_size);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_mode);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_modes);

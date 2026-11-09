@@ -810,6 +810,18 @@
       <summary>How long a command must run, in seconds, before its end is notified</summary>
     </key>
 
+    <key name="quick-terminal-width" type="u">
+      <range min="10" max="100" />
+      <default>100</default>
+      <summary>Width of the quick terminal, in percent of the screen</summary>
+    </key>
+
+    <key name="quick-terminal-height" type="u">
+      <range min="10" max="100" />
+      <default>40</default>
+      <summary>Height of the quick terminal, in percent of the screen</summary>
+    </key>
+
     <key name="restore-session" type="b">
       <default>true</default>
       <summary>Whether to reopen the windows, tabs and panes of the last session on startup</summary>

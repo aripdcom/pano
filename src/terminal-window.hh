@@ -51,6 +51,10 @@ void            terminal_window_request_close            (TerminalWindow *window
 const char     *terminal_window_get_uuid                 (TerminalWindow *window);
 gboolean        terminal_window_in_fullscreen_transition (TerminalWindow *window);
 bool terminal_window_is_animating (TerminalWindow* window);
+void terminal_window_set_quick(TerminalWindow* window,
+                               bool quick);
+bool terminal_window_is_quick(TerminalWindow* window);
+void terminal_window_update_quick_size(TerminalWindow* window);
 void terminal_window_set_tab_pinned(TerminalWindow* window,
                                     TerminalTab* tab,
                                     bool pinned);

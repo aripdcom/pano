@@ -1341,6 +1341,15 @@ get_goption_context (TerminalOptions *options)
       nullptr
     },
     {
+      "quick",
+      0,
+      0,
+      G_OPTION_ARG_NONE,
+      &options->quick_terminal,
+      N_("Show or hide the quick terminal"),
+      nullptr
+    },
+    {
       "print-environment",
       'p',
       0,
