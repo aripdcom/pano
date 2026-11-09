@@ -34,6 +34,12 @@ typedef enum {
   TERMINAL_NEW_TAB_POSITION_NEXT
 } TerminalNewTabPosition;
 
+typedef enum {
+  TERMINAL_TAB_MIDDLE_CLICK_NOTHING,
+  TERMINAL_TAB_MIDDLE_CLICK_CLOSE,
+  TERMINAL_TAB_MIDDLE_CLICK_PASTE
+} TerminalTabMiddleClick;
+
 typedef enum
 {
   TERMINAL_EXIT_CLOSE,

@@ -212,6 +212,37 @@
               </object>
             </child>
             <child>
+              <object class="AdwComboRow" id="tab_middle_click">
+                <property name="title" translatable="yes">Middle-Click on a Tab</property>
+                <property name="expression">
+                  <lookup name="title" type="TerminalPreferencesListItem"/>
+                </property>
+                <property name="model">
+                  <object class="GListStore" id="tab_middle_clicks">
+                    <property name="item-type">TerminalPreferencesListItem</property>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes" context="tab-middle-click">Does Nothing</property>
+                        <property name="value">'nothing'</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes" context="tab-middle-click">Closes the Tab</property>
+                        <property name="value">'close'</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="TerminalPreferencesListItem">
+                        <property name="title" translatable="yes" context="tab-middle-click">Pastes the Selection</property>
+                        <property name="value">'paste'</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
               <object class="AdwSwitchRow" id="notify_command_finished">
                 <property name="title" translatable="yes">Notify When Commands Finish</property>
                 <property name="subtitle" translatable="yes">When a long command ends in a terminal you are not looking at. Needs shell integration (vte.sh)</property>

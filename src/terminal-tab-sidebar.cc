@@ -67,6 +67,13 @@ enum {
 
 static GParamSpec* pspecs[N_PROPS];
 
+enum {
+  PAGE_MIDDLE_CLICKED,
+  N_SIGNALS
+};
+
+static guint signals[N_SIGNALS];
+
 G_DEFINE_FINAL_TYPE(TerminalTabSidebar, terminal_tab_sidebar, GTK_TYPE_WIDGET)
 
 /* Per-row state, attached to the row widget */
@@ -217,6 +224,31 @@ row_close_clicked_cb(GtkButton* button,
 {
   if (data->page && data->sidebar->view)
     adw_tab_view_close_page(data->sidebar->view, data->page);
+}
+
+static void
+row_middle_click_pressed_cb(GtkGestureClick* gesture,
+                            int n_press,
+                            double x,
+                            double y,
+                            RowData* data)
+{
+  gtk_gesture_set_state(GTK_GESTURE(gesture), GTK_EVENT_SEQUENCE_CLAIMED);
+}
+
+static void
+row_middle_click_released_cb(GtkGestureClick* gesture,
+                             int n_press,
+                             double x,
+                             double y,
+                             RowData* data)
+{
+  if (!data->page)
+    return;
+
+  // Keep the page alive while handlers may close it
+  gs_unref_object auto page = ADW_TAB_PAGE(g_object_ref(data->page));
+  g_signal_emit(data->sidebar, signals[PAGE_MIDDLE_CLICKED], 0, page);
 }
 
 static void
@@ -474,6 +506,14 @@ factory_setup_cb(GtkSignalListItemFactory* factory,
   g_signal_connect(gesture, "pressed",
                    G_CALLBACK(row_click_pressed_cb), data);
   gtk_widget_add_controller(row, GTK_EVENT_CONTROLLER(gesture)); // adopts
+
+  auto const middle_click = gtk_gesture_click_new();
+  gtk_gesture_single_set_button(GTK_GESTURE_SINGLE(middle_click), GDK_BUTTON_MIDDLE);
+  g_signal_connect(middle_click, "pressed",
+                   G_CALLBACK(row_middle_click_pressed_cb), data);
+  g_signal_connect(middle_click, "released",
+                   G_CALLBACK(row_middle_click_released_cb), data);
+  gtk_widget_add_controller(row, GTK_EVENT_CONTROLLER(middle_click)); // adopts
 
   auto const drag_source = gtk_drag_source_new();
   gtk_drag_source_set_actions(drag_source, GDK_ACTION_MOVE);
@@ -956,6 +996,17 @@ terminal_tab_sidebar_class_init(TerminalTabSidebarClass* klass)
                                  G_PARAM_EXPLICIT_NOTIFY));
 
   g_object_class_install_properties(object_class, N_PROPS, pspecs);
+
+  /* A tab's row was clicked with the middle button */
+  signals[PAGE_MIDDLE_CLICKED] =
+    g_signal_new("page-middle-clicked",
+                 G_OBJECT_CLASS_TYPE(klass),
+                 G_SIGNAL_RUN_LAST,
+                 0,
+                 nullptr, nullptr,
+                 g_cclosure_marshal_VOID__OBJECT,
+                 G_TYPE_NONE,
+                 1, ADW_TYPE_TAB_PAGE);
 
   gtk_widget_class_set_css_name(widget_class, "tabsidebar");
 }

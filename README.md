@@ -96,6 +96,9 @@ Everything GNOME Terminal provides, plus:
   main menu (*New Tab in Container*). New tabs and panes opened from a
   terminal in a container start in the same container; turn this off in
   *Preferences → Behavior*. Containers are found with podman.
+* **Middle-click on a tab**: choose in *Preferences → Behavior* whether a
+  middle click on a tab, in the tab bar or the tab list, closes it, pastes
+  the selection into it, or does nothing (the default).
 * **Close other tabs**: *Close Other Terminals* in a tab's menu closes every
   other tab except pinned ones, asking once if something still runs in
   them. Assign a shortcut in *Preferences → Keyboard Shortcuts*.

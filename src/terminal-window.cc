@@ -2739,10 +2739,72 @@ default_infobar_response_cb(GtkInfoBar* infobar,
   }
 }
 
-// Adwaita's tab bar closes tabs from middle-click, which
-// is undesirable. Since there is no API to inhibit this,
-// we need to install a capturing event handler to claim
-// the middle button click before AdwTabBox can see it.
+static void
+screen_pty_paste_primary_cb(TerminalScreen* screen,
+                            GParamSpec* pspec,
+                            void* user_data)
+{
+  if (!vte_terminal_get_pty(VTE_TERMINAL(screen)))
+    return;
+
+  g_signal_handlers_disconnect_by_func(screen, (void*)screen_pty_paste_primary_cb, user_data);
+  vte_terminal_paste_primary(VTE_TERMINAL(screen));
+}
+
+/* Pastes the primary selection into @screen. A terminal that was never
+ * shown has not started its shell yet, and would drop the text. */
+static void
+screen_paste_primary(TerminalScreen* screen)
+{
+  if (vte_terminal_get_pty(VTE_TERMINAL(screen))) {
+    vte_terminal_paste_primary(VTE_TERMINAL(screen));
+    return;
+  }
+
+  g_signal_handlers_disconnect_by_func(screen, (void*)screen_pty_paste_primary_cb, nullptr);
+  g_signal_connect(screen, "notify::pty", G_CALLBACK(screen_pty_paste_primary_cb), nullptr);
+}
+
+/* A middle click on a tab, in the tab bar or the tab list, does what the
+ * tab-middle-click setting says */
+static void
+window_tab_middle_clicked(TerminalWindow* window,
+                          AdwTabPage* page)
+{
+  auto const tab = TERMINAL_TAB(adw_tab_page_get_child(page));
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+
+  switch (TerminalTabMiddleClick(g_settings_get_enum(settings, TERMINAL_SETTING_TAB_MIDDLE_CLICK_KEY))) {
+  case TERMINAL_TAB_MIDDLE_CLICK_CLOSE:
+    terminal_notebook_close_tab(window->notebook, tab);
+    // window may be destroyed at this point
+    break;
+  case TERMINAL_TAB_MIDDLE_CLICK_PASTE: {
+    auto const screen = terminal_tab_get_screen(tab);
+    if (!screen)
+      break;
+
+    terminal_notebook_set_active_screen(window->notebook, screen);
+    screen_paste_primary(screen);
+    break;
+  }
+  case TERMINAL_TAB_MIDDLE_CLICK_NOTHING:
+  default:
+    break;
+  }
+}
+
+static void
+tab_sidebar_page_middle_clicked_cb(TerminalTabSidebar* sidebar,
+                                   AdwTabPage* page,
+                                   TerminalWindow* window)
+{
+  window_tab_middle_clicked(window, page);
+}
+
+// Adwaita's tab bar always closes tabs on middle click, and there is no
+// API to change that. A capturing gesture claims the middle click before
+// AdwTabBox sees it, and then does what the setting says.
 
 static void
 tab_bar_click_pressed_cb(GtkGesture* gesture,
@@ -2751,10 +2813,37 @@ tab_bar_click_pressed_cb(GtkGesture* gesture,
                          double y,
                          void* user_data)
 {
-  if (gtk_gesture_single_get_current_button(GTK_GESTURE_SINGLE(gesture)) == GDK_BUTTON_MIDDLE) {
-    gtk_gesture_set_state (gesture, GTK_EVENT_SEQUENCE_CLAIMED);
-    return;
+  gtk_gesture_set_state (gesture, GTK_EVENT_SEQUENCE_CLAIMED);
+}
+
+/* Returns: (transfer none) (nullable): the page of the tab at @x, @y in
+ * the AdwTabBox @box */
+static AdwTabPage*
+tab_box_get_page_at(GtkWidget* box,
+                    double x,
+                    double y)
+{
+  // AdwTab is private, but has a "page" property
+  static auto const tab_type = g_type_from_name("AdwTab");
+  if (!tab_type)
+    return nullptr;
+
+  for (auto widget = gtk_widget_pick(box, x, y, GTK_PICK_DEFAULT);
+       widget != nullptr && widget != box;
+       widget = gtk_widget_get_parent(widget)) {
+    if (!g_type_is_a(G_OBJECT_TYPE(widget), tab_type))
+      continue;
+    if (!g_object_class_find_property(G_OBJECT_GET_CLASS(widget), "page"))
+      return nullptr;
+
+    AdwTabPage* page = nullptr;
+    g_object_get(widget, "page", &page, nullptr);
+    if (page)
+      g_object_unref(page); // the view keeps it
+    return page;
   }
+
+  return nullptr;
 }
 
 static void
@@ -2762,16 +2851,18 @@ tab_bar_click_released_cb(GtkGesture* gesture,
                           int n_press,
                           double x,
                           double y,
-                          void* user_data)
+                          TerminalWindow* window)
 {
-  if (gtk_gesture_single_get_current_button(GTK_GESTURE_SINGLE(gesture)) == GDK_BUTTON_MIDDLE) {
-    gtk_gesture_set_state (gesture, GTK_EVENT_SEQUENCE_CLAIMED);
-    return;
-  }
+  gtk_gesture_set_state (gesture, GTK_EVENT_SEQUENCE_CLAIMED);
+
+  auto const box = gtk_event_controller_get_widget(GTK_EVENT_CONTROLLER(gesture));
+  if (auto const page = tab_box_get_page_at(box, x, y))
+    window_tab_middle_clicked(window, page);
 }
 
 static void
-capture_middle_click(GtkWidget* widget)
+capture_middle_click(GtkWidget* widget,
+                     TerminalWindow* window)
 {
   auto gesture = gtk_gesture_click_new();
   gtk_gesture_single_set_button(GTK_GESTURE_SINGLE(gesture),
@@ -2781,24 +2872,25 @@ capture_middle_click(GtkWidget* widget)
   g_signal_connect(gesture, "pressed",
                    G_CALLBACK(tab_bar_click_pressed_cb), nullptr);
   g_signal_connect(gesture, "released",
-                   G_CALLBACK(tab_bar_click_released_cb), nullptr);
+                   G_CALLBACK(tab_bar_click_released_cb), window);
 
   gtk_widget_add_controller(widget, GTK_EVENT_CONTROLLER(gesture)); // adopts gesture
 }
 
 static void
 recurse_capture_middle_click(GtkWidget *widget,
-                             GType type)
+                             GType type,
+                             TerminalWindow* window)
 {
   if (g_type_is_a(G_OBJECT_TYPE(widget), type)) {
-    capture_middle_click(widget);
+    capture_middle_click(widget, window);
     return;
   }
 
   for (auto child = gtk_widget_get_first_child(widget);
        child != nullptr;
        child = gtk_widget_get_next_sibling(child)) {
-    recurse_capture_middle_click(child, type);
+    recurse_capture_middle_click(child, type, window);
   }
 }
 
@@ -3056,6 +3148,8 @@ terminal_window_init (TerminalWindow *window)
                    TERMINAL_SETTING_TAB_SIDEBAR_WIDTH_KEY,
                    window->tab_sidebar, "width",
                    G_SETTINGS_BIND_DEFAULT);
+  g_signal_connect (window->tab_sidebar, "page-middle-clicked",
+                    G_CALLBACK (tab_sidebar_page_middle_clicked_cb), window);
 
   window->broadcast_banner = ADW_BANNER (adw_banner_new (""));
   adw_banner_set_button_label (window->broadcast_banner, _("_Stop"));
@@ -3090,9 +3184,10 @@ terminal_window_init (TerminalWindow *window)
   }
 #endif
 
-  // Intercept middle-click on the tab bar to prevent it from closing a tab.
+  // Intercept middle-click on the tab bar, see above
   recurse_capture_middle_click(GTK_WIDGET(window->tab_bar),
-                               g_type_from_name("AdwTabBox"));
+                               g_type_from_name("AdwTabBox"),
+                               window);
 }
 
 static void

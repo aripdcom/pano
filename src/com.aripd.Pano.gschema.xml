@@ -34,6 +34,12 @@
     <value nick='next' value='1'/>
   </enum>
 
+  <enum id='com.aripd.Pano.TabMiddleClick'>
+    <value nick='nothing' value='0'/>
+    <value nick='close' value='1'/>
+    <value nick='paste' value='2'/>
+  </enum>
+
   <enum id='com.aripd.Pano.RoundedCorners'>
     <value nick='none' value='0' />
     <value nick='top' value='1' />
@@ -811,6 +817,12 @@
     <key name="new-tab-position" enum="com.aripd.Pano.NewTabPosition">
       <default>'last'</default>
       <summary>Whether new tabs should open next to the current one or at the last position</summary>
+    </key>
+
+    <key name="tab-middle-click" enum="com.aripd.Pano.TabMiddleClick">
+      <default>'nothing'</default>
+      <summary>What a middle click on a tab does</summary>
+      <description>“close” closes the tab; “paste” switches to the tab and pastes the primary selection into it.</description>
     </key>
 
     <key name="rounded-corners" enum="com.aripd.Pano.RoundedCorners">

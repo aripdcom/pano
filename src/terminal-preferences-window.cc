@@ -54,6 +54,8 @@ struct _TerminalPreferencesWindow
   GListModel           *rounded_corners_model;
   AdwComboRow          *tab_position;
   GListModel           *tab_positions;
+  AdwComboRow          *tab_middle_click;
+  GListModel           *tab_middle_clicks;
   AdwComboRow          *tab_bar_position;
   GListModel           *tab_bar_positions;
   AdwComboRow          *theme_variant;
@@ -630,6 +632,16 @@ terminal_preferences_window_constructed (GObject *object)
                                 g_object_ref (self->tab_positions),
                                 g_object_unref);
 
+  terminal_util_g_settings_bind_with_mapping (settings,
+                                TERMINAL_SETTING_TAB_MIDDLE_CLICK_KEY,
+                                self->tab_middle_click,
+                                "selected",
+                                GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET),
+                                string_to_index,
+                                index_to_string,
+                                g_object_ref (self->tab_middle_clicks),
+                                g_object_unref);
+
   // Unfortunately there is no API for AdwPreferencesWindow to do this,
   // nor can we directly get its AdwNavigationView since it's not an
   // internal-child in GtkBuilder.
@@ -682,6 +694,8 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, tab_bar_positions);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, tab_position);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, tab_positions);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, tab_middle_click);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, tab_middle_clicks);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, theme_variant);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, theme_variants);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, context_menu_model);
