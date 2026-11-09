@@ -13,6 +13,7 @@ src/terminal-accel-dialog.ui
 src/terminal-accel-row.cc
 src/terminal-accels.cc
 src/terminal-app.cc
+src/terminal-command-palette.cc
 src/terminal-find-bar.ui
 src/terminal-headerbar.cc
 src/terminal-headerbar.ui

@@ -89,6 +89,7 @@
 #define KEY_REOPEN_TAB          "reopen-closed-tab"
 #define KEY_CLOSE_OTHER_TABS    "close-other-tabs"
 #define KEY_SET_TITLE           "set-terminal-title"
+#define KEY_COMMAND_PALETTE     "command-palette"
 #define KEY_BROADCAST_TAB       "broadcast-tab"
 #define KEY_BROADCAST_WINDOW    "broadcast-window"
 #define KEY_SPLIT_RIGHT         "split-right"
@@ -167,7 +168,8 @@ static KeyEntry view_entries[] = {
   ENTRY (N_("Full Screen"),           KEY_FULL_SCREEN,    "fullscreen",      nullptr, nullptr),
   ENTRY (N_("Zoom In"),               KEY_ZOOM_IN,        "zoom-in",         nullptr, nullptr),
   ENTRY (N_("Zoom Out"),              KEY_ZOOM_OUT,       "zoom-out",        nullptr, nullptr),
-  ENTRY (N_("Normal Size"),           KEY_ZOOM_NORMAL,    "zoom-normal",     nullptr, nullptr)
+  ENTRY (N_("Normal Size"),           KEY_ZOOM_NORMAL,    "zoom-normal",     nullptr, nullptr),
+  ENTRY (N_("Command Palette"),       KEY_COMMAND_PALETTE, "command-palette", nullptr, nullptr),
 };
 
 static KeyEntry terminal_entries[] = {
@@ -399,6 +401,39 @@ terminal_accels_init (GApplication *application,
   }
 
   g_signal_connect (keybinding_settings, "changed", G_CALLBACK (key_changed_cb), application);
+}
+
+/**
+ * terminal_accels_foreach_action:
+ * @func: called for each action
+ * @user_data: data for @func
+ *
+ * Calls @func with the translated name, the action (such as "win.split"),
+ * its target and its accelerator (or %NULL) of each action that can have a
+ * keyboard shortcut, except switching to a tab by its number.
+ */
+void
+terminal_accels_foreach_action (TerminalAccelsForeachFunc func,
+                                void* user_data)
+{
+  for (auto i = 0u; i < G_N_ELEMENTS (all_entries); ++i) {
+    for (auto j = 0u; j < all_entries[i].n_elements; ++j) {
+      auto const entry = &all_entries[i].key_entry[j];
+      if (!entry->user_visible_name ||
+          (g_str_has_prefix (entry->settings_key, KEY_SWITCH_TAB_PREFIX) &&
+           !g_str_equal (entry->settings_key, KEY_SWITCH_TAB_PREFIX "last")))
+        continue;
+
+      gs_free char *accel = keybinding_settings
+        ? g_settings_get_string (keybinding_settings, entry->settings_key)
+        : nullptr;
+      func (_(entry->user_visible_name),
+            entry->action_name,
+            entry->parameter,
+            accel && !g_str_equal (accel, "disabled") ? accel : nullptr,
+            user_data);
+    }
+  }
 }
 
 void

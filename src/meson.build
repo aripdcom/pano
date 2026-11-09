@@ -167,6 +167,8 @@ server_sources = app_sources + client_util_sources + debug_sources + default_sou
   'terminal-find-bar.hh',
   'terminal-gdbus.cc',
   'terminal-gdbus.hh',
+  'terminal-command-palette.cc',
+  'terminal-command-palette.hh',
   'terminal-gnome-terminal-import.cc',
   'terminal-gnome-terminal-import.hh',
   'terminal-headerbar.cc',

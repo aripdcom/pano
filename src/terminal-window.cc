@@ -38,6 +38,7 @@
 #include "terminal-enums.hh"
 #include "terminal-headerbar.hh"
 #include "terminal-find-bar.hh"
+#include "terminal-command-palette.hh"
 #include "terminal-gnome-terminal-import.hh"
 #include "terminal-icon-button.hh"
 #include "terminal-intl.hh"
@@ -1592,6 +1593,15 @@ detach_tab(TerminalWindow* window,
   terminal_window_parse_geometry (new_window, geometry);
 
   gtk_window_present (GTK_WINDOW (new_window));
+}
+
+static void
+action_command_palette_cb(GSimpleAction* action,
+                          GVariant* parameter,
+                          gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  terminal_command_palette_show(window, GTK_WIDGET(window->toast_overlay));
 }
 
 static void
@@ -3203,6 +3213,7 @@ terminal_window_init (TerminalWindow *window)
     { "size-to",             action_size_to_cb,          "(uu)", nullptr, nullptr },
     { "split",               action_split_cb,            "s",    nullptr, nullptr },
     { "equalize-panes",      action_equalize_panes_cb,   nullptr, nullptr, nullptr },
+    { "command-palette",     action_command_palette_cb,  nullptr, nullptr, nullptr },
     { "move-pane",           action_move_pane_cb,        "s",    nullptr, nullptr },
     { "tab-detach",          action_tab_detach_cb,       nullptr,   nullptr, nullptr },
     { "tab-move-left",       action_tab_move_left_cb,    nullptr,   nullptr, nullptr },

@@ -454,6 +454,10 @@
       <default>'disabled'</default>
       <summary>Keyboard shortcut to toggle the read-only state</summary>
     </key>
+    <key name="command-palette" type="s">
+      <default>'&lt;Control&gt;&lt;Shift&gt;p'</default>
+      <summary>Keyboard shortcut to open the command palette</summary>
+    </key>
     <key name="set-terminal-title" type="s">
       <default>'disabled'</default>
       <summary>Keyboard shortcut to set a title for the terminal that programs cannot change</summary>

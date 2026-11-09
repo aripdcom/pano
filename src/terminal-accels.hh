@@ -30,6 +30,15 @@ void terminal_accels_shutdown (void);
 
 GSettings *terminal_accels_get_settings (void);
 
+typedef void (* TerminalAccelsForeachFunc) (char const* name,
+                                            char const* action_name,
+                                            GVariant* target,
+                                            char const* accel,
+                                            void* user_data);
+
+void terminal_accels_foreach_action (TerminalAccelsForeachFunc func,
+                                     void* user_data);
+
 #ifdef TERMINAL_PREFERENCES
 void terminal_accels_populate_preferences (AdwPreferencesPage *page);
 #endif

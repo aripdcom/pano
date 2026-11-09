@@ -113,6 +113,10 @@ Everything GNOME Terminal provides, plus:
   main menu (*New Tab in Container*). New tabs and panes opened from a
   terminal in a container start in the same container; turn this off in
   *Preferences → Behavior*. Containers are found with podman.
+* **Command palette**: Ctrl+Shift+P opens a searchable list of the
+  actions with their shortcuts, the profiles and the open tabs. Type a few
+  letters of the words, for example "spl rig" for Split Right, and press
+  Enter.
 * **Tab titles**: *Set Title…* in a tab's menu gives the terminal a title
   that programs cannot change, which is kept with the session. To ignore
   the titles that programs set everywhere, turn on *Ignore Titles Set by
