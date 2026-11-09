@@ -45,7 +45,8 @@ clangxx_req_version       = '3.3'
 # Requirements
 
 vte_req                      = 'vte-2.91-gtk4'
-vte_req_version              = '0.72.2'
+# Termprops for progress and icons (0.80); Debian 13 has 0.80
+vte_req_version              = '0.80.0'
 vte_default_options          = [
   'docs=false',
   'gir=false',

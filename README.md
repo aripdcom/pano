@@ -108,8 +108,9 @@ roadmap.
 Building from source
 --------------------
 
-Pano needs recent versions of its dependencies. It is currently tested with
-GTK 4.24, libadwaita 1.10 and VTE 0.84.
+Pano Terminal needs GTK 4.12, libadwaita 1.4 and VTE 0.80 or newer. It is
+tested on Fedora 45 (GTK 4.24, libadwaita 1.10, VTE 0.84) and Debian 13
+(GTK 4.18, libadwaita 1.7, VTE 0.80).
 
 On Fedora:
 ```
@@ -125,8 +126,9 @@ sudo apt install meson ninja-build g++ libgtk-4-dev libadwaita-1-dev \
     gettext itstool desktop-file-utils xsltproc docbook-xsl
 ```
 
-If your distribution ships an older VTE, let Meson build VTE as a subproject
-by adding `--force-fallback-for=vte-2.91-gtk4` to the `meson setup` command.
+If your distribution ships an older VTE (for example Ubuntu 24.04 with 0.76),
+let Meson build VTE as a subproject by adding
+`--force-fallback-for=vte-2.91-gtk4` to the `meson setup` command.
 
 Then build and install:
 ```
