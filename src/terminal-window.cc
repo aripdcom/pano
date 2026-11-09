@@ -197,6 +197,7 @@ enum class CloseKind {
 };
 
 static void terminal_window_update_pane_actions(TerminalWindow* window);
+static void window_sync_translucency(TerminalWindow* window);
 static gboolean confirm_close_window_or_tab (TerminalWindow *window,
                                              TerminalScreen *screen,
                                              CloseKind kind);
@@ -769,6 +770,39 @@ action_zoom_pane_state_cb(GSimpleAction* action,
   terminal_window_update_pane_actions(window);
 }
 
+/* Makes the window background transparent while the active tab has a
+ * translucent terminal, so that the desktop shows through it. Header bar,
+ * tab bars and side bar keep their background, see terminal.common.css.
+ */
+static void
+window_sync_translucency(TerminalWindow* window)
+{
+  if (window->disposed)
+    return;
+
+  auto translucent = false;
+  if (auto const tab = window_get_active_tab(window)) {
+    auto const screens = terminal_tab_list_screens(tab);
+    for (auto l = screens; l && !translucent; l = l->next) {
+      gs_unref_object auto profile = terminal_screen_ref_profile(TERMINAL_SCREEN(l->data));
+      translucent = profile &&
+        g_settings_get_double(profile, TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY) < 1.0;
+    }
+    g_list_free(screens);
+  }
+
+  if (translucent)
+    gtk_widget_add_css_class(GTK_WIDGET(window), "translucent");
+  else
+    gtk_widget_remove_css_class(GTK_WIDGET(window), "translucent");
+}
+
+static void
+profile_opacity_changed_cb(TerminalWindow* window)
+{
+  window_sync_translucency(window);
+}
+
 static void
 terminal_window_update_pane_actions(TerminalWindow* window)
 {
@@ -788,6 +822,9 @@ terminal_window_update_pane_actions(TerminalWindow* window)
   g_simple_action_set_enabled(lookup_action(window, "shadow-pane"), split);
   g_simple_action_set_state(lookup_action(window, "zoom-pane"),
                             g_variant_new_boolean(zoomed));
+
+  // Panes come and go with the same calls
+  window_sync_translucency(window);
 }
 
 static void
@@ -2455,6 +2492,12 @@ terminal_window_init (TerminalWindow *window)
   g_signal_connect (app, "clipboard-targets-changed",
                     G_CALLBACK (clipboard_targets_changed_cb), window);
 
+  g_signal_connect_object (terminal_app_get_profiles_list (app),
+                           "child-changed::" TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY,
+                           G_CALLBACK (profile_opacity_changed_cb),
+                           window,
+                           G_CONNECT_SWAPPED);
+
   terminal_window_fill_notebook_action_box (window, FALSE);
 
   window_group = gtk_window_group_new ();
@@ -2708,6 +2751,9 @@ profile_set_cb (TerminalScreen *screen,
 {
   if (!gtk_widget_get_realized (GTK_WIDGET (window)))
     return;
+
+  if (terminal_tab_get_from_screen(screen) == window_get_active_tab(window))
+    window_sync_translucency(window);
 
   if (screen != window->active_screen)
     return;

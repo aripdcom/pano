@@ -94,6 +94,8 @@ struct _TerminalProfileEditor
   AdwEntryRow          *title;
   AdwSwitchRow         *use_custom_command;
   AdwSwitchRow         *use_system_colors;
+  GtkScale             *background_opacity;
+  GtkAdjustment        *background_opacity_adjustment;
   AdwSwitchRow         *use_system_font;
   GtkLabel             *uuid;
   AdwEntryRow          *visible_name;
@@ -786,6 +788,31 @@ sanitize_font_string (GValue   *value,
 }
 
 static gboolean
+opacity_to_percent(GValue* value,
+                   GVariant* variant,
+                   void* user_data)
+{
+  g_value_set_double(value, g_variant_get_double(variant) * 100.0);
+  return TRUE;
+}
+
+static GVariant*
+percent_to_opacity(GValue const* value,
+                   GVariantType const* type,
+                   void* user_data)
+{
+  return g_variant_new_double(CLAMP(g_value_get_double(value), 10.0, 100.0) / 100.0);
+}
+
+static char*
+format_percent(GtkScale* scale,
+               double value,
+               void* user_data)
+{
+  return g_strdup_printf("%.0f%%", value);
+}
+
+static gboolean
 index_from_list_value(GValue* value,
                       GVariant *variant,
                       void* user_data)
@@ -903,6 +930,18 @@ terminal_profile_editor_constructed (GObject *object)
   terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_CELL_WIDTH_SCALE_KEY,
                    self->cell_width, "value",
                    GSettingsBindFlags(G_SETTINGS_BIND_DEFAULT));
+
+  // Shown in percent, stored as 0.1 to 1.0
+  g_settings_bind_with_mapping (self->settings, TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY,
+                                self->background_opacity_adjustment, "value",
+                                GSettingsBindFlags(G_SETTINGS_BIND_DEFAULT),
+                                opacity_to_percent, percent_to_opacity,
+                                nullptr, nullptr);
+  terminal_util_set_settings_and_key_for_widget (GTK_WIDGET (self->background_opacity),
+                                                 self->settings,
+                                                 TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY);
+  gtk_scale_set_format_value_func (self->background_opacity,
+                                   format_percent, nullptr, nullptr);
 
   terminal_util_g_settings_bind_with_mapping (self->settings, TERMINAL_PROFILE_SCROLLBAR_POLICY_KEY,
                                 self->show_scrollbar, "selected",
@@ -1239,6 +1278,8 @@ terminal_profile_editor_class_init (TerminalProfileEditorClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, show_scrollbar);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, use_custom_command);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, use_system_colors);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, background_opacity);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, background_opacity_adjustment);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, use_system_font);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, uuid);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, visible_name);

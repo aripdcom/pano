@@ -102,3 +102,24 @@ tabsidebar listview > row:not(:hover):not(:selected) .tab-row .close-button
 {
   opacity: 0;
 }
+
+/* Translucent terminals: the window lets the desktop show through the
+ * terminal area only. The terminals paint their own, translucent
+ * background; everything else keeps an opaque one. */
+
+window.terminal-window.translucent
+{
+  background-color: transparent;
+}
+
+window.terminal-window.translucent toolbarview .top-bar,
+window.terminal-window.translucent toolbarview .bottom-bar
+{
+  background-color: @headerbar_bg_color;
+}
+
+window.terminal-window.translucent tabsidebar,
+window.terminal-window.translucent terminal-pane scrollbar
+{
+  background-color: @window_bg_color;
+}

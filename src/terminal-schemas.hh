@@ -35,6 +35,7 @@ G_BEGIN_DECLS
 #define TERMINAL_PROFILE_AUDIBLE_BELL_KEY               "audible-bell"
 #define TERMINAL_PROFILE_BOLD_IS_BRIGHT_KEY             "bold-is-bright"
 #define TERMINAL_PROFILE_BACKGROUND_COLOR_KEY           "background-color"
+#define TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY         "background-opacity"
 #define TERMINAL_PROFILE_BACKSPACE_BINDING_KEY          "backspace-binding"
 #define TERMINAL_PROFILE_BOLD_COLOR_KEY                 "bold-color"
 #define TERMINAL_PROFILE_BOLD_COLOR_SAME_AS_FG_KEY      "bold-color-same-as-fg"

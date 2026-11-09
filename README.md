@@ -8,8 +8,8 @@ Website: https://pano.aripd.com
 
 Pano is a fork of [GNOME Terminal](https://gitlab.gnome.org/GNOME/gnome-terminal).
 It focuses on power-user features that GNOME Terminal does not offer, such
-as flexible tab placement, split panes and session restore, and, on the
-roadmap, background transparency.
+as flexible tab placement, split panes, session restore and background
+transparency.
 
 > **Status:** early development. There are no packages yet; build it from
 > source as described below.
@@ -50,6 +50,10 @@ Everything GNOME Terminal provides, plus:
   `~/.local/state/pano-terminal/`.
 * **Remember window size** (optional): open new windows with the size of the
   last used terminal instead of the initial size of the profile.
+* **Background transparency**: set the background opacity of each profile in
+  *Preferences → Profile → Colors → Background Opacity*. Only the terminal
+  background lets the desktop through; text, header bar and tab bars stay
+  opaque.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.

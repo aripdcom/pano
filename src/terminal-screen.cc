@@ -1495,6 +1495,7 @@ terminal_screen_profile_changed_cb (GSettings     *profile,
       prop_name == I_(TERMINAL_PROFILE_USE_THEME_COLORS_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_FOREGROUND_COLOR_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_BACKGROUND_COLOR_KEY) ||
+      prop_name == I_(TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR_SAME_AS_FG_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_BOLD_COLOR_KEY) ||
       prop_name == I_(TERMINAL_PROFILE_CURSOR_COLORS_SET_KEY) ||
@@ -1655,6 +1656,10 @@ update_color_scheme (TerminalScreen *screen)
       if (terminal_g_settings_get_rgba (profile, TERMINAL_PROFILE_HIGHLIGHT_FOREGROUND_COLOR_KEY, &highlight_fg))
         highlight_fgp = &highlight_fg;
     }
+
+  /* Only the background is translucent; the window lets the desktop show
+   * through the terminal area, see window_sync_translucency(). */
+  bg.alpha = float(g_settings_get_double (profile, TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY));
 
   vte_terminal_set_colors (VTE_TERMINAL (screen), &fg, &bg,
                            colors, n_colors);
