@@ -871,6 +871,37 @@ window_sync_translucency(TerminalWindow* window)
     gtk_widget_remove_css_class(GTK_WIDGET(window), "translucent");
 }
 
+/* Colors the header bar while the active terminal runs as root or over SSH */
+static void
+window_sync_process_kind(TerminalWindow* window)
+{
+  if (window->disposed)
+    return;
+
+  auto const kind = window->active_screen
+    ? terminal_screen_get_process_kind(window->active_screen)
+    : TERMINAL_PROCESS_KIND_NORMAL;
+
+  auto const widget = GTK_WIDGET(window);
+  if (kind == TERMINAL_PROCESS_KIND_ROOT)
+    gtk_widget_add_css_class(widget, "root-session");
+  else
+    gtk_widget_remove_css_class(widget, "root-session");
+  if (kind == TERMINAL_PROCESS_KIND_REMOTE)
+    gtk_widget_add_css_class(widget, "remote-session");
+  else
+    gtk_widget_remove_css_class(widget, "remote-session");
+}
+
+static void
+screen_process_kind_changed_cb(TerminalScreen* screen,
+                               GParamSpec* pspec,
+                               TerminalWindow* window)
+{
+  if (screen == window->active_screen)
+    window_sync_process_kind(window);
+}
+
 static void
 profile_opacity_changed_cb(TerminalWindow* window)
 {
@@ -899,6 +930,7 @@ terminal_window_update_pane_actions(TerminalWindow* window)
 
   // Panes come and go with the same calls
   window_sync_translucency(window);
+  window_sync_process_kind(window);
   window_update_broadcast(window);
 }
 
@@ -3495,6 +3527,8 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
                     G_CALLBACK (screen_prompts_changed_cb), window);
   g_signal_connect (screen, "commit",
                     G_CALLBACK (screen_commit_cb), window);
+  g_signal_connect (screen, "notify::process-kind",
+                    G_CALLBACK (screen_process_kind_changed_cb), window);
 
   terminal_window_update_tabs_actions_sensitivity (window);
   terminal_window_update_search_sensitivity(window);
@@ -3595,6 +3629,9 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_commit_cb,
+                                        window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_process_kind_changed_cb,
                                         window);
   terminal_tab_set_screen_css_class (screen, "broadcast", false);
   terminal_app_withdraw_command_notification (terminal_app_get (), screen);

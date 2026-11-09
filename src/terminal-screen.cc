@@ -163,6 +163,10 @@ struct _TerminalScreenPrivate
   bool precmd_in_batch; /* a prompt was reported in the current batch */
   guint precmd_batch_source;
 
+  /* See terminal_screen_update_process_kind() */
+  TerminalProcessKind process_kind;
+  guint process_kind_source;
+
   /* Input broadcasting, see terminal_screen_is_user_input() */
   bool in_key_event;
   guint key_event_source;
@@ -210,6 +214,7 @@ enum {
   PROP_ICON,
   PROP_ICON_PROGRESS,
   PROP_TITLE,
+  PROP_PROCESS_KIND,
   N_PROPS
 };
 
@@ -826,6 +831,100 @@ terminal_screen_row_to_adjustment(TerminalScreen* screen,
   return double(row - terminal_screen_get_row_origin(screen)) * terminal_screen_scroll_unit(screen);
 }
 
+/* Root and remote sessions */
+
+static TerminalProcessKind
+terminal_screen_find_process_kind(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+
+  if (priv->child_pid <= 0)
+    return TERMINAL_PROCESS_KIND_NORMAL;
+
+  auto const settings = terminal_app_get_global_settings(terminal_app_get());
+  if (!g_settings_get_boolean(settings, TERMINAL_SETTING_HIGHLIGHT_ROOT_AND_REMOTE_KEY))
+    return TERMINAL_PROCESS_KIND_NORMAL;
+
+  auto const pty = vte_terminal_get_pty(VTE_TERMINAL(screen));
+  auto pid = pty ? int(tcgetpgrp(vte_pty_get_fd(pty))) : -1;
+  if (pid <= 0)
+    pid = priv->child_pid;
+
+  // The effective user of the foreground program, from Linux's /proc
+  gs_free char* status_path = g_strdup_printf("/proc/%d/status", pid);
+  gs_free char* status = nullptr;
+  if (g_file_get_contents(status_path, &status, nullptr, nullptr)) {
+    if (auto const uid_line = strstr(status, "\nUid:")) {
+      unsigned real_uid, effective_uid;
+      if (sscanf(uid_line + 5, "%u %u", &real_uid, &effective_uid) == 2 &&
+          effective_uid == 0)
+        return TERMINAL_PROCESS_KIND_ROOT;
+    }
+  }
+
+  gs_free char* comm_path = g_strdup_printf("/proc/%d/comm", pid);
+  gs_free char* comm = nullptr;
+  if (g_file_get_contents(comm_path, &comm, nullptr, nullptr)) {
+    g_strstrip(comm);
+    static char const* const remote_programs[] = {
+      "ssh", "mosh-client", "autossh", "sshpass", "et", "telnet", nullptr
+    };
+    if (g_strv_contains(remote_programs, comm))
+      return TERMINAL_PROCESS_KIND_REMOTE;
+  }
+
+  return TERMINAL_PROCESS_KIND_NORMAL;
+}
+
+static void
+terminal_screen_update_process_kind(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+  auto const kind = terminal_screen_find_process_kind(screen);
+  if (kind == priv->process_kind)
+    return;
+
+  priv->process_kind = kind;
+  g_object_notify_by_pspec(G_OBJECT(screen), pspecs[PROP_PROCESS_KIND]);
+  // The icon falls back to one for the kind
+  g_object_notify_by_pspec(G_OBJECT(screen), pspecs[PROP_ICON]);
+}
+
+static gboolean
+terminal_screen_process_kind_timeout_cb(void* user_data)
+{
+  auto const screen = TERMINAL_SCREEN(user_data);
+
+  screen->priv->process_kind_source = 0;
+  terminal_screen_update_process_kind(screen);
+  return G_SOURCE_REMOVE;
+}
+
+static void
+terminal_screen_queue_process_kind_update(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+  if (priv->process_kind_source == 0)
+    priv->process_kind_source = g_timeout_add(300,
+                                              terminal_screen_process_kind_timeout_cb,
+                                              screen);
+}
+
+/**
+ * terminal_screen_get_process_kind:
+ * @screen: a #TerminalScreen
+ *
+ * Returns: whether the foreground program runs as root or connects to
+ *   another computer, as far as Pano Terminal can tell
+ */
+TerminalProcessKind
+terminal_screen_get_process_kind(TerminalScreen* screen)
+{
+  g_return_val_if_fail(TERMINAL_IS_SCREEN(screen), TERMINAL_PROCESS_KIND_NORMAL);
+
+  return screen->priv->process_kind;
+}
+
 static gboolean
 terminal_screen_key_event_done_cb(void* user_data)
 {
@@ -1300,6 +1399,14 @@ terminal_screen_init (TerminalScreen *screen)
   g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_SHELL_PRECMD,
                    G_CALLBACK(terminal_screen_shell_precmd_cb), screen);
 
+  // A new foreground program usually prints something; look then
+  g_signal_connect(screen, "contents-changed",
+                   G_CALLBACK(terminal_screen_queue_process_kind_update), nullptr);
+  g_signal_connect_object(terminal_app_get_global_settings(terminal_app_get()),
+                          "changed::" TERMINAL_SETTING_HIGHLIGHT_ROOT_AND_REMOTE_KEY,
+                          G_CALLBACK(terminal_screen_queue_process_kind_update),
+                          screen, G_CONNECT_SWAPPED);
+
   app = terminal_app_get ();
   g_signal_connect (terminal_app_get_desktop_interface_settings (app), "changed::" MONOSPACE_FONT_KEY_NAME,
                     G_CALLBACK (terminal_screen_system_font_changed_cb), screen);
@@ -1321,6 +1428,9 @@ terminal_screen_get_property (GObject *object,
         break;
       case PROP_ICON:
         g_value_set_object(value, terminal_screen_get_icon(screen));
+        break;
+      case PROP_PROCESS_KIND:
+        g_value_set_int(value, int(screen->priv->process_kind));
         break;
       case PROP_ICON_PROGRESS:
         g_value_set_object(value, terminal_screen_get_icon_progress(screen));
@@ -1350,6 +1460,7 @@ terminal_screen_set_property (GObject *object,
       case PROP_ICON:
       case PROP_ICON_PROGRESS:
       case PROP_TITLE:
+      case PROP_PROCESS_KIND:
         /* not writable */
       default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -1483,6 +1594,14 @@ terminal_screen_class_init (TerminalScreenClass *klass)
 				      G_PARAM_STATIC_STRINGS |
                                       G_PARAM_EXPLICIT_NOTIFY));
 
+  pspecs[PROP_PROCESS_KIND] =
+     g_param_spec_int ("process-kind", nullptr, nullptr,
+                       TERMINAL_PROCESS_KIND_NORMAL, TERMINAL_PROCESS_KIND_REMOTE,
+                       TERMINAL_PROCESS_KIND_NORMAL,
+                       GParamFlags(G_PARAM_READABLE |
+                                   G_PARAM_STATIC_STRINGS |
+                                   G_PARAM_EXPLICIT_NOTIFY));
+
   g_object_class_install_properties(object_class, N_PROPS, pspecs);
 
   gtk_widget_class_install_action (widget_class,
@@ -1567,6 +1686,7 @@ terminal_screen_dispose (GObject *object)
   g_clear_handle_id(&priv->command_capture_source, g_source_remove);
   g_clear_handle_id(&priv->precmd_batch_source, g_source_remove);
   g_clear_handle_id(&priv->key_event_source, g_source_remove);
+  g_clear_handle_id(&priv->process_kind_source, g_source_remove);
   g_clear_pointer(&priv->command, g_free);
 
   G_OBJECT_CLASS (terminal_screen_parent_class)->dispose (object);
@@ -2787,6 +2907,7 @@ terminal_screen_child_exited (VteTerminal *terminal,
                          screen);
 
   priv->child_pid = -1;
+  terminal_screen_update_process_kind (screen);
 
   action = TerminalExitAction(g_settings_get_enum (priv->profile, TERMINAL_PROFILE_EXIT_ACTION_KEY));
   auto const tab = terminal_tab_get_from_screen(screen);
@@ -3495,8 +3616,15 @@ terminal_screen_get_icon(TerminalScreen* screen)
     return screen->priv->icon_image;
   else if (screen->priv->icon_color)
     return screen->priv->icon_color;
-  else
-    return nullptr;
+
+  // Without an icon set by the program, mark root and remote sessions
+  static GIcon* root_icon = g_themed_icon_new("dialog-warning-symbolic");
+  static GIcon* remote_icon = g_themed_icon_new("network-server-symbolic");
+  switch (screen->priv->process_kind) {
+  case TERMINAL_PROCESS_KIND_ROOT: return root_icon;
+  case TERMINAL_PROCESS_KIND_REMOTE: return remote_icon;
+  default: return nullptr;
+  }
 }
 
 GIcon*

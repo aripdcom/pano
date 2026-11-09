@@ -114,6 +114,12 @@
               </object>
             </child>
             <child>
+              <object class="AdwSwitchRow" id="highlight_root_and_remote">
+                <property name="title" translatable="yes">Highlight Root and Remote Sessions</property>
+                <property name="subtitle" translatable="yes">Color the header bar and mark the tab while a terminal runs as root or over SSH</property>
+              </object>
+            </child>
+            <child>
               <object class="AdwComboRow" id="tab_bar_position">
                 <property name="title" translatable="yes">Tab Bar Position</property>
                 <property name="expression">

@@ -157,3 +157,16 @@ tabsidebar > handle
 {
   min-width: 6px;
 }
+
+/* The active terminal runs as root, or over SSH */
+window.terminal-window.root-session toolbarview .top-bar
+{
+  background-color: #a51d2d;
+  color: white;
+}
+
+window.terminal-window.remote-session toolbarview .top-bar
+{
+  background-color: #613583;
+  color: white;
+}

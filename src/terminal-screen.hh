@@ -162,6 +162,15 @@ void terminal_screen_set_search_matches(TerminalScreen* screen,
 void terminal_screen_scroll_to_row(TerminalScreen* screen,
                                    long row);
 
+/* What the foreground program of a terminal is, for showing it */
+typedef enum {
+  TERMINAL_PROCESS_KIND_NORMAL,
+  TERMINAL_PROCESS_KIND_ROOT, /* runs as root, e.g. sudo or su */
+  TERMINAL_PROCESS_KIND_REMOTE, /* connects to another computer, e.g. ssh */
+} TerminalProcessKind;
+
+TerminalProcessKind terminal_screen_get_process_kind(TerminalScreen* screen);
+
 gboolean terminal_screen_is_user_input(TerminalScreen* screen,
                                        char const* text,
                                        gsize size);
