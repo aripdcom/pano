@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fedora:
+    name: Fedora
+    runs-on: ubuntu-latest
+    container: registry.fedoraproject.org/fedora:latest
+    steps:
+      - name: Install dependencies
+        run: >
+          dnf -y install --setopt=install_weak_deps=False
+          git meson ninja-build gcc-c++ pkgconf gtk4-devel libadwaita-devel
+          vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel
+          glib2-devel gettext itstool desktop-file-utils libxslt docbook-style-xsl
+          appstream
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: meson setup _build -Dsearch_provider=true -Dnautilus_extension=false
+      - name: Build
+        run: meson compile -C _build
+      - name: Test
+        run: meson test -C _build --print-errorlogs
+      - name: Install
+        run: meson install -C _build
+
+  debian:
+    name: Debian 13
+    runs-on: ubuntu-latest
+    container: debian:trixie
+    steps:
+      - name: Install dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates git meson ninja-build g++ pkg-config \
+            libgtk-4-dev libadwaita-1-dev libvte-2.91-gtk4-dev libpcre2-dev \
+            uuid-dev gsettings-desktop-schemas-dev libglib2.0-dev-bin gettext \
+            itstool desktop-file-utils xsltproc docbook-xsl
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: meson setup _build -Dsearch_provider=true -Dnautilus_extension=false
+      - name: Build
+        run: meson compile -C _build
+      - name: Test
+        run: meson test -C _build --print-errorlogs

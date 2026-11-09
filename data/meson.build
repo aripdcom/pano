@@ -31,21 +31,27 @@ i18n.itstool_join(
   output: '@BASENAME@',
 )
 
-i18n.itstool_join(
-  input: gt_dns_name + '.Nautilus.metainfo.xml.in',
-  install: true,
-  install_dir: gt_prefix / metainfodir,
-  install_tag: 'metadata',
-  its_files: metainfo_its,
-  mo_targets: gettext_targets[0],
-  output: '@BASENAME@',
-)
+metainfo_files = [gt_dns_name + '.metainfo.xml']
+
+# The extension's metainfo only makes sense when the extension is installed
+if get_option('nautilus_extension')
+  i18n.itstool_join(
+    input: gt_dns_name + '.Nautilus.metainfo.xml.in',
+    install: true,
+    install_dir: gt_prefix / metainfodir,
+    install_tag: 'metadata',
+    its_files: metainfo_its,
+    mo_targets: gettext_targets[0],
+    output: '@BASENAME@',
+  )
+
+  metainfo_files += [gt_dns_name + '.Nautilus.metainfo.xml']
+endif
 
 meson.add_install_script(
   'meson_metainfofile.py',
   metainfodir,
-  gt_dns_name + '.metainfo.xml',
-  gt_dns_name + '.Nautilus.metainfo.xml',
+  metainfo_files,
 )
 
 # Desktop file

@@ -1,0 +1,36 @@
+Source: pano-terminal
+Section: x11
+Priority: optional
+Maintainer: aripdcem <cem@aripd.com>
+Build-Depends: debhelper-compat (= 13),
+               meson,
+               ninja-build,
+               pkgconf,
+               libgtk-4-dev (>= 4.12),
+               libadwaita-1-dev (>= 1.4),
+               libvte-2.91-gtk4-dev (>= 0.80),
+               libpcre2-dev,
+               uuid-dev,
+               gsettings-desktop-schemas-dev,
+               libglib2.0-dev-bin,
+               gettext,
+               itstool,
+               desktop-file-utils,
+               xsltproc,
+               docbook-xsl
+Standards-Version: 4.7.0
+Homepage: https://pano.aripd.com
+Vcs-Browser: https://github.com/aripdcom/pano
+Vcs-Git: https://github.com/aripdcom/pano.git
+Rules-Requires-Root: no
+
+Package: pano-terminal
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gsettings-desktop-schemas
+Description: terminal emulator for GNOME with split panes and tabs on any side
+ Pano Terminal is a terminal emulator for GNOME, built with GTK 4, libadwaita
+ and VTE. It is a fork of GNOME Terminal with split panes, tabs at the top,
+ bottom, left or right, session restore, color schemes that follow the light
+ and dark style, background transparency, command notifications and more.
+ .
+ It can be installed next to GNOME Terminal.

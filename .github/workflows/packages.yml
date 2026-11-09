@@ -1,0 +1,91 @@
+name: Packages
+
+# Builds the source tarball, the Fedora RPM and the Debian package. Run it by
+# hand to get the packages as workflow artifacts; pushing a v* tag also
+# attaches them to a draft release, to be reviewed and published by hand.
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  rpm:
+    name: Tarball and Fedora RPM
+    runs-on: ubuntu-latest
+    container: registry.fedoraproject.org/fedora:latest
+    steps:
+      - name: Install dependencies
+        run: >
+          dnf -y install --setopt=install_weak_deps=False
+          git xz rpm-build systemd-rpm-macros
+          meson ninja-build gcc-c++ pkgconf gtk4-devel libadwaita-devel
+          vte291-gtk4-devel pcre2-devel libuuid-devel gsettings-desktop-schemas-devel
+          glib2-devel gettext itstool desktop-file-utils libxslt docbook-style-xsl
+      - uses: actions/checkout@v4
+      - name: Make the source tarball
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          meson setup _build -Dnautilus_extension=false
+          meson dist -C _build --no-tests --formats xztar
+      - name: Build the RPM
+        run: |
+          mkdir -p ~/rpmbuild/SOURCES out
+          cp _build/meson-dist/*.tar.xz ~/rpmbuild/SOURCES/
+          rpmbuild -bb packaging/fedora/pano-terminal.spec
+          cp _build/meson-dist/*.tar.xz out/
+          find ~/rpmbuild/RPMS -name '*.rpm' ! -name '*-debug*' -exec cp {} out/ \;
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rpm
+          path: out/*
+
+  deb:
+    name: Debian package
+    runs-on: ubuntu-latest
+    container: debian:trixie
+    steps:
+      - name: Install tools
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates git devscripts equivs debhelper dpkg-dev fakeroot
+      - uses: actions/checkout@v4
+      - name: Build the package
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          cp -a packaging/debian debian
+          mk-build-deps -i -r -t "apt-get -y --no-install-recommends" debian/control
+          dpkg-buildpackage -us -uc -b
+          mkdir out
+          find .. -maxdepth 1 -name '*.deb' ! -name '*-dbgsym*' -exec cp {} out/ \;
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb
+          path: out/*
+
+  release:
+    name: Draft release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [rpm, deb]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: assets
+          merge-multiple: true
+      - name: Create the draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "$GITHUB_REF_NAME" assets/*
+          --repo "$GITHUB_REPOSITORY" --draft --generate-notes
+          --title "Pano Terminal ${GITHUB_REF_NAME#v}"

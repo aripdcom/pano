@@ -1,0 +1,34 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Pano Terminal
+Source: https://github.com/aripdcom/pano
+
+Files: *
+Copyright: GNOME Terminal authors and contributors
+           2026 aripdcem
+License: GPL-3+
+
+Files: help/*
+Copyright: GNOME Documentation Project
+License: GPL-3 or CC-BY-SA-3.0
+
+Files: data/schemes/*
+Copyright: 2024 Gogh, Ptyxis authors
+License: Expat or Apache-2.0
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the Free
+ Software Foundation, either version 3 of the License, or (at your option)
+ any later version.
+ .
+ On Debian systems, the full text of the GNU General Public License version
+ 3 can be found in /usr/share/common-licenses/GPL-3.
+
+License: GPL-3 or CC-BY-SA-3.0
+ The help is available under the GNU General Public License version 3, see
+ /usr/share/common-licenses/GPL-3, or the Creative Commons
+ Attribution-ShareAlike 3.0 Unported License.
+
+License: Expat or Apache-2.0
+ Available under the MIT (Expat) license, see data/schemes/LICENSE-MIT, or
+ the Apache License 2.0, see /usr/share/common-licenses/Apache-2.0.

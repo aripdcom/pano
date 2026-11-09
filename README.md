@@ -105,6 +105,14 @@ Everything GNOME Terminal provides, plus:
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.
 
+Packages
+--------
+
+The [Packages workflow](https://github.com/aripdcom/pano/actions/workflows/packages.yml)
+builds a source tarball, a Fedora RPM and a Debian 13 package; download them
+from the artifacts of a run. To build them yourself, see
+[`packaging/`](packaging/README.md).
+
 Building from source
 --------------------
 
