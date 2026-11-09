@@ -230,6 +230,11 @@
       <default>true</default>
       <summary>Whether to ring the terminal bell</summary>
     </key>
+    <key name="visual-bell" type="b">
+      <default>false</default>
+      <summary>Whether the terminal flashes when the bell rings</summary>
+      <description>When the terminal is in a tab in the background, the tab is marked instead.</description>
+    </key>
     <key name="word-char-exceptions" type="ms">
       <default>nothing</default>
       <summary>List of punctuation characters that are treated as word characters</summary>

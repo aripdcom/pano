@@ -714,10 +714,16 @@
             </child>
             <child>
               <object class="AdwPreferencesGroup">
-                <property name="title" translatable="yes">Sound</property>
+                <property name="title" translatable="yes">Bell</property>
                 <child>
                   <object class="AdwSwitchRow" id="audible_bell">
-                    <property name="title" translatable="yes">Terminal bell</property>
+                    <property name="title" translatable="yes">Play a Sound</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwSwitchRow" id="visual_bell">
+                    <property name="title" translatable="yes">Flash the Terminal</property>
+                    <property name="subtitle" translatable="yes">A tab in the background is marked instead</property>
                   </object>
                 </child>
               </object>

@@ -2545,6 +2545,21 @@ screen_command_finished_cb(TerminalScreen* screen,
   terminal_app_notify_command_finished(app, screen, command, status, duration_ms);
 }
 
+/* With the visual bell, the bell marks a tab in the background, since the
+ * terminal's own flash cannot be seen there */
+static void
+screen_bell_cb(TerminalScreen* screen,
+               TerminalWindow* window)
+{
+  auto const profile = terminal_screen_get_profile(screen);
+  if (!g_settings_get_boolean(profile, TERMINAL_PROFILE_VISUAL_BELL_KEY))
+    return;
+
+  auto const tab = terminal_tab_get_from_screen(screen);
+  if (tab && tab != window_get_active_tab(window))
+    terminal_notebook_set_tab_needs_attention(window->notebook, tab, true);
+}
+
 static void
 screen_close_cb (TerminalScreen *screen,
                  TerminalWindow *window)
@@ -3746,6 +3761,8 @@ notebook_screen_added_cb (TerminalNotebook *notebook,
                     G_CALLBACK (screen_close_cb), window);
   g_signal_connect (screen, "command-finished",
                     G_CALLBACK (screen_command_finished_cb), window);
+  g_signal_connect (screen, "bell",
+                    G_CALLBACK (screen_bell_cb), window);
   g_signal_connect (screen, "prompts-changed",
                     G_CALLBACK (screen_prompts_changed_cb), window);
   g_signal_connect (screen, "commit",
@@ -3846,6 +3863,9 @@ notebook_screen_removed_cb (TerminalNotebook *notebook,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_command_finished_cb,
+                                        window);
+  g_signal_handlers_disconnect_by_func (screen,
+                                        (void*)screen_bell_cb,
                                         window);
   g_signal_handlers_disconnect_by_func (screen,
                                         (void*)screen_prompts_changed_cb,

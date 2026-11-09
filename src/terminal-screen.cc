@@ -71,6 +71,7 @@
 
 #define URL_MATCH_CURSOR_NAME "pointer"
 #define SIZE_DISMISS_TIMEOUT_MSEC 1000
+#define VISUAL_BELL_DURATION_MS 300
 
 #define DROP_REQUEST_PRIORITY               G_PRIORITY_DEFAULT
 #define APPLICATION_VND_PORTAL_FILETRANSFER "application/vnd.portal.filetransfer"
@@ -127,6 +128,8 @@ struct _TerminalScreenPrivate
   gboolean registered; /* D-Bus interface is registered */
 
   GSettings *profile; /* never nullptr */
+  GtkWidget* bell_flash; /* the visual bell's overlay, while it shows */
+  guint bell_flash_source;
   guint profile_changed_id;
   guint profile_forgotten_id;
   int child_pid;
@@ -1317,6 +1320,58 @@ terminal_screen_snapshot (GtkWidget   *widget,
   gtk_widget_snapshot_child (widget, GTK_WIDGET (priv->size_revealer), snapshot);
 }
 
+/* Visual bell */
+
+static void
+terminal_screen_stop_bell_flash(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+
+  g_clear_handle_id(&priv->bell_flash_source, g_source_remove);
+  if (priv->bell_flash) {
+    terminal_tab_remove_overlay(priv->bell_flash);
+    g_clear_object(&priv->bell_flash);
+  }
+}
+
+static gboolean
+terminal_screen_bell_flash_done_cb(void* user_data)
+{
+  auto const screen = TERMINAL_SCREEN(user_data);
+
+  screen->priv->bell_flash_source = 0;
+  terminal_screen_stop_bell_flash(screen);
+  return G_SOURCE_REMOVE;
+}
+
+/* Flashes the terminal: a layer over it, which fades out with CSS, and
+ * which lets clicks through */
+static void
+terminal_screen_bell_cb(TerminalScreen* screen,
+                        void* user_data)
+{
+  auto const priv = screen->priv;
+  if (!g_settings_get_boolean(priv->profile, TERMINAL_PROFILE_VISUAL_BELL_KEY))
+    return;
+
+  // Programs may ring many times in a row; restart the flash
+  terminal_screen_stop_bell_flash(screen);
+
+  if (!gtk_widget_get_mapped(GTK_WIDGET(screen)))
+    return;
+
+  auto flash = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+  gtk_widget_add_css_class(flash, "visual-bell");
+  gtk_widget_set_can_target(flash, false);
+  gtk_widget_set_can_focus(flash, false);
+  priv->bell_flash = GTK_WIDGET(g_object_ref_sink(flash));
+  terminal_tab_add_screen_overlay(screen, flash);
+
+  priv->bell_flash_source = g_timeout_add(VISUAL_BELL_DURATION_MS,
+                                          terminal_screen_bell_flash_done_cb,
+                                          screen);
+}
+
 static void
 terminal_screen_init (TerminalScreen *screen)
 {
@@ -1403,6 +1458,9 @@ terminal_screen_init (TerminalScreen *screen)
                    G_CALLBACK(terminal_screen_shell_postexec_cb), screen);
   g_signal_connect(screen, "termprop-changed::" VTE_TERMPROP_SHELL_PRECMD,
                    G_CALLBACK(terminal_screen_shell_precmd_cb), screen);
+
+  g_signal_connect(screen, "bell",
+                   G_CALLBACK(terminal_screen_bell_cb), nullptr);
 
   // A new foreground program usually prints something; look then
   g_signal_connect(screen, "contents-changed",
@@ -1669,6 +1727,7 @@ terminal_screen_dispose (GObject *object)
   GtkSettings *settings;
 
   g_clear_handle_id (&priv->size_dismiss_source, g_source_remove);
+  terminal_screen_stop_bell_flash (screen);
 
   gtk_widget_dispose_template (GTK_WIDGET (object), TERMINAL_TYPE_SCREEN);
 

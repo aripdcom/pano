@@ -64,6 +64,9 @@ Everything GNOME Terminal provides, plus:
   with *Export…* in its menu in *Preferences*, and load it on another
   computer with *Import…* above the list of profiles. The file holds the
   settings that differ from the defaults, in the format `dconf dump` uses.
+* **Visual bell**: turn on *Flash the Terminal* in *Preferences → Profile →
+  Bell* to see the bell instead of, or as well as, hearing it. A tab in the
+  background is marked instead.
 * **Background transparency**: set the background opacity of each profile in
   *Preferences → Profile → Colors → Background Opacity*. Only the terminal
   background lets the desktop through; text, header bar and tab bars stay

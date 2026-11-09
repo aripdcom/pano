@@ -131,6 +131,20 @@ terminal-pane.broadcast
   outline-offset: -2px;
 }
 
+/* The visual bell: a flash over the terminal, which fades out. Gray works
+ * on light and dark terminal colors alike. */
+terminal-pane .visual-bell
+{
+  background-color: alpha(#808080, 0.35);
+  animation: visual-bell 300ms ease-out forwards;
+}
+
+@keyframes visual-bell
+{
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 /* Tab list: pinned tabs, drop marks and the resize handle */
 tabsidebar .tab-row .pin-icon
 {

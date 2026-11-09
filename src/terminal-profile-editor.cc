@@ -40,6 +40,7 @@ struct _TerminalProfileEditor
   AdwComboRow          *allow_blinking_text;
   AdwComboRow          *ambiguous_width;
   AdwSwitchRow         *audible_bell;
+  AdwSwitchRow         *visual_bell;
   AdwComboRow          *backspace_key;
   TerminalColorRow     *bold_color_set;
   TerminalColorRow     *bold_color_text;
@@ -1012,6 +1013,9 @@ terminal_profile_editor_constructed (GObject *object)
   terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_AUDIBLE_BELL_KEY,
                    self->audible_bell, "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_DEFAULT));
+  terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_VISUAL_BELL_KEY,
+                   self->visual_bell, "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_DEFAULT));
 
   terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_DEFAULT_SIZE_COLUMNS_KEY,
                    self->columns, "value",
@@ -1341,6 +1345,7 @@ terminal_profile_editor_class_init (TerminalProfileEditorClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, allow_blinking_text);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, ambiguous_width);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, audible_bell);
+  gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, visual_bell);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, backspace_key);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, bold_color_set);
   gtk_widget_class_bind_template_child (widget_class, TerminalProfileEditor, bold_color_text);

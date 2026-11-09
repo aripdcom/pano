@@ -33,6 +33,7 @@ G_BEGIN_DECLS
 #define TERMINAL_KEYBINDINGS_SCHEMA_PATH "/com/aripd/pano/legacy/keybindings/"
 
 #define TERMINAL_PROFILE_AUDIBLE_BELL_KEY               "audible-bell"
+#define TERMINAL_PROFILE_VISUAL_BELL_KEY                "visual-bell"
 #define TERMINAL_PROFILE_BOLD_IS_BRIGHT_KEY             "bold-is-bright"
 #define TERMINAL_PROFILE_BACKGROUND_COLOR_KEY           "background-color"
 #define TERMINAL_PROFILE_BACKGROUND_OPACITY_KEY         "background-opacity"
