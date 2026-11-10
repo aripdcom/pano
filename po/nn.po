@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:26+0300\n"
+"POT-Creation-Date: 2026-11-11 00:46+0300\n"
 "PO-Revision-Date: 2009-10-15 15:35+0200\n"
 "Last-Translator: Roy-Magne Mo <rmo@sunnmore.net>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -85,12 +85,23 @@ msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
+"This release fixes many problems that Pano Terminal had from GNOME Terminal. "
+"F10 opens the main menu, menus give the focus back to the terminal, and the "
+"context menu opens from the keyboard and with a long press. Zooming and "
+"switching tabs keep the window size, and the main menu shows the zoom level. "
+"Closing asks about stopped jobs, built-in palettes keep your own colors, "
+"conflicting shortcuts are reported, and links are recognized more reliably. "
+"Programs of tabs that are not shown yet start right away."
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:74
+msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:74
+#: data/com.aripd.Pano.metainfo.xml.in:79
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
@@ -1337,7 +1348,7 @@ msgstr "Lukk fana"
 msgid "Re_open Closed Tab"
 msgstr "Lukk fana"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5288
 msgid "C_lose Window"
 msgstr "_Lukk vindauge"
 
@@ -1358,7 +1369,7 @@ msgid "Select All"
 msgstr "Vel alt"
 
 #: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
-#: src/terminal-screen.cc:3742
+#: src/terminal-screen.cc:3754
 msgid "_Preferences"
 msgstr "_Innstillingar"
 
@@ -1961,8 +1972,8 @@ msgstr "_Flytt Terminal Høgre"
 msgid "_Detach Terminal"
 msgstr "_Frigjer Terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
-#: src/terminal-window.cc:5310
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5283
+#: src/terminal-window.cc:5298
 msgid "C_lose Terminal"
 msgstr "_Lukk terminal"
 
@@ -3422,40 +3433,40 @@ msgstr "Slett"
 msgid "_Set as default"
 msgstr "Set som standard"
 
-#: src/terminal-screen.cc:1860
+#: src/terminal-screen.cc:1864
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3493
+#: src/terminal-screen.cc:3505
 msgid "No command supplied nor shell requested"
 msgstr "Ingen kommando gitt og heller ikkje skald."
 
-#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:3755 src/terminal-screen.cc:4287
 msgid "_Relaunch"
 msgstr "_Start på nytt att"
 
-#: src/terminal-screen.cc:3746
+#: src/terminal-screen.cc:3758
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 "Ein feil oppstod under oppretting av barneprosessen til denne terminalen"
 
-#: src/terminal-screen.cc:4232
+#: src/terminal-screen.cc:4288
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4236
+#: src/terminal-screen.cc:4292
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Barneprosessen avslutta normalt med status %d."
 
-#: src/terminal-screen.cc:4239
+#: src/terminal-screen.cc:4295
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Barneprosessen vart avbrote av signal %d."
 
-#: src/terminal-screen.cc:4242
+#: src/terminal-screen.cc:4298
 msgid "The child process was aborted."
 msgstr "Barneprosessen vart avbroten."
 
@@ -3757,19 +3768,19 @@ msgstr "_Ja"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Lukka denne terminalen?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Lukka denne terminalen?"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5279
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3781,7 +3792,7 @@ msgstr ""
 "Det er framleis køyrande prosessar i somme terminalar i dette vindauget. Å "
 "lukke dette vindauget vil avbryte alle."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5281
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3793,17 +3804,17 @@ msgstr ""
 "Det er framleis ein prosess som køyrer i denne terminalen. Å lukke "
 "terminalen vil avbryte prosessen."
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5283
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Lukk terminal"
 
-#: src/terminal-window.cc:5297
+#: src/terminal-window.cc:5285
 msgid "Close this window?"
 msgstr "Lukka dette vindauget?"
 
-#: src/terminal-window.cc:5298
+#: src/terminal-window.cc:5286
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3811,13 +3822,13 @@ msgstr ""
 "Det er framleis køyrande prosessar i somme terminalar i dette vindauget. Å "
 "lukke dette vindauget vil avbryte alle."
 
-#: src/terminal-window.cc:5302
+#: src/terminal-window.cc:5290
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close this tab?"
 msgstr "Lukka denne terminalen?"
 
-#: src/terminal-window.cc:5303
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3829,15 +3840,15 @@ msgstr ""
 "Det er framleis køyrande prosessar i somme terminalar i dette vindauget. Å "
 "lukke dette vindauget vil avbryte alle."
 
-#: src/terminal-window.cc:5305
+#: src/terminal-window.cc:5293
 msgid "C_lose Tab"
 msgstr "_Lukk fane"
 
-#: src/terminal-window.cc:5307
+#: src/terminal-window.cc:5295
 msgid "Close this terminal?"
 msgstr "Lukka denne terminalen?"
 
-#: src/terminal-window.cc:5308
+#: src/terminal-window.cc:5296
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3845,7 +3856,7 @@ msgstr ""
 "Det er framleis ein prosess som køyrer i denne terminalen. Å lukke "
 "terminalen vil avbryte prosessen."
 
-#: src/terminal.cc:674
+#: src/terminal.cc:679
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Klarte ikkje tolke argumenta: %s\n"

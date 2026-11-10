@@ -1,3 +1,13 @@
+pano-terminal (0.1.2) unstable; urgency=medium
+
+  * Fix many problems inherited from GNOME Terminal: F10, the focus after
+    menus, window sizes on zoom and tab switches, stopped jobs on close,
+    palettes, conflicting shortcuts, link detection, and more.
+  * Start the programs of tabs that are not shown yet.
+  * Build on musl.
+
+ -- aripdcem <cem@aripd.com>  Wed, 11 Nov 2026 12:00:00 +0300
+
 pano-terminal (0.1.1) unstable; urgency=medium
 
   * Install the systemd user unit where systemd finds it, for prefixes

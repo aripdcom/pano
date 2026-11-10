@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:26+0300\n"
+"POT-Creation-Date: 2026-11-11 00:46+0300\n"
 "PO-Revision-Date: 2024-01-30 10:14+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
@@ -98,12 +98,23 @@ msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
+"This release fixes many problems that Pano Terminal had from GNOME Terminal. "
+"F10 opens the main menu, menus give the focus back to the terminal, and the "
+"context menu opens from the keyboard and with a long press. Zooming and "
+"switching tabs keep the window size, and the main menu shows the zoom level. "
+"Closing asks about stopped jobs, built-in palettes keep your own colors, "
+"conflicting shortcuts are reported, and links are recognized more reliably. "
+"Programs of tabs that are not shown yet start right away."
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:74
+msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:74
+#: data/com.aripd.Pano.metainfo.xml.in:79
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
@@ -1402,7 +1413,7 @@ msgstr "Cerrar pestaña"
 msgid "Re_open Closed Tab"
 msgstr "Cerrar pestaña"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5288
 msgid "C_lose Window"
 msgstr "_Cerrar ventana"
 
@@ -1423,7 +1434,7 @@ msgid "Select All"
 msgstr "Seleccionar todo"
 
 #: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
-#: src/terminal-screen.cc:3742
+#: src/terminal-screen.cc:3754
 msgid "_Preferences"
 msgstr "_Preferencias"
 
@@ -2023,8 +2034,8 @@ msgstr "Mover terminal a la de_recha"
 msgid "_Detach Terminal"
 msgstr "_Desacoplar terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
-#: src/terminal-window.cc:5310
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5283
+#: src/terminal-window.cc:5298
 msgid "C_lose Terminal"
 msgstr "Cerrar la _terminal"
 
@@ -3492,39 +3503,39 @@ msgstr "Eliminar"
 msgid "_Set as default"
 msgstr "Establecer como predeterminado"
 
-#: src/terminal-screen.cc:1860
+#: src/terminal-screen.cc:1864
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3493
+#: src/terminal-screen.cc:3505
 msgid "No command supplied nor shell requested"
 msgstr "No se ha especificado un comando ni se ha indicado la shell"
 
-#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:3755 src/terminal-screen.cc:4287
 msgid "_Relaunch"
 msgstr "_Relanzar"
 
-#: src/terminal-screen.cc:3746
+#: src/terminal-screen.cc:3758
 msgid "There was an error creating the child process for this terminal"
 msgstr "Hubo un error al crear el proceso hijo para este terminal"
 
-#: src/terminal-screen.cc:4232
+#: src/terminal-screen.cc:4288
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4236
+#: src/terminal-screen.cc:4292
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "El proceso hijo finalizó correctamente con el estado %d."
 
-#: src/terminal-screen.cc:4239
+#: src/terminal-screen.cc:4295
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Se interrumpió el proceso hijo con la señal %d."
 
-#: src/terminal-screen.cc:4242
+#: src/terminal-screen.cc:4298
 msgid "The child process was aborted."
 msgstr "Se interrumpió el proceso hijo."
 
@@ -3828,19 +3839,19 @@ msgstr "_Sí"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5279
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3852,7 +3863,7 @@ msgstr ""
 "Aún hay procesos ejecutándose en algunas terminales de esta ventana. Cerrar "
 "la ventana matará todos los procesos."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5281
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3864,17 +3875,17 @@ msgstr ""
 "Aún hay un proceso ejecutándose en esta terminal. Cerrar la terminal lo "
 "matará."
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5283
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Cerrar la _terminal"
 
-#: src/terminal-window.cc:5297
+#: src/terminal-window.cc:5285
 msgid "Close this window?"
 msgstr "¿Cerrar esta ventana?"
 
-#: src/terminal-window.cc:5298
+#: src/terminal-window.cc:5286
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3882,13 +3893,13 @@ msgstr ""
 "Aún hay procesos ejecutándose en algunas terminales de esta ventana. Cerrar "
 "la ventana matará todos los procesos."
 
-#: src/terminal-window.cc:5302
+#: src/terminal-window.cc:5290
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close this tab?"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-window.cc:5303
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3900,15 +3911,15 @@ msgstr ""
 "Aún hay procesos ejecutándose en algunas terminales de esta ventana. Cerrar "
 "la ventana matará todos los procesos."
 
-#: src/terminal-window.cc:5305
+#: src/terminal-window.cc:5293
 msgid "C_lose Tab"
 msgstr "C_errar pestaña"
 
-#: src/terminal-window.cc:5307
+#: src/terminal-window.cc:5295
 msgid "Close this terminal?"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-window.cc:5308
+#: src/terminal-window.cc:5296
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3916,7 +3927,7 @@ msgstr ""
 "Aún hay un proceso ejecutándose en esta terminal. Cerrar la terminal lo "
 "matará."
 
-#: src/terminal.cc:674
+#: src/terminal.cc:679
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Falló al analizar los argumentos: %s\n"

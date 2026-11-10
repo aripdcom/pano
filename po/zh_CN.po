@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:26+0300\n"
+"POT-Creation-Date: 2026-11-11 00:46+0300\n"
 "PO-Revision-Date: 2023-08-10 17:11+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
@@ -97,12 +97,23 @@ msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
+"This release fixes many problems that Pano Terminal had from GNOME Terminal. "
+"F10 opens the main menu, menus give the focus back to the terminal, and the "
+"context menu opens from the keyboard and with a long press. Zooming and "
+"switching tabs keep the window size, and the main menu shows the zoom level. "
+"Closing asks about stopped jobs, built-in palettes keep your own colors, "
+"conflicting shortcuts are reported, and links are recognized more reliably. "
+"Programs of tabs that are not shown yet start right away."
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:74
+msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:74
+#: data/com.aripd.Pano.metainfo.xml.in:79
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
@@ -1331,7 +1342,7 @@ msgstr "关闭标签页"
 msgid "Re_open Closed Tab"
 msgstr "关闭标签页"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5288
 msgid "C_lose Window"
 msgstr "关闭窗口(_L)"
 
@@ -1352,7 +1363,7 @@ msgid "Select All"
 msgstr "全选"
 
 #: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
-#: src/terminal-screen.cc:3742
+#: src/terminal-screen.cc:3754
 msgid "_Preferences"
 msgstr "配置文件首选项(_P)"
 
@@ -1952,8 +1963,8 @@ msgstr "右移终端(_R)"
 msgid "_Detach Terminal"
 msgstr "分离终端(_D)"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
-#: src/terminal-window.cc:5310
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5283
+#: src/terminal-window.cc:5298
 msgid "C_lose Terminal"
 msgstr "关闭终端(_L)"
 
@@ -3399,39 +3410,39 @@ msgstr "删除"
 msgid "_Set as default"
 msgstr "设为默认"
 
-#: src/terminal-screen.cc:1860
+#: src/terminal-screen.cc:1864
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3493
+#: src/terminal-screen.cc:3505
 msgid "No command supplied nor shell requested"
 msgstr "未提供命令，也未指定 shell"
 
-#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:3755 src/terminal-screen.cc:4287
 msgid "_Relaunch"
 msgstr "重新启动(_R)"
 
-#: src/terminal-screen.cc:3746
+#: src/terminal-screen.cc:3758
 msgid "There was an error creating the child process for this terminal"
 msgstr "创建此终端的子进程时出错"
 
-#: src/terminal-screen.cc:4232
+#: src/terminal-screen.cc:4288
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4236
+#: src/terminal-screen.cc:4292
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子进程以状态%d正常的退出。"
 
-#: src/terminal-screen.cc:4239
+#: src/terminal-screen.cc:4295
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "子进程被信号%d中断。"
 
-#: src/terminal-screen.cc:4242
+#: src/terminal-screen.cc:4298
 msgid "The child process was aborted."
 msgstr "子进程被中断。"
 
@@ -3739,19 +3750,19 @@ msgstr "是(_Y)"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "关闭此终端？"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "关闭此终端？"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5279
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3761,7 +3772,7 @@ msgid ""
 "them will kill all of them."
 msgstr "在这个窗口的一些终端中仍然有进程在运行。关闭该窗口将杀死所有这些进程。"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5281
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3771,29 +3782,29 @@ msgid ""
 "will kill it."
 msgstr "该终端中仍然有一个进程在运行。关闭终端将杀死该进程。"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5283
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "关闭终端(_L)"
 
-#: src/terminal-window.cc:5297
+#: src/terminal-window.cc:5285
 msgid "Close this window?"
 msgstr "关闭这个窗口？"
 
-#: src/terminal-window.cc:5298
+#: src/terminal-window.cc:5286
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "在这个窗口的一些终端中仍然有进程在运行。关闭该窗口将杀死所有这些进程。"
 
-#: src/terminal-window.cc:5302
+#: src/terminal-window.cc:5290
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close this tab?"
 msgstr "关闭此终端？"
 
-#: src/terminal-window.cc:5303
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3803,21 +3814,21 @@ msgid ""
 "will kill all of them."
 msgstr "在这个窗口的一些终端中仍然有进程在运行。关闭该窗口将杀死所有这些进程。"
 
-#: src/terminal-window.cc:5305
+#: src/terminal-window.cc:5293
 msgid "C_lose Tab"
 msgstr "关闭标签页(_L)"
 
-#: src/terminal-window.cc:5307
+#: src/terminal-window.cc:5295
 msgid "Close this terminal?"
 msgstr "关闭此终端？"
 
-#: src/terminal-window.cc:5308
+#: src/terminal-window.cc:5296
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
 msgstr "该终端中仍然有一个进程在运行。关闭终端将杀死该进程。"
 
-#: src/terminal.cc:674
+#: src/terminal.cc:679
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "无法处理参数：%s\n"

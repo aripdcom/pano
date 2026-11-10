@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thengos\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:26+0300\n"
+"POT-Creation-Date: 2026-11-11 00:46+0300\n"
 "PO-Revision-Date: 2018-10-26 11:41+0530\n"
 "Last-Translator: Ranjith Siji <ranjith.sajeev@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -88,12 +88,23 @@ msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
+"This release fixes many problems that Pano Terminal had from GNOME Terminal. "
+"F10 opens the main menu, menus give the focus back to the terminal, and the "
+"context menu opens from the keyboard and with a long press. Zooming and "
+"switching tabs keep the window size, and the main menu shows the zoom level. "
+"Closing asks about stopped jobs, built-in palettes keep your own colors, "
+"conflicting shortcuts are reported, and links are recognized more reliably. "
+"Programs of tabs that are not shown yet start right away."
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:74
+msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:74
+#: data/com.aripd.Pano.metainfo.xml.in:79
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
@@ -1355,7 +1366,7 @@ msgstr "ടാബ് അടയ്ക്കുക"
 msgid "Re_open Closed Tab"
 msgstr "ടാബ് അടയ്ക്കുക"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5288
 msgid "C_lose Window"
 msgstr "ജാലകം അടയ്ക്കുക (_l)"
 
@@ -1376,7 +1387,7 @@ msgid "Select All"
 msgstr "എല്ലാം തിരഞ്ഞെടുക്കുക"
 
 #: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
-#: src/terminal-screen.cc:3742
+#: src/terminal-screen.cc:3754
 msgid "_Preferences"
 msgstr "മുന്‍ഗണനകള്‍ (_P)"
 
@@ -1985,8 +1996,8 @@ msgstr "ടെർമിനൽ വലത്തേക്ക് നീക്കു�
 msgid "_Detach Terminal"
 msgstr "ടെർമിനൽ വേര്‍പ്പെടുത്തുക (_D)"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
-#: src/terminal-window.cc:5310
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5283
+#: src/terminal-window.cc:5298
 msgid "C_lose Terminal"
 msgstr "ടെര്‍മിനല്‍ അടയ്ക്കുക (_l)"
 
@@ -3447,39 +3458,39 @@ msgstr "നീക്കം ചെയ്യുക"
 msgid "_Set as default"
 msgstr "സഹജമായി ക്രമീകരിക്കുക"
 
-#: src/terminal-screen.cc:1860
+#: src/terminal-screen.cc:1864
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3493
+#: src/terminal-screen.cc:3505
 msgid "No command supplied nor shell requested"
 msgstr "നിര്‍ദ്ദേശങ്ങളോ ഷെല്ലോ തന്നില്ല"
 
-#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:3755 src/terminal-screen.cc:4287
 msgid "_Relaunch"
 msgstr "_വീണ്ടും ലഭ്യമാക്കുക"
 
-#: src/terminal-screen.cc:3746
+#: src/terminal-screen.cc:3758
 msgid "There was an error creating the child process for this terminal"
 msgstr "ഈ ടെര്‍മിനലിനായി ചൈള്‍ഡ് പ്രക്രിയ ഉണ്ടാക്കുന്നതില്‍ പിശക്"
 
-#: src/terminal-screen.cc:4232
+#: src/terminal-screen.cc:4288
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4236
+#: src/terminal-screen.cc:4292
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d അവസ്ഥയില്‍ ചൈള്‍ഡ് പ്രക്രിയ സാധാരണയായി നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.cc:4239
+#: src/terminal-screen.cc:4295
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "സിഗ്നല്‍ %d പിള്ള പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.cc:4242
+#: src/terminal-screen.cc:4298
 msgid "The child process was aborted."
 msgstr "പിള്ള പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
@@ -3781,19 +3792,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5279
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3805,7 +3816,7 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അവയെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5281
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3817,17 +3828,17 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും ഒരു പ്രക്രിയ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അതിനെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5283
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "ടെര്‍മിനല്‍ അടയ്ക്കുക (_l)"
 
-#: src/terminal-window.cc:5297
+#: src/terminal-window.cc:5285
 msgid "Close this window?"
 msgstr "ഈ ജാലകം അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5298
+#: src/terminal-window.cc:5286
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3835,13 +3846,13 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അവയെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal-window.cc:5302
+#: src/terminal-window.cc:5290
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close this tab?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5303
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3853,15 +3864,15 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അവയെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal-window.cc:5305
+#: src/terminal-window.cc:5293
 msgid "C_lose Tab"
 msgstr "ടാബ് അടയ്ക്കുക(_l)"
 
-#: src/terminal-window.cc:5307
+#: src/terminal-window.cc:5295
 msgid "Close this terminal?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5308
+#: src/terminal-window.cc:5296
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3869,7 +3880,7 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും ഒരു പ്രക്രിയ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അതിനെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal.cc:674
+#: src/terminal.cc:679
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ് ചെയ്യുന്നതില്‍ പരാജയം: %s\n"

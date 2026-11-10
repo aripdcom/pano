@@ -64,6 +64,11 @@
     <name>aripd</name>
   </developer>
   <releases>
+    <release version="0.1.2" date="2026-11-11">
+      <description>
+        <p>This release fixes many problems that Pano Terminal had from GNOME Terminal. F10 opens the main menu, menus give the focus back to the terminal, and the context menu opens from the keyboard and with a long press. Zooming and switching tabs keep the window size, and the main menu shows the zoom level. Closing asks about stopped jobs, built-in palettes keep your own colors, conflicting shortcuts are reported, and links are recognized more reliably. Programs of tabs that are not shown yet start right away.</p>
+      </description>
+    </release>
     <release version="0.1.1" date="2026-11-10">
       <description>
         <p>Pano Terminal opens from the applications menu when it is built from source and installed to a prefix such as ~/.local. The Turkish translation is complete, and the other translations are up to date with the current strings.</p>

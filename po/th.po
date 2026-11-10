@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:26+0300\n"
+"POT-Creation-Date: 2026-11-11 00:46+0300\n"
 "PO-Revision-Date: 2023-12-13 03:59+0700\n"
 "Last-Translator: knight2000 <knight2000@gmail.com>\n"
 "Language-Team: ไทย <thai-l10n@googlegroups.com>\n"
@@ -83,12 +83,23 @@ msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
+"This release fixes many problems that Pano Terminal had from GNOME Terminal. "
+"F10 opens the main menu, menus give the focus back to the terminal, and the "
+"context menu opens from the keyboard and with a long press. Zooming and "
+"switching tabs keep the window size, and the main menu shows the zoom level. "
+"Closing asks about stopped jobs, built-in palettes keep your own colors, "
+"conflicting shortcuts are reported, and links are recognized more reliably. "
+"Programs of tabs that are not shown yet start right away."
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:74
+msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:74
+#: data/com.aripd.Pano.metainfo.xml.in:79
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
@@ -1321,7 +1332,7 @@ msgstr "ปิดแท็บ"
 msgid "Re_open Closed Tab"
 msgstr "ปิดแท็บ"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5288
 msgid "C_lose Window"
 msgstr "ปิ_ดหน้าต่าง"
 
@@ -1342,7 +1353,7 @@ msgid "Select All"
 msgstr "เลือกทั้งหมด"
 
 #: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
-#: src/terminal-screen.cc:3742
+#: src/terminal-screen.cc:3754
 msgid "_Preferences"
 msgstr "_ปรับแต่ง"
 
@@ -1942,8 +1953,8 @@ msgstr "ย้ายเทอร์มินัลไปทาง_ขวา"
 msgid "_Detach Terminal"
 msgstr "_ดึงเทอร์มินัลออกมา"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
-#: src/terminal-window.cc:5310
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5283
+#: src/terminal-window.cc:5298
 msgid "C_lose Terminal"
 msgstr "ปิดเ_ทอร์มินัล"
 
@@ -3390,39 +3401,39 @@ msgstr "ลบ"
 msgid "_Set as default"
 msgstr "กำหนดเป็นค่าปริยาย"
 
-#: src/terminal-screen.cc:1860
+#: src/terminal-screen.cc:1864
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3493
+#: src/terminal-screen.cc:3505
 msgid "No command supplied nor shell requested"
 msgstr "ไม่ได้ระบุคำสั่งหรือร้องขอเชลล์ใดๆ"
 
-#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:3755 src/terminal-screen.cc:4287
 msgid "_Relaunch"
 msgstr "เ_รียกใหม่"
 
-#: src/terminal-screen.cc:3746
+#: src/terminal-screen.cc:3758
 msgid "There was an error creating the child process for this terminal"
 msgstr "เกิดข้อผิดพลาดขณะสร้างกระบวนการลูกสำหรับเทอร์มินัลนี้:"
 
-#: src/terminal-screen.cc:4232
+#: src/terminal-screen.cc:4288
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4236
+#: src/terminal-screen.cc:4292
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "โพรเซสลูกจบการทำงานตามปกติด้วยสถานะ %d"
 
-#: src/terminal-screen.cc:4239
+#: src/terminal-screen.cc:4295
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "โพรเซสลูกถูกเลิกล้มโดยสัญญาณ %d"
 
-#: src/terminal-screen.cc:4242
+#: src/terminal-screen.cc:4298
 msgid "The child process was aborted."
 msgstr "โพรเซสลูกถูกเลิกล้ม"
 
@@ -3721,19 +3732,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5277
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5279
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3744,7 +3755,7 @@ msgid ""
 msgstr ""
 "ยังมีโพรเซสทำงานอยู่ในบางเทอร์มินัลในหน้าต่างนี้ ถ้าปิดหน้าต่าง ก็จะเป็นการฆ่าโพรเซสเหล่านั้นทั้งหมด"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5281
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3754,30 +3765,30 @@ msgid ""
 "will kill it."
 msgstr "ยังมีโพรเซสหนึ่งทำงานอยู่ในเทอร์มินัลนี้ ถ้าปิดเทอร์มินัล ก็จะเป็นการฆ่าโพรเซสดังกล่าว"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5283
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "ปิดเ_ทอร์มินัล"
 
-#: src/terminal-window.cc:5297
+#: src/terminal-window.cc:5285
 msgid "Close this window?"
 msgstr "จะปิดหน้าต่างนี้หรือไม่?"
 
-#: src/terminal-window.cc:5298
+#: src/terminal-window.cc:5286
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 "ยังมีโพรเซสทำงานอยู่ในบางเทอร์มินัลในหน้าต่างนี้ ถ้าปิดหน้าต่าง ก็จะเป็นการฆ่าโพรเซสเหล่านั้นทั้งหมด"
 
-#: src/terminal-window.cc:5302
+#: src/terminal-window.cc:5290
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close this tab?"
 msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
 
-#: src/terminal-window.cc:5303
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3788,21 +3799,21 @@ msgid ""
 msgstr ""
 "ยังมีโพรเซสทำงานอยู่ในบางเทอร์มินัลในหน้าต่างนี้ ถ้าปิดหน้าต่าง ก็จะเป็นการฆ่าโพรเซสเหล่านั้นทั้งหมด"
 
-#: src/terminal-window.cc:5305
+#: src/terminal-window.cc:5293
 msgid "C_lose Tab"
 msgstr "ปิ_ดแท็บ"
 
-#: src/terminal-window.cc:5307
+#: src/terminal-window.cc:5295
 msgid "Close this terminal?"
 msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
 
-#: src/terminal-window.cc:5308
+#: src/terminal-window.cc:5296
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
 msgstr "ยังมีโพรเซสหนึ่งทำงานอยู่ในเทอร์มินัลนี้ ถ้าปิดเทอร์มินัล ก็จะเป็นการฆ่าโพรเซสดังกล่าว"
 
-#: src/terminal.cc:674
+#: src/terminal.cc:679
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "แจงอาร์กิวเมนต์ไม่สำเร็จ: %s\n"
