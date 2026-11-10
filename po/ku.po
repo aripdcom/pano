@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @ekiga@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:42+0300\n"
+"POT-Creation-Date: 2026-11-10 23:49+0300\n"
 "PO-Revision-Date: 2006-12-24 03:41+0100\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -1321,11 +1321,11 @@ msgstr "Rûerdê _şeffaf"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2607
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2641
 msgid "_Cancel"
 msgstr ""
 
-#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2608
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2642
 msgid "_Set"
 msgstr ""
 
@@ -1444,7 +1444,7 @@ msgstr ""
 msgid "Read-Only"
 msgstr ""
 
-#: src/terminal-accels.cc:183 src/terminal-window.cc:2604
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2638
 msgid "Set Title"
 msgstr "Sernav Sererast Bike"
 
@@ -1868,7 +1868,7 @@ msgstr "Vesazkirin"
 msgid "Zoom _In"
 msgstr "Nêzîkkirin"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3246
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3283
 #, fuzzy
 #| msgid "New Window"
 msgid "New _Window"
@@ -1880,31 +1880,31 @@ msgstr "Paceya nû"
 msgid "Re_open Closed Tab"
 msgstr "Hilfirînê Bigire"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3175
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3212
 msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3178
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3215
 msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3232
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3269
 msgid "_Broadcast Input"
 msgstr ""
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3218
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3255
 msgid "_Off"
 msgstr ""
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3219
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3256
 msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3220
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3257
 msgid "To All Terminals in This _Window"
 msgstr ""
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3229
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3266
 msgid "_Include This Terminal"
 msgstr ""
 
@@ -1912,7 +1912,7 @@ msgstr ""
 msgid "_Full Screen"
 msgstr "Dîmendera _Tijî"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3155
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3192
 msgid "Read-_Only"
 msgstr ""
 
@@ -1960,8 +1960,8 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3584
-#: src/terminal-window.cc:3169
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3681
+#: src/terminal-window.cc:3206
 msgid "_Preferences"
 msgstr ""
 
@@ -2037,8 +2037,8 @@ msgstr "Hilpekînê Bibe Aliyê Rastê"
 msgid "_Detach Terminal"
 msgstr "Hilpekînê Ve_qetîne"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5261
-#: src/terminal-window.cc:5271
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5299
+#: src/terminal-window.cc:5309
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminal"
@@ -2382,7 +2382,7 @@ msgstr[1] ""
 msgid "Import Profile"
 msgstr "Profîlê jê bibe"
 
-#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3581
+#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3618
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2755,7 +2755,7 @@ msgstr ""
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3612
+#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3649
 msgid "_Import"
 msgstr ""
 
@@ -3428,35 +3428,35 @@ msgstr ""
 msgid "_Set as default"
 msgstr ""
 
-#: src/terminal-screen.cc:1773
+#: src/terminal-screen.cc:1856
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3365
+#: src/terminal-screen.cc:3462
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3585 src/terminal-screen.cc:4003
+#: src/terminal-screen.cc:3682 src/terminal-screen.cc:4140
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.cc:3588
+#: src/terminal-screen.cc:3685
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 
-#: src/terminal-screen.cc:4007
+#: src/terminal-screen.cc:4144
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4010
+#: src/terminal-screen.cc:4147
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4013
+#: src/terminal-screen.cc:4150
 msgid "The child process was aborted."
 msgstr ""
 
@@ -3582,19 +3582,19 @@ msgstr ""
 msgid "“%s” does not exist"
 msgstr ""
 
-#: src/terminal-window.cc:2605
+#: src/terminal-window.cc:2639
 msgid ""
 "Programs cannot change this title. Leave it empty to show the title from the "
 "program again."
 msgstr ""
 
-#: src/terminal-window.cc:2815
+#: src/terminal-window.cc:2849
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Activity in a terminal"
 msgstr "Sernavê termînalê"
 
-#: src/terminal-window.cc:2850
+#: src/terminal-window.cc:2884
 #, c-format
 msgid ""
 "%s\n"
@@ -3605,236 +3605,242 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/terminal-window.cc:2855
+#: src/terminal-window.cc:2889
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Silence in a terminal"
 msgstr "Sernavê termînalê"
 
-#: src/terminal-window.cc:3079
+#: src/terminal-window.cc:3114
 #, fuzzy
 #| msgid "Open _Terminal"
 msgid "Open _Hyperlink"
 msgstr "_Termînalê veke"
 
-#: src/terminal-window.cc:3080
+#: src/terminal-window.cc:3115
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy Hyperlink _Address"
 msgstr "Navnîşana _girêdanê ji ber bigire"
 
-#: src/terminal-window.cc:3090
+#: src/terminal-window.cc:3117
+#, fuzzy
+#| msgid "_Copy Link Address"
+msgid "Paste Hyperlink _Target"
+msgstr "Navnîşana _girêdanê ji ber bigire"
+
+#: src/terminal-window.cc:3127
 msgid "Send Mail _To…"
 msgstr ""
 
-#: src/terminal-window.cc:3091
+#: src/terminal-window.cc:3128
 #, fuzzy
 #| msgid "_Copy E-mail Address"
 msgid "Copy Mail _Address"
 msgstr "Navnîşana e-peyam ji _ber bigire"
 
-#: src/terminal-window.cc:3094
+#: src/terminal-window.cc:3131
 msgid "Call _To…"
 msgstr ""
 
-#: src/terminal-window.cc:3095
+#: src/terminal-window.cc:3132
 #, fuzzy
 #| msgid "_Copy E-mail Address"
 msgid "Copy Call _Address "
 msgstr "Navnîşana e-peyam ji _ber bigire"
 
-#: src/terminal-window.cc:3100
+#: src/terminal-window.cc:3137
 msgid "_Open Link"
 msgstr "Girêdanê _veke"
 
-#: src/terminal-window.cc:3101
+#: src/terminal-window.cc:3138
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy _Link"
 msgstr "Navnîşana _girêdanê ji ber bigire"
 
-#: src/terminal-window.cc:3140
+#: src/terminal-window.cc:3177
 #, fuzzy
 #| msgid "Copy"
 msgid "_Copy"
 msgstr "Ji ber bigire"
 
-#: src/terminal-window.cc:3141
+#: src/terminal-window.cc:3178
 msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-window.cc:3142
+#: src/terminal-window.cc:3179
 #, fuzzy
 #| msgid "Paste"
 msgid "_Paste"
 msgstr "Pêveke"
 
-#: src/terminal-window.cc:3145
+#: src/terminal-window.cc:3182
 msgid "Copy _Output of This Command"
 msgstr ""
 
-#: src/terminal-window.cc:3147
+#: src/terminal-window.cc:3184
 msgid "Copy _Output of Last Command"
 msgstr ""
 
-#: src/terminal-window.cc:3149
+#: src/terminal-window.cc:3186
 msgid "Paste as _Filenames"
 msgstr ""
 
-#: src/terminal-window.cc:3156
+#: src/terminal-window.cc:3193
 msgid "Monitor for _Activity"
 msgstr ""
 
-#: src/terminal-window.cc:3157
+#: src/terminal-window.cc:3194
 msgid "Monitor for _Silence"
 msgstr ""
 
-#: src/terminal-window.cc:3164
+#: src/terminal-window.cc:3201
 #, fuzzy
 #| msgid "Profiles"
 msgid "P_rofiles"
 msgstr "Profîl"
 
-#: src/terminal-window.cc:3182
+#: src/terminal-window.cc:3219
 #, fuzzy
 #| msgid "Zoom In"
 msgid "_Zoom Pane"
 msgstr "Nêzîkkirin"
 
-#: src/terminal-window.cc:3183
+#: src/terminal-window.cc:3220
 msgid "Make Panes the Same _Size"
 msgstr ""
 
-#: src/terminal-window.cc:3186
+#: src/terminal-window.cc:3223
 #, fuzzy
 #| msgid "New Tab"
 msgid "To a New _Tab"
 msgstr "Hilfirîna Nû"
 
-#: src/terminal-window.cc:3189
+#: src/terminal-window.cc:3226
 #, fuzzy
 #| msgid "New Window"
 msgid "To a New _Window"
 msgstr "Paceya nû"
 
-#: src/terminal-window.cc:3194
+#: src/terminal-window.cc:3231
 msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-window.cc:3195
+#: src/terminal-window.cc:3232
 msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-window.cc:3196
+#: src/terminal-window.cc:3233
 msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-window.cc:3197
+#: src/terminal-window.cc:3234
 msgid "Swap With the Pane _Below"
 msgstr ""
 
-#: src/terminal-window.cc:3211
+#: src/terminal-window.cc:3248
 msgid "_Move Pane"
 msgstr ""
 
-#: src/terminal-window.cc:3213
+#: src/terminal-window.cc:3250
 #, fuzzy
 #| msgid "Close Tab"
 msgid "Close P_ane"
 msgstr "Hilfirînê Bigire"
 
-#: src/terminal-window.cc:3241
+#: src/terminal-window.cc:3278
 #, fuzzy
 #| msgid "_Terminal"
 msgid "New _Terminal"
 msgstr "_Termînal"
 
-#: src/terminal-window.cc:3250
+#: src/terminal-window.cc:3287
 #, fuzzy
 #| msgid "New Tab"
 msgid "New _Tab"
 msgstr "Hilfirîna Nû"
 
-#: src/terminal-window.cc:3260
+#: src/terminal-window.cc:3297
 #, fuzzy
 #| msgid "Full Screen"
 msgid "Leave Full Screen"
 msgstr "Dîmender Tije"
 
-#: src/terminal-window.cc:3607
+#: src/terminal-window.cc:3644
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3613 src/terminal-window.cc:4013
+#: src/terminal-window.cc:3650 src/terminal-window.cc:4051
 msgid "_No"
 msgstr ""
 
-#: src/terminal-window.cc:4007
+#: src/terminal-window.cc:4045
 msgid "Set Pano Terminal as your default terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:4012
+#: src/terminal-window.cc:4050
 msgid "_Yes"
 msgstr ""
 
-#: src/terminal-window.cc:4082
+#: src/terminal-window.cc:4120
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5255
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid "Set the terminal's title"
 msgid "Close the other terminals?"
 msgstr "Sernavê termînalê mîheng bike"
 
-#: src/terminal-window.cc:5255
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Close the other terminal?"
 msgstr "Sernavê termînalê"
 
-#: src/terminal-window.cc:5257
+#: src/terminal-window.cc:5295
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5259
+#: src/terminal-window.cc:5297
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5261
+#: src/terminal-window.cc:5299
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminals"
 msgstr "_Termînal"
 
-#: src/terminal-window.cc:5263
+#: src/terminal-window.cc:5301
 #, fuzzy
 #| msgid "Close Window"
 msgid "Close this window?"
 msgstr "Paceyê bigire"
 
-#: src/terminal-window.cc:5264
+#: src/terminal-window.cc:5302
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5266
+#: src/terminal-window.cc:5304
 msgid "C_lose Window"
 msgstr "Paceyê _Bigire"
 
-#: src/terminal-window.cc:5268
+#: src/terminal-window.cc:5306
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Close this terminal?"
 msgstr "Sernavê termînalê"
 
-#: src/terminal-window.cc:5269
+#: src/terminal-window.cc:5307
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

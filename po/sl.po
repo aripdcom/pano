@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:42+0300\n"
+"POT-Creation-Date: 2026-11-10 23:49+0300\n"
 "PO-Revision-Date: 2026-10-08 22:53+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
@@ -1359,11 +1359,11 @@ msgstr "_Prelomi vrstice"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr "Vnesite novo bližnjico za spremembo <b>%s</b>."
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2607
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2641
 msgid "_Cancel"
 msgstr "_Prekliči"
 
-#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2608
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2642
 msgid "_Set"
 msgstr "_Nastavi"
 
@@ -1472,7 +1472,7 @@ msgstr ""
 msgid "Read-Only"
 msgstr "Le za branje"
 
-#: src/terminal-accels.cc:183 src/terminal-window.cc:2604
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2638
 #, fuzzy
 #| msgid "Set _Title…"
 msgid "Set Title"
@@ -1882,7 +1882,7 @@ msgstr "Po_nastavi povečavo"
 msgid "Zoom _In"
 msgstr "_Približaj"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3246
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3283
 msgid "New _Window"
 msgstr "Novo _okno"
 
@@ -1892,31 +1892,31 @@ msgstr "Novo _okno"
 msgid "Re_open Closed Tab"
 msgstr "Zapri zavihek"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3175
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3212
 msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3178
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3215
 msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3232
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3269
 msgid "_Broadcast Input"
 msgstr ""
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3218
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3255
 msgid "_Off"
 msgstr ""
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3219
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3256
 msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3220
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3257
 msgid "To All Terminals in This _Window"
 msgstr ""
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3229
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3266
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "_Include This Terminal"
@@ -1926,7 +1926,7 @@ msgstr "Ali naj se okno terminala zapre?"
 msgid "_Full Screen"
 msgstr "_Celozaslonski način"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3155
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3192
 msgid "Read-_Only"
 msgstr "Le za branje"
 
@@ -1972,8 +1972,8 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_Nadzornik"
 
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3584
-#: src/terminal-window.cc:3169
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3681
+#: src/terminal-window.cc:3206
 msgid "_Preferences"
 msgstr "_Možnosti"
 
@@ -2037,8 +2037,8 @@ msgstr "Premakni terminal _desno"
 msgid "_Detach Terminal"
 msgstr "_Odpni terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5261
-#: src/terminal-window.cc:5271
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5299
+#: src/terminal-window.cc:5309
 msgid "C_lose Terminal"
 msgstr "_Zapri terminal"
 
@@ -2373,7 +2373,7 @@ msgstr[3] ""
 msgid "Import Profile"
 msgstr "Uredi profil"
 
-#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3581
+#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3618
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2743,7 +2743,7 @@ msgstr ""
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3612
+#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3649
 #, fuzzy
 #| msgid "Export"
 msgid "_Import"
@@ -3351,35 +3351,35 @@ msgstr "I_zbriši"
 msgid "_Set as default"
 msgstr "_Nastavi kot privzeto"
 
-#: src/terminal-screen.cc:1773
+#: src/terminal-screen.cc:1856
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3365
+#: src/terminal-screen.cc:3462
 msgid "No command supplied nor shell requested"
 msgstr "Ni navedenega ukaza niti zahteve lupine"
 
-#: src/terminal-screen.cc:3585 src/terminal-screen.cc:4003
+#: src/terminal-screen.cc:3682 src/terminal-screen.cc:4140
 msgid "_Relaunch"
 msgstr "_Ponovno zaženi"
 
-#: src/terminal-screen.cc:3588
+#: src/terminal-screen.cc:3685
 msgid "There was an error creating the child process for this terminal"
 msgstr "Prišlo je do napake pri ustvarjanju podrejenih procesov tega terminala"
 
-#: src/terminal-screen.cc:4007
+#: src/terminal-screen.cc:4144
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Podrejeno opravilo je pričakovano končano s stanjem %d."
 
-#: src/terminal-screen.cc:4010
+#: src/terminal-screen.cc:4147
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Podrejeno opravilo je prekinjeno s signalom %d."
 
-#: src/terminal-screen.cc:4013
+#: src/terminal-screen.cc:4150
 msgid "The child process was aborted."
 msgstr "Podrejeno opravilo je prekinjeno."
 
@@ -3508,19 +3508,19 @@ msgstr ""
 msgid "“%s” does not exist"
 msgstr ""
 
-#: src/terminal-window.cc:2605
+#: src/terminal-window.cc:2639
 msgid ""
 "Programs cannot change this title. Leave it empty to show the title from the "
 "program again."
 msgstr ""
 
-#: src/terminal-window.cc:2815
+#: src/terminal-window.cc:2849
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Activity in a terminal"
 msgstr "Odpri okno terminala"
 
-#: src/terminal-window.cc:2850
+#: src/terminal-window.cc:2884
 #, c-format
 msgid ""
 "%s\n"
@@ -3533,174 +3533,180 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: src/terminal-window.cc:2855
+#: src/terminal-window.cc:2889
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Silence in a terminal"
 msgstr "Odpri okno terminala"
 
-#: src/terminal-window.cc:3079
+#: src/terminal-window.cc:3114
 msgid "Open _Hyperlink"
 msgstr "Odpri _povezavo"
 
-#: src/terminal-window.cc:3080
+#: src/terminal-window.cc:3115
 msgid "Copy Hyperlink _Address"
 msgstr "Kopiraj naslov _povezave"
 
-#: src/terminal-window.cc:3090
+#: src/terminal-window.cc:3117
+#, fuzzy
+#| msgid "Copy Hyperlink _Address"
+msgid "Paste Hyperlink _Target"
+msgstr "Kopiraj naslov _povezave"
+
+#: src/terminal-window.cc:3127
 msgid "Send Mail _To…"
 msgstr "Pošlji pošto _za …"
 
-#: src/terminal-window.cc:3091
+#: src/terminal-window.cc:3128
 msgid "Copy Mail _Address"
 msgstr "Kopiraj elektronski _naslov"
 
-#: src/terminal-window.cc:3094
+#: src/terminal-window.cc:3131
 msgid "Call _To…"
 msgstr "Klic _za …"
 
-#: src/terminal-window.cc:3095
+#: src/terminal-window.cc:3132
 msgid "Copy Call _Address "
 msgstr "Kopiraj klicni _naslov "
 
-#: src/terminal-window.cc:3100
+#: src/terminal-window.cc:3137
 msgid "_Open Link"
 msgstr "_Odpri povezavo"
 
-#: src/terminal-window.cc:3101
+#: src/terminal-window.cc:3138
 msgid "Copy _Link"
 msgstr "Kopiraj naslov _povezave"
 
-#: src/terminal-window.cc:3140
+#: src/terminal-window.cc:3177
 msgid "_Copy"
 msgstr "_Kopiraj"
 
-#: src/terminal-window.cc:3141
+#: src/terminal-window.cc:3178
 msgid "Copy as _HTML"
 msgstr "Kopiraj kot _HTML"
 
-#: src/terminal-window.cc:3142
+#: src/terminal-window.cc:3179
 msgid "_Paste"
 msgstr "_Prilepi"
 
-#: src/terminal-window.cc:3145
+#: src/terminal-window.cc:3182
 msgid "Copy _Output of This Command"
 msgstr ""
 
-#: src/terminal-window.cc:3147
+#: src/terminal-window.cc:3184
 msgid "Copy _Output of Last Command"
 msgstr ""
 
-#: src/terminal-window.cc:3149
+#: src/terminal-window.cc:3186
 msgid "Paste as _Filenames"
 msgstr "Kopiraj kot imena _datotek"
 
-#: src/terminal-window.cc:3156
+#: src/terminal-window.cc:3193
 msgid "Monitor for _Activity"
 msgstr ""
 
-#: src/terminal-window.cc:3157
+#: src/terminal-window.cc:3194
 msgid "Monitor for _Silence"
 msgstr ""
 
-#: src/terminal-window.cc:3164
+#: src/terminal-window.cc:3201
 msgid "P_rofiles"
 msgstr "P_rofili"
 
-#: src/terminal-window.cc:3182
+#: src/terminal-window.cc:3219
 #, fuzzy
 #| msgid "Zoom In"
 msgid "_Zoom Pane"
 msgstr "Približaj"
 
-#: src/terminal-window.cc:3183
+#: src/terminal-window.cc:3220
 msgid "Make Panes the Same _Size"
 msgstr ""
 
-#: src/terminal-window.cc:3186
+#: src/terminal-window.cc:3223
 #, fuzzy
 #| msgid "New _Tab"
 msgid "To a New _Tab"
 msgstr "Nov _zavihek"
 
-#: src/terminal-window.cc:3189
+#: src/terminal-window.cc:3226
 #, fuzzy
 #| msgid "New _Window"
 msgid "To a New _Window"
 msgstr "Novo _okno"
 
-#: src/terminal-window.cc:3194
+#: src/terminal-window.cc:3231
 msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-window.cc:3195
+#: src/terminal-window.cc:3232
 msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-window.cc:3196
+#: src/terminal-window.cc:3233
 msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-window.cc:3197
+#: src/terminal-window.cc:3234
 msgid "Swap With the Pane _Below"
 msgstr ""
 
-#: src/terminal-window.cc:3211
+#: src/terminal-window.cc:3248
 msgid "_Move Pane"
 msgstr ""
 
-#: src/terminal-window.cc:3213
+#: src/terminal-window.cc:3250
 #, fuzzy
 #| msgid "Close Tab"
 msgid "Close P_ane"
 msgstr "Zapri zavihek"
 
-#: src/terminal-window.cc:3241
+#: src/terminal-window.cc:3278
 msgid "New _Terminal"
 msgstr "Novo okno _terminala"
 
-#: src/terminal-window.cc:3250
+#: src/terminal-window.cc:3287
 msgid "New _Tab"
 msgstr "Nov _zavihek"
 
-#: src/terminal-window.cc:3260
+#: src/terminal-window.cc:3297
 msgid "Leave Full Screen"
 msgstr "Zapusti celozaslonski način"
 
-#: src/terminal-window.cc:3607
+#: src/terminal-window.cc:3644
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3613 src/terminal-window.cc:4013
+#: src/terminal-window.cc:3650 src/terminal-window.cc:4051
 msgid "_No"
 msgstr "_Ne"
 
-#: src/terminal-window.cc:4007
+#: src/terminal-window.cc:4045
 msgid "Set Pano Terminal as your default terminal?"
 msgstr "Ali želite nastaviti Pano Terminal kot privzeti terminalski program?"
 
-#: src/terminal-window.cc:4012
+#: src/terminal-window.cc:4050
 msgid "_Yes"
 msgstr "_Da"
 
-#: src/terminal-window.cc:4082
+#: src/terminal-window.cc:4120
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5255
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Ali naj se okno terminala zapre?"
 
-#: src/terminal-window.cc:5255
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Ali naj se okno terminala zapre?"
 
-#: src/terminal-window.cc:5257
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3712,7 +3718,7 @@ msgstr ""
 "Še vedno so dejavna opravila v terminalih tega okna. Z zapiranjem okna se "
 "vstavijo tudi nedokončana."
 
-#: src/terminal-window.cc:5259
+#: src/terminal-window.cc:5297
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3724,17 +3730,17 @@ msgstr ""
 "Še vedno so dejavna opravila v terminalu. Z zapiranjem terminala se vstavijo "
 "tudi nedokončana."
 
-#: src/terminal-window.cc:5261
+#: src/terminal-window.cc:5299
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Zapri terminal"
 
-#: src/terminal-window.cc:5263
+#: src/terminal-window.cc:5301
 msgid "Close this window?"
 msgstr "Zapri to okno?"
 
-#: src/terminal-window.cc:5264
+#: src/terminal-window.cc:5302
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3742,15 +3748,15 @@ msgstr ""
 "Še vedno so dejavna opravila v terminalih tega okna. Z zapiranjem okna se "
 "vstavijo tudi nedokončana."
 
-#: src/terminal-window.cc:5266
+#: src/terminal-window.cc:5304
 msgid "C_lose Window"
 msgstr "_Zapri okno"
 
-#: src/terminal-window.cc:5268
+#: src/terminal-window.cc:5306
 msgid "Close this terminal?"
 msgstr "Ali naj se okno terminala zapre?"
 
-#: src/terminal-window.cc:5269
+#: src/terminal-window.cc:5307
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

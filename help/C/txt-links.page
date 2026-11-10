@@ -67,7 +67,10 @@
       <title><gui style="menuitem">Open Hyperlink</gui> and
       <gui style="menuitem">Copy Hyperlink Address</gui></title>
       <p>Open or copy the target of text that a program has made a link, for
-      example the file names that <cmd>ls --hyperlink</cmd> prints.</p>
+      example the file names that <cmd>ls --hyperlink</cmd> prints.
+      <gui style="menuitem">Paste Hyperlink Target</gui> pastes it into the
+      terminal: the path of a file on this computer, or else the address,
+      quoted for the shell.</p>
     </item>
   </terms>
 

@@ -2322,6 +2322,29 @@ action_copy_hyperlink_cb (GSimpleAction *action,
   window_show_copy_toast (window);
 }
 
+/* Pastes the target of a hyperlink into the terminal: the path of a local
+ * file, or else the address, quoted for the shell */
+static void
+action_paste_hyperlink_cb (GSimpleAction *action,
+                           GVariant      *parameter,
+                           gpointer       user_data)
+{
+  TerminalWindow *window = (TerminalWindow*)user_data;
+  TerminalScreenPopupInfo *info = window->popup_info;
+
+  if (info == nullptr || info->hyperlink == nullptr || window->active_screen == nullptr)
+    return;
+
+  gs_free char *host = nullptr;
+  gs_free char *path = g_filename_from_uri (info->hyperlink, &host, nullptr);
+  auto const local = path && (!host || !host[0] ||
+                              g_ascii_strcasecmp (host, "localhost") == 0 ||
+                              g_ascii_strcasecmp (host, g_get_host_name ()) == 0);
+  gs_free char *quoted = g_shell_quote (local ? path : info->hyperlink);
+  gs_free char *text = g_strconcat (quoted, " ", nullptr);
+  terminal_screen_paste_text (window->active_screen, text, -1);
+}
+
 static void
 action_toggle_fullscreen_cb (GSimpleAction *action,
                              GVariant      *parameter,
@@ -2934,6 +2957,7 @@ terminal_window_update_paste_sensitivity (TerminalWindow *window)
 
   g_simple_action_set_enabled (lookup_action (window, "paste-text"), can_paste && !read_only);
   g_simple_action_set_enabled (lookup_action (window, "paste-uris"), can_paste_uris && !read_only);
+  g_simple_action_set_enabled (lookup_action (window, "paste-hyperlink"), !read_only);
 }
 
 static inline bool
@@ -3089,6 +3113,8 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
 
     menu_append (section1, _("Open _Hyperlink"), "win.open-hyperlink");
     menu_append (section1, _("Copy Hyperlink _Address"), "win.copy-hyperlink");
+    if (g_action_get_enabled (G_ACTION (lookup_action (window, "paste-hyperlink"))))
+      menu_append (section1, _("Paste Hyperlink _Target"), "win.paste-hyperlink");
     g_menu_append_section (menu, nullptr, G_MENU_MODEL (section1));
   }
   /* Matched link section */
@@ -3879,6 +3905,7 @@ terminal_window_init (TerminalWindow *window)
     { "scroll-to-prompt",    action_prompt_cb,           "s",    nullptr, nullptr },
     { "copy",                action_copy_cb,             "s",    nullptr, nullptr },
     { "copy-hyperlink",      action_copy_hyperlink_cb,   nullptr,   nullptr, nullptr },
+    { "paste-hyperlink",     action_paste_hyperlink_cb,  nullptr,   nullptr, nullptr },
     { "copy-match",          action_copy_match_cb,       nullptr,   nullptr, nullptr },
     { "edit-preferences",    action_edit_preferences_cb, nullptr,   nullptr, nullptr },
     { "toggle-fullscreen",   action_toggle_fullscreen_cb,nullptr,   nullptr, nullptr },
