@@ -103,6 +103,7 @@ struct _TerminalProfileEditor
   GtkWidget            *palette_buttons_group;
   GPtrArray            *scheme_ids; /* the ids in the color_scheme model; "" for custom */
   gboolean              updating_scheme;
+  gboolean              updating_colors; /* the combo rows follow the settings */
   GtkScale             *background_opacity;
   GtkAdjustment        *background_opacity_adjustment;
   AdwSwitchRow         *use_system_font;
@@ -518,6 +519,27 @@ terminal_profile_editor_reset_compatibility (GtkWidget  *widget,
   g_settings_reset (self->settings, TERMINAL_PROFILE_BACKSPACE_BINDING_KEY);
 }
 
+/* The index of the built-in text and background colors that the profile
+ * uses, or -1 for colors of the user's own */
+static int
+terminal_profile_editor_find_color_scheme (TerminalProfileEditor *self)
+{
+  GdkRGBA foreground, background;
+  terminal_g_settings_get_rgba (self->settings,
+                                TERMINAL_PROFILE_FOREGROUND_COLOR_KEY,
+                                &foreground);
+  terminal_g_settings_get_rgba (self->settings,
+                                TERMINAL_PROFILE_BACKGROUND_COLOR_KEY,
+                                &background);
+
+  for (guint i = 0; i < G_N_ELEMENTS (color_schemes); i++) {
+    if (gdk_rgba_equal (&foreground, &color_schemes[i].foreground) &&
+        gdk_rgba_equal (&background, &color_schemes[i].background))
+      return int(i);
+  }
+  return -1;
+}
+
 static void
 terminal_profile_editor_scheme_changed_from_selection (TerminalProfileEditor *self,
                                                        GParamSpec            *pspec,
@@ -532,6 +554,29 @@ terminal_profile_editor_scheme_changed_from_selection (TerminalProfileEditor *se
   item = GTK_STRING_OBJECT (adw_combo_row_get_selected_item (row));
   if (item == nullptr)
     return;
+
+  if (self->updating_colors)
+    return;
+
+  /* Keep the user's own colors, so that choosing "Custom" brings them back */
+  auto const selected = adw_combo_row_get_selected (row);
+  if (selected >= G_N_ELEMENTS (color_schemes)) {
+    gs_free char *fg = g_settings_get_string (self->settings, TERMINAL_PROFILE_CUSTOM_FOREGROUND_COLOR_KEY);
+    gs_free char *bg = g_settings_get_string (self->settings, TERMINAL_PROFILE_CUSTOM_BACKGROUND_COLOR_KEY);
+    GdkRGBA color;
+    if (gdk_rgba_parse (&color, fg))
+      terminal_g_settings_set_rgba (self->settings, TERMINAL_PROFILE_FOREGROUND_COLOR_KEY, &color);
+    if (gdk_rgba_parse (&color, bg))
+      terminal_g_settings_set_rgba (self->settings, TERMINAL_PROFILE_BACKGROUND_COLOR_KEY, &color);
+    return;
+  }
+
+  if (terminal_profile_editor_find_color_scheme (self) < 0) {
+    gs_free char *fg = g_settings_get_string (self->settings, TERMINAL_PROFILE_FOREGROUND_COLOR_KEY);
+    gs_free char *bg = g_settings_get_string (self->settings, TERMINAL_PROFILE_BACKGROUND_COLOR_KEY);
+    g_settings_set_string (self->settings, TERMINAL_PROFILE_CUSTOM_FOREGROUND_COLOR_KEY, fg);
+    g_settings_set_string (self->settings, TERMINAL_PROFILE_CUSTOM_BACKGROUND_COLOR_KEY, bg);
+  }
 
   name = gtk_string_object_get_string (item);
 
@@ -553,26 +598,15 @@ terminal_profile_editor_scheme_changed_from_settings (TerminalProfileEditor *sel
                                                       const char            *key,
                                                       GSettings             *settings)
 {
-  GdkRGBA foreground;
-  GdkRGBA background;
-
   g_assert (TERMINAL_IS_PROFILE_EDITOR (self));
   g_assert (G_IS_SETTINGS (settings));
 
-  terminal_g_settings_get_rgba (self->settings,
-                                TERMINAL_PROFILE_FOREGROUND_COLOR_KEY,
-                                &foreground);
-  terminal_g_settings_get_rgba (self->settings,
-                                TERMINAL_PROFILE_BACKGROUND_COLOR_KEY,
-                                &background);
+  auto const index = terminal_profile_editor_find_color_scheme (self);
 
-  for (guint i = 0; i < G_N_ELEMENTS (color_schemes); i++) {
-    if (gdk_rgba_equal (&foreground, &color_schemes[i].foreground) &&
-        gdk_rgba_equal (&background, &color_schemes[i].background)) {
-      adw_combo_row_set_selected (self->color_schemes, i);
-      break;
-    }
-  }
+  self->updating_colors = true;
+  adw_combo_row_set_selected (self->color_schemes,
+                              index >= 0 ? guint(index) : G_N_ELEMENTS (color_schemes));
+  self->updating_colors = false;
 }
 
 static void
@@ -628,6 +662,32 @@ terminal_profile_editor_palette_changed_from_selection (TerminalProfileEditor *s
   if (item == nullptr)
     return;
 
+  if (self->updating_colors)
+    return;
+
+  /* Keep the user's own palette, so that choosing "Custom" brings it back */
+  if (adw_combo_row_get_selected (row) >= TERMINAL_PALETTE_N_BUILTINS) {
+    g_auto(GStrv) custom = g_settings_get_strv (self->settings, TERMINAL_PROFILE_CUSTOM_PALETTE_KEY);
+    if (g_strv_length (custom) == PALETTE_SIZE)
+      g_settings_set_strv (self->settings, TERMINAL_PROFILE_PALETTE_KEY, custom);
+    return;
+  }
+
+  {
+    g_auto(GStrv) palette = g_settings_get_strv (self->settings, TERMINAL_PROFILE_PALETTE_KEY);
+    GdkRGBA colors[PALETTE_SIZE];
+    auto parsed = g_strv_length (palette) == PALETTE_SIZE;
+    for (guint i = 0; parsed && i < PALETTE_SIZE; i++)
+      parsed = gdk_rgba_parse (&colors[i], palette[i]);
+
+    auto builtin = false;
+    for (guint i = 0; parsed && i < TERMINAL_PALETTE_N_BUILTINS; i++)
+      builtin = builtin || memcmp (colors, terminal_palettes[i], sizeof (GdkRGBA) * PALETTE_SIZE) == 0;
+
+    if (parsed && !builtin)
+      g_settings_set_strv (self->settings, TERMINAL_PROFILE_CUSTOM_PALETTE_KEY, palette);
+  }
+
   name = gtk_string_object_get_string (item);
 
   for (guint i = 0; i < TERMINAL_PALETTE_N_BUILTINS; i++) {
@@ -682,15 +742,17 @@ terminal_profile_editor_palette_changed_from_settings (TerminalProfileEditor *se
     g_signal_handlers_unblock_by_func (button, (gpointer)G_CALLBACK (terminal_profile_editor_palette_index_changed), self);
   }
 
+  auto selected = guint(TERMINAL_PALETTE_N_BUILTINS); /* "Custom" */
   for (guint i = 0; i < TERMINAL_PALETTE_N_BUILTINS; i++) {
     if (memcmp (colors, terminal_palettes[i], sizeof (GdkRGBA) * PALETTE_SIZE) == 0) {
-      adw_combo_row_set_selected (self->color_palette, i);
-      return;
+      selected = i;
+      break;
     }
   }
 
-  /* Set to "Custom" */
-  adw_combo_row_set_selected (self->color_palette, TERMINAL_PALETTE_N_BUILTINS);
+  self->updating_colors = true;
+  adw_combo_row_set_selected (self->color_palette, selected);
+  self->updating_colors = false;
 }
 
 static gboolean

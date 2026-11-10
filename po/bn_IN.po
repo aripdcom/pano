@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:28+0300\n"
+"POT-Creation-Date: 2026-11-10 23:36+0300\n"
 "PO-Revision-Date: 2021-01-04 13:56+0530\n"
 "Last-Translator: Akarshan Biswas <akarshan.biswas@hotmail.com>\n"
 "Language-Team: Bengali <anubad@lists.ankur.org.in>\n"
@@ -234,7 +234,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "Pano Terminal এমুলেটর"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1349
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -651,48 +651,60 @@ msgid "Palette for terminal applications"
 msgstr "টার্মিন্যালের অ্যাপ্লিকেশনের জন্য ব্যবহারযোগ্য প্যালেট"
 
 #: src/com.aripd.Pano.gschema.xml:366
+msgid "The palette of the user, kept while a built-in palette is chosen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:370
+msgid "The text color of the user, kept while built-in colors are chosen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:374
+msgid "The background color of the user, kept while built-in colors are chosen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:378
 msgid "A Pango font name and size"
 msgstr "একটি Pango ফন্ট নাম এবং মাপ"
 
-#: src/com.aripd.Pano.gschema.xml:370
+#: src/com.aripd.Pano.gschema.xml:382
 msgid "The code sequence the Backspace key generates"
 msgstr "ব্যাকস্পেস কী যে কোড ক্রম প্রস্তুত করে"
 
-#: src/com.aripd.Pano.gschema.xml:374
+#: src/com.aripd.Pano.gschema.xml:386
 msgid "The code sequence the Delete key generates"
 msgstr "'মুছুন' কী যে কোড ক্রম প্রস্তুত করে"
 
-#: src/com.aripd.Pano.gschema.xml:378
+#: src/com.aripd.Pano.gschema.xml:390
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr "টার্মিন্যাল উইজেটের ক্ষেত্রে সক্রিয় থিমের রং প্রয়োগ করা হবে কি না"
 
-#: src/com.aripd.Pano.gschema.xml:382
+#: src/com.aripd.Pano.gschema.xml:394
 msgid "Whether to use the system monospace font"
 msgstr "সিস্টেম মোনোস্পেস ফন্ট ব্যবহার করা হবে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:386
+#: src/com.aripd.Pano.gschema.xml:398
 msgid "Whether to rewrap the terminal contents on window resize"
 msgstr "উইন্ডো পুনঃমাপে টার্মিন্যাল বিষয়বস্তু পুনঃমোড়ানো হবে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:390
+#: src/com.aripd.Pano.gschema.xml:402
 msgid "Which encoding to use"
 msgstr "কোন এনকোডিং ব্যবহার করা হবে"
 
-#: src/com.aripd.Pano.gschema.xml:394
+#: src/com.aripd.Pano.gschema.xml:406
 msgid ""
 "Whether ambiguous-width characters are narrow or wide when using UTF-8 "
 "encoding"
 msgstr "UTF-8 এনকোডিং ব্যবহারের সময়ে ambiguous-width অক্ষর অপ্রশস্ত না প্রশস্ত তা"
 
-#: src/com.aripd.Pano.gschema.xml:403
+#: src/com.aripd.Pano.gschema.xml:415
 msgid "Keyboard shortcut to open a new tab"
 msgstr "নতুন ট্যাব খোলার জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:407
+#: src/com.aripd.Pano.gschema.xml:419
 msgid "Keyboard shortcut to open a new window"
 msgstr "নতুন উইন্ডো খোলার জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:411
+#: src/com.aripd.Pano.gschema.xml:423
 #, fuzzy
 #| msgid "Keyboard shortcut to save the current tab contents to file"
 msgid ""
@@ -700,11 +712,11 @@ msgid ""
 "scrollback, to a file"
 msgstr "বর্তমানে ট্যাবের তথ্য একটি ফাইলের মধ্যে সংরক্ষণের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:415
+#: src/com.aripd.Pano.gschema.xml:427
 msgid "Keyboard shortcut to close a tab"
 msgstr "ট্যাব বন্ধ করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:419
+#: src/com.aripd.Pano.gschema.xml:431
 #, fuzzy
 #| msgid "Keyboard shortcut to save the current tab contents to file"
 msgid ""
@@ -712,46 +724,46 @@ msgid ""
 "pinned tabs"
 msgstr "বর্তমানে ট্যাবের তথ্য একটি ফাইলের মধ্যে সংরক্ষণের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:423
+#: src/com.aripd.Pano.gschema.xml:435
 #, fuzzy
 #| msgid "Keyboard shortcut to open a new tab"
 msgid "Keyboard shortcut to reopen the last closed tab"
 msgstr "নতুন ট্যাব খোলার জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:427
+#: src/com.aripd.Pano.gschema.xml:439
 msgid "Keyboard shortcut to close a window"
 msgstr "উইন্ডো বন্ধ করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:431
+#: src/com.aripd.Pano.gschema.xml:443
 msgid "Keyboard shortcut to copy text"
 msgstr "টেক্সট কপি করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:435
+#: src/com.aripd.Pano.gschema.xml:447
 msgid "Keyboard shortcut to copy text as HTML"
 msgstr "এইচটিএমএল হিসাবে পাঠ্য অনুলিপি করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:439
+#: src/com.aripd.Pano.gschema.xml:451
 msgid "Keyboard shortcut to paste text"
 msgstr "টেক্সট পেস্ট করার জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:443
+#: src/com.aripd.Pano.gschema.xml:455
 msgid "Keyboard shortcut to select all text"
 msgstr "সমস্ত পাঠ্য নির্বাচন করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:447
+#: src/com.aripd.Pano.gschema.xml:459
 msgid "Keyboard shortcut to open the Preferences dialog"
 msgstr "পছন্দ ডায়ালগটি খুলতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:451
+#: src/com.aripd.Pano.gschema.xml:463
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr ""
 "সম্পূর্ণ পর্দাজুড়ে প্রদর্শন ব্যবস্থা সক্রিয় অথবা নিষ্ক্রিয় করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:455
+#: src/com.aripd.Pano.gschema.xml:467
 msgid "Keyboard shortcut to toggle the read-only state"
 msgstr "কেবল পঠনযোগ্য স্থিতিতে টগল করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:459
+#: src/com.aripd.Pano.gschema.xml:471
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid ""
@@ -759,107 +771,107 @@ msgid ""
 "by typing the label"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:463
+#: src/com.aripd.Pano.gschema.xml:475
 #, fuzzy
 #| msgid "Keyboard shortcut to open the search dialog"
 msgid "Keyboard shortcut to open the command palette"
 msgstr "অনুসন্ধান ডায়ালগ খোলার কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:467
+#: src/com.aripd.Pano.gschema.xml:479
 #, fuzzy
 #| msgid "Keyboard shortcut to reset and clear the terminal"
 msgid ""
 "Keyboard shortcut to set a title for the terminal that programs cannot change"
 msgstr "টার্মিন্যাল রি-সেট ও পরিশ্রুত করার উদ্দেশ্যে কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:471
+#: src/com.aripd.Pano.gschema.xml:483
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "টার্মিন্যাল রি-সেট করার উদ্দেশ্যে কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:475
+#: src/com.aripd.Pano.gschema.xml:487
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "টার্মিন্যাল রি-সেট ও পরিশ্রুত করার উদ্দেশ্যে কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:479
+#: src/com.aripd.Pano.gschema.xml:491
 msgid "Keyboard shortcut to open the search dialog"
 msgstr "অনুসন্ধান ডায়ালগ খোলার কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:483
+#: src/com.aripd.Pano.gschema.xml:495
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr "অনুসন্ধান টার্মের পরবর্তী উপস্থিতি খোঁজার কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:487
+#: src/com.aripd.Pano.gschema.xml:499
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr "অনুসন্ধান টার্মের পূর্ববর্তী উপস্থিত খোঁজার কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:491
+#: src/com.aripd.Pano.gschema.xml:503
 msgid "Keyboard shortcut to clear the find highlighting"
 msgstr "সন্ধান হাইলাইটিং সাফ করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:495
+#: src/com.aripd.Pano.gschema.xml:507
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "পূর্ববর্তী ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:499
+#: src/com.aripd.Pano.gschema.xml:511
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "পরবর্তী ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:503
+#: src/com.aripd.Pano.gschema.xml:515
 msgid "Keyboard shortcut to move the current tab to the left"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:507
+#: src/com.aripd.Pano.gschema.xml:519
 msgid "Keyboard shortcut to move the current tab to the right"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:511
+#: src/com.aripd.Pano.gschema.xml:523
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid "Keyboard shortcut to move the current tab to the start"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:515
+#: src/com.aripd.Pano.gschema.xml:527
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to move the current tab to the end"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:519
+#: src/com.aripd.Pano.gschema.xml:531
 msgid "Keyboard shortcut to detach current tab"
 msgstr "বর্তমান ট্যাব আলাদা করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:523
+#: src/com.aripd.Pano.gschema.xml:535
 #, fuzzy
 #| msgid "Keyboard shortcut to switch to the previous tab"
 msgid "Keyboard shortcut to scroll to the previous shell prompt"
 msgstr "পূর্ববর্তী ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:527
+#: src/com.aripd.Pano.gschema.xml:539
 #, fuzzy
 #| msgid "Keyboard shortcut to switch to the next tab"
 msgid "Keyboard shortcut to scroll to the next shell prompt"
 msgstr "পরবর্তী ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:531
+#: src/com.aripd.Pano.gschema.xml:543
 #, fuzzy
 #| msgid "Keyboard shortcut to switch to the last tab"
 msgid "Keyboard shortcut to copy the output of the last command"
 msgstr "শেষ ট্যাবে স্যুইচ করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:535
+#: src/com.aripd.Pano.gschema.xml:547
 #, fuzzy
 #| msgid "Keyboard shortcut to switch to the next tab"
 msgid "Keyboard shortcut to send input to all panes of the tab, or to stop"
 msgstr "পরবর্তী ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:539
+#: src/com.aripd.Pano.gschema.xml:551
 #, fuzzy
 #| msgid "Keyboard shortcut to open a new window"
 msgid ""
 "Keyboard shortcut to send input to all terminals of the window, or to stop"
 msgstr "নতুন উইন্ডো খোলার জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:543
+#: src/com.aripd.Pano.gschema.xml:555
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid ""
@@ -867,25 +879,25 @@ msgid ""
 "the left or right"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:547
+#: src/com.aripd.Pano.gschema.xml:559
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid "Keyboard shortcut to split the terminal and open a new one on the right"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:551
+#: src/com.aripd.Pano.gschema.xml:563
 #, fuzzy
 #| msgid "Keyboard shortcut to reset the terminal"
 msgid "Keyboard shortcut to split the terminal and open a new one below"
 msgstr "টার্মিন্যাল রি-সেট করার উদ্দেশ্যে কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:555
+#: src/com.aripd.Pano.gschema.xml:567
 #, fuzzy
 #| msgid "Keyboard shortcut to switch to the last tab"
 msgid "Keyboard shortcut to close the active pane of a split tab"
 msgstr "শেষ ট্যাবে স্যুইচ করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:559
+#: src/com.aripd.Pano.gschema.xml:571
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid ""
@@ -893,146 +905,146 @@ msgid ""
 "again"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:563
+#: src/com.aripd.Pano.gschema.xml:575
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to give the panes of a tab the same size"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:567
+#: src/com.aripd.Pano.gschema.xml:579
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to move the active pane to a new tab"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:571
+#: src/com.aripd.Pano.gschema.xml:583
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to move the focus to the pane on the left"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:575
+#: src/com.aripd.Pano.gschema.xml:587
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid "Keyboard shortcut to move the focus to the pane on the right"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:579
+#: src/com.aripd.Pano.gschema.xml:591
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to move the focus to the pane above"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:583
+#: src/com.aripd.Pano.gschema.xml:595
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to move the focus to the pane below"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:587
+#: src/com.aripd.Pano.gschema.xml:599
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to move the divider of the active pane to the left"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:591
+#: src/com.aripd.Pano.gschema.xml:603
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid "Keyboard shortcut to move the divider of the active pane to the right"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:595
+#: src/com.aripd.Pano.gschema.xml:607
 #, fuzzy
 #| msgid "Keyboard shortcut to toggle the visibility of the menubar"
 msgid "Keyboard shortcut to move the divider of the active pane up"
 msgstr "মেনু-বার প্রদর্শন অথবা আড়াল করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:599
+#: src/com.aripd.Pano.gschema.xml:611
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to move the divider of the active pane down"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:603
+#: src/com.aripd.Pano.gschema.xml:615
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the left"
 msgid "Keyboard shortcut to swap the active pane with the pane on the left"
 msgstr "বর্তমান ট্যাব বাম দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:607
+#: src/com.aripd.Pano.gschema.xml:619
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid "Keyboard shortcut to swap the active pane with the pane on the right"
 msgstr "বর্তমান ট্যাব ডান দিকে সরাতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:611
+#: src/com.aripd.Pano.gschema.xml:623
 #, fuzzy
 #| msgid "Keyboard shortcut to switch to the next tab"
 msgid "Keyboard shortcut to swap the active pane with the pane above"
 msgstr "পরবর্তী ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:615
+#: src/com.aripd.Pano.gschema.xml:627
 #, fuzzy
 #| msgid "Keyboard shortcut to switch to the next tab"
 msgid "Keyboard shortcut to swap the active pane with the pane below"
 msgstr "পরবর্তী ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:619
+#: src/com.aripd.Pano.gschema.xml:631
 #, fuzzy
 #| msgid "Keyboard shortcut to show the primary menu"
 msgid "Keyboard shortcut to show the tabs overview"
 msgstr "প্রাথমিক মেনুটি দেখানোর জন্য কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:623 src/com.aripd.Pano.gschema.xml:627
-#: src/com.aripd.Pano.gschema.xml:631 src/com.aripd.Pano.gschema.xml:635
-#: src/com.aripd.Pano.gschema.xml:639 src/com.aripd.Pano.gschema.xml:643
-#: src/com.aripd.Pano.gschema.xml:647 src/com.aripd.Pano.gschema.xml:651
-#: src/com.aripd.Pano.gschema.xml:655 src/com.aripd.Pano.gschema.xml:659
-#: src/com.aripd.Pano.gschema.xml:663 src/com.aripd.Pano.gschema.xml:667
-#: src/com.aripd.Pano.gschema.xml:671 src/com.aripd.Pano.gschema.xml:675
-#: src/com.aripd.Pano.gschema.xml:679 src/com.aripd.Pano.gschema.xml:683
-#: src/com.aripd.Pano.gschema.xml:687 src/com.aripd.Pano.gschema.xml:691
-#: src/com.aripd.Pano.gschema.xml:695 src/com.aripd.Pano.gschema.xml:699
-#: src/com.aripd.Pano.gschema.xml:703 src/com.aripd.Pano.gschema.xml:707
-#: src/com.aripd.Pano.gschema.xml:711 src/com.aripd.Pano.gschema.xml:715
-#: src/com.aripd.Pano.gschema.xml:719 src/com.aripd.Pano.gschema.xml:723
-#: src/com.aripd.Pano.gschema.xml:727 src/com.aripd.Pano.gschema.xml:731
-#: src/com.aripd.Pano.gschema.xml:735 src/com.aripd.Pano.gschema.xml:739
-#: src/com.aripd.Pano.gschema.xml:743 src/com.aripd.Pano.gschema.xml:747
-#: src/com.aripd.Pano.gschema.xml:751 src/com.aripd.Pano.gschema.xml:755
-#: src/com.aripd.Pano.gschema.xml:759
+#: src/com.aripd.Pano.gschema.xml:635 src/com.aripd.Pano.gschema.xml:639
+#: src/com.aripd.Pano.gschema.xml:643 src/com.aripd.Pano.gschema.xml:647
+#: src/com.aripd.Pano.gschema.xml:651 src/com.aripd.Pano.gschema.xml:655
+#: src/com.aripd.Pano.gschema.xml:659 src/com.aripd.Pano.gschema.xml:663
+#: src/com.aripd.Pano.gschema.xml:667 src/com.aripd.Pano.gschema.xml:671
+#: src/com.aripd.Pano.gschema.xml:675 src/com.aripd.Pano.gschema.xml:679
+#: src/com.aripd.Pano.gschema.xml:683 src/com.aripd.Pano.gschema.xml:687
+#: src/com.aripd.Pano.gschema.xml:691 src/com.aripd.Pano.gschema.xml:695
+#: src/com.aripd.Pano.gschema.xml:699 src/com.aripd.Pano.gschema.xml:703
+#: src/com.aripd.Pano.gschema.xml:707 src/com.aripd.Pano.gschema.xml:711
+#: src/com.aripd.Pano.gschema.xml:715 src/com.aripd.Pano.gschema.xml:719
+#: src/com.aripd.Pano.gschema.xml:723 src/com.aripd.Pano.gschema.xml:727
+#: src/com.aripd.Pano.gschema.xml:731 src/com.aripd.Pano.gschema.xml:735
+#: src/com.aripd.Pano.gschema.xml:739 src/com.aripd.Pano.gschema.xml:743
+#: src/com.aripd.Pano.gschema.xml:747 src/com.aripd.Pano.gschema.xml:751
+#: src/com.aripd.Pano.gschema.xml:755 src/com.aripd.Pano.gschema.xml:759
+#: src/com.aripd.Pano.gschema.xml:763 src/com.aripd.Pano.gschema.xml:767
+#: src/com.aripd.Pano.gschema.xml:771
 msgid "Keyboard shortcut to switch to the numbered tab"
 msgstr "সংখ্যা বিশিষ্ট ট্যাবে পরিবর্তনের জন্য ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:763
+#: src/com.aripd.Pano.gschema.xml:775
 msgid "Keyboard shortcut to switch to the last tab"
 msgstr "শেষ ট্যাবে স্যুইচ করতে কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:767
+#: src/com.aripd.Pano.gschema.xml:779
 msgid "Keyboard shortcut to launch help"
 msgstr "সহায়িকা প্রদর্শন করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:771
+#: src/com.aripd.Pano.gschema.xml:783
 msgid "Keyboard shortcut to make font larger"
 msgstr "নতুন প্রোফাইল নির্মাণ করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:775
+#: src/com.aripd.Pano.gschema.xml:787
 msgid "Keyboard shortcut to make font smaller"
 msgstr "ফন্টের মাপ হ্রাস করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:779
+#: src/com.aripd.Pano.gschema.xml:791
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "ফন্টের মাপ বৃদ্ধি করতে ব্যবহৃত কি-বোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:783
+#: src/com.aripd.Pano.gschema.xml:795
 msgid "Keyboard shortcut to show the primary menu"
 msgstr "প্রাথমিক মেনুটি দেখানোর জন্য কীবোর্ড শর্টকাট"
 
-#: src/com.aripd.Pano.gschema.xml:797
+#: src/com.aripd.Pano.gschema.xml:809
 msgid "Whether shortcuts are enabled"
 msgstr "শর্টকাটগুলি সক্রিয় করা আছে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:798
+#: src/com.aripd.Pano.gschema.xml:810
 msgid ""
 "Whether shortcuts are enabled. They may interfere with some applications run "
 "inside the terminal so it’s possible to turn them off."
@@ -1040,11 +1052,11 @@ msgstr ""
 "শর্টকাট সক্ষম আছে কিনা। তারা টার্মিনালের অভ্যন্তরে চালিত কিছু অ্যাপ্লিকেশনগুলিতে "
 "হস্তক্ষেপ করতে পারে যাতে এগুলি বন্ধ করা সম্ভব।"
 
-#: src/com.aripd.Pano.gschema.xml:807
+#: src/com.aripd.Pano.gschema.xml:819
 msgid "Whether the standard GTK shortcut for menubar access is enabled"
 msgstr "মেনু-বার ব্যবহারের উদ্দেশ্যে প্রমিত GTK শর্টকাট সক্রিয় করা রয়েছে কি না"
 
-#: src/com.aripd.Pano.gschema.xml:808
+#: src/com.aripd.Pano.gschema.xml:820
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
@@ -1054,23 +1066,23 @@ msgstr ""
 "accel = \"whatever\") সাহায্যে আপনার পছন্দ অনুসারে এটি পরিবর্তন করা যাবে। এই "
 "বিকল্পের ফলে মেনু-বারের প্রমিত অ্যাকসেলিরেটরগুলি নিষ্ক্রিয় করা হবে।"
 
-#: src/com.aripd.Pano.gschema.xml:818
+#: src/com.aripd.Pano.gschema.xml:830
 msgid "Whether the shell integration is enabled"
 msgstr "শেল একত্রিকরণ সক্রিয় আছে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:819
+#: src/com.aripd.Pano.gschema.xml:831
 msgid ""
 "This is about GNOME Shell: whether terminals can be found in its search. See "
 "inject-shell-integration for the integration of the shells in the terminals."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:824
+#: src/com.aripd.Pano.gschema.xml:836
 #, fuzzy
 #| msgid "Whether the shell integration is enabled"
 msgid "Whether to add shell integration to bash, zsh and fish"
 msgstr "শেল একত্রিকরণ সক্রিয় আছে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:825
+#: src/com.aripd.Pano.gschema.xml:837
 msgid ""
 "If true, the default shell of a profile is started so that it reports its "
 "prompts, commands and working directory, which command notifications, prompt "
@@ -1078,223 +1090,223 @@ msgid ""
 "shells and terminals in containers are left alone."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:830
+#: src/com.aripd.Pano.gschema.xml:842
 msgid "Whether to ask for confirmation before closing a terminal"
 msgstr "একটি টার্মিনাল বন্ধ করার আগে নিশ্চিতকরণ জিঞ্জাসা করা হবে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:835
+#: src/com.aripd.Pano.gschema.xml:847
 msgid "Additional info section items to appear in the context menu"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:840
+#: src/com.aripd.Pano.gschema.xml:852
 msgid "Whether to open new terminals as windows or tabs"
 msgstr "নতুন টার্মিন্যালগুলি উইন্ডো বা ট্যাব হিসাবে খোলা হবে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:845
+#: src/com.aripd.Pano.gschema.xml:857
 msgid "When to show the tabs bar"
 msgstr "ট্যাব বারটি কখন প্রদর্শিত হবে"
 
-#: src/com.aripd.Pano.gschema.xml:851
+#: src/com.aripd.Pano.gschema.xml:863
 msgid "Width of the tab list when the tabs are on the left or right"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:855
+#: src/com.aripd.Pano.gschema.xml:867
 #, fuzzy
 #| msgid "When to show the tabs bar"
 msgid "The position of the tabs bar"
 msgstr "ট্যাব বারটি কখন প্রদর্শিত হবে"
 
-#: src/com.aripd.Pano.gschema.xml:860
+#: src/com.aripd.Pano.gschema.xml:872
 msgid "Which theme variant to use"
 msgstr "কোন থিমটি ব্যবহার করতে হবে"
 
-#: src/com.aripd.Pano.gschema.xml:865
+#: src/com.aripd.Pano.gschema.xml:877
 msgid ""
 "Whether new tabs should open next to the current one or at the last position"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:870
+#: src/com.aripd.Pano.gschema.xml:882
 msgid "What a middle click on a tab does"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:871
+#: src/com.aripd.Pano.gschema.xml:883
 msgid ""
 "“close” closes the tab; “paste” switches to the tab and pastes the primary "
 "selection into it."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:876
+#: src/com.aripd.Pano.gschema.xml:888
 msgid "Whether windows should have rounded corners"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:881
+#: src/com.aripd.Pano.gschema.xml:893
 msgid "The space between the terminal text and the edges of the terminal"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:882
+#: src/com.aripd.Pano.gschema.xml:894
 msgid ""
 "“none” removes it, also next to rounded window corners; “small” keeps the "
 "text clear of rounded corners; “large” leaves more room."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:889
+#: src/com.aripd.Pano.gschema.xml:901
 msgid ""
 "Whether the user has been asked to import the settings of GNOME Terminal"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:894
+#: src/com.aripd.Pano.gschema.xml:906
 #, fuzzy
 #| msgid "Whether to use the colors from the theme for the terminal widget"
 msgid ""
 "Whether to give the header bar and the tabs the colors of the active terminal"
 msgstr "টার্মিন্যাল উইজেটের ক্ষেত্রে সক্রিয় থিমের রং প্রয়োগ করা হবে কি না"
 
-#: src/com.aripd.Pano.gschema.xml:895
+#: src/com.aripd.Pano.gschema.xml:907
 msgid ""
 "Only when the terminal uses a color scheme or colors of its own, not the "
 "system style; the colors for root and remote sessions take precedence."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:900
+#: src/com.aripd.Pano.gschema.xml:912
 msgid "Whether to dim the panes of a split tab other than the active one"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:905
+#: src/com.aripd.Pano.gschema.xml:917
 msgid "Whether to show a title bar above each pane of a split tab"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:910
+#: src/com.aripd.Pano.gschema.xml:922
 msgid "Regular expressions for more text that quick select offers"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:911
+#: src/com.aripd.Pano.gschema.xml:923
 msgid ""
 "Quick select labels URLs, paths, hashes, addresses and numbers; matches of "
 "these Perl-compatible regular expressions are offered too, before those."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:916
+#: src/com.aripd.Pano.gschema.xml:928
 #, fuzzy
 #| msgid "Whether to ring the terminal bell"
 msgid "Whether to ignore the titles that programs set"
 msgstr "টার্মিনাল বেল বাজানো হবে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:917
+#: src/com.aripd.Pano.gschema.xml:929
 msgid ""
 "If true, terminals show the title set with “Set Title…” or the --title "
 "option, or else their working directory, instead of the title that programs "
 "set with escape sequences."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:922
+#: src/com.aripd.Pano.gschema.xml:934
 msgid "Whether to show a short notice after copying to the clipboard"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:927
+#: src/com.aripd.Pano.gschema.xml:939
 msgid ""
 "Whether to notify when a long-running command finishes in the background"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:928
+#: src/com.aripd.Pano.gschema.xml:940
 msgid ""
 "Needs a shell that reports its commands, for example bash or zsh with the "
 "VTE shell integration (vte.sh)."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:934
+#: src/com.aripd.Pano.gschema.xml:946
 msgid "How long a command must run, in seconds, before its end is notified"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:940
+#: src/com.aripd.Pano.gschema.xml:952
 msgid ""
 "How long, in seconds, a terminal monitored for silence must be quiet before "
 "that is notified"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:946
+#: src/com.aripd.Pano.gschema.xml:958
 msgid "Width of the quick terminal, in percent of the screen"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:952
+#: src/com.aripd.Pano.gschema.xml:964
 msgid "Height of the quick terminal, in percent of the screen"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:957
+#: src/com.aripd.Pano.gschema.xml:969
 msgid ""
 "Whether the quick terminal hides when another application gets the focus"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:962
+#: src/com.aripd.Pano.gschema.xml:974
 msgid "Whether the quick terminal slides in from the top edge of the screen"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:963
+#: src/com.aripd.Pano.gschema.xml:975
 msgid "Only on X11, where applications can place their windows."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:968
+#: src/com.aripd.Pano.gschema.xml:980
 #, fuzzy
 #| msgid "Whether to use the colors from the theme for the terminal widget"
 msgid ""
 "Whether to ask the desktop for a system-wide shortcut for the quick terminal"
 msgstr "টার্মিন্যাল উইজেটের ক্ষেত্রে সক্রিয় থিমের রং প্রয়োগ করা হবে কি না"
 
-#: src/com.aripd.Pano.gschema.xml:969
+#: src/com.aripd.Pano.gschema.xml:981
 msgid ""
 "Uses the GlobalShortcuts portal (GNOME 48 or newer, KDE Plasma). The desktop "
 "sends the shortcut only to a running application, so Pano Terminal then "
 "keeps running in the background and starts when you log in."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:974
+#: src/com.aripd.Pano.gschema.xml:986
 #, fuzzy
 #| msgid "Whether to open new terminals as windows or tabs"
 msgid "Whether to show when a terminal runs as root or over SSH"
 msgstr "নতুন টার্মিন্যালগুলি উইন্ডো বা ট্যাব হিসাবে খোলা হবে কিনা"
 
-#: src/com.aripd.Pano.gschema.xml:975
+#: src/com.aripd.Pano.gschema.xml:987
 msgid ""
 "Colors the header bar and marks the tab while the foreground program of the "
 "terminal runs as root (for example sudo or su) or connects to another "
 "computer (ssh, mosh)."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:980
+#: src/com.aripd.Pano.gschema.xml:992
 msgid ""
 "Whether new tabs and panes start in the container of the terminal they are "
 "opened from"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:981
+#: src/com.aripd.Pano.gschema.xml:993
 msgid ""
 "Works for Toolbox and Distrobox containers. The shell inside the container "
 "has to report it (Toolbox does), or the terminal has to be started in it "
 "from Pano Terminal."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:986
+#: src/com.aripd.Pano.gschema.xml:998
 msgid ""
 "Whether to reopen the windows, tabs and panes of the last session on startup"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:987
+#: src/com.aripd.Pano.gschema.xml:999
 msgid ""
 "Applies when Pano Terminal is started without arguments and no window is "
 "open. Each terminal gets a new shell in its previous working directory; "
 "running programs are not restored."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:992
+#: src/com.aripd.Pano.gschema.xml:1004
 msgid "Whether new windows get the size of the last used terminal"
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:993
+#: src/com.aripd.Pano.gschema.xml:1005
 msgid ""
 "When enabled, new windows use the number of columns and rows of the terminal "
 "used last, instead of the initial size of the profile."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:998
+#: src/com.aripd.Pano.gschema.xml:1010
 msgid "Always check whether Pano Terminal is the default terminal"
 msgstr ""
 
@@ -1972,7 +1984,7 @@ msgid "_Inspector"
 msgstr "ইন্সপেক্টর (_I)"
 
 # auto translated by TM merge from project: gtk3, version: 3.8.2, DocId: gtk30
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3576
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3584
 #: src/terminal-window.cc:3164
 msgid "_Preferences"
 msgstr "পছন্দ (_P)"
@@ -1985,35 +1997,35 @@ msgstr "সাহায্য (_H)"
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
-#: src/terminal-nautilus.cc:512
+#: src/terminal-nautilus.cc:513
 #, fuzzy
 msgid "Open in Pano Terminal (_Remote)"
 msgstr "রিমোট টার্মিনালে খুলুন (_R)"
 
-#: src/terminal-nautilus.cc:514
+#: src/terminal-nautilus.cc:515
 #, fuzzy
 msgid "Open in Pano Terminal (_Local)"
 msgstr "স্থানীয় টার্মিনালে খুলুন (_L)"
 
-#: src/terminal-nautilus.cc:518 src/terminal-nautilus.cc:529
+#: src/terminal-nautilus.cc:519 src/terminal-nautilus.cc:530
 msgid "Open the currently selected folder in a terminal"
 msgstr "একটি টার্মিনালে বর্তমানে নির্বাচিত ফোল্ডারটি খুলুন"
 
-#: src/terminal-nautilus.cc:520 src/terminal-nautilus.cc:531
+#: src/terminal-nautilus.cc:521 src/terminal-nautilus.cc:532
 msgid "Open the currently open folder in a terminal"
 msgstr "একটি টার্মিনালে বর্তমানে নির্বাচিত ফোল্ডার খুলুন"
 
-#: src/terminal-nautilus.cc:526
+#: src/terminal-nautilus.cc:527
 #, fuzzy
 msgid "Open in Pano _Terminal"
 msgstr "টার্মিনালে খুলুন (_e)"
 
-#: src/terminal-nautilus.cc:536
+#: src/terminal-nautilus.cc:537
 #, fuzzy
 msgid "Open Pano _Terminal"
 msgstr "টার্মিনাল খুলুন (_e)"
 
-#: src/terminal-nautilus.cc:537
+#: src/terminal-nautilus.cc:538
 msgid "Open a terminal"
 msgstr "একটি টার্মিনাল খুলুন"
 
@@ -2093,27 +2105,27 @@ msgstr "\"%s\" এ যুক্তি একটি বৈধ কমান্ড 
 msgid "Two roles given for one window"
 msgstr "একটি উইন্ডোর জন্য দুটি ভূমিকা প্রদান করা হয়েছে"
 
-#: src/terminal-options.cc:819
+#: src/terminal-options.cc:820
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr "FD %d দুইবার পাস করা সম্ভব নয়"
 
-#: src/terminal-options.cc:881
+#: src/terminal-options.cc:882
 #, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "\"%s\" কোনও বৈধ জুম ফ্যাক্টর নয়"
 
-#: src/terminal-options.cc:888
+#: src/terminal-options.cc:889
 #, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "জুম ফ্যাক্টর \"%g\" অত্যান্ত ক্ষুদ্র, %g ব্যবহার করা হবে\n"
 
-#: src/terminal-options.cc:896
+#: src/terminal-options.cc:897
 #, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "জুম ফ্যাক্টর \"%g\" অত্যাধিক বড়, %g ব্যবহার করা হবে\n"
 
-#: src/terminal-options.cc:934
+#: src/terminal-options.cc:935
 #, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
@@ -2121,24 +2133,24 @@ msgid ""
 msgstr ""
 "\"%s\" বিকল্পের জন্য কমান্ডটি বাকী কমান্ড লাইনে চালানোর জন্য নির্দিষ্ট করা দরকার"
 
-#: src/terminal-options.cc:1074
+#: src/terminal-options.cc:1075
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1102
+#: src/terminal-options.cc:1103
 msgid "Can only use --wait once"
 msgstr "শুধুমাত্র একবার --wait ব্যবহার করতে পারে"
 
-#: src/terminal-options.cc:1138
+#: src/terminal-options.cc:1139
 msgid "Not a valid terminal config file."
 msgstr "বৈধ টার্মিন্যাল কনফিগারেশন ফাইল নয়।"
 
-#: src/terminal-options.cc:1151
+#: src/terminal-options.cc:1152
 msgid "Incompatible terminal config file version."
 msgstr "টার্মিন্যাল কনফিগারেশন ফাইলের বিসংগত সংস্করণ।"
 
-#: src/terminal-options.cc:1305
+#: src/terminal-options.cc:1306
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2146,134 +2158,134 @@ msgstr ""
 "অ্যাকটিভেশন nameserver-র সাথে নিবন্ধিত করা হবে না, সক্রিয় টার্মিন্যাল পুনরায় "
 "ব্যবহার করা হবে না"
 
-#: src/terminal-options.cc:1314
+#: src/terminal-options.cc:1315
 msgid "Load a terminal configuration file"
 msgstr "একটি টার্মিন্যাল কনফিগারেশন ফাইল লোড করুন"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1316
 msgid "FILE"
 msgstr "FILE"
 
-#: src/terminal-options.cc:1331
+#: src/terminal-options.cc:1332
 msgid "Do not pass the environment"
 msgstr "এনভিরন্মেন্ত পাস করবেন না"
 
-#: src/terminal-options.cc:1340
+#: src/terminal-options.cc:1341
 msgid "Show preferences window"
 msgstr "পছন্দ উইন্ডো প্রদর্শন করুন"
 
-#: src/terminal-options.cc:1358
+#: src/terminal-options.cc:1359
 msgid "Print environment variables to interact with the terminal"
 msgstr "টার্মিনালের সাথে ইন্টারেক্ট করার জন্য এনভিরন্মেন্তের পরিবর্তনগুলি মুদ্রণ করুন"
 
-#: src/terminal-options.cc:1376
+#: src/terminal-options.cc:1377
 msgid "Increase diagnostic verbosity"
 msgstr "ডায়াগনস্টিক ভার্বোসিটি বৃদ্ধি করুন"
 
-#: src/terminal-options.cc:1385
+#: src/terminal-options.cc:1386
 msgid "Suppress output"
 msgstr "সাপ্রেস আউটপুট"
 
-#: src/terminal-options.cc:1398
+#: src/terminal-options.cc:1399
 msgid "Open a new window containing a tab with the default profile"
 msgstr "ডিফল্ট প্রোফাইল প্রয়োগ করে নতুন উইন্ডোর মধ্যে একটি ট্যাব খোলা হবে।"
 
-#: src/terminal-options.cc:1407
+#: src/terminal-options.cc:1408
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "ডিফল্ট প্রোফাইল প্রয়োগ করে সর্বশেষ উইন্ডোর মধ্যে একটি ট্যাব খোলা হবে।"
 
-#: src/terminal-options.cc:1438
+#: src/terminal-options.cc:1439
 msgid "Maximize the window"
 msgstr "উইন্ডো বড় করুন"
 
-#: src/terminal-options.cc:1447
+#: src/terminal-options.cc:1448
 msgid "Full-screen the window"
 msgstr "সম্পূর্ণ পর্দায় উইন্ডো প্রদর্শন"
 
-#: src/terminal-options.cc:1456
+#: src/terminal-options.cc:1457
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "উইন্ডোর মাপ সেট করুন; উদাহরণস্বরূপ: 80x24, বা 80x24+200+200 (COLSxROWS+X+Y)"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1458
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: src/terminal-options.cc:1465
+#: src/terminal-options.cc:1466
 msgid "Set the window role"
 msgstr "উইন্ডোর ভূমিকা নির্ধারণ করুন"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1467
 msgid "ROLE"
 msgstr "ROLE"
 
-#: src/terminal-options.cc:1474
+#: src/terminal-options.cc:1475
 msgid "Set the last specified tab as the active one in its window"
 msgstr "বর্তমান উইন্ডোর সর্বশেষ ট্যাবটি সক্রিয় ট্যাব রূপে নির্ধারণ করা হবে"
 
-#: src/terminal-options.cc:1487
+#: src/terminal-options.cc:1488
 msgid "Execute the argument to this option inside the terminal"
 msgstr "চিহ্নিত বিকল্পের জন্য নির্ধারিত আর্গুমেন্ট টার্মিন্যালের মধ্যে নির্বাহিত হবে"
 
-#: src/terminal-options.cc:1496
+#: src/terminal-options.cc:1497
 msgid "Use the given profile instead of the default profile"
 msgstr "ডিফল্ট প্রোফাইলের পরিবর্তে, উল্লিখিত প্রোফাইল প্রয়োগ করা হবে"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1498
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: src/terminal-options.cc:1505
+#: src/terminal-options.cc:1506
 msgid "Set the initial terminal title"
 msgstr "প্রাথমিক টার্মিনাল শিরোনাম সেট করুন"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1507
 msgid "TITLE"
 msgstr "TITLE"
 
-#: src/terminal-options.cc:1514
+#: src/terminal-options.cc:1515
 msgid "Set the working directory"
 msgstr "সক্রিয় ডিরেক্টরি নির্ধারণ করুন"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1516
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: src/terminal-options.cc:1523
+#: src/terminal-options.cc:1524
 msgid "Wait until the child exits"
 msgstr "চাইল্ড প্রস্থান করা পর্যন্ত অপেক্ষা করুন"
 
-#: src/terminal-options.cc:1532
+#: src/terminal-options.cc:1533
 msgid "Forward file descriptor"
 msgstr "ফাইল ডেসক্রিপটর ফরোয়ার্ড করুন"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1534
+#: src/terminal-options.cc:1535
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1542
+#: src/terminal-options.cc:1543
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "টার্মিন্যালের প্রদর্শনের মাত্রা নির্ধারণ করুন (1.0 = স্বাভাবিক মাপ)"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1544
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.cc:1639
+#: src/terminal-options.cc:1640
 msgid "COMMAND"
 msgstr "COMMAND"
 
-#: src/terminal-options.cc:1645
+#: src/terminal-options.cc:1646
 msgid "Pano Terminal Emulator"
 msgstr "Pano Terminal এমুলেটর"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1647
 msgid "Show Pano Terminal options"
 msgstr "Pano Terminal সংক্রান্ত বিবিধ বিকল্প প্রদর্শন করা হবে"
 
-#: src/terminal-options.cc:1656
+#: src/terminal-options.cc:1657
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2281,11 +2293,11 @@ msgstr ""
 "নতুন উইন্ডো অথবা টার্মিন্যাল ট্যাব প্রদর্শনের জন্য প্রযোজ্য বিকল্প; এর মধ্যে একাধিক "
 "নির্ধারণ করা যাবে:"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1658
 msgid "Show terminal options"
 msgstr "টার্মিন্যাল সংক্রান্ত বিবিধ বিকল্প প্রদর্শন করা হবে"
 
-#: src/terminal-options.cc:1665
+#: src/terminal-options.cc:1666
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2293,11 +2305,11 @@ msgstr ""
 "উইন্ডো সংক্রান্ত বিকল্প; প্রথম --window অথবা --tab আর্গুমেন্টের পূর্বে ব্যবহার করা হলে, "
 "সকল উইন্ডোর জন্য ডিফল্ট মান নির্ধারণ করা হয়:"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1667
 msgid "Show per-window options"
 msgstr "প্রতি উইন্ডোর জন্য বিকল্প প্রদর্শন করা হবে"
 
-#: src/terminal-options.cc:1674
+#: src/terminal-options.cc:1675
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2305,7 +2317,7 @@ msgstr ""
 "টার্মিন্যাল সংক্রান্ত বিকল্প; প্রথম --window অথবা --tab আর্গুমেন্টের পূর্বে ব্যবহার করা "
 "হলে, সকল উইন্ডোর জন্য ডিফল্ট মান নির্ধারণ করা হয়:"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1676
 msgid "Show per-terminal options"
 msgstr "প্রতি টার্মিন্যালের জন্য বিকল্প প্রদর্শন করা হবে"
 
@@ -2770,174 +2782,174 @@ msgstr ""
 msgid "Set as Default Terminal"
 msgstr "ডিফল্ট হিসাবে সেট করুন"
 
-#: src/terminal-profile-editor.cc:134
+#: src/terminal-profile-editor.cc:135
 msgid "Black on light yellow"
 msgstr "হাল্কা হলুদের উপরে কালো"
 
-#: src/terminal-profile-editor.cc:138
+#: src/terminal-profile-editor.cc:139
 msgid "Black on white"
 msgstr "সাদার উপরে কালো"
 
-#: src/terminal-profile-editor.cc:142
+#: src/terminal-profile-editor.cc:143
 msgid "Gray on black"
 msgstr "কালোর উপরে ছাইরঙা"
 
-#: src/terminal-profile-editor.cc:146
+#: src/terminal-profile-editor.cc:147
 msgid "Green on black"
 msgstr "কালোর উপরে সবুজ"
 
-#: src/terminal-profile-editor.cc:150
+#: src/terminal-profile-editor.cc:151
 msgid "White on black"
 msgstr "কালোর উপরে সাদা"
 
 #. Translators: "GNOME" is the name of a colour scheme, "light" can be translated
-#: src/terminal-profile-editor.cc:155
+#: src/terminal-profile-editor.cc:156
 msgid "GNOME light"
 msgstr "GNOME আলো"
 
 #. Translators: "GNOME" is the name of a colour scheme, "dark" can be translated
-#: src/terminal-profile-editor.cc:160
+#: src/terminal-profile-editor.cc:161
 msgid "GNOME dark"
 msgstr "GNOME অন্ধকার"
 
 #. Translators: "Tango" is the name of a colour scheme, "light" can be translated
-#: src/terminal-profile-editor.cc:165
+#: src/terminal-profile-editor.cc:166
 msgid "Tango light"
 msgstr "ট্যাংগো উজ্জ্বল"
 
 #. Translators: "Tango" is the name of a colour scheme, "dark" can be translated
-#: src/terminal-profile-editor.cc:170
+#: src/terminal-profile-editor.cc:171
 msgid "Tango dark"
 msgstr "ট্যাংগো অন্ধকার"
 
 #. Translators: "Solarized" is the name of a colour scheme, "light" can be translated
-#: src/terminal-profile-editor.cc:175
+#: src/terminal-profile-editor.cc:176
 msgid "Solarized light"
 msgstr "সোলারাইজড লাইট"
 
 #. Translators: "Solarized" is the name of a colour scheme, "dark" can be translated
-#: src/terminal-profile-editor.cc:180
+#: src/terminal-profile-editor.cc:181
 msgid "Solarized dark"
 msgstr "সোলারাইজড অন্ধকার"
 
-#: src/terminal-profile-editor.cc:336 src/terminal-profile-editor.cc:349
-#: src/terminal-profile-editor.cc:856
+#: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
+#: src/terminal-profile-editor.cc:918
 msgid "Custom"
 msgstr "স্বনির্বাচিত"
 
-#: src/terminal-profile-editor.cc:373 src/terminal-profile-editor.cc:374
-#: src/terminal-profile-editor.cc:378
+#: src/terminal-profile-editor.cc:374 src/terminal-profile-editor.cc:375
+#: src/terminal-profile-editor.cc:379
 msgid "Chinese Traditional"
 msgstr "পারম্পরিক চীনা"
 
-#: src/terminal-profile-editor.cc:375
+#: src/terminal-profile-editor.cc:376
 msgid "Cyrillic/Russian"
 msgstr "সিরিলিক/রুশি"
 
-#: src/terminal-profile-editor.cc:376 src/terminal-profile-editor.cc:415
+#: src/terminal-profile-editor.cc:377 src/terminal-profile-editor.cc:416
 msgid "Japanese"
 msgstr "জাপানি"
 
-#: src/terminal-profile-editor.cc:377 src/terminal-profile-editor.cc:417
+#: src/terminal-profile-editor.cc:378 src/terminal-profile-editor.cc:418
 msgid "Korean"
 msgstr "কোরিয়"
 
-#: src/terminal-profile-editor.cc:379 src/terminal-profile-editor.cc:380
-#: src/terminal-profile-editor.cc:381
+#: src/terminal-profile-editor.cc:380 src/terminal-profile-editor.cc:381
+#: src/terminal-profile-editor.cc:382
 msgid "Chinese Simplified"
 msgstr "সরলীকৃত চীনা"
 
-#: src/terminal-profile-editor.cc:382 src/terminal-profile-editor.cc:388
-#: src/terminal-profile-editor.cc:392 src/terminal-profile-editor.cc:411
-#: src/terminal-profile-editor.cc:421
+#: src/terminal-profile-editor.cc:383 src/terminal-profile-editor.cc:389
+#: src/terminal-profile-editor.cc:393 src/terminal-profile-editor.cc:412
+#: src/terminal-profile-editor.cc:422
 msgid "Western"
 msgstr "পাশ্চাত্য"
 
-#: src/terminal-profile-editor.cc:383 src/terminal-profile-editor.cc:394
-#: src/terminal-profile-editor.cc:407 src/terminal-profile-editor.cc:419
+#: src/terminal-profile-editor.cc:384 src/terminal-profile-editor.cc:395
+#: src/terminal-profile-editor.cc:408 src/terminal-profile-editor.cc:420
 msgid "Central European"
 msgstr "মধ্য ইউরোপীয়"
 
-#: src/terminal-profile-editor.cc:384 src/terminal-profile-editor.cc:397
-#: src/terminal-profile-editor.cc:403 src/terminal-profile-editor.cc:405
-#: src/terminal-profile-editor.cc:420
+#: src/terminal-profile-editor.cc:385 src/terminal-profile-editor.cc:398
+#: src/terminal-profile-editor.cc:404 src/terminal-profile-editor.cc:406
+#: src/terminal-profile-editor.cc:421
 msgid "Cyrillic"
 msgstr "সিরিলিক"
 
-#: src/terminal-profile-editor.cc:385 src/terminal-profile-editor.cc:402
-#: src/terminal-profile-editor.cc:413 src/terminal-profile-editor.cc:423
+#: src/terminal-profile-editor.cc:386 src/terminal-profile-editor.cc:403
+#: src/terminal-profile-editor.cc:414 src/terminal-profile-editor.cc:424
 msgid "Turkish"
 msgstr "তুর্কি"
 
-#: src/terminal-profile-editor.cc:386 src/terminal-profile-editor.cc:401
-#: src/terminal-profile-editor.cc:410 src/terminal-profile-editor.cc:424
+#: src/terminal-profile-editor.cc:387 src/terminal-profile-editor.cc:402
+#: src/terminal-profile-editor.cc:411 src/terminal-profile-editor.cc:425
 msgid "Hebrew"
 msgstr "হিব্রু"
 
-#: src/terminal-profile-editor.cc:387 src/terminal-profile-editor.cc:398
-#: src/terminal-profile-editor.cc:406 src/terminal-profile-editor.cc:425
+#: src/terminal-profile-editor.cc:388 src/terminal-profile-editor.cc:399
+#: src/terminal-profile-editor.cc:407 src/terminal-profile-editor.cc:426
 msgid "Arabic"
 msgstr "আরবী"
 
-#: src/terminal-profile-editor.cc:389
+#: src/terminal-profile-editor.cc:390
 msgid "Nordic"
 msgstr "নর্ডিক"
 
-#: src/terminal-profile-editor.cc:390 src/terminal-profile-editor.cc:396
-#: src/terminal-profile-editor.cc:426
+#: src/terminal-profile-editor.cc:391 src/terminal-profile-editor.cc:397
+#: src/terminal-profile-editor.cc:427
 msgid "Baltic"
 msgstr "বল্টিক"
 
-#: src/terminal-profile-editor.cc:391
+#: src/terminal-profile-editor.cc:392
 msgid "Celtic"
 msgstr "সেল্টিক"
 
-#: src/terminal-profile-editor.cc:393 src/terminal-profile-editor.cc:412
+#: src/terminal-profile-editor.cc:394 src/terminal-profile-editor.cc:413
 msgid "Romanian"
 msgstr "রোমেনিয়ান"
 
-#: src/terminal-profile-editor.cc:395
+#: src/terminal-profile-editor.cc:396
 msgid "South European"
 msgstr "দক্ষিণ ইউরোপীয়"
 
-#: src/terminal-profile-editor.cc:399 src/terminal-profile-editor.cc:409
-#: src/terminal-profile-editor.cc:422
+#: src/terminal-profile-editor.cc:400 src/terminal-profile-editor.cc:410
+#: src/terminal-profile-editor.cc:423
 msgid "Greek"
 msgstr "গ্রিক"
 
-#: src/terminal-profile-editor.cc:400
+#: src/terminal-profile-editor.cc:401
 msgid "Hebrew Visual"
 msgstr "হিব্রু ভিসুয়াল"
 
-#: src/terminal-profile-editor.cc:404 src/terminal-profile-editor.cc:414
+#: src/terminal-profile-editor.cc:405 src/terminal-profile-editor.cc:415
 msgid "Cyrillic/Ukrainian"
 msgstr "সিরিলিক/ইউক্রেনিয়ান"
 
-#: src/terminal-profile-editor.cc:408
+#: src/terminal-profile-editor.cc:409
 msgid "Croatian"
 msgstr "ক্রোয়েশিয়ান"
 
-#: src/terminal-profile-editor.cc:416
+#: src/terminal-profile-editor.cc:417
 msgid "Thai"
 msgstr "থাই"
 
-#: src/terminal-profile-editor.cc:418 src/terminal-profile-editor.cc:434
+#: src/terminal-profile-editor.cc:419 src/terminal-profile-editor.cc:435
 msgid "Unicode"
 msgstr "Unicode"
 
-#: src/terminal-profile-editor.cc:427
+#: src/terminal-profile-editor.cc:428
 msgid "Vietnamese"
 msgstr "ভিয়েতনামিস"
 
-#: src/terminal-profile-editor.cc:435
+#: src/terminal-profile-editor.cc:436
 msgid "Legacy CJK Encodings"
 msgstr "লিগ্যাসি সিজেকে এনকোডিংগুলি"
 
-#: src/terminal-profile-editor.cc:436
+#: src/terminal-profile-editor.cc:437
 msgid "Obsolete Encodings"
 msgstr "অপ্রচলিত এনকোডিংগুলি"
 
-#: src/terminal-profile-editor.cc:747
+#: src/terminal-profile-editor.cc:809
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"
@@ -3447,35 +3459,35 @@ msgstr "মুছুন"
 msgid "_Set as default"
 msgstr "ডিফল্ট হিসাবে সেট করুন"
 
-#: src/terminal-screen.cc:1771
+#: src/terminal-screen.cc:1773
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3357
+#: src/terminal-screen.cc:3365
 msgid "No command supplied nor shell requested"
 msgstr "কোনো কম্যান্ড দেওয়া হয়নি বা সেলের অনুরোধ করা হয়নি"
 
-#: src/terminal-screen.cc:3577 src/terminal-screen.cc:3969
+#: src/terminal-screen.cc:3585 src/terminal-screen.cc:4003
 msgid "_Relaunch"
 msgstr "পুনরায় আরম্ভ (_R)"
 
-#: src/terminal-screen.cc:3580
+#: src/terminal-screen.cc:3588
 msgid "There was an error creating the child process for this terminal"
 msgstr "বর্তমান টার্মিন্যালের চাইল্ড প্রসেস নির্মাণ করতে সমস্যা"
 
-#: src/terminal-screen.cc:3973
+#: src/terminal-screen.cc:4007
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d অবস্থা চিহ্নিত করে চাইল্ড প্রসেস স্বাভাবিকভাবে সমাপ্ত হয়েছে।"
 
-#: src/terminal-screen.cc:3976
+#: src/terminal-screen.cc:4010
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "চাইন্ড প্রক্রিয়া সিগন্যাল %d পরিত্যাগ করেছে।"
 
-#: src/terminal-screen.cc:3979
+#: src/terminal-screen.cc:4013
 msgid "The child process was aborted."
 msgstr "চাইন্ড প্রক্রিয়া পরিত্যাগ করা হয়েছে।"
 
@@ -3852,7 +3864,7 @@ msgstr ""
 "এই টার্মিন্যালের মধ্যে একটি প্রসেস বর্তমানে চলছে। টার্মিন্যাল বন্ধ করা হলে এটি বন্ধ "
 "(kill) হয়ে যাবে।"
 
-#: src/terminal.cc:672
+#: src/terminal.cc:674
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"

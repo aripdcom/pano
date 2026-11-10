@@ -361,6 +361,18 @@
                 '#ffffff']</default>
       <summary>Palette for terminal applications</summary>
     </key>
+    <key name="custom-palette" type="as">
+      <default>[]</default>
+      <summary>The palette of the user, kept while a built-in palette is chosen</summary>
+    </key>
+    <key name="custom-foreground-color" type="s">
+      <default>''</default>
+      <summary>The text color of the user, kept while built-in colors are chosen</summary>
+    </key>
+    <key name="custom-background-color" type="s">
+      <default>''</default>
+      <summary>The background color of the user, kept while built-in colors are chosen</summary>
+    </key>
     <key name="font" type="s">
       <default>'Monospace 12'</default>
       <summary>A Pango font name and size</summary>
