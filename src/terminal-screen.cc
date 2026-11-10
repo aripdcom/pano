@@ -133,6 +133,7 @@ struct _TerminalScreenPrivate
   gboolean link_cursor; /* whether links show the pointer cursor, see terminal_screen_modifiers_cb() */
   double pointer_x, pointer_y; /* -1 while the pointer is elsewhere */
   char *saved_word_chars; /* while a double click selects a link, see below */
+  gboolean swallow_release; /* of a Ctrl+click that opened a link */
   char *uuid;
   gboolean registered; /* D-Bus interface is registered */
 
@@ -310,6 +311,9 @@ static void terminal_screen_capture_click_pressed_cb (TerminalScreen  *screen,
                                                       double           x,
                                                       double           y,
                                                       GtkGestureClick *click);
+static gboolean terminal_screen_link_click_event_cb (GtkEventControllerLegacy *controller,
+                                                     GdkEvent                 *event,
+                                                     TerminalScreen           *screen);
 static void terminal_screen_long_pressed_cb (GtkGestureLongPress *gesture,
                                              double               x,
                                              double               y,
@@ -2092,6 +2096,11 @@ terminal_screen_init (TerminalScreen *screen)
   g_signal_connect (key_controller, "key-released",
                     G_CALLBACK (terminal_screen_key_released_cb), screen);
   priv->pointer_x = priv->pointer_y = -1;
+  auto const link_click = gtk_event_controller_legacy_new ();
+  gtk_event_controller_set_propagation_phase (link_click, GTK_PHASE_CAPTURE);
+  g_signal_connect (link_click, "event",
+                    G_CALLBACK (terminal_screen_link_click_event_cb), screen);
+  gtk_widget_add_controller (GTK_WIDGET (screen), link_click);
   auto const long_press = gtk_gesture_long_press_new ();
   gtk_gesture_single_set_touch_only (GTK_GESTURE_SINGLE (long_press), TRUE);
   g_signal_connect (long_press, "pressed",
@@ -3992,6 +4001,51 @@ terminal_screen_bubble_click_pressed_cb (TerminalScreen  *screen,
   }
 
   gtk_gesture_set_state (GTK_GESTURE (click), GTK_EVENT_SEQUENCE_DENIED);
+}
+
+/* Ctrl+click opens a link (see terminal_screen_capture_click_pressed_cb),
+ * and must not also reach a program that tracks the mouse, which VTE's own
+ * event handling would send it to. Stop such clicks before VTE sees them. */
+static gboolean
+terminal_screen_link_click_event_cb (GtkEventControllerLegacy *controller,
+                                     GdkEvent                 *event,
+                                     TerminalScreen           *screen)
+{
+  auto const priv = screen->priv;
+  auto const type = gdk_event_get_event_type (event);
+
+  if (type == GDK_BUTTON_RELEASE && priv->swallow_release) {
+    priv->swallow_release = FALSE;
+    return TRUE;
+  }
+
+  if (type != GDK_BUTTON_PRESS)
+    return FALSE;
+
+  auto const button = gdk_button_event_get_button (event);
+  auto const state = gdk_event_get_modifier_state (event) & gtk_accelerator_get_default_mod_mask ();
+  if ((button != 1 && button != 2) || !(state & GDK_CONTROL_MASK))
+    return FALSE;
+
+  /* Event coordinates are relative to the surface */
+  double x, y;
+  if (!gdk_event_get_position (event, &x, &y))
+    return FALSE;
+  auto const native = gtk_widget_get_native (GTK_WIDGET (screen));
+  double sx, sy;
+  gtk_native_get_surface_transform (native, &sx, &sy);
+  graphene_point_t point = GRAPHENE_POINT_INIT (float(x - sx), float(y - sy));
+  if (!gtk_widget_compute_point (GTK_WIDGET (native), GTK_WIDGET (screen), &point, &point))
+    return FALSE;
+
+  gs_free char *hyperlink = vte_terminal_check_hyperlink_at (VTE_TERMINAL (screen), point.x, point.y);
+  int flavor;
+  gs_free char *url = hyperlink ? nullptr : terminal_screen_check_match (screen, point.x, point.y, &flavor);
+  if (!hyperlink && !url)
+    return FALSE;
+
+  priv->swallow_release = TRUE;
+  return TRUE;
 }
 
 /* A long press on a touchscreen opens the context menu, as a right click
