@@ -218,7 +218,10 @@ cd pano
 meson setup _build --prefix=$HOME/.local -Dsearch_provider=false -Dnautilus_extension=false
 ninja -C _build
 ninja -C _build install
+systemctl --user daemon-reload
 ```
+The last command makes systemd load the user unit of the Pano server, which
+the launcher in your applications menu starts through D-Bus.
 
 Pano uses a D-Bus activated server, so the client cannot simply be run from
 the build directory. Start the server with a test application ID, then open a
