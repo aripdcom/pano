@@ -107,6 +107,10 @@
 #define KEY_RESIZE_PANE_RIGHT   "resize-pane-right"
 #define KEY_RESIZE_PANE_UP      "resize-pane-up"
 #define KEY_RESIZE_PANE_DOWN    "resize-pane-down"
+#define KEY_SWAP_PANE_LEFT      "swap-pane-left"
+#define KEY_SWAP_PANE_RIGHT     "swap-pane-right"
+#define KEY_SWAP_PANE_UP        "swap-pane-up"
+#define KEY_SWAP_PANE_DOWN      "swap-pane-down"
 
 typedef struct
 {
@@ -247,6 +251,10 @@ static KeyEntry panes_entries[] = {
   ENTRY_PANE (N_("Move Divider Right"),      KEY_RESIZE_PANE_RIGHT, "pane-resize", "s", "'right'"),
   ENTRY_PANE (N_("Move Divider Up"),         KEY_RESIZE_PANE_UP,    "pane-resize", "s", "'up'"   ),
   ENTRY_PANE (N_("Move Divider Down"),       KEY_RESIZE_PANE_DOWN,  "pane-resize", "s", "'down'" ),
+  ENTRY_PANE (N_("Swap With the Pane on the Left"),  KEY_SWAP_PANE_LEFT,  "swap-pane", "s", "'left'" ),
+  ENTRY_PANE (N_("Swap With the Pane on the Right"), KEY_SWAP_PANE_RIGHT, "swap-pane", "s", "'right'"),
+  ENTRY_PANE (N_("Swap With the Pane Above"),  KEY_SWAP_PANE_UP,     "swap-pane", "s", "'up'"   ),
+  ENTRY_PANE (N_("Swap With the Pane Below"),  KEY_SWAP_PANE_DOWN,   "swap-pane", "s", "'down'" ),
   ENTRY      (N_("Broadcast Input to This Tab"),    KEY_BROADCAST_TAB,    "broadcast", "s", "'tab'"   ),
   ENTRY      (N_("Broadcast Input to This Window"), KEY_BROADCAST_WINDOW, "broadcast", "s", "'window'"),
 };

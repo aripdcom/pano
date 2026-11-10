@@ -57,6 +57,13 @@ void terminal_window_insert_tab(TerminalWindow* window,
 void terminal_window_set_quick(TerminalWindow* window,
                                bool quick);
 bool terminal_window_is_quick(TerminalWindow* window);
+void terminal_window_move_pane(TerminalWindow* window,
+                               TerminalScreen* screen,
+                               gboolean new_window);
+gboolean terminal_window_drop_on_pane(TerminalWindow* window,
+                                      TerminalScreen* target,
+                                      GObject* object,
+                                      TerminalPaneDrop where);
 void terminal_window_update_quick_size(TerminalWindow* window);
 void terminal_window_set_tab_pinned(TerminalWindow* window,
                                     TerminalTab* tab,

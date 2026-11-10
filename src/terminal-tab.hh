@@ -70,6 +70,45 @@ bool terminal_tab_focus_pane(TerminalTab* tab,
 bool terminal_tab_resize_pane(TerminalTab* tab,
                               GtkDirectionType direction);
 
+bool terminal_tab_has_neighbor(TerminalTab* tab,
+                               GtkDirectionType direction);
+
+bool terminal_tab_swap_pane(TerminalTab* tab,
+                            GtkDirectionType direction);
+
+void terminal_tab_swap_screens(TerminalTab* tab,
+                               TerminalScreen* screen,
+                               TerminalScreen* other);
+
+void terminal_tab_insert_screen(TerminalTab* tab,
+                                TerminalScreen* target,
+                                TerminalScreen* screen,
+                                GtkPositionType side);
+
+/* Where a pane or tab dropped onto a pane goes: on a side of it, or in its
+ * place, swapping the two */
+typedef enum {
+  TERMINAL_PANE_DROP_LEFT = GTK_POS_LEFT,
+  TERMINAL_PANE_DROP_RIGHT = GTK_POS_RIGHT,
+  TERMINAL_PANE_DROP_TOP = GTK_POS_TOP,
+  TERMINAL_PANE_DROP_BOTTOM = GTK_POS_BOTTOM,
+  TERMINAL_PANE_DROP_SWAP,
+} TerminalPaneDrop;
+
+TerminalScreen* terminal_tab_pick_drop(TerminalTab* tab,
+                                       GtkWidget* widget,
+                                       double x,
+                                       double y,
+                                       TerminalPaneDrop* where);
+
+void terminal_tab_show_drop_indicator(TerminalScreen* screen,
+                                      int where);
+
+void terminal_tab_merge(TerminalTab* tab,
+                        TerminalScreen* target,
+                        TerminalTab* other,
+                        GtkPositionType side);
+
 void terminal_tab_set_zoomed(TerminalTab* tab,
                              bool zoomed);
 

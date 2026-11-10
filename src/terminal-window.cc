@@ -67,6 +67,11 @@ struct _TerminalWindow
   AdwTabBar *tab_bar;
   TerminalTabSidebar* tab_sidebar;
   GtkPositionType tab_position;
+
+  /* While a tab is dragged from a tab bar over the terminals: the pane it
+   * would join, see window_transfer_motion_cb() */
+  TerminalScreen* tab_drop_screen; // weak pointer
+  TerminalPaneDrop tab_drop_where;
   AdwTabOverview* tab_overview;
   TerminalHeaderbar *headerbar;
   TerminalNotebook *notebook;
@@ -1057,6 +1062,7 @@ terminal_window_update_pane_actions(TerminalWindow* window)
   g_simple_action_set_enabled(lookup_action(window, "move-pane"), split);
   g_simple_action_set_enabled(lookup_action(window, "pane-focus"), split && !zoomed);
   g_simple_action_set_enabled(lookup_action(window, "pane-resize"), split && !zoomed);
+  g_simple_action_set_enabled(lookup_action(window, "swap-pane"), split && !zoomed);
   // Only take the pane shortcuts away from the terminal when there are panes
   g_simple_action_set_enabled(lookup_action(window, "shadow-pane"), split);
   g_simple_action_set_state(lookup_action(window, "zoom-pane"),
@@ -1739,16 +1745,23 @@ action_equalize_panes_cb(GSimpleAction* action,
     terminal_tab_equalize(tab);
 }
 
-/* Moves the active pane, with what runs in it, into a new tab next to its
- * old one, or into a new window */
-static void
-action_move_pane_cb(GSimpleAction* action,
-                    GVariant* parameter,
-                    gpointer user_data)
+/**
+ * terminal_window_move_pane:
+ * @window: a #TerminalWindow
+ * @screen: a pane of a split tab in @window
+ * @new_window: whether to move it into a new window
+ *
+ * Moves the pane of @screen, with what runs in it, into a new tab next to
+ * its old one, or into a new window.
+ */
+void
+terminal_window_move_pane(TerminalWindow* window,
+                          TerminalScreen* screen,
+                          gboolean new_window)
 {
-  auto const window = TERMINAL_WINDOW(user_data);
-  auto const screen = window->active_screen;
-  auto const tab = window_get_active_tab(window);
+  g_return_if_fail(TERMINAL_IS_WINDOW(window));
+
+  auto const tab = terminal_tab_get_from_screen(screen);
   if (!screen || !tab || !terminal_tab_is_split(tab))
     return;
 
@@ -1761,10 +1774,361 @@ action_move_pane_cb(GSimpleAction* action,
   terminal_notebook_set_active_screen(window->notebook, taken);
   gtk_widget_grab_focus(GTK_WIDGET(taken));
 
-  if (g_str_equal(g_variant_get_string(parameter, nullptr), "window"))
+  if (new_window)
     detach_tab(window, new_tab);
 
   terminal_window_update_pane_actions(window);
+}
+
+static void
+action_move_pane_cb(GSimpleAction* action,
+                    GVariant* parameter,
+                    gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  terminal_window_move_pane(window, window->active_screen,
+                            g_str_equal(g_variant_get_string(parameter, nullptr), "window"));
+}
+
+static void
+action_swap_pane_cb(GSimpleAction* action,
+                    GVariant* parameter,
+                    gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  auto const tab = window_get_active_tab(window);
+  GtkDirectionType direction;
+  if (tab && parse_direction(parameter, &direction))
+    terminal_tab_swap_pane(tab, direction);
+}
+
+/* Drag and drop of panes. A pane dragged by its title bar can go next to
+ * another pane, in this or another tab or window, take the place of a pane
+ * of its own tab, or become a tab. A tab dropped onto a pane becomes panes
+ * there. See also the drag source and drop target in terminal-tab.cc. */
+
+/* Makes a tab of @screen, a pane of a split tab in this or another window,
+ * at @position in @window */
+static gboolean
+window_take_pane_as_tab(TerminalWindow* window,
+                        TerminalScreen* screen,
+                        int position)
+{
+  auto const tab = terminal_tab_get_from_screen(screen);
+  if (!tab || !terminal_tab_is_split(tab))
+    return false;
+
+  auto const source = gtk_widget_get_root(GTK_WIDGET(tab));
+  gs_unref_object auto taken = terminal_tab_take_screen(tab, screen);
+  if (!taken)
+    return false;
+
+  terminal_notebook_insert_tab_at(window->notebook, terminal_tab_new(taken), position);
+  terminal_notebook_set_active_screen(window->notebook, taken);
+  gtk_widget_grab_focus(GTK_WIDGET(taken));
+
+  if (TERMINAL_IS_WINDOW(source) && TERMINAL_WINDOW(source) != window)
+    terminal_window_update_pane_actions(TERMINAL_WINDOW(source));
+  terminal_window_update_pane_actions(window);
+  gtk_window_present(GTK_WINDOW(window));
+  return true;
+}
+
+static GdkDragAction
+tab_bar_extra_drag_value_cb(AdwTabBar* tab_bar,
+                            AdwTabPage* page,
+                            GValue* value,
+                            TerminalWindow* window)
+{
+  auto const screen = value ? TERMINAL_SCREEN(g_value_get_object(value)) : nullptr;
+  auto const tab = terminal_tab_get_from_screen(screen);
+  return tab && terminal_tab_is_split(tab) ? GDK_ACTION_MOVE : GdkDragAction(0);
+}
+
+/* A drop, done once the drag is over: the dragged pane is still busy with
+ * it, and a tab dragged from a tab bar is out of its view until then, see
+ * handle_tab_dropped_on_desktop() */
+struct PaneDrop {
+  GWeakRef target; // the pane that got the drop, or
+  GWeakRef window; // the window that got it in its tab bar or list,
+  int position;    // at this position
+  GObject* object; // the dropped TerminalScreen or AdwTabPage
+  TerminalPaneDrop where;
+  guint tries;
+};
+
+static PaneDrop* pending_pane_drop = nullptr;
+
+static void
+pane_drop_free(PaneDrop* drop)
+{
+  g_weak_ref_clear(&drop->target);
+  g_weak_ref_clear(&drop->window);
+  g_object_unref(drop->object);
+  g_free(drop);
+}
+
+static AdwTabView*
+page_get_view(AdwTabPage* page)
+{
+  auto const child = adw_tab_page_get_child(page);
+  return child ? ADW_TAB_VIEW(gtk_widget_get_ancestor(child, ADW_TYPE_TAB_VIEW)) : nullptr;
+}
+
+/* Whether the tab dragged out of a tab bar is about to become panes */
+static bool
+pane_drop_takes_detached_page(void)
+{
+  return pending_pane_drop &&
+    ADW_IS_TAB_PAGE(pending_pane_drop->object) &&
+    !page_get_view(ADW_TAB_PAGE(pending_pane_drop->object));
+}
+
+static void
+pane_drop_screen(TerminalScreen* target,
+                 TerminalScreen* screen,
+                 TerminalPaneDrop where)
+{
+  auto const tab = terminal_tab_get_from_screen(target);
+  auto const source_tab = terminal_tab_get_from_screen(screen);
+  if (!tab || !source_tab || screen == target)
+    return;
+
+  auto const window = TERMINAL_WINDOW(gtk_widget_get_root(GTK_WIDGET(tab)));
+  auto const source = gtk_widget_get_root(GTK_WIDGET(source_tab));
+
+  if (where == TERMINAL_PANE_DROP_SWAP) {
+    if (source_tab == tab)
+      terminal_tab_swap_screens(tab, screen, target);
+    return;
+  }
+
+  if (!terminal_tab_is_split(source_tab))
+    return;
+
+  gs_unref_object auto taken = terminal_tab_take_screen(source_tab, screen);
+  if (!taken)
+    return;
+
+  terminal_tab_insert_screen(tab, target, taken, GtkPositionType(where));
+  terminal_tab_set_active_screen(tab, taken);
+  gtk_widget_grab_focus(GTK_WIDGET(taken));
+
+  if (TERMINAL_IS_WINDOW(source) && TERMINAL_WINDOW(source) != window)
+    terminal_window_update_pane_actions(TERMINAL_WINDOW(source));
+  terminal_window_update_pane_actions(window);
+  gtk_window_present(GTK_WINDOW(window));
+}
+
+static void
+pane_drop_page(TerminalScreen* target,
+               AdwTabPage* page,
+               TerminalPaneDrop where)
+{
+  auto const tab = terminal_tab_get_from_screen(target);
+  auto view = page_get_view(page);
+  auto const other = TERMINAL_TAB(adw_tab_page_get_child(page));
+  if (!tab || !view || !TERMINAL_IS_TAB(other) || other == tab ||
+      where == TERMINAL_PANE_DROP_SWAP)
+    return;
+
+  auto const window = TERMINAL_WINDOW(gtk_widget_get_root(GTK_WIDGET(tab)));
+  auto const active = terminal_tab_get_screen(other);
+
+  // The tab view selected the dropped tab; show the one it goes into
+  auto const target_view = ADW_TAB_VIEW(gtk_widget_get_ancestor(GTK_WIDGET(tab), ADW_TYPE_TAB_VIEW));
+  if (auto const target_page = target_view ? adw_tab_view_get_page(target_view, GTK_WIDGET(tab)) : nullptr)
+    adw_tab_view_set_selected_page(target_view, target_page);
+
+  // Its window closes when the last screen leaves it
+  g_object_ref(view);
+  g_object_ref(page);
+  terminal_tab_merge(tab, target, other, GtkPositionType(where));
+  if (page_get_view(page) == view) {
+    adw_tab_view_set_page_pinned(view, page, false);
+    adw_tab_view_close_page(view, page);
+  }
+  g_object_unref(page);
+  g_object_unref(view);
+
+  if (active) {
+    terminal_tab_set_active_screen(tab, active);
+    gtk_widget_grab_focus(GTK_WIDGET(active));
+  }
+  terminal_window_update_pane_actions(window);
+  gtk_window_present(GTK_WINDOW(window));
+}
+
+static gboolean
+pane_drop_cb(void* user_data)
+{
+  auto const drop = pending_pane_drop;
+  if (!drop)
+    return G_SOURCE_REMOVE;
+
+  // Wait for a tab to be back in its view, for a second at most
+  if (ADW_IS_TAB_PAGE(drop->object) &&
+      !page_get_view(ADW_TAB_PAGE(drop->object)) &&
+      ++drop->tries < 20)
+    return G_SOURCE_CONTINUE;
+
+  pending_pane_drop = nullptr;
+  if (auto const window = reinterpret_cast<TerminalWindow*>(g_weak_ref_get(&drop->window))) {
+    if (!window->disposed)
+      window_take_pane_as_tab(window, TERMINAL_SCREEN(drop->object), drop->position);
+    g_object_unref(window);
+  } else if (auto const target = reinterpret_cast<TerminalScreen*>(g_weak_ref_get(&drop->target))) {
+    if (TERMINAL_IS_SCREEN(drop->object))
+      pane_drop_screen(target, TERMINAL_SCREEN(drop->object), drop->where);
+    else
+      pane_drop_page(target, ADW_TAB_PAGE(drop->object), drop->where);
+    g_object_unref(target);
+  }
+  pane_drop_free(drop);
+  return G_SOURCE_REMOVE;
+}
+
+/**
+ * terminal_window_drop_on_pane:
+ * @window: a #TerminalWindow
+ * @target: the #TerminalScreen of the pane that got the drop
+ * @object: the dropped #TerminalScreen or #AdwTabPage
+ * @where: where it goes
+ *
+ * Returns: whether the drop is taken
+ */
+gboolean
+terminal_window_drop_on_pane(TerminalWindow* window,
+                             TerminalScreen* target,
+                             GObject* object,
+                             TerminalPaneDrop where)
+{
+  g_return_val_if_fail(TERMINAL_IS_WINDOW(window), false);
+
+  if (pending_pane_drop || !(TERMINAL_IS_SCREEN(object) || ADW_IS_TAB_PAGE(object)))
+    return false;
+
+  auto const drop = g_new0(PaneDrop, 1);
+  g_weak_ref_init(&drop->target, target);
+  g_weak_ref_init(&drop->window, nullptr);
+  drop->position = -1;
+  drop->object = G_OBJECT(g_object_ref(object));
+  drop->where = where;
+  pending_pane_drop = drop;
+
+  // Not while the drag is still going on
+  g_timeout_add(50, pane_drop_cb, nullptr);
+  return true;
+}
+
+/* Makes a tab at @position of a pane dropped onto the tab bar or list */
+static gboolean
+window_drop_pane_as_tab(TerminalWindow* window,
+                        TerminalScreen* screen,
+                        int position)
+{
+  auto const tab = terminal_tab_get_from_screen(screen);
+  if (pending_pane_drop || !tab || !terminal_tab_is_split(tab))
+    return false;
+
+  auto const drop = g_new0(PaneDrop, 1);
+  g_weak_ref_init(&drop->target, nullptr);
+  g_weak_ref_init(&drop->window, window);
+  drop->position = position;
+  drop->object = G_OBJECT(g_object_ref(screen));
+  pending_pane_drop = drop;
+
+  g_timeout_add(50, pane_drop_cb, nullptr);
+  return true;
+}
+
+/* A tab dragged from a tab bar: libadwaita keeps it away from the
+ * terminals, and drops it onto the tab view itself. So the window follows
+ * the pointer over the terminals, and makes the dropped tab panes there
+ * once the tab view has taken it. */
+
+static void
+window_set_tab_drop(TerminalWindow* window,
+                    TerminalScreen* screen,
+                    TerminalPaneDrop where)
+{
+  if (window->tab_drop_screen && window->tab_drop_screen != screen) {
+    terminal_tab_show_drop_indicator(window->tab_drop_screen, -1);
+    g_object_remove_weak_pointer(G_OBJECT(window->tab_drop_screen),
+                                 reinterpret_cast<void**>(&window->tab_drop_screen));
+    window->tab_drop_screen = nullptr;
+  }
+
+  if (screen && screen != window->tab_drop_screen) {
+    window->tab_drop_screen = screen;
+    g_object_add_weak_pointer(G_OBJECT(screen),
+                              reinterpret_cast<void**>(&window->tab_drop_screen));
+  }
+
+  window->tab_drop_where = where;
+  if (screen)
+    terminal_tab_show_drop_indicator(screen, where);
+}
+
+static void
+window_transfer_motion_cb(GtkDropControllerMotion* controller,
+                          double x,
+                          double y,
+                          TerminalWindow* window)
+{
+  auto const view = terminal_notebook_get_tab_view(window->notebook);
+  auto const tab = window_get_active_tab(window);
+  auto where = TERMINAL_PANE_DROP_RIGHT;
+  auto const screen = tab && adw_tab_view_get_is_transferring_page(view)
+    ? terminal_tab_pick_drop(tab, GTK_WIDGET(window->notebook), x, y, &where)
+    : nullptr;
+  window_set_tab_drop(window, screen, where);
+}
+
+static void
+window_transfer_leave_cb(GtkDropControllerMotion* controller,
+                         TerminalWindow* window)
+{
+  window_set_tab_drop(window, nullptr, TERMINAL_PANE_DROP_RIGHT);
+}
+
+/* The tab view took a dropped tab; over a pane, the tab becomes panes. The
+ * drop comes before the pointer leaves. */
+static void
+window_page_attached_cb(AdwTabView* view,
+                        AdwTabPage* page,
+                        int position,
+                        TerminalWindow* window)
+{
+  auto const screen = window->tab_drop_screen;
+  if (!screen || !adw_tab_view_get_is_transferring_page(view))
+    return;
+
+  auto const where = window->tab_drop_where;
+  window_set_tab_drop(window, nullptr, TERMINAL_PANE_DROP_RIGHT);
+  terminal_window_drop_on_pane(window, screen, G_OBJECT(page), where);
+}
+
+/* A pane dropped onto a tab in the tab bar becomes a tab after it */
+static gboolean
+tab_bar_extra_drag_drop_cb(AdwTabBar* tab_bar,
+                           AdwTabPage* page,
+                           GValue* value,
+                           TerminalWindow* window)
+{
+  auto const screen = TERMINAL_SCREEN(g_value_get_object(value));
+  auto const view = terminal_notebook_get_tab_view(window->notebook);
+  return screen && window_drop_pane_as_tab(window, screen,
+                                           adw_tab_view_get_page_position(view, page) + 1);
+}
+
+static gboolean
+sidebar_screen_dropped_cb(TerminalTabSidebar* sidebar,
+                          TerminalScreen* screen,
+                          int position,
+                          TerminalWindow* window)
+{
+  return window_drop_pane_as_tab(window, screen, position);
 }
 
 static void
@@ -2590,6 +2954,11 @@ handle_tab_dropped_on_desktop (AdwTabView     *tab_view,
   source_window = TERMINAL_WINDOW (gtk_widget_get_root (GTK_WIDGET (tab_view)));
   g_return_val_if_fail (TERMINAL_IS_WINDOW (source_window), nullptr);
 
+  /* The tab was dropped onto a pane: it goes back to its view first, then
+   * becomes panes, see terminal_window_drop_on_pane() */
+  if (pane_drop_takes_detached_page ())
+    return nullptr;
+
   new_window = terminal_window_new (G_APPLICATION (terminal_app_get ()));
   new_window->present_on_insert = TRUE;
 
@@ -2757,6 +3126,25 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
     gs_unref_object GMenuItem *to_window_item = g_menu_item_new (_("To a New _Window"), nullptr);
     g_menu_item_set_action_and_target (to_window_item, "win.move-pane", "s", "window");
     menu_append_item (move_menu, to_window_item);
+    // Swap with a neighbouring pane, where there is one
+    static char const* const swaps[][2] = {
+      { "left", N_("Swap With the Pane on the _Left") },
+      { "right", N_("Swap With the Pane on the _Right") },
+      { "up", N_("Swap With the Pane _Above") },
+      { "down", N_("Swap With the Pane _Below") },
+    };
+    static GtkDirectionType const swap_directions[] = {
+      GTK_DIR_LEFT, GTK_DIR_RIGHT, GTK_DIR_UP, GTK_DIR_DOWN
+    };
+    gs_unref_object GMenu *swap_section = g_menu_new ();
+    for (auto i = 0u; i < G_N_ELEMENTS (swaps); ++i) {
+      if (!terminal_tab_has_neighbor (tab, swap_directions[i]))
+        continue;
+      gs_unref_object GMenuItem *item = g_menu_item_new (_(swaps[i][1]), nullptr);
+      g_menu_item_set_action_and_target (item, "win.swap-pane", "s", swaps[i][0]);
+      menu_append_item (swap_section, item);
+    }
+    g_menu_append_section (move_menu, nullptr, G_MENU_MODEL (swap_section));
     g_menu_append_submenu (pane_section, _("_Move Pane"), G_MENU_MODEL (move_menu));
 
     menu_append (pane_section, _("Close P_ane"), "win.close-pane");
@@ -3431,6 +3819,7 @@ terminal_window_init (TerminalWindow *window)
     { "open-hyperlink",      action_open_hyperlink_cb,   nullptr,   nullptr, nullptr },
     { "pane-focus",          action_pane_focus_cb,       "s",    nullptr, nullptr },
     { "pane-resize",         action_pane_resize_cb,      "s",    nullptr, nullptr },
+    { "swap-pane",           action_swap_pane_cb,        "s",    nullptr, nullptr },
     { "paste-text",          action_paste_text_cb,       nullptr,   nullptr, nullptr },
     { "paste-uris",          action_paste_uris_cb,       nullptr,   nullptr, nullptr },
     { "reset",               action_reset_cb,            "b",    nullptr, nullptr },
@@ -3598,6 +3987,29 @@ terminal_window_init (TerminalWindow *window)
                    G_SETTINGS_BIND_DEFAULT);
   g_signal_connect (window->tab_sidebar, "page-middle-clicked",
                     G_CALLBACK (tab_sidebar_page_middle_clicked_cb), window);
+
+  // Panes dropped onto the tab bar or the tab list become tabs there
+  GType pane_types[] = { TERMINAL_TYPE_SCREEN };
+  adw_tab_bar_setup_extra_drop_target (window->tab_bar, GDK_ACTION_MOVE,
+                                       pane_types, G_N_ELEMENTS (pane_types));
+  adw_tab_bar_set_extra_drag_preload (window->tab_bar, true);
+  g_signal_connect (window->tab_bar, "extra-drag-drop",
+                    G_CALLBACK (tab_bar_extra_drag_drop_cb), window);
+  g_signal_connect (window->tab_bar, "extra-drag-value",
+                    G_CALLBACK (tab_bar_extra_drag_value_cb), window);
+  g_signal_connect (window->tab_sidebar, "screen-dropped",
+                    G_CALLBACK (sidebar_screen_dropped_cb), window);
+
+  auto const transfer_motion = gtk_drop_controller_motion_new ();
+  g_signal_connect (transfer_motion, "enter",
+                    G_CALLBACK (window_transfer_motion_cb), window);
+  g_signal_connect (transfer_motion, "motion",
+                    G_CALLBACK (window_transfer_motion_cb), window);
+  g_signal_connect (transfer_motion, "leave",
+                    G_CALLBACK (window_transfer_leave_cb), window);
+  gtk_widget_add_controller (GTK_WIDGET (window->notebook), transfer_motion);
+  g_signal_connect (terminal_notebook_get_tab_view (window->notebook), "page-attached",
+                    G_CALLBACK (window_page_attached_cb), window);
 
   window->broadcast_banner = ADW_BANNER (adw_banner_new (""));
   adw_banner_set_button_label (window->broadcast_banner, _("_Stop"));
@@ -3784,6 +4196,11 @@ terminal_window_dispose (GObject *object)
     g_object_remove_weak_pointer(G_OBJECT(window->copy_toast),
                                  reinterpret_cast<void**>(&window->copy_toast));
     window->copy_toast = nullptr;
+  }
+  if (window->tab_drop_screen) {
+    g_object_remove_weak_pointer(G_OBJECT(window->tab_drop_screen),
+                                 reinterpret_cast<void**>(&window->tab_drop_screen));
+    window->tab_drop_screen = nullptr;
   }
 
   // Before the tabs go away, so that the last window can be restored
@@ -3974,6 +4391,10 @@ screen_close_request_cb (TerminalNotebook *notebook,
                          TerminalScreen   *screen,
                          TerminalWindow   *window)
 {
+  // A tab whose panes went elsewhere, see terminal_tab_merge()
+  if (!screen)
+    return GDK_EVENT_PROPAGATE;
+
   if (!window->closing_confirmed &&
       confirm_close_window_or_tab (window, screen, CloseKind::TAB))
     return GDK_EVENT_STOP;

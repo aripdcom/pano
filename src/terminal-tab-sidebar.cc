@@ -69,6 +69,7 @@ static GParamSpec* pspecs[N_PROPS];
 
 enum {
   PAGE_MIDDLE_CLICKED,
+  SCREEN_DROPPED,
   N_SIGNALS
 };
 
@@ -296,6 +297,14 @@ terminal_tab_sidebar_update_pinned_rows(TerminalTabSidebar* sidebar)
 
 /* Drag and drop */
 
+/* What the rows and the list take: tabs, and panes to make tabs of */
+static void
+set_drop_types(GtkDropTarget* target)
+{
+  GType types[] = { ADW_TYPE_TAB_PAGE, TERMINAL_TYPE_SCREEN };
+  gtk_drop_target_set_gtypes(target, types, G_N_ELEMENTS(types));
+}
+
 static void
 row_clear_drop_marks(GtkWidget* row)
 {
@@ -429,11 +438,23 @@ row_drop_cb(GtkDropTarget* target,
 {
   row_clear_drop_marks(gtk_event_controller_get_widget(GTK_EVENT_CONTROLLER(target)));
 
-  auto const page = ADW_TAB_PAGE(g_value_get_object(value));
-  if (!data->page || !page || page == data->page)
+  if (!data->page || !data->sidebar->view)
     return false;
 
-  return terminal_tab_sidebar_move_page(data->sidebar, page, row_drop_position(data, y));
+  // A pane, which becomes a tab here
+  auto const position = row_drop_position(data, y);
+  if (G_VALUE_HOLDS(value, TERMINAL_TYPE_SCREEN)) {
+    gboolean handled = false;
+    g_signal_emit(data->sidebar, signals[SCREEN_DROPPED], 0,
+                  g_value_get_object(value), position, &handled);
+    return handled;
+  }
+
+  auto const page = ADW_TAB_PAGE(g_value_get_object(value));
+  if (!page || page == data->page)
+    return false;
+
+  return terminal_tab_sidebar_move_page(data->sidebar, page, position);
 }
 
 /* Dropping below the last row moves the tab to the end */
@@ -444,11 +465,22 @@ list_drop_cb(GtkDropTarget* target,
              double y,
              TerminalTabSidebar* sidebar)
 {
-  auto const page = ADW_TAB_PAGE(g_value_get_object(value));
-  if (!page || !sidebar->view)
+  if (!sidebar->view)
     return false;
 
-  return terminal_tab_sidebar_move_page(sidebar, page, adw_tab_view_get_n_pages(sidebar->view));
+  auto const position = adw_tab_view_get_n_pages(sidebar->view);
+  if (G_VALUE_HOLDS(value, TERMINAL_TYPE_SCREEN)) {
+    gboolean handled = false;
+    g_signal_emit(sidebar, signals[SCREEN_DROPPED], 0,
+                  g_value_get_object(value), position, &handled);
+    return handled;
+  }
+
+  auto const page = ADW_TAB_PAGE(g_value_get_object(value));
+  if (!page)
+    return false;
+
+  return terminal_tab_sidebar_move_page(sidebar, page, position);
 }
 
 /* The list view destroys rows on its own; forget them then */
@@ -522,7 +554,8 @@ factory_setup_cb(GtkSignalListItemFactory* factory,
   g_signal_connect(drag_source, "drag-cancel", G_CALLBACK(row_drag_cancel_cb), data);
   gtk_widget_add_controller(row, GTK_EVENT_CONTROLLER(drag_source));
 
-  auto const drop_target = gtk_drop_target_new(ADW_TYPE_TAB_PAGE, GDK_ACTION_MOVE);
+  auto const drop_target = gtk_drop_target_new(G_TYPE_INVALID, GDK_ACTION_MOVE);
+  set_drop_types(drop_target);
   g_signal_connect(drop_target, "motion", G_CALLBACK(row_drop_motion_cb), data);
   g_signal_connect(drop_target, "enter", G_CALLBACK(row_drop_motion_cb), data);
   g_signal_connect(drop_target, "leave", G_CALLBACK(row_drop_leave_cb), data);
@@ -864,7 +897,8 @@ terminal_tab_sidebar_init(TerminalTabSidebar* sidebar)
   add_shortcut("Escape|Return|KP_Enter", list_shortcut_leave_cb);
   gtk_widget_add_controller(sidebar->list_view, shortcuts);
 
-  auto const list_drop = gtk_drop_target_new(ADW_TYPE_TAB_PAGE, GDK_ACTION_MOVE);
+  auto const list_drop = gtk_drop_target_new(G_TYPE_INVALID, GDK_ACTION_MOVE);
+  set_drop_types(list_drop);
   g_signal_connect(list_drop, "drop", G_CALLBACK(list_drop_cb), sidebar);
   gtk_widget_add_controller(sidebar->list_view, GTK_EVENT_CONTROLLER(list_drop));
 
@@ -1007,6 +1041,18 @@ terminal_tab_sidebar_class_init(TerminalTabSidebarClass* klass)
                  g_cclosure_marshal_VOID__OBJECT,
                  G_TYPE_NONE,
                  1, ADW_TYPE_TAB_PAGE);
+
+  /* A pane was dropped at a position in the list, to become a tab there.
+   * Returns whether it was taken. */
+  signals[SCREEN_DROPPED] =
+    g_signal_new("screen-dropped",
+                 G_OBJECT_CLASS_TYPE(klass),
+                 G_SIGNAL_RUN_LAST,
+                 0,
+                 g_signal_accumulator_true_handled, nullptr,
+                 nullptr,
+                 G_TYPE_BOOLEAN,
+                 2, TERMINAL_TYPE_SCREEN, G_TYPE_INT);
 
   gtk_widget_class_set_css_name(widget_class, "tabsidebar");
 }

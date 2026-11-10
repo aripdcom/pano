@@ -49,10 +49,14 @@ Everything GNOME Terminal provides, plus:
   The focus, divider, zoom and close shortcuts only take effect while a tab
   is split, so programs in the terminal still get Alt+Arrow keys otherwise.
 
-  The context menu of a split tab can also make all panes the same size and
-  move the active pane, with what runs in it, to a new tab or window. The
-  panes you are not typing in are dimmed, and *Preferences → Appearance* can
-  show a title above each pane.
+  The context menu of a split tab can also make all panes the same size,
+  swap the active pane with a neighbouring one, and move it, with what runs
+  in it, to a new tab or window. The panes you are not typing in are
+  dimmed, and *Preferences → Appearance* can show a title above each pane.
+  Drag a pane by its title onto another pane to put it there, onto the
+  middle of a pane of the same tab to swap the two, onto the tabs to make
+  it a tab, or out of the window to give it a window of its own. A tab
+  dropped onto a pane becomes panes there.
 * **Session restore**: when started without arguments, for example from the
   application menu, Pano Terminal reopens the windows, tabs and panes that
   were open when it was last closed, each with a new shell in its previous

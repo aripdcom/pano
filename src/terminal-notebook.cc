@@ -505,6 +505,12 @@ tab_screen_removed_cb(TerminalTab* tab,
                       TerminalScreen* screen,
                       TerminalNotebook* notebook)
 {
+  /* A pane that moves elsewhere while it is the active one, see
+   * terminal_tab_merge(); forget it, so that the next switch leaves its new
+   * tab alone */
+  if (screen == notebook->active_screen)
+    notebook->active_screen = nullptr;
+
   g_signal_emit(notebook, signals[SCREEN_REMOVED], 0, screen);
 }
 

@@ -26,7 +26,9 @@
 #include "terminal-intl.hh"
 #include "terminal-libgsystem.hh"
 #include "terminal-type-builtins.hh"
+#include "terminal-window.hh"
 
+#include <adwaita.h>
 #include <gtk/gtk.h>
 
 #include <algorithm>
@@ -48,6 +50,7 @@ struct _TerminalPane
   GtkWidget* overlay;
   GtkWidget* scrolled_window;
   GtkWidget* scroll_marks; // over the scrollbar
+  GtkWidget* drop_indicator; // where a dropped pane or tab would go
 };
 
 G_DEFINE_FINAL_TYPE (TerminalPane, terminal_pane, GTK_TYPE_WIDGET)
@@ -85,6 +88,175 @@ scroll_marks_draw_cb(GtkDrawingArea* area,
   }
 }
 
+/* Drag and drop: a pane is dragged by its title bar, which shows while the
+ * tab is split, onto another pane, the tab bar or out of the window. A pane
+ * also takes tabs, which then become panes. */
+
+static GdkContentProvider*
+pane_drag_prepare_cb(GtkDragSource* source,
+                     double x,
+                     double y,
+                     TerminalPane* pane)
+{
+  auto const tab = terminal_tab_get_from_screen(pane->screen);
+  if (!tab || !terminal_tab_is_split(tab))
+    return nullptr;
+
+  return gdk_content_provider_new_typed(TERMINAL_TYPE_SCREEN, pane->screen);
+}
+
+static void
+pane_drag_begin_cb(GtkDragSource* source,
+                   GdkDrag* drag,
+                   TerminalPane* pane)
+{
+  gs_unref_object auto paintable = gtk_widget_paintable_new(pane->title_bar);
+  gtk_drag_source_set_icon(source, paintable, 0, 0);
+}
+
+static gboolean
+pane_move_to_window_cb(void* data)
+{
+  auto const ref = reinterpret_cast<GWeakRef*>(data);
+  if (auto const screen = reinterpret_cast<TerminalScreen*>(g_weak_ref_get(ref))) {
+    if (auto const window = gtk_widget_get_root(GTK_WIDGET(screen)); TERMINAL_IS_WINDOW(window))
+      terminal_window_move_pane(TERMINAL_WINDOW(window), screen, true);
+    g_object_unref(screen);
+  }
+  g_weak_ref_clear(ref);
+  g_free(ref);
+  return G_SOURCE_REMOVE;
+}
+
+/* A pane dropped where nothing takes it gets its own window, like a tab */
+static gboolean
+pane_drag_cancel_cb(GtkDragSource* source,
+                    GdkDrag* drag,
+                    GdkDragCancelReason reason,
+                    TerminalPane* pane)
+{
+  if (reason != GDK_DRAG_CANCEL_NO_TARGET || !pane->screen)
+    return false;
+
+  // Not while the drag source is still busy with the pane
+  auto const ref = g_new0(GWeakRef, 1);
+  g_weak_ref_init(ref, pane->screen);
+  g_idle_add(pane_move_to_window_cb, ref);
+  return true;
+}
+
+/* Where @object, a pane's #TerminalScreen or an #AdwTabPage, dropped at
+ * @x, @y, would go, or -1 if it cannot go here: next to the nearest side,
+ * or in the middle of a pane of the same tab in place of the pane */
+static int
+pane_drop_zone(TerminalPane* pane,
+               GObject* object,
+               double x,
+               double y)
+{
+  if (!pane->screen)
+    return -1;
+
+  auto const tab = terminal_tab_get_from_screen(pane->screen);
+  auto same_tab = false;
+  if (TERMINAL_IS_SCREEN(object)) {
+    auto const screen = TERMINAL_SCREEN(object);
+    if (screen == pane->screen)
+      return -1;
+    same_tab = terminal_tab_get_from_screen(screen) == tab;
+  } else if (ADW_IS_TAB_PAGE(object)) {
+    if (adw_tab_page_get_child(ADW_TAB_PAGE(object)) == GTK_WIDGET(tab))
+      return -1;
+  }
+
+  auto const width = double(std::max(gtk_widget_get_width(GTK_WIDGET(pane)), 1));
+  auto const height = double(std::max(gtk_widget_get_height(GTK_WIDGET(pane)), 1));
+  auto const fx = x / width, fy = y / height;
+
+  if (same_tab && fx > 1. / 3 && fx < 2. / 3 && fy > 1. / 3 && fy < 2. / 3)
+    return TERMINAL_PANE_DROP_SWAP;
+
+  auto zone = TERMINAL_PANE_DROP_LEFT;
+  auto distance = fx;
+  if (1 - fx < distance) {
+    zone = TERMINAL_PANE_DROP_RIGHT;
+    distance = 1 - fx;
+  }
+  if (fy < distance) {
+    zone = TERMINAL_PANE_DROP_TOP;
+    distance = fy;
+  }
+  if (1 - fy < distance)
+    zone = TERMINAL_PANE_DROP_BOTTOM;
+  return zone;
+}
+
+static void
+pane_show_drop_indicator(TerminalPane* pane,
+                         int zone)
+{
+  auto const indicator = pane->drop_indicator;
+  if (zone < 0) {
+    gtk_widget_set_visible(indicator, false);
+    return;
+  }
+
+  auto const width = gtk_widget_get_width(pane->overlay);
+  auto const height = gtk_widget_get_height(pane->overlay);
+  auto halign = GTK_ALIGN_FILL, valign = GTK_ALIGN_FILL;
+  int w = -1, h = -1;
+  switch (zone) {
+  case TERMINAL_PANE_DROP_LEFT:   halign = GTK_ALIGN_START; w = width / 2;  break;
+  case TERMINAL_PANE_DROP_RIGHT:  halign = GTK_ALIGN_END;   w = width / 2;  break;
+  case TERMINAL_PANE_DROP_TOP:    valign = GTK_ALIGN_START; h = height / 2; break;
+  case TERMINAL_PANE_DROP_BOTTOM: valign = GTK_ALIGN_END;   h = height / 2; break;
+  default: break;
+  }
+  gtk_widget_set_halign(indicator, halign);
+  gtk_widget_set_valign(indicator, valign);
+  gtk_widget_set_size_request(indicator, w, h);
+  gtk_widget_set_visible(indicator, true);
+}
+
+static GdkDragAction
+pane_drop_motion_cb(GtkDropTarget* target,
+                    double x,
+                    double y,
+                    TerminalPane* pane)
+{
+  auto const value = gtk_drop_target_get_value(target);
+  auto const zone = pane_drop_zone(pane, value ? G_OBJECT(g_value_get_object(value)) : nullptr, x, y);
+  pane_show_drop_indicator(pane, zone);
+  return zone < 0 ? GdkDragAction(0) : GDK_ACTION_MOVE;
+}
+
+static void
+pane_drop_leave_cb(GtkDropTarget* target,
+                   TerminalPane* pane)
+{
+  pane_show_drop_indicator(pane, -1);
+}
+
+static gboolean
+pane_drop_cb(GtkDropTarget* target,
+             GValue const* value,
+             double x,
+             double y,
+             TerminalPane* pane)
+{
+  pane_show_drop_indicator(pane, -1);
+
+  auto const zone = pane_drop_zone(pane, G_OBJECT(g_value_get_object(value)), x, y);
+  auto const window = gtk_widget_get_root(GTK_WIDGET(pane));
+  if (zone < 0 || !TERMINAL_IS_WINDOW(window))
+    return false;
+
+  return terminal_window_drop_on_pane(TERMINAL_WINDOW(window),
+                                      pane->screen,
+                                      G_OBJECT(g_value_get_object(value)),
+                                      TerminalPaneDrop(zone));
+}
+
 static void
 terminal_pane_init(TerminalPane* pane)
 {
@@ -116,6 +288,30 @@ terminal_pane_init(TerminalPane* pane)
                                  GtkDrawingAreaDrawFunc(scroll_marks_draw_cb),
                                  pane, nullptr);
   gtk_overlay_add_overlay(GTK_OVERLAY(pane->overlay), pane->scroll_marks);
+
+  pane->drop_indicator = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+  gtk_widget_add_css_class(pane->drop_indicator, "pane-drop-indicator");
+  gtk_widget_set_can_target(pane->drop_indicator, false);
+  gtk_widget_set_visible(pane->drop_indicator, false);
+  gtk_overlay_add_overlay(GTK_OVERLAY(pane->overlay), pane->drop_indicator);
+
+  auto const drag_source = gtk_drag_source_new();
+  gtk_drag_source_set_actions(drag_source, GDK_ACTION_MOVE);
+  g_signal_connect(drag_source, "prepare", G_CALLBACK(pane_drag_prepare_cb), pane);
+  g_signal_connect(drag_source, "drag-begin", G_CALLBACK(pane_drag_begin_cb), pane);
+  g_signal_connect(drag_source, "drag-cancel", G_CALLBACK(pane_drag_cancel_cb), pane);
+  gtk_widget_add_controller(pane->title_bar, GTK_EVENT_CONTROLLER(drag_source));
+  gtk_widget_set_cursor_from_name(pane->title_bar, "grab");
+
+  GType types[] = { TERMINAL_TYPE_SCREEN, ADW_TYPE_TAB_PAGE };
+  auto const drop_target = gtk_drop_target_new(G_TYPE_INVALID, GDK_ACTION_MOVE);
+  gtk_drop_target_set_gtypes(drop_target, types, G_N_ELEMENTS(types));
+  gtk_drop_target_set_preload(drop_target, true);
+  g_signal_connect(drop_target, "enter", G_CALLBACK(pane_drop_motion_cb), pane);
+  g_signal_connect(drop_target, "motion", G_CALLBACK(pane_drop_motion_cb), pane);
+  g_signal_connect(drop_target, "leave", G_CALLBACK(pane_drop_leave_cb), pane);
+  g_signal_connect(drop_target, "drop", G_CALLBACK(pane_drop_cb), pane);
+  gtk_widget_add_controller(GTK_WIDGET(pane), GTK_EVENT_CONTROLLER(drop_target));
 }
 
 static void
@@ -298,6 +494,34 @@ tab_untrack_screen(TerminalTab* tab,
                                        (void*)screen_has_focus_cb,
                                        tab);
   g_queue_remove(&tab->screens, screen);
+}
+
+/* Moving a widget that has the focus in it leaves GtkPaned with a stale
+ * focus child. So the focus goes away while widgets in @subtree move, and
+ * comes back afterwards with tab_restore_focus(). */
+static GtkWidget*
+tab_release_focus(TerminalTab* tab,
+                  GtkWidget* subtree)
+{
+  auto const root = gtk_widget_get_root(GTK_WIDGET(tab));
+  auto const focus = root ? gtk_root_get_focus(root) : nullptr;
+  if (!focus || !(focus == subtree || gtk_widget_is_ancestor(focus, subtree)))
+    return nullptr;
+
+  g_object_ref(focus);
+  gtk_root_set_focus(root, nullptr);
+  return focus;
+}
+
+static void
+tab_restore_focus(GtkWidget* focus)
+{
+  if (!focus)
+    return;
+
+  if (gtk_widget_get_root(focus))
+    gtk_widget_grab_focus(focus);
+  g_object_unref(focus);
 }
 
 /* Puts @new_child where @old_child is in the tree. Returns a reference to
@@ -845,6 +1069,8 @@ tab_remove_pane(TerminalTab* tab,
     ? gtk_paned_get_end_child(paned)
     : gtk_paned_get_start_child(paned);
 
+  auto const focus = tab_release_focus(tab, GTK_WIDGET(paned));
+
   g_object_ref(sibling);
   if (gtk_paned_get_start_child(paned) == sibling)
     gtk_paned_set_start_child(paned, nullptr);
@@ -856,6 +1082,7 @@ tab_remove_pane(TerminalTab* tab,
   g_object_unref(sibling);
   g_object_unref(old_paned);
 
+  tab_restore_focus(focus);
   tab_update_panes(tab);
 
   return keep_screen ? screen : nullptr;
@@ -946,30 +1173,20 @@ terminal_tab_equalize(TerminalTab* tab)
   equalize_node(tab->root);
 }
 
-/**
- * terminal_tab_focus_pane:
- * @tab: a #TerminalTab
- * @direction: %GTK_DIR_LEFT, %GTK_DIR_RIGHT, %GTK_DIR_UP or %GTK_DIR_DOWN
- *
- * Moves the focus to the neighbouring pane in @direction. When several
- * panes border the active one, the most recently used one wins.
- *
- * Returns: %true if the focus was moved
- */
-bool
-terminal_tab_focus_pane(TerminalTab* tab,
-                        GtkDirectionType direction)
+/* The pane next to the active one in @direction. When several panes border
+ * it, the most recently used one wins. */
+static TerminalScreen*
+tab_find_neighbor(TerminalTab* tab,
+                  GtkDirectionType direction)
 {
-  g_return_val_if_fail(TERMINAL_IS_TAB(tab), false);
-
   if (!terminal_tab_is_split(tab) || tab->zoomed)
-    return false;
+    return nullptr;
 
   auto const current = pane_from_screen(tab->active_screen);
   graphene_rect_t cr;
   if (!current ||
       !gtk_widget_compute_bounds(GTK_WIDGET(current), GTK_WIDGET(tab), &cr))
-    return false;
+    return nullptr;
 
   auto const cx0 = cr.origin.x, cx1 = cr.origin.x + cr.size.width;
   auto const cy0 = cr.origin.y, cy1 = cr.origin.y + cr.size.height;
@@ -1009,7 +1226,7 @@ terminal_tab_focus_pane(TerminalTab* tab,
       overlap = std::min(x1, cx1) - std::max(x0, cx0);
       break;
     default:
-      return false;
+      return nullptr;
     }
 
     if (distance < -slack || overlap <= 0)
@@ -1022,12 +1239,311 @@ terminal_tab_focus_pane(TerminalTab* tab,
     }
   }
 
+  return best;
+}
+
+/**
+ * terminal_tab_focus_pane:
+ * @tab: a #TerminalTab
+ * @direction: %GTK_DIR_LEFT, %GTK_DIR_RIGHT, %GTK_DIR_UP or %GTK_DIR_DOWN
+ *
+ * Moves the focus to the neighbouring pane in @direction. When several
+ * panes border the active one, the most recently used one wins.
+ *
+ * Returns: %true if the focus was moved
+ */
+bool
+terminal_tab_focus_pane(TerminalTab* tab,
+                        GtkDirectionType direction)
+{
+  g_return_val_if_fail(TERMINAL_IS_TAB(tab), false);
+
+  auto const best = tab_find_neighbor(tab, direction);
   if (!best)
     return false;
 
   tab_set_active_screen(tab, best);
   gtk_widget_grab_focus(GTK_WIDGET(best));
   return true;
+}
+
+/**
+ * terminal_tab_has_neighbor:
+ * @tab: a #TerminalTab
+ * @direction: %GTK_DIR_LEFT, %GTK_DIR_RIGHT, %GTK_DIR_UP or %GTK_DIR_DOWN
+ *
+ * Returns: whether there is a pane next to the active one in @direction
+ */
+bool
+terminal_tab_has_neighbor(TerminalTab* tab,
+                          GtkDirectionType direction)
+{
+  g_return_val_if_fail(TERMINAL_IS_TAB(tab), false);
+
+  return tab_find_neighbor(tab, direction) != nullptr;
+}
+
+/* Exchanges the places of two panes in the tree; the dividers stay */
+static void
+tab_swap_panes(TerminalTab* tab,
+               GtkWidget* a,
+               GtkWidget* b)
+{
+  auto const placeholder = gtk_label_new(nullptr);
+  auto const old_a = tab_replace_child(tab, a, placeholder);
+  auto const old_b = tab_replace_child(tab, b, a);
+  auto const old_placeholder = tab_replace_child(tab, placeholder, b);
+  g_object_unref(old_a);
+  g_object_unref(old_b);
+  g_object_unref(old_placeholder);
+}
+
+/**
+ * terminal_tab_swap_screens:
+ * @tab: a #TerminalTab
+ * @screen: a #TerminalScreen in @tab
+ * @other: another #TerminalScreen in @tab
+ *
+ * Exchanges the places of the panes of @screen and @other. The focus
+ * stays with the active pane.
+ */
+void
+terminal_tab_swap_screens(TerminalTab* tab,
+                          TerminalScreen* screen,
+                          TerminalScreen* other)
+{
+  g_return_if_fail(TERMINAL_IS_TAB(tab));
+
+  auto const pane = pane_from_screen(screen);
+  auto const other_pane = pane_from_screen(other);
+  g_return_if_fail(pane && other_pane && pane != other_pane);
+  g_return_if_fail(terminal_tab_get_from_screen(screen) == tab &&
+                   terminal_tab_get_from_screen(other) == tab);
+
+  terminal_tab_set_zoomed(tab, false);
+
+  auto const focus = tab_release_focus(tab, tab->root);
+  tab_swap_panes(tab, GTK_WIDGET(pane), GTK_WIDGET(other_pane));
+  tab_restore_focus(focus);
+  tab_update_panes(tab);
+}
+
+/**
+ * terminal_tab_swap_pane:
+ * @tab: a #TerminalTab
+ * @direction: %GTK_DIR_LEFT, %GTK_DIR_RIGHT, %GTK_DIR_UP or %GTK_DIR_DOWN
+ *
+ * Exchanges the active pane with its neighbour in @direction, see
+ * terminal_tab_focus_pane(). The active pane keeps the focus.
+ *
+ * Returns: %true if the panes were swapped
+ */
+bool
+terminal_tab_swap_pane(TerminalTab* tab,
+                       GtkDirectionType direction)
+{
+  g_return_val_if_fail(TERMINAL_IS_TAB(tab), false);
+
+  auto const neighbor = tab_find_neighbor(tab, direction);
+  if (!neighbor)
+    return false;
+
+  terminal_tab_swap_screens(tab, tab->active_screen, neighbor);
+  return true;
+}
+
+/* Puts @widget, a pane or a tree of panes without a parent, next to the
+ * pane of @target, on @side of it; the two share its space. */
+static void
+tab_insert_beside(TerminalTab* tab,
+                  TerminalScreen* target,
+                  GtkWidget* widget,
+                  GtkPositionType side)
+{
+  auto const pane = pane_from_screen(target);
+  g_return_if_fail(pane != nullptr);
+
+  terminal_tab_set_zoomed(tab, false);
+
+  auto const orientation = side == GTK_POS_LEFT || side == GTK_POS_RIGHT
+    ? GTK_ORIENTATION_HORIZONTAL : GTK_ORIENTATION_VERTICAL;
+  auto const size = orientation == GTK_ORIENTATION_HORIZONTAL
+    ? gtk_widget_get_width(GTK_WIDGET(pane))
+    : gtk_widget_get_height(GTK_WIDGET(pane));
+
+  auto const paned = GTK_PANED(gtk_paned_new(orientation));
+  gtk_paned_set_resize_start_child(paned, true);
+  gtk_paned_set_resize_end_child(paned, true);
+  gtk_paned_set_shrink_start_child(paned, false);
+  gtk_paned_set_shrink_end_child(paned, false);
+
+  auto const focus = tab_release_focus(tab, GTK_WIDGET(pane));
+  auto const old_pane = tab_replace_child(tab, GTK_WIDGET(pane), GTK_WIDGET(paned));
+  auto const before = side == GTK_POS_LEFT || side == GTK_POS_TOP;
+  gtk_paned_set_start_child(paned, before ? widget : old_pane);
+  gtk_paned_set_end_child(paned, before ? old_pane : widget);
+  g_object_unref(old_pane);
+  tab_restore_focus(focus);
+
+  paned_set_fraction(paned, 0.5, size);
+}
+
+/* Shows or hides the terminals of the panes in @widget with the tab, see
+ * terminal_tab_set_active() */
+static void
+tab_sync_pane_visibility(TerminalTab* tab,
+                         GtkWidget* widget)
+{
+  GList* screens = nullptr;
+  collect_screens(widget, &screens);
+  for (auto l = screens; l; l = l->next) {
+    if (auto const pane = pane_from_screen(reinterpret_cast<TerminalScreen*>(l->data)))
+      gtk_widget_set_visible(pane->scrolled_window, tab->active);
+  }
+  g_list_free(screens);
+}
+
+/**
+ * terminal_tab_insert_screen:
+ * @tab: a #TerminalTab
+ * @target: a #TerminalScreen in @tab
+ * @screen: a #TerminalScreen without a parent, for example from
+ *   terminal_tab_take_screen()
+ * @side: where to put @screen
+ *
+ * Splits the pane of @target and puts @screen on @side of it.
+ */
+void
+terminal_tab_insert_screen(TerminalTab* tab,
+                           TerminalScreen* target,
+                           TerminalScreen* screen,
+                           GtkPositionType side)
+{
+  g_return_if_fail(TERMINAL_IS_TAB(tab));
+  g_return_if_fail(TERMINAL_IS_SCREEN(screen));
+  g_return_if_fail(gtk_widget_get_parent(GTK_WIDGET(screen)) == nullptr);
+  g_return_if_fail(terminal_tab_get_from_screen(target) == tab);
+
+  auto const pane = terminal_pane_new(screen, tab->active);
+  tab_insert_beside(tab, target, GTK_WIDGET(pane), side);
+
+  tab_track_screen(tab, screen);
+  tab_update_panes(tab);
+  g_signal_emit(tab, signals[SCREEN_ADDED], 0, screen);
+}
+
+/**
+ * terminal_tab_pick_drop:
+ * @tab: a #TerminalTab
+ * @widget: the widget of @x, @y
+ * @where: (out): where a dropped tab would go
+ *
+ * For drops that the panes do not get themselves: libadwaita keeps a tab
+ * dragged from a tab bar away from the content of the tab view.
+ *
+ * Returns: (nullable): the screen of the pane at @x, @y
+ */
+TerminalScreen*
+terminal_tab_pick_drop(TerminalTab* tab,
+                       GtkWidget* widget,
+                       double x,
+                       double y,
+                       TerminalPaneDrop* where)
+{
+  g_return_val_if_fail(TERMINAL_IS_TAB(tab), nullptr);
+
+  auto const widget_point = GRAPHENE_POINT_INIT(float(x), float(y));
+  graphene_point_t point;
+  if (!gtk_widget_compute_point(widget, GTK_WIDGET(tab), &widget_point, &point))
+    return nullptr;
+
+  // The children do not take pointer input during the drag
+  auto const picked = gtk_widget_pick(GTK_WIDGET(tab), point.x, point.y,
+                                      GTK_PICK_NON_TARGETABLE);
+  auto const pane = picked
+    ? TERMINAL_PANE(gtk_widget_get_ancestor(picked, TERMINAL_TYPE_PANE))
+    : nullptr;
+  if (!pane || !pane->screen)
+    return nullptr;
+
+  graphene_point_t pane_point;
+  if (!gtk_widget_compute_point(GTK_WIDGET(tab), GTK_WIDGET(pane), &point, &pane_point))
+    return nullptr;
+
+  auto const zone = pane_drop_zone(pane, nullptr, pane_point.x, pane_point.y);
+  if (zone < 0)
+    return nullptr;
+
+  *where = TerminalPaneDrop(zone);
+  return pane->screen;
+}
+
+/**
+ * terminal_tab_show_drop_indicator:
+ * @screen: a #TerminalScreen
+ * @where: where a drop would go, or -1 to hide the indicator
+ */
+void
+terminal_tab_show_drop_indicator(TerminalScreen* screen,
+                                 int where)
+{
+  if (auto const pane = pane_from_screen(screen))
+    pane_show_drop_indicator(pane, where);
+}
+
+/**
+ * terminal_tab_merge:
+ * @tab: a #TerminalTab
+ * @target: a #TerminalScreen in @tab
+ * @other: another #TerminalTab
+ *
+ * Moves all panes of @other, as they are arranged, next to the pane of
+ * @target, on @side of it. @other is left without panes, to be closed.
+ */
+void
+terminal_tab_merge(TerminalTab* tab,
+                   TerminalScreen* target,
+                   TerminalTab* other,
+                   GtkPositionType side)
+{
+  g_return_if_fail(TERMINAL_IS_TAB(tab));
+  g_return_if_fail(TERMINAL_IS_TAB(other));
+  g_return_if_fail(tab != other && other->root != nullptr);
+  g_return_if_fail(terminal_tab_get_from_screen(target) == tab);
+
+  // The window of @other may close when its last screen goes
+  g_object_ref(other);
+
+  auto const screens = terminal_tab_list_screens(other);
+  terminal_tab_set_zoomed(other, false);
+  for (auto l = screens; l; l = l->next)
+    tab_untrack_screen(other, reinterpret_cast<TerminalScreen*>(l->data));
+  other->active_screen = nullptr;
+  g_binding_group_set_source(other->bindings, nullptr);
+
+  // The caller moves the focus to the moved panes
+  if (auto const focus = tab_release_focus(other, other->root))
+    g_object_unref(focus);
+
+  auto const root = GTK_WIDGET(g_object_ref(other->root));
+  gtk_widget_unparent(root);
+  other->root = nullptr;
+
+  // Announce the screens as gone only now that @other has none left
+  for (auto l = screens; l; l = l->next)
+    g_signal_emit(other, signals[SCREEN_REMOVED], 0, l->data);
+  g_object_unref(other);
+
+  tab_insert_beside(tab, target, root, side);
+  g_object_unref(root);
+  tab_sync_pane_visibility(tab, root);
+
+  for (auto l = screens; l; l = l->next) {
+    tab_track_screen(tab, reinterpret_cast<TerminalScreen*>(l->data));
+    g_signal_emit(tab, signals[SCREEN_ADDED], 0, l->data);
+  }
+  tab_update_panes(tab);
+  g_list_free(screens);
 }
 
 /**

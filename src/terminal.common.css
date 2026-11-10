@@ -163,6 +163,13 @@ terminal-pane:not(.inactive) > .pane-title
   font-weight: bold;
 }
 
+/* Where a pane or tab dragged over a pane would go */
+terminal-pane .pane-drop-indicator
+{
+  background-color: alpha(@accent_bg_color, 0.25);
+  border: 2px solid @accent_bg_color;
+}
+
 /* The hint at the bottom of a terminal during quick select */
 .quick-select-hint
 {
