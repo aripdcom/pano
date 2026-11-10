@@ -44,7 +44,8 @@
     <item>
       <title><key>F10</key></title>
       <p>Opens the main menu. Use the arrow keys to move in it and
-      <key>Enter</key> to select. Programs in the terminal, such as
+      <key>Enter</key> to select. In fullscreen, where the header bar is
+      hidden, it opens the context menu of the terminal instead. Programs in the terminal, such as
       <app>mc</app>, may want this key; to give it to them, open the
       <gui>Preferences</gui> and turn off <gui>Accelerator Key (F10 by
       default)</gui> in the <gui>Keyboard Shortcuts</gui> group.</p>

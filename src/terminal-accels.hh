@@ -24,6 +24,7 @@ G_BEGIN_DECLS
 
 void terminal_accels_init (GApplication *application,
                            GSettings *settings,
+                           GSettings *app_settings,
                            gboolean use_headerbar);
 
 void terminal_accels_shutdown (void);

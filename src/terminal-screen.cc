@@ -2334,6 +2334,11 @@ terminal_screen_class_init (TerminalScreenClass *klass)
                                    "menu.popup",
                                    nullptr,
                                    terminal_screen_menu_popup_action);
+  /* GTK 4 does not bind the keys that open a context menu by itself */
+  gtk_widget_class_add_binding_action (widget_class, GDK_KEY_Menu, GdkModifierType(0),
+                                       "menu.popup", nullptr);
+  gtk_widget_class_add_binding_action (widget_class, GDK_KEY_F10, GDK_SHIFT_MASK,
+                                       "menu.popup", nullptr);
 
   gtk_widget_class_set_template_from_resource (widget_class, "/com/aripd/pano/ui/screen.ui");
 

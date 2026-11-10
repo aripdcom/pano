@@ -295,6 +295,7 @@ enum
 
 static GHashTable *settings_key_to_entry;
 static GSettings *keybinding_settings = nullptr;
+static GSettings *global_settings = nullptr;
 
 GS_DEFINE_CLEANUP_FUNCTION(GtkTreePath*, _terminal_local_free_tree_path, gtk_tree_path_free)
 #define terminal_free_tree_path __attribute__((__cleanup__(_terminal_local_free_tree_path)))
@@ -305,7 +306,7 @@ key_changed_cb (GSettings *settings,
                 gpointer user_data)
 {
   GtkApplication *application = (GtkApplication*)user_data;
-  const gchar *accels[2] = { nullptr, nullptr };
+  const gchar *accels[3] = { nullptr, nullptr, nullptr };
 
   _terminal_debug_print (TERMINAL_DEBUG_ACCELS,
                          "key %s changed\n",
@@ -338,11 +339,15 @@ key_changed_cb (GSettings *settings,
    * the real action and gets activated when the shadowed action is disabled.
    */
 
-  if (g_str_equal (value, "disabled")) {
-    accels[0] = nullptr;
-  } else {
-    accels[0] = value;
-  }
+  auto n_accels = 0;
+  if (!g_str_equal (value, "disabled"))
+    accels[n_accels++] = value;
+
+  /* F10 opens the main menu too, unless turned off in the preferences */
+  if (g_str_equal (settings_key, KEY_HEADER_MENU) &&
+      global_settings &&
+      g_settings_get_boolean (global_settings, TERMINAL_SETTING_ENABLE_MENU_BAR_ACCEL_KEY))
+    accels[n_accels++] = "F10";
 
   gtk_application_set_accels_for_action (application,
                                          detailed,
@@ -379,14 +384,24 @@ add_accel_entries (GApplication*application,
   }
 }
 
+static void
+menu_accel_changed_cb (GSettings *settings,
+                       const char *key,
+                       gpointer user_data)
+{
+  key_changed_cb (keybinding_settings, KEY_HEADER_MENU, user_data);
+}
+
 void
 terminal_accels_init (GApplication *application,
                       GSettings *settings,
+                      GSettings *app_settings,
                       gboolean use_headerbar)
 {
   guint i, j;
 
   keybinding_settings = (GSettings*)g_object_ref (settings);
+  global_settings = (GSettings*)g_object_ref (app_settings);
 
   settings_key_to_entry = g_hash_table_new (g_str_hash, g_str_equal);
 
@@ -411,6 +426,9 @@ terminal_accels_init (GApplication *application,
   }
 
   g_signal_connect (keybinding_settings, "changed", G_CALLBACK (key_changed_cb), application);
+  g_signal_connect (global_settings,
+                    "changed::" TERMINAL_SETTING_ENABLE_MENU_BAR_ACCEL_KEY,
+                    G_CALLBACK (menu_accel_changed_cb), application);
 }
 
 /**
@@ -465,8 +483,13 @@ terminal_accels_shutdown (void)
                                         (void*)key_changed_cb,
                                         g_application_get_default ());
 
+  g_signal_handlers_disconnect_by_func (global_settings,
+                                        (void*)menu_accel_changed_cb,
+                                        g_application_get_default ());
+
   g_clear_pointer (&settings_key_to_entry, (GDestroyNotify) g_hash_table_unref);
   g_clear_object (&keybinding_settings);
+  g_clear_object (&global_settings);
 }
 
 GSettings *

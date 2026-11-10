@@ -135,6 +135,9 @@ struct _TerminalWindow
 
   guint focus_active_tab_source;
 
+  /* Gives the focus back to the terminal after a menu closed */
+  guint refocus_idle;
+
   guint disposed : 1;
   guint present_on_insert : 1;
   guint tab_overview_animating : 1;
@@ -870,6 +873,57 @@ action_focus_tab_list_cb(GSimpleAction* action,
 {
   auto const window = TERMINAL_WINDOW(user_data);
   terminal_tab_sidebar_focus_list(window->tab_sidebar);
+}
+
+/* After a menu closes, GTK gives the focus to the button that opened it,
+ * or to the first button of the header bar for the context menu, so that
+ * Enter or Space would then open a tab. Give it back to the terminal,
+ * unless the menu item has moved it elsewhere, such as into a dialog or
+ * the search bar.
+ */
+static gboolean
+refocus_terminal_idle_cb(gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  window->refocus_idle = 0;
+
+  if (window->disposed || !window->active_screen)
+    return G_SOURCE_REMOVE;
+
+  auto const focus = gtk_root_get_focus(GTK_ROOT(window));
+  if (!focus ||
+      gtk_widget_is_ancestor(focus, GTK_WIDGET(window->headerbar)) ||
+      (window->context_menu &&
+       (focus == GTK_WIDGET(window->context_menu) ||
+        gtk_widget_is_ancestor(focus, GTK_WIDGET(window->context_menu)))))
+    gtk_widget_grab_focus(GTK_WIDGET(window->active_screen));
+
+  return G_SOURCE_REMOVE;
+}
+
+static void
+menu_closed_cb(GtkPopover* popover,
+               TerminalWindow* window)
+{
+  if (window->refocus_idle == 0)
+    window->refocus_idle = g_idle_add(refocus_terminal_idle_cb, window);
+}
+
+/* F10 and the Show Primary Menu shortcut. In fullscreen, where the header
+ * bar is hidden, the context menu of the terminal opens instead.
+ */
+static void
+action_header_menu_cb(GSimpleAction* action,
+                      GVariant* parameter,
+                      gpointer user_data)
+{
+  auto const window = TERMINAL_WINDOW(user_data);
+  if (adw_toolbar_view_get_reveal_top_bars(window->toolbar_view) &&
+      terminal_headerbar_popup_menu(window->headerbar))
+    return;
+
+  if (window->active_screen)
+    gtk_widget_activate_action(GTK_WIDGET(window->active_screen), "menu.popup", nullptr);
 }
 
 static void
@@ -3203,6 +3257,7 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
 
   if (window->context_menu == nullptr) {
     window->context_menu = GTK_POPOVER_MENU (gtk_popover_menu_new_from_model (nullptr));
+    g_signal_connect (window->context_menu, "closed", G_CALLBACK (menu_closed_cb), window);
     gtk_popover_set_has_arrow (GTK_POPOVER (window->context_menu), FALSE);
     gtk_popover_set_position (GTK_POPOVER (window->context_menu), GTK_POS_BOTTOM);
     gtk_widget_set_halign (GTK_WIDGET (window->context_menu), GTK_ALIGN_START);
@@ -3854,10 +3909,10 @@ terminal_window_init (TerminalWindow *window)
     { "shadow-prompt",       action_shadow_activate_cb,  "s",    nullptr, nullptr },
     { "shadow-tablist",      action_shadow_activate_cb,  "s",    nullptr, nullptr },
     { "focus-tab-list",      action_focus_tab_list_cb,   nullptr,   nullptr, nullptr },
+    { "header-menu",         action_header_menu_cb,      nullptr,   nullptr, nullptr },
 
     /* Actions with state */
     { "active-tab",          action_active_tab_set_cb,   "i",  "@i 0",    action_active_tab_state_cb      },
-    { "header-menu",         nullptr /* toggles state */,   nullptr, "false",   nullptr },
     { "fullscreen",          nullptr /* toggles state */,   nullptr, "false",   action_fullscreen_state_cb      },
     { "profile",             nullptr /* changes state */,   "s",  "''",      action_profile_state_cb         },
     { "read-only",           nullptr /* toggles state */,   nullptr, "false",   action_read_only_state_cb       },
@@ -3911,6 +3966,9 @@ terminal_window_init (TerminalWindow *window)
   window->uuid = g_strdup (uuidstr);
 
   gtk_widget_init_template (GTK_WIDGET (window));
+
+  terminal_headerbar_connect_menus_closed (window->headerbar,
+                                           G_CALLBACK (menu_closed_cb), window);
 
   /* GAction setup */
   g_action_map_add_action_entries (G_ACTION_MAP (window),
@@ -4217,6 +4275,7 @@ terminal_window_dispose (GObject *object)
 
   g_clear_pointer ((GtkWidget **)&window->context_menu, gtk_widget_unparent);
   g_clear_handle_id (&window->fullscreen_transition, g_source_remove);
+  g_clear_handle_id (&window->refocus_idle, g_source_remove);
   g_clear_handle_id(&window->focus_active_tab_source, g_source_remove);
 
   if (window->clipboard != nullptr) {

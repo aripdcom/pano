@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:34+0300\n"
+"POT-Creation-Date: 2026-11-10 23:28+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -1336,11 +1336,11 @@ msgstr "Başa _sar"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr "<b>%s</b> ögesini değiştirmek için yeni kısayolu girin."
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2553
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2607
 msgid "_Cancel"
 msgstr "İ_ptal"
 
-#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2554
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2608
 msgid "_Set"
 msgstr "_Ayarla"
 
@@ -1361,7 +1361,7 @@ msgstr "Kısayolu Ayarla"
 msgid "New Tab"
 msgstr "Yeni Sekme"
 
-#: src/terminal-accels.cc:150 src/terminal-window.cc:603
+#: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
 msgstr "İçeriği Kaydet"
 
@@ -1438,7 +1438,7 @@ msgstr "Hızlı Seçim"
 msgid "Read-Only"
 msgstr "Salt Okunur"
 
-#: src/terminal-accels.cc:183 src/terminal-window.cc:2550
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2604
 msgid "Set Title"
 msgstr "Başlığı Ayarla"
 
@@ -1623,7 +1623,7 @@ msgstr "Yardım"
 msgid "Global"
 msgstr "Genel"
 
-#: src/terminal-accels.cc:402
+#: src/terminal-accels.cc:417
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "%u. Sekmeye Geç"
@@ -1636,36 +1636,36 @@ msgstr "Yeni Uçbirim"
 msgid "_Profile"
 msgstr "_Profil"
 
-#: src/terminal-app.cc:1347
+#: src/terminal-app.cc:1350
 #, c-format
 msgid "%u s"
 msgstr "%u sn"
 
-#: src/terminal-app.cc:1349
+#: src/terminal-app.cc:1352
 #, c-format
 msgid "%u min %u s"
 msgstr "%u dk %u sn"
 
-#: src/terminal-app.cc:1350
+#: src/terminal-app.cc:1353
 #, c-format
 msgid "%u h %u min"
 msgstr "%u sa %u dk"
 
-#: src/terminal-app.cc:1376
+#: src/terminal-app.cc:1379
 #, c-format
 msgid "Finished after %s"
 msgstr "%s sonra bitti"
 
-#: src/terminal-app.cc:1377
+#: src/terminal-app.cc:1380
 #, c-format
 msgid "Failed with exit status %u after %s"
 msgstr "%u çıkış durumuyla, %s sonra başarısız oldu"
 
-#: src/terminal-app.cc:1387
+#: src/terminal-app.cc:1390
 msgid "Command finished"
 msgstr "Komut bitti"
 
-#: src/terminal-app.cc:1387
+#: src/terminal-app.cc:1390
 msgid "Command failed"
 msgstr "Komut başarısız oldu"
 
@@ -1793,6 +1793,10 @@ msgstr "Hızlı uçbirimin kısayolunun oturum açtıktan sonra çalışmasını
 msgid "New Tab from Profile"
 msgstr "Profilden Yeni Sekme"
 
+#: src/terminal-headerbar.ui:49
+msgid "Main Menu"
+msgstr "Ana Menü"
+
 #: src/terminal-headerbar.ui:57
 msgid "Show Open Tabs"
 msgstr "Açık Sekmeleri Göster"
@@ -1809,7 +1813,7 @@ msgstr "Yakınlaştırmayı _Sıfırla"
 msgid "Zoom _In"
 msgstr "_Yakınlaştır"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3187
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3241
 msgid "New _Window"
 msgstr "Yeni Pe_ncere"
 
@@ -1817,31 +1821,31 @@ msgstr "Yeni Pe_ncere"
 msgid "Re_open Closed Tab"
 msgstr "Kapatılan Sekmeyi _Yeniden Aç"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3116
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3170
 msgid "Split _Right"
 msgstr "_Sağa Böl"
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3119
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3173
 msgid "Split _Down"
 msgstr "_Aşağı Böl"
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3173
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3227
 msgid "_Broadcast Input"
 msgstr "Girdiyi _Yay"
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3159
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3213
 msgid "_Off"
 msgstr "_Kapalı"
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3160
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3214
 msgid "To All Panes in This _Tab"
 msgstr "Bu _Sekmedeki Tüm Bölmelere"
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3161
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3215
 msgid "To All Terminals in This _Window"
 msgstr "Bu _Penceredeki Tüm Uçbirimlere"
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3170
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3224
 msgid "_Include This Terminal"
 msgstr "Bu Uçbirimi _Dahil Et"
 
@@ -1849,7 +1853,7 @@ msgstr "Bu Uçbirimi _Dahil Et"
 msgid "_Full Screen"
 msgstr "_Tam Ekran"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3096
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3150
 msgid "Read-_Only"
 msgstr "Salt-_Okunur"
 
@@ -1893,8 +1897,8 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_İnceleyici"
 
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3571
-#: src/terminal-window.cc:3110
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3576
+#: src/terminal-window.cc:3164
 msgid "_Preferences"
 msgstr "_Tercihler"
 
@@ -1954,8 +1958,8 @@ msgstr "Uçbirimi Sa_ğa Taşı"
 msgid "_Detach Terminal"
 msgstr "Uçbirimi _Ayır"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5163
-#: src/terminal-window.cc:5173
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5256
+#: src/terminal-window.cc:5266
 msgid "C_lose Terminal"
 msgstr "_Uçbirimi Kapat"
 
@@ -2270,7 +2274,7 @@ msgstr[0] "“%s” içe aktarıldı, %u ayar atlandı"
 msgid "Import Profile"
 msgstr "Profili İçe Aktar"
 
-#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3521
+#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3576
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2632,7 +2636,7 @@ msgstr "GNOME Uçbirim’den İçe Aktar"
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr "Profillerini, klavye kısayollarını ve tercihlerini kopyala"
 
-#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3552
+#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3607
 msgid "_Import"
 msgstr "İçe _Aktar"
 
@@ -3237,29 +3241,29 @@ msgstr ""
 "Kopyalamak için etiketi yazın · yapıştırmak için Shift ile · açmak için Ctrl "
 "ile · iptal için Esc"
 
-#: src/terminal-screen.cc:3352
+#: src/terminal-screen.cc:3357
 msgid "No command supplied nor shell requested"
 msgstr "Ne bir komut sağlandı ne de kabuk istendi"
 
-#: src/terminal-screen.cc:3572 src/terminal-screen.cc:3964
+#: src/terminal-screen.cc:3577 src/terminal-screen.cc:3969
 msgid "_Relaunch"
 msgstr "_Yeniden başlat"
 
-#: src/terminal-screen.cc:3575
+#: src/terminal-screen.cc:3580
 msgid "There was an error creating the child process for this terminal"
 msgstr "Bu uçbirim için çocuk süreç oluştururken hata oluştu"
 
-#: src/terminal-screen.cc:3968
+#: src/terminal-screen.cc:3973
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Çocuk süreç %d durum kodu ile olağan biçimde çıkış yaptı."
 
-#: src/terminal-screen.cc:3971
+#: src/terminal-screen.cc:3976
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Çocuk süreç %d sinyaliyle iptal edildi."
 
-#: src/terminal-screen.cc:3974
+#: src/terminal-screen.cc:3979
 msgid "The child process was aborted."
 msgstr "Çocuk süreç iptal edildi."
 
@@ -3342,50 +3346,50 @@ msgid "“file” scheme with remote hostname not supported"
 msgstr "Uzak anamakine adıyla “file” şeması desteklenmiyor"
 
 #. Translators: %s is an error message
-#: src/terminal-window.cc:540 src/terminal-window.cc:579
+#: src/terminal-window.cc:543 src/terminal-window.cc:582
 #, c-format
 msgid "Could not save the contents: %s"
 msgstr "İçerik kaydedilemedi: %s"
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:547
+#: src/terminal-window.cc:550
 #, c-format
 msgid "Saved “%s”"
 msgstr "“%s” kaydedildi"
 
-#: src/terminal-window.cc:799
+#: src/terminal-window.cc:802
 msgid "Copied to clipboard"
 msgstr "Panoya kopyalandı"
 
-#: src/terminal-window.cc:1203
+#: src/terminal-window.cc:1257
 msgid "Tab closed"
 msgstr "Sekme kapatıldı"
 
-#: src/terminal-window.cc:1204
+#: src/terminal-window.cc:1258
 msgid "_Undo"
 msgstr "_Geri Al"
 
-#: src/terminal-window.cc:1342
+#: src/terminal-window.cc:1396
 msgid "Broadcasting input, but no terminal takes part"
 msgstr "Girdi yayılıyor, ama hiçbir uçbirim katılmıyor"
 
-#: src/terminal-window.cc:1344
+#: src/terminal-window.cc:1398
 #, c-format
 msgid "Input goes to %u terminal"
 msgid_plural "Input goes to %u terminals"
 msgstr[0] "Girdi %u uçbirime gidiyor"
 
-#: src/terminal-window.cc:1681
+#: src/terminal-window.cc:1735
 msgid "Nothing to select"
 msgstr "Seçilecek bir şey yok"
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:1724
+#: src/terminal-window.cc:1778
 #, c-format
 msgid "“%s” does not exist"
 msgstr "“%s” yok"
 
-#: src/terminal-window.cc:2551
+#: src/terminal-window.cc:2605
 msgid ""
 "Programs cannot change this title. Leave it empty to show the title from the "
 "program again."
@@ -3393,11 +3397,11 @@ msgstr ""
 "Programlar bu başlığı değiştiremez. Programın başlığını yeniden göstermek "
 "için boş bırakın."
 
-#: src/terminal-window.cc:2761
+#: src/terminal-window.cc:2815
 msgid "Activity in a terminal"
 msgstr "Uçbirimde etkinlik"
 
-#: src/terminal-window.cc:2796
+#: src/terminal-window.cc:2850
 #, c-format
 msgid ""
 "%s\n"
@@ -3409,162 +3413,162 @@ msgstr[0] ""
 "%s\n"
 "%u saniyedir çıktı yok"
 
-#: src/terminal-window.cc:2801
+#: src/terminal-window.cc:2855
 msgid "Silence in a terminal"
 msgstr "Uçbirimde sessizlik"
 
-#: src/terminal-window.cc:3020
+#: src/terminal-window.cc:3074
 msgid "Open _Hyperlink"
 msgstr "K_öprüyü Aç"
 
-#: src/terminal-window.cc:3021
+#: src/terminal-window.cc:3075
 msgid "Copy Hyperlink _Address"
 msgstr "Köprü _Adresini Kopyala"
 
-#: src/terminal-window.cc:3031
+#: src/terminal-window.cc:3085
 msgid "Send Mail _To…"
 msgstr "_Posta Gönder…"
 
-#: src/terminal-window.cc:3032
+#: src/terminal-window.cc:3086
 msgid "Copy Mail _Address"
 msgstr "_Posta Adresini Kopyala"
 
-#: src/terminal-window.cc:3035
+#: src/terminal-window.cc:3089
 msgid "Call _To…"
 msgstr "_Çağrı…"
 
-#: src/terminal-window.cc:3036
+#: src/terminal-window.cc:3090
 msgid "Copy Call _Address "
 msgstr "Çağrı _Adresini Kopyala "
 
-#: src/terminal-window.cc:3041
+#: src/terminal-window.cc:3095
 msgid "_Open Link"
 msgstr "Bağlantıyı _Aç"
 
-#: src/terminal-window.cc:3042
+#: src/terminal-window.cc:3096
 msgid "Copy _Link"
 msgstr "Ba_ğlantıyı Kopyala"
 
-#: src/terminal-window.cc:3081
+#: src/terminal-window.cc:3135
 msgid "_Copy"
 msgstr "_Kopyala"
 
-#: src/terminal-window.cc:3082
+#: src/terminal-window.cc:3136
 msgid "Copy as _HTML"
 msgstr "_HTML Olarak Kopyala"
 
-#: src/terminal-window.cc:3083
+#: src/terminal-window.cc:3137
 msgid "_Paste"
 msgstr "_Yapıştır"
 
-#: src/terminal-window.cc:3086
+#: src/terminal-window.cc:3140
 msgid "Copy _Output of This Command"
 msgstr "Bu Komutun _Çıktısını Kopyala"
 
-#: src/terminal-window.cc:3088
+#: src/terminal-window.cc:3142
 msgid "Copy _Output of Last Command"
 msgstr "Son Komutun _Çıktısını Kopyala"
 
-#: src/terminal-window.cc:3090
+#: src/terminal-window.cc:3144
 msgid "Paste as _Filenames"
 msgstr "_Dosya Adları Olarak Yapıştır"
 
-#: src/terminal-window.cc:3097
+#: src/terminal-window.cc:3151
 msgid "Monitor for _Activity"
 msgstr "_Etkinliği İzle"
 
-#: src/terminal-window.cc:3098
+#: src/terminal-window.cc:3152
 msgid "Monitor for _Silence"
 msgstr "_Sessizliği İzle"
 
-#: src/terminal-window.cc:3105
+#: src/terminal-window.cc:3159
 msgid "P_rofiles"
 msgstr "P_rofiller"
 
-#: src/terminal-window.cc:3123
+#: src/terminal-window.cc:3177
 msgid "_Zoom Pane"
 msgstr "Bölmeyi _Büyüt"
 
-#: src/terminal-window.cc:3124
+#: src/terminal-window.cc:3178
 msgid "Make Panes the Same _Size"
 msgstr "Bölmeleri Aynı _Boyuta Getir"
 
-#: src/terminal-window.cc:3127
+#: src/terminal-window.cc:3181
 msgid "To a New _Tab"
 msgstr "Yeni Bir _Sekmeye"
 
-#: src/terminal-window.cc:3130
+#: src/terminal-window.cc:3184
 msgid "To a New _Window"
 msgstr "Yeni Bir Pe_ncereye"
 
-#: src/terminal-window.cc:3135
+#: src/terminal-window.cc:3189
 msgid "Swap With the Pane on the _Left"
 msgstr "_Soldaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3136
+#: src/terminal-window.cc:3190
 msgid "Swap With the Pane on the _Right"
 msgstr "_Sağdaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3137
+#: src/terminal-window.cc:3191
 msgid "Swap With the Pane _Above"
 msgstr "_Üstteki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3138
+#: src/terminal-window.cc:3192
 msgid "Swap With the Pane _Below"
 msgstr "_Alttaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3152
+#: src/terminal-window.cc:3206
 msgid "_Move Pane"
 msgstr "Bölmeyi _Taşı"
 
-#: src/terminal-window.cc:3154
+#: src/terminal-window.cc:3208
 msgid "Close P_ane"
 msgstr "Bölmeyi _Kapat"
 
-#: src/terminal-window.cc:3182
+#: src/terminal-window.cc:3236
 msgid "New _Terminal"
 msgstr "Yeni _Uçbirim"
 
-#: src/terminal-window.cc:3191
+#: src/terminal-window.cc:3245
 msgid "New _Tab"
 msgstr "Yeni _Sekme"
 
-#: src/terminal-window.cc:3201
+#: src/terminal-window.cc:3255
 msgid "Leave Full Screen"
 msgstr "Tam Ekrandan Çık"
 
-#: src/terminal-window.cc:3547
+#: src/terminal-window.cc:3602
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 "Profilleriniz, klavye kısayollarınız ve tercihleriniz GNOME Uçbirim’den içe "
 "aktarılsın mı?"
 
-#: src/terminal-window.cc:3553 src/terminal-window.cc:3950
+#: src/terminal-window.cc:3608 src/terminal-window.cc:4008
 msgid "_No"
 msgstr "_Hayır"
 
-#: src/terminal-window.cc:3944
+#: src/terminal-window.cc:4002
 msgid "Set Pano Terminal as your default terminal?"
 msgstr "Pano Terminal öntanımlı uçbiriminiz olarak ayarlansın mı?"
 
-#: src/terminal-window.cc:3949
+#: src/terminal-window.cc:4007
 msgid "_Yes"
 msgstr "_Evet"
 
-#: src/terminal-window.cc:4019
+#: src/terminal-window.cc:4077
 msgid "_Stop"
 msgstr "_Durdur"
 
-#: src/terminal-window.cc:5157
+#: src/terminal-window.cc:5250
 msgid "Close the other terminals?"
 msgstr "Diğer uçbirimler kapatılsın mı?"
 
-#: src/terminal-window.cc:5157
+#: src/terminal-window.cc:5250
 msgid "Close the other terminal?"
 msgstr "Diğer uçbirim kapatılsın mı?"
 
-#: src/terminal-window.cc:5159
+#: src/terminal-window.cc:5252
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
@@ -3572,7 +3576,7 @@ msgstr ""
 "Diğer uçbirimlerin bazılarında hâlâ çalışan süreçler var. Onları kapatmak "
 "tümünü sonlandırır."
 
-#: src/terminal-window.cc:5161
+#: src/terminal-window.cc:5254
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
@@ -3580,15 +3584,15 @@ msgstr ""
 "Diğer uçbirimde hâlâ çalışan bir süreç var. Uçbirimi kapatmak onu "
 "sonlandırır."
 
-#: src/terminal-window.cc:5163
+#: src/terminal-window.cc:5256
 msgid "C_lose Terminals"
 msgstr "Uçbirimleri _Kapat"
 
-#: src/terminal-window.cc:5165
+#: src/terminal-window.cc:5258
 msgid "Close this window?"
 msgstr "Bu pencere kapatılsın mı?"
 
-#: src/terminal-window.cc:5166
+#: src/terminal-window.cc:5259
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3596,15 +3600,15 @@ msgstr ""
 "Bu penceredeki bazı uçbirimlerde çalışan süreçler var. Pencereyi kapatmak "
 "tümünü sonlandırır."
 
-#: src/terminal-window.cc:5168
+#: src/terminal-window.cc:5261
 msgid "C_lose Window"
 msgstr "_Pencereyi Kapat"
 
-#: src/terminal-window.cc:5170
+#: src/terminal-window.cc:5263
 msgid "Close this terminal?"
 msgstr "Bu uçbirim kapatılsın mı?"
 
-#: src/terminal-window.cc:5171
+#: src/terminal-window.cc:5264
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

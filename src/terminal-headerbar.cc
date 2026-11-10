@@ -120,3 +120,36 @@ terminal_headerbar_new (void)
   return reinterpret_cast<GtkWidget*>
     (g_object_new (TERMINAL_TYPE_HEADERBAR, nullptr));
 }
+
+/* Opens the main menu, if the header bar is shown */
+gboolean
+terminal_headerbar_popup_menu (TerminalHeaderbar *headerbar)
+{
+  g_return_val_if_fail (TERMINAL_IS_HEADERBAR (headerbar), FALSE);
+
+  if (!gtk_widget_is_drawable (headerbar->menubutton))
+    return FALSE;
+
+  gtk_menu_button_popup (GTK_MENU_BUTTON (headerbar->menubutton));
+  return TRUE;
+}
+
+/* Calls @callback (GtkPopover*, @user_data) when the main menu or the menu of
+ * profiles closes
+ */
+void
+terminal_headerbar_connect_menus_closed (TerminalHeaderbar *headerbar,
+                                         GCallback callback,
+                                         gpointer user_data)
+{
+  g_return_if_fail (TERMINAL_IS_HEADERBAR (headerbar));
+
+  GtkPopover *popovers[] = {
+    gtk_menu_button_get_popover (GTK_MENU_BUTTON (headerbar->menubutton)),
+    adw_split_button_get_popover (ADW_SPLIT_BUTTON (headerbar->profilebutton)),
+  };
+  for (auto popover : popovers) {
+    if (popover)
+      g_signal_connect_object (popover, "closed", callback, user_data, G_CONNECT_DEFAULT);
+  }
+}

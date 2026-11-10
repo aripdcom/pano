@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:34+0300\n"
+"POT-Creation-Date: 2026-11-10 23:28+0300\n"
 "PO-Revision-Date: 2024-02-05 23:00+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
@@ -1349,11 +1349,11 @@ msgstr "_Priėjus pabaigą, ieškoti nuo pradžios"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2553
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2607
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2554
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2608
 msgid "_Set"
 msgstr ""
 
@@ -1377,7 +1377,7 @@ msgstr "Trumpiniai"
 msgid "New Tab"
 msgstr "Nauja kortelė"
 
-#: src/terminal-accels.cc:150 src/terminal-window.cc:603
+#: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
 msgstr "Įrašyti turinį"
 
@@ -1460,7 +1460,7 @@ msgstr ""
 msgid "Read-Only"
 msgstr "Tik skaitymui"
 
-#: src/terminal-accels.cc:183 src/terminal-window.cc:2550
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2604
 #, fuzzy
 #| msgid "Set _Title…"
 msgid "Set Title"
@@ -1671,7 +1671,7 @@ msgstr "Pagalba"
 msgid "Global"
 msgstr "Visuotinis"
 
-#: src/terminal-accels.cc:402
+#: src/terminal-accels.cc:417
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Pereiti į kortelę %u"
@@ -1684,38 +1684,38 @@ msgstr "Naujas terminalas"
 msgid "_Profile"
 msgstr "_Profilis"
 
-#: src/terminal-app.cc:1347
+#: src/terminal-app.cc:1350
 #, c-format
 msgid "%u s"
 msgstr ""
 
-#: src/terminal-app.cc:1349
+#: src/terminal-app.cc:1352
 #, c-format
 msgid "%u min %u s"
 msgstr ""
 
-#: src/terminal-app.cc:1350
+#: src/terminal-app.cc:1353
 #, c-format
 msgid "%u h %u min"
 msgstr ""
 
-#: src/terminal-app.cc:1376
+#: src/terminal-app.cc:1379
 #, c-format
 msgid "Finished after %s"
 msgstr ""
 
-#: src/terminal-app.cc:1377
+#: src/terminal-app.cc:1380
 #, c-format
 msgid "Failed with exit status %u after %s"
 msgstr ""
 
-#: src/terminal-app.cc:1387
+#: src/terminal-app.cc:1390
 #, fuzzy
 #| msgid "Command"
 msgid "Command finished"
 msgstr "Komanda"
 
-#: src/terminal-app.cc:1387
+#: src/terminal-app.cc:1390
 #, fuzzy
 #| msgid "Command"
 msgid "Command failed"
@@ -1867,6 +1867,10 @@ msgstr ""
 msgid "New Tab from Profile"
 msgstr "Naujas profilis"
 
+#: src/terminal-headerbar.ui:49
+msgid "Main Menu"
+msgstr ""
+
 #: src/terminal-headerbar.ui:57
 #, fuzzy
 #| msgid "Open Ta_b"
@@ -1887,7 +1891,7 @@ msgstr "Atstatyti"
 msgid "Zoom _In"
 msgstr "_Padidinti"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3187
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3241
 msgid "New _Window"
 msgstr "Naujas _langas"
 
@@ -1897,33 +1901,33 @@ msgstr "Naujas _langas"
 msgid "Re_open Closed Tab"
 msgstr "Užverti kortelę"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3116
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3170
 msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3119
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3173
 msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3173
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3227
 msgid "_Broadcast Input"
 msgstr ""
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3159
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3213
 msgid "_Off"
 msgstr ""
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3160
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3214
 msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3161
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3215
 #, fuzzy
 #| msgid "New Terminal in New Window"
 msgid "To All Terminals in This _Window"
 msgstr "_Naujas terminalas naujame lange"
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3170
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3224
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "_Include This Terminal"
@@ -1933,7 +1937,7 @@ msgstr "Užverti terminalą?"
 msgid "_Full Screen"
 msgstr "_Visame ekrane"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3096
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3150
 msgid "Read-_Only"
 msgstr "Tik _skaitymui"
 
@@ -1977,8 +1981,8 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_Inspektorius"
 
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3571
-#: src/terminal-window.cc:3110
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3576
+#: src/terminal-window.cc:3164
 msgid "_Preferences"
 msgstr "_Nuostatos"
 
@@ -2045,8 +2049,8 @@ msgstr "Perkelti terminalą _dešinėn"
 msgid "_Detach Terminal"
 msgstr "_Atkabinti terminalą"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5163
-#: src/terminal-window.cc:5173
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5256
+#: src/terminal-window.cc:5266
 msgid "C_lose Terminal"
 msgstr "_Užverti terminalą"
 
@@ -2382,7 +2386,7 @@ msgstr[2] ""
 msgid "Import Profile"
 msgstr "Dubliuoti profilį"
 
-#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3521
+#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3576
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2759,7 +2763,7 @@ msgstr ""
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3552
+#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3607
 #, fuzzy
 #| msgid "Export"
 msgid "_Import"
@@ -3454,29 +3458,29 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3352
+#: src/terminal-screen.cc:3357
 msgid "No command supplied nor shell requested"
 msgstr "Nepateikta komanda bei neprašyta apvalkalo"
 
-#: src/terminal-screen.cc:3572 src/terminal-screen.cc:3964
+#: src/terminal-screen.cc:3577 src/terminal-screen.cc:3969
 msgid "_Relaunch"
 msgstr "_Paleisti iš naujo"
 
-#: src/terminal-screen.cc:3575
+#: src/terminal-screen.cc:3580
 msgid "There was an error creating the child process for this terminal"
 msgstr "Klaida bandant sukurti šio terminalo antrinį procesą"
 
-#: src/terminal-screen.cc:3968
+#: src/terminal-screen.cc:3973
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Antrinis procesas baigtas įprastai grąžinant būsena %d."
 
-#: src/terminal-screen.cc:3971
+#: src/terminal-screen.cc:3976
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Vaikinis procesas nutrauktas signalu %d."
 
-#: src/terminal-screen.cc:3974
+#: src/terminal-screen.cc:3979
 msgid "The child process was aborted."
 msgstr "Vaikinis procesas buvo nutrauktas."
 
@@ -3568,36 +3572,36 @@ msgid "“file” scheme with remote hostname not supported"
 msgstr "„file“ schema su nuotoliniu kompiuteriu nepalaikoma"
 
 #. Translators: %s is an error message
-#: src/terminal-window.cc:540 src/terminal-window.cc:579
+#: src/terminal-window.cc:543 src/terminal-window.cc:582
 #, fuzzy, c-format
 #| msgid "Could not save contents"
 msgid "Could not save the contents: %s"
 msgstr "Nepavyko įrašyti turinio"
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:547
+#: src/terminal-window.cc:550
 #, fuzzy, c-format
 #| msgid "Profile “%s”"
 msgid "Saved “%s”"
 msgstr "Profilis „%s“"
 
-#: src/terminal-window.cc:799
+#: src/terminal-window.cc:802
 msgid "Copied to clipboard"
 msgstr ""
 
-#: src/terminal-window.cc:1203
+#: src/terminal-window.cc:1257
 msgid "Tab closed"
 msgstr ""
 
-#: src/terminal-window.cc:1204
+#: src/terminal-window.cc:1258
 msgid "_Undo"
 msgstr ""
 
-#: src/terminal-window.cc:1342
+#: src/terminal-window.cc:1396
 msgid "Broadcasting input, but no terminal takes part"
 msgstr ""
 
-#: src/terminal-window.cc:1344
+#: src/terminal-window.cc:1398
 #, fuzzy, c-format
 #| msgid "Open a terminal"
 msgid "Input goes to %u terminal"
@@ -3606,29 +3610,29 @@ msgstr[0] "Atverti terminalą"
 msgstr[1] "Atverti terminalą"
 msgstr[2] "Atverti terminalą"
 
-#: src/terminal-window.cc:1681
+#: src/terminal-window.cc:1735
 msgid "Nothing to select"
 msgstr ""
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:1724
+#: src/terminal-window.cc:1778
 #, c-format
 msgid "“%s” does not exist"
 msgstr ""
 
-#: src/terminal-window.cc:2551
+#: src/terminal-window.cc:2605
 msgid ""
 "Programs cannot change this title. Leave it empty to show the title from the "
 "program again."
 msgstr ""
 
-#: src/terminal-window.cc:2761
+#: src/terminal-window.cc:2815
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Activity in a terminal"
 msgstr "Atverti terminalą"
 
-#: src/terminal-window.cc:2796
+#: src/terminal-window.cc:2850
 #, c-format
 msgid ""
 "%s\n"
@@ -3640,174 +3644,174 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/terminal-window.cc:2801
+#: src/terminal-window.cc:2855
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Silence in a terminal"
 msgstr "Atverti terminalą"
 
-#: src/terminal-window.cc:3020
+#: src/terminal-window.cc:3074
 msgid "Open _Hyperlink"
 msgstr "Atverti _hipersaitą"
 
-#: src/terminal-window.cc:3021
+#: src/terminal-window.cc:3075
 msgid "Copy Hyperlink _Address"
 msgstr "Kopijuoti hipersaito _adresą"
 
-#: src/terminal-window.cc:3031
+#: src/terminal-window.cc:3085
 msgid "Send Mail _To…"
 msgstr "_Siųsti laišką…"
 
-#: src/terminal-window.cc:3032
+#: src/terminal-window.cc:3086
 msgid "Copy Mail _Address"
 msgstr "Kopijuoti el. pašto _adresą"
 
-#: src/terminal-window.cc:3035
+#: src/terminal-window.cc:3089
 msgid "Call _To…"
 msgstr "_Skambinti…"
 
-#: src/terminal-window.cc:3036
+#: src/terminal-window.cc:3090
 msgid "Copy Call _Address "
 msgstr "Kopijuoti skambučio _adresą "
 
-#: src/terminal-window.cc:3041
+#: src/terminal-window.cc:3095
 msgid "_Open Link"
 msgstr "_Atverti nuorodą"
 
-#: src/terminal-window.cc:3042
+#: src/terminal-window.cc:3096
 msgid "Copy _Link"
 msgstr "Kopijuoti _nuorodą"
 
-#: src/terminal-window.cc:3081
+#: src/terminal-window.cc:3135
 msgid "_Copy"
 msgstr "_Kopijuoti"
 
-#: src/terminal-window.cc:3082
+#: src/terminal-window.cc:3136
 msgid "Copy as _HTML"
 msgstr "Kopijuoti _HTML formatu"
 
-#: src/terminal-window.cc:3083
+#: src/terminal-window.cc:3137
 msgid "_Paste"
 msgstr "Į_dėti"
 
-#: src/terminal-window.cc:3086
+#: src/terminal-window.cc:3140
 msgid "Copy _Output of This Command"
 msgstr ""
 
-#: src/terminal-window.cc:3088
+#: src/terminal-window.cc:3142
 msgid "Copy _Output of Last Command"
 msgstr ""
 
-#: src/terminal-window.cc:3090
+#: src/terminal-window.cc:3144
 msgid "Paste as _Filenames"
 msgstr "Įdėti kaip _failų pavadinimus"
 
-#: src/terminal-window.cc:3097
+#: src/terminal-window.cc:3151
 msgid "Monitor for _Activity"
 msgstr ""
 
-#: src/terminal-window.cc:3098
+#: src/terminal-window.cc:3152
 msgid "Monitor for _Silence"
 msgstr ""
 
-#: src/terminal-window.cc:3105
+#: src/terminal-window.cc:3159
 msgid "P_rofiles"
 msgstr "P_rofiliai"
 
-#: src/terminal-window.cc:3123
+#: src/terminal-window.cc:3177
 #, fuzzy
 #| msgid "Zoom In"
 msgid "_Zoom Pane"
 msgstr "Padidinti"
 
-#: src/terminal-window.cc:3124
+#: src/terminal-window.cc:3178
 msgid "Make Panes the Same _Size"
 msgstr ""
 
-#: src/terminal-window.cc:3127
+#: src/terminal-window.cc:3181
 #, fuzzy
 #| msgid "New _Tab"
 msgid "To a New _Tab"
 msgstr "Nauja _kortelė"
 
-#: src/terminal-window.cc:3130
+#: src/terminal-window.cc:3184
 #, fuzzy
 #| msgid "New _Window"
 msgid "To a New _Window"
 msgstr "Naujas _langas"
 
-#: src/terminal-window.cc:3135
+#: src/terminal-window.cc:3189
 msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-window.cc:3136
+#: src/terminal-window.cc:3190
 msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-window.cc:3137
+#: src/terminal-window.cc:3191
 msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-window.cc:3138
+#: src/terminal-window.cc:3192
 msgid "Swap With the Pane _Below"
 msgstr ""
 
-#: src/terminal-window.cc:3152
+#: src/terminal-window.cc:3206
 msgid "_Move Pane"
 msgstr ""
 
-#: src/terminal-window.cc:3154
+#: src/terminal-window.cc:3208
 #, fuzzy
 #| msgid "Close Tab"
 msgid "Close P_ane"
 msgstr "Užverti kortelę"
 
-#: src/terminal-window.cc:3182
+#: src/terminal-window.cc:3236
 msgid "New _Terminal"
 msgstr "Naujas _terminalas"
 
-#: src/terminal-window.cc:3191
+#: src/terminal-window.cc:3245
 msgid "New _Tab"
 msgstr "Nauja _kortelė"
 
-#: src/terminal-window.cc:3201
+#: src/terminal-window.cc:3255
 msgid "Leave Full Screen"
 msgstr "Palikti visą ekraną"
 
-#: src/terminal-window.cc:3547
+#: src/terminal-window.cc:3602
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3553 src/terminal-window.cc:3950
+#: src/terminal-window.cc:3608 src/terminal-window.cc:4008
 msgid "_No"
 msgstr "_Ne"
 
-#: src/terminal-window.cc:3944
+#: src/terminal-window.cc:4002
 msgid "Set Pano Terminal as your default terminal?"
 msgstr "Nustatyti Pano Terminalą kaip numatytąjį terminalą?"
 
-#: src/terminal-window.cc:3949
+#: src/terminal-window.cc:4007
 msgid "_Yes"
 msgstr "_Taip"
 
-#: src/terminal-window.cc:4019
+#: src/terminal-window.cc:4077
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5157
+#: src/terminal-window.cc:5250
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Užverti terminalą?"
 
-#: src/terminal-window.cc:5157
+#: src/terminal-window.cc:5250
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Užverti terminalą?"
 
-#: src/terminal-window.cc:5159
+#: src/terminal-window.cc:5252
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3819,7 +3823,7 @@ msgstr ""
 "Yra procesų, veikiančių šio lango terminaluose. Jei uždarysite langą, jie "
 "visi bus nutraukti."
 
-#: src/terminal-window.cc:5161
+#: src/terminal-window.cc:5254
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3831,17 +3835,17 @@ msgstr ""
 "Šiame terminale vis dar veikia procesas. Jei uždarysite terminalą, jis bus "
 "nutrauktas."
 
-#: src/terminal-window.cc:5163
+#: src/terminal-window.cc:5256
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Užverti terminalą"
 
-#: src/terminal-window.cc:5165
+#: src/terminal-window.cc:5258
 msgid "Close this window?"
 msgstr "Užverti langą?"
 
-#: src/terminal-window.cc:5166
+#: src/terminal-window.cc:5259
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3849,15 +3853,15 @@ msgstr ""
 "Yra procesų, veikiančių šio lango terminaluose. Jei uždarysite langą, jie "
 "visi bus nutraukti."
 
-#: src/terminal-window.cc:5168
+#: src/terminal-window.cc:5261
 msgid "C_lose Window"
 msgstr "_Užverti langą"
 
-#: src/terminal-window.cc:5170
+#: src/terminal-window.cc:5263
 msgid "Close this terminal?"
 msgstr "Užverti terminalą?"
 
-#: src/terminal-window.cc:5171
+#: src/terminal-window.cc:5264
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

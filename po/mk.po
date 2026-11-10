@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:34+0300\n"
+"POT-Creation-Date: 2026-11-10 23:28+0300\n"
 "PO-Revision-Date: 2012-01-11 19:55+0100\n"
 "Last-Translator: Jovan N\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -1431,11 +1431,11 @@ msgstr "_Обиколи околу"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2553
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2607
 msgid "_Cancel"
 msgstr ""
 
-#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2554
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2608
 msgid "_Set"
 msgstr ""
 
@@ -1459,7 +1459,7 @@ msgstr "Кратенки на тастатурата"
 msgid "New Tab"
 msgstr "Ново јазиче"
 
-#: src/terminal-accels.cc:150 src/terminal-window.cc:603
+#: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
 msgstr "Зачувај ја содржината"
 
@@ -1542,7 +1542,7 @@ msgstr ""
 msgid "Read-Only"
 msgstr ""
 
-#: src/terminal-accels.cc:183 src/terminal-window.cc:2550
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2604
 msgid "Set Title"
 msgstr "Внеси наслов"
 
@@ -1753,7 +1753,7 @@ msgstr "Помош"
 msgid "Global"
 msgstr ""
 
-#: src/terminal-accels.cc:402
+#: src/terminal-accels.cc:417
 #, fuzzy, c-format
 #| msgid "Switch to Tab 1"
 msgid "Switch to Tab %u"
@@ -1771,36 +1771,36 @@ msgstr "Терминал"
 msgid "_Profile"
 msgstr "_Профили:"
 
-#: src/terminal-app.cc:1347
+#: src/terminal-app.cc:1350
 #, c-format
 msgid "%u s"
 msgstr ""
 
-#: src/terminal-app.cc:1349
+#: src/terminal-app.cc:1352
 #, c-format
 msgid "%u min %u s"
 msgstr ""
 
-#: src/terminal-app.cc:1350
+#: src/terminal-app.cc:1353
 #, c-format
 msgid "%u h %u min"
 msgstr ""
 
-#: src/terminal-app.cc:1376
+#: src/terminal-app.cc:1379
 #, c-format
 msgid "Finished after %s"
 msgstr ""
 
-#: src/terminal-app.cc:1377
+#: src/terminal-app.cc:1380
 #, c-format
 msgid "Failed with exit status %u after %s"
 msgstr ""
 
-#: src/terminal-app.cc:1387
+#: src/terminal-app.cc:1390
 msgid "Command finished"
 msgstr ""
 
-#: src/terminal-app.cc:1387
+#: src/terminal-app.cc:1390
 msgid "Command failed"
 msgstr ""
 
@@ -1948,6 +1948,10 @@ msgstr ""
 msgid "New Tab from Profile"
 msgstr "Нов профил"
 
+#: src/terminal-headerbar.ui:49
+msgid "Main Menu"
+msgstr ""
+
 #: src/terminal-headerbar.ui:57
 #, fuzzy
 #| msgid "Open Ta_b"
@@ -1972,7 +1976,7 @@ msgstr "Ресетирај"
 msgid "Zoom _In"
 msgstr "Зголеми"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3187
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3241
 #, fuzzy
 #| msgid "New Window"
 msgid "New _Window"
@@ -1984,31 +1988,31 @@ msgstr "Нов прозорец"
 msgid "Re_open Closed Tab"
 msgstr "Затвори јазиче"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3116
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3170
 msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3119
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3173
 msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3173
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3227
 msgid "_Broadcast Input"
 msgstr ""
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3159
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3213
 msgid "_Off"
 msgstr ""
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3160
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3214
 msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3161
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3215
 msgid "To All Terminals in This _Window"
 msgstr ""
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3170
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3224
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "_Include This Terminal"
@@ -2018,7 +2022,7 @@ msgstr "Да го затворам овој терминал?"
 msgid "_Full Screen"
 msgstr "_На цел екран"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3096
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3150
 msgid "Read-_Only"
 msgstr ""
 
@@ -2066,8 +2070,8 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3571
-#: src/terminal-window.cc:3110
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3576
+#: src/terminal-window.cc:3164
 #, fuzzy
 #| msgid "_Profile Preferences"
 msgid "_Preferences"
@@ -2146,8 +2150,8 @@ msgstr "Помести го јазичето на_десно"
 msgid "_Detach Terminal"
 msgstr "_Терминал"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5163
-#: src/terminal-window.cc:5173
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5256
+#: src/terminal-window.cc:5266
 msgid "C_lose Terminal"
 msgstr "З_атвори го терминалот"
 
@@ -2489,7 +2493,7 @@ msgstr[1] ""
 msgid "Import Profile"
 msgstr "Избриши профил"
 
-#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3521
+#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3576
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2850,7 +2854,7 @@ msgstr ""
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3552
+#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3607
 msgid "_Import"
 msgstr ""
 
@@ -3545,30 +3549,30 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3352
+#: src/terminal-screen.cc:3357
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3572 src/terminal-screen.cc:3964
+#: src/terminal-screen.cc:3577 src/terminal-screen.cc:3969
 msgid "_Relaunch"
 msgstr "_Пушти пак"
 
-#: src/terminal-screen.cc:3575
+#: src/terminal-screen.cc:3580
 msgid "There was an error creating the child process for this terminal"
 msgstr "Се појави грешка при создавањето на детски процес за овој терминал: "
 
-#: src/terminal-screen.cc:3968
+#: src/terminal-screen.cc:3973
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Детето процес се исклучи нормално со статус %d."
 
-#: src/terminal-screen.cc:3971
+#: src/terminal-screen.cc:3976
 #, fuzzy, c-format
 #| msgid "The child process was terminated by signal %d."
 msgid "The child process was aborted by signal %d."
 msgstr "Детето процес беше прекинат со сигналот %d."
 
-#: src/terminal-screen.cc:3974
+#: src/terminal-screen.cc:3979
 #, fuzzy
 #| msgid "The child process was terminated."
 msgid "The child process was aborted."
@@ -3664,35 +3668,35 @@ msgid "“file” scheme with remote hostname not supported"
 msgstr ""
 
 #. Translators: %s is an error message
-#: src/terminal-window.cc:540 src/terminal-window.cc:579
+#: src/terminal-window.cc:543 src/terminal-window.cc:582
 #, fuzzy, c-format
 #| msgid "Could not save contents"
 msgid "Could not save the contents: %s"
 msgstr "Не можев да ги зачувам содржините"
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:547
+#: src/terminal-window.cc:550
 #, c-format
 msgid "Saved “%s”"
 msgstr ""
 
-#: src/terminal-window.cc:799
+#: src/terminal-window.cc:802
 msgid "Copied to clipboard"
 msgstr ""
 
-#: src/terminal-window.cc:1203
+#: src/terminal-window.cc:1257
 msgid "Tab closed"
 msgstr ""
 
-#: src/terminal-window.cc:1204
+#: src/terminal-window.cc:1258
 msgid "_Undo"
 msgstr ""
 
-#: src/terminal-window.cc:1342
+#: src/terminal-window.cc:1396
 msgid "Broadcasting input, but no terminal takes part"
 msgstr ""
 
-#: src/terminal-window.cc:1344
+#: src/terminal-window.cc:1398
 #, fuzzy, c-format
 #| msgid "Title for terminal"
 msgid "Input goes to %u terminal"
@@ -3700,29 +3704,29 @@ msgid_plural "Input goes to %u terminals"
 msgstr[0] "Наслов на терминалот"
 msgstr[1] "Наслов на терминалот"
 
-#: src/terminal-window.cc:1681
+#: src/terminal-window.cc:1735
 msgid "Nothing to select"
 msgstr ""
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:1724
+#: src/terminal-window.cc:1778
 #, c-format
 msgid "“%s” does not exist"
 msgstr ""
 
-#: src/terminal-window.cc:2551
+#: src/terminal-window.cc:2605
 msgid ""
 "Programs cannot change this title. Leave it empty to show the title from the "
 "program again."
 msgstr ""
 
-#: src/terminal-window.cc:2761
+#: src/terminal-window.cc:2815
 #, fuzzy
 #| msgid "Exit the terminal"
 msgid "Activity in a terminal"
 msgstr "Исклучи го терминалот"
 
-#: src/terminal-window.cc:2796
+#: src/terminal-window.cc:2850
 #, c-format
 msgid ""
 "%s\n"
@@ -3733,198 +3737,198 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/terminal-window.cc:2801
+#: src/terminal-window.cc:2855
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Silence in a terminal"
 msgstr "Наслов на терминалот"
 
-#: src/terminal-window.cc:3020
+#: src/terminal-window.cc:3074
 #, fuzzy
 #| msgid "Open _Terminal"
 msgid "Open _Hyperlink"
 msgstr "Отвори _терминал"
 
-#: src/terminal-window.cc:3021
+#: src/terminal-window.cc:3075
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy Hyperlink _Address"
 msgstr "_Копирај ја адресата"
 
-#: src/terminal-window.cc:3031
+#: src/terminal-window.cc:3085
 #, fuzzy
 #| msgid "_Send Mail To…"
 msgid "Send Mail _To…"
 msgstr "_Испрати порака на..."
 
-#: src/terminal-window.cc:3032
+#: src/terminal-window.cc:3086
 #, fuzzy
 #| msgid "_Copy E-mail Address"
 msgid "Copy Mail _Address"
 msgstr "_Копирај ја адресата"
 
-#: src/terminal-window.cc:3035
+#: src/terminal-window.cc:3089
 #, fuzzy
 #| msgid "C_all To…"
 msgid "Call _To…"
 msgstr "П_овик до..."
 
-#: src/terminal-window.cc:3036
+#: src/terminal-window.cc:3090
 #, fuzzy
 #| msgid "_Copy Call Address"
 msgid "Copy Call _Address "
 msgstr "_Копирај ја адресата на повикот"
 
-#: src/terminal-window.cc:3041
+#: src/terminal-window.cc:3095
 msgid "_Open Link"
 msgstr "_Отвори врска"
 
-#: src/terminal-window.cc:3042
+#: src/terminal-window.cc:3096
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy _Link"
 msgstr "_Копирај ја адресата"
 
-#: src/terminal-window.cc:3081
+#: src/terminal-window.cc:3135
 #, fuzzy
 #| msgid "Copy"
 msgid "_Copy"
 msgstr "Копирај"
 
-#: src/terminal-window.cc:3082
+#: src/terminal-window.cc:3136
 msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-window.cc:3083
+#: src/terminal-window.cc:3137
 #, fuzzy
 #| msgid "Paste"
 msgid "_Paste"
 msgstr "Вметни"
 
-#: src/terminal-window.cc:3086
+#: src/terminal-window.cc:3140
 msgid "Copy _Output of This Command"
 msgstr ""
 
-#: src/terminal-window.cc:3088
+#: src/terminal-window.cc:3142
 msgid "Copy _Output of Last Command"
 msgstr ""
 
-#: src/terminal-window.cc:3090
+#: src/terminal-window.cc:3144
 #, fuzzy
 #| msgid "Paste _Filenames"
 msgid "Paste as _Filenames"
 msgstr "Вметни _имиња на датотеки"
 
-#: src/terminal-window.cc:3097
+#: src/terminal-window.cc:3151
 msgid "Monitor for _Activity"
 msgstr ""
 
-#: src/terminal-window.cc:3098
+#: src/terminal-window.cc:3152
 msgid "Monitor for _Silence"
 msgstr ""
 
-#: src/terminal-window.cc:3105
+#: src/terminal-window.cc:3159
 msgid "P_rofiles"
 msgstr "П_рофили"
 
-#: src/terminal-window.cc:3123
+#: src/terminal-window.cc:3177
 #, fuzzy
 #| msgid "Zoom In"
 msgid "_Zoom Pane"
 msgstr "Зголеми"
 
-#: src/terminal-window.cc:3124
+#: src/terminal-window.cc:3178
 msgid "Make Panes the Same _Size"
 msgstr ""
 
-#: src/terminal-window.cc:3127
+#: src/terminal-window.cc:3181
 #, fuzzy
 #| msgid "New Tab"
 msgid "To a New _Tab"
 msgstr "Ново јазиче"
 
-#: src/terminal-window.cc:3130
+#: src/terminal-window.cc:3184
 #, fuzzy
 #| msgid "New Window"
 msgid "To a New _Window"
 msgstr "Нов прозорец"
 
-#: src/terminal-window.cc:3135
+#: src/terminal-window.cc:3189
 msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-window.cc:3136
+#: src/terminal-window.cc:3190
 msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-window.cc:3137
+#: src/terminal-window.cc:3191
 msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-window.cc:3138
+#: src/terminal-window.cc:3192
 msgid "Swap With the Pane _Below"
 msgstr ""
 
-#: src/terminal-window.cc:3152
+#: src/terminal-window.cc:3206
 msgid "_Move Pane"
 msgstr ""
 
-#: src/terminal-window.cc:3154
+#: src/terminal-window.cc:3208
 #, fuzzy
 #| msgid "Close Tab"
 msgid "Close P_ane"
 msgstr "Затвори јазиче"
 
-#: src/terminal-window.cc:3182
+#: src/terminal-window.cc:3236
 #, fuzzy
 #| msgid "_Terminal"
 msgid "New _Terminal"
 msgstr "_Терминал"
 
-#: src/terminal-window.cc:3191
+#: src/terminal-window.cc:3245
 #, fuzzy
 #| msgid "New Tab"
 msgid "New _Tab"
 msgstr "Ново јазиче"
 
-#: src/terminal-window.cc:3201
+#: src/terminal-window.cc:3255
 msgid "Leave Full Screen"
 msgstr "Остани на цел екран"
 
-#: src/terminal-window.cc:3547
+#: src/terminal-window.cc:3602
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3553 src/terminal-window.cc:3950
+#: src/terminal-window.cc:3608 src/terminal-window.cc:4008
 msgid "_No"
 msgstr ""
 
-#: src/terminal-window.cc:3944
+#: src/terminal-window.cc:4002
 msgid "Set Pano Terminal as your default terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3949
+#: src/terminal-window.cc:4007
 msgid "_Yes"
 msgstr ""
 
-#: src/terminal-window.cc:4019
+#: src/terminal-window.cc:4077
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5157
+#: src/terminal-window.cc:5250
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Да го затворам овој терминал?"
 
-#: src/terminal-window.cc:5157
+#: src/terminal-window.cc:5250
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Да го затворам овој терминал?"
 
-#: src/terminal-window.cc:5159
+#: src/terminal-window.cc:5252
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3936,7 +3940,7 @@ msgstr ""
 "Има процеси кои сѐ уште се извршуваат во некои терминали во овој прозорец. "
 "Со затворање на прозорецот ќе ги уништите сите."
 
-#: src/terminal-window.cc:5161
+#: src/terminal-window.cc:5254
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3948,17 +3952,17 @@ msgstr ""
 "Има уште еден процес кој сѐ уште се извршува во некој терминал во овој "
 "прозорец. Со затворање на прозорецот ќе го уништите."
 
-#: src/terminal-window.cc:5163
+#: src/terminal-window.cc:5256
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "З_атвори го терминалот"
 
-#: src/terminal-window.cc:5165
+#: src/terminal-window.cc:5258
 msgid "Close this window?"
 msgstr "Да го затворам овој прозорец?"
 
-#: src/terminal-window.cc:5166
+#: src/terminal-window.cc:5259
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3966,15 +3970,15 @@ msgstr ""
 "Има процеси кои сѐ уште се извршуваат во некои терминали во овој прозорец. "
 "Со затворање на прозорецот ќе ги уништите сите."
 
-#: src/terminal-window.cc:5168
+#: src/terminal-window.cc:5261
 msgid "C_lose Window"
 msgstr "З_атвори прозорец"
 
-#: src/terminal-window.cc:5170
+#: src/terminal-window.cc:5263
 msgid "Close this terminal?"
 msgstr "Да го затворам овој терминал?"
 
-#: src/terminal-window.cc:5171
+#: src/terminal-window.cc:5264
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

@@ -1075,7 +1075,10 @@ terminal_app_constructed(GObject *object)
                                       app->schema_source,
                                       TERMINAL_KEYBINDINGS_SCHEMA,
                                       TERMINAL_KEYBINDINGS_SCHEMA_PATH);
-  terminal_accels_init (G_APPLICATION (app), settings, app->use_headerbar);
+  /* The windows always have a header bar, whatever the desktop, so its
+   * shortcuts (the main menu) apply everywhere.
+   */
+  terminal_accels_init (G_APPLICATION (app), settings, app->global_settings, TRUE);
 }
 
 static void
