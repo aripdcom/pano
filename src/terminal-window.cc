@@ -4153,17 +4153,6 @@ terminal_window_init (TerminalWindow *window)
                                window);
 }
 
-static void
-terminal_window_css_changed (GtkWidget *widget,
-                             GtkCssStyleChange *change)
-{
-  TerminalWindow *window = TERMINAL_WINDOW (widget);
-
-  GTK_WIDGET_CLASS (terminal_window_parent_class)->css_changed (widget, change);
-
-  terminal_window_update_size (window);
-}
-
 static gboolean
 policy_type_to_autohide (GValue   *value,
                          GVariant *variant,
@@ -4248,7 +4237,6 @@ terminal_window_class_init (TerminalWindowClass *klass)
 
   widget_class->show = terminal_window_show;
   widget_class->realize = terminal_window_realize;
-  widget_class->css_changed = terminal_window_css_changed;
   widget_class->size_allocate = terminal_window_size_allocate;
 
   window_class->close_request = terminal_window_close_request;
