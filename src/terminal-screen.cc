@@ -310,6 +310,10 @@ static void terminal_screen_capture_click_pressed_cb (TerminalScreen  *screen,
                                                       double           x,
                                                       double           y,
                                                       GtkGestureClick *click);
+static void terminal_screen_long_pressed_cb (GtkGestureLongPress *gesture,
+                                             double               x,
+                                             double               y,
+                                             TerminalScreen      *screen);
 static void terminal_screen_bubble_click_pressed_cb (TerminalScreen  *screen,
                                                      int              n_press,
                                                      double           x,
@@ -2088,6 +2092,11 @@ terminal_screen_init (TerminalScreen *screen)
   g_signal_connect (key_controller, "key-released",
                     G_CALLBACK (terminal_screen_key_released_cb), screen);
   priv->pointer_x = priv->pointer_y = -1;
+  auto const long_press = gtk_gesture_long_press_new ();
+  gtk_gesture_single_set_touch_only (GTK_GESTURE_SINGLE (long_press), TRUE);
+  g_signal_connect (long_press, "pressed",
+                    G_CALLBACK (terminal_screen_long_pressed_cb), screen);
+  gtk_widget_add_controller (GTK_WIDGET (screen), GTK_EVENT_CONTROLLER (long_press));
   auto const motion_controller = gtk_event_controller_motion_new ();
   g_signal_connect (motion_controller, "enter",
                     G_CALLBACK (terminal_screen_pointer_motion_cb), screen);
@@ -3935,6 +3944,28 @@ terminal_screen_bubble_click_pressed_cb (TerminalScreen  *screen,
   }
 
   gtk_gesture_set_state (GTK_GESTURE (click), GTK_EVENT_SEQUENCE_DENIED);
+}
+
+/* A long press on a touchscreen opens the context menu, as a right click
+ * does; without it, a touchscreen could not, for example, leave fullscreen */
+static void
+terminal_screen_long_pressed_cb (GtkGestureLongPress *gesture,
+                                 double               x,
+                                 double               y,
+                                 TerminalScreen      *screen)
+{
+  int url_flavor = 0;
+  gs_free char *number_info = nullptr;
+  gs_free char *timestamp_info = nullptr;
+  auto hyperlink = vte_terminal_check_hyperlink_at (VTE_TERMINAL (screen), x, y);
+  auto url = terminal_screen_check_match (screen, x, y, &url_flavor);
+  terminal_screen_check_extra (screen, x, y, &number_info, &timestamp_info);
+
+  gtk_gesture_set_state (GTK_GESTURE (gesture), GTK_EVENT_SEQUENCE_CLAIMED);
+  terminal_screen_do_popup (screen, 0, 3, GDK_CURRENT_TIME, x, y,
+                            hyperlink, url, url_flavor,
+                            g_steal_pointer (&number_info),
+                            g_steal_pointer (&timestamp_info));
 }
 
 /* A double click selects a word, and VTE does not count ":" as part of

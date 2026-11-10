@@ -44,7 +44,8 @@
   <gui style="menuitem">Full Screen</gui>.</p>
 
   <p>To leave it, press <key>F11</key> again, or right-click the terminal and
-  select <gui style="menuitem">Leave Full Screen</gui>.</p>
+  select <gui style="menuitem">Leave Full Screen</gui>. On a touchscreen,
+  press and hold the terminal to open that menu.</p>
 
   <note style="tip">
     <p>If you have more than one tab open, the tabs stay visible in
