@@ -214,6 +214,7 @@
             <child>
               <object class="AdwComboRow" id="new_terminal_mode">
                 <property name="title" translatable="yes">Open New Terminals</property>
+                <property name="subtitle" translatable="yes">For New Terminal in the context menu, and for pano-terminal without --tab or --window</property>
                 <property name="expression">
                   <lookup name="title" type="TerminalPreferencesListItem"/>
                 </property>

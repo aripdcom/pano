@@ -2352,66 +2352,74 @@ msgstr "Davranış"
 msgid "Open New Terminals"
 msgstr "Yeni Uçbirimleri Aç"
 
-#: src/terminal-preferences-window.ui:225
+#: src/terminal-preferences-window.ui:217
+msgid ""
+"For New Terminal in the context menu, and for pano-terminal without --tab or "
+"--window"
+msgstr ""
+"Bağlam menüsündeki Yeni Uçbirim için ve --tab ya da --window olmadan "
+"çalıştırılan pano-terminal için"
+
+#: src/terminal-preferences-window.ui:226
 msgid "In Tab"
 msgstr "Sekmede"
 
-#: src/terminal-preferences-window.ui:231
+#: src/terminal-preferences-window.ui:232
 msgid "In Window"
 msgstr "Pencerede"
 
-#: src/terminal-preferences-window.ui:241
+#: src/terminal-preferences-window.ui:242
 msgid "New Tab Position"
 msgstr "Yeni Sekme Konumu"
 
-#: src/terminal-preferences-window.ui:250
+#: src/terminal-preferences-window.ui:251
 msgid "Last"
 msgstr "En son"
 
-#: src/terminal-preferences-window.ui:256
+#: src/terminal-preferences-window.ui:257
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/terminal-preferences-window.ui:266
+#: src/terminal-preferences-window.ui:267
 msgid "Middle-Click on a Tab"
 msgstr "Sekmeye Orta Tıklama"
 
-#: src/terminal-preferences-window.ui:275
+#: src/terminal-preferences-window.ui:276
 msgctxt "tab-middle-click"
 msgid "Does Nothing"
 msgstr "Bir Şey Yapmaz"
 
-#: src/terminal-preferences-window.ui:281
+#: src/terminal-preferences-window.ui:282
 msgctxt "tab-middle-click"
 msgid "Closes the Tab"
 msgstr "Sekmeyi Kapatır"
 
-#: src/terminal-preferences-window.ui:287
+#: src/terminal-preferences-window.ui:288
 msgctxt "tab-middle-click"
 msgid "Pastes the Selection"
 msgstr "Seçimi Yapıştırır"
 
-#: src/terminal-preferences-window.ui:297
+#: src/terminal-preferences-window.ui:298
 msgid "Ignore Titles Set by Programs"
 msgstr "Programların Ayarladığı Başlıkları Yok Say"
 
-#: src/terminal-preferences-window.ui:298
+#: src/terminal-preferences-window.ui:299
 msgid "Show the title set with Set Title, or else the working directory"
 msgstr "Başlığı Ayarla ile ayarlanan başlığı, o yoksa çalışma dizinini göster"
 
-#: src/terminal-preferences-window.ui:303
+#: src/terminal-preferences-window.ui:304
 msgid "Confirm Copying"
 msgstr "Kopyalamayı Onayla"
 
-#: src/terminal-preferences-window.ui:304
+#: src/terminal-preferences-window.ui:305
 msgid "Show a short notice after copying to the clipboard"
 msgstr "Panoya kopyaladıktan sonra kısa bir bildirim göster"
 
-#: src/terminal-preferences-window.ui:309
+#: src/terminal-preferences-window.ui:310
 msgid "Shell Integration"
 msgstr "Kabuk Tümleşmesi"
 
-#: src/terminal-preferences-window.ui:310
+#: src/terminal-preferences-window.ui:311
 msgid ""
 "Let bash, zsh and fish report their prompts and commands, for notifications, "
 "prompt navigation and copying command output. Applies to new terminals"
@@ -2420,11 +2428,11 @@ msgstr ""
 "istemler arasında gezinme ve komut çıktısını kopyalama için. Yeni "
 "uçbirimlere uygulanır"
 
-#: src/terminal-preferences-window.ui:315
+#: src/terminal-preferences-window.ui:316
 msgid "Notify When Commands Finish"
 msgstr "Komutlar Bitince Bildir"
 
-#: src/terminal-preferences-window.ui:316
+#: src/terminal-preferences-window.ui:317
 msgid ""
 "When a long command ends in a terminal you are not looking at. Needs shell "
 "integration"
@@ -2432,19 +2440,19 @@ msgstr ""
 "Bakmadığınız bir uçbirimde uzun bir komut bittiğinde. Kabuk tümleşmesi "
 "gerekir"
 
-#: src/terminal-preferences-window.ui:321
+#: src/terminal-preferences-window.ui:322
 msgid "Minimum Command Duration"
 msgstr "En Kısa Komut Süresi"
 
-#: src/terminal-preferences-window.ui:322
+#: src/terminal-preferences-window.ui:323
 msgid "In seconds"
 msgstr "Saniye cinsinden"
 
-#: src/terminal-preferences-window.ui:337
+#: src/terminal-preferences-window.ui:338
 msgid "Silence Duration"
 msgstr "Sessizlik Süresi"
 
-#: src/terminal-preferences-window.ui:338
+#: src/terminal-preferences-window.ui:339
 msgid ""
 "How long a terminal monitored for silence must be quiet, in seconds. Turn "
 "monitoring on in the context menu of a terminal"
@@ -2452,11 +2460,11 @@ msgstr ""
 "Sessizlik için izlenen bir uçbirimin saniye cinsinden ne kadar sessiz "
 "kalması gerektiği. İzlemeyi uçbirimin bağlam menüsünden açın"
 
-#: src/terminal-preferences-window.ui:352
+#: src/terminal-preferences-window.ui:353
 msgid "Keep New Tabs in the Same Container"
 msgstr "Yeni Sekmeleri Aynı Kapsayıcıda Tut"
 
-#: src/terminal-preferences-window.ui:353
+#: src/terminal-preferences-window.ui:354
 msgid ""
 "New tabs and panes start in the Toolbox or Distrobox container of the "
 "terminal they are opened from"
@@ -2464,11 +2472,11 @@ msgstr ""
 "Yeni sekmeler ve bölmeler, açıldıkları uçbirimin Toolbox ya da Distrobox "
 "kapsayıcısında başlar"
 
-#: src/terminal-preferences-window.ui:358
+#: src/terminal-preferences-window.ui:359
 msgid "Restore Session"
 msgstr "Oturumu Geri Yükle"
 
-#: src/terminal-preferences-window.ui:359
+#: src/terminal-preferences-window.ui:360
 msgid ""
 "Reopen the windows, tabs and panes of the last session, each in its previous "
 "folder"
@@ -2476,11 +2484,11 @@ msgstr ""
 "Son oturumun pencerelerini, sekmelerini ve bölmelerini her birini önceki "
 "klasöründe yeniden aç"
 
-#: src/terminal-preferences-window.ui:364
+#: src/terminal-preferences-window.ui:365
 msgid "Remember Window Size"
 msgstr "Pencere Boyutunu Hatırla"
 
-#: src/terminal-preferences-window.ui:365
+#: src/terminal-preferences-window.ui:366
 msgid ""
 "Open new windows with the size of the last used terminal instead of the "
 "initial size of the profile"
@@ -2488,11 +2496,11 @@ msgstr ""
 "Yeni pencereleri profilin başlangıç boyutu yerine son kullanılan uçbirimin "
 "boyutuyla aç"
 
-#: src/terminal-preferences-window.ui:370
+#: src/terminal-preferences-window.ui:371
 msgid "Let Programs Resize the Window"
 msgstr "Programlar Pencereyi Yeniden Boyutlandırabilsin"
 
-#: src/terminal-preferences-window.ui:371
+#: src/terminal-preferences-window.ui:372
 msgid ""
 "With an escape sequence, as the resize command does. Only the terminal in "
 "front can"
@@ -2500,11 +2508,11 @@ msgstr ""
 "resize komutunun yaptığı gibi bir kaçış dizisiyle. Yalnızca öndeki uçbirim "
 "yapabilir"
 
-#: src/terminal-preferences-window.ui:378
+#: src/terminal-preferences-window.ui:379
 msgid "Quick Terminal"
 msgstr "Hızlı Uçbirim"
 
-#: src/terminal-preferences-window.ui:379
+#: src/terminal-preferences-window.ui:380
 msgid ""
 "A terminal that you show and hide with one key. Use the system-wide shortcut "
 "below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
@@ -2514,11 +2522,11 @@ msgstr ""
 "kısayolu kullanın ya da Ayarlar → Klavye → Özel Kısayollar’a “pano-terminal "
 "--quick” komutunu ekleyin."
 
-#: src/terminal-preferences-window.ui:382
+#: src/terminal-preferences-window.ui:383
 msgid "System-Wide Shortcut"
 msgstr "Sistem Geneli Kısayol"
 
-#: src/terminal-preferences-window.ui:383
+#: src/terminal-preferences-window.ui:384
 msgid ""
 "The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
 "running in the background. Needs GNOME 48 or newer, or KDE Plasma."
@@ -2526,11 +2534,11 @@ msgstr ""
 "Masaüstü tuşu sorar; F12 önerilir. Pano Terminal bundan sonra arka planda "
 "çalışmayı sürdürür. GNOME 48 ya da daha yenisi veya KDE Plasma gerekir."
 
-#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:390
 msgid "GNOME Shell Extension"
 msgstr "GNOME Shell Eklentisi"
 
-#: src/terminal-preferences-window.ui:390
+#: src/terminal-preferences-window.ui:391
 msgid ""
 "On Wayland, keeps the quick terminal at the top of the screen, above other "
 "windows and on all workspaces"
@@ -2538,76 +2546,76 @@ msgstr ""
 "Wayland’de hızlı uçbirimi ekranın üstünde, diğer pencerelerin üzerinde ve "
 "tüm çalışma alanlarında tutar"
 
-#: src/terminal-preferences-window.ui:395
+#: src/terminal-preferences-window.ui:396
 msgid "Width"
 msgstr "Genişlik"
 
-#: src/terminal-preferences-window.ui:396
-#: src/terminal-preferences-window.ui:411
+#: src/terminal-preferences-window.ui:397
+#: src/terminal-preferences-window.ui:412
 msgid "In percent of the screen"
 msgstr "Ekranın yüzdesi cinsinden"
 
-#: src/terminal-preferences-window.ui:410
+#: src/terminal-preferences-window.ui:411
 msgid "Height"
 msgstr "Yükseklik"
 
-#: src/terminal-preferences-window.ui:425
+#: src/terminal-preferences-window.ui:426
 msgid "Hide When Another App Is Used"
 msgstr "Başka Uygulama Kullanılınca Gizle"
 
-#: src/terminal-preferences-window.ui:430
+#: src/terminal-preferences-window.ui:431
 msgid "Slide In From the Top"
 msgstr "Üstten Kayarak Gelsin"
 
-#: src/terminal-preferences-window.ui:431
+#: src/terminal-preferences-window.ui:432
 msgid "On X11, or with the GNOME Shell extension"
 msgstr "X11’de ya da GNOME Shell eklentisiyle"
 
-#: src/terminal-preferences-window.ui:438
+#: src/terminal-preferences-window.ui:439
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: src/terminal-preferences-window.ui:441
+#: src/terminal-preferences-window.ui:442
 msgid "Accelerator Key (F10 by default)"
 msgstr "Hızlandırıcı Tuş (öntanımlı F10)"
 
-#: src/terminal-preferences-window.ui:446
+#: src/terminal-preferences-window.ui:447
 msgid "View and Customize Shortcuts"
 msgstr "Kısayolları Görüntüle ve Özelleştir"
 
-#: src/terminal-preferences-window.ui:460
+#: src/terminal-preferences-window.ui:461
 msgid "Profiles"
 msgstr "Profiller"
 
-#: src/terminal-preferences-window.ui:464
+#: src/terminal-preferences-window.ui:465
 msgid "Import a profile from a file"
 msgstr "Bir dosyadan profil içe aktar"
 
-#: src/terminal-preferences-window.ui:472
+#: src/terminal-preferences-window.ui:473
 msgid "_Import…"
 msgstr "İçe _Aktar…"
 
-#: src/terminal-preferences-window.ui:503
+#: src/terminal-preferences-window.ui:504
 msgid "Application"
 msgstr "Uygulama"
 
-#: src/terminal-preferences-window.ui:506
+#: src/terminal-preferences-window.ui:507
 msgid "Import from GNOME Terminal"
 msgstr "GNOME Uçbirim’den İçe Aktar"
 
-#: src/terminal-preferences-window.ui:507
+#: src/terminal-preferences-window.ui:508
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr "Profillerini, klavye kısayollarını ve tercihlerini kopyala"
 
-#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3647
+#: src/terminal-preferences-window.ui:512 src/terminal-window.cc:3647
 msgid "_Import"
 msgstr "İçe _Aktar"
 
-#: src/terminal-preferences-window.ui:521
+#: src/terminal-preferences-window.ui:522
 msgid "Ask to Remain Default"
 msgstr "Öntanımlı Kalmak İçin Sor"
 
-#: src/terminal-preferences-window.ui:526
+#: src/terminal-preferences-window.ui:527
 msgid "Set as Default Terminal"
 msgstr "Öntanımlı Uçbirim Olarak Ayarla"
 

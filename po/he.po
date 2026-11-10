@@ -2455,264 +2455,270 @@ msgstr ""
 msgid "Open New Terminals"
 msgstr "מסוף חדש"
 
-#: src/terminal-preferences-window.ui:225
+#: src/terminal-preferences-window.ui:217
+msgid ""
+"For New Terminal in the context menu, and for pano-terminal without --tab or "
+"--window"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:226
 #, fuzzy
 #| msgid "Open Ta_b"
 msgid "In Tab"
 msgstr "פתיחת _לשונית"
 
-#: src/terminal-preferences-window.ui:231
+#: src/terminal-preferences-window.ui:232
 #, fuzzy
 #| msgid "Window"
 msgid "In Window"
 msgstr "חלון"
 
-#: src/terminal-preferences-window.ui:241
+#: src/terminal-preferences-window.ui:242
 #, fuzzy
 #| msgid "New tab _position:"
 msgid "New Tab Position"
 msgstr "_מיקום לשונית חדשה:"
 
-#: src/terminal-preferences-window.ui:250
+#: src/terminal-preferences-window.ui:251
 msgid "Last"
 msgstr "אחרון"
 
-#: src/terminal-preferences-window.ui:256
+#: src/terminal-preferences-window.ui:257
 msgid "Next"
 msgstr "הבא"
 
-#: src/terminal-preferences-window.ui:266
+#: src/terminal-preferences-window.ui:267
 msgid "Middle-Click on a Tab"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:275
+#: src/terminal-preferences-window.ui:276
 msgctxt "tab-middle-click"
 msgid "Does Nothing"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:281
+#: src/terminal-preferences-window.ui:282
 #, fuzzy
 #| msgid "Close Tab"
 msgctxt "tab-middle-click"
 msgid "Closes the Tab"
 msgstr "סגירת לשונית"
 
-#: src/terminal-preferences-window.ui:287
+#: src/terminal-preferences-window.ui:288
 msgctxt "tab-middle-click"
 msgid "Pastes the Selection"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:297
+#: src/terminal-preferences-window.ui:298
 msgid "Ignore Titles Set by Programs"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:298
+#: src/terminal-preferences-window.ui:299
 msgid "Show the title set with Set Title, or else the working directory"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:303
+#: src/terminal-preferences-window.ui:304
 msgid "Confirm Copying"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:304
+#: src/terminal-preferences-window.ui:305
 msgid "Show a short notice after copying to the clipboard"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:309
+#: src/terminal-preferences-window.ui:310
 msgid "Shell Integration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:310
+#: src/terminal-preferences-window.ui:311
 msgid ""
 "Let bash, zsh and fish report their prompts and commands, for notifications, "
 "prompt navigation and copying command output. Applies to new terminals"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:315
+#: src/terminal-preferences-window.ui:316
 msgid "Notify When Commands Finish"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:316
+#: src/terminal-preferences-window.ui:317
 msgid ""
 "When a long command ends in a terminal you are not looking at. Needs shell "
 "integration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:321
+#: src/terminal-preferences-window.ui:322
 msgid "Minimum Command Duration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:322
+#: src/terminal-preferences-window.ui:323
 msgid "In seconds"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:337
+#: src/terminal-preferences-window.ui:338
 msgid "Silence Duration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:338
+#: src/terminal-preferences-window.ui:339
 msgid ""
 "How long a terminal monitored for silence must be quiet, in seconds. Turn "
 "monitoring on in the context menu of a terminal"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:352
+#: src/terminal-preferences-window.ui:353
 msgid "Keep New Tabs in the Same Container"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:353
+#: src/terminal-preferences-window.ui:354
 msgid ""
 "New tabs and panes start in the Toolbox or Distrobox container of the "
 "terminal they are opened from"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:358
+#: src/terminal-preferences-window.ui:359
 msgid "Restore Session"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:359
+#: src/terminal-preferences-window.ui:360
 msgid ""
 "Reopen the windows, tabs and panes of the last session, each in its previous "
 "folder"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:364
+#: src/terminal-preferences-window.ui:365
 msgid "Remember Window Size"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:365
+#: src/terminal-preferences-window.ui:366
 msgid ""
 "Open new windows with the size of the last used terminal instead of the "
 "initial size of the profile"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:370
+#: src/terminal-preferences-window.ui:371
 #, fuzzy
 #| msgid "Maximize the window"
 msgid "Let Programs Resize the Window"
 msgstr "Maximize the window"
 
-#: src/terminal-preferences-window.ui:371
+#: src/terminal-preferences-window.ui:372
 msgid ""
 "With an escape sequence, as the resize command does. Only the terminal in "
 "front can"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:378
+#: src/terminal-preferences-window.ui:379
 #, fuzzy
 #| msgid "Terminal"
 msgid "Quick Terminal"
 msgstr "מסוף"
 
-#: src/terminal-preferences-window.ui:379
+#: src/terminal-preferences-window.ui:380
 msgid ""
 "A terminal that you show and hide with one key. Use the system-wide shortcut "
 "below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
 "Custom Shortcuts."
 msgstr ""
 
-#: src/terminal-preferences-window.ui:382
+#: src/terminal-preferences-window.ui:383
 msgid "System-Wide Shortcut"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:383
+#: src/terminal-preferences-window.ui:384
 msgid ""
 "The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
 "running in the background. Needs GNOME 48 or newer, or KDE Plasma."
 msgstr ""
 
-#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:390
 msgid "GNOME Shell Extension"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:390
+#: src/terminal-preferences-window.ui:391
 msgid ""
 "On Wayland, keeps the quick terminal at the top of the screen, above other "
 "windows and on all workspaces"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:395
+#: src/terminal-preferences-window.ui:396
 #, fuzzy
 #| msgid "width"
 msgid "Width"
 msgstr "רוחב"
 
-#: src/terminal-preferences-window.ui:396
-#: src/terminal-preferences-window.ui:411
+#: src/terminal-preferences-window.ui:397
+#: src/terminal-preferences-window.ui:412
 msgid "In percent of the screen"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:410
+#: src/terminal-preferences-window.ui:411
 #, fuzzy
 #| msgid "height"
 msgid "Height"
 msgstr "גובה"
 
-#: src/terminal-preferences-window.ui:425
+#: src/terminal-preferences-window.ui:426
 msgid "Hide When Another App Is Used"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:430
+#: src/terminal-preferences-window.ui:431
 msgid "Slide In From the Top"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:431
+#: src/terminal-preferences-window.ui:432
 msgid "On X11, or with the GNOME Shell extension"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:438
+#: src/terminal-preferences-window.ui:439
 msgid "Keyboard Shortcuts"
 msgstr "קיצורי מקלדת"
 
-#: src/terminal-preferences-window.ui:441
+#: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
 msgid "Accelerator Key (F10 by default)"
 msgstr "הפעלת מקש ה_קיצור לתפריט (F10 כבררת מחדל)"
 
-#: src/terminal-preferences-window.ui:446
+#: src/terminal-preferences-window.ui:447
 msgid "View and Customize Shortcuts"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:460
+#: src/terminal-preferences-window.ui:461
 msgid "Profiles"
 msgstr "פרופילים"
 
-#: src/terminal-preferences-window.ui:464
+#: src/terminal-preferences-window.ui:465
 msgid "Import a profile from a file"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:472
+#: src/terminal-preferences-window.ui:473
 #, fuzzy
 #| msgid "_Export…"
 msgid "_Import…"
 msgstr "_ייצוא…"
 
-#: src/terminal-preferences-window.ui:503
+#: src/terminal-preferences-window.ui:504
 #, fuzzy
 #| msgid "_Action"
 msgid "Application"
 msgstr "_פעולה"
 
-#: src/terminal-preferences-window.ui:506
+#: src/terminal-preferences-window.ui:507
 msgid "Import from GNOME Terminal"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:507
+#: src/terminal-preferences-window.ui:508
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3647
+#: src/terminal-preferences-window.ui:512 src/terminal-window.cc:3647
 #, fuzzy
 #| msgid "Export"
 msgid "_Import"
 msgstr "ייצוא"
 
-#: src/terminal-preferences-window.ui:521
+#: src/terminal-preferences-window.ui:522
 msgid "Ask to Remain Default"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:526
+#: src/terminal-preferences-window.ui:527
 #, fuzzy
 #| msgid "_Set as default terminal"
 msgid "Set as Default Terminal"
