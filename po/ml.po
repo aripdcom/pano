@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thengos\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2018-10-26 11:41+0530\n"
 "Last-Translator: Ranjith Siji <ranjith.sajeev@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -1852,7 +1852,7 @@ msgstr "പുതിയ ജാലകം"
 msgid "Re_open Closed Tab"
 msgstr "ടാബ് അടയ്ക്കുക"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1888,7 +1888,7 @@ msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 msgid "_Full Screen"
 msgstr "സ്ക്രീന്‍ പരാമവധി വലിപ്പമുളളതാക്കുക (_F)"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "വായിക്കാൻ മാത്രം കഴിയുന്നത് (_O)"
 
@@ -1936,8 +1936,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "പരിശോധകന്‍ (_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr "മുന്‍ഗണനകള്‍ (_P)"
 
@@ -3440,33 +3439,33 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr "നിര്‍ദ്ദേശങ്ങളോ ഷെല്ലോ തന്നില്ല"
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "_വീണ്ടും ലഭ്യമാക്കുക"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "ഈ ടെര്‍മിനലിനായി ചൈള്‍ഡ് പ്രക്രിയ ഉണ്ടാക്കുന്നതില്‍ പിശക്"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d അവസ്ഥയില്‍ ചൈള്‍ഡ് പ്രക്രിയ സാധാരണയായി നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "സിഗ്നല്‍ %d പിള്ള പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr "പിള്ള പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
@@ -3632,13 +3631,13 @@ msgstr "ഒരു ടെര്‍മിനല്‍ തുറക്കുക"
 #: src/terminal-window.cc:3112
 #, fuzzy
 #| msgid "_Open Hyperlink"
-msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "ലിങ്ക് തുറക്കുക (_O)"
 
 #: src/terminal-window.cc:3113
 #, fuzzy
 #| msgid "_Copy Hyperlink Address"
-msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "കണ്ണിയുടെ മേല്‍വിലാസം പകര്‍ത്തുക (_C)"
 
 #: src/terminal-window.cc:3115
@@ -3650,23 +3649,25 @@ msgstr "കണ്ണിയുടെ മേല്‍വിലാസം പകര�
 #: src/terminal-window.cc:3125
 #, fuzzy
 #| msgid "_Send Mail To…"
-msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "മെയില്‍ അയയ്ക്കേണ്ടത് (‌_S)"
 
 #: src/terminal-window.cc:3126
 #, fuzzy
 #| msgid "_Copy E-mail Address"
-msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "ഈ-മെയില്‍ മേല്‍വിലാസം പകര്‍ത്തുക (_C)"
 
 #: src/terminal-window.cc:3129
 #, fuzzy
 #| msgid "C_all To…"
-msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "വിളിയ്ക്കേണ്ടതു്… (_a)"
 
 #: src/terminal-window.cc:3130
-msgid "Copy Call _Address "
+#, fuzzy
+#| msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "വിളിക്കുവാനുള്ള മേല്‍വിലാസം പകര്‍ത്തുക (_C) "
 
 #: src/terminal-window.cc:3135
@@ -3692,19 +3693,25 @@ msgid "_Paste"
 msgstr "ഒട്ടിയ്ക്കുക (_P)"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
 msgstr "ഫയല്‍നാമമായി ഒട്ടിക്കുക (_F)"
 
+#: src/terminal-window.cc:3190
+#, fuzzy
+#| msgid "Read-Only"
+msgid "Read-Onl_y"
+msgstr "വായിക്കാൻ മാത്രം കഴിയുന്നത്"
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3715,6 +3722,18 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "പ്രൊഫൈലുകള്‍ (_r)"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "Preferences"
+msgid "Pr_eferences"
+msgstr "മുന്‍ഗണനകള്‍"
+
+#: src/terminal-window.cc:3210
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Ri_ght"
+msgstr "ഇളം സോളറൈസ്ഡ്"
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3722,7 +3741,7 @@ msgid "_Zoom Pane"
 msgstr "വലുതാക്കുക"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3764,15 +3783,21 @@ msgid "Close P_ane"
 msgstr "ടാബ് അടയ്ക്കുക"
 
 #: src/terminal-window.cc:3276
-msgid "New _Terminal"
-msgstr "പുതിയ ടെര്‍മിനല്‍ (_T)"
+#, fuzzy
+#| msgid "New Terminal"
+msgid "Ne_w Terminal"
+msgstr "പുതിയ ടെര്‍മിനല്‍"
 
 #: src/terminal-window.cc:3285
-msgid "New _Tab"
-msgstr "പുതിയ ടാബ് (_T)"
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
+msgstr "പുതിയ ടാബ്"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "സ്ക്രീനിന്റെ പൂര്‍ണ്ണവലിപ്പത്തില്‍ നിന്നും പുറത്തു് കടക്കുക"
 
 #: src/terminal-window.cc:3642
@@ -3870,6 +3895,12 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ് ചെയ്യുന്നതില്‍ പരാജയം: %s\n"
+
+#~ msgid "New _Terminal"
+#~ msgstr "പുതിയ ടെര്‍മിനല്‍ (_T)"
+
+#~ msgid "New _Tab"
+#~ msgstr "പുതിയ ടാബ് (_T)"
 
 #, fuzzy
 #~| msgid "Linux console"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2023-09-06 23:57+0530\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
@@ -1823,7 +1823,7 @@ msgstr "새 창(_W)"
 msgid "Re_open Closed Tab"
 msgstr "탭 닫기"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1857,7 +1857,7 @@ msgstr "이 터미널을 닫으시겠습니까?"
 msgid "_Full Screen"
 msgstr "전체 화면(_F)"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "읽기 전용(_O)"
 
@@ -1902,8 +1902,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "인스펙터(_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr "기본 설정(_P)"
 
@@ -3406,33 +3405,33 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr "명령어나 지정하지 않았거나 셸을 요청하지 않았습니다"
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "다시 실행(_R)"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "터미널을 만드려고 하위 프로세스를 만드는 중 오류가 발생했습니다"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "하위 프로세스가 상태 %d번으로 정상적으로 끝났습니다."
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "하위 프로세스가 시그널 %d번으로 중단되었습니다."
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr "하위 프로세스가 중단되었습니다."
 
@@ -3599,11 +3598,15 @@ msgid "Silence in a terminal"
 msgstr "터미널을 엽니다"
 
 #: src/terminal-window.cc:3112
-msgid "Open _Hyperlink"
+#, fuzzy
+#| msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "하이퍼링크 열기(_H)"
 
 #: src/terminal-window.cc:3113
-msgid "Copy Hyperlink _Address"
+#, fuzzy
+#| msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "하이퍼링크 주소 복사(_A)"
 
 #: src/terminal-window.cc:3115
@@ -3613,19 +3616,27 @@ msgid "Paste Hyperlink _Target"
 msgstr "하이퍼링크 주소 복사(_A)"
 
 #: src/terminal-window.cc:3125
-msgid "Send Mail _To…"
+#, fuzzy
+#| msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "메일 보내기(_T)…"
 
 #: src/terminal-window.cc:3126
-msgid "Copy Mail _Address"
+#, fuzzy
+#| msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "메일 주소 복사(_A)"
 
 #: src/terminal-window.cc:3129
-msgid "Call _To…"
+#, fuzzy
+#| msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "전화 하기(_T)…"
 
 #: src/terminal-window.cc:3130
-msgid "Copy Call _Address "
+#, fuzzy
+#| msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "호출 주소 복사(_A)"
 
 #: src/terminal-window.cc:3135
@@ -3649,19 +3660,25 @@ msgid "_Paste"
 msgstr "붙여넣기(_P)"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
 msgstr "파일 이름으로 붙여넣기(_F)"
 
+#: src/terminal-window.cc:3190
+#, fuzzy
+#| msgid "Read-Only"
+msgid "Read-Onl_y"
+msgstr "읽기 전용"
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3672,6 +3689,18 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "프로파일(_R)"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "Preferences"
+msgid "Pr_eferences"
+msgstr "기본 설정"
+
+#: src/terminal-window.cc:3210
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Ri_ght"
+msgstr "솔러라이즈 밝음"
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3679,7 +3708,7 @@ msgid "_Zoom Pane"
 msgstr "확대"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3721,15 +3750,21 @@ msgid "Close P_ane"
 msgstr "탭 닫기"
 
 #: src/terminal-window.cc:3276
-msgid "New _Terminal"
-msgstr "새 터미널(_T)"
+#, fuzzy
+#| msgid "New Terminal"
+msgid "Ne_w Terminal"
+msgstr "새 터미널"
 
 #: src/terminal-window.cc:3285
-msgid "New _Tab"
-msgstr "새 탭(_T)"
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
+msgstr "새 탭"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "전체 화면 나가기"
 
 #: src/terminal-window.cc:3642
@@ -3828,6 +3863,12 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "인자 파싱에 실패했습니다: %s\n"
+
+#~ msgid "New _Terminal"
+#~ msgstr "새 터미널(_T)"
+
+#~ msgid "New _Tab"
+#~ msgstr "새 탭(_T)"
 
 #~ msgid "GPL-3.0+ or GFDL-1.3-only"
 #~ msgstr "GPL-3.0+ 또는 GFDL-1.3-only"

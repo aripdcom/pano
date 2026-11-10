@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2019-03-15 23:36+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -1825,7 +1825,7 @@ msgstr "_نافذة جديدة"
 msgid "Re_open Closed Tab"
 msgstr "أغلق اللسان"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1861,7 +1861,7 @@ msgstr "أأغلق هذه الطرفيّة؟"
 msgid "_Full Screen"
 msgstr "_ملء الشاشة"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "قراءة فقط"
 
@@ -1905,8 +1905,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "ال_فاحص"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr "ال_تفضيلات"
 
@@ -3404,33 +3403,33 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "أ_عد التشغيل"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "حدث خطأ عند إنشاء العملية الفرعية لهذه الطرفيّة"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "انتهت العملية الابنة بشكل طبيعية بالحالة %d."
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "انتهت العملية الابنة بالإشارة %d."
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr "انتهت العملية الابنة."
 
@@ -3602,11 +3601,15 @@ msgid "Silence in a terminal"
 msgstr "افتح طرفيّة"
 
 #: src/terminal-window.cc:3112
-msgid "Open _Hyperlink"
+#, fuzzy
+#| msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "ا_فتح الرابط"
 
 #: src/terminal-window.cc:3113
-msgid "Copy Hyperlink _Address"
+#, fuzzy
+#| msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "ا_نسخ عنوان الرابط"
 
 #: src/terminal-window.cc:3115
@@ -3616,19 +3619,27 @@ msgid "Paste Hyperlink _Target"
 msgstr "ا_نسخ عنوان الرابط"
 
 #: src/terminal-window.cc:3125
-msgid "Send Mail _To…"
+#, fuzzy
+#| msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "أر_سل بريدًا إلى…"
 
 #: src/terminal-window.cc:3126
-msgid "Copy Mail _Address"
+#, fuzzy
+#| msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "ا_نسخ عنوان البريد"
 
 #: src/terminal-window.cc:3129
-msgid "Call _To…"
+#, fuzzy
+#| msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "ا_تّصل ب…"
 
 #: src/terminal-window.cc:3130
-msgid "Copy Call _Address "
+#, fuzzy
+#| msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "ا_نسخ عنوان الاتصال"
 
 #: src/terminal-window.cc:3135
@@ -3652,19 +3663,25 @@ msgid "_Paste"
 msgstr "أل_صق"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
 msgstr "ألصق كأسماء مل_فات"
 
+#: src/terminal-window.cc:3190
+#, fuzzy
+#| msgid "Read-Only"
+msgid "Read-Onl_y"
+msgstr "للقراءة فقط"
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3675,6 +3692,18 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "ال_تشكيلات"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "Preferences"
+msgid "Pr_eferences"
+msgstr "التفضيلات"
+
+#: src/terminal-window.cc:3210
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Ri_ght"
+msgstr "سولارايزد فاتح"
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3682,7 +3711,7 @@ msgid "_Zoom Pane"
 msgstr "قرّب"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3724,15 +3753,21 @@ msgid "Close P_ane"
 msgstr "أغلق اللسان"
 
 #: src/terminal-window.cc:3276
-msgid "New _Terminal"
-msgstr "_طرفية جديدة"
+#, fuzzy
+#| msgid "New Terminal"
+msgid "Ne_w Terminal"
+msgstr "طرفية جديدة"
 
 #: src/terminal-window.cc:3285
-msgid "New _Tab"
-msgstr "_لسان جديد"
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
+msgstr "لسان جديد"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "غادر ملء الشاشة"
 
 #: src/terminal-window.cc:3642
@@ -3822,6 +3857,12 @@ msgstr "ما تزال بعض العمليات عاملة في هذه الطرف�
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "تعذّر تحليل المعاملات: %s\n"
+
+#~ msgid "New _Terminal"
+#~ msgstr "_طرفية جديدة"
+
+#~ msgid "New _Tab"
+#~ msgstr "_لسان جديد"
 
 #, fuzzy
 #~| msgid "Linux console"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:17+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -1772,17 +1772,17 @@ msgstr "Yeni Pe_ncere"
 msgid "Re_open Closed Tab"
 msgstr "Kapatılan Sekmeyi _Yeniden Aç"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr "_Sağa Böl"
 
 #: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
 msgid "Split _Down"
-msgstr "_Aşağı Böl"
+msgstr "A_şağı Böl"
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
-msgstr "Girdiyi _Yay"
+msgstr "_Girdiyi Yay"
 
 #: src/terminal-headermenu.ui:55 src/terminal-window.cc:3253
 msgid "_Off"
@@ -1804,7 +1804,7 @@ msgstr "Bu Uçbirimi _Dahil Et"
 msgid "_Full Screen"
 msgstr "_Tam Ekran"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "Salt-_Okunur"
 
@@ -1848,8 +1848,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_İnceleyici"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr "_Tercihler"
 
@@ -3216,33 +3215,33 @@ msgstr ""
 "Kopyalamak için etiketi yazın · yapıştırmak için Shift ile · açmak için Ctrl "
 "ile · iptal için Esc"
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr "Ne bir komut sağlandı ne de kabuk istendi"
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "_Yeniden başlat"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "Bu uçbirim için çocuk süreç oluştururken hata oluştu"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr "_Kabuğu Çalıştır"
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Çocuk süreç %d durum kodu ile olağan biçimde çıkış yaptı."
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Çocuk süreç %d sinyaliyle iptal edildi."
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr "Çocuk süreç iptal edildi."
 
@@ -3397,32 +3396,32 @@ msgid "Silence in a terminal"
 msgstr "Uçbirimde sessizlik"
 
 #: src/terminal-window.cc:3112
-msgid "Open _Hyperlink"
-msgstr "K_öprüyü Aç"
+msgid "_Open Hyperlink"
+msgstr "Köprüyü _Aç"
 
 #: src/terminal-window.cc:3113
-msgid "Copy Hyperlink _Address"
-msgstr "Köprü _Adresini Kopyala"
+msgid "Copy Hyper_link Address"
+msgstr "Kö_prü Adresini Kopyala"
 
 #: src/terminal-window.cc:3115
 msgid "Paste Hyperlink _Target"
-msgstr "Bağlantı _Hedefini Yapıştır"
+msgstr "Köprü Hede_fini Yapıştır"
 
 #: src/terminal-window.cc:3125
-msgid "Send Mail _To…"
-msgstr "_Posta Gönder…"
+msgid "Send Mail T_o…"
+msgstr "Post_a Gönder…"
 
 #: src/terminal-window.cc:3126
-msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "_Posta Adresini Kopyala"
 
 #: src/terminal-window.cc:3129
-msgid "Call _To…"
-msgstr "_Çağrı…"
+msgid "Call T_o…"
+msgstr "Ç_ağrı Yap…"
 
 #: src/terminal-window.cc:3130
-msgid "Copy Call _Address "
-msgstr "Çağrı _Adresini Kopyala "
+msgid "Copy Ca_ll Address"
+msgstr "Çağrı Adresini Ko_pyala"
 
 #: src/terminal-window.cc:3135
 msgid "_Open Link"
@@ -3430,7 +3429,7 @@ msgstr "Bağlantıyı _Aç"
 
 #: src/terminal-window.cc:3136
 msgid "Copy _Link"
-msgstr "Ba_ğlantıyı Kopyala"
+msgstr "Bağlantıyı Ko_pyala"
 
 #: src/terminal-window.cc:3175
 msgid "_Copy"
@@ -3445,19 +3444,23 @@ msgid "_Paste"
 msgstr "_Yapıştır"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr "Bu Komutun _Çıktısını Kopyala"
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr "Son Komutun _Çıktısını Kopyala"
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
 msgstr "_Dosya Adları Olarak Yapıştır"
 
+#: src/terminal-window.cc:3190
+msgid "Read-Onl_y"
+msgstr "Salt _Okunur"
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr "_Etkinliği İzle"
 
 #: src/terminal-window.cc:3192
@@ -3468,13 +3471,21 @@ msgstr "_Sessizliği İzle"
 msgid "P_rofiles"
 msgstr "P_rofiller"
 
+#: src/terminal-window.cc:3204
+msgid "Pr_eferences"
+msgstr "Ter_cihler"
+
+#: src/terminal-window.cc:3210
+msgid "Split Ri_ght"
+msgstr "Sa_ğa Böl"
+
 #: src/terminal-window.cc:3217
 msgid "_Zoom Pane"
 msgstr "Bölmeyi _Büyüt"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
-msgstr "Bölmeleri Aynı _Boyuta Getir"
+msgid "Ma_ke Panes the Same Size"
+msgstr "B_ölmeleri Aynı Boyuta Getir"
 
 #: src/terminal-window.cc:3221
 msgid "To a New _Tab"
@@ -3506,19 +3517,19 @@ msgstr "Bölmeyi _Taşı"
 
 #: src/terminal-window.cc:3248
 msgid "Close P_ane"
-msgstr "Bölmeyi _Kapat"
+msgstr "Bö_lmeyi Kapat"
 
 #: src/terminal-window.cc:3276
-msgid "New _Terminal"
-msgstr "Yeni _Uçbirim"
+msgid "Ne_w Terminal"
+msgstr "Ye_ni Uçbirim"
 
 #: src/terminal-window.cc:3285
-msgid "New _Tab"
-msgstr "Yeni _Sekme"
+msgid "_New Tab"
+msgstr "Yeni Sek_me"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
-msgstr "Tam Ekrandan Çık"
+msgid "Lea_ve Full Screen"
+msgstr "Tam Ekrandan Ç_ık"
 
 #: src/terminal-window.cc:3642
 msgid ""
@@ -3601,6 +3612,18 @@ msgstr "Bu uçbirimde çalışan süreç var. Uçbirimi kapatmak onu sonlandıra
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Bağımsız değişkenler ayrıştırılamadı: %s\n"
+
+#~ msgid "Copy _Output of Last Command"
+#~ msgstr "Son Komutun _Çıktısını Kopyala"
+
+#~ msgid "Make Panes the Same _Size"
+#~ msgstr "Bölmeleri Aynı _Boyuta Getir"
+
+#~ msgid "New _Terminal"
+#~ msgstr "Yeni _Uçbirim"
+
+#~ msgid "New _Tab"
+#~ msgstr "Yeni _Sekme"
 
 #~ msgid "com.aripd.Pano.desktop"
 #~ msgstr "com.aripd.Pano.desktop"

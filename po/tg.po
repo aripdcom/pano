@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tajik Gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2015-05-21 10:01+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: \n"
@@ -1923,7 +1923,7 @@ msgstr "Равзанаи нав"
 msgid "Re_open Closed Tab"
 msgstr "Пӯшидани варақа"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1959,7 +1959,7 @@ msgstr "Ин поёнаро мепӯшонед?"
 msgid "_Full Screen"
 msgstr "_Экрани пурра"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "_Танҳо барои хондан"
 
@@ -2009,8 +2009,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr "_Нозир"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr "_Хусусиятҳо"
 
@@ -3512,33 +3511,33 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr "Ҳеҷ гуна фармон таъмин ва ё восит талаб карда нашудааст"
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "_Роҳандозии дубора"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "Ҳангоми эҷоди раванди иловагӣ барои ин терминал хатогӣ рух дод"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "раванди иловагӣ ба таври оддӣ бо ҳолати %d вуҷуд дорад."
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Раванди иловагӣ бо сигнали %d қатъ гардид."
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr "Раванди иловагӣ қатъ гардид."
 
@@ -3702,13 +3701,13 @@ msgstr "Кушодани поёна"
 #: src/terminal-window.cc:3112
 #, fuzzy
 #| msgid "Open _Terminal"
-msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "Кушодани _Поёна"
 
 #: src/terminal-window.cc:3113
 #, fuzzy
 #| msgid "_Copy Link Address"
-msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "Нусхабардории суроғаи пайванд"
 
 #: src/terminal-window.cc:3115
@@ -3720,25 +3719,25 @@ msgstr "Нусхабардории суроғаи пайванд"
 #: src/terminal-window.cc:3125
 #, fuzzy
 #| msgid "_Send Mail To…"
-msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "_Фиристодани почта ба..."
 
 #: src/terminal-window.cc:3126
 #, fuzzy
 #| msgid "_Copy E-mail Address"
-msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "_Нусхабардории суроғаи почтаи электронӣ"
 
 #: src/terminal-window.cc:3129
 #, fuzzy
 #| msgid "C_all To…"
-msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "Занг_задан ба..."
 
 #: src/terminal-window.cc:3130
 #, fuzzy
 #| msgid "_Copy Call Address"
-msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "_Нусхабардории суроғаи занг"
 
 #: src/terminal-window.cc:3135
@@ -3768,11 +3767,11 @@ msgid "_Paste"
 msgstr "Гузоштан"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3781,8 +3780,14 @@ msgstr ""
 msgid "Paste as _Filenames"
 msgstr "Гузоштани номи файл"
 
+#: src/terminal-window.cc:3190
+#, fuzzy
+#| msgid "Read-Only"
+msgid "Read-Onl_y"
+msgstr "Танҳо барои хондан"
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3793,6 +3798,18 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "П_рофилҳо"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "Preferences"
+msgid "Pr_eferences"
+msgstr "Хусусиятҳо"
+
+#: src/terminal-window.cc:3210
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Ri_ght"
+msgstr "Офтобии равшан"
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3800,7 +3817,7 @@ msgid "_Zoom Pane"
 msgstr "Бузург кардани андоза"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3843,18 +3860,20 @@ msgstr "Пӯшидани варақа"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
-#| msgid "_New Terminal"
-msgid "New _Terminal"
-msgstr "_Терминали нав"
+#| msgid "New Terminal"
+msgid "Ne_w Terminal"
+msgstr "Терминали нав"
 
 #: src/terminal-window.cc:3285
 #, fuzzy
 #| msgid "New Tab"
-msgid "New _Tab"
+msgid "_New Tab"
 msgstr "Варақаи нав"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "Баромадан аз экрани пурра"
 
 #: src/terminal-window.cc:3642
@@ -3952,6 +3971,16 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Таҷзияи баҳсҳо ноком монд: %s\n"
+
+#, fuzzy
+#~| msgid "_New Terminal"
+#~ msgid "New _Terminal"
+#~ msgstr "_Терминали нав"
+
+#, fuzzy
+#~| msgid "New Tab"
+#~ msgid "New _Tab"
+#~ msgstr "Варақаи нав"
 
 #, fuzzy
 #~| msgid "Linux console"

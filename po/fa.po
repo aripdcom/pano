@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal gnome-2-12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2023-11-25 15:10+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
@@ -1834,7 +1834,7 @@ msgstr "پنجرهٔ جدید"
 msgid "Re_open Closed Tab"
 msgstr "بستن زبانه"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1870,7 +1870,7 @@ msgstr "این پایانه بسته شود؟"
 msgid "_Full Screen"
 msgstr "_تمام‌صفحه"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "_فقط‌خواندنی"
 
@@ -1914,8 +1914,7 @@ msgstr "_۴. ۱۳۲×۴۳"
 msgid "_Inspector"
 msgstr "_بازرس"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr "_ترجیحات"
 
@@ -3409,33 +3408,33 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr "هیچ فرمانی فراهم و هیچ پوسته‌ای درخواست نشده است"
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "راه‌اندازی _مجدد"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "در ایجاد فرایند فرزند برای این پایانه خطایی رخ داد"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "فرایند فرزند با وضعیت %Id معمولی خارج شد."
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "فرایند فرزند توسط سیگنال %Id پایان یافت."
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr "فرایند فرزند پایان داده شد."
 
@@ -3600,11 +3599,15 @@ msgid "Silence in a terminal"
 msgstr "گشودن یک پایانه"
 
 #: src/terminal-window.cc:3112
-msgid "Open _Hyperlink"
+#, fuzzy
+#| msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "گشودن _ابرپیوند"
 
 #: src/terminal-window.cc:3113
-msgid "Copy Hyperlink _Address"
+#, fuzzy
+#| msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "رونوشت از _نشانی ابرپیوند"
 
 #: src/terminal-window.cc:3115
@@ -3614,19 +3617,27 @@ msgid "Paste Hyperlink _Target"
 msgstr "رونوشت از _نشانی ابرپیوند"
 
 #: src/terminal-window.cc:3125
-msgid "Send Mail _To…"
+#, fuzzy
+#| msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "ارسال _رایانامه به…"
 
 #: src/terminal-window.cc:3126
-msgid "Copy Mail _Address"
+#, fuzzy
+#| msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "رونوشت از _نشانی رایانامه"
 
 #: src/terminal-window.cc:3129
-msgid "Call _To…"
+#, fuzzy
+#| msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "تماس _با…"
 
 #: src/terminal-window.cc:3130
-msgid "Copy Call _Address "
+#, fuzzy
+#| msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "رونوشت از نشانی _تماس "
 
 #: src/terminal-window.cc:3135
@@ -3650,19 +3661,25 @@ msgid "_Paste"
 msgstr "_جای‌گذاری"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
 msgstr "چسباندن به عنوان نام _پرونده"
 
+#: src/terminal-window.cc:3190
+#, fuzzy
+#| msgid "Read-Only"
+msgid "Read-Onl_y"
+msgstr "فقط-خواندنی"
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3673,6 +3690,18 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "نمایه‌ها"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "Preferences"
+msgid "Pr_eferences"
+msgstr "ترجیحات"
+
+#: src/terminal-window.cc:3210
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Ri_ght"
+msgstr "آفتاب‌زدهٔ روشن"
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3680,7 +3709,7 @@ msgid "_Zoom Pane"
 msgstr "بزرگ‌نمایی به داخل"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3722,15 +3751,21 @@ msgid "Close P_ane"
 msgstr "بستن زبانه"
 
 #: src/terminal-window.cc:3276
-msgid "New _Terminal"
-msgstr "_پایانهٔ جدید"
+#, fuzzy
+#| msgid "New Terminal"
+msgid "Ne_w Terminal"
+msgstr "پایانهٔ جدید"
 
 #: src/terminal-window.cc:3285
-msgid "New _Tab"
-msgstr "_زبانهٔ جدید"
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
+msgstr "زبانهٔ جدید"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "خروج از تمام‌صفحه"
 
 #: src/terminal-window.cc:3642
@@ -3829,6 +3864,12 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "تجزیهٔ آرگومان‌ها ممکن نبود: %s\n"
+
+#~ msgid "New _Terminal"
+#~ msgstr "_پایانهٔ جدید"
+
+#~ msgid "New _Tab"
+#~ msgstr "_زبانهٔ جدید"
 
 #~ msgid "GPL-3.0+ or GFDL-1.3-only"
 #~ msgstr "GPL-3.0+ یا GFDL-1.3-only"

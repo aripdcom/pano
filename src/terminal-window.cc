@@ -3109,8 +3109,8 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   if (info->hyperlink != nullptr) {
     gs_unref_object GMenu *section1 = g_menu_new ();
 
-    menu_append (section1, _("Open _Hyperlink"), "win.open-hyperlink");
-    menu_append (section1, _("Copy Hyperlink _Address"), "win.copy-hyperlink");
+    menu_append (section1, _("_Open Hyperlink"), "win.open-hyperlink");
+    menu_append (section1, _("Copy Hyper_link Address"), "win.copy-hyperlink");
     if (g_action_get_enabled (G_ACTION (lookup_action (window, "paste-hyperlink"))))
       menu_append (section1, _("Paste Hyperlink _Target"), "win.paste-hyperlink");
     g_menu_append_section (menu, nullptr, G_MENU_MODEL (section1));
@@ -3122,12 +3122,12 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
     const char *open_label = nullptr, *copy_label = nullptr;
     switch (info->url_flavor) {
     case FLAVOR_EMAIL:
-      open_label = _("Send Mail _To…");
-      copy_label = _("Copy Mail _Address");
+      open_label = _("Send Mail T_o…");
+      copy_label = _("Copy Mai_l Address");
       break;
     case FLAVOR_VOIP_CALL:
-      open_label = _("Call _To…");
-      copy_label = _("Copy Call _Address ");
+      open_label = _("Call T_o…");
+      copy_label = _("Copy Ca_ll Address");
       break;
     case FLAVOR_AS_IS:
     case FLAVOR_DEFAULT_TO_HTTP:
@@ -3177,9 +3177,9 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   menu_append (section4, _("_Paste"), "win.paste-text");
   // The command under the pointer, else the last one
   if (terminal_screen_has_command_output_at (screen, info->row))
-    menu_append (section4, _("Copy _Output of This Command"), "win.copy-output-here");
+    menu_append (section4, _("Copy O_utput of This Command"), "win.copy-output-here");
   else if (terminal_screen_has_command_output (screen))
-    menu_append (section4, _("Copy _Output of Last Command"), "win.copy-output");
+    menu_append (section4, _("Copy O_utput of Last Command"), "win.copy-output");
   if (g_action_get_enabled (G_ACTION (lookup_action (window, "paste-uris"))))
     menu_append (section4, _("Paste as _Filenames"), "win.paste-uris");
 
@@ -3187,8 +3187,8 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
 
   /* Profile and property section */
   gs_unref_object GMenu *section5 = g_menu_new ();
-  menu_append (section5, _("Read-_Only"), "win.read-only");
-  menu_append (section5, _("Monitor for _Activity"), "win.monitor-activity");
+  menu_append (section5, _("Read-Onl_y"), "win.read-only");
+  menu_append (section5, _("Mon_itor for Activity"), "win.monitor-activity");
   menu_append (section5, _("Monitor for _Silence"), "win.monitor-silence");
 
   GMenuModel *profiles_menu = terminal_app_get_profilemenu (app);
@@ -3201,13 +3201,13 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
     g_menu_append_item (section5, item5);
   }
 
-  menu_append (section5, _("_Preferences"), "win.edit-preferences");
+  menu_append (section5, _("Pr_eferences"), "win.edit-preferences");
 
   g_menu_append_section (menu, nullptr, G_MENU_MODEL (section5));
 
   /* Pane section */
   gs_unref_object GMenu *pane_section = g_menu_new ();
-  gs_unref_object GMenuItem *split_right_item = g_menu_item_new (_("Split _Right"), nullptr);
+  gs_unref_object GMenuItem *split_right_item = g_menu_item_new (_("Split Ri_ght"), nullptr);
   g_menu_item_set_action_and_target (split_right_item, "win.split", "s", "right");
   menu_append_item (pane_section, split_right_item);
   gs_unref_object GMenuItem *split_down_item = g_menu_item_new (_("Split _Down"), nullptr);
@@ -3215,7 +3215,7 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   menu_append_item (pane_section, split_down_item);
   if (auto const tab = window_get_active_tab (window); tab && terminal_tab_is_split (tab)) {
     menu_append (pane_section, _("_Zoom Pane"), "win.zoom-pane");
-    menu_append (pane_section, _("Make Panes the Same _Size"), "win.equalize-panes");
+    menu_append (pane_section, _("Ma_ke Panes the Same Size"), "win.equalize-panes");
 
     gs_unref_object GMenu *move_menu = g_menu_new ();
     gs_unref_object GMenuItem *to_tab_item = g_menu_item_new (_("To a New _Tab"), nullptr);
@@ -3273,7 +3273,7 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   /* New Terminal section */
   gs_unref_object GMenu *section6 = g_menu_new ();
   if (terminal_app_get_menu_unified (app)) {
-    gs_unref_object GMenuItem *item6 = g_menu_item_new (_("New _Terminal"), nullptr);
+    gs_unref_object GMenuItem *item6 = g_menu_item_new (_("Ne_w Terminal"), nullptr);
     g_menu_item_set_action_and_target (item6, "win.new-terminal",
                                        "(ss)", "default", "current");
     menu_append_item (section6, item6);
@@ -3282,7 +3282,7 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
     g_menu_item_set_action_and_target (item61, "win.new-terminal",
                                        "(ss)", "window", "current");
     menu_append_item (section6, item61);
-    gs_unref_object GMenuItem *item62 = g_menu_item_new (_("New _Tab"), nullptr);
+    gs_unref_object GMenuItem *item62 = g_menu_item_new (_("_New Tab"), nullptr);
     g_menu_item_set_action_and_target (item62, "win.new-terminal",
                                        "(ss)", "tab", "current");
     menu_append_item (section6, item62);
@@ -3292,7 +3292,7 @@ screen_show_popup_menu_cb (TerminalScreen *screen,
   /* Window section */
   gs_unref_object GMenu *section7 = g_menu_new ();
   if (gtk_window_is_fullscreen (GTK_WINDOW (window)))
-    menu_append (section7, _("Leave Full Screen"), "win.toggle-fullscreen");
+    menu_append (section7, _("Lea_ve Full Screen"), "win.toggle-fullscreen");
   g_menu_append_section (menu, nullptr, G_MENU_MODEL (section7));
 
   if (window->context_menu == nullptr) {

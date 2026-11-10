@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2006-01-04 16:15-0200\n"
 "Last-Translator: Steve Murphy <murf@e-tools.com>\n"
 "Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
@@ -1824,7 +1824,7 @@ msgstr "Irindi Dirishya"
 msgid "Re_open Closed Tab"
 msgstr "Funga Isimbuka"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1858,7 +1858,7 @@ msgstr ""
 msgid "_Full Screen"
 msgstr "Mugaragazi yuzuye"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr ""
 
@@ -1916,8 +1916,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr ""
 
@@ -3373,34 +3372,34 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 #, fuzzy
 msgid "There was an error creating the child process for this terminal"
 msgstr "Ikosa kugirango iyi"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr ""
 
@@ -3544,11 +3543,12 @@ msgid "Silence in a terminal"
 msgstr "kugirango"
 
 #: src/terminal-window.cc:3112
-msgid "Open _Hyperlink"
-msgstr ""
+#, fuzzy
+msgid "_Open Hyperlink"
+msgstr "kugirango"
 
 #: src/terminal-window.cc:3113
-msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr ""
 
 #: src/terminal-window.cc:3115
@@ -3556,19 +3556,19 @@ msgid "Paste Hyperlink _Target"
 msgstr ""
 
 #: src/terminal-window.cc:3125
-msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr ""
 
 #: src/terminal-window.cc:3126
-msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr ""
 
 #: src/terminal-window.cc:3129
-msgid "Call _To…"
+msgid "Call T_o…"
 msgstr ""
 
 #: src/terminal-window.cc:3130
-msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr ""
 
 #: src/terminal-window.cc:3135
@@ -3598,19 +3598,23 @@ msgid "_Paste"
 msgstr "Komeka"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
 msgstr ""
 
+#: src/terminal-window.cc:3190
+msgid "Read-Onl_y"
+msgstr ""
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3622,6 +3626,14 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "Urutonde"
 
+#: src/terminal-window.cc:3204
+msgid "Pr_eferences"
+msgstr ""
+
+#: src/terminal-window.cc:3210
+msgid "Split Ri_ght"
+msgstr ""
+
 # sc/sdi\scslots.src:SID_PREVIEW_ZOOMIN.text
 #: src/terminal-window.cc:3217
 #, fuzzy
@@ -3630,7 +3642,7 @@ msgid "_Zoom Pane"
 msgstr "Ihindurangano wongera"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3675,19 +3687,20 @@ msgstr "Funga Isimbuka"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
-msgid "New _Terminal"
-msgstr "i"
+#| msgid "New Tab"
+msgid "Ne_w Terminal"
+msgstr "Isimbuka nshya"
 
 #: src/terminal-window.cc:3285
 #, fuzzy
 #| msgid "New Tab"
-msgid "New _Tab"
+msgid "_New Tab"
 msgstr "Isimbuka nshya"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
 #| msgid "Full Screen"
-msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "Mugaragaza Yuzuye"
 
 #: src/terminal-window.cc:3642
@@ -3774,6 +3787,15 @@ msgstr ""
 #, fuzzy, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Inkoresha siyo"
+
+#, fuzzy
+#~ msgid "New _Terminal"
+#~ msgstr "i"
+
+#, fuzzy
+#~| msgid "New Tab"
+#~ msgid "New _Tab"
+#~ msgstr "Isimbuka nshya"
 
 #, fuzzy
 #~| msgid "_Search for:"

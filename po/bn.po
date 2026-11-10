@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2010-03-24 12:35+0600\n"
 "Last-Translator: Israt Jahan <israt@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -1931,7 +1931,7 @@ msgstr "নতুন উইন্ডো"
 msgid "Re_open Closed Tab"
 msgstr "ট্যাব বন্ধ করুন"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1965,7 +1965,7 @@ msgstr "এই টার্মিনাল বন্ধ করা হবে ক�
 msgid "_Full Screen"
 msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন (_F)"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr ""
 
@@ -2013,8 +2013,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 #, fuzzy
 #| msgid "Pr_ofile Preferences"
 msgid "_Preferences"
@@ -3540,33 +3539,33 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "বর্তমান টার্মিনালের চাইল্ড প্রসেস নির্মাণ করতে সমস্যা"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr ""
 
@@ -3737,13 +3736,13 @@ msgstr "টার্মিনালের শিরোনাম"
 #: src/terminal-window.cc:3112
 #, fuzzy
 #| msgid "Open _Terminal"
-msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "টার্মিনাল খুলুন (_T)"
 
 #: src/terminal-window.cc:3113
 #, fuzzy
 #| msgid "_Copy Link Address"
-msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "লিংকের ঠিকানা অনুলিপি করুন (_C)"
 
 #: src/terminal-window.cc:3115
@@ -3755,25 +3754,25 @@ msgstr "লিংকের ঠিকানা অনুলিপি করুন
 #: src/terminal-window.cc:3125
 #, fuzzy
 #| msgid "_Send Mail To…"
-msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "মেইল প্রেরণের গন্তব্যস্থল...(_S)"
 
 #: src/terminal-window.cc:3126
 #, fuzzy
 #| msgid "_Copy E-mail Address"
-msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "ইমেইল ঠিকানা অনুলিপি করুন (_C)"
 
 #: src/terminal-window.cc:3129
 #, fuzzy
 #| msgid "C_all To…"
-msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "চিহ্নিত স্থানে কল করুন...(_a)"
 
 #: src/terminal-window.cc:3130
 #, fuzzy
 #| msgid "_Copy Call Address"
-msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "কলের ঠিকানা অনুলিপি করুন (_C)"
 
 #: src/terminal-window.cc:3135
@@ -3803,11 +3802,11 @@ msgid "_Paste"
 msgstr "প্রতিলেপন করুন"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3816,8 +3815,12 @@ msgstr ""
 msgid "Paste as _Filenames"
 msgstr "ফাইলের নাম প্রতিলেপন করা হবে (_F)"
 
+#: src/terminal-window.cc:3190
+msgid "Read-Onl_y"
+msgstr ""
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3828,6 +3831,16 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "প্রোফাইল (_r)"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "Pr_ofile Preferences"
+msgid "Pr_eferences"
+msgstr "প্রোফাইল সংক্রান্ত পছন্দ (_o)"
+
+#: src/terminal-window.cc:3210
+msgid "Split Ri_ght"
+msgstr ""
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3835,7 +3848,7 @@ msgid "_Zoom Pane"
 msgstr "বড় করে প্রদর্শন"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3878,18 +3891,20 @@ msgstr "ট্যাব বন্ধ করুন"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
-#| msgid "_Terminal"
-msgid "New _Terminal"
-msgstr "টার্মিনাল (_T)"
+#| msgid "Terminal"
+msgid "Ne_w Terminal"
+msgstr "টার্মিনাল"
 
 #: src/terminal-window.cc:3285
 #, fuzzy
 #| msgid "New Tab"
-msgid "New _Tab"
+msgid "_New Tab"
 msgstr "নতুন ট্যাব"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "সম্পূর্ণ পর্দা জুড়ে প্রদর্শন বন্ধ করুন"
 
 #: src/terminal-window.cc:3642
@@ -3987,6 +4002,16 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"
+
+#, fuzzy
+#~| msgid "_Terminal"
+#~ msgid "New _Terminal"
+#~ msgstr "টার্মিনাল (_T)"
+
+#, fuzzy
+#~| msgid "New Tab"
+#~ msgid "New _Tab"
+#~ msgstr "নতুন ট্যাব"
 
 # Translated by sadia
 #, fuzzy

@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2023-08-10 17:11+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
@@ -1822,7 +1822,7 @@ msgstr "新建窗口(_W)"
 msgid "Re_open Closed Tab"
 msgstr "关闭标签页"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1858,7 +1858,7 @@ msgstr "关闭此终端？"
 msgid "_Full Screen"
 msgstr "全屏(_F)"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "只读(_O)"
 
@@ -1902,8 +1902,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "检查器(_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 msgid "_Preferences"
 msgstr "配置文件首选项(_P)"
 
@@ -3387,33 +3386,33 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr "未提供命令，也未指定 shell"
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "重新启动(_R)"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "创建此终端的子进程时出错"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "子进程以状态%d正常的退出。"
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "子进程被信号%d中断。"
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 msgid "The child process was aborted."
 msgstr "子进程被中断。"
 
@@ -3584,11 +3583,15 @@ msgid "Silence in a terminal"
 msgstr "打开终端"
 
 #: src/terminal-window.cc:3112
-msgid "Open _Hyperlink"
+#, fuzzy
+#| msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "打开超链接(_H)"
 
 #: src/terminal-window.cc:3113
-msgid "Copy Hyperlink _Address"
+#, fuzzy
+#| msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "复制超链接地址(_A)"
 
 #: src/terminal-window.cc:3115
@@ -3598,19 +3601,27 @@ msgid "Paste Hyperlink _Target"
 msgstr "复制超链接地址(_A)"
 
 #: src/terminal-window.cc:3125
-msgid "Send Mail _To…"
+#, fuzzy
+#| msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "发送邮件给(_T)…"
 
 #: src/terminal-window.cc:3126
-msgid "Copy Mail _Address"
+#, fuzzy
+#| msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "复制电子邮件地址(_A)"
 
 #: src/terminal-window.cc:3129
-msgid "Call _To…"
+#, fuzzy
+#| msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "呼叫(_T)…"
 
 #: src/terminal-window.cc:3130
-msgid "Copy Call _Address "
+#, fuzzy
+#| msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "复制呼叫地址(_A)"
 
 #: src/terminal-window.cc:3135
@@ -3634,19 +3645,25 @@ msgid "_Paste"
 msgstr "粘贴(_P)"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
 msgstr "粘贴文件名(_F)"
 
+#: src/terminal-window.cc:3190
+#, fuzzy
+#| msgid "Read-Only"
+msgid "Read-Onl_y"
+msgstr "只读"
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3657,6 +3674,18 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "配置文件(_R)"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "Preferences"
+msgid "Pr_eferences"
+msgstr "首选项"
+
+#: src/terminal-window.cc:3210
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Ri_ght"
+msgstr "浅色的 Solarized"
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3664,7 +3693,7 @@ msgid "_Zoom Pane"
 msgstr "放大"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3706,15 +3735,21 @@ msgid "Close P_ane"
 msgstr "关闭标签页"
 
 #: src/terminal-window.cc:3276
-msgid "New _Terminal"
-msgstr "新建终端(_T)"
+#, fuzzy
+#| msgid "New Terminal"
+msgid "Ne_w Terminal"
+msgstr "新建终端"
 
 #: src/terminal-window.cc:3285
-msgid "New _Tab"
-msgstr "新建标签页(_T)"
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
+msgstr "新建标签页"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "退出全屏"
 
 #: src/terminal-window.cc:3642
@@ -3805,6 +3840,12 @@ msgstr "该终端中仍然有一个进程在运行。关闭终端将杀死该进
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "无法处理参数：%s\n"
+
+#~ msgid "New _Terminal"
+#~ msgstr "新建终端(_T)"
+
+#~ msgid "New _Tab"
+#~ msgstr "新建标签页(_T)"
 
 #~ msgid "GPL-3.0+ or GFDL-1.3-only"
 #~ msgstr "GPL-3.0+ or GFDL-1.3-only"

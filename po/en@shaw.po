@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:59+0300\n"
+"POT-Creation-Date: 2026-11-11 00:16+0300\n"
 "PO-Revision-Date: 2010-05-18 10:04 -0400\n"
 "Last-Translator: Thomas Thurman <tthurman@gnome.org>\n"
 "Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
@@ -1904,7 +1904,7 @@ msgstr "𐑯𐑿 𐑢𐑦𐑯𐑛𐑴"
 msgid "Re_open Closed Tab"
 msgstr "𐑒𐑤𐑴𐑟 𐑑𐑨𐑚"
 
-#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
+#: src/terminal-headermenu.ui:39
 msgid "Split _Right"
 msgstr ""
 
@@ -1938,7 +1938,7 @@ msgstr "𐑒𐑤𐑴𐑟 𐑞𐑦𐑕 𐑑𐑻𐑥𐑦𐑯𐑩𐑤?"
 msgid "_Full Screen"
 msgstr "_𐑓𐑫𐑤 𐑕𐑒𐑮𐑰𐑯"
 
-#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
+#: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr ""
 
@@ -1986,8 +1986,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
-#: src/terminal-window.cc:3204
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
 #, fuzzy
 #| msgid "_Profile Preferences"
 msgid "_Preferences"
@@ -3486,34 +3485,34 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3488
+#: src/terminal-screen.cc:3493
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
+#: src/terminal-screen.cc:3743 src/terminal-screen.cc:4231
 msgid "_Relaunch"
 msgstr "_𐑮𐑰𐑤𐑪𐑯𐑗"
 
-#: src/terminal-screen.cc:3741
+#: src/terminal-screen.cc:3746
 msgid "There was an error creating the child process for this terminal"
 msgstr "𐑞𐑺 𐑢𐑪𐑟 𐑩𐑯 𐑻𐑼 𐑒𐑮𐑦𐑱𐑑𐑦𐑙 𐑞 𐑗𐑲𐑤𐑛 𐑐𐑮𐑴𐑕𐑧𐑕 𐑓𐑹 𐑞𐑦𐑕 𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
-#: src/terminal-screen.cc:4224
+#: src/terminal-screen.cc:4232
 msgid "Run _Shell"
 msgstr ""
 
-#: src/terminal-screen.cc:4228
+#: src/terminal-screen.cc:4236
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "𐑞 𐑗𐑲𐑤𐑛 𐑐𐑮𐑴𐑕𐑧𐑕 𐑧𐑜𐑟𐑦𐑑𐑩𐑛 𐑯𐑹𐑥𐑩𐑤𐑦 𐑢𐑦𐑞 𐑕𐑑𐑱𐑑𐑫𐑕 %d."
 
-#: src/terminal-screen.cc:4231
+#: src/terminal-screen.cc:4239
 #, fuzzy, c-format
 #| msgid "The child process was terminated by signal %d."
 msgid "The child process was aborted by signal %d."
 msgstr "𐑞 𐑗𐑲𐑤𐑛 𐑐𐑮𐑴𐑕𐑧𐑕 𐑢𐑪𐑟 𐑑𐑻𐑥𐑩𐑯𐑱𐑑𐑩𐑛 𐑚𐑲 𐑕𐑦𐑜𐑯𐑩𐑤 %d."
 
-#: src/terminal-screen.cc:4234
+#: src/terminal-screen.cc:4242
 #, fuzzy
 #| msgid "The child process was terminated."
 msgid "The child process was aborted."
@@ -3678,13 +3677,13 @@ msgstr "𐑑𐑲𐑑𐑩𐑤 𐑓𐑹 𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 #: src/terminal-window.cc:3112
 #, fuzzy
 #| msgid "Open _Terminal"
-msgid "Open _Hyperlink"
+msgid "_Open Hyperlink"
 msgstr "𐑴𐑐𐑩𐑯 _𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
 #: src/terminal-window.cc:3113
 #, fuzzy
 #| msgid "_Copy Link Address"
-msgid "Copy Hyperlink _Address"
+msgid "Copy Hyper_link Address"
 msgstr "_𐑒𐑪𐑐𐑦 𐑤𐑦𐑙𐑒 𐑩𐑛𐑮𐑧𐑕"
 
 #: src/terminal-window.cc:3115
@@ -3696,25 +3695,25 @@ msgstr "_𐑒𐑪𐑐𐑦 𐑤𐑦𐑙𐑒 𐑩𐑛𐑮𐑧𐑕"
 #: src/terminal-window.cc:3125
 #, fuzzy
 #| msgid "_Send Mail To…"
-msgid "Send Mail _To…"
+msgid "Send Mail T_o…"
 msgstr "_𐑕𐑧𐑯𐑛 𐑥𐑱𐑤 𐑑…"
 
 #: src/terminal-window.cc:3126
 #, fuzzy
 #| msgid "_Copy E-mail Address"
-msgid "Copy Mail _Address"
+msgid "Copy Mai_l Address"
 msgstr "_𐑒𐑪𐑐𐑦 𐑧-𐑥𐑱𐑤 𐑩𐑛𐑮𐑧𐑕"
 
 #: src/terminal-window.cc:3129
 #, fuzzy
 #| msgid "C_all To…"
-msgid "Call _To…"
+msgid "Call T_o…"
 msgstr "_𐑒𐑷𐑤 𐑑…"
 
 #: src/terminal-window.cc:3130
 #, fuzzy
 #| msgid "_Copy Call Address"
-msgid "Copy Call _Address "
+msgid "Copy Ca_ll Address"
 msgstr "_𐑒𐑪𐑐𐑦 𐑒𐑷𐑤 𐑩𐑛𐑮𐑧𐑕"
 
 #: src/terminal-window.cc:3135
@@ -3744,11 +3743,11 @@ msgid "_Paste"
 msgstr "𐑐𐑱𐑕𐑑"
 
 #: src/terminal-window.cc:3180
-msgid "Copy _Output of This Command"
+msgid "Copy O_utput of This Command"
 msgstr ""
 
 #: src/terminal-window.cc:3182
-msgid "Copy _Output of Last Command"
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3757,8 +3756,12 @@ msgstr ""
 msgid "Paste as _Filenames"
 msgstr "𐑐𐑱𐑕𐑑 _𐑓𐑲𐑤𐑯𐑱𐑥𐑟"
 
+#: src/terminal-window.cc:3190
+msgid "Read-Onl_y"
+msgstr ""
+
 #: src/terminal-window.cc:3191
-msgid "Monitor for _Activity"
+msgid "Mon_itor for Activity"
 msgstr ""
 
 #: src/terminal-window.cc:3192
@@ -3769,6 +3772,16 @@ msgstr ""
 msgid "P_rofiles"
 msgstr "_𐑐𐑮𐑴𐑓𐑲𐑤𐑟"
 
+#: src/terminal-window.cc:3204
+#, fuzzy
+#| msgid "_Profile Preferences"
+msgid "Pr_eferences"
+msgstr "_𐑐𐑮𐑴𐑓𐑲𐑤 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟"
+
+#: src/terminal-window.cc:3210
+msgid "Split Ri_ght"
+msgstr ""
+
 #: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
@@ -3776,7 +3789,7 @@ msgid "_Zoom Pane"
 msgstr "𐑟𐑵𐑥 𐑦𐑯"
 
 #: src/terminal-window.cc:3218
-msgid "Make Panes the Same _Size"
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-window.cc:3221
@@ -3819,18 +3832,20 @@ msgstr "𐑒𐑤𐑴𐑟 𐑑𐑨𐑚"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
-#| msgid "_Terminal"
-msgid "New _Terminal"
-msgstr "_𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
+#| msgid "Terminal"
+msgid "Ne_w Terminal"
+msgstr "𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
 #: src/terminal-window.cc:3285
 #, fuzzy
 #| msgid "New Tab"
-msgid "New _Tab"
+msgid "_New Tab"
 msgstr "𐑯𐑿 𐑑𐑨𐑚"
 
 #: src/terminal-window.cc:3295
-msgid "Leave Full Screen"
+#, fuzzy
+#| msgid "Leave Full Screen"
+msgid "Lea_ve Full Screen"
 msgstr "𐑤𐑰𐑝 𐑓𐑫𐑤 𐑕𐑒𐑮𐑰𐑯"
 
 #: src/terminal-window.cc:3642
@@ -3924,6 +3939,16 @@ msgstr "𐑞𐑺 𐑦𐑟 𐑕𐑑𐑦𐑤 𐑩 𐑐𐑮𐑴𐑕𐑧𐑕 𐑮�
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑐𐑸𐑕 𐑸𐑜𐑿𐑥𐑩𐑯𐑑𐑕: %s\n"
+
+#, fuzzy
+#~| msgid "_Terminal"
+#~ msgid "New _Terminal"
+#~ msgstr "_𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
+
+#, fuzzy
+#~| msgid "New Tab"
+#~ msgid "New _Tab"
+#~ msgstr "𐑯𐑿 𐑑𐑨𐑚"
 
 #, fuzzy
 #~| msgid "Linux console"
