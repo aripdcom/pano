@@ -148,7 +148,7 @@
   <schema id="com.aripd.Pano.Legacy.Profile">
     <key name="visible-name" type="s">
       <!-- Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes. -->
-      <default l10n="messages" context="visible-name">'Unnamed'</default>
+      <default l10n="messages" context="visible-name">'Default'</default>
       <summary>Human-readable name of the profile</summary>
       <description>Human-readable name of the profile.</description>
     </key>
