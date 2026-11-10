@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2024-01-30 10:14+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
@@ -1400,7 +1400,7 @@ msgstr "Cerrar pestaña"
 msgid "Re_open Closed Tab"
 msgstr "Cerrar pestaña"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Cerrar ventana"
 
@@ -2019,8 +2019,8 @@ msgstr "Mover terminal a la de_recha"
 msgid "_Detach Terminal"
 msgstr "_Desacoplar terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "Cerrar la _terminal"
 
@@ -3810,19 +3810,19 @@ msgstr "_Sí"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3834,7 +3834,7 @@ msgstr ""
 "Aún hay procesos ejecutándose en algunas terminales de esta ventana. Cerrar "
 "la ventana matará todos los procesos."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3846,17 +3846,17 @@ msgstr ""
 "Aún hay un proceso ejecutándose en esta terminal. Cerrar la terminal lo "
 "matará."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Cerrar la _terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "¿Cerrar esta ventana?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3864,11 +3864,33 @@ msgstr ""
 "Aún hay procesos ejecutándose en algunas terminales de esta ventana. Cerrar "
 "la ventana matará todos los procesos."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "¿Cerrar esta terminal?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Aún hay procesos ejecutándose en algunas terminales de esta ventana. Cerrar "
+"la ventana matará todos los procesos."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "C_errar pestaña"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4185,9 +4207,6 @@ msgstr "Falló al analizar los argumentos: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "_Imprimir…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "C_errar pestaña"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Cerrar ventana"

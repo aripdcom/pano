@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-10-21 15:05+0300\n"
 "Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
 "gmail [dot] com>\n"
@@ -1365,7 +1365,7 @@ msgstr "Închide tabul"
 msgid "Re_open Closed Tab"
 msgstr "Închide tabul"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "Î_nchide fereastra"
 
@@ -1984,8 +1984,8 @@ msgstr "Mută terminalul la d_reapta"
 msgid "_Detach Terminal"
 msgstr "_Detașează terminalul"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "Închide termina_l"
 
@@ -3773,19 +3773,19 @@ msgstr "_Da"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Închideți acest terminal?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Închideți acest terminal?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3797,7 +3797,7 @@ msgstr ""
 "Momentan unele procese încă rulează în unul din terminalele din această "
 "fereastră. Închiderea ferestrei le va distruge pe toate."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3808,17 +3808,17 @@ msgid ""
 msgstr ""
 "Momentan rulează un proces în terminal. Închiderea terminalul îl va distruge."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Închide termina_l"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Închideți acestă fereastră?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3826,11 +3826,33 @@ msgstr ""
 "Momentan unele procese încă rulează în unul din terminalele din această "
 "fereastră. Închiderea ferestrei le va distruge pe toate."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Închideți acest terminal?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Momentan unele procese încă rulează în unul din terminalele din această "
+"fereastră. Închiderea ferestrei le va distruge pe toate."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Î_nchide tabul"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Închideți acest terminal?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4145,9 +4167,6 @@ msgstr "Parsarea argumentelor a eșuat: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "Ti_părește…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Î_nchide tabul"
 
 #~ msgid "_Close Window"
 #~ msgstr "În_chide fereastră"

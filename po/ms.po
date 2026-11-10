@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: profterm HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2020-01-27 18:10+0800\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Pasukan Terjemahan GNOME Malaysia\n"
@@ -1365,7 +1365,7 @@ msgstr "Tutup Tab"
 msgid "Re_open Closed Tab"
 msgstr "Tutup Tab"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "T_utup Tetingkap"
 
@@ -1992,8 +1992,8 @@ msgstr "Alih Terminal ke arah K_anan"
 msgid "_Detach Terminal"
 msgstr "Tan_ggalkan Terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "Tutu_p Terminal"
 
@@ -3789,19 +3789,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Tutup terminal ini?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Tutup terminal ini?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3813,7 +3813,7 @@ msgstr ""
 "Terdapat proses yang masih berjalan dalam beberapa terminal pada tetingkap "
 "ini. Penutupan tetingkap akan mematikannya semua."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3825,17 +3825,17 @@ msgstr ""
 "Terdapat proses yang masih berjalan dalam terminal ini. Penutupan terminal "
 "akan mematikannya."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Tutu_p Terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Tutup tetingkap ini?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3843,11 +3843,33 @@ msgstr ""
 "Terdapat proses yang masih berjalan dalam beberapa terminal pada tetingkap "
 "ini. Penutupan tetingkap akan mematikannya semua."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Tutup terminal ini?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Terdapat proses yang masih berjalan dalam beberapa terminal pada tetingkap "
+"ini. Penutupan tetingkap akan mematikannya semua."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Tutup Ta_b"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Tutup terminal ini?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4106,9 +4128,6 @@ msgstr "Gagal menghurai argumen: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "_Cetak…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Tutup Ta_b"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Tutup Tetingkap"

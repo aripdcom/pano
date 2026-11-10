@@ -5237,6 +5237,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
                            GTK_RESPONSE_DELETE_EVENT);
     }
 
+  auto split_tab = false;
   do_confirm = g_settings_get_boolean (terminal_app_get_global_settings (terminal_app_get ()),
                                        TERMINAL_SETTING_CONFIRM_CLOSE_KEY);
   if (!do_confirm)
@@ -5254,6 +5255,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
         screens = terminal_tab_list_screens(terminal_tab_get_from_screen(screen));
         // A tab with several panes is closed like a single terminal
         n_tabs = 1;
+        split_tab = g_list_length(screens) > 1;
       } else if (kind == CloseKind::OTHER_TABS) {
         auto const others = window_list_other_tabs(window, terminal_tab_get_from_screen(screen));
         for (auto l = others; l != nullptr; l = l->next)
@@ -5296,6 +5298,11 @@ confirm_close_window_or_tab (TerminalWindow *window,
     text = _("There are still processes running in some terminals in this window. "
              "Closing the window will kill all of them.");
     button = _("C_lose Window");
+  } else if (split_tab) {
+    title = _("Close this tab?");
+    text = _("There are still processes running in some panes of this tab. "
+             "Closing the tab will kill all of them.");
+    button = _("C_lose Tab");
   } else {
     title = _("Close this terminal?");
     text = _("There is still a process running in this terminal. "

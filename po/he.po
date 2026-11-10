@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-07-28 10:26+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
@@ -1336,7 +1336,7 @@ msgstr "סגירת לשונית"
 msgid "Re_open Closed Tab"
 msgstr "סגירת לשונית"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "סגירת ה_חלון"
 
@@ -1955,8 +1955,8 @@ msgstr "העברת המסוף _ימינה"
 msgid "_Detach Terminal"
 msgstr "_ניתוק המסוף"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_סגירת המסוף"
 
@@ -3745,19 +3745,19 @@ msgstr "_כן"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "האם לסגור מסוף זה?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "האם לסגור מסוף זה?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3768,7 +3768,7 @@ msgid ""
 msgstr ""
 "עדיין ישנם תהליכים הפעילים דרך כמה מסופים בחלון זה. סגירת החלון תחסל את כולם."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3778,28 +3778,49 @@ msgid ""
 "will kill it."
 msgstr "עדיין ישנו תהליך הפעיל דרך מסוף זה. סגירת המסוף תחסל אותו."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_סגירת המסוף"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "האם לסגור חלון זה?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 "עדיין ישנם תהליכים הפעילים דרך כמה מסופים בחלון זה. סגירת החלון תחסל את כולם."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "האם לסגור מסוף זה?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"עדיין ישנם תהליכים הפעילים דרך כמה מסופים בחלון זה. סגירת החלון תחסל את כולם."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "ס_גירת הלשונית"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "האם לסגור מסוף זה?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4113,9 +4134,6 @@ msgstr "Failed to parse arguments: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "ה_דפסה…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "ס_גירת הלשונית"
 
 #~ msgid "_Close Window"
 #~ msgstr "_סגירת החלון"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2015-03-02 11:56+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
@@ -1423,7 +1423,7 @@ msgstr "Zatvori karticu"
 msgid "Re_open Closed Tab"
 msgstr ""
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Zatvori prozor"
 
@@ -2062,8 +2062,8 @@ msgstr "Pomjeri terminal_desno"
 msgid "_Detach Terminal"
 msgstr "_Odvoji terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Zatvori terminal"
 
@@ -3825,19 +3825,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Da zatvorim terminal?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Da zatvorim terminal?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3849,7 +3849,7 @@ msgstr ""
 "Neki programi su još uvijek pokrenuti unutar terminala ovog prozora. "
 "Zatvaranje prozora će ubiti sve programe."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3861,17 +3861,17 @@ msgstr ""
 "Neki program je još uvijek pokrenut unutar ovog terminala. Zatvaranje "
 "terminala će ubiti program."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Zatvori terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Da zatvorim prozor?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3879,11 +3879,35 @@ msgstr ""
 "Neki programi su još uvijek pokrenuti unutar terminala ovog prozora. "
 "Zatvaranje prozora će ubiti sve programe."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Da zatvorim terminal?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Neki programi su još uvijek pokrenuti unutar terminala ovog prozora. "
+"Zatvaranje prozora će ubiti sve programe."
+
+#: src/terminal-window.cc:5305
+#, fuzzy
+#| msgid "Close tab"
+msgid "C_lose Tab"
+msgstr "Zatvori karticu"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Da zatvorim terminal?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

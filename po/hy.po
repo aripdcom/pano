@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.hy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2009-01-30 20:17+0400\n"
 "Last-Translator: Norayr Chilingaryan <chnorik@gmail.com>\n"
 "Language-Team: <norik@freenet.am>\n"
@@ -1176,7 +1176,7 @@ msgstr "Փակել Թերթը"
 msgid "Re_open Closed Tab"
 msgstr "Փակել Թերթը"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 #, fuzzy
 msgid "C_lose Window"
 msgstr "Փակել Պատուհանը"
@@ -1789,8 +1789,8 @@ msgstr "Տերմինալ"
 msgid "_Detach Terminal"
 msgstr "Տերմինալ"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 #, fuzzy
 msgid "C_lose Terminal"
 msgstr "Տերմինալ"
@@ -3444,50 +3444,65 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 msgid "Close the other terminals?"
 msgstr "Ընտրել տերմինալի տառատեսակը"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 msgid "Close the other terminal?"
 msgstr "Ընտրել տերմինալի տառատեսակը"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 msgid "C_lose Terminals"
 msgstr "Տերմինալ"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 #, fuzzy
 msgid "Close this window?"
 msgstr "Փակել Պատուհանը"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+msgid "Close this tab?"
+msgstr "Ընտրել տերմինալի տառատեսակը"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Փակել Թերթը"
+
+#: src/terminal-window.cc:5307
 #, fuzzy
 msgid "Close this terminal?"
 msgstr "Ընտրել տերմինալի տառատեսակը"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3720,9 +3735,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "New _Profile…"
 #~ msgstr "Նոր Պրոֆիլ"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Փակել Թերթը"
 
 #~ msgid "_Close Window"
 #~ msgstr "Փակել Պատուհանը"

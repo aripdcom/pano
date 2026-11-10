@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2009-08-31 16:20+0100\n"
 "Last-Translator: Denis\n"
 "Language-Team: Brenux <brenux@free.fr>\n"
@@ -1313,7 +1313,7 @@ msgstr "Serriñ an ivinell"
 msgid "Re_open Closed Tab"
 msgstr "Serriñ an ivinell"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Serriñ ar prenestr"
 
@@ -1932,8 +1932,8 @@ msgstr "Serriñ an termenell"
 msgid "_Detach Terminal"
 msgstr "_Termenell"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "Serriñ an termenell"
 
@@ -3592,51 +3592,67 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Serriñ an termenell-mañ"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Serriñ an termenell-mañ"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Serriñ an termenell"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Serriñ ar prenestr-mañ ?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Serriñ an termenell-mañ"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Serriñ an ivinell"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Serriñ an termenell-mañ"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3936,9 +3952,6 @@ msgstr ""
 
 #~ msgid "New _Profile…"
 #~ msgstr "_Aelad nevez..."
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Serriñ an ivinell"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Serriñ ar prenestr"

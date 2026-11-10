@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2020-08-25 01:12+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -1348,7 +1348,7 @@ msgstr "タブを閉じる"
 msgid "Re_open Closed Tab"
 msgstr "タブを閉じる"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "ウィンドウを閉じる(_L)"
 
@@ -1967,8 +1967,8 @@ msgstr "端末を右へ移動(_R)"
 msgid "_Detach Terminal"
 msgstr "端末を分離(_D)"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "端末を閉じる(_L)"
 
@@ -3751,19 +3751,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "この端末を閉じますか?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "この端末を閉じますか?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3775,7 +3775,7 @@ msgstr ""
 "このウィンドウには未だ実行中のプロセスが存在しているタブがあります。ここで"
 "ウィンドウを閉じるとそれらのプロセスをすべて強制終了します。"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3787,17 +3787,17 @@ msgstr ""
 "この端末には未だ実行中のプロセスが存在しています。ここで端末を閉じるとそのプ"
 "ロセスを強制終了します。"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "端末を閉じる(_L)"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "このウィンドウを閉じますか?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3805,11 +3805,33 @@ msgstr ""
 "このウィンドウには未だ実行中のプロセスが存在しているタブがあります。ここで"
 "ウィンドウを閉じるとそれらのプロセスをすべて強制終了します。"
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "この端末を閉じますか?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"このウィンドウには未だ実行中のプロセスが存在しているタブがあります。ここで"
+"ウィンドウを閉じるとそれらのプロセスをすべて強制終了します。"
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "タブを閉じる(_L)"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "この端末を閉じますか?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4125,9 +4147,6 @@ msgstr "引数の解析に失敗しました: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "印刷(_P)…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "タブを閉じる(_L)"
 
 #~ msgid "_Close Window"
 #~ msgstr "ウィンドウを閉じる(_C)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2008-01-05 20:32+0100\n"
 "Last-Translator: Sanlig Badral <badral@openmn.org>\n"
 "Language-Team: Монгол <openmn-translation@lists.sf.net>\n"
@@ -1339,7 +1339,7 @@ msgstr "ТАВ-г хаах"
 msgid "Re_open Closed Tab"
 msgstr "ТАВ-г хаах"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 #, fuzzy
 #| msgid "Close Window"
 msgid "C_lose Window"
@@ -1960,8 +1960,8 @@ msgstr "ГНОМЕ-Терминал"
 msgid "_Detach Terminal"
 msgstr "_Терминал"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminal"
@@ -3731,55 +3731,71 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "_Use the system terminal font"
 msgid "Close the other terminals?"
 msgstr "Систем терминал бичгийг _хэрэглэх"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "_Use the system terminal font"
 msgid "Close the other terminal?"
 msgstr "Систем терминал бичгийг _хэрэглэх"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminals"
 msgstr "_Терминал"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 #, fuzzy
 #| msgid "Close Window"
 msgid "Close this window?"
 msgstr "Цонх хаах"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Choose a terminal font"
+msgid "Close this tab?"
+msgstr "Терминалын бичгийг сонгоно уу"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "_ТАБ хаах"
+
+#: src/terminal-window.cc:5307
 #, fuzzy
 #| msgid "Choose a terminal font"
 msgid "Close this terminal?"
 msgstr "Терминалын бичгийг сонгоно уу"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4799,9 +4815,6 @@ msgstr "Хүчингүй аргумент »%s«.\n"
 #~ msgstr ""
 #~ "Цэсэнд зураг хэрэглэх эсэх тохируулгын утгууд ачаалж байхад алдаа гарлаа "
 #~ "(%s).\n"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "_ТАБ хаах"
 
 #~ msgid "_Close Window"
 #~ msgstr "Цонх _хаах"

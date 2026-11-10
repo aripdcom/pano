@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.gnome-2-22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2008-07-15 18:05+0200\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
@@ -1418,7 +1418,7 @@ msgstr "Mbylle skedën"
 
 # (pofilter) accelerators: accelerator _ is missing from translation
 # (pofilter) isreview: Check if the unit has been marked review.
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "Mby_ll dritaren"
 
@@ -2052,8 +2052,8 @@ msgstr "Lëvize skedën _djathtas"
 msgid "_Detach Terminal"
 msgstr "_Shkëput skedën"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminal"
@@ -3856,55 +3856,71 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Set the terminal's title"
 msgid "Close the other terminals?"
 msgstr "Vendos titullin e terminalit"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Close the other terminal?"
 msgstr "Titulli i terminalit"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminals"
 msgstr "_Terminali"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 #, fuzzy
 #| msgid "Close Window"
 msgid "Close this window?"
 msgstr "Mbylle dritaren"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Title for terminal"
+msgid "Close this tab?"
+msgstr "Titulli i terminalit"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "M_byll skedën"
+
+#: src/terminal-window.cc:5307
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Close this terminal?"
 msgstr "Titulli i terminalit"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -5158,9 +5174,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Gabim gjatë ngarkimit të vlerës së konfigurimit që përcakton nëse do të "
 #~ "lejohet përdorimi i figurave në menu. (%s)\n"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "M_byll skedën"
 
 #~ msgid "Change P_rofile"
 #~ msgstr "Ndrysho P_rofilin"

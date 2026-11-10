@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2014-09-22 12:53+0530\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -1399,7 +1399,7 @@ msgstr "ટૅબ બંધ કરો"
 msgid "Re_open Closed Tab"
 msgstr "ટૅબ બંધ કરો"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "વિન્ડો બંધ કરો (_l)"
 
@@ -2042,8 +2042,8 @@ msgstr "ટર્મિનલને જમણે ખસેડો (_R)"
 msgid "_Detach Terminal"
 msgstr "ટર્મિનલનું જોડાણ તોડો (_D)"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "ટર્મિનલ ને બંધ કરો (_l)"
 
@@ -3816,19 +3816,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "આ ટર્મિનલ ને બંધ કરો?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "આ ટર્મિનલ ને બંધ કરો?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3840,7 +3840,7 @@ msgstr ""
 "આ વિન્ડો માં કેટલાક ટર્મિનલોમાં હજુ પ્રક્રિયાઓ ચાલી રહી છે. વિન્ડો ને બંધ કરવા દરમ્યાન "
 "તેઓનાં બધાને મારશે."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3850,17 +3850,17 @@ msgid ""
 "will kill it."
 msgstr "આ ટર્મિનલ માં હજુ પ્રક્રિયા ચાલુ રહી છે. ટર્મિનલમાં બંધ કરવા દરમ્યાન તેને મારશે."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "ટર્મિનલ ને બંધ કરો (_l)"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "શું આ વિન્ડો બંધ કરવી છે?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3868,11 +3868,33 @@ msgstr ""
 "આ વિન્ડો માં કેટલાક ટર્મિનલોમાં હજુ પ્રક્રિયાઓ ચાલી રહી છે. વિન્ડો ને બંધ કરવા દરમ્યાન "
 "તેઓનાં બધાને મારશે."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "આ ટર્મિનલ ને બંધ કરો?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"આ વિન્ડો માં કેટલાક ટર્મિનલોમાં હજુ પ્રક્રિયાઓ ચાલી રહી છે. વિન્ડો ને બંધ કરવા દરમ્યાન "
+"તેઓનાં બધાને મારશે."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "ટેબ બંધ કરો (_l)"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "આ ટર્મિનલ ને બંધ કરો?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4481,9 +4503,6 @@ msgstr "દલીલોનું પદચ્છેદન કરવામાં 
 
 #~ msgid "Current Locale"
 #~ msgstr "વર્તમાન લોકેલ"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "ટેબ બંધ કરો (_l)"
 
 #~ msgid "_Close Window"
 #~ msgstr "વિન્ડો બંધ કરો (_C)"

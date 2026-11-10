@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-08-20 14:08+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -1346,7 +1346,7 @@ msgstr "Бетті жабу"
 msgid "Re_open Closed Tab"
 msgstr "Бетті жабу"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "Терезені жа_бу"
 
@@ -1967,8 +1967,8 @@ msgstr "Терминалды _оңға жылжыту"
 msgid "_Detach Terminal"
 msgstr "Тер_миналды бөліп жіберу"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "Терминалды _жабу"
 
@@ -3739,19 +3739,19 @@ msgstr "_Иә"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Бұл терминалды жабу керек пе?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Бұл терминалды жабу керек пе?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3763,7 +3763,7 @@ msgstr ""
 "Бұл терезенің кейбір терминалдарында орындалып тұрған үрдістер бар. Терезені "
 "жабу оларды үзеді."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3774,17 +3774,17 @@ msgid ""
 msgstr ""
 "Бұл терминалда орындалып тұрған үрдістер бар. Терминалды жабу оларды үзеді."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Терминалды _жабу"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Бұл терезені жабу керек пе?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3792,11 +3792,33 @@ msgstr ""
 "Бұл терезенің кейбір терминалдарында орындалып тұрған үрдістер бар. Терезені "
 "жабу оларды үзеді."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Бұл терминалды жабу керек пе?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Бұл терезенің кейбір терминалдарында орындалып тұрған үрдістер бар. Терезені "
+"жабу оларды үзеді."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Бетті _жабу"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Бұл терминалды жабу керек пе?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4112,9 +4134,6 @@ msgstr "Аргументтерді өндеу қатемен аяқталды: %
 
 #~ msgid "_Print…"
 #~ msgstr "Бас_паға шығару…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Бетті _жабу"
 
 #~ msgid "_Close Window"
 #~ msgstr "Терезені жабу"

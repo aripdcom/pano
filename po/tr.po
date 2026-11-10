@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -1335,7 +1335,7 @@ msgstr "Diğer Sekmeleri Kapat"
 msgid "Re_open Closed Tab"
 msgstr "Kapatılan Sekmeyi _Yeniden Aç"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Pencereyi Kapat"
 
@@ -1889,8 +1889,8 @@ msgstr "Uçbirimi Sa_ğa Taşı"
 msgid "_Detach Terminal"
 msgstr "Uçbirimi _Ayır"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Uçbirimi Kapat"
 
@@ -3495,15 +3495,15 @@ msgstr "_Evet"
 msgid "_Stop"
 msgstr "_Durdur"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 msgid "Close the other terminals?"
 msgstr "Diğer uçbirimler kapatılsın mı?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 msgid "Close the other terminal?"
 msgstr "Diğer uçbirim kapatılsın mı?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
@@ -3511,7 +3511,7 @@ msgstr ""
 "Diğer uçbirimlerin bazılarında hâlâ çalışan süreçler var. Onları kapatmak "
 "tümünü sonlandırır."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
@@ -3519,15 +3519,15 @@ msgstr ""
 "Diğer uçbirimde hâlâ çalışan bir süreç var. Uçbirimi kapatmak onu "
 "sonlandırır."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 msgid "C_lose Terminals"
 msgstr "Uçbirimleri _Kapat"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Bu pencere kapatılsın mı?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3535,11 +3535,27 @@ msgstr ""
 "Bu penceredeki bazı uçbirimlerde çalışan süreçler var. Pencereyi kapatmak "
 "tümünü sonlandırır."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+msgid "Close this tab?"
+msgstr "Bu sekme kapatılsın mı?"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Bu sekmenin bazı bölmelerinde hâlâ çalışan süreçler var. Sekmeyi kapatmak "
+"tümünü sonlandırır."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Sekmeyi _Kapat"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Bu uçbirim kapatılsın mı?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3879,9 +3895,6 @@ msgstr "Bağımsız değişkenler ayrıştırılamadı: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "_Yazdır…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Sek_meyi Kapat"
 
 #~ msgid "_Close Window"
 #~ msgstr "Pence_reyi Kapat"

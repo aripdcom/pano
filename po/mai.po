@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2008-01-25 13:49+0530\n"
 "Last-Translator: Sangeeta Kumari\n"
 "Language-Team: <en@li.org>\n"
@@ -1385,7 +1385,7 @@ msgstr "टैब बन्न करू"
 msgid "Re_open Closed Tab"
 msgstr "टैब बन्न करू"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "विंडो बन्न करू (_l)"
 
@@ -2014,8 +2014,8 @@ msgstr "टैब दहिन्ना लए जाउ (_R)"
 msgid "_Detach Terminal"
 msgstr "टर्मिनल (_T)"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminal"
@@ -3734,55 +3734,71 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Set the terminal's title"
 msgid "Close the other terminals?"
 msgstr "टर्मिनल क' शीर्षक नियत करू"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Close the other terminal?"
 msgstr "टर्मिनल लेल शीर्षक"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "_Terminal"
 msgid "C_lose Terminals"
 msgstr "टर्मिनल (_T)"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 #, fuzzy
 #| msgid "Close Window"
 msgid "Close this window?"
 msgstr "विंडो बन्न करू"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Title for terminal"
+msgid "Close this tab?"
+msgstr "टर्मिनल लेल शीर्षक"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "टैब बन्न करू (_l)"
+
+#: src/terminal-window.cc:5307
 #, fuzzy
 #| msgid "Title for terminal"
 msgid "Close this terminal?"
 msgstr "टर्मिनल लेल शीर्षक"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4607,9 +4623,6 @@ msgstr ""
 
 #~ msgid "_Tabs"
 #~ msgstr "टैब (_T)"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "टैब बन्न करू (_l)"
 
 #~ msgid "_Close Window"
 #~ msgstr "विंडो बन्न करू (_C)"

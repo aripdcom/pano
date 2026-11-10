@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2025-03-01 09:56+0200\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -1375,7 +1375,7 @@ msgstr "Tanca la pestanya"
 msgid "Re_open Closed Tab"
 msgstr "Tanca la pestanya"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "Tanca la _finestra"
 
@@ -1992,8 +1992,8 @@ msgstr "Mou el terminal a la _dreta"
 msgid "_Detach Terminal"
 msgstr "_Separa el terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Tanca el terminal"
 
@@ -3782,19 +3782,19 @@ msgstr "_Sí"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Voleu tancar aquest terminal?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Voleu tancar aquest terminal?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3806,7 +3806,7 @@ msgstr ""
 "Encara s'estan executant processos en alguns terminals d'aquesta finestra. "
 "Si la tanqueu es mataran tots."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3818,17 +3818,17 @@ msgstr ""
 "Encara s'està executant un procés en aquest terminal. Si el tanqueu es "
 "matarà aquest procés."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Tanca el terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Voleu tancar aquesta finestra?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3836,11 +3836,33 @@ msgstr ""
 "Encara s'estan executant processos en alguns terminals d'aquesta finestra. "
 "Si la tanqueu es mataran tots."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Voleu tancar aquest terminal?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Encara s'estan executant processos en alguns terminals d'aquesta finestra. "
+"Si la tanqueu es mataran tots."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "_Tanca la pestanya"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Voleu tancar aquest terminal?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4154,9 +4176,6 @@ msgstr "Ha fallat l'anàlisi dels arguments: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "_Imprimeix…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "_Tanca la pestanya"
 
 #~ msgid "_Close Window"
 #~ msgstr "Tanca la _finestra"

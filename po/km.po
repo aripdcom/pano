@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: po_gnome-terminal-km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2014-04-10 12:04+0700\n"
 "Last-Translator: Sophea Sok <sophea@open.org.kh>\n"
 "Language-Team: Khmer <>\n"
@@ -1400,7 +1400,7 @@ msgstr "បិទ​ផ្ទាំង"
 msgid "Re_open Closed Tab"
 msgstr "បិទ​ផ្ទាំង"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "បិទ​បង្អួច"
 
@@ -2040,8 +2040,8 @@ msgstr "ផ្លាស់ទី​ស្ថានីយ​ទៅ​ស្ដា
 msgid "_Detach Terminal"
 msgstr "ផ្ដាច់​ស្ថានីយ"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "បិទ​ស្ថានីយ"
 
@@ -3804,19 +3804,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3827,7 +3827,7 @@ msgid ""
 msgstr ""
 "នៅ​ក្នុង​បង្អួច​នេះ ស្ថានីយ​មួយ​ចំនួន​នៅ​មាន​ដំណើរការ​កំពុង​ដើរ​​នៅ​ឡើយ។ ការ​បិទ​បង្អួច​នឹង​បញ្ចប់​ដំណើរការ​ទាំងនោះ។"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3837,28 +3837,49 @@ msgid ""
 "will kill it."
 msgstr "នៅ​ក្នុង​ស្ថានីយ​នេះ មាន​ដំណើរការ​មួយ​ចំនួន​កំពុង​ដើរ​​នៅ​ឡើយ។ ការ​បិទ​ស្ថានីយ​នឹង​បញ្ចប់​ដំណើរការ​នេះ។"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "បិទ​ស្ថានីយ"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "បិទ​បង្អួច​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 "នៅ​ក្នុង​បង្អួច​នេះ ស្ថានីយ​មួយ​ចំនួន​នៅ​មាន​ដំណើរការ​កំពុង​ដើរ​​នៅ​ឡើយ។ ការ​បិទ​បង្អួច​នឹង​បញ្ចប់​ដំណើរការ​ទាំងនោះ។"
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"នៅ​ក្នុង​បង្អួច​នេះ ស្ថានីយ​មួយ​ចំនួន​នៅ​មាន​ដំណើរការ​កំពុង​ដើរ​​នៅ​ឡើយ។ ការ​បិទ​បង្អួច​នឹង​បញ្ចប់​ដំណើរការ​ទាំងនោះ។"
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "បិទ​ផ្ទាំង"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4518,9 +4539,6 @@ msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ញែក
 
 #~ msgid "New _Profile…"
 #~ msgstr "ទម្រង់​ថ្មី…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "បិទ​ផ្ទាំង"
 
 #~ msgid "_Close Window"
 #~ msgstr "បិទ​បង្អួច"

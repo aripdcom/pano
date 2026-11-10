@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.cy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2006-02-22 18:02-0000\n"
 "Last-Translator: Rhys Jones <rhys@sucs.org>\n"
 "Language-Team: Cymraeg <gnome-cy@lists.linux.org.uk>\n"
@@ -1395,7 +1395,7 @@ msgstr "Cau'r Tab"
 msgid "Re_open Closed Tab"
 msgstr "Cau'r Tab"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Cau'r Ffenestr"
 
@@ -2023,8 +2023,8 @@ msgstr "Symud Tab i'r _Dde"
 msgid "_Detach Terminal"
 msgstr "_Terfynell"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 #, fuzzy
 msgid "C_lose Terminal"
 msgstr "_Terfynell"
@@ -3750,50 +3750,65 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 msgid "Close the other terminals?"
 msgstr "Gadael y derfynell"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 msgid "Close the other terminal?"
 msgstr "Gadael y derfynell"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 msgid "C_lose Terminals"
 msgstr "_Terfynell"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 #, fuzzy
 msgid "Close this window?"
 msgstr "Cau'r Ffenest"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+msgid "Close this tab?"
+msgstr "Gadael y derfynell"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Cau'r _Tab"
+
+#: src/terminal-window.cc:5307
 #, fuzzy
 msgid "Close this terminal?"
 msgstr "Gadael y derfynell"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4848,9 +4863,6 @@ msgstr "Ymresymiad annilys \"%s\"\n"
 #, fuzzy
 #~ msgid "New _Profile…"
 #~ msgstr "Proffil Newydd"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Cau'r _Tab"
 
 #~ msgid "_Close Window"
 #~ msgstr "Cau'r _Ffenest"

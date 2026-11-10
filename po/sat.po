@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal gnome-50\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2026-08-23 23:22+0530\n"
 "Last-Translator: Prasanta Hembram <prasantahembram720@gmail.com>\n"
 "Language-Team: Santali\n"
@@ -1334,7 +1334,7 @@ msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
 msgid "Re_open Closed Tab"
 msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "ᱥᱟᱨᱞᱟ ᱵᱚᱸᱫᱚᱭ ᱢᱮ"
 
@@ -1951,8 +1951,8 @@ msgstr "ᱴᱚᱨᱢᱤᱱᱟᱞ _ᱡᱚᱡᱚᱢ ᱥᱮᱫ ᱚᱪᱚᱜᱽ ᱢ�
 msgid "_Detach Terminal"
 msgstr "_ᱴᱚᱨᱢᱤᱱᱟᱞ ᱞᱟᱹᱴᱩᱢ ᱢᱮ"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "ᱴᱚᱨᱢᱤᱱᱟᱞ _ᱵᱚᱸᱫᱚᱭ ᱢᱮ"
 
@@ -3729,19 +3729,19 @@ msgstr "_ᱦᱚᱭ"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "ᱱᱚᱶᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱵᱚᱸᱫ ᱢᱮ?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "ᱱᱚᱶᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱵᱚᱸᱫ ᱢᱮ?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3753,7 +3753,7 @@ msgstr ""
 "ᱱᱚᱣᱟ ᱡᱷᱚᱨᱠᱟ ᱨᱮ ᱱᱤᱛ ᱦᱚᱸ ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱨᱮ ᱯᱨᱚᱥᱮᱥ ᱪᱟᱹᱞᱩ ᱠᱟᱱᱟ ᱾ ᱡᱷᱚᱨᱠᱟ "
 "ᱵᱚᱱᱫᱚ ᱠᱷᱟᱱ ᱩᱱᱠᱩ ᱥᱟᱱᱟᱢ ᱠᱚ ᱜᱚᱡᱚᱜᱼᱟ ᱾"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3765,17 +3765,17 @@ msgstr ""
 "ᱱᱚᱣᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱨᱮ ᱱᱤᱛ ᱦᱚᱸ ᱢᱤᱫ ᱯᱨᱚᱥᱮᱥ ᱪᱟᱹᱞᱩ ᱠᱟᱱᱟ ᱾ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱵᱚᱱᱫᱚ ᱠᱷᱟᱱ ᱱᱚᱣᱟ "
 "ᱵᱚᱸᱫᱟᱭ ᱾"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "ᱴᱚᱨᱢᱤᱱᱟᱞ _ᱵᱚᱸᱫᱚᱭ ᱢᱮ"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "ᱱᱚᱶᱟ ᱡᱟᱨᱞᱟ ᱵᱚᱸᱫ ᱢᱮ?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3783,11 +3783,33 @@ msgstr ""
 "ᱱᱚᱣᱟ ᱡᱷᱚᱨᱠᱟ ᱨᱮ ᱱᱤᱛ ᱦᱚᱸ ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱨᱮ ᱯᱨᱚᱥᱮᱥ ᱪᱟᱹᱞᱩ ᱠᱟᱱᱟ ᱾ ᱡᱷᱚᱨᱠᱟ "
 "ᱵᱚᱱᱫᱚ ᱠᱷᱟᱱ ᱩᱱᱠᱩ ᱥᱟᱱᱟᱢ ᱠᱚ ᱜᱚᱡᱚᱜᱼᱟ ᱾"
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "ᱱᱚᱶᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱵᱚᱸᱫ ᱢᱮ?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"ᱱᱚᱣᱟ ᱡᱷᱚᱨᱠᱟ ᱨᱮ ᱱᱤᱛ ᱦᱚᱸ ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱨᱮ ᱯᱨᱚᱥᱮᱥ ᱪᱟᱹᱞᱩ ᱠᱟᱱᱟ ᱾ ᱡᱷᱚᱨᱠᱟ "
+"ᱵᱚᱱᱫᱚ ᱠᱷᱟᱱ ᱩᱱᱠᱩ ᱥᱟᱱᱟᱢ ᱠᱚ ᱜᱚᱡᱚᱜᱼᱟ ᱾"
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "ᱥᱤ_ᱴᱮᱵᱽ ᱟᱫ ᱢᱮ"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "ᱱᱚᱶᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱵᱚᱸᱫ ᱢᱮ?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4119,9 +4141,6 @@ msgstr "ᱟᱨᱜᱩᱢᱮᱱᱴ ᱯᱟᱨᱥ ᱨᱮ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟ�
 
 #~ msgid "_Print…"
 #~ msgstr "ᱪᱷᱟᱯᱟ ᱢᱮ..."
-
-#~ msgid "C_lose Tab"
-#~ msgstr "ᱥᱤ_ᱴᱮᱵᱽ ᱟᱫ ᱢᱮ"
 
 #~ msgid "_Close Window"
 #~ msgstr "ᱡᱟᱨᱞᱟ ᱵᱚᱸᱫᱭ ᱢᱮ"

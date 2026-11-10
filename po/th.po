@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-12-13 03:59+0700\n"
 "Last-Translator: knight2000 <knight2000@gmail.com>\n"
 "Language-Team: ไทย <thai-l10n@googlegroups.com>\n"
@@ -1319,7 +1319,7 @@ msgstr "ปิดแท็บ"
 msgid "Re_open Closed Tab"
 msgstr "ปิดแท็บ"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "ปิ_ดหน้าต่าง"
 
@@ -1938,8 +1938,8 @@ msgstr "ย้ายเทอร์มินัลไปทาง_ขวา"
 msgid "_Detach Terminal"
 msgstr "_ดึงเทอร์มินัลออกมา"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "ปิดเ_ทอร์มินัล"
 
@@ -3703,19 +3703,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3726,7 +3726,7 @@ msgid ""
 msgstr ""
 "ยังมีโพรเซสทำงานอยู่ในบางเทอร์มินัลในหน้าต่างนี้ ถ้าปิดหน้าต่าง ก็จะเป็นการฆ่าโพรเซสเหล่านั้นทั้งหมด"
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3736,28 +3736,49 @@ msgid ""
 "will kill it."
 msgstr "ยังมีโพรเซสหนึ่งทำงานอยู่ในเทอร์มินัลนี้ ถ้าปิดเทอร์มินัล ก็จะเป็นการฆ่าโพรเซสดังกล่าว"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "ปิดเ_ทอร์มินัล"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "จะปิดหน้าต่างนี้หรือไม่?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 "ยังมีโพรเซสทำงานอยู่ในบางเทอร์มินัลในหน้าต่างนี้ ถ้าปิดหน้าต่าง ก็จะเป็นการฆ่าโพรเซสเหล่านั้นทั้งหมด"
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"ยังมีโพรเซสทำงานอยู่ในบางเทอร์มินัลในหน้าต่างนี้ ถ้าปิดหน้าต่าง ก็จะเป็นการฆ่าโพรเซสเหล่านั้นทั้งหมด"
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "ปิ_ดแท็บ"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "จะปิดเทอร์มินัลนี้หรือไม่?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4056,9 +4077,6 @@ msgstr "แจงอาร์กิวเมนต์ไม่สำเร็จ
 
 #~ msgid "_Print…"
 #~ msgstr "_พิมพ์…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "ปิ_ดแท็บ"
 
 #~ msgid "_Close Window"
 #~ msgstr "ปิดห_น้าต่าง"

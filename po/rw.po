@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2006-01-04 16:15-0200\n"
 "Last-Translator: Steve Murphy <murf@e-tools.com>\n"
 "Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
@@ -1316,7 +1316,7 @@ msgid "Re_open Closed Tab"
 msgstr "Funga Isimbuka"
 
 # sfx2/sdi\sfxslots.src:SID_CLOSEWIN.text
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 #, fuzzy
 #| msgid "Close Window"
 msgid "C_lose Window"
@@ -1967,8 +1967,8 @@ msgid "_Detach Terminal"
 msgstr "i"
 
 # menu_close labels
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 #, fuzzy
 msgid "C_lose Terminal"
 msgstr "Funga Isimbuka"
@@ -3657,53 +3657,71 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 msgid "Close the other terminals?"
 msgstr "Sisitemu Intego- nyuguti"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 msgid "Close the other terminal?"
 msgstr "Sisitemu Intego- nyuguti"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
 # menu_close labels
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 msgid "C_lose Terminals"
 msgstr "Funga Isimbuka"
 
 # sfx2/sdi\sfxslots.src:SID_CLOSEWIN.text
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 #, fuzzy
 #| msgid "Close Window"
 msgid "Close this window?"
 msgstr "Gufunga Idirishya"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+msgid "Close this tab?"
+msgstr "a Intego- nyuguti"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+# menu_close labels
+#: src/terminal-window.cc:5305
+#, fuzzy
+#| msgid "Close Tab"
+msgid "C_lose Tab"
+msgstr "Funga Isimbuka"
+
+#: src/terminal-window.cc:5307
 #, fuzzy
 msgid "Close this terminal?"
 msgstr "a Intego- nyuguti"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

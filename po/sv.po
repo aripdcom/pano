@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-07-24 00:43+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -1359,7 +1359,7 @@ msgstr "Stäng flik"
 msgid "Re_open Closed Tab"
 msgstr "Stäng flik"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "Stän_g fönster"
 
@@ -1987,8 +1987,8 @@ msgstr "Flytta terminal till _höger"
 msgid "_Detach Terminal"
 msgstr "_Koppla loss terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "S_täng terminal"
 
@@ -3777,19 +3777,19 @@ msgstr "_Ja"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Stäng denna terminal?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Stäng denna terminal?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3801,7 +3801,7 @@ msgstr ""
 "Det finns fortfarande processer igång i några terminaler i detta fönster. "
 "Stängning av fönstret kommer att döda dem alla."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3813,17 +3813,17 @@ msgstr ""
 "Det finns fortfarande en process igång i denna terminal. Stängning av "
 "terminalen kommer att döda den."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "S_täng terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Stäng detta fönster?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3831,11 +3831,33 @@ msgstr ""
 "Det finns fortfarande processer igång i några terminaler i detta fönster. "
 "Stängning av fönstret kommer att döda dem alla."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Stäng denna terminal?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Det finns fortfarande processer igång i några terminaler i detta fönster. "
+"Stängning av fönstret kommer att döda dem alla."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "S_täng flik"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Stäng denna terminal?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4162,9 +4184,6 @@ msgstr "Misslyckades med att tolka argument: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "S_kriv ut…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "S_täng flik"
 
 #~ msgid "_Close Window"
 #~ msgstr "Stän_g fönster"

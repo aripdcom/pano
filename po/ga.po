@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2013-09-01 19:12-0600\n"
 "Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1235,7 +1235,7 @@ msgstr "Dún Cluaisín"
 msgid "Re_open Closed Tab"
 msgstr "Dún Cluaisín"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Dún Fuinneog"
 
@@ -1870,8 +1870,8 @@ msgstr "Bog Cluaisín ar _Dheis"
 msgid "_Detach Terminal"
 msgstr "Teirminéal _Nua"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Dún Teirminéal"
 
@@ -3639,19 +3639,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Dún an teirminéal seo?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Dún an teirminéal seo?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3663,7 +3663,7 @@ msgstr ""
 "Tá próisis fós á rith i dteirminéil éigin san fhuinneog seo. Maróidh dúnadh "
 "na fuinneoige gach ceann acu."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3674,17 +3674,17 @@ msgid ""
 msgstr ""
 "Tá próiseas fós á rith sa teirminéal seo. Maróidh dúnadh an teirminéil é."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Dún Teirminéal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Dún an fhuinneog seo?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3692,11 +3692,33 @@ msgstr ""
 "Tá próisis fós á rith i dteirminéil éigin san fhuinneog seo. Maróidh dúnadh "
 "na fuinneoige gach ceann acu."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Dún an teirminéal seo?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Tá próisis fós á rith i dteirminéil éigin san fhuinneog seo. Maróidh dúnadh "
+"na fuinneoige gach ceann acu."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Dún C_luaisín"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Dún an teirminéal seo?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4081,9 +4103,6 @@ msgstr "Theip ar pharsáil argóintí: %s\n"
 
 #~ msgid "New _Profile"
 #~ msgstr "_Próifíl Nua"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Dún C_luaisín"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Dún Fuinneog"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2021-03-24 14:02+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
@@ -1353,7 +1353,7 @@ msgstr "Đóng thanh"
 msgid "Re_open Closed Tab"
 msgstr "Đóng thanh"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "Đón_g cửa sổ"
 
@@ -1972,8 +1972,8 @@ msgstr "Rời Thiết bị cuối sang _Phải"
 msgid "_Detach Terminal"
 msgstr "Tách _rời Thiết bị cuối"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "Đón_g thiết bị cuối"
 
@@ -3744,19 +3744,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Đóng thiết bị cuối này?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Đóng thiết bị cuối này?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3768,7 +3768,7 @@ msgstr ""
 "Vẫn còn có một số tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép "
 "buộc kết thúc tất cả."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3780,17 +3780,17 @@ msgstr ""
 "Vẫn còn có một tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì sẽ ép "
 "buộc kết thúc nó."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Đón_g thiết bị cuối"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Đóng cửa sổ này?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3798,11 +3798,33 @@ msgstr ""
 "Vẫn còn có một số tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép "
 "buộc kết thúc tất cả."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Đóng thiết bị cuối này?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Vẫn còn có một số tiến trình đang chạy trong cửa sổ này. Đóng cửa sổ thì ép "
+"buộc kết thúc tất cả."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Đó_ng thanh"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Đóng thiết bị cuối này?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4107,9 +4129,6 @@ msgstr "Gặp lỗi khi phân tích cú pháp của các đối số: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "_In…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Đó_ng thanh"
 
 #~ msgid "_Close Window"
 #~ msgstr "Đón_g cửa sổ"

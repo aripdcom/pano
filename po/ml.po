@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thengos\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2018-10-26 11:41+0530\n"
 "Last-Translator: Ranjith Siji <ranjith.sajeev@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -1353,7 +1353,7 @@ msgstr "ടാബ് അടയ്ക്കുക"
 msgid "Re_open Closed Tab"
 msgstr "ടാബ് അടയ്ക്കുക"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "ജാലകം അടയ്ക്കുക (_l)"
 
@@ -1982,8 +1982,8 @@ msgstr "ടെർമിനൽ വലത്തേക്ക് നീക്കു�
 msgid "_Detach Terminal"
 msgstr "ടെർമിനൽ വേര്‍പ്പെടുത്തുക (_D)"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "ടെര്‍മിനല്‍ അടയ്ക്കുക (_l)"
 
@@ -3764,19 +3764,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3788,7 +3788,7 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അവയെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3800,17 +3800,17 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും ഒരു പ്രക്രിയ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അതിനെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "ടെര്‍മിനല്‍ അടയ്ക്കുക (_l)"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "ഈ ജാലകം അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3818,11 +3818,33 @@ msgstr ""
 "ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അവയെ "
 "ഇല്ലാതാക്കുന്നതാണു്."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"ഈ ടെര്‍മിനലില്‍ ഇപ്പോഴും പ്രക്രിയകള്‍ പ്രവര്‍ത്തിക്കുന്നു. ഈ ടെര്‍മിനല്‍ അടയ്ക്കുന്നതു് അവയെ "
+"ഇല്ലാതാക്കുന്നതാണു്."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "ടാബ് അടയ്ക്കുക(_l)"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "ഈ ടെര്‍മിനല്‍ അടയ്ക്കണമോ?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4104,9 +4126,6 @@ msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ�
 
 #~ msgid "_Print…"
 #~ msgstr "പ്രിന്റ്...(_P)"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "ടാബ് അടയ്ക്കുക(_l)"
 
 #~ msgid "_Close Window"
 #~ msgstr "ജാലകം അടയ്ക്കുക (_C)"

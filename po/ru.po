@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-07-28 20:34+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
@@ -1365,7 +1365,7 @@ msgstr "Закрыть вкладку"
 msgid "Re_open Closed Tab"
 msgstr "Закрыть вкладку"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Закрыть окно"
 
@@ -1986,8 +1986,8 @@ msgstr "Переместить терминал в_право"
 msgid "_Detach Terminal"
 msgstr "_Открепить терминал"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Закрыть терминал"
 
@@ -3770,19 +3770,19 @@ msgstr "_Да"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Закрыть этот терминал?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Закрыть этот терминал?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3794,7 +3794,7 @@ msgstr ""
 "В некоторых терминалах этого окна запущены процессы. Закрытие окна приведёт "
 "к принудительному завершению запущенных процессов."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3806,17 +3806,17 @@ msgstr ""
 "В терминале запущен процесс. Закрытие терминала приведёт к принудительному "
 "завершению процесса."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Закрыть терминал"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Закрыть это окно?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3824,11 +3824,33 @@ msgstr ""
 "В некоторых терминалах этого окна запущены процессы. Закрытие окна приведёт "
 "к принудительному завершению запущенных процессов."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Закрыть этот терминал?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"В некоторых терминалах этого окна запущены процессы. Закрытие окна приведёт "
+"к принудительному завершению запущенных процессов."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "За_крыть вкладку"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Закрыть этот терминал?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4144,9 +4166,6 @@ msgstr "Не удалось разобрать аргументы: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "Пе_чать…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "За_крыть вкладку"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Закрыть окно"

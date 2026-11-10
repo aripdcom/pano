@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-08-27 20:45+0200\n"
 "Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
 "Language-Team: GNOME-NL https://matrix.to/#/#nl:gnome.org\n"
@@ -1383,7 +1383,7 @@ msgstr "Tabblad sluiten"
 msgid "Re_open Closed Tab"
 msgstr "Tabblad sluiten"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "Venster sl_uiten"
 
@@ -2010,8 +2010,8 @@ msgstr "Terminalvenster naar _rechts verplaatsen"
 msgid "_Detach Terminal"
 msgstr "Terminalvenster _loskoppelen"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "Terminal sl_uiten"
 
@@ -3813,19 +3813,19 @@ msgstr "_Ja"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Terminal sluiten?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Terminal sluiten?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3837,7 +3837,7 @@ msgstr ""
 "In enkele terminals draaien nog actieve processen. Bij het sluiten van het "
 "venster zullen deze afgebroken worden."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3849,17 +3849,17 @@ msgstr ""
 "In dit terminalvenster is nog een proces actief. Bij het sluiten van het "
 "venster zal dit afgebroken worden."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "Terminal sl_uiten"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Venster sluiten?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3867,11 +3867,33 @@ msgstr ""
 "In enkele terminals draaien nog actieve processen. Bij het sluiten van het "
 "venster zullen deze afgebroken worden."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Terminal sluiten?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"In enkele terminals draaien nog actieve processen. Bij het sluiten van het "
+"venster zullen deze afgebroken worden."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "Tabblad _sluiten"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Terminal sluiten?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4188,9 +4210,6 @@ msgstr "Argumenten ontleden is mislukt: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "Af_drukken…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "Tabblad _sluiten"
 
 #~ msgid "_Close Window"
 #~ msgstr "Venster sl_uiten"

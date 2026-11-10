@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2.18.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-01-21 10:59+0000\n"
 "Last-Translator: Fabio T. <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
@@ -1354,7 +1354,7 @@ msgstr "Siere schede"
 msgid "Re_open Closed Tab"
 msgstr "Siere schede"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Siere barcon"
 
@@ -1975,8 +1975,8 @@ msgstr "Sposte terminâl a _diestre"
 msgid "_Detach Terminal"
 msgstr "St_ache terminâl"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Siere terminâl"
 
@@ -3753,19 +3753,19 @@ msgstr "_Sì"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Sierâ chest terminâl?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Sierâ chest terminâl?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3777,7 +3777,7 @@ msgstr ""
 "A son ancjemò procès che a zirin in cualchi terminâl tal barcon. Sierant il "
 "barcon tu terminarâs ducj i procès."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3789,17 +3789,17 @@ msgstr ""
 "Al è ancjemò un procès che al zire in chest terminâl. Sierant il terminâl al "
 "vignarà interot il procès."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Siere terminâl"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Sierâ chest barcon?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3807,11 +3807,33 @@ msgstr ""
 "A son ancjemò procès che a zirin in cualchi terminâl tal barcon. Sierant il "
 "barcon tu terminarâs ducj i procès."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Sierâ chest terminâl?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"A son ancjemò procès che a zirin in cualchi terminâl tal barcon. Sierant il "
+"barcon tu terminarâs ducj i procès."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "S_iere schede"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Sierâ chest terminâl?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4120,9 +4142,6 @@ msgstr "Analisi dai argoments falide: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "Stam_pe…"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "S_iere schede"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Siere barcon"

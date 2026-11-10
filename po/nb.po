@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2022-03-17 13:56+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -1340,7 +1340,7 @@ msgstr "Lukk fane"
 msgid "Re_open Closed Tab"
 msgstr "Lukk fane"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Lukk vindu"
 
@@ -1957,8 +1957,8 @@ msgstr "Flytt terminal til høy_re"
 msgid "_Detach Terminal"
 msgstr "_Koble fra terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Lukk terminal"
 
@@ -3735,19 +3735,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Vil du lukke denne terminalen?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Vil du lukke denne terminalen?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3759,7 +3759,7 @@ msgstr ""
 "Det kjører fremdeles prosesser i noen terminaler i dette vinduet. Hvis du "
 "lukker vinduet, avbrytes alle prosessene."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3771,17 +3771,17 @@ msgstr ""
 "En prosess kjører fremdeles i denne terminalen. Hvis du lukker terminalen, "
 "blir prosessen avbrutt."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Lukk terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Vil du lukke dette vinduet?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3789,11 +3789,33 @@ msgstr ""
 "Det kjører fremdeles prosesser i noen terminaler i dette vinduet. Hvis du "
 "lukker vinduet, avbrytes alle prosessene."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Vil du lukke denne terminalen?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Det kjører fremdeles prosesser i noen terminaler i dette vinduet. Hvis du "
+"lukker vinduet, avbrytes alle prosessene."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "_Lukk fane"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Vil du lukke denne terminalen?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4104,9 +4126,6 @@ msgstr "Klarte ikke å lese argumenter: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "Skriv _ut …"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "_Lukk fane"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Lukk vindu"

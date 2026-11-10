@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
 "Language-Team: Abkhazian <ab@li.org>\n"
 "Language: ab\n"
@@ -1139,7 +1139,7 @@ msgstr ""
 msgid "Re_open Closed Tab"
 msgstr ""
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr ""
 
@@ -1693,8 +1693,8 @@ msgstr ""
 msgid "_Detach Terminal"
 msgstr ""
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr ""
 
@@ -3254,47 +3254,65 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 msgid "Close the other terminals?"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 msgid "Close the other terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "gnome-terminal"
 msgid "C_lose Terminals"
 msgstr "gnome-terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr ""
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "gnome-terminal"
+msgid "Close this tab?"
+msgstr "gnome-terminal"
+
+#: src/terminal-window.cc:5303
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5305
+#, fuzzy
+#| msgid "gnome-terminal"
+msgid "C_lose Tab"
+msgstr "gnome-terminal"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3304,11 +3322,6 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr ""
-
-#, fuzzy
-#~| msgid "gnome-terminal"
-#~ msgid "Close terminal"
-#~ msgstr "gnome-terminal"
 
 #~ msgid "GPL-3.0+ or GFDL-1.3-only"
 #~ msgstr "GPL-3.0+ ма мацара GFDL-1.3"

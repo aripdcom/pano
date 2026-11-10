@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2023-03-11 13:08+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -1353,7 +1353,7 @@ msgstr "Luk faneblad"
 msgid "Re_open Closed Tab"
 msgstr "Luk faneblad"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "_Luk vindue"
 
@@ -1972,8 +1972,8 @@ msgstr "Flyt terminal til _højre"
 msgid "_Detach Terminal"
 msgstr "_Løsriv terminal"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "_Luk terminal"
 
@@ -3765,19 +3765,19 @@ msgstr "_Ja"
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Luk terminalen?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Luk terminalen?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3789,7 +3789,7 @@ msgstr ""
 "Der kører stadig processer i nogle af vinduets terminaler. Lukning af "
 "vinduet vil dræbe dem alle."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3800,17 +3800,17 @@ msgid ""
 msgstr ""
 "Der kører stadig en proces i terminalen. Lukning af terminalen vil dræbe den."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "_Luk terminal"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Luk vinduet?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3818,11 +3818,33 @@ msgstr ""
 "Der kører stadig processer i nogle af vinduets terminaler. Lukning af "
 "vinduet vil dræbe dem alle."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Luk terminalen?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Der kører stadig processer i nogle af vinduets terminaler. Lukning af "
+"vinduet vil dræbe dem alle."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "_Luk faneblad"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Luk terminalen?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4126,9 +4148,6 @@ msgstr "Kunne ikke fortolke argumenter: %s\n"
 
 #~ msgid "_Print…"
 #~ msgstr "_Udskriv …"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "_Luk faneblad"
 
 #~ msgid "_Close Window"
 #~ msgstr "Luk vind_ue"

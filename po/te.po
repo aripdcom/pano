@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2014-09-24 00:06+0530\n"
 "Last-Translator: Krishnababu Krothapalli <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -1401,7 +1401,7 @@ msgstr "ట్యాబ్‌ను మూసివేయి"
 msgid "Re_open Closed Tab"
 msgstr "ట్యాబ్‌ను మూసివేయి"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "కిటికీని మూసివేయి (_l)"
 
@@ -2043,8 +2043,8 @@ msgstr "టెర్మినల్ కుడివైపుకు జరుప�
 msgid "_Detach Terminal"
 msgstr "టెర్మినల్ వేరుచేయి (_D)"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "టెర్మినల్ మూసివేయి (_l)"
 
@@ -3809,19 +3809,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "ఈ టెర్మినల్‌ను మూసివేయాలా?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "ఈ టెర్మినల్‌ను మూసివేయాలా?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3833,7 +3833,7 @@ msgstr ""
 "ఈ కిటికీ నందున్న టెర్మినల్లలో ఇంకా కొన్ని ప్రక్రియలు నడుస్తున్నాయి. ఈ కిటికీలను మూసివేస్తే అవన్నీ అంతము "
 "చేయబడతాయి."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3843,17 +3843,17 @@ msgid ""
 "will kill it."
 msgstr "ఈ టెర్మినల్ నందు ఇంకా ఒక ప్రక్రియ నడుస్తోంది. టెర్మినల్‌ను మూసివేస్తే అది అంతము చేయబడుతుంది."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "టెర్మినల్ మూసివేయి (_l)"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "ఈ కిటికీని మూసివేయాలా?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3861,11 +3861,33 @@ msgstr ""
 "ఈ కిటికీ నందున్న టెర్మినల్లలో ఇంకా కొన్ని ప్రక్రియలు నడుస్తున్నాయి. ఈ కిటికీలను మూసివేస్తే అవన్నీ అంతము "
 "చేయబడతాయి."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "ఈ టెర్మినల్‌ను మూసివేయాలా?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"ఈ కిటికీ నందున్న టెర్మినల్లలో ఇంకా కొన్ని ప్రక్రియలు నడుస్తున్నాయి. ఈ కిటికీలను మూసివేస్తే అవన్నీ అంతము "
+"చేయబడతాయి."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "ట్యాబ్‌ను మూసివేయి (_l)"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "ఈ టెర్మినల్‌ను మూసివేయాలా?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4554,9 +4576,6 @@ msgstr "ఆర్గుమెంట్లను పార్శ్ చేయు�
 
 #~ msgid "The shortcut key “%s” is already bound to the “%s” action"
 #~ msgstr "లఘువు కీ “%s” ఇప్పటికే “%s” చర్యకు బద్దమైఉంది"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "ట్యాబ్‌ను మూసివేయి (_l)"
 
 #~ msgid "_Close Window"
 #~ msgstr "కిటికీని మూసివేయి (_C)"

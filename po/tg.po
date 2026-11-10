@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tajik Gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:20+0300\n"
+"POT-Creation-Date: 2026-11-11 00:21+0300\n"
 "PO-Revision-Date: 2015-05-21 10:01+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: \n"
@@ -1418,7 +1418,7 @@ msgstr "Пӯшидани варақа"
 msgid "Re_open Closed Tab"
 msgstr "Пӯшидани варақа"
 
-#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5300
 msgid "C_lose Window"
 msgstr "П_ӯшонидани равзана"
 
@@ -2059,8 +2059,8 @@ msgstr "Ҳаракат кардани терминал ба _рост"
 msgid "_Detach Terminal"
 msgstr "_Ҷудо кардани терминал"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
-#: src/terminal-window.cc:5303
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5295
+#: src/terminal-window.cc:5310
 msgid "C_lose Terminal"
 msgstr "П_ӯшонидани поёна"
 
@@ -3836,19 +3836,19 @@ msgstr ""
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-window.cc:5287
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-window.cc:5289
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3860,7 +3860,7 @@ msgstr ""
 "Ҳоло ҳам баъзе равандҳо дар баъзе поёнаҳои ин равзана иҷро шуда истодаанд. "
 "Пӯшидани равзана ҳамаи онҳоро нобуд мекунад."
 
-#: src/terminal-window.cc:5291
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3872,17 +3872,17 @@ msgstr ""
 "Ҳоло ҳам як раванд дар ин поёна иҷро шуда истодаанд. Пӯшидани пойна онро "
 "нобуд мекунад."
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5295
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "П_ӯшонидани поёна"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5297
 msgid "Close this window?"
 msgstr "Ин равзанаро мепӯшонед?"
 
-#: src/terminal-window.cc:5296
+#: src/terminal-window.cc:5298
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3890,11 +3890,33 @@ msgstr ""
 "Ҳоло ҳам баъзе равандҳо дар баъзе поёнаҳои ин равзана иҷро шуда истодаанд. "
 "Пӯшидани равзана ҳамаи онҳоро нобуд мекунад."
 
-#: src/terminal-window.cc:5300
+#: src/terminal-window.cc:5302
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close this tab?"
+msgstr "Ин поёнаро мепӯшонед?"
+
+#: src/terminal-window.cc:5303
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some panes of this tab. Closing the tab "
+"will kill all of them."
+msgstr ""
+"Ҳоло ҳам баъзе равандҳо дар баъзе поёнаҳои ин равзана иҷро шуда истодаанд. "
+"Пӯшидани равзана ҳамаи онҳоро нобуд мекунад."
+
+#: src/terminal-window.cc:5305
+msgid "C_lose Tab"
+msgstr "П_ӯшидани варақа"
+
+#: src/terminal-window.cc:5307
 msgid "Close this terminal?"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5308
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4599,9 +4621,6 @@ msgstr "Таҷзияи баҳсҳо ноком монд: %s\n"
 
 #~ msgid "The shortcut key “%s” is already bound to the “%s” action"
 #~ msgstr "Тугмаи миёнбури “%s” аллакай барои амали “%s” таъин шудааст"
-
-#~ msgid "C_lose Tab"
-#~ msgstr "П_ӯшидани варақа"
 
 #~ msgid "_Close Window"
 #~ msgstr "_Пӯшидани равзана"
