@@ -89,11 +89,11 @@
               stacked, each starting in the folder of the one you split. Move
               between them with <kbd>Alt</kbd> and the arrow keys, resize them
               from the keyboard, zoom one to the whole tab, give them all the
-              same size, or move one to its own tab or window.
+              same size, swap two, or move one to its own tab or window.
             </p>
             <ul class="checks">
               <li>The panes you are not typing in are dimmed</li>
-              <li>Optional title bars above the panes</li>
+              <li>Drag a pane by its title to another pane, tab or window, and drop a tab onto a pane to join them</li>
               <li>The layout comes back with your session</li>
             </ul>
           </div>
@@ -192,7 +192,7 @@
           </article>
           <article class="card">
             <h3>Quick terminal</h3>
-            <p>A terminal that drops down from the top of the screen with one key, and hides again.</p>
+            <p>A terminal that drops down from the top of the screen with one key, and hides again. The key works system-wide on GNOME&nbsp;48+ and KDE Plasma, and a small GNOME Shell extension places it on Wayland.</p>
           </article>
           <article class="card">
             <h3>Broadcast input</h3>
@@ -277,14 +277,23 @@
 
         <h3>Packages</h3>
         <p>
-          Every build makes a Fedora RPM and a Debian&nbsp;13 package. Until
-          the first release, download them from the latest run of the
+          Every build makes a Fedora RPM, a Debian&nbsp;13 package and a
+          Flatpak bundle. Until the first release, download them from the
+          latest run of the
           <a href="https://github.com/aripdcom/pano/actions/workflows/packages.yml">Packages workflow</a>
-          (sign in to GitHub, open the run and pick <em>rpm</em> or <em>deb</em>
-          under Artifacts), then install the file:
+          (sign in to GitHub, open the run and pick <em>rpm</em>, <em>deb</em>
+          or <em>pano-terminal-x86_64.flatpak</em> under Artifacts), then
+          install the file:
         </p>
 <pre><code>sudo dnf install ./pano-terminal-*.rpm      # Fedora
-sudo apt install ./pano-terminal_*.deb      # Debian 13</code></pre>
+sudo apt install ./pano-terminal_*.deb      # Debian 13
+flatpak install ./pano-terminal.flatpak     # any distribution</code></pre>
+        <p>
+          The Flatpak runs your shell and commands on the computer itself,
+          not in the sandbox, so it works like the other packages. The
+          GNOME Shell extension for the quick terminal and the Nautilus
+          extension come only with the RPM and Debian packages.
+        </p>
 
         <h3>Build from source</h3>
         <p>
