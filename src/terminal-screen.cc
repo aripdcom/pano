@@ -3380,6 +3380,21 @@ should_preserve_cwd (TerminalPreserveWorkingDirectory preserve_cwd,
   }
 }
 
+/* The custom command of @profile, or %NULL when it has none: an empty or
+ * blank custom command runs the shell */
+static char *
+profile_dup_custom_command (GSettings *profile)
+{
+  if (!g_settings_get_boolean (profile, TERMINAL_PROFILE_USE_CUSTOM_COMMAND_KEY))
+    return nullptr;
+
+  char *command = g_settings_get_string (profile, TERMINAL_PROFILE_CUSTOM_COMMAND_KEY);
+  g_strstrip (command);
+  if (!command[0])
+    g_clear_pointer (&command, g_free);
+  return command;
+}
+
 static gboolean
 terminal_screen_get_child_command (TerminalScreen *screen,
                                    char          **argv,
@@ -3403,6 +3418,8 @@ terminal_screen_get_child_command (TerminalScreen *screen,
   preserve_cwd = TerminalPreserveWorkingDirectory
     (g_settings_get_enum (profile, TERMINAL_PROFILE_PRESERVE_WORKING_DIRECTORY_KEY));
 
+  gs_free char *custom_command = profile_dup_custom_command (profile);
+
   if (argv)
     {
       exec_argv = g_strdupv (argv);
@@ -3411,12 +3428,9 @@ terminal_screen_get_child_command (TerminalScreen *screen,
       *preserve_cwd_p = TRUE;
       *spawn_flags_p = GSpawnFlags(*spawn_flags_p | G_SPAWN_SEARCH_PATH_FROM_ENVP);
     }
-  else if (g_settings_get_boolean (profile, TERMINAL_PROFILE_USE_CUSTOM_COMMAND_KEY))
+  else if (custom_command)
     {
-      gs_free char *exec_argv_str;
-
-      exec_argv_str = g_settings_get_string (profile, TERMINAL_PROFILE_CUSTOM_COMMAND_KEY);
-      if (!g_shell_parse_argv (exec_argv_str, nullptr, &exec_argv, err))
+      if (!g_shell_parse_argv (custom_command, nullptr, &exec_argv, err))
         return FALSE;
 
       *preserve_cwd_p = should_preserve_cwd (preserve_cwd, path_env, exec_argv[0]);
@@ -3492,8 +3506,8 @@ terminal_screen_add_shell_integration(TerminalScreen* screen,
 {
   auto const priv = screen->priv;
   auto const settings = terminal_app_get_global_settings(terminal_app_get());
-  if (argv || !as_shell || priv->container_name ||
-      g_settings_get_boolean(priv->profile, TERMINAL_PROFILE_USE_CUSTOM_COMMAND_KEY) ||
+  gs_free char* custom_command = profile_dup_custom_command(priv->profile);
+  if (argv || !as_shell || priv->container_name || custom_command ||
       !g_settings_get_boolean(settings, TERMINAL_SETTING_INJECT_SHELL_INTEGRATION_KEY))
     return;
 
