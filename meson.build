@@ -102,7 +102,14 @@ gt_dbusservicedir   = gt_datadir / 'dbus-1' / 'services'
 
 # It is correct for this to be in ${prefix}/lib, even on systems where that
 # does not match ${libdir}. This is what systemd uses on such platforms.
-gt_systemduserdir = 'lib' / 'systemd' / 'user'
+# systemd only looks in /usr/lib and /usr/local/lib, though. For any other
+# prefix, such as ~/.local, use ${datadir}/systemd/user, which systemd finds
+# through XDG_DATA_HOME and XDG_DATA_DIRS.
+if gt_prefix in ['/usr', '/usr/local']
+  gt_systemduserdir = 'lib' / 'systemd' / 'user'
+else
+  gt_systemduserdir = gt_datadir / 'systemd' / 'user'
+endif
 
 # Debug
 
