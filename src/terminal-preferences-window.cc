@@ -60,6 +60,14 @@ struct _TerminalPreferencesWindow
   AdwSpinRow           *quick_terminal_height;
   AdwSwitchRow         *quick_terminal_hide_on_unfocus;
   AdwSwitchRow         *quick_terminal_slide;
+  AdwSwitchRow         *quick_terminal_global_shortcut;
+  AdwSwitchRow         *quick_terminal_extension;
+
+  /* GNOME Shell's state of the quick terminal's extension */
+  GDBusConnection      *session_bus;
+  GCancellable         *extension_cancellable;
+  guint                 extension_signal_id;
+  bool                  extension_updating;
   AdwSwitchRow         *restore_window_size;
   AdwComboRow          *rounded_corners;
   GListModel           *rounded_corners_model;
@@ -526,6 +534,128 @@ terminal_preferences_window_size_allocate(GtkWidget* widget,
   }
 }
 
+/* The GNOME Shell extension that places the quick terminal on Wayland,
+ * from data/gnome-shell-extension: the row shows when GNOME Shell knows the
+ * extension, and turns it on and off */
+
+#define SHELL_EXTENSIONS_NAME "org.gnome.Shell.Extensions"
+#define SHELL_EXTENSIONS_PATH "/org/gnome/Shell/Extensions"
+#define QUICK_TERMINAL_EXTENSION_UUID "quick-terminal@pano.aripd.com"
+
+static void
+extension_update_row(TerminalPreferencesWindow* self,
+                     GVariant* info)
+{
+  // An extension that GNOME Shell does not know has no information
+  auto const installed = info && g_variant_n_children(info) > 0;
+  gboolean enabled = false;
+  double state = 0;
+  if (installed && !g_variant_lookup(info, "enabled", "b", &enabled) &&
+      g_variant_lookup(info, "state", "d", &state))
+    enabled = int(state) == 1; // active
+
+  gtk_widget_set_visible(GTK_WIDGET(self->quick_terminal_extension), installed);
+  self->extension_updating = true;
+  adw_switch_row_set_active(self->quick_terminal_extension, enabled);
+  self->extension_updating = false;
+}
+
+static void
+extension_info_cb(GObject* source,
+                  GAsyncResult* result,
+                  void* user_data)
+{
+  gs_free_error GError* error = nullptr;
+  gs_unref_variant GVariant* reply = g_dbus_connection_call_finish(G_DBUS_CONNECTION(source),
+                                                                   result, &error);
+  if (g_error_matches(error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+    return;
+
+  auto const self = TERMINAL_PREFERENCES_WINDOW(user_data);
+  gs_unref_variant GVariant* info = reply ? g_variant_get_child_value(reply, 0) : nullptr;
+  extension_update_row(self, info);
+}
+
+static void
+extension_state_changed_cb(GDBusConnection* connection,
+                           char const* sender_name,
+                           char const* object_path,
+                           char const* interface_name,
+                           char const* signal_name,
+                           GVariant* parameters,
+                           void* user_data)
+{
+  char const* uuid = nullptr;
+  gs_unref_variant GVariant* info = nullptr;
+  g_variant_get(parameters, "(&s@a{sv})", &uuid, &info);
+  if (g_str_equal(uuid, QUICK_TERMINAL_EXTENSION_UUID))
+    extension_update_row(TERMINAL_PREFERENCES_WINDOW(user_data), info);
+}
+
+static void
+extension_row_active_cb(TerminalPreferencesWindow* self)
+{
+  if (self->extension_updating || !self->session_bus)
+    return;
+
+  auto const enable = adw_switch_row_get_active(self->quick_terminal_extension);
+  g_dbus_connection_call(self->session_bus,
+                         SHELL_EXTENSIONS_NAME,
+                         SHELL_EXTENSIONS_PATH,
+                         SHELL_EXTENSIONS_NAME,
+                         enable ? "EnableExtension" : "DisableExtension",
+                         g_variant_new("(s)", QUICK_TERMINAL_EXTENSION_UUID),
+                         G_VARIANT_TYPE("(b)"),
+                         G_DBUS_CALL_FLAGS_NONE,
+                         -1,
+                         self->extension_cancellable,
+                         nullptr, nullptr);
+}
+
+static void
+setup_extension_row(TerminalPreferencesWindow* self)
+{
+  /* The preferences process has a private connection to the server as its
+   * bus; the server passes on the address of the session bus */
+  if (auto const address = g_getenv("PANO_SESSION_BUS_ADDRESS"))
+    self->session_bus = g_dbus_connection_new_for_address_sync(address,
+                                                               GDBusConnectionFlags(G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT |
+                                                                                    G_DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION),
+                                                               nullptr, nullptr, nullptr);
+  else
+    self->session_bus = g_bus_get_sync(G_BUS_TYPE_SESSION, nullptr, nullptr);
+  if (!self->session_bus)
+    return;
+
+  self->extension_cancellable = g_cancellable_new();
+  self->extension_signal_id =
+    g_dbus_connection_signal_subscribe(self->session_bus,
+                                       SHELL_EXTENSIONS_NAME,
+                                       SHELL_EXTENSIONS_NAME,
+                                       "ExtensionStateChanged",
+                                       SHELL_EXTENSIONS_PATH,
+                                       nullptr,
+                                       G_DBUS_SIGNAL_FLAGS_NONE,
+                                       extension_state_changed_cb,
+                                       self, nullptr);
+  g_signal_connect_swapped(self->quick_terminal_extension, "notify::active",
+                           G_CALLBACK(extension_row_active_cb), self);
+
+  // Without GNOME Shell, this fails, and the row stays hidden
+  g_dbus_connection_call(self->session_bus,
+                         SHELL_EXTENSIONS_NAME,
+                         SHELL_EXTENSIONS_PATH,
+                         SHELL_EXTENSIONS_NAME,
+                         "GetExtensionInfo",
+                         g_variant_new("(s)", QUICK_TERMINAL_EXTENSION_UUID),
+                         G_VARIANT_TYPE("(a{sv})"),
+                         G_DBUS_CALL_FLAGS_NO_AUTO_START,
+                         -1,
+                         self->extension_cancellable,
+                         extension_info_cb,
+                         self);
+}
+
 static void
 terminal_preferences_window_constructed (GObject *object)
 {
@@ -615,6 +745,11 @@ terminal_preferences_window_constructed (GObject *object)
   terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_QUICK_TERMINAL_SLIDE_KEY,
                    self->quick_terminal_slide,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_QUICK_TERMINAL_GLOBAL_SHORTCUT_KEY,
+                   self->quick_terminal_global_shortcut,
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
@@ -733,6 +868,8 @@ terminal_preferences_window_constructed (GObject *object)
                                 g_object_ref (self->tab_middle_clicks),
                                 g_object_unref);
 
+  setup_extension_row(self);
+
   // Unfortunately there is no API for AdwPreferencesWindow to do this,
   // nor can we directly get its AdwNavigationView since it's not an
   // internal-child in GtkBuilder.
@@ -746,6 +883,16 @@ terminal_preferences_window_dispose (GObject *object)
   TerminalPreferencesWindow *self = (TerminalPreferencesWindow *)object;
 
   g_clear_pointer(reinterpret_cast<GtkWidget**>(&self->context_menu), gtk_widget_unparent);
+
+  if (self->extension_cancellable) {
+    g_cancellable_cancel(self->extension_cancellable);
+    g_clear_object(&self->extension_cancellable);
+  }
+  if (self->extension_signal_id) {
+    g_dbus_connection_signal_unsubscribe(self->session_bus, self->extension_signal_id);
+    self->extension_signal_id = 0;
+  }
+  g_clear_object(&self->session_bus);
 
   gtk_widget_dispose_template (GTK_WIDGET (self), TERMINAL_TYPE_PREFERENCES_WINDOW);
 
@@ -785,6 +932,8 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_height);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_hide_on_unfocus);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_slide);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_global_shortcut);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_extension);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_window_size);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_mode);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_modes);

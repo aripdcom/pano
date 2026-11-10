@@ -248,6 +248,9 @@ terminal_prefs_process_initable_init(GInitable* initable,
   // Note that g_subprocess_launcher_set_cwd() is not necessary since
   // the server's cwd is already $HOME.
   g_subprocess_launcher_set_environ(launcher, nullptr); // inherit server's environment
+  // The preferences talk to GNOME Shell about the quick terminal's extension
+  if (auto const address = g_getenv("DBUS_SESSION_BUS_ADDRESS"))
+    g_subprocess_launcher_setenv(launcher, "PANO_SESSION_BUS_ADDRESS", address, true);
   g_subprocess_launcher_unsetenv(launcher, "DBUS_SESSION_BUS_ADDRESS");
   g_subprocess_launcher_unsetenv(launcher, "DBUS_STARTER_BUS_TYPE");
   // ? g_subprocess_launcher_setenv(launcher, "GSETTINGS_BACKEND", "bridge", true);

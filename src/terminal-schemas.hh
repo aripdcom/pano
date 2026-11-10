@@ -109,6 +109,7 @@ G_BEGIN_DECLS
 #define TERMINAL_SETTING_QUICK_TERMINAL_HEIGHT_KEY      "quick-terminal-height"
 #define TERMINAL_SETTING_QUICK_TERMINAL_HIDE_ON_UNFOCUS_KEY "quick-terminal-hide-on-unfocus"
 #define TERMINAL_SETTING_QUICK_TERMINAL_SLIDE_KEY       "quick-terminal-slide"
+#define TERMINAL_SETTING_QUICK_TERMINAL_GLOBAL_SHORTCUT_KEY "quick-terminal-global-shortcut"
 #define TERMINAL_SETTING_NOTIFY_COMMAND_FINISHED_KEY    "notify-command-finished"
 #define TERMINAL_SETTING_TOAST_ON_COPY_KEY              "toast-on-copy"
 #define TERMINAL_SETTING_IGNORE_PROGRAM_TITLES_KEY      "ignore-program-titles"

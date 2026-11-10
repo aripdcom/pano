@@ -369,7 +369,20 @@
         <child>
           <object class="AdwPreferencesGroup">
             <property name="title" translatable="yes">Quick Terminal</property>
-            <property name="description" translatable="yes">A terminal that you show and hide with one key. Run “pano-terminal --quick” to toggle it; to use a key, add this command in Settings → Keyboard → Custom Shortcuts.</property>
+            <property name="description" translatable="yes">A terminal that you show and hide with one key. Use the system-wide shortcut below, or add the command “pano-terminal --quick” in Settings → Keyboard → Custom Shortcuts.</property>
+            <child>
+              <object class="AdwSwitchRow" id="quick_terminal_global_shortcut">
+                <property name="title" translatable="yes">System-Wide Shortcut</property>
+                <property name="subtitle" translatable="yes">The desktop asks for the key; F12 is suggested. Pano Terminal then keeps running in the background. Needs GNOME 48 or newer, or KDE Plasma.</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="quick_terminal_extension">
+                <property name="visible">false</property>
+                <property name="title" translatable="yes">GNOME Shell Extension</property>
+                <property name="subtitle" translatable="yes">On Wayland, keeps the quick terminal at the top of the screen, above other windows and on all workspaces</property>
+              </object>
+            </child>
             <child>
               <object class="AdwSpinRow" id="quick_terminal_width">
                 <property name="title" translatable="yes">Width</property>
@@ -408,7 +421,7 @@
             <child>
               <object class="AdwSwitchRow" id="quick_terminal_slide">
                 <property name="title" translatable="yes">Slide In From the Top</property>
-                <property name="subtitle" translatable="yes">On X11 only</property>
+                <property name="subtitle" translatable="yes">On X11, or with the GNOME Shell extension</property>
               </object>
             </child>
           </object>

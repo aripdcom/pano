@@ -1,0 +1,15 @@
+{
+  "uuid": "@uuid@",
+  "name": "Pano Terminal Quick Terminal",
+  "description": "Places Pano Terminal's quick terminal at the top of the screen, above other windows and on all workspaces, which applications cannot do themselves on Wayland.",
+  "url": "https://pano.aripd.com",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51"
+  ]
+}

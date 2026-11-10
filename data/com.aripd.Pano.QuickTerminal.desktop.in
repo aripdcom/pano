@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Pano Terminal Quick Terminal
+Comment=Show or hide the quick terminal
+Exec=pano-terminal --quick
+TryExec=pano-terminal
+Icon=com.aripd.Pano
+Type=Application
+Categories=GNOME;GTK;System;TerminalEmulator;
+NoDisplay=true
+StartupNotify=false

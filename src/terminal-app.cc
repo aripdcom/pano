@@ -38,6 +38,7 @@
 #include "terminal-debug.hh"
 #include "terminal-default.hh"
 #include "terminal-app.hh"
+#include "terminal-global-shortcuts.hh"
 #include "terminal-accels.hh"
 #include "terminal-client-utils.hh"
 #include "terminal-profiles-list.hh"
@@ -903,6 +904,7 @@ terminal_app_startup (GApplication *application)
                             G_CALLBACK (terminal_app_update_profile_menus), app);
 
   terminal_session_init();
+  terminal_global_shortcuts_init(application, app->global_settings);
 
 #endif /* TERMINAL_SERVER */
 
@@ -915,6 +917,7 @@ static void
 terminal_app_shutdown (GApplication *application)
 {
 #ifdef TERMINAL_SERVER
+  terminal_global_shortcuts_shutdown();
   terminal_session_shutdown();
 #endif
 

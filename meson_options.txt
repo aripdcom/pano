@@ -35,6 +35,13 @@ option(
 )
 
 option(
+  'gnome_shell_extension',
+  type: 'boolean',
+  value: true,
+  description: 'Install the GNOME Shell extension that places the quick terminal on Wayland',
+)
+
+option(
   'search_provider',
   type: 'boolean',
   value: true,

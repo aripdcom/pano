@@ -195,6 +195,8 @@ server_sources = app_sources + client_util_sources + debug_sources + default_sou
   'terminal-containers.cc',
   'terminal-containers.hh',
   'terminal-flatpak.cc',
+  'terminal-global-shortcuts.cc',
+  'terminal-global-shortcuts.hh',
   'terminal-flatpak.hh',
   'terminal-session.cc',
   'terminal-session.hh',

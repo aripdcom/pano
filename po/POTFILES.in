@@ -2,6 +2,7 @@
 # Please keep this file sorted alphabetically.
 data/com.aripd.Pano.desktop.in
 data/com.aripd.Pano.Preferences.desktop.in
+data/com.aripd.Pano.QuickTerminal.desktop.in
 data/com.aripd.Pano.metainfo.xml.in
 data/com.aripd.Pano.Nautilus.metainfo.xml.in
 src/com.aripd.Pano.gschema.xml
@@ -23,6 +24,7 @@ src/terminal-notebook.ui
 src/terminal-notebook.cc
 src/terminal-options.cc
 src/terminal-preferences-window.cc
+src/terminal-global-shortcuts.cc
 src/terminal-preferences-window.ui
 src/terminal-prefs-process.cc
 src/terminal-profile-editor.cc

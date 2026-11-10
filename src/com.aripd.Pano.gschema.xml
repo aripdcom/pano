@@ -963,6 +963,12 @@
       <description>Only on X11, where applications can place their windows.</description>
     </key>
 
+    <key name="quick-terminal-global-shortcut" type="b">
+      <default>false</default>
+      <summary>Whether to ask the desktop for a system-wide shortcut for the quick terminal</summary>
+      <description>Uses the GlobalShortcuts portal (GNOME 48 or newer, KDE Plasma). The desktop sends the shortcut only to a running application, so Pano Terminal then keeps running in the background and starts when you log in.</description>
+    </key>
+
     <key name="highlight-root-and-remote" type="b">
       <default>true</default>
       <summary>Whether to show when a terminal runs as root or over SSH</summary>

@@ -78,11 +78,24 @@ i18n.merge_file(
   type: 'desktop',
 )
 
+# Gives the quick terminal its icon on Wayland, where it has an
+# application ID of its own
+i18n.merge_file(
+  input: gt_dns_name + '.QuickTerminal.desktop.in',
+  install: true,
+  install_dir: desktopdatadir,
+  install_tag: 'runtime',
+  output: '@BASENAME@',
+  po_dir: po_dir,
+  type: 'desktop',
+)
+
 meson.add_install_script(
   'meson_desktopfile.py',
   desktopdatadir,
   gt_dns_name + '.desktop',
   gt_dns_name + '.Preferences.desktop',
+  gt_dns_name + '.QuickTerminal.desktop',
 )
 
 # Install a symlink for xdg-terminal-exec
@@ -112,3 +125,7 @@ install_subdir(
 )
 
 subdir('icons')
+
+if get_option('gnome_shell_extension') and not get_option('flatpak')
+  subdir('gnome-shell-extension')
+endif

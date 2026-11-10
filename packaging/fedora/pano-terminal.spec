@@ -56,8 +56,10 @@ It can be installed next to GNOME Terminal.
 %{_libdir}/pano-terminal/
 %{_datadir}/applications/com.aripd.Pano.desktop
 %{_datadir}/applications/com.aripd.Pano.Preferences.desktop
+%{_datadir}/applications/com.aripd.Pano.QuickTerminal.desktop
 %{_datadir}/dbus-1/services/com.aripd.Pano.service
 %{_datadir}/glib-2.0/schemas/com.aripd.Pano.gschema.xml
+%{_datadir}/gnome-shell/extensions/quick-terminal@pano.aripd.com/
 %{_datadir}/gnome-shell/search-providers/pano-terminal-search-provider.ini
 %{_datadir}/icons/hicolor/scalable/apps/com.aripd.Pano*.svg
 %{_datadir}/icons/hicolor/symbolic/apps/com.aripd.Pano*-symbolic.svg

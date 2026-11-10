@@ -156,13 +156,18 @@ Everything GNOME Terminal provides, plus:
   of the "Tab closed" notice bring back the last closed tab, with its panes,
   working directories and profiles, where it was. The last ten closed tabs
   are kept, also from windows that were closed.
-* **Quick terminal**: a terminal that you show and hide with one key. Run
-  `pano-terminal --quick` to toggle it; to use a key such as F12, add that
-  command in *Settings → Keyboard → View and Customize Shortcuts → Custom
-  Shortcuts*. Set its width and height in *Preferences → Quick Terminal*,
-  where it can also hide by itself when you use another application. On
-  X11 it slides in at the top of the screen and stays above other windows;
-  on Wayland the desktop places it.
+* **Quick terminal**: a terminal that you show and hide with one key. Turn
+  on *Preferences → Quick Terminal → System-Wide Shortcut* and the desktop
+  asks you for the key (F12 is suggested); this needs GNOME 48 or newer, or
+  KDE Plasma, and keeps Pano Terminal running in the background. Or run
+  `pano-terminal --quick` to toggle it, and add that command in *Settings →
+  Keyboard → View and Customize Shortcuts → Custom Shortcuts*. Set its
+  width and height in the preferences, where it can also hide by itself
+  when you use another application. On X11 it slides in at the top of the
+  screen and stays above other windows. On Wayland, applications cannot
+  place their windows; on GNOME, the *Pano Terminal Quick Terminal* shell
+  extension, which comes with the packages, does that, and can be turned on
+  in the same place.
 
 See the [issue tracker](https://github.com/aripdcom/pano/issues) for the
 roadmap.

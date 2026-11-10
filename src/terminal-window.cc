@@ -34,8 +34,12 @@
 #ifdef GDK_WINDOWING_X11
 # include <gdk/x11/gdkx.h>
 #endif
+#ifdef GDK_WINDOWING_WAYLAND
+# include <gdk/wayland/gdkwayland.h>
+#endif
 
 #include "terminal-app.hh"
+#include "terminal-defines.hh"
 #include "terminal-debug.hh"
 #include "terminal-enums.hh"
 #include "terminal-headerbar.hh"
@@ -5296,6 +5300,19 @@ quick_terminal_slide_cb(GtkWidget* widget,
 static void
 quick_terminal_map_cb(TerminalWindow* window)
 {
+#ifdef GDK_WINDOWING_WAYLAND
+  /* On Wayland, the desktop places windows. An application ID of its own
+   * lets the GNOME Shell extension in data/gnome-shell-extension find the
+   * quick terminal and place it; com.aripd.Pano.QuickTerminal.desktop
+   * gives it the icon. */
+  auto const wayland_surface = gtk_native_get_surface(GTK_NATIVE(window));
+  if (GDK_IS_WAYLAND_TOPLEVEL(wayland_surface)) {
+    gdk_wayland_toplevel_set_application_id(GDK_TOPLEVEL(wayland_surface),
+                                            TERMINAL_APPLICATION_ID ".QuickTerminal");
+    return;
+  }
+#endif
+
 #ifdef GDK_WINDOWING_X11
   auto const surface = gtk_native_get_surface(GTK_NATIVE(window));
   auto const monitor = quick_terminal_monitor(window);
