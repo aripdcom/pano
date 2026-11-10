@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2011-12-20 18:00+0200\n"
 "Last-Translator: Xandru Armesto <xandru@softastur.org>\n"
 "Language-Team: Softastur alministradores@softastur.org\n"
@@ -2064,7 +2064,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 #, fuzzy
 #| msgid "_Profile Preferences"
@@ -3574,26 +3574,30 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "_Rellanzar"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "Hebo un fallu al crear el procesu fíu pa esta terminal"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "El procesu fíu finó correutamente col estáu %d."
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, fuzzy, c-format
 #| msgid "The child process was terminated by signal %d."
 msgid "The child process was aborted by signal %d."
 msgstr "La señal %d finó'l procesu fíu."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 #, fuzzy
 #| msgid "The child process was terminated."
 msgid "The child process was aborted."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2018-08-11 09:13-0600\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -1895,7 +1895,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "ਇੰਸਪੈਕਟਰ(_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_ਮੇਰੀ ਪਸੰਦ"
@@ -3392,25 +3392,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "ਕੋਈ ਕਮਾਂਡ ਨਹੀਂ ਦਿੱਤੀ ਨਾ ਕੋਈ ਸ਼ੈੱਲ ਮੰਗ ਕੀਤੀ"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "ਮੁੜ-ਚਲਾਓ(_R)"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "ਇਸ ਟਰਮੀਨਲ ਲਈ ਚਲਾਇਡ ਕਾਰਜ ਬਣਾਉਣ ਵਿੱਚ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈਸ ਅਚਾਨਕ ਹੀ %d ਹਾਲਤ ਨਾਲ ਬੰਦ ਹੋ ਗਿਆ।"
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈੱਸ ਨੂੰ ਸਿਗਨਲ %d ਵਲੋਂ ਅਧੂਰਾ ਛੱਡਿਆ ਗਿਆ।"
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈੱਸ ਅਧੂਰਾ ਛੱਡਿਆ ਗਿਆ।"
 

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2014-09-15 00:01+0630\n"
 "Last-Translator: Shantha kumar <shkumar@redhat.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -2005,7 +2005,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr "ஆய்வி (_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_P முன்னுரிமைகள்"
@@ -3508,25 +3508,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "ஒரு கட்டளையும் தரப்படவில்லை; ஷெல்லும் தேவையில்லை"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "_R மீள்துவக்கு "
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "சேய் செயலை முனையத்தில் உருவாக்குவதில் பிழை நேர்ந்தது."
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "குழந்தை செயல் சரியாக வெளியேறியது. நிலை %d. "
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "சேய் செயல்  %d சமிக்ஞையால் கைவிடப்பட்டது."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "சேய் செயல் கைவிடப்பட்டது. "
 

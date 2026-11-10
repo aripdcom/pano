@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2023-03-11 13:08+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -1925,7 +1925,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_Inspektør"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Indstillinger"
@@ -3434,25 +3434,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "Ingen kommando angivet eller skal anmodet"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "_Genstart"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "Der opstod en fejl under oprettelse af underprocessen for terminalen"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Underprocessen afsluttede normalt med status %d."
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Underprocessen blev afbrudt af signalet %d."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "Underprocessen blev afbrudt."
 

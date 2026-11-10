@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME-TERMINAL VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2007-03-08 06:43+0300\n"
 "Last-Translator: Thierry Randrianiriana <randrianiriana@gmail.com>\n"
 "Language-Team: MALAGASY <i18n-malagasy-gnome@gna.org>\n"
@@ -1969,7 +1969,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr ""
@@ -3490,26 +3490,30 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 "Nisy olana teo am-pamoronana ny fizotra zana-pizotra ho an'ity terminal ity"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr ""
 

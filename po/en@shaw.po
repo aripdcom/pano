@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2010-05-18 10:04 -0400\n"
 "Last-Translator: Thomas Thurman <tthurman@gnome.org>\n"
 "Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
@@ -1986,7 +1986,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 #, fuzzy
 #| msgid "_Profile Preferences"
@@ -3490,26 +3490,30 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "_𐑮𐑰𐑤𐑪𐑯𐑗"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "𐑞𐑺 𐑢𐑪𐑟 𐑩𐑯 𐑻𐑼 𐑒𐑮𐑦𐑱𐑑𐑦𐑙 𐑞 𐑗𐑲𐑤𐑛 𐑐𐑮𐑴𐑕𐑧𐑕 𐑓𐑹 𐑞𐑦𐑕 𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "𐑞 𐑗𐑲𐑤𐑛 𐑐𐑮𐑴𐑕𐑧𐑕 𐑧𐑜𐑟𐑦𐑑𐑩𐑛 𐑯𐑹𐑥𐑩𐑤𐑦 𐑢𐑦𐑞 𐑕𐑑𐑱𐑑𐑫𐑕 %d."
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, fuzzy, c-format
 #| msgid "The child process was terminated by signal %d."
 msgid "The child process was aborted by signal %d."
 msgstr "𐑞 𐑗𐑲𐑤𐑛 𐑐𐑮𐑴𐑕𐑧𐑕 𐑢𐑪𐑟 𐑑𐑻𐑥𐑩𐑯𐑱𐑑𐑩𐑛 𐑚𐑲 𐑕𐑦𐑜𐑯𐑩𐑤 %d."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 #, fuzzy
 #| msgid "The child process was terminated."
 msgid "The child process was aborted."

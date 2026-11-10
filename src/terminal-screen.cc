@@ -3663,8 +3663,34 @@ terminal_screen_get_child_environment (TerminalScreen *screen,
 
 enum {
   RESPONSE_RELAUNCH,
-  RESPONSE_EDIT_PREFERENCES
+  RESPONSE_EDIT_PREFERENCES,
+  RESPONSE_RUN_SHELL
 };
+
+static char* profile_dup_custom_command (GSettings *profile);
+
+/* Starts the user's shell in the terminal of a command that has exited,
+ * in the command's working directory */
+static void
+terminal_screen_run_shell (TerminalScreen *screen)
+{
+  auto const data = screen->priv->exec_data;
+  char *argv[] = { vte_get_user_shell (), nullptr };
+  if (!argv[0])
+    argv[0] = g_strdup ("/bin/sh");
+
+  gs_free_error GError *error = nullptr;
+  if (!terminal_screen_exec (screen, argv,
+                             data ? data->envv : nullptr,
+                             FALSE,
+                             data ? data->cwd : nullptr,
+                             TRUE,
+                             nullptr, nullptr, /* fd list and array */
+                             nullptr, nullptr, nullptr, /* callback */
+                             nullptr, &error))
+    g_warning ("Failed to start the shell: %s", error->message);
+  g_free (argv[0]);
+}
 
 static void
 info_bar_response_cb (GtkWidget *info_bar,
@@ -3681,6 +3707,10 @@ info_bar_response_cb (GtkWidget *info_bar,
     case RESPONSE_RELAUNCH:
       terminal_tab_remove_overlay (info_bar);
       terminal_screen_reexec (screen, nullptr, nullptr, nullptr, nullptr);
+      break;
+    case RESPONSE_RUN_SHELL:
+      terminal_tab_remove_overlay (info_bar);
+      terminal_screen_run_shell (screen);
       break;
     case RESPONSE_EDIT_PREFERENCES:
       terminal_app_edit_preferences (terminal_app_get (),
@@ -4184,8 +4214,14 @@ terminal_screen_child_exited (VteTerminal *terminal,
     case TERMINAL_EXIT_HOLD: {
       GtkWidget *info_bar;
 
+      /* Offer the shell, unless that is what exited */
+      auto const data = priv->exec_data;
+      gs_free char *custom_command = profile_dup_custom_command (priv->profile);
+      auto const ran_command = data && (data->argv || custom_command);
+
       info_bar = terminal_info_bar_new (GTK_MESSAGE_INFO,
                                         _("_Relaunch"), RESPONSE_RELAUNCH,
+                                        ran_command ? _("Run _Shell") : nullptr, RESPONSE_RUN_SHELL,
                                         nullptr);
       if (WIFEXITED (status)) {
         terminal_info_bar_format_text (TERMINAL_INFO_BAR (info_bar),

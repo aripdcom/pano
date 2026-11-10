@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2023-08-15 21:02+0200\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
@@ -1932,7 +1932,7 @@ msgstr "_4. 132 × 42"
 msgid "_Inspector"
 msgstr "_Inspektor"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Předvolby"
@@ -3431,25 +3431,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "Není ani zadán příkaz ani požadován shell"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "_Spustit znovu"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "Při vytváření procesu potomka pro tento terminál došlo k chybě"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Proces potomka skončil normálně se stavovým kódem %d."
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Proces potomka byl zrušen na základě signálu %d."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "Proces potomka byl zrušen."
 

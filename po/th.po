@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2023-12-13 03:59+0700\n"
 "Last-Translator: knight2000 <knight2000@gmail.com>\n"
 "Language-Team: ไทย <thai-l10n@googlegroups.com>\n"
@@ -1892,7 +1892,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "ช่องเ_ฝ้ามอง"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_ปรับแต่ง"
@@ -3382,25 +3382,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "ไม่ได้ระบุคำสั่งหรือร้องขอเชลล์ใดๆ"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "เ_รียกใหม่"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "เกิดข้อผิดพลาดขณะสร้างกระบวนการลูกสำหรับเทอร์มินัลนี้:"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "โพรเซสลูกจบการทำงานตามปกติด้วยสถานะ %d"
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "โพรเซสลูกถูกเลิกล้มโดยสัญญาณ %d"
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "โพรเซสลูกถูกเลิกล้ม"
 

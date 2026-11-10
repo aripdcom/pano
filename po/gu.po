@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2014-09-22 12:53+0530\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -1990,7 +1990,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr "નિરીક્ષક (_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "પસંદગીઓ (_P)"
@@ -3496,25 +3496,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "કોઇ આદેશ પૂરો પાડવામાં  અથવા શેલ સૂચિક કરવામાં આવ્યુ નથી"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "પુન:શરૂ કરો (_R)"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "આ ટર્મિનલ માટે બાળ પ્રક્રિયા બનાવવામાં ભૂલ હતી"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "બાળ પ્રક્રિયા સામાન્ય રીતે પરિસ્થિતિ %d સાથે બહાર નીકળેલ છે."
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "બાળ પ્રક્રિયા સંકેત %d દ્દારા અંત આવી ગયો હતો."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "બાળ પ્રક્રિયાનો અંત આવી ગયો હતો."
 

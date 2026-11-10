@@ -45,7 +45,8 @@
 </steps>
 
   <p>With <gui>Hold terminal</gui>, the terminal shows how the command ended,
-  and you can start it again with <gui style="button">Relaunch</gui>.</p>
+  and you can start it again with <gui style="button">Relaunch</gui>, or
+  start your shell in its place with <gui style="button">Run Shell</gui>.</p>
 
   <note style="tip">
     <p>If a <link xref="pref-custom-command">custom command</link> prints

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2014-09-21 09:23+0630\n"
 "Last-Translator: rajesh <rajesh>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -1991,7 +1991,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr "इंस्पेक्टर"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "वरीयताएँ (_P)"
@@ -3491,25 +3491,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "कोई कमांड की आपूर्ति की है और न ही शेल का अनुरोध किया"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "पुनः लॉन्च करें (_R)"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "इस टर्मिनल हेतु शिशु प्रक्रिया सृजित करने में त्रुटि"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "स्थिति %d के साथ सामान्य रूप से बच्चे की प्रक्रिया से बाहर निकल गया."
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "बच्चा प्रक्रिया %d संकेत द्वारा निरस्त किया गया था."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "बच्चा प्रक्रिया अवरुद्ध किया गया था."
 

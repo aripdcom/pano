@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.gnome-2-28.kn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:57+0300\n"
+"POT-Creation-Date: 2026-11-10 23:59+0300\n"
 "PO-Revision-Date: 2014-09-21 00:43+0530\n"
 "Last-Translator: Shankar Prasad <svenkate AT redhat Dot com>\n"
 "Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
@@ -1995,7 +1995,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr "ಪರೀಕ್ಷಕ (_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3737
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "ಆದ್ಯತೆಗಳು (_P)"
@@ -3501,25 +3501,29 @@ msgstr ""
 msgid "No command supplied nor shell requested"
 msgstr "ಯಾವುದೆ ಆದೇಶವನ್ನು ಒದಗಿಸಲಾಗಿಲ್ಲ ಅಥವ ಶೆಲ್‌ಗಾಗಿ ಮನವಿ ಮಾಡಲಾಗಿಲ್ಲ"
 
-#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
+#: src/terminal-screen.cc:3738 src/terminal-screen.cc:4223
 msgid "_Relaunch"
 msgstr "ಮರಳಿ ಆರಂಭಿಸು (_R)"
 
-#: src/terminal-screen.cc:3711
+#: src/terminal-screen.cc:3741
 msgid "There was an error creating the child process for this terminal"
 msgstr "ಈ ಆದೇಶತೆರೆಗಾಗಿ ಉಪ ಪ್ರಕ್ರಿಯೆಯನ್ನು ನಿರ್ಮಿಸುವಾಗ ಒಂದು ದೋಷ ಉಂಟಾಗಿದೆ"
 
-#: src/terminal-screen.cc:4192
+#: src/terminal-screen.cc:4224
+msgid "Run _Shell"
+msgstr ""
+
+#: src/terminal-screen.cc:4228
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "ಉಪ ಪ್ರಕ್ರಿಯೆಯು %d ಸ್ಥಿತಿಯೊಂದಿಗೆ ಸಾಮಾನ್ಯ ರೀತಿಯಲ್ಲಿ ಅಂತ್ಯಗೊಂಡಿದೆ"
 
-#: src/terminal-screen.cc:4195
+#: src/terminal-screen.cc:4231
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "ಉಪ ಪ್ರಕ್ರಿಯೆಯು %d ಸಂಕೇತದೊಂದಿಗೆ ವಿಫಲಗೊಂಡಿದೆ."
 
-#: src/terminal-screen.cc:4198
+#: src/terminal-screen.cc:4234
 msgid "The child process was aborted."
 msgstr "ಉಪ ಪ್ರಕ್ರಿಯೆಯು ವಿಫಲಗೊಂಡಿದೆ."
 
