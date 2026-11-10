@@ -4,7 +4,7 @@ The files here build Pano Terminal packages. The
 [Packages workflow](../.github/workflows/packages.yml) runs these steps on
 GitHub; pushing a `v*` tag also attaches the packages to a draft release.
 
-Both packages are built without the Nautilus extension, which needs
+The packages are built without the Nautilus extension, which needs
 `libnautilus-extension-4`, and with the GNOME Shell search provider.
 
 ## Fedora
@@ -35,6 +35,33 @@ dpkg-buildpackage -us -uc -b
 ```
 
 The `.deb` files are written to the parent folder.
+
+## Flatpak
+
+[`flatpak/com.aripd.Pano.json`](flatpak/com.aripd.Pano.json) builds Pano
+Terminal and VTE on the GNOME 51 runtime. With `flatpak-builder` and the
+`org.gnome.Sdk//51` runtime installed:
+
+```
+flatpak-builder --user --install --force-clean _flatpak packaging/flatpak/com.aripd.Pano.json
+flatpak run com.aripd.Pano
+```
+
+To make a bundle that installs elsewhere, build into a repository with
+`--repo=repo` and run `flatpak build-bundle repo pano-terminal.flatpak com.aripd.Pano`.
+
+In the sandbox, Pano Terminal starts the shells and other commands on the
+host through Flatpak's `HostCommand` (as `flatpak-spawn --host` does), and
+looks at the processes there for the working directory, the root and SSH
+highlights and the close confirmation; see `src/terminal-flatpak.cc`. The
+meson option `-Dflatpak=true` leaves out the systemd user unit, which
+Flatpak cannot export, and names the search provider after the
+application. What does not work in the Flatpak:
+
+- the Nautilus extension, which has to be installed on the host;
+- importing the GNOME Terminal settings: the settings are kept in the
+  sandbox (`~/.var/app/com.aripd.Pano`), not in dconf, where GNOME Terminal
+  keeps its own.
 
 ## Versions
 

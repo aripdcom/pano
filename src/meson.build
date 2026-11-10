@@ -194,6 +194,8 @@ server_sources = app_sources + client_util_sources + debug_sources + default_sou
   'terminal-tab.hh',
   'terminal-containers.cc',
   'terminal-containers.hh',
+  'terminal-flatpak.cc',
+  'terminal-flatpak.hh',
   'terminal-session.cc',
   'terminal-session.hh',
   'terminal-tab-sidebar.cc',
@@ -265,6 +267,9 @@ server_conf = configuration_data()
 server_conf.set('gt_name', gt_name)
 server_conf.set('gt_dns_name', gt_dns_name)
 server_conf.set('libexecdir', gt_prefix / gt_libexecdir)
+# Flatpak runs the server itself, without systemd
+server_conf.set('systemd_service',
+                get_option('flatpak') ? '' : 'SystemdService=' + gt_name + '-server.service\n')
 
 configure_file(
   input: gt_dns_name + '.service.in',
@@ -279,7 +284,7 @@ configure_file(
   input: gt_name + '-server.service.in',
   output: gt_name + '-server.service',
   configuration: server_conf,
-  install: true,
+  install: not get_option('flatpak'),
   install_dir: gt_prefix / gt_systemduserdir,
   install_tag: 'runtime',
 )
@@ -290,10 +295,12 @@ if get_option('search_provider')
 
   provider_ini = files(gt_name + '-search-provider.ini')
 
+  # Flatpak only exports files named after the application
   install_data(
     provider_ini,
     install_dir: gt_prefix / gt_searchproviderdir,
     install_tag: 'runtime',
+    rename: get_option('flatpak') ? gt_dns_name + '.search-provider.ini' : [],
   )
 endif # option 'search_provider'
 

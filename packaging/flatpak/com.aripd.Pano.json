@@ -1,0 +1,64 @@
+{
+  "id": "com.aripd.Pano",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "51",
+  "sdk": "org.gnome.Sdk",
+  "command": "pano-terminal",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=all",
+    "--filesystem=host",
+    "--talk-name=org.freedesktop.Flatpak"
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/share/gir-1.0",
+    "/share/vala",
+    "*.a",
+    "*.la"
+  ],
+  "modules": [
+    {
+      "name": "vte",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dgtk3=false",
+        "-Dgtk4=true",
+        "-Dapp=false",
+        "-Ddocs=false",
+        "-Dgir=false",
+        "-Dglade=false",
+        "-Dvapi=false",
+        "-D_systemd=false"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/vte/0.84/vte-0.84.1.tar.xz",
+          "sha256": "aca1caa8478aebcdbb1d67897fb3511eb7601debae6810e16a15b6fa25f31ac8"
+        }
+      ]
+    },
+    {
+      "name": "pano-terminal",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dflatpak=true",
+        "-Dnautilus_extension=false"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": "../..",
+          "skip": [
+            "_build",
+            ".flatpak-builder"
+          ]
+        }
+      ]
+    }
+  ]
+}

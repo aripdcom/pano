@@ -41,3 +41,10 @@ option(
   description: 'Provide search integration for gnome-shell',
 )
 
+
+option(
+  'flatpak',
+  type: 'boolean',
+  value: false,
+  description: 'Build for a Flatpak: no systemd user unit, and file names that Flatpak exports',
+)

@@ -167,9 +167,13 @@ Packages
 --------
 
 The [Packages workflow](https://github.com/aripdcom/pano/actions/workflows/packages.yml)
-builds a source tarball, a Fedora RPM and a Debian 13 package; download them
-from the artifacts of a run. To build them yourself, see
-[`packaging/`](packaging/README.md).
+builds a source tarball, a Fedora RPM, a Debian 13 package and a Flatpak
+bundle; download them from the artifacts of a run. To build them yourself,
+see [`packaging/`](packaging/README.md).
+
+The Flatpak runs the shells on the host, outside the sandbox, so it works
+like the other packages: it needs the permission to start programs on the
+host, and access to the files and devices.
 
 Building from source
 --------------------

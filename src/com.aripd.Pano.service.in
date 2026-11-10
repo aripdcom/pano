@@ -1,4 +1,3 @@
 [D-BUS Service]
 Name=@gt_dns_name@
-SystemdService=@gt_name@-server.service
-Exec=@libexecdir@/@gt_name@-server
+@systemd_service@Exec=@libexecdir@/@gt_name@-server

@@ -18,36 +18,43 @@
 #include "config.h"
 
 #include "terminal-containers.hh"
+#include "terminal-flatpak.hh"
 #include "terminal-intl.hh"
 #include "terminal-libgsystem.hh"
 
 #include <glib/gi18n.h>
 
-/* One line per container: its name, its toolbox label, its manager label.
- * Missing labels print as "<no value>". */
-#define PODMAN_FORMAT \
-  "{{.Names}}|{{index .Labels \"com.github.containers.toolbox\"}}|{{index .Labels \"manager\"}}"
+/* The tools that are installed, then an empty line, then one line per
+ * container: its name, its toolbox label, its manager label. Missing labels
+ * print as "<no value>". In the sandbox, this runs on the host. */
+static char const list_script[] =
+  "command -v podman >/dev/null || exit 0\n"
+  "command -v toolbox >/dev/null && echo toolbox\n"
+  "command -v distrobox >/dev/null && echo distrobox\n"
+  "echo\n"
+  "exec podman ps --all --format "
+  "'{{.Names}}|{{index .Labels \"com.github.containers.toolbox\"}}|{{index .Labels \"manager\"}}'\n";
 
 static void
-podman_done_cb(GObject* source,
-               GAsyncResult* result,
-               void* user_data)
+list_done_cb(GObject* source,
+             GAsyncResult* result,
+             void* user_data)
 {
   gs_unref_object auto section = G_MENU(user_data);
-  gs_free char* output = nullptr;
-  if (!g_subprocess_communicate_utf8_finish(G_SUBPROCESS(source), result, &output, nullptr, nullptr))
+  gs_free char* output = terminal_flatpak_run_finish(result, nullptr, nullptr);
+  if (!output)
     return;
 
-  auto const have_toolbox = g_find_program_in_path("toolbox");
-  auto const have_distrobox = g_find_program_in_path("distrobox");
-  auto const show_toolbox = have_toolbox != nullptr;
-  auto const show_distrobox = have_distrobox != nullptr;
-  g_free(have_toolbox);
-  g_free(have_distrobox);
+  gs_strfreev char** lines = g_strsplit(output, "\n", -1);
+  auto line = lines;
+  auto show_toolbox = false, show_distrobox = false;
+  for (; *line && **line; ++line) {
+    show_toolbox |= g_str_equal(*line, "toolbox");
+    show_distrobox |= g_str_equal(*line, "distrobox");
+  }
 
   gs_unref_object auto submenu = g_menu_new();
-  gs_strfreev char** lines = g_strsplit(output ? output : "", "\n", -1);
-  for (auto line = lines; *line; ++line) {
+  for (; *line; ++line) {
     gs_strfreev char** fields = g_strsplit(*line, "|", 3);
     if (g_strv_length(fields) != 3 || !fields[0][0])
       continue;
@@ -89,21 +96,6 @@ terminal_containers_update_menu(GMenu* section)
 {
   g_return_if_fail(G_IS_MENU(section));
 
-  gs_free char* podman = g_find_program_in_path("podman");
-  if (!podman) {
-    g_menu_remove_all(section);
-    return;
-  }
-
-  gs_free_error GError* error = nullptr;
-  gs_unref_object auto process =
-    g_subprocess_new(GSubprocessFlags(G_SUBPROCESS_FLAGS_STDOUT_PIPE |
-                                      G_SUBPROCESS_FLAGS_STDERR_SILENCE),
-                     &error,
-                     podman, "ps", "--all", "--format", PODMAN_FORMAT, nullptr);
-  if (!process)
-    return;
-
-  g_subprocess_communicate_utf8_async(process, nullptr, nullptr,
-                                      podman_done_cb, g_object_ref(section));
+  char const* const argv[] = { "sh", "-c", list_script, nullptr };
+  terminal_flatpak_run_async(argv, nullptr, list_done_cb, g_object_ref(section));
 }

@@ -58,6 +58,7 @@
 #include "terminal-debug.hh"
 #include "terminal-defines.hh"
 #include "terminal-enums.hh"
+#include "terminal-flatpak.hh"
 #include "terminal-intl.hh"
 #include "terminal-marshal.h"
 #include "terminal-schemas.hh"
@@ -197,6 +198,12 @@ struct _TerminalScreenPrivate
   /* See terminal_screen_update_process_kind() */
   TerminalProcessKind process_kind;
   guint process_kind_source;
+
+  /* In the sandbox: the foreground process on the host, as last seen, and
+   * the ongoing query for it */
+  TerminalFlatpakProcessInfo* host_process;
+  GCancellable* host_process_cancellable;
+  bool host_process_query_again;
 
   /* Input broadcasting, see terminal_screen_is_user_input() */
   bool in_key_event;
@@ -891,6 +898,22 @@ terminal_screen_find_process_kind(TerminalScreen* screen)
   if (!g_settings_get_boolean(settings, TERMINAL_SETTING_HIGHLIGHT_ROOT_AND_REMOTE_KEY))
     return TERMINAL_PROCESS_KIND_NORMAL;
 
+  static char const* const remote_programs[] = {
+    "ssh", "mosh-client", "autossh", "sshpass", "et", "telnet", nullptr
+  };
+
+  // The sandbox does not see the processes on the host; ask there
+  if (terminal_flatpak_is_sandboxed()) {
+    auto const info = priv->host_process;
+    if (!info)
+      return TERMINAL_PROCESS_KIND_NORMAL;
+    if (info->foreground_euid == 0)
+      return TERMINAL_PROCESS_KIND_ROOT;
+    if (info->foreground_comm && g_strv_contains(remote_programs, info->foreground_comm))
+      return TERMINAL_PROCESS_KIND_REMOTE;
+    return TERMINAL_PROCESS_KIND_NORMAL;
+  }
+
   auto const pty = vte_terminal_get_pty(VTE_TERMINAL(screen));
   auto pid = pty ? int(tcgetpgrp(vte_pty_get_fd(pty))) : -1;
   if (pid <= 0)
@@ -912,9 +935,6 @@ terminal_screen_find_process_kind(TerminalScreen* screen)
   gs_free char* comm = nullptr;
   if (g_file_get_contents(comm_path, &comm, nullptr, nullptr)) {
     g_strstrip(comm);
-    static char const* const remote_programs[] = {
-      "ssh", "mosh-client", "autossh", "sshpass", "et", "telnet", nullptr
-    };
     if (g_strv_contains(remote_programs, comm))
       return TERMINAL_PROCESS_KIND_REMOTE;
   }
@@ -928,8 +948,10 @@ static void terminal_screen_cwd_changed_cb(TerminalScreen* screen,
                                            const char* prop,
                                            void* user_data);
 
+static void terminal_screen_query_host_process(TerminalScreen* screen);
+
 static void
-terminal_screen_update_process_kind(TerminalScreen* screen)
+terminal_screen_apply_process_kind(TerminalScreen* screen)
 {
   auto const priv = screen->priv;
 
@@ -944,6 +966,66 @@ terminal_screen_update_process_kind(TerminalScreen* screen)
   g_object_notify_by_pspec(G_OBJECT(screen), pspecs[PROP_PROCESS_KIND]);
   // The icon falls back to one for the kind
   g_object_notify_by_pspec(G_OBJECT(screen), pspecs[PROP_ICON]);
+}
+
+static void
+terminal_screen_host_process_done_cb(GObject* source,
+                                     GAsyncResult* result,
+                                     void* user_data)
+{
+  gs_free_error GError* error = nullptr;
+  auto const info = terminal_flatpak_query_process_finish(result, &error);
+  if (g_error_matches(error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+    return;
+
+  auto const screen = TERMINAL_SCREEN(user_data);
+  auto const priv = screen->priv;
+  g_clear_object(&priv->host_process_cancellable);
+  g_clear_pointer(&priv->host_process, terminal_flatpak_process_info_free);
+  if (priv->child_pid > 0)
+    priv->host_process = info;
+  else
+    terminal_flatpak_process_info_free(info);
+
+  terminal_screen_apply_process_kind(screen);
+
+  if (priv->host_process_query_again) {
+    priv->host_process_query_again = false;
+    terminal_screen_query_host_process(screen);
+  }
+}
+
+static void
+terminal_screen_query_host_process(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+  if (priv->host_process_cancellable) {
+    priv->host_process_query_again = true;
+    return;
+  }
+
+  // The callback holds no reference; disposing cancels the query
+  priv->host_process_cancellable = g_cancellable_new();
+  terminal_flatpak_query_process_async(priv->child_pid,
+                                       priv->host_process_cancellable,
+                                       terminal_screen_host_process_done_cb,
+                                       screen);
+}
+
+static void
+terminal_screen_update_process_kind(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+
+  if (terminal_flatpak_is_sandboxed()) {
+    if (priv->child_pid > 0) {
+      terminal_screen_query_host_process(screen);
+      return;
+    }
+    g_clear_pointer(&priv->host_process, terminal_flatpak_process_info_free);
+  }
+
+  terminal_screen_apply_process_kind(screen);
 }
 
 static gboolean
@@ -2167,6 +2249,9 @@ terminal_screen_dispose (GObject *object)
   g_clear_handle_id(&priv->precmd_batch_source, g_source_remove);
   g_clear_handle_id(&priv->key_event_source, g_source_remove);
   g_clear_handle_id(&priv->process_kind_source, g_source_remove);
+  g_cancellable_cancel(priv->host_process_cancellable);
+  g_clear_object(&priv->host_process_cancellable);
+  g_clear_pointer(&priv->host_process, terminal_flatpak_process_info_free);
   g_clear_pointer(&priv->container_runtime, g_free);
   g_clear_pointer(&priv->container_name, g_free);
   g_clear_pointer(&priv->command, g_free);
@@ -2958,6 +3043,28 @@ terminal_screen_ref_profile (TerminalScreen *screen)
   return nullptr;
 }
 
+/* Whether @arg0 names a shell of the host, for the sandbox */
+static bool
+is_host_shell (char const* arg0)
+{
+  gs_free char* name = g_path_get_basename (arg0);
+  gs_free char* contents = nullptr;
+  if (g_file_get_contents ("/run/host/etc/shells", &contents, nullptr, nullptr)) {
+    gs_strfreev char** lines = g_strsplit (contents, "\n", -1);
+    for (auto line = lines; *line; ++line) {
+      g_strstrip (*line);
+      if (**line == '/' && g_str_equal (strrchr (*line, '/') + 1, name))
+        return true;
+    }
+  }
+
+  static char const* const shells[] = {
+    "sh", "bash", "zsh", "fish", "dash", "ksh", "mksh", "tcsh", "csh",
+    "nu", "xonsh", "elvish", nullptr
+  };
+  return g_strv_contains (shells, name);
+}
+
 static gboolean
 should_preserve_cwd (TerminalPreserveWorkingDirectory preserve_cwd,
                      const char *path,
@@ -2965,6 +3072,10 @@ should_preserve_cwd (TerminalPreserveWorkingDirectory preserve_cwd,
 {
   switch (preserve_cwd) {
   case TERMINAL_PRESERVE_WORKING_DIRECTORY_SAFE: {
+    // The host's programs are not in the sandbox
+    if (terminal_flatpak_is_sandboxed ())
+      return is_host_shell (arg0);
+
     gs_free char *resolved_arg0 = terminal_util_find_program_in_path (path, arg0);
     return resolved_arg0 != nullptr &&
       terminal_util_get_is_shell (resolved_arg0);
@@ -3037,7 +3148,12 @@ terminal_screen_get_child_command (TerminalScreen *screen,
       char *shell;
       int argc = 0;
 
-      shell = egg_shell (shell_env);
+      // In the sandbox, the user's shell on the host
+      if (terminal_flatpak_is_sandboxed ())
+        shell = g_strdup (terminal_flatpak_get_host_shell () ? terminal_flatpak_get_host_shell ()
+                          : shell_env ? shell_env : "/bin/sh");
+      else
+        shell = egg_shell (shell_env);
 
       only_name = strrchr (shell, '/');
       if (only_name != nullptr)
@@ -3098,6 +3214,10 @@ terminal_screen_add_shell_integration(TerminalScreen* screen,
   gs_free char* dir = g_build_filename(TERM_PKGDATADIR, "shell-integration", nullptr);
   if (!g_file_test(dir, G_FILE_TEST_IS_DIR))
     return;
+
+  // The shell may run on the host, which has the files elsewhere
+  gs_free char* sandbox_dir = g_steal_pointer(&dir);
+  dir = terminal_flatpak_host_path(sandbox_dir);
 
   gs_free char* name = g_path_get_basename(exec_argv[0]);
   auto const login = g_settings_get_boolean(priv->profile, TERMINAL_PROFILE_LOGIN_SHELL_KEY);
@@ -3165,7 +3285,13 @@ terminal_screen_get_child_environment (TerminalScreen *screen,
 
   env_table = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
-  if (initial_envv)
+  /* In the sandbox, the command runs on the host, so it gets the host's
+   * environment; the one of the client is the sandbox's too */
+  gs_strfreev char** host_environ = terminal_flatpak_is_sandboxed ()
+    ? terminal_flatpak_dup_host_environ () : nullptr;
+  if (host_environ)
+    env = host_environ;
+  else if (initial_envv)
     env = initial_envv;
   else {
     env = current_environ = g_get_environ ();
@@ -3198,6 +3324,16 @@ terminal_screen_get_child_environment (TerminalScreen *screen,
 
   // Force ncurses to not use the dec graphics charset
   g_hash_table_replace (env_table, g_strdup("NCURSES_NO_UTF8_ACS"), g_strdup("1"));
+
+  // VTE adds these when it starts the command itself, which it does not on the host
+  if (terminal_flatpak_is_sandboxed ()) {
+    g_hash_table_replace (env_table, g_strdup ("TERM"), g_strdup ("xterm-256color"));
+    g_hash_table_replace (env_table, g_strdup ("COLORTERM"), g_strdup ("truecolor"));
+    g_hash_table_replace (env_table, g_strdup ("VTE_VERSION"),
+                          g_strdup_printf ("%u", vte_get_major_version () * 10000 +
+                                           vte_get_minor_version () * 100 +
+                                           vte_get_micro_version ()));
+  }
 
   /* Add Pano private env vars used to communicate back to pano-terminal-server */
   GDBusConnection *connection = g_application_get_dbus_connection (G_APPLICATION (app));
@@ -3346,6 +3482,21 @@ idle_exec_cb (TerminalScreen *screen)
   }
 
   VteTerminal *terminal = VTE_TERMINAL (screen);
+  if (terminal_flatpak_is_sandboxed ()) {
+    terminal_flatpak_spawn_async (terminal,
+                                  data->pty_flags,
+                                  data->cwd,
+                                  (char const* const*)data->exec_argv,
+                                  (char const* const*)data->envv,
+                                  fds, n_fds,
+                                  data->fd_map, data->n_fd_map,
+                                  data->spawn_flags,
+                                  data->cancellable,
+                                  spawn_result_cb,
+                                  exec_data_ref (data));
+    return FALSE;
+  }
+
   vte_terminal_spawn_with_fds_async (terminal,
                                      data->pty_flags,
                                      data->cwd,
@@ -3580,7 +3731,10 @@ terminal_screen_get_current_dir (TerminalScreen *screen)
 
   /* Without shell integration (OSC 7), ask the system for the working
    * directory of the shell. This only works on Linux. */
-  if (screen->priv->child_pid > 0) {
+  if (terminal_flatpak_is_sandboxed ()) {
+    if (screen->priv->host_process && screen->priv->host_process->cwd)
+      return g_strdup (screen->priv->host_process->cwd);
+  } else if (screen->priv->child_pid > 0) {
     gs_free char *link = g_strdup_printf ("/proc/%d/cwd", int(screen->priv->child_pid));
     if (auto const cwd = g_file_read_link (link, nullptr))
       return cwd;
@@ -4201,6 +4355,18 @@ terminal_screen_has_foreground_process (TerminalScreen *screen,
 
   if (priv->child_pid == -1)
     return FALSE;
+
+  // In the sandbox, as last seen on the host
+  if (terminal_flatpak_is_sandboxed ()) {
+    auto const info = priv->host_process;
+    if (!info || info->foreground_pid == priv->child_pid)
+      return FALSE;
+    if (process_name)
+      *process_name = g_strdup (info->foreground_name);
+    if (cmdline)
+      *cmdline = g_strdup (info->foreground_cmdline);
+    return TRUE;
+  }
 
   pty = vte_terminal_get_pty (VTE_TERMINAL (screen));
   if (pty == nullptr)

@@ -1,8 +1,9 @@
 name: Packages
 
-# Builds the source tarball, the Fedora RPM and the Debian package. Run it by
-# hand to get the packages as workflow artifacts; pushing a v* tag also
-# attaches them to a draft release, to be reviewed and published by hand.
+# Builds the source tarball, the Fedora RPM, the Debian package and a
+# Flatpak bundle. Run it by hand to get the packages as workflow artifacts;
+# pushing a v* tag also attaches them to a draft release, to be reviewed and
+# published by hand.
 
 on:
   workflow_dispatch:
@@ -70,10 +71,24 @@ jobs:
           name: deb
           path: out/*
 
+  flatpak:
+    name: Flatpak bundle
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-51
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v7
+      - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          bundle: pano-terminal.flatpak
+          manifest-path: packaging/flatpak/com.aripd.Pano.json
+          cache-key: flatpak-builder-${{ github.sha }}
+
   release:
     name: Draft release
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [rpm, deb]
+    needs: [rpm, deb, flatpak]
     runs-on: ubuntu-latest
     permissions:
       contents: write
