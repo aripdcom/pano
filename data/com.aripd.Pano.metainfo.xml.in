@@ -65,4 +65,11 @@
   <developer id="com.aripd">
     <name>aripd</name>
   </developer>
+  <releases>
+    <release version="0.1.0" date="2026-11-10">
+      <description>
+        <p>The first release of Pano Terminal, a fork of GNOME Terminal.</p>
+      </description>
+    </release>
+  </releases>
 </component>

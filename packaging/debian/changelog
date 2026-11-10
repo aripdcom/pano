@@ -1,5 +1,5 @@
-pano-terminal (3.97.1) unstable; urgency=medium
+pano-terminal (0.1.0) unstable; urgency=medium
 
-  * First package of Pano Terminal.
+  * First release of Pano Terminal.
 
  -- aripdcem <cem@aripd.com>  Tue, 10 Nov 2026 12:00:00 +0300

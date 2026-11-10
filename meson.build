@@ -27,7 +27,7 @@ project(
     'GFDL-1.3-only',                # the appstream data
   ],
   meson_version: '>= 0.62.0',
-  version: '3.97.1',
+  version: '0.1.0',
 )
 
 # Naming
@@ -478,18 +478,5 @@ output += '  Nautilus extension: ' + get_option('nautilus_extension').to_string(
 output += '  Search provider:    ' + get_option('search_provider').to_string() + '\n'
 message(output)
 
-# Check stable/unstable status
-
-if (gt_minor_version % 2) != 0
-  if (gt_micro_version >= 99)
-    warning('This is a release candidate release!\n')
-  elif (gt_micro_version > 90)
-    warning('This is a beta release!\n')
-  else
-    warning('This is an unstable development release!\n')
-  endif
-else
-  message('This is a stable release.')
-endif
 
 # Done
