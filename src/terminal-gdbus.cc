@@ -397,12 +397,56 @@ struct _TerminalFactoryImplPrivate {
   gpointer dummy;
 };
 
+/* An X11 display name without its screen number, e.g. ":1" for ":1.0",
+ * or %NULL for other displays, such as Wayland's */
+static char *
+x11_display_name (const char *name)
+{
+  if (!name || !strchr (name, ':') || g_str_has_prefix (name, "wayland"))
+    return nullptr;
+
+  /* "localhost:0", "unix:0" and ":0" are the same display */
+  auto const colon = strrchr (name, ':');
+  auto const host = g_strndup (name, colon - name);
+  auto const local = !host[0] || g_str_equal (host, "localhost") || g_str_equal (host, "unix");
+  g_free (host);
+
+  auto const dot = strchr (colon, '.');
+  auto const number = dot ? g_strndup (colon, dot - colon) : g_strdup (colon);
+  if (local)
+    return number;
+
+  auto const full = g_strndup (name, colon - name);
+  auto const result = g_strconcat (full, number, nullptr);
+  g_free (full);
+  g_free (number);
+  return result;
+}
+
 static gboolean
 terminal_factory_impl_create_instance (TerminalFactory *factory,
                                        GDBusMethodInvocation *invocation,
                                        GVariant *options)
 {
   TerminalApp *app = terminal_app_get ();
+
+  /* The server has its windows on one display. Rather than opening a
+   * window on that one, say so when the client is on another X display,
+   * for example through ssh -X. A Wayland server and an X11 client are in
+   * the same session, through Xwayland. */
+  const char *client_display;
+  if (g_variant_lookup (options, "display", "^&ay", &client_display)) {
+    auto const display = gdk_display_get_default ();
+    gs_free char *client_x11 = x11_display_name (client_display);
+    gs_free char *server_x11 = display ? x11_display_name (gdk_display_get_name (display)) : nullptr;
+    if (client_x11 && server_x11 && !g_str_equal (client_x11, server_x11)) {
+      g_dbus_method_invocation_return_error (invocation,
+                                             G_DBUS_ERROR, G_DBUS_ERROR_NOT_SUPPORTED,
+                                             "Pano Terminal runs on display %s and cannot open a window on display %s",
+                                             server_x11, client_x11);
+      return TRUE;
+    }
+  }
 
   /* If a parent screen is specified, use that to fill in missing information */
   /* The client takes these paths from the environment of the terminal it

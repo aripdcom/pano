@@ -1083,9 +1083,14 @@ terminal_options_parse (int *argcp,
   }
 #endif /* X11 */
 
-  GdkDisplay *display = gdk_display_get_default ();
-  if (display != nullptr)
-    options->display_name = g_strdup (gdk_display_get_name (display));
+  /* The client does not open a display itself; tell the server which one
+   * it is on, so that it can refuse when that is another X display */
+  auto const wayland_display = g_getenv ("WAYLAND_DISPLAY");
+  auto const x11_display = g_getenv ("DISPLAY");
+  if (wayland_display && wayland_display[0])
+    options->display_name = g_strdup (wayland_display);
+  else if (x11_display && x11_display[0])
+    options->display_name = g_strdup (x11_display);
 
   /* Sanity check */
   guint wait = 0;
