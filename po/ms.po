@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: profterm HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:56+0300\n"
+"POT-Creation-Date: 2026-11-10 23:57+0300\n"
 "PO-Revision-Date: 2020-01-27 18:10+0800\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Pasukan Terjemahan GNOME Malaysia\n"
@@ -1428,7 +1428,7 @@ msgid "Set Title"
 msgstr "_Tetapkan Tajuk..."
 
 #: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:848
+#: src/terminal-profile-editor.ui:849
 msgid "Reset"
 msgstr "Tetap Semula"
 
@@ -1942,7 +1942,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "Pemer_iksa"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Keutamaan"
@@ -2981,12 +2981,12 @@ msgid "Allow Blinking Text"
 msgstr "Benarkan teks be_rkelip:"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:911
 msgid "Always"
 msgstr "Sentiasa"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:899
 msgid "Never"
 msgstr "Tidak sesekali"
 
@@ -3294,9 +3294,13 @@ msgstr "Perintah"
 msgid "Run command as a login shell"
 msgstr "Jalankan perintah sebagai shell daftar masuk"
 
+#: src/terminal-profile-editor.ui:737
+msgid "Applies to the shell, not to a custom command"
+msgstr ""
+
 # help-browser/toc-man.c:19
 # help-browser/toc2-man.c:21
-#: src/terminal-profile-editor.ui:745
+#: src/terminal-profile-editor.ui:746
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Use Custom Command"
@@ -3304,19 +3308,19 @@ msgstr "Perintah s_uai:"
 
 # help-browser/toc-man.c:19
 # help-browser/toc2-man.c:21
-#: src/terminal-profile-editor.ui:750
+#: src/terminal-profile-editor.ui:751
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Custom Command"
 msgstr "Perintah s_uai:"
 
-#: src/terminal-profile-editor.ui:763
+#: src/terminal-profile-editor.ui:764
 #, fuzzy
 #| msgid "_Preserve working directory:"
 msgid "Preserve Working Directory"
 msgstr "_Kekal direktori kerja:"
 
-#: src/terminal-profile-editor.ui:764
+#: src/terminal-profile-editor.ui:765
 #, fuzzy
 #| msgid ""
 #| "Whether to preserve the working directory when opening a new terminal"
@@ -3324,99 +3328,99 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr ""
 "Sama ada mahu kekalkan direktori kerja ketika membuka satu terminal baharu"
 
-#: src/terminal-profile-editor.ui:777
+#: src/terminal-profile-editor.ui:778
 msgid "When command exits"
 msgstr "Bila perintah tamat"
 
-#: src/terminal-profile-editor.ui:788
+#: src/terminal-profile-editor.ui:789
 msgid "Compatibility"
 msgstr "Keserasian"
 
-#: src/terminal-profile-editor.ui:791
+#: src/terminal-profile-editor.ui:792
 #, fuzzy
 #| msgid "_Backspace key generates:"
 msgid "Backspace Key"
 msgstr "Kekunci _Backspace menjana:"
 
-#: src/terminal-profile-editor.ui:792
+#: src/terminal-profile-editor.ui:793
 #, fuzzy
 #| msgid "Effect of the Backspace key"
 msgid "Sequence to send for Backspace key"
 msgstr "Kesan bagi kekunci Backspace"
 
-#: src/terminal-profile-editor.ui:801
+#: src/terminal-profile-editor.ui:802
 #, fuzzy
 #| msgid "Delete"
 msgid "Delete Key"
 msgstr "Padam"
 
-#: src/terminal-profile-editor.ui:802
+#: src/terminal-profile-editor.ui:803
 #, fuzzy
 #| msgid "Effect of the Delete key"
 msgid "Sequence to send for Delete key"
 msgstr "Kesan bagi kekunci Delete"
 
-#: src/terminal-profile-editor.ui:811
+#: src/terminal-profile-editor.ui:812
 msgid "Encoding"
 msgstr "Pengekodan"
 
-#: src/terminal-profile-editor.ui:819
+#: src/terminal-profile-editor.ui:820
 #, fuzzy
 #| msgid "Ambiguous-_width characters:"
 msgid "Ambiguous-width Characters"
 msgstr "Aksara _lebar-kabur:"
 
-#: src/terminal-profile-editor.ui:828
+#: src/terminal-profile-editor.ui:829
 msgid "Narrow"
 msgstr "Sempit"
 
-#: src/terminal-profile-editor.ui:834
+#: src/terminal-profile-editor.ui:835
 msgid "Wide"
 msgstr "Lebar"
 
-#: src/terminal-profile-editor.ui:865
+#: src/terminal-profile-editor.ui:866
 msgid "Automatic"
 msgstr "Automatik"
 
-#: src/terminal-profile-editor.ui:871
+#: src/terminal-profile-editor.ui:872
 msgid "Control-H"
 msgstr "Control-H"
 
-#: src/terminal-profile-editor.ui:877
+#: src/terminal-profile-editor.ui:878
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
-#: src/terminal-profile-editor.ui:883
+#: src/terminal-profile-editor.ui:884
 #, fuzzy
 #| msgid "Escape sequence"
 msgid "Escape Sequence"
 msgstr "Jujukan Escape"
 
-#: src/terminal-profile-editor.ui:889
+#: src/terminal-profile-editor.ui:890
 msgid "TTY Erase"
 msgstr "Padam TTY"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:904
+#: src/terminal-profile-editor.ui:905
 msgid "Shell only"
 msgstr "Shell sahaja"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:919
+#: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "Close terminal"
 msgstr "Tutu_p Terminal"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:925
+#: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
 msgid "Restart command"
 msgstr "Mula semula perintah"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:931
+#: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
 msgid "Hold terminal"
@@ -3462,29 +3466,29 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3474
+#: src/terminal-screen.cc:3488
 msgid "No command supplied nor shell requested"
 msgstr "Tiada perintah dibekalkan atau shell dipinta"
 
-#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
+#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
 msgid "_Relaunch"
 msgstr "_Lancar Semula"
 
-#: src/terminal-screen.cc:3697
+#: src/terminal-screen.cc:3711
 msgid "There was an error creating the child process for this terminal"
 msgstr "Terdapat ralat ketika mencipta proses anak untuk terminal ini"
 
-#: src/terminal-screen.cc:4178
+#: src/terminal-screen.cc:4192
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Proses anak keluar secara normal dengan status %d."
 
-#: src/terminal-screen.cc:4181
+#: src/terminal-screen.cc:4195
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Proses anak dihenti paksa oleh isyarat %d."
 
-#: src/terminal-screen.cc:4184
+#: src/terminal-screen.cc:4198
 msgid "The child process was aborted."
 msgstr "Proses anak dihenti paksa."
 

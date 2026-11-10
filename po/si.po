@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: si\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:56+0300\n"
+"POT-Creation-Date: 2026-11-10 23:57+0300\n"
 "PO-Revision-Date: 2008-01-29 13:26+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <en@li.org>\n"
@@ -1329,7 +1329,7 @@ msgid "Set Title"
 msgstr "සිරස්තලය සකසන්න"
 
 #: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:848
+#: src/terminal-profile-editor.ui:849
 msgid "Reset"
 msgstr "මුල් තත්වයට සකසන්න"
 
@@ -1834,7 +1834,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr ""
@@ -2846,12 +2846,12 @@ msgid "Allow Blinking Text"
 msgstr "තදකුරු අනුමත කරන්න (_A)"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:911
 msgid "Always"
 msgstr ""
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:899
 msgid "Never"
 msgstr ""
 
@@ -3140,111 +3140,115 @@ msgstr "<b>විධානය</b>"
 msgid "Run command as a login shell"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:745
+#: src/terminal-profile-editor.ui:737
+msgid "Applies to the shell, not to a custom command"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:746
 msgid "Use Custom Command"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:750
+#: src/terminal-profile-editor.ui:751
 #, fuzzy
 #| msgid "Custom"
 msgid "Custom Command"
 msgstr "රිසිකළ"
 
-#: src/terminal-profile-editor.ui:763
+#: src/terminal-profile-editor.ui:764
 msgid "Preserve Working Directory"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:764
+#: src/terminal-profile-editor.ui:765
 msgid "Preserve the working directory when opening a new terminal"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:777
+#: src/terminal-profile-editor.ui:778
 msgid "When command exits"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:788
+#: src/terminal-profile-editor.ui:789
 msgid "Compatibility"
 msgstr "අනුකුලතාව"
 
-#: src/terminal-profile-editor.ui:791
+#: src/terminal-profile-editor.ui:792
 #, fuzzy
 #| msgid "Effect of the Backspace key"
 msgid "Backspace Key"
 msgstr "Backspace යතුරේ බලපෑම"
 
-#: src/terminal-profile-editor.ui:792
+#: src/terminal-profile-editor.ui:793
 #, fuzzy
 #| msgid "Effect of the Backspace key"
 msgid "Sequence to send for Backspace key"
 msgstr "Backspace යතුරේ බලපෑම"
 
-#: src/terminal-profile-editor.ui:801
+#: src/terminal-profile-editor.ui:802
 #, fuzzy
 #| msgid "Delete Profile"
 msgid "Delete Key"
 msgstr "පැතිකඩ මකන්න"
 
-#: src/terminal-profile-editor.ui:802
+#: src/terminal-profile-editor.ui:803
 #, fuzzy
 #| msgid "Effect of the Delete key"
 msgid "Sequence to send for Delete key"
 msgstr "Delete යතුරේ බලපෑම"
 
-#: src/terminal-profile-editor.ui:811
+#: src/terminal-profile-editor.ui:812
 msgid "Encoding"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:819
+#: src/terminal-profile-editor.ui:820
 msgid "Ambiguous-width Characters"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:828
+#: src/terminal-profile-editor.ui:829
 msgid "Narrow"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:834
+#: src/terminal-profile-editor.ui:835
 msgid "Wide"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:865
+#: src/terminal-profile-editor.ui:866
 msgid "Automatic"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:871
+#: src/terminal-profile-editor.ui:872
 msgid "Control-H"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:877
+#: src/terminal-profile-editor.ui:878
 msgid "ASCII DEL"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:883
+#: src/terminal-profile-editor.ui:884
 msgid "Escape Sequence"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:889
+#: src/terminal-profile-editor.ui:890
 msgid "TTY Erase"
 msgstr ""
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:904
+#: src/terminal-profile-editor.ui:905
 msgid "Shell only"
 msgstr ""
 
 #. When command exits
-#: src/terminal-profile-editor.ui:919
+#: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "Close tab"
 msgid "Close terminal"
 msgstr "පටිත්ත වසන්න"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:925
+#: src/terminal-profile-editor.ui:926
 msgid "Restart command"
 msgstr ""
 
 #. When command exits
-#: src/terminal-profile-editor.ui:931
+#: src/terminal-profile-editor.ui:932
 #, fuzzy
 msgid "Hold terminal"
 msgstr "ග්නෝම් අග්‍රය"
@@ -3279,29 +3283,29 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3474
+#: src/terminal-screen.cc:3488
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
+#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.cc:3697
+#: src/terminal-screen.cc:3711
 msgid "There was an error creating the child process for this terminal"
 msgstr ""
 
-#: src/terminal-screen.cc:4178
+#: src/terminal-screen.cc:4192
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4181
+#: src/terminal-screen.cc:4195
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4184
+#: src/terminal-screen.cc:4198
 msgid "The child process was aborted."
 msgstr ""
 

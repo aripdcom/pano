@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:56+0300\n"
+"POT-Creation-Date: 2026-11-10 23:57+0300\n"
 "PO-Revision-Date: 2023-03-04 20:20+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -1422,7 +1422,7 @@ msgid "Set Title"
 msgstr "_Задаване на заглавие…"
 
 #: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:848
+#: src/terminal-profile-editor.ui:849
 msgid "Reset"
 msgstr "Възстановяване"
 
@@ -1930,7 +1930,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_Инспектор"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Настройки"
@@ -2959,12 +2959,12 @@ msgid "Allow Blinking Text"
 msgstr "Позволяване на _мигащ текст"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:911
 msgid "Always"
 msgstr "Винаги"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:899
 msgid "Never"
 msgstr "Никога"
 
@@ -3266,122 +3266,126 @@ msgstr "Команда"
 msgid "Run command as a login shell"
 msgstr "Изпълнение на команда като обвивка при влизане"
 
-#: src/terminal-profile-editor.ui:745
+#: src/terminal-profile-editor.ui:737
+msgid "Applies to the shell, not to a custom command"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:746
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Use Custom Command"
 msgstr "Потребителска _команда:"
 
-#: src/terminal-profile-editor.ui:750
+#: src/terminal-profile-editor.ui:751
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Custom Command"
 msgstr "Потребителска _команда:"
 
-#: src/terminal-profile-editor.ui:763
+#: src/terminal-profile-editor.ui:764
 #, fuzzy
 #| msgid "_Preserve working directory:"
 msgid "Preserve Working Directory"
 msgstr "_Същата работна папка на терминала"
 
-#: src/terminal-profile-editor.ui:764
+#: src/terminal-profile-editor.ui:765
 #, fuzzy
 #| msgid ""
 #| "Whether to preserve the working directory when opening a new terminal"
 msgid "Preserve the working directory when opening a new terminal"
 msgstr "Да се запазва ли работната директория при отварянето на нов терминал"
 
-#: src/terminal-profile-editor.ui:777
+#: src/terminal-profile-editor.ui:778
 msgid "When command exits"
 msgstr "При приключване на командата"
 
-#: src/terminal-profile-editor.ui:788
+#: src/terminal-profile-editor.ui:789
 msgid "Compatibility"
 msgstr "Съвместимост"
 
-#: src/terminal-profile-editor.ui:791
+#: src/terminal-profile-editor.ui:792
 #, fuzzy
 #| msgid "_Backspace key generates:"
 msgid "Backspace Key"
 msgstr "_Клавишът „Backspace“ генерира:"
 
-#: src/terminal-profile-editor.ui:792
+#: src/terminal-profile-editor.ui:793
 #, fuzzy
 #| msgid "The code sequence the Backspace key generates"
 msgid "Sequence to send for Backspace key"
 msgstr "Последователност от кодове, генерирани от клавиша „Backspace“"
 
-#: src/terminal-profile-editor.ui:801
+#: src/terminal-profile-editor.ui:802
 #, fuzzy
 #| msgid "Delete"
 msgid "Delete Key"
 msgstr "Изтриване"
 
-#: src/terminal-profile-editor.ui:802
+#: src/terminal-profile-editor.ui:803
 msgid "Sequence to send for Delete key"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:811
+#: src/terminal-profile-editor.ui:812
 msgid "Encoding"
 msgstr "Кодиране"
 
-#: src/terminal-profile-editor.ui:819
+#: src/terminal-profile-editor.ui:820
 #, fuzzy
 #| msgid "Ambiguous-_width characters:"
 msgid "Ambiguous-width Characters"
 msgstr "_Знаци с неясна широчина:"
 
-#: src/terminal-profile-editor.ui:828
+#: src/terminal-profile-editor.ui:829
 msgid "Narrow"
 msgstr "Тесни"
 
-#: src/terminal-profile-editor.ui:834
+#: src/terminal-profile-editor.ui:835
 msgid "Wide"
 msgstr "Широки"
 
-#: src/terminal-profile-editor.ui:865
+#: src/terminal-profile-editor.ui:866
 msgid "Automatic"
 msgstr "Автоматично"
 
-#: src/terminal-profile-editor.ui:871
+#: src/terminal-profile-editor.ui:872
 msgid "Control-H"
 msgstr "Ctrl-H"
 
-#: src/terminal-profile-editor.ui:877
+#: src/terminal-profile-editor.ui:878
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
-#: src/terminal-profile-editor.ui:883
+#: src/terminal-profile-editor.ui:884
 #, fuzzy
 #| msgid "Escape sequence"
 msgid "Escape Sequence"
 msgstr "Екранираща последователност"
 
-#: src/terminal-profile-editor.ui:889
+#: src/terminal-profile-editor.ui:890
 msgid "TTY Erase"
 msgstr "TTY Erase"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:904
+#: src/terminal-profile-editor.ui:905
 msgid "Shell only"
 msgstr "Само интерпретатор"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:919
+#: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "Close terminal"
 msgstr "_Затваряне на терминала"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:925
+#: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
 msgid "Restart command"
 msgstr "Рестартиране на командата"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:931
+#: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
 msgid "Hold terminal"
@@ -3426,29 +3430,29 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3474
+#: src/terminal-screen.cc:3488
 msgid "No command supplied nor shell requested"
 msgstr "Не е зададена нито команда, нито обвивка"
 
-#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
+#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
 msgid "_Relaunch"
 msgstr "_Повторно пускане"
 
-#: src/terminal-screen.cc:3697
+#: src/terminal-screen.cc:3711
 msgid "There was an error creating the child process for this terminal"
 msgstr "Грешка при създаване на дъщерен процес за този терминал"
 
-#: src/terminal-screen.cc:4178
+#: src/terminal-screen.cc:4192
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Дъщерният процес завърши нормално с код за състояние %d."
 
-#: src/terminal-screen.cc:4181
+#: src/terminal-screen.cc:4195
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Дъщерният процес бе преустановен от сигнал %d."
 
-#: src/terminal-screen.cc:4184
+#: src/terminal-screen.cc:4198
 msgid "The child process was aborted."
 msgstr "Дъщерният процес бе преустановен."
 

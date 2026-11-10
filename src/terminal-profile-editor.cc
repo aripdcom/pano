@@ -1144,6 +1144,10 @@ terminal_profile_editor_constructed (GObject *object)
   terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_CUSTOM_COMMAND_KEY,
                    self->custom_command, "text",
                    GSettingsBindFlags(G_SETTINGS_BIND_DEFAULT));
+  /* A custom command is run as it is */
+  g_object_bind_property (self->use_custom_command, "active",
+                          self->login_shell, "sensitive",
+                          GBindingFlags(G_BINDING_SYNC_CREATE | G_BINDING_INVERT_BOOLEAN));
 
   terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_BOLD_IS_BRIGHT_KEY,
                    self->show_bold_in_bright, "active",

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thengos\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:56+0300\n"
+"POT-Creation-Date: 2026-11-10 23:57+0300\n"
 "PO-Revision-Date: 2018-10-26 11:41+0530\n"
 "Last-Translator: Ranjith Siji <ranjith.sajeev@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -1416,7 +1416,7 @@ msgid "Set Title"
 msgstr "തലക്കെട്ട് തീരുമാനിക്കുക (_T)"
 
 #: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:848
+#: src/terminal-profile-editor.ui:849
 msgid "Reset"
 msgstr "വീണ്ടും തുടങ്ങുക"
 
@@ -1936,7 +1936,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "പരിശോധകന്‍ (_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "മുന്‍ഗണനകള്‍ (_P)"
@@ -2970,12 +2970,12 @@ msgid "Allow Blinking Text"
 msgstr "മിന്നിമിന്നി പ്രകാശിക്കുന്ന പദാവലി അനുവദിക്കുക:"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:911
 msgid "Always"
 msgstr "എല്ലായ്പ്പോഴും"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:899
 msgid "Never"
 msgstr "ഒരിക്കലും"
 
@@ -3277,121 +3277,125 @@ msgstr "നിര്‍ദ്ദേശം"
 msgid "Run command as a login shell"
 msgstr "ലോഗിന്‍ ഷെല്ലായി ആജ്ഞ പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: src/terminal-profile-editor.ui:745
+#: src/terminal-profile-editor.ui:737
+msgid "Applies to the shell, not to a custom command"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:746
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Use Custom Command"
 msgstr "ഇഷ്ട നിര്‍ദ്ദേശം (_m):"
 
-#: src/terminal-profile-editor.ui:750
+#: src/terminal-profile-editor.ui:751
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Custom Command"
 msgstr "ഇഷ്ട നിര്‍ദ്ദേശം (_m):"
 
-#: src/terminal-profile-editor.ui:763
+#: src/terminal-profile-editor.ui:764
 #, fuzzy
 #| msgid "Set the working directory"
 msgid "Preserve Working Directory"
 msgstr "പ്രവര്‍ത്തനത്തിലുള്ള തട്ടു് സജ്ജമാക്കുക"
 
-#: src/terminal-profile-editor.ui:764
+#: src/terminal-profile-editor.ui:765
 #, fuzzy
 #| msgid "_Profile used when launching a new terminal:"
 msgid "Preserve the working directory when opening a new terminal"
 msgstr "പുതിയ ടെര്‍മിനലുകള്‍ക്കായുളള പ്രൊഫൈല്‍: (_P)"
 
-#: src/terminal-profile-editor.ui:777
+#: src/terminal-profile-editor.ui:778
 msgid "When command exits"
 msgstr "നിര്‍ദ്ദേശത്തില്‍ നിന്ന് പുറത്ത് കടക്കുമ്പോൾ"
 
-#: src/terminal-profile-editor.ui:788
+#: src/terminal-profile-editor.ui:789
 msgid "Compatibility"
 msgstr "പൊരുത്തം"
 
-#: src/terminal-profile-editor.ui:791
+#: src/terminal-profile-editor.ui:792
 #, fuzzy
 #| msgid "_Backspace key generates:"
 msgid "Backspace Key"
 msgstr "_Backspace കീ ഉല്‍പാദിപ്പിക്കുന്നതു്:"
 
-#: src/terminal-profile-editor.ui:792
+#: src/terminal-profile-editor.ui:793
 #, fuzzy
 #| msgid "The code sequence the Backspace key generates"
 msgid "Sequence to send for Backspace key"
 msgstr "ബാക്ക്സ്പേസ് കീ ഉണ്ടാക്കുന്ന കോഡ്"
 
-#: src/terminal-profile-editor.ui:801
+#: src/terminal-profile-editor.ui:802
 #, fuzzy
 #| msgid "Delete"
 msgid "Delete Key"
 msgstr "നീക്കം ചെയ്യുക"
 
-#: src/terminal-profile-editor.ui:802
+#: src/terminal-profile-editor.ui:803
 msgid "Sequence to send for Delete key"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:811
+#: src/terminal-profile-editor.ui:812
 msgid "Encoding"
 msgstr "കോഡ് അല്ലേല്‍ രഹസ്യ ഭാഷയിലാക്കുന്ന സംവിധാനം(എന്‍കോഡിങ്)"
 
-#: src/terminal-profile-editor.ui:819
+#: src/terminal-profile-editor.ui:820
 #, fuzzy
 #| msgid "Ambiguous-_width characters:"
 msgid "Ambiguous-width Characters"
 msgstr "വീതി അറിയാത്ത അക്ഷരങ്ങൾ: (_w)"
 
-#: src/terminal-profile-editor.ui:828
+#: src/terminal-profile-editor.ui:829
 msgid "Narrow"
 msgstr "ഇടുങ്ങിയത്"
 
-#: src/terminal-profile-editor.ui:834
+#: src/terminal-profile-editor.ui:835
 msgid "Wide"
 msgstr "വിശാലം"
 
-#: src/terminal-profile-editor.ui:865
+#: src/terminal-profile-editor.ui:866
 msgid "Automatic"
 msgstr "ഓട്ടോമാറ്റിക്"
 
-#: src/terminal-profile-editor.ui:871
+#: src/terminal-profile-editor.ui:872
 msgid "Control-H"
 msgstr "Control-H"
 
-#: src/terminal-profile-editor.ui:877
+#: src/terminal-profile-editor.ui:878
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
-#: src/terminal-profile-editor.ui:883
+#: src/terminal-profile-editor.ui:884
 #, fuzzy
 #| msgid "Escape sequence"
 msgid "Escape Sequence"
 msgstr "എസ്കേപ്പ് സീക്വന്‍സ്"
 
-#: src/terminal-profile-editor.ui:889
+#: src/terminal-profile-editor.ui:890
 msgid "TTY Erase"
 msgstr "TTY മായ്ക്കുക"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:904
+#: src/terminal-profile-editor.ui:905
 msgid "Shell only"
 msgstr ""
 
 #. When command exits
-#: src/terminal-profile-editor.ui:919
+#: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "Close Terminal"
 msgid "Close terminal"
 msgstr "ടെര്‍മിനല്‍ അടയ്ക്കുക"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:925
+#: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
 msgid "Restart command"
 msgstr "നിര്‍ദ്ദേശം വീണ്ടും ആരംഭിക്കുക"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:931
+#: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
 msgid "Hold terminal"
@@ -3436,29 +3440,29 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3474
+#: src/terminal-screen.cc:3488
 msgid "No command supplied nor shell requested"
 msgstr "നിര്‍ദ്ദേശങ്ങളോ ഷെല്ലോ തന്നില്ല"
 
-#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
+#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
 msgid "_Relaunch"
 msgstr "_വീണ്ടും ലഭ്യമാക്കുക"
 
-#: src/terminal-screen.cc:3697
+#: src/terminal-screen.cc:3711
 msgid "There was an error creating the child process for this terminal"
 msgstr "ഈ ടെര്‍മിനലിനായി ചൈള്‍ഡ് പ്രക്രിയ ഉണ്ടാക്കുന്നതില്‍ പിശക്"
 
-#: src/terminal-screen.cc:4178
+#: src/terminal-screen.cc:4192
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "%d അവസ്ഥയില്‍ ചൈള്‍ഡ് പ്രക്രിയ സാധാരണയായി നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.cc:4181
+#: src/terminal-screen.cc:4195
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "സിഗ്നല്‍ %d പിള്ള പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 
-#: src/terminal-screen.cc:4184
+#: src/terminal-screen.cc:4198
 msgid "The child process was aborted."
 msgstr "പിള്ള പ്രക്രിയ നിര്‍ത്തിയിരിക്കുന്നു."
 

@@ -734,6 +734,7 @@
                 <child>
                   <object class="AdwSwitchRow" id="login_shell">
                     <property name="title" translatable="yes">Run command as a login shell</property>
+                    <property name="subtitle" translatable="yes">Applies to the shell, not to a custom command</property>
                   </object>
                 </child>
               </object>

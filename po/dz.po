@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.dz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:56+0300\n"
+"POT-Creation-Date: 2026-11-10 23:57+0300\n"
 "PO-Revision-Date: 2007-03-01 11:06+0530\n"
 "Last-Translator: norbu <nor_den@hotmail.com>\n"
 "Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
@@ -1419,7 +1419,7 @@ msgid "Set Title"
 msgstr "མགོ་མིང་གཞི་སྒྲིག་འབད།"
 
 #: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:848
+#: src/terminal-profile-editor.ui:849
 msgid "Reset"
 msgstr "སླར་སྒྲིག་འབད།"
 
@@ -1927,7 +1927,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
 #: src/terminal-window.cc:3204
 #, fuzzy
 msgid "_Preferences"
@@ -2957,12 +2957,12 @@ msgid "Allow Blinking Text"
 msgstr "ཚིག་ཡིག་རྒྱགས་པ་འགྱོ་བཅུག(_A)"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:911
 msgid "Always"
 msgstr ""
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:899
 msgid "Never"
 msgstr ""
 
@@ -3262,89 +3262,93 @@ msgstr "<b>བརྡ་བཀོད་</b>"
 msgid "Run command as a login shell"
 msgstr "བརྡ་བཀོད་དེ་ ནང་བསྐྱོད་ཤལ་སྦེ་ གཡོག་བཀོལ།"
 
-#: src/terminal-profile-editor.ui:745
+#: src/terminal-profile-editor.ui:737
+msgid "Applies to the shell, not to a custom command"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:746
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Use Custom Command"
 msgstr "སྲོལ་སྒྲིག་བརྡ་བཀོད།(_k)"
 
-#: src/terminal-profile-editor.ui:750
+#: src/terminal-profile-editor.ui:751
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Custom Command"
 msgstr "སྲོལ་སྒྲིག་བརྡ་བཀོད།(_k)"
 
-#: src/terminal-profile-editor.ui:763
+#: src/terminal-profile-editor.ui:764
 #, fuzzy
 msgid "Preserve Working Directory"
 msgstr "ཊར་མི་ནཱལ་ལཱ་གི་སྣོད་ཐོ་ གཞི་སྒྲིག་འབད།"
 
-#: src/terminal-profile-editor.ui:764
+#: src/terminal-profile-editor.ui:765
 #, fuzzy
 msgid "Preserve the working directory when opening a new terminal"
 msgstr "ཊར་མི་ནཱལ་གསརཔ་ཅིག་ གསར་བཙུགས་འབདཝ་ད་ ལག་ལེན་འཐབ་ནིའི་གསལ་སྡུད།(_u)"
 
-#: src/terminal-profile-editor.ui:777
+#: src/terminal-profile-editor.ui:778
 msgid "When command exits"
 msgstr "བརྡ་བཀོད་ཕྱིར་འཐོན་འགྱོཝ་ད་:།"
 
-#: src/terminal-profile-editor.ui:788
+#: src/terminal-profile-editor.ui:789
 msgid "Compatibility"
 msgstr "མཐུན་འགྱུར།"
 
-#: src/terminal-profile-editor.ui:791
+#: src/terminal-profile-editor.ui:792
 #, fuzzy
 #| msgid "_Backspace key generates:"
 msgid "Backspace Key"
 msgstr "རྒྱབ་བཤུད་ལྡེ་མིག་གིས་ བཟོ་བསྐྲུན་འབདཝ་ཨིན་:(_B)"
 
-#: src/terminal-profile-editor.ui:792
+#: src/terminal-profile-editor.ui:793
 #, fuzzy
 #| msgid "Effect of the Backspace key"
 msgid "Sequence to send for Backspace key"
 msgstr "རྒྱབ་བཤུད་ལྡེ་མིག་གི་ནུས་པ།་"
 
-#: src/terminal-profile-editor.ui:801
+#: src/terminal-profile-editor.ui:802
 #, fuzzy
 #| msgid "Delete Profile"
 msgid "Delete Key"
 msgstr "གསལ་སྡུད་བཏོན་གཏང་།"
 
-#: src/terminal-profile-editor.ui:802
+#: src/terminal-profile-editor.ui:803
 #, fuzzy
 #| msgid "Effect of the Delete key"
 msgid "Sequence to send for Delete key"
 msgstr "བཏོན་གཏང་ནིའི་ལྡེ་མིག་གི་ནུས་པ།"
 
-#: src/terminal-profile-editor.ui:811
+#: src/terminal-profile-editor.ui:812
 msgid "Encoding"
 msgstr "ཨིན་ཀོ་ཌིང་།"
 
-#: src/terminal-profile-editor.ui:819
+#: src/terminal-profile-editor.ui:820
 msgid "Ambiguous-width Characters"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:828
+#: src/terminal-profile-editor.ui:829
 msgid "Narrow"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:834
+#: src/terminal-profile-editor.ui:835
 msgid "Wide"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:865
+#: src/terminal-profile-editor.ui:866
 msgid "Automatic"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:871
+#: src/terminal-profile-editor.ui:872
 msgid "Control-H"
 msgstr "ཚད་འཛིན་ ཨེཆ།"
 
-#: src/terminal-profile-editor.ui:877
+#: src/terminal-profile-editor.ui:878
 msgid "ASCII DEL"
 msgstr "ཨེ་ཨེསི་སི་ཨའི་ཨའི་ ཌི་ཨི་ཨེལ།"
 
-#: src/terminal-profile-editor.ui:883
+#: src/terminal-profile-editor.ui:884
 #, fuzzy
 msgid "Escape Sequence"
 msgstr ""
@@ -3352,30 +3356,30 @@ msgstr ""
 "འབྱུང་རིམ་བྲོས་ཐར་འབྱུང་རིམ།\n"
 "ཚད་འཛིན་-ཨེཆ།"
 
-#: src/terminal-profile-editor.ui:889
+#: src/terminal-profile-editor.ui:890
 msgid "TTY Erase"
 msgstr ""
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:904
+#: src/terminal-profile-editor.ui:905
 msgid "Shell only"
 msgstr ""
 
 #. When command exits
-#: src/terminal-profile-editor.ui:919
+#: src/terminal-profile-editor.ui:920
 #, fuzzy
 msgid "Close terminal"
 msgstr "ཊར་མི་ནཱལ།(_T)"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:925
+#: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
 msgid "Restart command"
 msgstr "བརྡ་བཀོད་ལོག་འགོ་བཙུགས།"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:931
+#: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
 msgid "Hold terminal"
@@ -3411,29 +3415,29 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3474
+#: src/terminal-screen.cc:3488
 msgid "No command supplied nor shell requested"
 msgstr ""
 
-#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
+#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
 msgid "_Relaunch"
 msgstr ""
 
-#: src/terminal-screen.cc:3697
+#: src/terminal-screen.cc:3711
 msgid "There was an error creating the child process for this terminal"
 msgstr "གསལ་སྡུད་འདི་གི་དོན་ལུ་ ཆ་ལག་ལས་སྦྱོར་ གསར་བསྐྲུན་འབད་ནི་ལུ་ འཛོལ་བ་ཅིག་བྱུང་ནུག"
 
-#: src/terminal-screen.cc:4178
+#: src/terminal-screen.cc:4192
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4181
+#: src/terminal-screen.cc:4195
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr ""
 
-#: src/terminal-screen.cc:4184
+#: src/terminal-screen.cc:4198
 msgid "The child process was aborted."
 msgstr ""
 

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: po_gnome-terminal-km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:56+0300\n"
+"POT-Creation-Date: 2026-11-10 23:57+0300\n"
 "PO-Revision-Date: 2014-04-10 12:04+0700\n"
 "Last-Translator: Sophea Sok <sophea@open.org.kh>\n"
 "Language-Team: Khmer <>\n"
@@ -1459,7 +1459,7 @@ msgid "Set Title"
 msgstr "កំណត់​ចំណងជើង"
 
 #: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:848
+#: src/terminal-profile-editor.ui:849
 msgid "Reset"
 msgstr "កំណត់​ឡើងវិញ"
 
@@ -1988,7 +1988,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3707
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "ចំណូលចិត្ត​"
@@ -3012,14 +3012,14 @@ msgid "Allow Blinking Text"
 msgstr "អនុញ្ញាត​​អត្ថបទ​ដិត"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:911
 #, fuzzy
 #| msgid "Always visible"
 msgid "Always"
 msgstr "ដែល​អាច​មើល​ឃើញ​​ជា​និច្ច"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:899
 msgid "Never"
 msgstr ""
 
@@ -3321,123 +3321,127 @@ msgstr "ពាក្យ​បញ្ជា"
 msgid "Run command as a login shell"
 msgstr "ដំណើរការ​ពាក្យ​បញ្ជា​ពេល​ចូល​សែល"
 
-#: src/terminal-profile-editor.ui:745
+#: src/terminal-profile-editor.ui:737
+msgid "Applies to the shell, not to a custom command"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:746
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Use Custom Command"
 msgstr "ពាក្យ​បញ្ជា​ផ្ទាល់ខ្លួន៖"
 
-#: src/terminal-profile-editor.ui:750
+#: src/terminal-profile-editor.ui:751
 #, fuzzy
 #| msgid "Custom co_mmand:"
 msgid "Custom Command"
 msgstr "ពាក្យ​បញ្ជា​ផ្ទាល់ខ្លួន៖"
 
-#: src/terminal-profile-editor.ui:763
+#: src/terminal-profile-editor.ui:764
 #, fuzzy
 #| msgid "Set the working directory"
 msgid "Preserve Working Directory"
 msgstr "កំណត់​ថត​ធ្វើការ"
 
-#: src/terminal-profile-editor.ui:764
+#: src/terminal-profile-editor.ui:765
 #, fuzzy
 #| msgid "_Profile used when launching a new terminal:"
 msgid "Preserve the working directory when opening a new terminal"
 msgstr "ទម្រង់​ដែល​ត្រូវ​ប្រើ ពេល​ចាប់ផ្ដើម​ស្ថានីយ​ថ្មី៖"
 
-#: src/terminal-profile-editor.ui:777
+#: src/terminal-profile-editor.ui:778
 msgid "When command exits"
 msgstr "នៅ​ពេល​បិទ​ពាក្យ​បញ្ជា៖"
 
-#: src/terminal-profile-editor.ui:788
+#: src/terminal-profile-editor.ui:789
 msgid "Compatibility"
 msgstr "ភាព​ឆប​គ្នា"
 
-#: src/terminal-profile-editor.ui:791
+#: src/terminal-profile-editor.ui:792
 #, fuzzy
 #| msgid "_Backspace key generates:"
 msgid "Backspace Key"
 msgstr "គ្រាប់ចុច​លុប​ថយក្រោយ (Backspace) បង្កើត៖"
 
-#: src/terminal-profile-editor.ui:792
+#: src/terminal-profile-editor.ui:793
 #, fuzzy
 #| msgid "Effect of the Backspace key"
 msgid "Sequence to send for Backspace key"
 msgstr "បែបផែន​នៃ​គ្រាប់ចុច​លុប​ថយក្រោយ (Backspace)"
 
-#: src/terminal-profile-editor.ui:801
+#: src/terminal-profile-editor.ui:802
 #, fuzzy
 #| msgid "_Delete"
 msgid "Delete Key"
 msgstr "លុប"
 
-#: src/terminal-profile-editor.ui:802
+#: src/terminal-profile-editor.ui:803
 #, fuzzy
 #| msgid "Effect of the Delete key"
 msgid "Sequence to send for Delete key"
 msgstr "បែបផែន​នៃ​គ្រាប់ចុច​លុប (Delete)"
 
-#: src/terminal-profile-editor.ui:811
+#: src/terminal-profile-editor.ui:812
 #, fuzzy
 #| msgid "Encodings"
 msgid "Encoding"
 msgstr "ការ​បម្លែង​ជា​កូដ"
 
-#: src/terminal-profile-editor.ui:819
+#: src/terminal-profile-editor.ui:820
 msgid "Ambiguous-width Characters"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:828
+#: src/terminal-profile-editor.ui:829
 msgid "Narrow"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:834
+#: src/terminal-profile-editor.ui:835
 msgid "Wide"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:865
+#: src/terminal-profile-editor.ui:866
 msgid "Automatic"
 msgstr "ស្វ័យប្រវត្តិ"
 
-#: src/terminal-profile-editor.ui:871
+#: src/terminal-profile-editor.ui:872
 msgid "Control-H"
 msgstr "Control-H"
 
-#: src/terminal-profile-editor.ui:877
+#: src/terminal-profile-editor.ui:878
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
-#: src/terminal-profile-editor.ui:883
+#: src/terminal-profile-editor.ui:884
 #, fuzzy
 #| msgid "Escape sequence"
 msgid "Escape Sequence"
 msgstr "លំដាប់​គេច"
 
-#: src/terminal-profile-editor.ui:889
+#: src/terminal-profile-editor.ui:890
 msgid "TTY Erase"
 msgstr "ការ​លុប TTY"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:904
+#: src/terminal-profile-editor.ui:905
 msgid "Shell only"
 msgstr ""
 
 #. When command exits
-#: src/terminal-profile-editor.ui:919
+#: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "Close Terminal"
 msgid "Close terminal"
 msgstr "បិទ​ស្ថានីយ"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:925
+#: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
 msgid "Restart command"
 msgstr "ចាប់ផ្ដើម​ពាក្យ​បញ្ជា​ឡើងវិញ"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:931
+#: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
 msgid "Hold terminal"
@@ -3474,29 +3478,29 @@ msgid ""
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3474
+#: src/terminal-screen.cc:3488
 msgid "No command supplied nor shell requested"
 msgstr "មិន​បាន​ផ្ដល់​ពាក្យ​បញ្ជា ឬ​សំណើ​សែល"
 
-#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
+#: src/terminal-screen.cc:3708 src/terminal-screen.cc:4188
 msgid "_Relaunch"
 msgstr "បើក​ដំណើរការ​ឡើងវិញ"
 
-#: src/terminal-screen.cc:3697
+#: src/terminal-screen.cc:3711
 msgid "There was an error creating the child process for this terminal"
 msgstr "មាន​កំហុស​ក្នុង​ការ​បង្កើត​ដំណើរការ​រង​សម្រាប់​ស្ថានីយ​នេះ"
 
-#: src/terminal-screen.cc:4178
+#: src/terminal-screen.cc:4192
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "ដំណើរការ​រង​បាន​ចាកចេញ​តាម​ធម្មតា​ជាមួយ​ស្ថានភាព %d ។"
 
-#: src/terminal-screen.cc:4181
+#: src/terminal-screen.cc:4195
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "ដំណើរការ​រង​ត្រូវ​បាន​បញ្ចប់​ដោយ​សញ្ញា %d ។"
 
-#: src/terminal-screen.cc:4184
+#: src/terminal-screen.cc:4198
 msgid "The child process was aborted."
 msgstr "ដំណើរការ​រង​ត្រូវ​បាន​បញ្ចប់។"
 
