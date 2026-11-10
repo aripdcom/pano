@@ -3861,10 +3861,9 @@ terminal_screen_queue_idle_exec (TerminalScreen *screen)
   if (priv->idle_exec_source != 0)
     return;
 
-  if (!gtk_widget_get_realized (GTK_WIDGET (screen))) {
-    priv->exec_on_realize = TRUE;
-    return;
-  }
+  /* Terminals in tabs that are not shown yet start their programs too,
+   * such as those of several --tab options; they get their size, and
+   * the programs a SIGWINCH, when the tab is first shown. */
 
   _terminal_debug_print (TERMINAL_DEBUG_PROCESSES,
                          "[screen %p] scheduling launching the child process on idle\n",
