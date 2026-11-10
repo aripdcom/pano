@@ -81,7 +81,7 @@ main (int argc, char **argv)
   /* Hostname of at least 1 component, containing at least one non-digit in at least one of the segments */
   assert_match_anchored (HOSTNAME1, "example.com",       ENTIRE);
   assert_match_anchored (HOSTNAME1, "a-b.c-d",           ENTIRE);
-  assert_match_anchored (HOSTNAME1, "a_b",               "a");    /* TODO: can/should we totally abort here? */
+  assert_match_anchored (HOSTNAME1, "a_b",               ENTIRE); /* underscores occur in DNS names */
   assert_match_anchored (HOSTNAME1, "déjà-vu.com",       ENTIRE);
   assert_match_anchored (HOSTNAME1, "➡.ws",              ENTIRE);
   assert_match_anchored (HOSTNAME1, "cömbining-áccents", ENTIRE);
@@ -316,7 +316,17 @@ main (int argc, char **argv)
   assert_match (REGEX_URL_HTTP, "www.foo.bar/baz",     ENTIRE);
   assert_match (REGEX_URL_HTTP, "WWW3.foo.bar/baz",    ENTIRE);
   assert_match (REGEX_URL_HTTP, "FTP.FOO.BAR/BAZ",     ENTIRE);  /* FIXME if no scheme is given and url starts with ftp, can we make the protocol ftp instead of http? */
-  assert_match (REGEX_URL_HTTP, "ftpxy.foo.bar/baz",   ENTIRE);
+  assert_match (REGEX_URL_HTTP, "ftpxy.foo.bar/baz",   nullptr);
+  assert_match (REGEX_URL_HTTP, "ftp",                 nullptr);
+  assert_match (REGEX_URL_HTTP, "ftpd",                nullptr);
+  assert_match (REGEX_URL_HTTP, "ftp-server.log",      nullptr);
+  assert_match (REGEX_URL_HTTP, "cd /var/www/html",    nullptr);
+  assert_match (REGEX_URL_HTTP, "/home/luke/code/www/tmp/foo.png", nullptr);
+  assert_match (REGEX_URL_HTTP, "see www.foo.bar",     "www.foo.bar");
+  assert_match (REGEX_URL_HTTP, "www.foo_bar.com/x",   ENTIRE);
+  assert_match (REGEX_URL_AS_IS, "http://foo_bar.example.com/path", ENTIRE);
+  assert_match (REGEX_URL_AS_IS, "steam://run/440",     ENTIRE);
+  assert_match (REGEX_URL_AS_IS, "ircs://irc.libera.chat/gnome", ENTIRE);
 //  assert_match (REGEX_URL_HTTP, "ftp.123/baz",         nullptr);  /* errr... could we fail here?? */
   assert_match (REGEX_URL_HTTP, "foo.bar/baz",         nullptr);
   assert_match (REGEX_URL_HTTP, "abc.www.foo.bar/baz", nullptr);
@@ -353,6 +363,13 @@ main (int argc, char **argv)
   assert_match (REGEX_EMAIL, "Write to foo@[dead::beef]",    "foo@[dead::beef]");
   assert_match (REGEX_EMAIL, "Write to foo@1.2.3.4",         nullptr);
   assert_match (REGEX_EMAIL, "Write to foo@1.2.3.456",       nullptr);
+  assert_match (REGEX_EMAIL, "Write to first_last@foo.com",  "first_last@foo.com");
+  assert_match (REGEX_EMAIL, "Write to _name@foo.com",       "_name@foo.com");
+  assert_match (REGEX_EMAIL, "mailto:user%2Bmailbox@foo.com", ENTIRE);
+  assert_match (REGEX_EMAIL, "mailto:joe@example.com?subject=Hello%20there&body=hi", ENTIRE);
+  assert_match (REGEX_EMAIL, "joe@example.com?subject=Hello", "joe@example.com");
+  assert_match (REGEX_XMPP,  "xmpp:bla@conference.jabber.org?join", ENTIRE);
+  assert_match (REGEX_XMPP,  "Join xmpp:room@muc.example.org.", "xmpp:room@muc.example.org");
   assert_match (REGEX_EMAIL, "Write to foo@1::2345",         nullptr);
   assert_match (REGEX_EMAIL, "Write to foo@dead::beef",      nullptr);
   assert_match (REGEX_EMAIL, "<baz email=\"foo@bar.com\"/>", "foo@bar.com");

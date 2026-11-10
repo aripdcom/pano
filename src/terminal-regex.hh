@@ -50,9 +50,10 @@
  * preceding this APOS_START_DEF construct. */
 #define APOS_START_DEF "(?<APOS_START>(?<='))?"
 
-#define SCHEME "(?ix: news | telnet | nntp | https? | ftps? | sftp | webcal )"
+#define SCHEME "(?ix: news | telnet | nntp | https? | ftps? | sftp | webcal | ssh | ircs? | steam )"
 
-#define USERCHARS "-+.[:alnum:]"
+/* Also "_" and "%", as in "first_last@" and "user%2Bmailbox@" */
+#define USERCHARS "-+._%[:alnum:]"
 /* Nonempty username, e.g. "john.smith" */
 #define USER "[" USERCHARS "]+"
 
@@ -104,7 +105,7 @@
  * then any graphical Unicode character.
  * A segment can consist entirely of numbers.
  * (Note: PCRE doesn't support character class subtraction/intersection.) */
-#define HOSTNAMESEGMENTCHARS_CLASS "(?x: [-[:alnum:]] | (?! [[:ascii:]] ) [[:graph:]] )"
+#define HOSTNAMESEGMENTCHARS_CLASS "(?x: [-_[:alnum:]] | (?! [[:ascii:]] ) [[:graph:]] )"
 
 /* A hostname of at least 1 component. The last component cannot be entirely numbers.
  * E.g. "foo", "example.com", "1234.com", but not "foo.123" */
@@ -149,10 +150,16 @@
 #define REGEX_URL_AS_IS  DEFS SCHEME "://" USERPASS URL_HOST PORT URLPATH
 /* TODO: also support file:/etc/passwd */
 #define REGEX_URL_FILE   DEFS "(?ix: file:/ (?: / (?: " HOSTNAME1 " )? / )? (?! / ) )(?&PATH)"
-/* Lookbehind so that we don't catch "abc.www.foo.bar", bug 739757. Lookahead for www/ftp for convenience (so that we can reuse HOSTNAME1). */
-#define REGEX_URL_HTTP   DEFS "(?<!(?:" HOSTNAMESEGMENTCHARS_CLASS "|[.]))(?=(?i:www|ftp))" HOSTNAME1 PORT URLPATH
+/* Lookbehind so that we don't catch "abc.www.foo.bar", bug 739757, nor
+ * folders named www in paths such as "/var/www/html". Lookahead for "www.",
+ * "www3." or "ftp.", so that words such as "ftpd" are not taken for
+ * addresses (and so that we can reuse HOSTNAME1). */
+#define REGEX_URL_HTTP   DEFS "(?<!(?:" HOSTNAMESEGMENTCHARS_CLASS "|[./]))(?=(?i:www[0-9]*|ftp)\\.)" HOSTNAME1 PORT URLPATH
 #define REGEX_URL_VOIP   DEFS "(?i:h323:|sips?:)" USERPASS URL_HOST PORT VOIP_PATH
-#define REGEX_EMAIL      DEFS "(?i:mailto:)?" USER "@" EMAIL_HOST
+/* A mailto: URI may have a query, such as "?subject=Hello" */
+#define REGEX_EMAIL      DEFS "(?x: (?i:mailto:) " USER "@" EMAIL_HOST " (?: \\? (?&PATH) )? | " USER "@" EMAIL_HOST " )"
+/* An XMPP address, e.g. "xmpp:room@conference.example.org?join" */
+#define REGEX_XMPP       DEFS "(?i:xmpp:)" USER "@" EMAIL_HOST "(?x: / [-.[:alnum:]]+ )?(?x: \\? (?&PATH) )?"
 #define REGEX_NEWS_MAN   "(?i:news:|man:|info:)[-[:alnum:]\\Q^_{|}~!\"#$%&'()*+,./;:=?`\\E]+"
 
 #endif /* !TERMINAL_REGEX_H */

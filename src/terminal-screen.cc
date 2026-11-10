@@ -385,6 +385,7 @@ static const TerminalRegexPattern url_regex_patterns[] = {
   { REGEX_URL_FILE,  FLAVOR_AS_IS },
   { REGEX_URL_VOIP,  FLAVOR_VOIP_CALL },
   { REGEX_EMAIL,     FLAVOR_EMAIL },
+  { REGEX_XMPP,      FLAVOR_AS_IS },
   { REGEX_NEWS_MAN,  FLAVOR_AS_IS },
 };
 
