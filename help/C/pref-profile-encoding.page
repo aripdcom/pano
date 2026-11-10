@@ -47,8 +47,7 @@
     encoding by default.</p>
   </note>
 
-  <p>The same group also sets what the <key>Backspace</key> and
-  <key>Delete</key> keys send, for programs that expect something else than
-  the default.</p>
+  <p>The same group also sets <link xref="pref-compatibility">what the
+  <key>Backspace</key> and <key>Delete</key> keys send</link>.</p>
 
 </page>

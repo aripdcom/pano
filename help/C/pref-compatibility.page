@@ -1,0 +1,94 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="pref-compatibility">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <link type="guide" xref="pref#profile"/>
+    <link type="seealso" xref="pref-profile-encoding"/>
+    <link type="seealso" xref="pref-profile-char-width"/>
+    <revision pkgversion="0.1" date="2026-11-11" status="candidate"/>
+
+    <credit type="author copyright">
+      <name>Sindhu S</name>
+      <email its:translate="no">sindhus@live.in</email>
+      <years>2013</years>
+    </credit>
+    <credit type="copyright editor">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2013</years>
+    </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Choose what the <key>Backspace</key> and <key>Delete</key> keys
+    send to programs.</desc>
+  </info>
+
+  <title>Backspace and Delete keys</title>
+
+  <p>A program in a terminal does not see keys, but the characters or
+  <link xref="overview">escape sequences</link> that the terminal sends for
+  them. Traditionally, <key>Backspace</key> deletes the character before the
+  cursor and <key>Delete</key> the one after it, but programs and systems
+  differ in what they expect for these keys. If one of them does something
+  else in a program, for example prints <sys>^H</sys> or <sys>~</sys>, you can
+  change what it sends:</p>
+
+  <steps>
+    <item><p>Press the menu button in the top-right corner of the window and
+    select <gui style="menuitem">Preferences</gui>.</p></item>
+    <item><p>In the <gui>Profiles</gui> group, click the profile you want to
+    change.</p></item>
+    <item><p>In the <gui>Compatibility</gui> group, set <gui>Backspace Key</gui>
+    and <gui>Delete Key</gui>.</p></item>
+  </steps>
+
+  <p>Both offer the same choices:</p>
+
+  <terms>
+    <item>
+      <title><gui>Automatic</gui></title>
+      <p>The usual choice: <key>Backspace</key> sends the erase character of
+      the terminal, as <cmd>stty</cmd> sets it, and <key>Delete</key> sends
+      the escape sequence <sys>ESC [ 3 ~</sys>.</p>
+    </item>
+    <item>
+      <title><gui>Control-H</gui></title>
+      <p>Sends the backspace character, <sys>^H</sys>, which some older
+      programs and systems expect.</p>
+    </item>
+    <item>
+      <title><gui>ASCII DEL</gui></title>
+      <p>Sends the delete character, <sys>^?</sys>, which most systems today
+      use for <key>Backspace</key>.</p>
+    </item>
+    <item>
+      <title><gui>Escape Sequence</gui></title>
+      <p>Sends <sys>ESC [ 3 ~</sys>, which programs understand as
+      <key>Delete</key>.</p>
+    </item>
+    <item>
+      <title><gui>TTY Erase</gui></title>
+      <p>Sends the erase character of the terminal, as <cmd>stty</cmd> sets
+      it.</p>
+    </item>
+  </terms>
+
+  <note style="tip">
+    <p>Make a <link xref="pref-profiles#new-profile">profile</link> with other
+    settings for the computers or programs that need them, and keep your usual
+    one as it is.</p>
+  </note>
+
+  <p>The same group also sets the <link xref="pref-profile-encoding">character
+  encoding</link> and the <link xref="pref-profile-char-width">width of
+  ambiguous characters</link>.</p>
+</page>

@@ -43,6 +43,7 @@ help_pages = [
   'introduction.page',
   'overview.page',
   'pref-bell.page',
+  'pref-compatibility.page',
   'pref-custom-command.page',
   'pref-custom-exit.page',
   'pref-keyboard-access.page',
