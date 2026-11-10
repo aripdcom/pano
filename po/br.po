@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2009-08-31 16:20+0100\n"
 "Last-Translator: Denis\n"
 "Language-Team: Brenux <brenux@free.fr>\n"
@@ -37,12 +37,12 @@ msgstr "Arverañ al linenn arc'had"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr ""
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Prenestr nevez"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 #, fuzzy
 #| msgid "Pr_ofile Preferences"
 msgid "Preferences"
@@ -1278,9 +1278,18 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Berradennoù klavier"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Ivinell nevez"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+#, fuzzy
+#| msgid "New Window"
+msgid "New _Window"
+msgstr "Prenestr nevez"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 #, fuzzy
@@ -1298,32 +1307,42 @@ msgstr "Serriñ an ivinell"
 msgid "Close Other Tabs"
 msgstr "Serriñ an ivinell"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Serriñ an ivinell"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Serriñ ar prenestr"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "_Serriñ ar prenestr"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+#, fuzzy
+#| msgid "Copy"
+msgid "_Copy"
 msgstr "Eilañ"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+#, fuzzy
+#| msgid "Paste"
+msgid "_Paste"
 msgstr "Pegañ"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr ""
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+#, fuzzy
+#| msgid "Pr_ofile Preferences"
+msgid "_Preferences"
+msgstr "Gwellvezioù an a_elad"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1337,8 +1356,8 @@ msgstr "Kavout a-raok"
 msgid "Clear Highlight"
 msgstr ""
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
 msgstr "Skramm a-bezh"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
@@ -1369,14 +1388,13 @@ msgstr ""
 msgid "Set Title"
 msgstr ""
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr ""
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "Adde_raouekaat"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr ""
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Adderaouekaat ha s_karzhañ"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1388,8 +1406,8 @@ msgstr "Mont d'an ivinell a-raok"
 msgid "Scroll to Next Prompt"
 msgstr ""
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1434,26 +1452,27 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Mont d'an ivinell war lerc'h"
 
-#: src/terminal-accels.cc:240
-msgid "Split Right"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Serriñ an ivinell"
 
-#: src/terminal-accels.cc:243
-msgid "Zoom Pane"
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
+msgid "_Zoom Pane"
 msgstr ""
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1492,20 +1511,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1560,7 +1579,7 @@ msgstr "Skoazell"
 msgid "Global"
 msgstr ""
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, fuzzy, c-format
 #| msgid "Switch to Tab 1"
 msgid "Switch to Tab %u"
@@ -1759,6 +1778,10 @@ msgstr "Adde_raouekaat"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Ivinell nevez"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1774,26 +1797,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "Digeriñ un ivinell"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-#, fuzzy
-#| msgid "New Window"
-msgid "New _Window"
-msgstr "Prenestr nevez"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Serriñ an ivinell"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1817,10 +1820,6 @@ msgstr ""
 msgid "_Include This Terminal"
 msgstr "Serriñ an termenell-mañ"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "Skramm a-bezh"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr ""
@@ -1841,14 +1840,6 @@ msgstr "_Endalc'hadoù"
 msgid "_Advanced"
 msgstr ""
 
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "Adde_raouekaat"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Adderaouekaat ha s_karzhañ"
-
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
 msgstr ""
@@ -1868,12 +1859,6 @@ msgstr ""
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr ""
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-#, fuzzy
-#| msgid "Pr_ofile Preferences"
-msgid "_Preferences"
-msgstr "Gwellvezioù an a_elad"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2844,6 +2829,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Eilañ"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "Nodrezh"
@@ -3058,6 +3047,10 @@ msgstr ""
 
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:620
@@ -3516,28 +3509,8 @@ msgstr "_Digeriñ un ere"
 msgid "Copy _Link"
 msgstr "_Eilañ lec'hiadur an ere"
 
-#: src/terminal-window.cc:3175
-#, fuzzy
-#| msgid "Copy"
-msgid "_Copy"
-msgstr "Eilañ"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr ""
-
-#: src/terminal-window.cc:3177
-#, fuzzy
-#| msgid "Paste"
-msgid "_Paste"
-msgstr "Pegañ"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3570,14 +3543,6 @@ msgstr "Gwellvezioù an a_elad"
 msgid "Split Ri_ght"
 msgstr ""
 
-#: src/terminal-window.cc:3217
-msgid "_Zoom Pane"
-msgstr ""
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New Tab"
@@ -3590,43 +3555,15 @@ msgstr "Ivinell nevez"
 msgid "To a New _Window"
 msgstr "Prenestr nevez"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Serriñ an ivinell"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "Terminal"
 msgid "Ne_w Terminal"
 msgstr "Termenell"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Ivinell nevez"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3695,10 +3632,6 @@ msgid ""
 "the window will kill all of them."
 msgstr ""
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "_Serriñ ar prenestr"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Serriñ an termenell-mañ"
@@ -3713,6 +3646,25 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Serriñ an ivinell"
+
+#~ msgid "Close Window"
+#~ msgstr "Serriñ ar prenestr"
+
+#~ msgid "Paste"
+#~ msgstr "Pegañ"
+
+#~ msgid "Full Screen"
+#~ msgstr "Skramm a-bezh"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Serriñ an ivinell"
 
 #, fuzzy
 #~| msgid "_Terminal"

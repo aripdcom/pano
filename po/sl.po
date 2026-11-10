@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2026-10-08 22:53+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
@@ -46,12 +46,12 @@ msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr ""
 "shell;prompt;command;commandline;cmd;lupina;ukazna vrstica;ukaz;terminal;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Novo okno"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Možnosti"
 
@@ -1302,9 +1302,16 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Določi tipkovno bližnjico"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Nov zavihek"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "Novo _okno"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1320,32 +1327,36 @@ msgstr "Zapri zavihek"
 msgid "Close Other Tabs"
 msgstr "Zapri zavihek"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Zapri zavihek"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Zapri okno"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "_Zapri okno"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "Kopiraj"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_Kopiraj"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "Kopiraj kot HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "Kopiraj kot _HTML"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "Prilepi"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "_Prilepi"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Izberi vse"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_Možnosti"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1359,9 +1370,9 @@ msgstr "Najdi predhodne"
 msgid "Clear Highlight"
 msgstr "Počisti poudarjanje"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Celozaslonski način"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_Celozaslonski način"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1395,14 +1406,13 @@ msgstr "Le za branje"
 msgid "Set Title"
 msgstr "Določi _naziv okna …"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Ponastavi"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Ponastavi"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Ponastavi in počisti"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Ponastavi in _počisti"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1416,8 +1426,8 @@ msgstr "Preklopi na predhodni zavihek"
 msgid "Scroll to Next Prompt"
 msgstr "Zdrsi naprej ob pritisku tipke"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1460,30 +1470,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Preklopi na zadnji zavihek"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Svetli Solarized"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Zapri zavihek"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Približaj"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1532,20 +1541,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1598,7 +1607,7 @@ msgstr "Pomoč"
 msgid "Global"
 msgstr "Splošno"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Preklopi na zavihek %u"
@@ -1787,6 +1796,10 @@ msgstr "Po_nastavi povečavo"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Nov zavihek"
+
 #: src/terminal-headerbar.ui:40
 msgid "New Tab from Profile"
 msgstr "Nov zavihek iz profila"
@@ -1798,24 +1811,6 @@ msgstr ""
 #: src/terminal-headerbar.ui:57
 msgid "Show Open Tabs"
 msgstr "Pokaži odprte zavihke"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "Novo _okno"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Zapri zavihek"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1839,10 +1834,6 @@ msgstr ""
 msgid "_Include This Terminal"
 msgstr "Ali naj se okno terminala zapre?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_Celozaslonski način"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "Le za branje"
@@ -1860,14 +1851,6 @@ msgstr "Shrani vsebino"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "_Napredno"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Ponastavi"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Ponastavi in _počisti"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1888,10 +1871,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Nadzornik"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_Možnosti"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2866,6 +2845,10 @@ msgstr "Ime"
 msgid "Identifier"
 msgstr "Identifikator"
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Kopiraj"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "Pisava"
@@ -3071,6 +3054,10 @@ msgstr "Merilo višine celic"
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr "Poveča višino znakovnih celic"
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Ponastavi"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3519,24 +3506,8 @@ msgstr "_Odpri povezavo"
 msgid "Copy _Link"
 msgstr "Kopiraj naslov _povezave"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_Kopiraj"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "Kopiraj kot _HTML"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "_Prilepi"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3573,16 +3544,6 @@ msgstr "Možnosti"
 msgid "Split Ri_ght"
 msgstr "Svetli Solarized"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Približaj"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -3595,43 +3556,15 @@ msgstr "Nov _zavihek"
 msgid "To a New _Window"
 msgstr "Novo _okno"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Zapri zavihek"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "Novo okno terminala"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Nov zavihek"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3714,10 +3647,6 @@ msgstr ""
 "Še vedno so dejavna opravila v terminalih tega okna. Z zapiranjem okna se "
 "vstavijo tudi nedokončana."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "_Zapri okno"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Ali naj se okno terminala zapre?"
@@ -3734,6 +3663,41 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Napaka med razčlenjevanjem argumentov: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Zapri zavihek"
+
+#~ msgid "Close Window"
+#~ msgstr "Zapri okno"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "Kopiraj kot HTML"
+
+#~ msgid "Paste"
+#~ msgstr "Prilepi"
+
+#~ msgid "Full Screen"
+#~ msgstr "Celozaslonski način"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Ponastavi in počisti"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Svetli Solarized"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Zapri zavihek"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Približaj"
 
 #~ msgid "New _Terminal"
 #~ msgstr "Novo okno _terminala"

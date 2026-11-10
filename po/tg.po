@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tajik Gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2015-05-21 10:01+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: \n"
@@ -38,12 +38,12 @@ msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr ""
 "восит;сатри фармон;фармон;хати фармон;cmd;shell;prompt;command;commandline;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Равзанаи нав"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Хусусиятҳо"
 
@@ -1385,9 +1385,18 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Миёнбурҳо"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Варақаи нав"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+#, fuzzy
+#| msgid "New Window"
+msgid "New _Window"
+msgstr "Равзанаи нав"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1403,32 +1412,40 @@ msgstr "Пӯшидани варақа"
 msgid "Close Other Tabs"
 msgstr "Пӯшидани варақа"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Пӯшидани варақа"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Пӯшидани равзана"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "П_ӯшонидани равзана"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+#, fuzzy
+#| msgid "Copy"
+msgid "_Copy"
 msgstr "Нусха бардоштан"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+#, fuzzy
+#| msgid "Paste"
+msgid "_Paste"
 msgstr "Гузоштан"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Ҳамаро интихоб кардан"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_Хусусиятҳо"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1442,9 +1459,9 @@ msgstr "Ёфтани қаблӣ"
 msgid "Clear Highlight"
 msgstr "Пок кардани ҷудокунӣ"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Экрани пурра"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_Экрани пурра"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1476,14 +1493,13 @@ msgstr "Танҳо барои хондан"
 msgid "Set Title"
 msgstr "Таъин кардани сарлавҳа"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Танзими дубора"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Танзими дубора"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Танзими дубора ва тоза кардан"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Танзими дубора ва пок_кардан "
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1497,8 +1513,8 @@ msgstr "Гузариш ба терминали қаблӣ"
 msgid "Scroll to Next Prompt"
 msgstr "Чархонидани фишори калид"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1557,30 +1573,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Гузариш ба варақаи 10"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Офтобии равшан"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Пӯшидани варақа"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Бузург кардани андоза"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1625,20 +1640,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1693,7 +1708,7 @@ msgstr "Кӯмак"
 msgid "Global"
 msgstr ""
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Гузариш ба варақаи %u"
@@ -1895,6 +1910,10 @@ msgstr "Танзими дубора"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Варақаи нав"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1910,26 +1929,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "Кушодани В_арақа"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-#, fuzzy
-#| msgid "New Window"
-msgid "New _Window"
-msgstr "Равзанаи нав"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Пӯшидани варақа"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1955,10 +1954,6 @@ msgstr "Терминали нав дар равзанаи нав"
 msgid "_Include This Terminal"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_Экрани пурра"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "_Танҳо барои хондан"
@@ -1981,14 +1976,6 @@ msgstr "_Захираи мӯҳтаво"
 msgid "_Advanced"
 msgstr "_Бекор кардан"
 
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Танзими дубора"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Танзими дубора ва пок_кардан "
-
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
 msgstr ""
@@ -2008,10 +1995,6 @@ msgstr ""
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Нозир"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_Хусусиятҳо"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -3026,6 +3009,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Нусха бардоштан"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "Шрифт"
@@ -3263,6 +3250,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Танзими дубора"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3750,28 +3741,8 @@ msgstr "_Кушодани пайванд"
 msgid "Copy _Link"
 msgstr "Нусхабардории суроғаи пайванд"
 
-#: src/terminal-window.cc:3175
-#, fuzzy
-#| msgid "Copy"
-msgid "_Copy"
-msgstr "Нусха бардоштан"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr ""
-
-#: src/terminal-window.cc:3177
-#, fuzzy
-#| msgid "Paste"
-msgid "_Paste"
-msgstr "Гузоштан"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3810,16 +3781,6 @@ msgstr "Хусусиятҳо"
 msgid "Split Ri_ght"
 msgstr "Офтобии равшан"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Бузург кардани андоза"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New Tab"
@@ -3832,43 +3793,15 @@ msgstr "Варақаи нав"
 msgid "To a New _Window"
 msgstr "Равзанаи нав"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close tab"
-msgid "Close P_ane"
-msgstr "Пӯшидани варақа"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "Терминали нав"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Варақаи нав"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3951,10 +3884,6 @@ msgstr ""
 "Ҳоло ҳам баъзе равандҳо дар баъзе поёнаҳои ин равзана иҷро шуда истодаанд. "
 "Пӯшидани равзана ҳамаи онҳоро нобуд мекунад."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "П_ӯшонидани равзана"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Ин поёнаро мепӯшонед?"
@@ -3971,6 +3900,38 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Таҷзияи баҳсҳо ноком монд: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Пӯшидани варақа"
+
+#~ msgid "Close Window"
+#~ msgstr "Пӯшидани равзана"
+
+#~ msgid "Paste"
+#~ msgstr "Гузоштан"
+
+#~ msgid "Full Screen"
+#~ msgstr "Экрани пурра"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Танзими дубора ва тоза кардан"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Офтобии равшан"
+
+#, fuzzy
+#~| msgid "Close tab"
+#~ msgid "Close Pane"
+#~ msgstr "Пӯшидани варақа"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Бузург кардани андоза"
 
 #, fuzzy
 #~| msgid "_New Terminal"

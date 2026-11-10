@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2026-09-20 05:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <zh-l10n@lists.slat.org>\n"
@@ -43,12 +43,12 @@ msgstr "使用命令列"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "shell;prompt;command;commandline;cmd;外殼層;提示;指令;命令列;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "新增視窗"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "偏好設定"
 
@@ -1277,9 +1277,16 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "快捷鍵"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "新增分頁"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "新增視窗(_W)"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1295,32 +1302,36 @@ msgstr "關閉分頁"
 msgid "Close Other Tabs"
 msgstr "關閉分頁"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "關閉分頁"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "關閉視窗"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "關閉視窗(_L)"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "複製"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "複製(_C)"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "複製為 HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "複製為 _HTML"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "貼上"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "貼上(_P)"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "選擇全部"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "偏好設定(_P)"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1334,9 +1345,9 @@ msgstr "尋找上一筆"
 msgid "Clear Highlight"
 msgstr "清除標明"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "全螢幕"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "全螢幕(_F)"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1368,14 +1379,13 @@ msgstr "唯讀"
 msgid "Set Title"
 msgstr "設定標題"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "重設"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "重設(_R)"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "重設及清除畫面"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "重設並清除畫面(_L)"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1389,8 +1399,8 @@ msgstr "移至上一個分頁"
 msgid "Scroll to Next Prompt"
 msgstr "按鍵時還原至原來位置(_K)"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1437,30 +1447,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "移至最後一個分頁"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Solarized 白"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "關閉分頁"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "拉近"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1509,20 +1518,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1575,7 +1584,7 @@ msgstr "求助"
 msgid "Global"
 msgstr "全域"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "切換到分頁 %u"
@@ -1777,6 +1786,10 @@ msgstr "重設"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "新增分頁"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1792,24 +1805,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "開啟分頁(_B)"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "新增視窗(_W)"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "關閉分頁"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1835,10 +1830,6 @@ msgstr "在新視窗中新增終端機"
 msgid "_Include This Terminal"
 msgstr "是否關閉這個終端機？"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "全螢幕(_F)"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "唯讀(_O)"
@@ -1854,14 +1845,6 @@ msgstr "儲存內容(_S)…"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "進階(_A)"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "重設(_R)"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "重設並清除畫面(_L)"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1882,10 +1865,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "檢查器(_I)"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "偏好設定(_P)"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2883,6 +2862,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "複製"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "字型"
@@ -3122,6 +3105,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "重設"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3618,24 +3605,8 @@ msgstr "開啟連結(_O)"
 msgid "Copy _Link"
 msgstr "複製連結(_L)"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "複製(_C)"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "複製為 _HTML"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "貼上(_P)"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3672,16 +3643,6 @@ msgstr "偏好設定"
 msgid "Split Ri_ght"
 msgstr "Solarized 白"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "拉近"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -3694,43 +3655,15 @@ msgstr "新增分頁(_T)"
 msgid "To a New _Window"
 msgstr "新增視窗(_W)"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "關閉分頁"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "新增終端機"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "新增分頁"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3808,10 +3741,6 @@ msgid ""
 "the window will kill all of them."
 msgstr "在這個視窗的部分終端機還有程序在執行。關閉視窗會終結它們。"
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "關閉視窗(_L)"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "是否關閉這個終端機？"
@@ -3826,6 +3755,41 @@ msgstr "在這個終端機還有程序在執行。關閉終端機會終結它們
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "分析引數失敗：%s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "關閉分頁"
+
+#~ msgid "Close Window"
+#~ msgstr "關閉視窗"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "複製為 HTML"
+
+#~ msgid "Paste"
+#~ msgstr "貼上"
+
+#~ msgid "Full Screen"
+#~ msgstr "全螢幕"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "重設及清除畫面"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Solarized 白"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "關閉分頁"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "拉近"
 
 #~ msgid "New _Terminal"
 #~ msgstr "新增終端機(_T)"

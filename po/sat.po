@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal gnome-50\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2026-08-23 23:22+0530\n"
 "Last-Translator: Prasanta Hembram <prasantahembram720@gmail.com>\n"
 "Language-Team: Santali\n"
@@ -38,12 +38,12 @@ msgstr "ᱠᱚᱢᱟᱱᱰ ᱞᱟᱭᱤᱱ ᱵᱮᱵᱷᱟᱨ ᱢᱮ"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "ᱥᱮᱞ; ᱩᱥᱠᱟᱹᱣ; ᱠᱚᱢᱟᱱᱰ; ᱠᱚᱢᱟᱱᱰᱞᱟᱭᱤᱱ;cmd;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "ᱱᱟᱶᱟ ᱡᱟᱨᱞᱟ"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "ᱜᱩᱱ"
 
@@ -1303,9 +1303,16 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "ᱥᱚᱴᱠᱟᱴ"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "ᱱᱟᱶᱟ ᱴᱮᱵᱽ"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "ᱱᱟᱶᱟ _ᱡᱚᱨᱠᱟ"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1321,32 +1328,36 @@ msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
 msgid "Close Other Tabs"
 msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "ᱡᱟᱨᱞᱟ ᱵᱚᱸᱫᱭ ᱢᱮ"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "ᱥᱟᱨᱞᱟ ᱵᱚᱸᱫᱚᱭ ᱢᱮ"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "ᱱᱚᱠᱚᱞ ᱢᱮ"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_ᱱᱚᱠᱚᱞ"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "HTML ᱞᱮᱠᱟᱛᱮ ᱱᱚᱠᱚᱞ ᱢᱮ"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "_HTML ᱞᱮᱠᱟᱛᱮ ᱱᱚᱠᱚᱞ ᱢᱮ"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "ᱞᱟᱴᱷᱟ"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "_ᱞᱟᱴᱷᱟ"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "ᱥᱟᱱᱟᱢ ᱵᱟᱪᱷᱟᱣ ᱢᱮ"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_ᱠᱩᱥᱤᱭᱟᱜᱠᱚ"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1360,9 +1371,9 @@ msgstr "ᱞᱟᱦᱟ ᱨᱮᱱᱟᱜ ᱯᱟᱱᱛᱮ ᱢᱮ"
 msgid "Clear Highlight"
 msgstr "ᱦᱟᱭᱞᱟᱭᱤᱴ ᱥᱟᱯᱷᱟᱭ ᱢᱮ"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "ᱯᱩᱨᱟᱹ ᱥᱠᱨᱤᱱ"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_ᱯᱩᱨᱟᱹ ᱥᱠᱨᱤᱱ"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1396,14 +1407,13 @@ msgstr "ᱯᱟᱲᱦᱟᱣ-ᱥᱩᱢᱩᱝ"
 msgid "Set Title"
 msgstr "ᱥᱮᱴ _ᱴᱟᱭᱤᱴᱟᱞ..."
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "ᱨᱤᱥᱮᱴ"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_ᱨᱤᱥᱮᱴ"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "ᱨᱤᱥᱮᱴ ᱟᱨ ᱥᱟᱯᱷᱟᱭ ᱢᱮ"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "ᱨᱤᱥᱮᱴ ᱟᱨ ᱥᱤ_ᱞᱤᱭᱟᱨ"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1417,8 +1427,8 @@ msgstr "ᱞᱟᱦᱟ ᱨᱮᱱᱟᱜ ᱴᱮᱵᱽ ᱨᱮ ᱵᱚᱫᱚᱞ ᱢᱮ"
 msgid "Scroll to Next Prompt"
 msgstr "_ᱠᱤᱥᱴᱨᱚᱠ ᱨᱮ ᱠᱷᱚᱥᱨᱚᱫ ᱢᱮ"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1465,30 +1475,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "ᱢᱩᱪᱟᱹᱫ ᱴᱮᱵᱽ ᱨᱮ ᱵᱚᱫᱚᱞ ᱢᱮ"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "ᱥᱚᱞᱟᱨᱟᱭᱤᱡᱽ ᱢᱟᱨᱥᱟᱞ"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "ᱡᱩᱢ ᱤᱱ"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1535,20 +1544,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1601,7 +1610,7 @@ msgstr "ᱜᱚᱲᱚ"
 msgid "Global"
 msgstr "ᱡᱮᱜᱮᱛᱟᱹᱨᱤ"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "ᱴᱮᱵᱽ ᱨᱮ ᱵᱚᱫᱚᱞ ᱢᱮ %u"
@@ -1803,6 +1812,10 @@ msgstr "ᱨᱤᱥᱮᱴ"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "ᱱᱟᱶᱟ ᱴᱮᱵᱽ"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1815,24 +1828,6 @@ msgstr ""
 
 #: src/terminal-headerbar.ui:57
 msgid "Show Open Tabs"
-msgstr ""
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "ᱱᱟᱶᱟ _ᱡᱚᱨᱠᱟ"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
 msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
@@ -1857,10 +1852,6 @@ msgstr ""
 msgid "_Include This Terminal"
 msgstr "ᱱᱚᱶᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱵᱚᱸᱫ ᱢᱮ?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_ᱯᱩᱨᱟᱹ ᱥᱠᱨᱤᱱ"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "ᱯᱟᱲᱦᱟᱣ ᱢᱮ-_ ᱥᱩᱢᱩᱝ"
@@ -1876,14 +1867,6 @@ msgstr "_ᱡᱤᱱᱤᱥ ᱠᱚ ᱥᱟᱧᱪᱟᱣ ᱢᱮ..."
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "_ᱞᱟᱦᱟᱱᱳᱹᱛᱮ"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_ᱨᱤᱥᱮᱴ"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "ᱨᱤᱥᱮᱴ ᱟᱨ ᱥᱤ_ᱞᱤᱭᱟᱨ"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1904,10 +1887,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_ᱤᱱᱥᱯᱮᱠᱴᱚᱨ"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_ᱠᱩᱥᱤᱭᱟᱜᱠᱚ"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2910,6 +2889,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "ᱱᱚᱠᱚᱞ ᱢᱮ"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr ""
@@ -3147,6 +3130,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "ᱨᱤᱥᱮᱴ"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3640,24 +3627,8 @@ msgstr "_ᱞᱤᱝᱠ ᱡᱷᱤᱡᱽ ᱢᱮ"
 msgid "Copy _Link"
 msgstr "_ᱞᱤᱝᱠ ᱱᱚᱠᱚᱞ ᱢᱮ"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_ᱱᱚᱠᱚᱞ"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "_HTML ᱞᱮᱠᱟᱛᱮ ᱱᱚᱠᱚᱞ ᱢᱮ"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "_ᱞᱟᱴᱷᱟ"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3694,16 +3665,6 @@ msgstr "ᱜᱩᱱ"
 msgid "Split Ri_ght"
 msgstr "ᱥᱚᱞᱟᱨᱟᱭᱤᱡᱽ ᱢᱟᱨᱥᱟᱞ"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "ᱡᱩᱢ ᱤᱱ"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -3716,43 +3677,15 @@ msgstr "ᱱᱟᱶᱟ _ᱴᱮᱵᱽ"
 msgid "To a New _Window"
 msgstr "ᱱᱟᱶᱟ _ᱡᱚᱨᱠᱟ"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "ᱱᱟᱶᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "ᱱᱟᱶᱟ ᱴᱮᱵᱽ"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3836,10 +3769,6 @@ msgstr ""
 "ᱱᱚᱣᱟ ᱡᱷᱚᱨᱠᱟ ᱨᱮ ᱱᱤᱛ ᱦᱚᱸ ᱛᱤᱱᱟᱹᱜ ᱜᱟᱱ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱨᱮ ᱯᱨᱚᱥᱮᱥ ᱪᱟᱹᱞᱩ ᱠᱟᱱᱟ ᱾ ᱡᱷᱚᱨᱠᱟ "
 "ᱵᱚᱱᱫᱚ ᱠᱷᱟᱱ ᱩᱱᱠᱩ ᱥᱟᱱᱟᱢ ᱠᱚ ᱜᱚᱡᱚᱜᱼᱟ ᱾"
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "ᱥᱟᱨᱞᱟ ᱵᱚᱸᱫᱚᱭ ᱢᱮ"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "ᱱᱚᱶᱟ ᱴᱚᱨᱢᱤᱱᱟᱞ ᱵᱚᱸᱫ ᱢᱮ?"
@@ -3856,6 +3785,41 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ᱟᱨᱜᱩᱢᱮᱱᱴ ᱯᱟᱨᱥ ᱨᱮ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
+
+#~ msgid "Close Window"
+#~ msgstr "ᱡᱟᱨᱞᱟ ᱵᱚᱸᱫᱭ ᱢᱮ"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "HTML ᱞᱮᱠᱟᱛᱮ ᱱᱚᱠᱚᱞ ᱢᱮ"
+
+#~ msgid "Paste"
+#~ msgstr "ᱞᱟᱴᱷᱟ"
+
+#~ msgid "Full Screen"
+#~ msgstr "ᱯᱩᱨᱟᱹ ᱥᱠᱨᱤᱱ"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "ᱨᱤᱥᱮᱴ ᱟᱨ ᱥᱟᱯᱷᱟᱭ ᱢᱮ"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "ᱥᱚᱞᱟᱨᱟᱭᱤᱡᱽ ᱢᱟᱨᱥᱟᱞ"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "ᱴᱮᱵᱽ ᱵᱚᱸᱫ ᱢᱮ"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "ᱡᱩᱢ ᱤᱱ"
 
 #~ msgid "New _Terminal"
 #~ msgstr "ᱱᱟᱶᱟ _ᱴᱚᱨᱢᱤᱱᱟᱞ"

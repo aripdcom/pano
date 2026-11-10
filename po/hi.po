@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2014-09-21 09:23+0630\n"
 "Last-Translator: rajesh <rajesh>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -50,14 +50,14 @@ msgstr "कमांड लाइन का प्रयोग करें"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "शेल;प्रांप्ट;कमांड;कमांडलाइन;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 #, fuzzy
 #| msgid "Window"
 msgid "New Window"
 msgstr "विंडो"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "वरीयताएँ"
 
@@ -1365,9 +1365,18 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "शॉर्टकट"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "नया टैब"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+#, fuzzy
+#| msgid "Window"
+msgid "New _Window"
+msgstr "विंडो"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1383,32 +1392,40 @@ msgstr "टैब बंद करें"
 msgid "Close Other Tabs"
 msgstr "टैब बंद करें"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "टैब बंद करें"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "विंडो बंद करें"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "विंडो बंद करें (_l)"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+#, fuzzy
+#| msgid "Copy"
+msgid "_Copy"
 msgstr "प्रतिलिपि"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+#, fuzzy
+#| msgid "Paste"
+msgid "_Paste"
 msgstr "चिपकाएँ"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "सभी चुनें"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "वरीयताएँ (_P)"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1422,9 +1439,9 @@ msgstr "पिछला ढूँढ़ें"
 msgid "Clear Highlight"
 msgstr "आलोकन साफ करें"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "पूर्ण स्क्रीन"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "पूर्ण स्क्रीन (_F)"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1456,14 +1473,14 @@ msgstr "केवल पठनीय"
 msgid "Set Title"
 msgstr "शीर्षक नियत करें"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "रीसेट करें"
+# libgnomeprint/gnome-print-paper.c:54
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "रीसेट करें (_R)"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "रीसेट तथा साफ करें"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "रीसेट करें तथा साफ करें (_l)"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1477,8 +1494,8 @@ msgstr "पिछले टर्मिनल पर जाएँ"
 msgid "Scroll to Next Prompt"
 msgstr "कुंजी दबाने पर स्क्रॉल करें (_k)"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1537,30 +1554,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "टैब 2 पर जाएँ"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "सौरकृत हल्का"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "टैब बन्द करें"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "बड़ा करें"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1605,20 +1621,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1673,7 +1689,7 @@ msgstr "मदद"
 msgid "Global"
 msgstr ""
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, fuzzy, c-format
 #| msgid "Switch to Tab %d"
 msgid "Switch to Tab %u"
@@ -1876,6 +1892,10 @@ msgstr "रीसेट करें"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "नया टैब"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1891,26 +1911,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "टैब खोलें (_b)"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-#, fuzzy
-#| msgid "Window"
-msgid "New _Window"
-msgstr "विंडो"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "टैब बंद करें"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1936,10 +1936,6 @@ msgstr "नए विंडो में नया टर्मिनल"
 msgid "_Include This Terminal"
 msgstr "यह टर्मिनल बंद करें?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "पूर्ण स्क्रीन (_F)"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "केवल पठनीय (_O)"
@@ -1962,15 +1958,6 @@ msgstr "सामग्री सहेजें  (_S)"
 msgid "_Advanced"
 msgstr "रद्द करें (_C)"
 
-# libgnomeprint/gnome-print-paper.c:54
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "रीसेट करें (_R)"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "रीसेट करें तथा साफ करें (_l)"
-
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
 msgstr ""
@@ -1990,10 +1977,6 @@ msgstr ""
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "इंस्पेक्टर"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "वरीयताएँ (_P)"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2997,6 +2980,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "प्रतिलिपि"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "फ़ॉन्ट"
@@ -3234,6 +3221,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "रीसेट करें"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3725,28 +3716,8 @@ msgstr "लिंक खोलें (_O)"
 msgid "Copy _Link"
 msgstr "लिंक पता प्रतिलिपि करें (_C)"
 
-#: src/terminal-window.cc:3175
-#, fuzzy
-#| msgid "Copy"
-msgid "_Copy"
-msgstr "प्रतिलिपि"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr ""
-
-#: src/terminal-window.cc:3177
-#, fuzzy
-#| msgid "Paste"
-msgid "_Paste"
-msgstr "चिपकाएँ"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3785,16 +3756,6 @@ msgstr "वरीयताएँ"
 msgid "Split Ri_ght"
 msgstr "सौरकृत हल्का"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "बड़ा करें"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New Tab"
@@ -3807,43 +3768,15 @@ msgstr "नया टैब"
 msgid "To a New _Window"
 msgstr "विंडो बंद करें"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close tab"
-msgid "Close P_ane"
-msgstr "टैब बन्द करें"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "नया टर्मिनल"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "नया टैब"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3924,10 +3857,6 @@ msgid ""
 msgstr ""
 "कुछ टर्मिनल में अभी भी प्रक्रियाएँ चल रही है. इस विंडो को बंद किया जाना इसे खत्म कर देगा."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "विंडो बंद करें (_l)"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "यह टर्मिनल बंद करें?"
@@ -3944,6 +3873,38 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "तर्क विश्लेषण में विफल: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "टैब बंद करें"
+
+#~ msgid "Close Window"
+#~ msgstr "विंडो बंद करें"
+
+#~ msgid "Paste"
+#~ msgstr "चिपकाएँ"
+
+#~ msgid "Full Screen"
+#~ msgstr "पूर्ण स्क्रीन"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "रीसेट तथा साफ करें"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "सौरकृत हल्का"
+
+#, fuzzy
+#~| msgid "Close tab"
+#~ msgid "Close Pane"
+#~ msgstr "टैब बन्द करें"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "बड़ा करें"
 
 #, fuzzy
 #~| msgid "_New Terminal"

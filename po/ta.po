@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2014-09-15 00:01+0630\n"
 "Last-Translator: Shantha kumar <shkumar@redhat.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -53,14 +53,14 @@ msgstr "கட்டளை வரியை பயன்படுத்து"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "ஷெல்;தூண்டி;கட்டளை;கட்டளை வரி;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 #, fuzzy
 #| msgid "Window"
 msgid "New Window"
 msgstr "சாளரம்"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "விருப்பங்கள்"
 
@@ -1380,9 +1380,18 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "குறுக்கு வழிகள்"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "புதிய கீற்று"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+#, fuzzy
+#| msgid "Window"
+msgid "New _Window"
+msgstr "சாளரம்"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1398,32 +1407,40 @@ msgstr "கீற்று  மூடவும்"
 msgid "Close Other Tabs"
 msgstr "கீற்று  மூடவும்"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "கீற்று  மூடவும்"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "சாளரம் மூடவும்"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "_l சாளரத்தை மூடவும்"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+#, fuzzy
+#| msgid "Copy"
+msgid "_Copy"
 msgstr "நகல்"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+#, fuzzy
+#| msgid "Paste"
+msgid "_Paste"
 msgstr "ஒட்டு"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "அனைத்தையும் தேர்வு செய்"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_P முன்னுரிமைகள்"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1437,9 +1454,9 @@ msgstr "முந்தையதைக் கண்டுபிடி"
 msgid "Clear Highlight"
 msgstr "C சிறப்புச் சுட்டுதலை துடைக்கவும்"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "முழு-திரையிலும் காண்பி"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "முழுத்திரை (_F)"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1471,14 +1488,13 @@ msgstr "வாசிப்புக்கும் மட்டும்"
 msgid "Set Title"
 msgstr "தலைப்பை அமைக்க"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "நிலை மீள்"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "நிலை மீள் "
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "நிலை மீட்டி துப்புரவு செய்"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "_l நிலை மீட்டு துப்புரவு செய்"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1492,8 +1508,8 @@ msgstr "முந்தைய முனையத்திற்கு மாற�
 msgid "Scroll to Next Prompt"
 msgstr "(_k)விசைகளுக்கு ஏற்ப உருளவும்"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1552,30 +1568,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "கீற்று 2 க்கு மாற்றவும்"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "சோலரைஸ்டு லைட்"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "கீற்றை மூடவும்"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "சிறிதாக்கு"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1620,20 +1635,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1688,7 +1703,7 @@ msgstr "உதவி"
 msgid "Global"
 msgstr ""
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, fuzzy, c-format
 #| msgid "Switch to Tab %d"
 msgid "Switch to Tab %u"
@@ -1891,6 +1906,10 @@ msgstr "நிலை மீள்"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "புதிய கீற்று"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1906,26 +1925,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "(_b)கீற்றை திற"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-#, fuzzy
-#| msgid "Window"
-msgid "New _Window"
-msgstr "சாளரம்"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "கீற்று  மூடவும்"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1951,10 +1950,6 @@ msgstr "புதிய முனையம் புதிய சாளரத்
 msgid "_Include This Terminal"
 msgstr "முனையத்தை மூடவா?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "முழுத்திரை (_F)"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "வாசிப்புக்கும் மட்டும் (_O)"
@@ -1977,14 +1972,6 @@ msgstr "_உள்ளடக்கங்களை சேமி"
 msgid "_Advanced"
 msgstr "ரத்து (_C)"
 
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "நிலை மீள் "
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "_l நிலை மீட்டு துப்புரவு செய்"
-
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
 msgstr ""
@@ -2004,10 +1991,6 @@ msgstr ""
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "ஆய்வி (_I)"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_P முன்னுரிமைகள்"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -3014,6 +2997,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "நகல்"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "எழுத்து வகை"
@@ -3251,6 +3238,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "நிலை மீள்"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3739,28 +3730,8 @@ msgstr "_O இணைப்பை திறக்கவும்"
 msgid "Copy _Link"
 msgstr "_C இணைப்பு முகவரியை நகல் செய்"
 
-#: src/terminal-window.cc:3175
-#, fuzzy
-#| msgid "Copy"
-msgid "_Copy"
-msgstr "நகல்"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr ""
-
-#: src/terminal-window.cc:3177
-#, fuzzy
-#| msgid "Paste"
-msgid "_Paste"
-msgstr "ஒட்டு"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3799,16 +3770,6 @@ msgstr "விருப்பங்கள்"
 msgid "Split Ri_ght"
 msgstr "சோலரைஸ்டு லைட்"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "சிறிதாக்கு"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New Tab"
@@ -3821,43 +3782,15 @@ msgstr "புதிய கீற்று"
 msgid "To a New _Window"
 msgstr "சாளரம் மூடவும்"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close tab"
-msgid "Close P_ane"
-msgstr "கீற்றை மூடவும்"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "புதிய முனையம்"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "புதிய கீற்று"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3940,10 +3873,6 @@ msgstr ""
 "இந்த சாளரத்தில்  இன்னும் சில நடப்புகள் சில முனையங்களில் இயங்கிக்கொண்டு உள்ளன. சாளரத்தை "
 "மூடினால் அனைத்தும் செயலிழக்கும்."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "_l சாளரத்தை மூடவும்"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "முனையத்தை மூடவா?"
@@ -3960,6 +3889,38 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "துணையலகுகளை பகுக்க முடியவில்லை: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "கீற்று  மூடவும்"
+
+#~ msgid "Close Window"
+#~ msgstr "சாளரம் மூடவும்"
+
+#~ msgid "Paste"
+#~ msgstr "ஒட்டு"
+
+#~ msgid "Full Screen"
+#~ msgstr "முழு-திரையிலும் காண்பி"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "நிலை மீட்டி துப்புரவு செய்"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "சோலரைஸ்டு லைட்"
+
+#, fuzzy
+#~| msgid "Close tab"
+#~ msgid "Close Pane"
+#~ msgstr "கீற்றை மூடவும்"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "சிறிதாக்கு"
 
 #, fuzzy
 #~| msgid "_New Terminal"

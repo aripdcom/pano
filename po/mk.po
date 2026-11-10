@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2012-01-11 19:55+0100\n"
 "Last-Translator: Jovan N\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -46,12 +46,12 @@ msgstr "Користи ја командната линија"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr ""
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Нов прозорец"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 #, fuzzy
 #| msgid "_Profile Preferences"
 msgid "Preferences"
@@ -1400,9 +1400,18 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Кратенки на тастатурата"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Ново јазиче"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+#, fuzzy
+#| msgid "New Window"
+msgid "New _Window"
+msgstr "Нов прозорец"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1418,32 +1427,42 @@ msgstr "Затвори јазиче"
 msgid "Close Other Tabs"
 msgstr "Затвори јазиче"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Затвори јазиче"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Затвори прозорец"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "З_атвори прозорец"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+#, fuzzy
+#| msgid "Copy"
+msgid "_Copy"
 msgstr "Копирај"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+#, fuzzy
+#| msgid "Paste"
+msgid "_Paste"
 msgstr "Вметни"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr ""
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+#, fuzzy
+#| msgid "_Profile Preferences"
+msgid "_Preferences"
+msgstr "_Преференци на профил"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1457,9 +1476,9 @@ msgstr "Најди претходно"
 msgid "Clear Highlight"
 msgstr "Исчисти го обележаното"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "На цел екран"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_На цел екран"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1491,14 +1510,13 @@ msgstr ""
 msgid "Set Title"
 msgstr "Внеси наслов"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Ресетирај"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Ресетирај"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Ресетирај и исчисти"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Ресетирај и и_счисти"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1512,8 +1530,8 @@ msgstr "Премини на претходното јазиче"
 msgid "Scroll to Next Prompt"
 msgstr "Лизгај на _keystroke"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1562,28 +1580,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Премини на следното јазиче"
 
-#: src/terminal-accels.cc:240
-msgid "Split Right"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Затвори јазиче"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Зголеми"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1630,20 +1649,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1698,7 +1717,7 @@ msgstr "Помош"
 msgid "Global"
 msgstr ""
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, fuzzy, c-format
 #| msgid "Switch to Tab 1"
 msgid "Switch to Tab %u"
@@ -1899,6 +1918,10 @@ msgstr "Ресетирај"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Ново јазиче"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1914,26 +1937,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "Новo ја_зиче"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-#, fuzzy
-#| msgid "New Window"
-msgid "New _Window"
-msgstr "Нов прозорец"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Затвори јазиче"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1957,10 +1960,6 @@ msgstr ""
 msgid "_Include This Terminal"
 msgstr "Да го затворам овој терминал?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_На цел екран"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr ""
@@ -1981,14 +1980,6 @@ msgstr "_Зачувај ја содржината"
 msgid "_Advanced"
 msgstr ""
 
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Ресетирај"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Ресетирај и и_счисти"
-
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
 msgstr ""
@@ -2008,12 +1999,6 @@ msgstr ""
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr ""
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-#, fuzzy
-#| msgid "_Profile Preferences"
-msgid "_Preferences"
-msgstr "_Преференци на профил"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -3021,6 +3006,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Копирај"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "Фонт"
@@ -3258,6 +3247,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Ресетирај"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3759,28 +3752,8 @@ msgstr "_Отвори врска"
 msgid "Copy _Link"
 msgstr "_Копирај ја адресата"
 
-#: src/terminal-window.cc:3175
-#, fuzzy
-#| msgid "Copy"
-msgid "_Copy"
-msgstr "Копирај"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr ""
-
-#: src/terminal-window.cc:3177
-#, fuzzy
-#| msgid "Paste"
-msgid "_Paste"
-msgstr "Вметни"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3815,16 +3788,6 @@ msgstr "_Преференци на профил"
 msgid "Split Ri_ght"
 msgstr ""
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Зголеми"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New Tab"
@@ -3837,43 +3800,15 @@ msgstr "Ново јазиче"
 msgid "To a New _Window"
 msgstr "Нов прозорец"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Затвори јазиче"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "Terminal"
 msgid "Ne_w Terminal"
 msgstr "Терминал"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Ново јазиче"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3956,10 +3891,6 @@ msgstr ""
 "Има процеси кои сѐ уште се извршуваат во некои терминали во овој прозорец. "
 "Со затворање на прозорецот ќе ги уништите сите."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "З_атвори прозорец"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Да го затворам овој терминал?"
@@ -3976,6 +3907,33 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Не успеав да ги испарсирам аргументите: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Затвори јазиче"
+
+#~ msgid "Close Window"
+#~ msgstr "Затвори прозорец"
+
+#~ msgid "Paste"
+#~ msgstr "Вметни"
+
+#~ msgid "Full Screen"
+#~ msgstr "На цел екран"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Ресетирај и исчисти"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Затвори јазиче"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Зголеми"
 
 #, fuzzy
 #~| msgid "_Terminal"

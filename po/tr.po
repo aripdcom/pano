@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:17+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -46,12 +46,12 @@ msgstr "Komut satırını kullan"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "uçbirim;terminal;kabuk;shell;istem;prompt;komut;komut satırı;cmd;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Yeni Pencere"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Tercihler"
 
@@ -1310,9 +1310,14 @@ msgstr "Bu kısayol “%s” için kullanılıyor; o eylem kısayolsuz kalacak."
 msgid "Set Shortcut"
 msgstr "Kısayolu Ayarla"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
-msgstr "Yeni Sekme"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+msgid "_New Tab"
+msgstr "Yeni Sek_me"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "Yeni Pe_ncere"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1326,30 +1331,34 @@ msgstr "Sekmeyi Kapat"
 msgid "Close Other Tabs"
 msgstr "Diğer Sekmeleri Kapat"
 
-#: src/terminal-accels.cc:153
-msgid "Reopen Closed Tab"
-msgstr "Kapatılan Sekmeyi Yeniden Aç"
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
+msgid "Re_open Closed Tab"
+msgstr "Kapatılan Sekmeyi _Yeniden Aç"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Pencereyi Kapat"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "_Pencereyi Kapat"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "Kopyala"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_Kopyala"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "HTML Olarak Kopyala"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "_HTML Olarak Kopyala"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "Yapıştır"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "_Yapıştır"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Tümünü Seç"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_Tercihler"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1363,9 +1372,9 @@ msgstr "Öncekini Bul"
 msgid "Clear Highlight"
 msgstr "Vurgulamayı Kaldır"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Tam Ekran"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_Tam Ekran"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1395,14 +1404,13 @@ msgstr "Salt Okunur"
 msgid "Set Title"
 msgstr "Başlığı Ayarla"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Sıfırla"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Sıfırla"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Sıfırla ve Temizle"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Sıfırla ve _Temizle"
 
 #: src/terminal-accels.cc:186
 msgid "Scroll to Previous Prompt"
@@ -1412,9 +1420,9 @@ msgstr "Önceki İsteme Kaydır"
 msgid "Scroll to Next Prompt"
 msgstr "Sonraki İsteme Kaydır"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
-msgstr "Son Komutun Çıktısını Kopyala"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
+msgstr "Son Komutun _Çıktısını Kopyala"
 
 #: src/terminal-accels.cc:192
 msgid "Switch to Previous Tab"
@@ -1456,25 +1464,26 @@ msgstr "Sekme Listesine Odaklan"
 msgid "Switch to Last Tab"
 msgstr "Son Sekmeye Geç"
 
-#: src/terminal-accels.cc:240
-msgid "Split Right"
-msgstr "Sağa Böl"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
+msgstr "_Sağa Böl"
 
-#: src/terminal-accels.cc:241
-msgid "Split Down"
-msgstr "Aşağı Böl"
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr "A_şağı Böl"
 
-#: src/terminal-accels.cc:242
-msgid "Close Pane"
-msgstr "Bölmeyi Kapat"
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
+msgid "Close P_ane"
+msgstr "Bö_lmeyi Kapat"
 
-#: src/terminal-accels.cc:243
-msgid "Zoom Pane"
-msgstr "Bölmeyi Büyüt"
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
+msgid "_Zoom Pane"
+msgstr "Bölmeyi _Büyüt"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
-msgstr "Bölmeleri Aynı Boyuta Getir"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
+msgstr "B_ölmeleri Aynı Boyuta Getir"
 
 #: src/terminal-accels.cc:245
 msgid "Move Pane to a New Tab"
@@ -1512,21 +1521,21 @@ msgstr "Ayırıcıyı Yukarı Taşı"
 msgid "Move Divider Down"
 msgstr "Ayırıcıyı Aşağı Taşı"
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
-msgstr "Soldaki Bölmeyle Yer Değiştir"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
+msgstr "_Soldaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
-msgstr "Sağdaki Bölmeyle Yer Değiştir"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
+msgstr "_Sağdaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
-msgstr "Üstteki Bölmeyle Yer Değiştir"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
+msgstr "_Üstteki Bölmeyle Yer Değiştir"
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
-msgstr "Alttaki Bölmeyle Yer Değiştir"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
+msgstr "_Alttaki Bölmeyle Yer Değiştir"
 
 #: src/terminal-accels.cc:258
 msgid "Broadcast Input to This Tab"
@@ -1576,7 +1585,7 @@ msgstr "Yardım"
 msgid "Global"
 msgstr "Genel"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "%u. Sekmeye Geç"
@@ -1752,6 +1761,10 @@ msgstr "Yakınlaştırmayı Sıfırla"
 msgid "%d%%"
 msgstr "%%%d"
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Yeni Sekme"
+
 #: src/terminal-headerbar.ui:40
 msgid "New Tab from Profile"
 msgstr "Profilden Yeni Sekme"
@@ -1763,22 +1776,6 @@ msgstr "Ana Menü"
 #: src/terminal-headerbar.ui:57
 msgid "Show Open Tabs"
 msgstr "Açık Sekmeleri Göster"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "Yeni Pe_ncere"
-
-#: src/terminal-headermenu.ui:34
-msgid "Re_open Closed Tab"
-msgstr "Kapatılan Sekmeyi _Yeniden Aç"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr "_Sağa Böl"
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr "A_şağı Böl"
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1800,10 +1797,6 @@ msgstr "Bu _Penceredeki Tüm Uçbirimlere"
 msgid "_Include This Terminal"
 msgstr "Bu Uçbirimi _Dahil Et"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_Tam Ekran"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "Salt-_Okunur"
@@ -1819,14 +1812,6 @@ msgstr "İçeriği _Kaydet…"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "_Gelişmiş"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Sıfırla"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Sıfırla ve _Temizle"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1847,10 +1832,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_İnceleyici"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_Tercihler"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2805,6 +2786,10 @@ msgstr "Ad"
 msgid "Identifier"
 msgstr "Tanımlayıcı"
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Kopyala"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "Yazı Tipi"
@@ -3004,6 +2989,10 @@ msgstr "Hücre Yüksekliği Ölçeği"
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr "Karakter hücrelerinin yüksekliğini artırır"
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Sıfırla"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3431,25 +3420,9 @@ msgstr "Bağlantıyı _Aç"
 msgid "Copy _Link"
 msgstr "Bağlantıyı Ko_pyala"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_Kopyala"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "_HTML Olarak Kopyala"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "_Yapıştır"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
 msgstr "Bu Komutun _Çıktısını Kopyala"
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
-msgstr "Son Komutun _Çıktısını Kopyala"
 
 #: src/terminal-window.cc:3184
 msgid "Paste as _Filenames"
@@ -3479,14 +3452,6 @@ msgstr "Ter_cihler"
 msgid "Split Ri_ght"
 msgstr "Sa_ğa Böl"
 
-#: src/terminal-window.cc:3217
-msgid "_Zoom Pane"
-msgstr "Bölmeyi _Büyüt"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr "B_ölmeleri Aynı Boyuta Getir"
-
 #: src/terminal-window.cc:3221
 msgid "To a New _Tab"
 msgstr "Yeni Bir _Sekmeye"
@@ -3495,37 +3460,13 @@ msgstr "Yeni Bir _Sekmeye"
 msgid "To a New _Window"
 msgstr "Yeni Bir Pe_ncereye"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr "_Soldaki Bölmeyle Yer Değiştir"
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr "_Sağdaki Bölmeyle Yer Değiştir"
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr "_Üstteki Bölmeyle Yer Değiştir"
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr "_Alttaki Bölmeyle Yer Değiştir"
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr "Bölmeyi _Taşı"
 
-#: src/terminal-window.cc:3248
-msgid "Close P_ane"
-msgstr "Bö_lmeyi Kapat"
-
 #: src/terminal-window.cc:3276
 msgid "Ne_w Terminal"
 msgstr "Ye_ni Uçbirim"
-
-#: src/terminal-window.cc:3285
-msgid "_New Tab"
-msgstr "Yeni Sek_me"
 
 #: src/terminal-window.cc:3295
 msgid "Lea_ve Full Screen"
@@ -3594,10 +3535,6 @@ msgstr ""
 "Bu penceredeki bazı uçbirimlerde çalışan süreçler var. Pencereyi kapatmak "
 "tümünü sonlandırır."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "_Pencereyi Kapat"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Bu uçbirim kapatılsın mı?"
@@ -3612,6 +3549,54 @@ msgstr "Bu uçbirimde çalışan süreç var. Uçbirimi kapatmak onu sonlandıra
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Bağımsız değişkenler ayrıştırılamadı: %s\n"
+
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Kapatılan Sekmeyi Yeniden Aç"
+
+#~ msgid "Close Window"
+#~ msgstr "Pencereyi Kapat"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "HTML Olarak Kopyala"
+
+#~ msgid "Paste"
+#~ msgstr "Yapıştır"
+
+#~ msgid "Full Screen"
+#~ msgstr "Tam Ekran"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Sıfırla ve Temizle"
+
+#~ msgid "Copy Output of Last Command"
+#~ msgstr "Son Komutun Çıktısını Kopyala"
+
+#~ msgid "Split Right"
+#~ msgstr "Sağa Böl"
+
+#~ msgid "Split Down"
+#~ msgstr "Aşağı Böl"
+
+#~ msgid "Close Pane"
+#~ msgstr "Bölmeyi Kapat"
+
+#~ msgid "Zoom Pane"
+#~ msgstr "Bölmeyi Büyüt"
+
+#~ msgid "Make Panes the Same Size"
+#~ msgstr "Bölmeleri Aynı Boyuta Getir"
+
+#~ msgid "Swap With the Pane on the Left"
+#~ msgstr "Soldaki Bölmeyle Yer Değiştir"
+
+#~ msgid "Swap With the Pane on the Right"
+#~ msgstr "Sağdaki Bölmeyle Yer Değiştir"
+
+#~ msgid "Swap With the Pane Above"
+#~ msgstr "Üstteki Bölmeyle Yer Değiştir"
+
+#~ msgid "Swap With the Pane Below"
+#~ msgstr "Alttaki Bölmeyle Yer Değiştir"
 
 #~ msgid "Copy _Output of Last Command"
 #~ msgstr "Son Komutun _Çıktısını Kopyala"

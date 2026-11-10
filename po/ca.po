@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2025-03-01 09:56+0200\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -45,12 +45,12 @@ msgstr "Obriu la línia d'ordres"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "intèrpret d'ordres;indicador;ordre;línia d'ordres;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Finestra nova"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Preferències"
 
@@ -1344,9 +1344,16 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Dreceres"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Pestanya nova"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "Finestra _nova"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1362,32 +1369,36 @@ msgstr "Tanca la pestanya"
 msgid "Close Other Tabs"
 msgstr "Tanca la pestanya"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Tanca la pestanya"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Tanca la finestra"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "Tanca la _finestra"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "Copia"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_Copia"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "Copia com a HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "Copia com a _HTML"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "Enganxa"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "_Enganxa"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Selecciona-ho tot"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_Preferències"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1401,9 +1412,9 @@ msgstr "Cerca l'anterior"
 msgid "Clear Highlight"
 msgstr "Neteja el ressaltat"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Pantalla completa"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_Pantalla completa"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1437,14 +1448,13 @@ msgstr "Només lectura"
 msgid "Set Title"
 msgstr "_Estableix el títol…"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Reinicia"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Reinicia"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Reinicia i neteja"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Reinicia i _neteja"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1458,8 +1468,8 @@ msgstr "Canvia a la pestanya anterior"
 msgid "Scroll to Next Prompt"
 msgstr "Desplaçament en _prémer una tecla"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1506,30 +1516,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Canvia a l'última pestanya"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Solarized clar"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Tanca la pestanya"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Amplia el zoom"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1576,20 +1585,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1642,7 +1651,7 @@ msgstr "Ajuda"
 msgid "Global"
 msgstr "Global"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Canvia a la pestanya %u"
@@ -1844,6 +1853,10 @@ msgstr "Reinicia"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Pestanya nova"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1856,24 +1869,6 @@ msgstr ""
 
 #: src/terminal-headerbar.ui:57
 msgid "Show Open Tabs"
-msgstr ""
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "Finestra _nova"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Tanca la pestanya"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
 msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
@@ -1898,10 +1893,6 @@ msgstr ""
 msgid "_Include This Terminal"
 msgstr "Voleu tancar aquest terminal?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_Pantalla completa"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "Només _lectura"
@@ -1917,14 +1908,6 @@ msgstr "De_sa el contingut…"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "_Avançat"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Reinicia"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Reinicia i _neteja"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1945,10 +1928,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Inspector"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_Preferències"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2954,6 +2933,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Copia"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr ""
@@ -3191,6 +3174,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Reinicia"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3692,24 +3679,8 @@ msgstr "_Obre l'enllaç"
 msgid "Copy _Link"
 msgstr "_Copia l'enllaç"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_Copia"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "Copia com a _HTML"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "_Enganxa"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3746,16 +3717,6 @@ msgstr "Preferències"
 msgid "Split Ri_ght"
 msgstr "Solarized clar"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Amplia el zoom"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -3768,43 +3729,15 @@ msgstr "_Pestanya nova"
 msgid "To a New _Window"
 msgstr "Finestra _nova"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Tanca la pestanya"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "Terminal nou"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Pestanya nova"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3889,10 +3822,6 @@ msgstr ""
 "Encara s'estan executant processos en alguns terminals d'aquesta finestra. "
 "Si la tanqueu es mataran tots."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "Tanca la _finestra"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Voleu tancar aquest terminal?"
@@ -3909,6 +3838,41 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Ha fallat l'anàlisi dels arguments: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Tanca la pestanya"
+
+#~ msgid "Close Window"
+#~ msgstr "Tanca la finestra"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "Copia com a HTML"
+
+#~ msgid "Paste"
+#~ msgstr "Enganxa"
+
+#~ msgid "Full Screen"
+#~ msgstr "Pantalla completa"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Reinicia i neteja"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Solarized clar"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Tanca la pestanya"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Amplia el zoom"
 
 #~ msgid "New _Terminal"
 #~ msgstr "Terminal _nou"

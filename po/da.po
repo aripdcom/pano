@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2023-03-11 13:08+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -45,12 +45,12 @@ msgstr "Brug kommandolinjen"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "shell;skal;prompt;kommando;kommandolinje;cmd;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Nyt vindue"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Indstillinger"
 
@@ -1322,9 +1322,16 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Genvejstaster"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Nyt faneblad"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "Nyt _vindue"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1340,32 +1347,36 @@ msgstr "Luk faneblad"
 msgid "Close Other Tabs"
 msgstr "Luk faneblad"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Luk faneblad"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Luk vindue"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "_Luk vindue"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "Kopiér"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_Kopiér"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "Kopiér som HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "Kopiér som _HTML"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "Indsæt"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "I_ndsæt"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Vælg alt"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_Indstillinger"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1379,9 +1390,9 @@ msgstr "Find forrige"
 msgid "Clear Highlight"
 msgstr "Ryd fremhævning"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Fuldskærm"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_Fuldskærm"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1415,14 +1426,13 @@ msgstr "Skrivebeskyttet"
 msgid "Set Title"
 msgstr "Indstil _titel …"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Nulstil"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Nulstil"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Nulstil og ryd"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Nulstil og _ryd"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1437,8 +1447,8 @@ msgstr "Skift til forrige faneblad"
 msgid "Scroll to Next Prompt"
 msgstr "Rul ved _tastetryk"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1485,30 +1495,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Skift til sidste faneblad"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Lys solariseret"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Luk faneblad"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Zoom ind"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1555,20 +1564,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1621,7 +1630,7 @@ msgstr "Hjælp"
 msgid "Global"
 msgstr "Globalt"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Skift til faneblad %u"
@@ -1823,6 +1832,10 @@ msgstr "Nulstil"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Nyt faneblad"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1835,24 +1848,6 @@ msgstr ""
 
 #: src/terminal-headerbar.ui:57
 msgid "Show Open Tabs"
-msgstr ""
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "Nyt _vindue"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Luk faneblad"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
 msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
@@ -1877,10 +1872,6 @@ msgstr ""
 msgid "_Include This Terminal"
 msgstr "Luk terminalen?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_Fuldskærm"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "_Skrivebeskyttet"
@@ -1896,14 +1887,6 @@ msgstr "_Gem indhold …"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "_Avanceret"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Nulstil"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Nulstil og _ryd"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1924,10 +1907,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Inspektør"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_Indstillinger"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2931,6 +2910,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Kopiér"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr ""
@@ -3171,6 +3154,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Nulstil"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3677,24 +3664,8 @@ msgstr "_Åbn adresse"
 msgid "Copy _Link"
 msgstr "K_opiér link"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_Kopiér"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "Kopiér som _HTML"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "I_ndsæt"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3731,16 +3702,6 @@ msgstr "Indstillinger"
 msgid "Split Ri_ght"
 msgstr "Lys solariseret"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Zoom ind"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -3753,43 +3714,15 @@ msgstr "Nyt _faneblad"
 msgid "To a New _Window"
 msgstr "Nyt _vindue"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Luk faneblad"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "Ny terminal"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Nyt faneblad"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3871,10 +3804,6 @@ msgstr ""
 "Der kører stadig processer i nogle af vinduets terminaler. Lukning af "
 "vinduet vil dræbe dem alle."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "_Luk vindue"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Luk terminalen?"
@@ -3890,6 +3819,41 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Kunne ikke fortolke argumenter: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Luk faneblad"
+
+#~ msgid "Close Window"
+#~ msgstr "Luk vindue"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "Kopiér som HTML"
+
+#~ msgid "Paste"
+#~ msgstr "Indsæt"
+
+#~ msgid "Full Screen"
+#~ msgstr "Fuldskærm"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Nulstil og ryd"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Lys solariseret"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Luk faneblad"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Zoom ind"
 
 #~ msgid "New _Terminal"
 #~ msgstr "Ny _terminal"

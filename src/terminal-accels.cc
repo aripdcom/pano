@@ -145,21 +145,21 @@ typedef struct
   ENTRY_FULL (name, key, action, type, parameter, "win.shadow-pane")
 
 static KeyEntry file_entries[] = {
-  ENTRY (N_("New Tab"),       KEY_NEW_TAB,       "new-terminal",  "(ss)",  "('tab','current')"   ),
-  ENTRY (N_("New Window"),    KEY_NEW_WINDOW,    "new-terminal",  "(ss)",  "('window','current')"),
+  ENTRY (N_("_New Tab"),       KEY_NEW_TAB,       "new-terminal",  "(ss)",  "('tab','current')"   ),
+  ENTRY (N_("New _Window"),    KEY_NEW_WINDOW,    "new-terminal",  "(ss)",  "('window','current')"),
   ENTRY (N_("Save Contents"), KEY_SAVE_CONTENTS, "save-contents", nullptr,    nullptr                  ),
   ENTRY (N_("Close Tab"),     KEY_CLOSE_TAB,     "close",         "s",     "'tab'"               ),
   ENTRY (N_("Close Other Tabs"), KEY_CLOSE_OTHER_TABS, "close",   "s",     "'other-tabs'"        ),
-  ENTRY (N_("Reopen Closed Tab"), KEY_REOPEN_TAB, "reopen-tab",     nullptr, nullptr               ),
-  ENTRY (N_("Close Window"),  KEY_CLOSE_WINDOW,  "close",         "s",     "'window'"            ),
+  ENTRY (N_("Re_open Closed Tab"), KEY_REOPEN_TAB, "reopen-tab",     nullptr, nullptr               ),
+  ENTRY (N_("C_lose Window"),  KEY_CLOSE_WINDOW,  "close",         "s",     "'window'"            ),
 };
 
 static KeyEntry edit_entries[] = {
-  ENTRY (N_("Copy"),                KEY_COPY,                "copy",         "s", "'text'"   ),
-  ENTRY (N_("Copy as HTML"),        KEY_COPY_HTML,           "copy",         "s", "'html'"   ),
-  ENTRY (N_("Paste"),               KEY_PASTE,               "paste-text",   nullptr, nullptr      ),
+  ENTRY (N_("_Copy"),                KEY_COPY,                "copy",         "s", "'text'"   ),
+  ENTRY (N_("Copy as _HTML"),        KEY_COPY_HTML,           "copy",         "s", "'html'"   ),
+  ENTRY (N_("_Paste"),               KEY_PASTE,               "paste-text",   nullptr, nullptr      ),
   ENTRY (N_("Select All"),          KEY_SELECT_ALL,          "select-all",   nullptr, nullptr      ),
-  ENTRY (N_("Preferences"),         KEY_PREFERENCES,         "edit-preferences",  nullptr, nullptr      ),
+  ENTRY (N_("_Preferences"),         KEY_PREFERENCES,         "edit-preferences",  nullptr, nullptr      ),
 };
 
 static KeyEntry search_entries[] = {
@@ -170,7 +170,7 @@ static KeyEntry search_entries[] = {
 };
 
 static KeyEntry view_entries[] = {
-  ENTRY (N_("Full Screen"),           KEY_FULL_SCREEN,    "fullscreen",      nullptr, nullptr),
+  ENTRY (N_("_Full Screen"),           KEY_FULL_SCREEN,    "fullscreen",      nullptr, nullptr),
   ENTRY (N_("Zoom In"),               KEY_ZOOM_IN,        "zoom-in",         nullptr, nullptr),
   ENTRY (N_("Zoom Out"),              KEY_ZOOM_OUT,       "zoom-out",        nullptr, nullptr),
   ENTRY (N_("Normal Size"),           KEY_ZOOM_NORMAL,    "zoom-normal",     nullptr, nullptr),
@@ -181,11 +181,11 @@ static KeyEntry view_entries[] = {
 static KeyEntry terminal_entries[] = {
   ENTRY (N_("Read-Only"),       KEY_READ_ONLY,          "read-only", nullptr, nullptr   ),
   ENTRY (N_("Set Title"),       KEY_SET_TITLE,          "set-title", nullptr, nullptr   ),
-  ENTRY (N_("Reset"),           KEY_RESET,              "reset",     "b",  "false"),
-  ENTRY (N_("Reset and Clear"), KEY_RESET_AND_CLEAR,    "reset",     "b",  "true" ),
+  ENTRY (N_("_Reset"),           KEY_RESET,              "reset",     "b",  "false"),
+  ENTRY (N_("Reset and C_lear"), KEY_RESET_AND_CLEAR,    "reset",     "b",  "true" ),
   ENTRY_PROMPT (N_("Scroll to Previous Prompt"),    KEY_PREV_PROMPT, "scroll-to-prompt", "s", "'previous'"),
   ENTRY_PROMPT (N_("Scroll to Next Prompt"),        KEY_NEXT_PROMPT, "scroll-to-prompt", "s", "'next'"),
-  ENTRY_PROMPT (N_("Copy Output of Last Command"),  KEY_COPY_OUTPUT, "copy-output",      nullptr, nullptr),
+  ENTRY_PROMPT (N_("Copy O_utput of Last Command"),  KEY_COPY_OUTPUT, "copy-output",      nullptr, nullptr),
 };
 
 static KeyEntry tabs_entries[] = {
@@ -237,11 +237,11 @@ static KeyEntry tabs_entries[] = {
 };
 
 static KeyEntry panes_entries[] = {
-  ENTRY      (N_("Split Right"),             KEY_SPLIT_RIGHT,       "split",       "s", "'right'"),
-  ENTRY      (N_("Split Down"),              KEY_SPLIT_DOWN,        "split",       "s", "'down'" ),
-  ENTRY_PANE (N_("Close Pane"),              KEY_CLOSE_PANE,        "close-pane",  nullptr, nullptr),
-  ENTRY_PANE (N_("Zoom Pane"),               KEY_ZOOM_PANE,         "zoom-pane",   nullptr, nullptr),
-  ENTRY_PANE (N_("Make Panes the Same Size"), KEY_EQUALIZE_PANES,   "equalize-panes", nullptr, nullptr),
+  ENTRY      (N_("Split _Right"),             KEY_SPLIT_RIGHT,       "split",       "s", "'right'"),
+  ENTRY      (N_("Split _Down"),              KEY_SPLIT_DOWN,        "split",       "s", "'down'" ),
+  ENTRY_PANE (N_("Close P_ane"),              KEY_CLOSE_PANE,        "close-pane",  nullptr, nullptr),
+  ENTRY_PANE (N_("_Zoom Pane"),               KEY_ZOOM_PANE,         "zoom-pane",   nullptr, nullptr),
+  ENTRY_PANE (N_("Ma_ke Panes the Same Size"), KEY_EQUALIZE_PANES,   "equalize-panes", nullptr, nullptr),
   ENTRY_PANE (N_("Move Pane to a New Tab"),  KEY_MOVE_PANE_TO_TAB,  "move-pane",   "s", "'tab'"  ),
   ENTRY_PANE (N_("Focus the Pane on the Left"),  KEY_FOCUS_PANE_LEFT,  "pane-focus",  "s", "'left'" ),
   ENTRY_PANE (N_("Focus the Pane on the Right"), KEY_FOCUS_PANE_RIGHT, "pane-focus",  "s", "'right'"),
@@ -251,10 +251,10 @@ static KeyEntry panes_entries[] = {
   ENTRY_PANE (N_("Move Divider Right"),      KEY_RESIZE_PANE_RIGHT, "pane-resize", "s", "'right'"),
   ENTRY_PANE (N_("Move Divider Up"),         KEY_RESIZE_PANE_UP,    "pane-resize", "s", "'up'"   ),
   ENTRY_PANE (N_("Move Divider Down"),       KEY_RESIZE_PANE_DOWN,  "pane-resize", "s", "'down'" ),
-  ENTRY_PANE (N_("Swap With the Pane on the Left"),  KEY_SWAP_PANE_LEFT,  "swap-pane", "s", "'left'" ),
-  ENTRY_PANE (N_("Swap With the Pane on the Right"), KEY_SWAP_PANE_RIGHT, "swap-pane", "s", "'right'"),
-  ENTRY_PANE (N_("Swap With the Pane Above"),  KEY_SWAP_PANE_UP,     "swap-pane", "s", "'up'"   ),
-  ENTRY_PANE (N_("Swap With the Pane Below"),  KEY_SWAP_PANE_DOWN,   "swap-pane", "s", "'down'" ),
+  ENTRY_PANE (N_("Swap With the Pane on the _Left"),  KEY_SWAP_PANE_LEFT,  "swap-pane", "s", "'left'" ),
+  ENTRY_PANE (N_("Swap With the Pane on the _Right"), KEY_SWAP_PANE_RIGHT, "swap-pane", "s", "'right'"),
+  ENTRY_PANE (N_("Swap With the Pane _Above"),  KEY_SWAP_PANE_UP,     "swap-pane", "s", "'up'"   ),
+  ENTRY_PANE (N_("Swap With the Pane _Below"),  KEY_SWAP_PANE_DOWN,   "swap-pane", "s", "'down'" ),
   ENTRY      (N_("Broadcast Input to This Tab"),    KEY_BROADCAST_TAB,    "broadcast", "s", "'tab'"   ),
   ENTRY      (N_("Broadcast Input to This Window"), KEY_BROADCAST_WINDOW, "broadcast", "s", "'window'"),
 };
@@ -294,6 +294,31 @@ enum
 };
 
 static GHashTable *settings_key_to_entry;
+
+/* The translated name of @entry without its access key: the names of
+ * actions that are also in menus are the menus' strings, so that they are
+ * translated once */
+static const char *
+key_entry_get_name (const KeyEntry *entry)
+{
+  if (!entry->user_visible_name)
+    return nullptr;
+
+  auto const translated = _(entry->user_visible_name);
+  if (!strchr (translated, '_'))
+    return translated;
+
+  /* "Name(_N)", as some languages write it, and "Na_me" */
+  gs_free char *name = g_strdup (translated);
+  if (auto const paren = strstr (name, "(_"); paren && paren[2] && paren[3] == ')')
+    memmove (paren, paren + 4, strlen (paren + 4) + 1);
+  auto out = name;
+  for (auto in = name; *in; ++in)
+    if (*in != '_')
+      *out++ = *in;
+  *out = '\0';
+  return g_intern_string (g_strstrip (name));
+}
 static GSettings *keybinding_settings = nullptr;
 static GSettings *global_settings = nullptr;
 
@@ -455,7 +480,7 @@ terminal_accels_foreach_action (TerminalAccelsForeachFunc func,
       gs_free char *accel = keybinding_settings
         ? g_settings_get_string (keybinding_settings, entry->settings_key)
         : nullptr;
-      func (_(entry->user_visible_name),
+      func (key_entry_get_name (entry),
             entry->action_name,
             entry->parameter,
             accel && !g_str_equal (accel, "disabled") ? accel : nullptr,
@@ -539,7 +564,7 @@ foreach_other_with_accelerator (const char *settings_key,
       if (func)
         func (entry);
       if (!name && entry->user_visible_name)
-        name = g_strdup (_(entry->user_visible_name));
+        name = g_strdup (key_entry_get_name (entry));
     }
   }
 
@@ -599,7 +624,7 @@ terminal_accels_populate_preferences (AdwPreferencesPage *page)
 
           row = (TerminalAccelRow *)g_object_new (TERMINAL_TYPE_ACCEL_ROW,
                                                   "key", key_entry->settings_key,
-                                                  "title", _(key_entry->user_visible_name),
+                                                  "title", key_entry_get_name (key_entry),
                                                   nullptr);
           adw_preferences_group_add (group, GTK_WIDGET (row));
         }

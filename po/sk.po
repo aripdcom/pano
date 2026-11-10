@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2021-06-11 15:53+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
@@ -48,13 +48,13 @@ msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "shell;výzva;príkaz;príkazový riadok;cmd;"
 
 # Otvarat nove terminaly ako:
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Nové okno"
 
 # GtkDialog title
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Nastavenia"
 
@@ -1506,9 +1506,17 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Skratky"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Nová karta"
+
+# Otvarat nove terminaly ako:
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "Nové o_kno"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1527,32 +1535,37 @@ msgid "Close Other Tabs"
 msgstr "Zatvoriť kartu"
 
 #  tooltip
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Zatvoriť kartu"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Zatvoriť okno"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "_Zavrieť okno"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "Kopírovať"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_Kopírovať"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "Kopírovať v kóde HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "Kopírovať v kóde _HTML"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "Vložiť"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "_Vložiť"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Vybrať všetko"
+
+# menu item
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "Nas_tavenia"
 
 # PM: Nájsť nasledujúce
 #: src/terminal-accels.cc:167
@@ -1568,9 +1581,9 @@ msgstr "Nájsť predchádzajúce"
 msgid "Clear Highlight"
 msgstr "Zrušiť zvýraznenie"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Celá obrazovka"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "Na _celú obrazovku"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1605,14 +1618,13 @@ msgstr "Iba na čítanie"
 msgid "Set Title"
 msgstr "Nastaviť _titulok…"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Reštartovať"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Reštartovať"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Reštartovať a vymazať"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Reštartovať a _vymazať"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1627,8 +1639,8 @@ msgstr "Prepnúť na predchádzajúcu kartu"
 msgid "Scroll to Next Prompt"
 msgstr "Rolovať pri stlačení _klávesu"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1676,31 +1688,30 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Prepne na poslednú kartu"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Svetlo solarizovaná"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
+msgstr ""
 
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
 msgstr ""
 
 #  tooltip
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Zatvoriť kartu"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Zväčšiť"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1747,20 +1758,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1816,7 +1827,7 @@ msgstr "Pomocník"
 msgid "Global"
 msgstr "Globálne"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Prepnúť na kartu č. %u"
@@ -2032,6 +2043,10 @@ msgstr "Reštartovať"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Nová karta"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -2047,26 +2062,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "Otvoriť k_artu"
-
-# Otvarat nove terminaly ako:
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "Nové o_kno"
-
-#  tooltip
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Zatvoriť kartu"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -2092,10 +2087,6 @@ msgstr "Nový terminál v novom okne"
 msgid "_Include This Terminal"
 msgstr "Zavrieť tento terminál?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "Na _celú obrazovku"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "Iba na čítanie"
@@ -2111,14 +2102,6 @@ msgstr "_Uložiť obsah…"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "Po_kročilé"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Reštartovať"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Reštartovať a _vymazať"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -2139,11 +2122,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Inšpektor"
-
-# menu item
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "Nas_tavenia"
 
 # menu item
 #: src/terminal-headermenu.ui:160
@@ -3199,6 +3177,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Kopírovať"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr ""
@@ -3463,6 +3445,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Reštartovať"
 
 # PŠ: ja viem, že to je nepresné, ale sedí to tam...
 # tab
@@ -4004,24 +3990,8 @@ msgstr "_Otvoriť odkaz"
 msgid "Copy _Link"
 msgstr "_Kopírovať odkaz"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_Kopírovať"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "Kopírovať v kóde _HTML"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "_Vložiť"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -4059,16 +4029,6 @@ msgstr "Nastavenia"
 msgid "Split Ri_ght"
 msgstr "Svetlo solarizovaná"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Zväčšiť"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -4082,44 +4042,15 @@ msgstr "_Nová karta"
 msgid "To a New _Window"
 msgstr "Nové o_kno"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#  tooltip
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Zatvoriť kartu"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "Nový terminál"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Nová karta"
 
 # viď vyjadrenie juls
 #: src/terminal-window.cc:3295
@@ -4201,10 +4132,6 @@ msgstr ""
 "V niektorých termináloch v tomto okne stále bežia procesy. Zatvorením okna "
 "sa tieto procesy ukončia."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "_Zavrieť okno"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Zavrieť tento terminál?"
@@ -4219,6 +4146,43 @@ msgstr "V tomto termináli stále beží proces. Zatvorenie terminálu ho ukonč
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Nepodarilo sa analyzovať parametre: %s\n"
+
+#  tooltip
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Zatvoriť kartu"
+
+#~ msgid "Close Window"
+#~ msgstr "Zatvoriť okno"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "Kopírovať v kóde HTML"
+
+#~ msgid "Paste"
+#~ msgstr "Vložiť"
+
+#~ msgid "Full Screen"
+#~ msgstr "Celá obrazovka"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Reštartovať a vymazať"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Svetlo solarizovaná"
+
+#  tooltip
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Zatvoriť kartu"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Zväčšiť"
 
 #~ msgid "New _Terminal"
 #~ msgstr "Nový _terminál"

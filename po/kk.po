@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2023-08-20 14:08+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -39,12 +39,12 @@ msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr ""
 "shell;prompt;command;commandline;cmd;қоршам;сұрау;команда;командалық жол;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Жаңа терезе"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Баптаулар"
 
@@ -1315,9 +1315,16 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Жарлықтар"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Жаңа бет"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "Жаңа _терезе"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1333,32 +1340,36 @@ msgstr "Бетті жабу"
 msgid "Close Other Tabs"
 msgstr "Бетті жабу"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Бетті жабу"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Терезені жабу"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "Терезені жа_бу"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "Көшіру"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_Көшіріп алу"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "HTML ретінде көшіріп алу"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "HTML реті_нде көшіріп алу"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "Кірістіру"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "Кірі_стіру"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Барлығын таңдау"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "Қа_лаулар"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1372,9 +1383,9 @@ msgstr "Алдыңғысын табу"
 msgid "Clear Highlight"
 msgstr "Түспен ерекшелеуді алып тастау"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Толық экранға"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "Толық _экранға"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1408,14 +1419,13 @@ msgstr "Тек оқу үшін"
 msgid "Set Title"
 msgstr "А_тауын орнату…"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Тастау"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Тастау"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Тастау мен тазарту"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Тастау мен та_зарту"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1429,8 +1439,8 @@ msgstr "Алдыңғы бетке ауысу"
 msgid "Scroll to Next Prompt"
 msgstr "Бат_ырмаларды басу кезінде айналдыру"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1477,30 +1487,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Соңғы бетке ауысу"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Ақшыл жарық"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Бетті жабу"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Үлкейту"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1547,20 +1556,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1613,7 +1622,7 @@ msgstr "Көмек"
 msgid "Global"
 msgstr "Глобалды"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "%u бетке ауысу"
@@ -1815,6 +1824,10 @@ msgstr "Тастау"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Жаңа бет"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1830,24 +1843,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "_Бетті ашу"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "Жаңа _терезе"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Бетті жабу"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1873,10 +1868,6 @@ msgstr "Жаңа терминал жаңа терезеде"
 msgid "_Include This Terminal"
 msgstr "Бұл терминалды жабу керек пе?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "Толық _экранға"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "Тек-_оқу үшін"
@@ -1892,14 +1883,6 @@ msgstr "Құрамасын _сақтау…"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "Кеңейтіл_ген"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Тастау"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Тастау мен та_зарту"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1920,10 +1903,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Инспектор"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "Қа_лаулар"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2924,6 +2903,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Көшіру"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr ""
@@ -3161,6 +3144,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Тастау"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3650,24 +3637,8 @@ msgstr "Сі_лтемені ашу"
 msgid "Copy _Link"
 msgstr "Адр_есін көшіру"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_Көшіріп алу"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "HTML реті_нде көшіріп алу"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "Кірі_стіру"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3704,16 +3675,6 @@ msgstr "Баптаулар"
 msgid "Split Ri_ght"
 msgstr "Ақшыл жарық"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Үлкейту"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -3726,43 +3687,15 @@ msgstr "_Жаңа бет"
 msgid "To a New _Window"
 msgstr "Жаңа _терезе"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Бетті жабу"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "Жаңа терминал"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Жаңа бет"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3845,10 +3778,6 @@ msgstr ""
 "Бұл терезенің кейбір терминалдарында орындалып тұрған үрдістер бар. Терезені "
 "жабу оларды үзеді."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "Терезені жа_бу"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Бұл терминалды жабу керек пе?"
@@ -3864,6 +3793,41 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Аргументтерді өндеу қатемен аяқталды: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Бетті жабу"
+
+#~ msgid "Close Window"
+#~ msgstr "Терезені жабу"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "HTML ретінде көшіріп алу"
+
+#~ msgid "Paste"
+#~ msgstr "Кірістіру"
+
+#~ msgid "Full Screen"
+#~ msgstr "Толық экранға"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Тастау мен тазарту"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Ақшыл жарық"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Бетті жабу"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Үлкейту"
 
 #~ msgid "New _Terminal"
 #~ msgstr "Жаңа _терминал"

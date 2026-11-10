@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:16+0300\n"
+"POT-Creation-Date: 2026-11-11 00:18+0300\n"
 "PO-Revision-Date: 2024-01-30 10:14+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
@@ -51,12 +51,12 @@ msgstr "Use la línea de comandos"
 msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "shell;prompt;comando;línea de comandos;cmd;"
 
-#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:23
 msgid "New Window"
 msgstr "Ventana nueva"
 
-#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-preferences-window.ui:21
+#: src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -1369,9 +1369,16 @@ msgstr ""
 msgid "Set Shortcut"
 msgstr "Atajos"
 
-#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
-msgid "New Tab"
+#: src/terminal-accels.cc:148 src/terminal-window.cc:3285
+#, fuzzy
+#| msgid "New Tab"
+msgid "_New Tab"
 msgstr "Pestaña nueva"
+
+#: src/terminal-accels.cc:149 src/terminal-headermenu.ui:28
+#: src/terminal-window.cc:3281
+msgid "New _Window"
+msgstr "_Ventana nueva"
 
 #: src/terminal-accels.cc:150 src/terminal-window.cc:606
 msgid "Save Contents"
@@ -1387,32 +1394,36 @@ msgstr "Cerrar pestaña"
 msgid "Close Other Tabs"
 msgstr "Cerrar pestaña"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:153 src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Reopen Closed Tab"
+msgid "Re_open Closed Tab"
 msgstr "Cerrar pestaña"
 
-#: src/terminal-accels.cc:154
-msgid "Close Window"
-msgstr "Cerrar ventana"
+#: src/terminal-accels.cc:154 src/terminal-window.cc:5298
+msgid "C_lose Window"
+msgstr "_Cerrar ventana"
 
-#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
-#: src/terminal-profile-row.cc:56
-msgid "Copy"
-msgstr "Copiar"
+#: src/terminal-accels.cc:158 src/terminal-window.cc:3175
+msgid "_Copy"
+msgstr "_Copiar"
 
-#: src/terminal-accels.cc:159
-msgid "Copy as HTML"
-msgstr "Copiar como HTML"
+#: src/terminal-accels.cc:159 src/terminal-window.cc:3176
+msgid "Copy as _HTML"
+msgstr "Copiar como _HTML"
 
-#: src/terminal-accels.cc:160
-msgid "Paste"
-msgstr "Pegar"
+#: src/terminal-accels.cc:160 src/terminal-window.cc:3177
+msgid "_Paste"
+msgstr "_Pegar"
 
 #: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Seleccionar todo"
+
+#: src/terminal-accels.cc:162 src/terminal-headermenu.ui:155
+#: src/terminal-screen.cc:3742
+msgid "_Preferences"
+msgstr "_Preferencias"
 
 #: src/terminal-accels.cc:167
 msgid "Find Next"
@@ -1426,9 +1437,9 @@ msgstr "Buscar anterior"
 msgid "Clear Highlight"
 msgstr "Limpiar resaltado"
 
-#: src/terminal-accels.cc:173
-msgid "Full Screen"
-msgstr "Pantalla completa"
+#: src/terminal-accels.cc:173 src/terminal-headermenu.ui:78
+msgid "_Full Screen"
+msgstr "_Pantalla completa"
 
 #: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
@@ -1460,14 +1471,13 @@ msgstr "Sólo lectura"
 msgid "Set Title"
 msgstr "Establecer título"
 
-#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
-#: src/terminal-profile-editor.ui:849
-msgid "Reset"
-msgstr "Reiniciar"
+#: src/terminal-accels.cc:184 src/terminal-headermenu.ui:105
+msgid "_Reset"
+msgstr "_Reiniciar"
 
-#: src/terminal-accels.cc:185
-msgid "Reset and Clear"
-msgstr "Reiniciar y limpiar"
+#: src/terminal-accels.cc:185 src/terminal-headermenu.ui:111
+msgid "Reset and C_lear"
+msgstr "Reiniciar y _limpiar"
 
 #: src/terminal-accels.cc:186
 #, fuzzy
@@ -1481,8 +1491,8 @@ msgstr "Cambiar a la pestaña anterior"
 msgid "Scroll to Next Prompt"
 msgstr "Desplazar al pulsar _teclas"
 
-#: src/terminal-accels.cc:188
-msgid "Copy Output of Last Command"
+#: src/terminal-accels.cc:188 src/terminal-window.cc:3182
+msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-accels.cc:192
@@ -1529,30 +1539,29 @@ msgstr ""
 msgid "Switch to Last Tab"
 msgstr "Cambiar a última pestaña"
 
-#: src/terminal-accels.cc:240
-#, fuzzy
-#| msgid "Solarized light"
-msgid "Split Right"
-msgstr "Solar claro"
-
-#: src/terminal-accels.cc:241
-msgid "Split Down"
+#: src/terminal-accels.cc:240 src/terminal-headermenu.ui:39
+msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:242
+#: src/terminal-accels.cc:241 src/terminal-headermenu.ui:45
+#: src/terminal-window.cc:3213
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242 src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close Tab"
-msgid "Close Pane"
+msgid "Close P_ane"
 msgstr "Cerrar pestaña"
 
-#: src/terminal-accels.cc:243
+#: src/terminal-accels.cc:243 src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
-msgid "Zoom Pane"
+msgid "_Zoom Pane"
 msgstr "Ampliar"
 
-#: src/terminal-accels.cc:244
-msgid "Make Panes the Same Size"
+#: src/terminal-accels.cc:244 src/terminal-window.cc:3218
+msgid "Ma_ke Panes the Same Size"
 msgstr ""
 
 #: src/terminal-accels.cc:245
@@ -1599,20 +1608,20 @@ msgstr ""
 msgid "Move Divider Down"
 msgstr ""
 
-#: src/terminal-accels.cc:254
-msgid "Swap With the Pane on the Left"
+#: src/terminal-accels.cc:254 src/terminal-window.cc:3229
+msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-accels.cc:255
-msgid "Swap With the Pane on the Right"
+#: src/terminal-accels.cc:255 src/terminal-window.cc:3230
+msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-accels.cc:256
-msgid "Swap With the Pane Above"
+#: src/terminal-accels.cc:256 src/terminal-window.cc:3231
+msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-accels.cc:257
-msgid "Swap With the Pane Below"
+#: src/terminal-accels.cc:257 src/terminal-window.cc:3232
+msgid "Swap With the Pane _Below"
 msgstr ""
 
 #: src/terminal-accels.cc:258
@@ -1665,7 +1674,7 @@ msgstr "Ayuda"
 msgid "Global"
 msgstr "Global"
 
-#: src/terminal-accels.cc:417
+#: src/terminal-accels.cc:442
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Cambiar a la pestaña %u"
@@ -1867,6 +1876,10 @@ msgstr "Reiniciar"
 msgid "%d%%"
 msgstr ""
 
+#: src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "Pestaña nueva"
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1882,24 +1895,6 @@ msgstr ""
 #| msgid "Open Ta_b"
 msgid "Show Open Tabs"
 msgstr "Abrir pe_staña"
-
-#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
-msgid "New _Window"
-msgstr "_Ventana nueva"
-
-#: src/terminal-headermenu.ui:34
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Re_open Closed Tab"
-msgstr "Cerrar pestaña"
-
-#: src/terminal-headermenu.ui:39
-msgid "Split _Right"
-msgstr ""
-
-#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
-msgid "Split _Down"
-msgstr ""
 
 #: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
@@ -1925,10 +1920,6 @@ msgstr "Nueva terminal en una ventana nueva"
 msgid "_Include This Terminal"
 msgstr "¿Cerrar esta terminal?"
 
-#: src/terminal-headermenu.ui:78
-msgid "_Full Screen"
-msgstr "_Pantalla completa"
-
 #: src/terminal-headermenu.ui:85
 msgid "Read-_Only"
 msgstr "Sólo _lectura"
@@ -1944,14 +1935,6 @@ msgstr "_Guardar contenido…"
 #: src/terminal-headermenu.ui:102
 msgid "_Advanced"
 msgstr "_Avanzado"
-
-#: src/terminal-headermenu.ui:105
-msgid "_Reset"
-msgstr "_Reiniciar"
-
-#: src/terminal-headermenu.ui:111
-msgid "Reset and C_lear"
-msgstr "Reiniciar y _limpiar"
 
 #: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
@@ -1972,10 +1955,6 @@ msgstr "_4. 132×43"
 #: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Inspector"
-
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3742
-msgid "_Preferences"
-msgstr "_Preferencias"
 
 #: src/terminal-headermenu.ui:160
 msgid "_Help"
@@ -2982,6 +2961,10 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+#: src/terminal-profile-editor.ui:51 src/terminal-profile-row.cc:56
+msgid "Copy"
+msgstr "Copiar"
+
 #: src/terminal-profile-editor.ui:63
 msgid "Font"
 msgstr "Tipografía"
@@ -3219,6 +3202,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr ""
+
+#: src/terminal-profile-editor.ui:610 src/terminal-profile-editor.ui:849
+msgid "Reset"
+msgstr "Reiniciar"
 
 #: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
@@ -3721,24 +3708,8 @@ msgstr "A_brir el enlace"
 msgid "Copy _Link"
 msgstr "Copiar en_lace"
 
-#: src/terminal-window.cc:3175
-msgid "_Copy"
-msgstr "_Copiar"
-
-#: src/terminal-window.cc:3176
-msgid "Copy as _HTML"
-msgstr "Copiar como _HTML"
-
-#: src/terminal-window.cc:3177
-msgid "_Paste"
-msgstr "_Pegar"
-
 #: src/terminal-window.cc:3180
 msgid "Copy O_utput of This Command"
-msgstr ""
-
-#: src/terminal-window.cc:3182
-msgid "Copy O_utput of Last Command"
 msgstr ""
 
 #: src/terminal-window.cc:3184
@@ -3775,16 +3746,6 @@ msgstr "Preferencias"
 msgid "Split Ri_ght"
 msgstr "Solar claro"
 
-#: src/terminal-window.cc:3217
-#, fuzzy
-#| msgid "Zoom In"
-msgid "_Zoom Pane"
-msgstr "Ampliar"
-
-#: src/terminal-window.cc:3218
-msgid "Ma_ke Panes the Same Size"
-msgstr ""
-
 #: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New _Tab"
@@ -3797,43 +3758,15 @@ msgstr "_Pestaña nueva"
 msgid "To a New _Window"
 msgstr "_Ventana nueva"
 
-#: src/terminal-window.cc:3229
-msgid "Swap With the Pane on the _Left"
-msgstr ""
-
-#: src/terminal-window.cc:3230
-msgid "Swap With the Pane on the _Right"
-msgstr ""
-
-#: src/terminal-window.cc:3231
-msgid "Swap With the Pane _Above"
-msgstr ""
-
-#: src/terminal-window.cc:3232
-msgid "Swap With the Pane _Below"
-msgstr ""
-
 #: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
-
-#: src/terminal-window.cc:3248
-#, fuzzy
-#| msgid "Close Tab"
-msgid "Close P_ane"
-msgstr "Cerrar pestaña"
 
 #: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Ne_w Terminal"
 msgstr "Nueva terminal"
-
-#: src/terminal-window.cc:3285
-#, fuzzy
-#| msgid "New Tab"
-msgid "_New Tab"
-msgstr "Pestaña nueva"
 
 #: src/terminal-window.cc:3295
 #, fuzzy
@@ -3917,10 +3850,6 @@ msgstr ""
 "Aún hay procesos ejecutándose en algunas terminales de esta ventana. Cerrar "
 "la ventana matará todos los procesos."
 
-#: src/terminal-window.cc:5298
-msgid "C_lose Window"
-msgstr "_Cerrar ventana"
-
 #: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "¿Cerrar esta terminal?"
@@ -3937,6 +3866,41 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Falló al analizar los argumentos: %s\n"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Reopen Closed Tab"
+#~ msgstr "Cerrar pestaña"
+
+#~ msgid "Close Window"
+#~ msgstr "Cerrar ventana"
+
+#~ msgid "Copy as HTML"
+#~ msgstr "Copiar como HTML"
+
+#~ msgid "Paste"
+#~ msgstr "Pegar"
+
+#~ msgid "Full Screen"
+#~ msgstr "Pantalla completa"
+
+#~ msgid "Reset and Clear"
+#~ msgstr "Reiniciar y limpiar"
+
+#, fuzzy
+#~| msgid "Solarized light"
+#~ msgid "Split Right"
+#~ msgstr "Solar claro"
+
+#, fuzzy
+#~| msgid "Close Tab"
+#~ msgid "Close Pane"
+#~ msgstr "Cerrar pestaña"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom Pane"
+#~ msgstr "Ampliar"
 
 #~ msgid "New _Terminal"
 #~ msgstr "Nueva _terminal"
