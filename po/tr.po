@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:40+0300\n"
+"POT-Creation-Date: 2026-11-10 23:42+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -1294,10 +1294,24 @@ msgstr ""
 "programlar geri yüklenmez."
 
 #: src/com.aripd.Pano.gschema.xml:1004
+msgid "Whether programs may resize the window"
+msgstr "Programların pencereyi yeniden boyutlandırıp boyutlandıramayacağı"
+
+#: src/com.aripd.Pano.gschema.xml:1005
+msgid ""
+"If true, a program in the active terminal can resize the window with an "
+"escape sequence, as the resize command does. Terminals in other tabs and "
+"panes of a split tab never can."
+msgstr ""
+"Doğruysa, etkin uçbirimdeki bir program, resize komutunun yaptığı gibi bir "
+"kaçış dizisiyle pencereyi yeniden boyutlandırabilir. Diğer sekmelerdeki "
+"uçbirimler ve bölünmüş sekmenin bölmeleri bunu hiçbir zaman yapamaz."
+
+#: src/com.aripd.Pano.gschema.xml:1009
 msgid "Whether new windows get the size of the last used terminal"
 msgstr "Yeni pencerelerin son kullanılan uçbirimin boyutunu alıp almayacağı"
 
-#: src/com.aripd.Pano.gschema.xml:1005
+#: src/com.aripd.Pano.gschema.xml:1010
 msgid ""
 "When enabled, new windows use the number of columns and rows of the terminal "
 "used last, instead of the initial size of the profile."
@@ -1305,7 +1319,7 @@ msgstr ""
 "Etkinleştirildiğinde yeni pencereler profilin başlangıç boyutu yerine son "
 "kullanılan uçbirimin sütun ve satır sayısını kullanır."
 
-#: src/com.aripd.Pano.gschema.xml:1010
+#: src/com.aripd.Pano.gschema.xml:1015
 msgid "Always check whether Pano Terminal is the default terminal"
 msgstr "Her zaman Pano Terminal’in öntanımlı uçbirim olup olmadığını denetle"
 
@@ -1831,7 +1845,7 @@ msgstr "Yakınlaştırmayı _Sıfırla"
 msgid "Zoom _In"
 msgstr "_Yakınlaştır"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3241
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3246
 msgid "New _Window"
 msgstr "Yeni Pe_ncere"
 
@@ -1839,31 +1853,31 @@ msgstr "Yeni Pe_ncere"
 msgid "Re_open Closed Tab"
 msgstr "Kapatılan Sekmeyi _Yeniden Aç"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3170
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3175
 msgid "Split _Right"
 msgstr "_Sağa Böl"
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3173
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3178
 msgid "Split _Down"
 msgstr "_Aşağı Böl"
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3227
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3232
 msgid "_Broadcast Input"
 msgstr "Girdiyi _Yay"
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3213
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3218
 msgid "_Off"
 msgstr "_Kapalı"
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3214
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3219
 msgid "To All Panes in This _Tab"
 msgstr "Bu _Sekmedeki Tüm Bölmelere"
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3215
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3220
 msgid "To All Terminals in This _Window"
 msgstr "Bu _Penceredeki Tüm Uçbirimlere"
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3224
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3229
 msgid "_Include This Terminal"
 msgstr "Bu Uçbirimi _Dahil Et"
 
@@ -1871,7 +1885,7 @@ msgstr "Bu Uçbirimi _Dahil Et"
 msgid "_Full Screen"
 msgstr "_Tam Ekran"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3150
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3155
 msgid "Read-_Only"
 msgstr "Salt-_Okunur"
 
@@ -1916,7 +1930,7 @@ msgid "_Inspector"
 msgstr "_İnceleyici"
 
 #: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3584
-#: src/terminal-window.cc:3164
+#: src/terminal-window.cc:3169
 msgid "_Preferences"
 msgstr "_Tercihler"
 
@@ -1976,8 +1990,8 @@ msgstr "Uçbirimi Sa_ğa Taşı"
 msgid "_Detach Terminal"
 msgstr "Uçbirimi _Ayır"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5256
-#: src/terminal-window.cc:5266
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5261
+#: src/terminal-window.cc:5271
 msgid "C_lose Terminal"
 msgstr "_Uçbirimi Kapat"
 
@@ -2238,61 +2252,61 @@ msgstr ""
 msgid "Show per-terminal options"
 msgstr "Uçbirim başına seçenekleri göster"
 
-#: src/terminal-preferences-window.cc:169
+#: src/terminal-preferences-window.cc:170
 msgid "New Profile"
 msgstr "Yeni Profil"
 
-#: src/terminal-preferences-window.cc:199
+#: src/terminal-preferences-window.cc:200
 msgid "Pano Terminal Profiles"
 msgstr "Pano Terminal Profilleri"
 
-#: src/terminal-preferences-window.cc:202
+#: src/terminal-preferences-window.cc:203
 msgid "All Files"
 msgstr "Tüm Dosyalar"
 
 #. Translators: %s is the name of a profile
-#: src/terminal-preferences-window.cc:239
+#: src/terminal-preferences-window.cc:240
 #, c-format
 msgid "Exported “%s”"
 msgstr "“%s” dışa aktarıldı"
 
 #. Translators: %s is an error message
-#: src/terminal-preferences-window.cc:243
+#: src/terminal-preferences-window.cc:244
 #, c-format
 msgid "Could not export the profile: %s"
 msgstr "Profil dışa aktarılamadı: %s"
 
-#: src/terminal-preferences-window.cc:281
+#: src/terminal-preferences-window.cc:282
 msgid "Export Profile"
 msgstr "Profili Dışa Aktar"
 
 #. Translators: %s is an error message
-#: src/terminal-preferences-window.cc:312
+#: src/terminal-preferences-window.cc:313
 #, c-format
 msgid "Could not import the profile: %s"
 msgstr "Profil içe aktarılamadı: %s"
 
-#: src/terminal-preferences-window.cc:322
+#: src/terminal-preferences-window.cc:323
 msgid "Imported Profile"
 msgstr "İçe Aktarılan Profil"
 
 #. Translators: %s is the name of a profile
-#: src/terminal-preferences-window.cc:339
+#: src/terminal-preferences-window.cc:340
 #, c-format
 msgid "Imported “%s”"
 msgstr "“%s” içe aktarıldı"
 
-#: src/terminal-preferences-window.cc:344
+#: src/terminal-preferences-window.cc:345
 #, c-format
 msgid "Imported “%s”, skipping %u setting"
 msgid_plural "Imported “%s”, skipping %u settings"
 msgstr[0] "“%s” içe aktarıldı, %u ayar atlandı"
 
-#: src/terminal-preferences-window.cc:370
+#: src/terminal-preferences-window.cc:371
 msgid "Import Profile"
 msgstr "Profili İçe Aktar"
 
-#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3576
+#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3581
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2555,11 +2569,23 @@ msgstr ""
 "Yeni pencereleri profilin başlangıç boyutu yerine son kullanılan uçbirimin "
 "boyutuyla aç"
 
-#: src/terminal-preferences-window.ui:372
+#: src/terminal-preferences-window.ui:370
+msgid "Let Programs Resize the Window"
+msgstr "Programlar Pencereyi Yeniden Boyutlandırabilsin"
+
+#: src/terminal-preferences-window.ui:371
+msgid ""
+"With an escape sequence, as the resize command does. Only the terminal in "
+"front can"
+msgstr ""
+"resize komutunun yaptığı gibi bir kaçış dizisiyle. Yalnızca öndeki uçbirim "
+"yapabilir"
+
+#: src/terminal-preferences-window.ui:378
 msgid "Quick Terminal"
 msgstr "Hızlı Uçbirim"
 
-#: src/terminal-preferences-window.ui:373
+#: src/terminal-preferences-window.ui:379
 msgid ""
 "A terminal that you show and hide with one key. Use the system-wide shortcut "
 "below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
@@ -2569,11 +2595,11 @@ msgstr ""
 "kısayolu kullanın ya da Ayarlar → Klavye → Özel Kısayollar’a “pano-terminal "
 "--quick” komutunu ekleyin."
 
-#: src/terminal-preferences-window.ui:376
+#: src/terminal-preferences-window.ui:382
 msgid "System-Wide Shortcut"
 msgstr "Sistem Geneli Kısayol"
 
-#: src/terminal-preferences-window.ui:377
+#: src/terminal-preferences-window.ui:383
 msgid ""
 "The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
 "running in the background. Needs GNOME 48 or newer, or KDE Plasma."
@@ -2581,11 +2607,11 @@ msgstr ""
 "Masaüstü tuşu sorar; F12 önerilir. Pano Terminal bundan sonra arka planda "
 "çalışmayı sürdürür. GNOME 48 ya da daha yenisi veya KDE Plasma gerekir."
 
-#: src/terminal-preferences-window.ui:383
+#: src/terminal-preferences-window.ui:389
 msgid "GNOME Shell Extension"
 msgstr "GNOME Shell Eklentisi"
 
-#: src/terminal-preferences-window.ui:384
+#: src/terminal-preferences-window.ui:390
 msgid ""
 "On Wayland, keeps the quick terminal at the top of the screen, above other "
 "windows and on all workspaces"
@@ -2593,76 +2619,76 @@ msgstr ""
 "Wayland’de hızlı uçbirimi ekranın üstünde, diğer pencerelerin üzerinde ve "
 "tüm çalışma alanlarında tutar"
 
-#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:395
 msgid "Width"
 msgstr "Genişlik"
 
-#: src/terminal-preferences-window.ui:390
-#: src/terminal-preferences-window.ui:405
+#: src/terminal-preferences-window.ui:396
+#: src/terminal-preferences-window.ui:411
 msgid "In percent of the screen"
 msgstr "Ekranın yüzdesi cinsinden"
 
-#: src/terminal-preferences-window.ui:404
+#: src/terminal-preferences-window.ui:410
 msgid "Height"
 msgstr "Yükseklik"
 
-#: src/terminal-preferences-window.ui:419
+#: src/terminal-preferences-window.ui:425
 msgid "Hide When Another App Is Used"
 msgstr "Başka Uygulama Kullanılınca Gizle"
 
-#: src/terminal-preferences-window.ui:424
+#: src/terminal-preferences-window.ui:430
 msgid "Slide In From the Top"
 msgstr "Üstten Kayarak Gelsin"
 
-#: src/terminal-preferences-window.ui:425
+#: src/terminal-preferences-window.ui:431
 msgid "On X11, or with the GNOME Shell extension"
 msgstr "X11’de ya da GNOME Shell eklentisiyle"
 
-#: src/terminal-preferences-window.ui:432
+#: src/terminal-preferences-window.ui:438
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: src/terminal-preferences-window.ui:435
+#: src/terminal-preferences-window.ui:441
 msgid "Accelerator Key (F10 by default)"
 msgstr "Hızlandırıcı Tuş (öntanımlı F10)"
 
-#: src/terminal-preferences-window.ui:440
+#: src/terminal-preferences-window.ui:446
 msgid "View and Customize Shortcuts"
 msgstr "Kısayolları Görüntüle ve Özelleştir"
 
-#: src/terminal-preferences-window.ui:454
+#: src/terminal-preferences-window.ui:460
 msgid "Profiles"
 msgstr "Profiller"
 
-#: src/terminal-preferences-window.ui:458
+#: src/terminal-preferences-window.ui:464
 msgid "Import a profile from a file"
 msgstr "Bir dosyadan profil içe aktar"
 
-#: src/terminal-preferences-window.ui:466
+#: src/terminal-preferences-window.ui:472
 msgid "_Import…"
 msgstr "İçe _Aktar…"
 
-#: src/terminal-preferences-window.ui:497
+#: src/terminal-preferences-window.ui:503
 msgid "Application"
 msgstr "Uygulama"
 
-#: src/terminal-preferences-window.ui:500
+#: src/terminal-preferences-window.ui:506
 msgid "Import from GNOME Terminal"
 msgstr "GNOME Uçbirim’den İçe Aktar"
 
-#: src/terminal-preferences-window.ui:501
+#: src/terminal-preferences-window.ui:507
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr "Profillerini, klavye kısayollarını ve tercihlerini kopyala"
 
-#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3607
+#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3612
 msgid "_Import"
 msgstr "İçe _Aktar"
 
-#: src/terminal-preferences-window.ui:515
+#: src/terminal-preferences-window.ui:521
 msgid "Ask to Remain Default"
 msgstr "Öntanımlı Kalmak İçin Sor"
 
-#: src/terminal-preferences-window.ui:520
+#: src/terminal-preferences-window.ui:526
 msgid "Set as Default Terminal"
 msgstr "Öntanımlı Uçbirim Olarak Ayarla"
 
@@ -3435,158 +3461,158 @@ msgstr[0] ""
 msgid "Silence in a terminal"
 msgstr "Uçbirimde sessizlik"
 
-#: src/terminal-window.cc:3074
+#: src/terminal-window.cc:3079
 msgid "Open _Hyperlink"
 msgstr "K_öprüyü Aç"
 
-#: src/terminal-window.cc:3075
+#: src/terminal-window.cc:3080
 msgid "Copy Hyperlink _Address"
 msgstr "Köprü _Adresini Kopyala"
 
-#: src/terminal-window.cc:3085
+#: src/terminal-window.cc:3090
 msgid "Send Mail _To…"
 msgstr "_Posta Gönder…"
 
-#: src/terminal-window.cc:3086
+#: src/terminal-window.cc:3091
 msgid "Copy Mail _Address"
 msgstr "_Posta Adresini Kopyala"
 
-#: src/terminal-window.cc:3089
+#: src/terminal-window.cc:3094
 msgid "Call _To…"
 msgstr "_Çağrı…"
 
-#: src/terminal-window.cc:3090
+#: src/terminal-window.cc:3095
 msgid "Copy Call _Address "
 msgstr "Çağrı _Adresini Kopyala "
 
-#: src/terminal-window.cc:3095
+#: src/terminal-window.cc:3100
 msgid "_Open Link"
 msgstr "Bağlantıyı _Aç"
 
-#: src/terminal-window.cc:3096
+#: src/terminal-window.cc:3101
 msgid "Copy _Link"
 msgstr "Ba_ğlantıyı Kopyala"
 
-#: src/terminal-window.cc:3135
+#: src/terminal-window.cc:3140
 msgid "_Copy"
 msgstr "_Kopyala"
 
-#: src/terminal-window.cc:3136
+#: src/terminal-window.cc:3141
 msgid "Copy as _HTML"
 msgstr "_HTML Olarak Kopyala"
 
-#: src/terminal-window.cc:3137
+#: src/terminal-window.cc:3142
 msgid "_Paste"
 msgstr "_Yapıştır"
 
-#: src/terminal-window.cc:3140
+#: src/terminal-window.cc:3145
 msgid "Copy _Output of This Command"
 msgstr "Bu Komutun _Çıktısını Kopyala"
 
-#: src/terminal-window.cc:3142
+#: src/terminal-window.cc:3147
 msgid "Copy _Output of Last Command"
 msgstr "Son Komutun _Çıktısını Kopyala"
 
-#: src/terminal-window.cc:3144
+#: src/terminal-window.cc:3149
 msgid "Paste as _Filenames"
 msgstr "_Dosya Adları Olarak Yapıştır"
 
-#: src/terminal-window.cc:3151
+#: src/terminal-window.cc:3156
 msgid "Monitor for _Activity"
 msgstr "_Etkinliği İzle"
 
-#: src/terminal-window.cc:3152
+#: src/terminal-window.cc:3157
 msgid "Monitor for _Silence"
 msgstr "_Sessizliği İzle"
 
-#: src/terminal-window.cc:3159
+#: src/terminal-window.cc:3164
 msgid "P_rofiles"
 msgstr "P_rofiller"
 
-#: src/terminal-window.cc:3177
+#: src/terminal-window.cc:3182
 msgid "_Zoom Pane"
 msgstr "Bölmeyi _Büyüt"
 
-#: src/terminal-window.cc:3178
+#: src/terminal-window.cc:3183
 msgid "Make Panes the Same _Size"
 msgstr "Bölmeleri Aynı _Boyuta Getir"
 
-#: src/terminal-window.cc:3181
+#: src/terminal-window.cc:3186
 msgid "To a New _Tab"
 msgstr "Yeni Bir _Sekmeye"
 
-#: src/terminal-window.cc:3184
+#: src/terminal-window.cc:3189
 msgid "To a New _Window"
 msgstr "Yeni Bir Pe_ncereye"
 
-#: src/terminal-window.cc:3189
+#: src/terminal-window.cc:3194
 msgid "Swap With the Pane on the _Left"
 msgstr "_Soldaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3190
+#: src/terminal-window.cc:3195
 msgid "Swap With the Pane on the _Right"
 msgstr "_Sağdaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3191
+#: src/terminal-window.cc:3196
 msgid "Swap With the Pane _Above"
 msgstr "_Üstteki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3192
+#: src/terminal-window.cc:3197
 msgid "Swap With the Pane _Below"
 msgstr "_Alttaki Bölmeyle Yer Değiştir"
 
-#: src/terminal-window.cc:3206
+#: src/terminal-window.cc:3211
 msgid "_Move Pane"
 msgstr "Bölmeyi _Taşı"
 
-#: src/terminal-window.cc:3208
+#: src/terminal-window.cc:3213
 msgid "Close P_ane"
 msgstr "Bölmeyi _Kapat"
 
-#: src/terminal-window.cc:3236
+#: src/terminal-window.cc:3241
 msgid "New _Terminal"
 msgstr "Yeni _Uçbirim"
 
-#: src/terminal-window.cc:3245
+#: src/terminal-window.cc:3250
 msgid "New _Tab"
 msgstr "Yeni _Sekme"
 
-#: src/terminal-window.cc:3255
+#: src/terminal-window.cc:3260
 msgid "Leave Full Screen"
 msgstr "Tam Ekrandan Çık"
 
-#: src/terminal-window.cc:3602
+#: src/terminal-window.cc:3607
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 "Profilleriniz, klavye kısayollarınız ve tercihleriniz GNOME Uçbirim’den içe "
 "aktarılsın mı?"
 
-#: src/terminal-window.cc:3608 src/terminal-window.cc:4008
+#: src/terminal-window.cc:3613 src/terminal-window.cc:4013
 msgid "_No"
 msgstr "_Hayır"
 
-#: src/terminal-window.cc:4002
+#: src/terminal-window.cc:4007
 msgid "Set Pano Terminal as your default terminal?"
 msgstr "Pano Terminal öntanımlı uçbiriminiz olarak ayarlansın mı?"
 
-#: src/terminal-window.cc:4007
+#: src/terminal-window.cc:4012
 msgid "_Yes"
 msgstr "_Evet"
 
-#: src/terminal-window.cc:4077
+#: src/terminal-window.cc:4082
 msgid "_Stop"
 msgstr "_Durdur"
 
-#: src/terminal-window.cc:5250
+#: src/terminal-window.cc:5255
 msgid "Close the other terminals?"
 msgstr "Diğer uçbirimler kapatılsın mı?"
 
-#: src/terminal-window.cc:5250
+#: src/terminal-window.cc:5255
 msgid "Close the other terminal?"
 msgstr "Diğer uçbirim kapatılsın mı?"
 
-#: src/terminal-window.cc:5252
+#: src/terminal-window.cc:5257
 msgid ""
 "There are still processes running in some of the other terminals. Closing "
 "them will kill all of them."
@@ -3594,7 +3620,7 @@ msgstr ""
 "Diğer uçbirimlerin bazılarında hâlâ çalışan süreçler var. Onları kapatmak "
 "tümünü sonlandırır."
 
-#: src/terminal-window.cc:5254
+#: src/terminal-window.cc:5259
 msgid ""
 "There is still a process running in the other terminal. Closing the terminal "
 "will kill it."
@@ -3602,15 +3628,15 @@ msgstr ""
 "Diğer uçbirimde hâlâ çalışan bir süreç var. Uçbirimi kapatmak onu "
 "sonlandırır."
 
-#: src/terminal-window.cc:5256
+#: src/terminal-window.cc:5261
 msgid "C_lose Terminals"
 msgstr "Uçbirimleri _Kapat"
 
-#: src/terminal-window.cc:5258
+#: src/terminal-window.cc:5263
 msgid "Close this window?"
 msgstr "Bu pencere kapatılsın mı?"
 
-#: src/terminal-window.cc:5259
+#: src/terminal-window.cc:5264
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3618,15 +3644,15 @@ msgstr ""
 "Bu penceredeki bazı uçbirimlerde çalışan süreçler var. Pencereyi kapatmak "
 "tümünü sonlandırır."
 
-#: src/terminal-window.cc:5261
+#: src/terminal-window.cc:5266
 msgid "C_lose Window"
 msgstr "_Pencereyi Kapat"
 
-#: src/terminal-window.cc:5263
+#: src/terminal-window.cc:5268
 msgid "Close this terminal?"
 msgstr "Bu uçbirim kapatılsın mı?"
 
-#: src/terminal-window.cc:5264
+#: src/terminal-window.cc:5269
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3680,9 +3706,6 @@ msgstr "Bağımsız değişkenler ayrıştırılamadı: %s\n"
 #~ "Menü çubuğu için Alt+harf ulaşım tuşlarının çalışıp çalışmaması. Bu "
 #~ "tuşlar uçbirim içinde çalışan başka uygulamaları etkileyebilecekleri için "
 #~ "kapatılabilirler."
-
-#~ msgid "Whether to show the menubar in new windows"
-#~ msgstr "Yeni pencerelerde menu çubuğunun gösterilip gösterilmeyeceği"
 
 #~ msgid "Tab"
 #~ msgstr "Sekme"

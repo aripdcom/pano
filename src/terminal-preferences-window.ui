@@ -365,6 +365,12 @@
                 <property name="subtitle" translatable="yes">Open new windows with the size of the last used terminal instead of the initial size of the profile</property>
               </object>
             </child>
+            <child>
+              <object class="AdwSwitchRow" id="allow_resize_window">
+                <property name="title" translatable="yes">Let Programs Resize the Window</property>
+                <property name="subtitle" translatable="yes">With an escape sequence, as the resize command does. Only the terminal in front can</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

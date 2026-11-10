@@ -2925,20 +2925,25 @@ terminal_window_update_paste_sensitivity (TerminalWindow *window)
   g_simple_action_set_enabled (lookup_action (window, "paste-uris"), can_paste_uris && !read_only);
 }
 
+static inline bool
+should_update_window_size (TerminalWindow *window);
+
 static void
 screen_resize_window_cb (TerminalScreen *screen,
                          guint columns,
                          guint rows,
                          TerminalWindow* window)
 {
-  if (window->realized &&
-      window_state_is_snapped(window->window_state))
+  /* Only the terminal in front may resize the window: a terminal in a
+   * background tab or another pane is not what the user is looking at */
+  if (screen != window->active_screen ||
+      !should_update_window_size (window) ||
+      !g_settings_get_boolean (terminal_app_get_global_settings (terminal_app_get ()),
+                               TERMINAL_SETTING_ALLOW_RESIZE_WINDOW_KEY))
     return;
 
-  vte_terminal_set_size (VTE_TERMINAL (window->active_screen), columns, rows);
-
-  if (screen == window->active_screen)
-    terminal_window_update_size (window);
+  vte_terminal_set_size (VTE_TERMINAL (screen), columns, rows);
+  terminal_window_update_size (window);
 }
 
 static void

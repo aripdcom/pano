@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:40+0300\n"
+"POT-Creation-Date: 2026-11-10 23:42+0300\n"
 "PO-Revision-Date: 2009-02-14 03:46+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -1366,16 +1366,27 @@ msgid ""
 msgstr ""
 
 #: src/com.aripd.Pano.gschema.xml:1004
-msgid "Whether new windows get the size of the last used terminal"
+msgid "Whether programs may resize the window"
 msgstr ""
 
 #: src/com.aripd.Pano.gschema.xml:1005
+msgid ""
+"If true, a program in the active terminal can resize the window with an "
+"escape sequence, as the resize command does. Terminals in other tabs and "
+"panes of a split tab never can."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:1009
+msgid "Whether new windows get the size of the last used terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:1010
 msgid ""
 "When enabled, new windows use the number of columns and rows of the terminal "
 "used last, instead of the initial size of the profile."
 msgstr ""
 
-#: src/com.aripd.Pano.gschema.xml:1010
+#: src/com.aripd.Pano.gschema.xml:1015
 msgid "Always check whether Pano Terminal is the default terminal"
 msgstr ""
 
@@ -1973,7 +1984,7 @@ msgstr "Skiń"
 msgid "Zoom _In"
 msgstr "Pavialič"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3241
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3246
 #, fuzzy
 #| msgid "New Window"
 msgid "New _Window"
@@ -1985,31 +1996,31 @@ msgstr "Novaje akno"
 msgid "Re_open Closed Tab"
 msgstr "Začyni kartku"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3170
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3175
 msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3173
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3178
 msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3227
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3232
 msgid "_Broadcast Input"
 msgstr ""
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3213
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3218
 msgid "_Off"
 msgstr ""
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3214
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3219
 msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3215
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3220
 msgid "To All Terminals in This _Window"
 msgstr ""
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3224
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3229
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "_Include This Terminal"
@@ -2019,7 +2030,7 @@ msgstr "Začynić hety terminał?"
 msgid "_Full Screen"
 msgstr "_Poŭny ekran"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3150
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3155
 msgid "Read-_Only"
 msgstr ""
 
@@ -2068,7 +2079,7 @@ msgid "_Inspector"
 msgstr ""
 
 #: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3584
-#: src/terminal-window.cc:3164
+#: src/terminal-window.cc:3169
 #, fuzzy
 #| msgid "Pr_ofile Preferences"
 msgid "_Preferences"
@@ -2147,8 +2158,8 @@ msgstr "Pierasuń kartku ŭ_prava"
 msgid "_Detach Terminal"
 msgstr "_Terminał"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5256
-#: src/terminal-window.cc:5266
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5261
+#: src/terminal-window.cc:5271
 #, fuzzy
 #| msgid "_Close Terminal"
 msgid "C_lose Terminal"
@@ -2427,58 +2438,58 @@ msgstr ""
 msgid "Show per-terminal options"
 msgstr "Pakažy opcyi dla peŭnaha terminału"
 
-#: src/terminal-preferences-window.cc:169
+#: src/terminal-preferences-window.cc:170
 msgid "New Profile"
 msgstr "Novy profil"
 
-#: src/terminal-preferences-window.cc:199
+#: src/terminal-preferences-window.cc:200
 #, fuzzy
 msgid "Pano Terminal Profiles"
 msgstr "Terminał GNOME"
 
-#: src/terminal-preferences-window.cc:202
+#: src/terminal-preferences-window.cc:203
 msgid "All Files"
 msgstr "Usie fajły"
 
 #. Translators: %s is the name of a profile
-#: src/terminal-preferences-window.cc:239
+#: src/terminal-preferences-window.cc:240
 #, c-format
 msgid "Exported “%s”"
 msgstr ""
 
 #. Translators: %s is an error message
-#: src/terminal-preferences-window.cc:243
+#: src/terminal-preferences-window.cc:244
 #, fuzzy, c-format
 #| msgid "Could not open link: %s"
 msgid "Could not export the profile: %s"
 msgstr "Nie ŭdałosia adčynić spasyłku: %s"
 
-#: src/terminal-preferences-window.cc:281
+#: src/terminal-preferences-window.cc:282
 #, fuzzy
 #| msgid "Delete Profile"
 msgid "Export Profile"
 msgstr "Vydali profil"
 
 #. Translators: %s is an error message
-#: src/terminal-preferences-window.cc:312
+#: src/terminal-preferences-window.cc:313
 #, fuzzy, c-format
 #| msgid "Could not open link: %s"
 msgid "Could not import the profile: %s"
 msgstr "Nie ŭdałosia adčynić spasyłku: %s"
 
-#: src/terminal-preferences-window.cc:322
+#: src/terminal-preferences-window.cc:323
 #, fuzzy
 #| msgid "New Profile"
 msgid "Imported Profile"
 msgstr "Novy profil"
 
 #. Translators: %s is the name of a profile
-#: src/terminal-preferences-window.cc:339
+#: src/terminal-preferences-window.cc:340
 #, c-format
 msgid "Imported “%s”"
 msgstr ""
 
-#: src/terminal-preferences-window.cc:344
+#: src/terminal-preferences-window.cc:345
 #, c-format
 msgid "Imported “%s”, skipping %u setting"
 msgid_plural "Imported “%s”, skipping %u settings"
@@ -2486,13 +2497,13 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/terminal-preferences-window.cc:370
+#: src/terminal-preferences-window.cc:371
 #, fuzzy
 #| msgid "Delete Profile"
 msgid "Import Profile"
 msgstr "Vydali profil"
 
-#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3576
+#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3581
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2756,113 +2767,125 @@ msgid ""
 "initial size of the profile"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:372
+#: src/terminal-preferences-window.ui:370
+#, fuzzy
+#| msgid "Maximise the window"
+msgid "Let Programs Resize the Window"
+msgstr "Maksymalizuj akno"
+
+#: src/terminal-preferences-window.ui:371
+msgid ""
+"With an escape sequence, as the resize command does. Only the terminal in "
+"front can"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:378
 #, fuzzy
 #| msgid "Terminal"
 msgid "Quick Terminal"
 msgstr "Terminał"
 
-#: src/terminal-preferences-window.ui:373
+#: src/terminal-preferences-window.ui:379
 msgid ""
 "A terminal that you show and hide with one key. Use the system-wide shortcut "
 "below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
 "Custom Shortcuts."
 msgstr ""
 
-#: src/terminal-preferences-window.ui:376
+#: src/terminal-preferences-window.ui:382
 msgid "System-Wide Shortcut"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:377
+#: src/terminal-preferences-window.ui:383
 msgid ""
 "The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
 "running in the background. Needs GNOME 48 or newer, or KDE Plasma."
 msgstr ""
 
-#: src/terminal-preferences-window.ui:383
+#: src/terminal-preferences-window.ui:389
 msgid "GNOME Shell Extension"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:384
+#: src/terminal-preferences-window.ui:390
 msgid ""
 "On Wayland, keeps the quick terminal at the top of the screen, above other "
 "windows and on all workspaces"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:395
 msgid "Width"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:390
-#: src/terminal-preferences-window.ui:405
+#: src/terminal-preferences-window.ui:396
+#: src/terminal-preferences-window.ui:411
 msgid "In percent of the screen"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:404
+#: src/terminal-preferences-window.ui:410
 msgid "Height"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:419
+#: src/terminal-preferences-window.ui:425
 msgid "Hide When Another App Is Used"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:424
+#: src/terminal-preferences-window.ui:430
 msgid "Slide In From the Top"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:425
+#: src/terminal-preferences-window.ui:431
 msgid "On X11, or with the GNOME Shell extension"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:432
+#: src/terminal-preferences-window.ui:438
 msgid "Keyboard Shortcuts"
 msgstr "Skaroty"
 
-#: src/terminal-preferences-window.ui:435
+#: src/terminal-preferences-window.ui:441
 #, fuzzy
 #| msgid "Enable the _menu shortcut key (F10 by default)"
 msgid "Accelerator Key (F10 by default)"
 msgstr "Uklučy skarot dostupu da _menu (zmoŭčana F10)"
 
-#: src/terminal-preferences-window.ui:440
+#: src/terminal-preferences-window.ui:446
 msgid "View and Customize Shortcuts"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:454
+#: src/terminal-preferences-window.ui:460
 msgid "Profiles"
 msgstr "Profili"
 
-#: src/terminal-preferences-window.ui:458
+#: src/terminal-preferences-window.ui:464
 msgid "Import a profile from a file"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:466
+#: src/terminal-preferences-window.ui:472
 msgid "_Import…"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:497
+#: src/terminal-preferences-window.ui:503
 #, fuzzy
 #| msgid "_Action"
 msgid "Application"
 msgstr "_Dziejańnie"
 
-#: src/terminal-preferences-window.ui:500
+#: src/terminal-preferences-window.ui:506
 msgid "Import from GNOME Terminal"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:501
+#: src/terminal-preferences-window.ui:507
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3607
+#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3612
 msgid "_Import"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:515
+#: src/terminal-preferences-window.ui:521
 msgid "Ask to Remain Default"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:520
+#: src/terminal-preferences-window.ui:526
 msgid "Set as Default Terminal"
 msgstr ""
 
@@ -3734,194 +3757,194 @@ msgstr[2] ""
 msgid "Silence in a terminal"
 msgstr "Zahałovak dla terminału"
 
-#: src/terminal-window.cc:3074
+#: src/terminal-window.cc:3079
 #, fuzzy
 #| msgid "Open _Terminal"
 msgid "Open _Hyperlink"
 msgstr "Adčyni _terminał"
 
-#: src/terminal-window.cc:3075
+#: src/terminal-window.cc:3080
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy Hyperlink _Address"
 msgstr "_Skapijuj adras spasyłki"
 
-#: src/terminal-window.cc:3085
+#: src/terminal-window.cc:3090
 #, fuzzy
 #| msgid "_Send Mail To…"
 msgid "Send Mail _To…"
 msgstr "_Dašli list da..."
 
-#: src/terminal-window.cc:3086
+#: src/terminal-window.cc:3091
 #, fuzzy
 #| msgid "_Copy E-mail Address"
 msgid "Copy Mail _Address"
 msgstr "_Skapijuj adras e-mail"
 
-#: src/terminal-window.cc:3089
+#: src/terminal-window.cc:3094
 #, fuzzy
 #| msgid "C_all To…"
 msgid "Call _To…"
 msgstr "Pa_telefanuj da..."
 
-#: src/terminal-window.cc:3090
+#: src/terminal-window.cc:3095
 #, fuzzy
 #| msgid "_Copy Call Address"
 msgid "Copy Call _Address "
 msgstr "_Skapijuj adras dla telefanavańniaŭ"
 
-#: src/terminal-window.cc:3095
+#: src/terminal-window.cc:3100
 msgid "_Open Link"
 msgstr "_Adčyni spasyłku"
 
-#: src/terminal-window.cc:3096
+#: src/terminal-window.cc:3101
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy _Link"
 msgstr "_Skapijuj adras spasyłki"
 
-#: src/terminal-window.cc:3135
+#: src/terminal-window.cc:3140
 #, fuzzy
 #| msgid "Copy"
 msgid "_Copy"
 msgstr "Skapijuj"
 
-#: src/terminal-window.cc:3136
+#: src/terminal-window.cc:3141
 msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-window.cc:3137
+#: src/terminal-window.cc:3142
 #, fuzzy
 #| msgid "Paste"
 msgid "_Paste"
 msgstr "Uklej"
 
-#: src/terminal-window.cc:3140
+#: src/terminal-window.cc:3145
 msgid "Copy _Output of This Command"
 msgstr ""
 
-#: src/terminal-window.cc:3142
+#: src/terminal-window.cc:3147
 msgid "Copy _Output of Last Command"
 msgstr ""
 
-#: src/terminal-window.cc:3144
+#: src/terminal-window.cc:3149
 #, fuzzy
 #| msgid "Paste _Filenames"
 msgid "Paste as _Filenames"
 msgstr "Uklej _nazvy fajłaŭ"
 
-#: src/terminal-window.cc:3151
+#: src/terminal-window.cc:3156
 msgid "Monitor for _Activity"
 msgstr ""
 
-#: src/terminal-window.cc:3152
+#: src/terminal-window.cc:3157
 msgid "Monitor for _Silence"
 msgstr ""
 
-#: src/terminal-window.cc:3159
+#: src/terminal-window.cc:3164
 msgid "P_rofiles"
 msgstr "P_rofili"
 
-#: src/terminal-window.cc:3177
+#: src/terminal-window.cc:3182
 #, fuzzy
 #| msgid "Zoom In"
 msgid "_Zoom Pane"
 msgstr "Pavialič"
 
-#: src/terminal-window.cc:3178
+#: src/terminal-window.cc:3183
 msgid "Make Panes the Same _Size"
 msgstr ""
 
-#: src/terminal-window.cc:3181
+#: src/terminal-window.cc:3186
 #, fuzzy
 #| msgid "New Tab"
 msgid "To a New _Tab"
 msgstr "Novaja kartka"
 
-#: src/terminal-window.cc:3184
+#: src/terminal-window.cc:3189
 #, fuzzy
 #| msgid "New Window"
 msgid "To a New _Window"
 msgstr "Novaje akno"
 
-#: src/terminal-window.cc:3189
+#: src/terminal-window.cc:3194
 msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-window.cc:3190
+#: src/terminal-window.cc:3195
 msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-window.cc:3191
+#: src/terminal-window.cc:3196
 msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-window.cc:3192
+#: src/terminal-window.cc:3197
 msgid "Swap With the Pane _Below"
 msgstr ""
 
-#: src/terminal-window.cc:3206
+#: src/terminal-window.cc:3211
 msgid "_Move Pane"
 msgstr ""
 
-#: src/terminal-window.cc:3208
+#: src/terminal-window.cc:3213
 #, fuzzy
 #| msgid "Close Tab"
 msgid "Close P_ane"
 msgstr "Začyni kartku"
 
-#: src/terminal-window.cc:3236
+#: src/terminal-window.cc:3241
 #, fuzzy
 #| msgid "_Terminal"
 msgid "New _Terminal"
 msgstr "_Terminał"
 
-#: src/terminal-window.cc:3245
+#: src/terminal-window.cc:3250
 #, fuzzy
 #| msgid "New Tab"
 msgid "New _Tab"
 msgstr "Novaja kartka"
 
-#: src/terminal-window.cc:3255
+#: src/terminal-window.cc:3260
 #, fuzzy
 #| msgid "Full Screen"
 msgid "Leave Full Screen"
 msgstr "Poŭny ekran"
 
-#: src/terminal-window.cc:3602
+#: src/terminal-window.cc:3607
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3608 src/terminal-window.cc:4008
+#: src/terminal-window.cc:3613 src/terminal-window.cc:4013
 msgid "_No"
 msgstr ""
 
-#: src/terminal-window.cc:4002
+#: src/terminal-window.cc:4007
 msgid "Set Pano Terminal as your default terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:4007
+#: src/terminal-window.cc:4012
 msgid "_Yes"
 msgstr ""
 
-#: src/terminal-window.cc:4077
+#: src/terminal-window.cc:4082
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5250
+#: src/terminal-window.cc:5255
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Začynić hety terminał?"
 
-#: src/terminal-window.cc:5250
+#: src/terminal-window.cc:5255
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Začynić hety terminał?"
 
-#: src/terminal-window.cc:5252
+#: src/terminal-window.cc:5257
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3933,7 +3956,7 @@ msgstr ""
 "U hetym aknie prynamsi ŭ adnym z terminałaŭ pracuje niejki praces. Kali ty "
 "začynieš hetaje akno, tady toj praces budzie zabity."
 
-#: src/terminal-window.cc:5254
+#: src/terminal-window.cc:5259
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3945,17 +3968,17 @@ msgstr ""
 "U hetym terminale dasiul pracuje niejki praces. Kali ty začyniš hety "
 "terminał, tady toj praces budzie zabity."
 
-#: src/terminal-window.cc:5256
+#: src/terminal-window.cc:5261
 #, fuzzy
 #| msgid "_Close Terminal"
 msgid "C_lose Terminals"
 msgstr "_Začyni terminał"
 
-#: src/terminal-window.cc:5258
+#: src/terminal-window.cc:5263
 msgid "Close this window?"
 msgstr "Začynić hetaje akno?"
 
-#: src/terminal-window.cc:5259
+#: src/terminal-window.cc:5264
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -3963,15 +3986,15 @@ msgstr ""
 "U hetym aknie prynamsi ŭ adnym z terminałaŭ pracuje niejki praces. Kali ty "
 "začynieš hetaje akno, tady toj praces budzie zabity."
 
-#: src/terminal-window.cc:5261
+#: src/terminal-window.cc:5266
 msgid "C_lose Window"
 msgstr "Z_ačyni akno"
 
-#: src/terminal-window.cc:5263
+#: src/terminal-window.cc:5268
 msgid "Close this terminal?"
 msgstr "Začynić hety terminał?"
 
-#: src/terminal-window.cc:5264
+#: src/terminal-window.cc:5269
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."

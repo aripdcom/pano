@@ -69,6 +69,7 @@ struct _TerminalPreferencesWindow
   guint                 extension_signal_id;
   bool                  extension_updating;
   AdwSwitchRow         *restore_window_size;
+  AdwSwitchRow         *allow_resize_window;
   AdwComboRow          *rounded_corners;
   GListModel           *rounded_corners_model;
   AdwComboRow          *terminal_padding;
@@ -773,6 +774,11 @@ terminal_preferences_window_constructed (GObject *object)
                    "active",
                    GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
   terminal_util_g_settings_bind (settings,
+                   TERMINAL_SETTING_ALLOW_RESIZE_WINDOW_KEY,
+                   self->allow_resize_window,
+                   "active",
+                   GSettingsBindFlags(G_SETTINGS_BIND_GET | G_SETTINGS_BIND_SET));
+  terminal_util_g_settings_bind (settings,
                    TERMINAL_SETTING_ENABLE_MENU_BAR_ACCEL_KEY,
                    self->accelerator_key,
                    "active",
@@ -935,6 +941,7 @@ terminal_preferences_window_class_init (TerminalPreferencesWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_global_shortcut);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, quick_terminal_extension);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, restore_window_size);
+  gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, allow_resize_window);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_mode);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, new_terminal_modes);
   gtk_widget_class_bind_template_child (widget_class, TerminalPreferencesWindow, profiles_list_box);

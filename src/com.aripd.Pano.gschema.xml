@@ -999,6 +999,11 @@
       <description>Applies when Pano Terminal is started without arguments and no window is open. Each terminal gets a new shell in its previous working directory; running programs are not restored.</description>
     </key>
 
+    <key name="allow-resize-window" type="b">
+      <default>true</default>
+      <summary>Whether programs may resize the window</summary>
+      <description>If true, a program in the active terminal can resize the window with an escape sequence, as the resize command does. Terminals in other tabs and panes of a split tab never can.</description>
+    </key>
     <key name="restore-window-size" type="b">
       <default>false</default>
       <summary>Whether new windows get the size of the last used terminal</summary>

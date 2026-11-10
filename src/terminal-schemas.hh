@@ -124,6 +124,7 @@ G_BEGIN_DECLS
 #define TERMINAL_SETTING_NOTIFY_COMMAND_MIN_DURATION_KEY "notify-command-min-duration"
 #define TERMINAL_SETTING_SILENCE_DURATION_KEY           "silence-duration"
 #define TERMINAL_SETTING_RESTORE_WINDOW_SIZE_KEY        "restore-window-size"
+#define TERMINAL_SETTING_ALLOW_RESIZE_WINDOW_KEY        "allow-resize-window"
 
 #define TERMINAL_SETTINGS_LIST_LIST_KEY                 "list"
 #define TERMINAL_SETTINGS_LIST_DEFAULT_KEY              "default"
