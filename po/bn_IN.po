@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2021-01-04 13:56+0530\n"
 "Last-Translator: Akarshan Biswas <akarshan.biswas@hotmail.com>\n"
 "Language-Team: Bengali <anubad@lists.ankur.org.in>\n"
@@ -149,7 +149,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "Pano Terminal এমুলেটর"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -1998,48 +1998,54 @@ msgid ""
 msgstr ""
 "বিকল্পগুলি শেষ করতে \"%s\" ব্যবহার করুন এবং এর পরে কার্যকর করতে কমান্ড লাইনটি দিন।"
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" is no longer supported in this version of gnome-terminal."
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "জিনোম-টার্মিনালের এই সংস্করণে \"%s\" বিকল্পটি আর সমর্থিত নয়।"
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, c-format
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "\"%s\" এ যুক্তি একটি বৈধ কমান্ড নয়: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "একটি উইন্ডোর জন্য দুটি ভূমিকা প্রদান করা হয়েছে"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr "FD %d দুইবার পাস করা সম্ভব নয়"
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "\"%s\" কোনও বৈধ জুম ফ্যাক্টর নয়"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "জুম ফ্যাক্টর \"%g\" অত্যান্ত ক্ষুদ্র, %g ব্যবহার করা হবে\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "জুম ফ্যাক্টর \"%g\" অত্যাধিক বড়, %g ব্যবহার করা হবে\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
@@ -2047,24 +2053,24 @@ msgid ""
 msgstr ""
 "\"%s\" বিকল্পের জন্য কমান্ডটি বাকী কমান্ড লাইনে চালানোর জন্য নির্দিষ্ট করা দরকার"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr "শুধুমাত্র একবার --wait ব্যবহার করতে পারে"
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "বৈধ টার্মিন্যাল কনফিগারেশন ফাইল নয়।"
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "টার্মিন্যাল কনফিগারেশন ফাইলের বিসংগত সংস্করণ।"
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2072,134 +2078,134 @@ msgstr ""
 "অ্যাকটিভেশন nameserver-র সাথে নিবন্ধিত করা হবে না, সক্রিয় টার্মিন্যাল পুনরায় "
 "ব্যবহার করা হবে না"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "একটি টার্মিন্যাল কনফিগারেশন ফাইল লোড করুন"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "FILE"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr "এনভিরন্মেন্ত পাস করবেন না"
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 msgid "Show preferences window"
 msgstr "পছন্দ উইন্ডো প্রদর্শন করুন"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr "টার্মিনালের সাথে ইন্টারেক্ট করার জন্য এনভিরন্মেন্তের পরিবর্তনগুলি মুদ্রণ করুন"
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr "ডায়াগনস্টিক ভার্বোসিটি বৃদ্ধি করুন"
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr "সাপ্রেস আউটপুট"
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "ডিফল্ট প্রোফাইল প্রয়োগ করে নতুন উইন্ডোর মধ্যে একটি ট্যাব খোলা হবে।"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "ডিফল্ট প্রোফাইল প্রয়োগ করে সর্বশেষ উইন্ডোর মধ্যে একটি ট্যাব খোলা হবে।"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "উইন্ডো বড় করুন"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "সম্পূর্ণ পর্দায় উইন্ডো প্রদর্শন"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "উইন্ডোর মাপ সেট করুন; উদাহরণস্বরূপ: 80x24, বা 80x24+200+200 (COLSxROWS+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "উইন্ডোর ভূমিকা নির্ধারণ করুন"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "ROLE"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "বর্তমান উইন্ডোর সর্বশেষ ট্যাবটি সক্রিয় ট্যাব রূপে নির্ধারণ করা হবে"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "চিহ্নিত বিকল্পের জন্য নির্ধারিত আর্গুমেন্ট টার্মিন্যালের মধ্যে নির্বাহিত হবে"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "ডিফল্ট প্রোফাইলের পরিবর্তে, উল্লিখিত প্রোফাইল প্রয়োগ করা হবে"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 msgid "Set the initial terminal title"
 msgstr "প্রাথমিক টার্মিনাল শিরোনাম সেট করুন"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "TITLE"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "সক্রিয় ডিরেক্টরি নির্ধারণ করুন"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "চাইল্ড প্রস্থান করা পর্যন্ত অপেক্ষা করুন"
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "ফাইল ডেসক্রিপটর ফরোয়ার্ড করুন"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "টার্মিন্যালের প্রদর্শনের মাত্রা নির্ধারণ করুন (1.0 = স্বাভাবিক মাপ)"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "COMMAND"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 msgid "Pano Terminal Emulator"
 msgstr "Pano Terminal এমুলেটর"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 msgid "Show Pano Terminal options"
 msgstr "Pano Terminal সংক্রান্ত বিবিধ বিকল্প প্রদর্শন করা হবে"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2207,11 +2213,11 @@ msgstr ""
 "নতুন উইন্ডো অথবা টার্মিন্যাল ট্যাব প্রদর্শনের জন্য প্রযোজ্য বিকল্প; এর মধ্যে একাধিক "
 "নির্ধারণ করা যাবে:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "টার্মিন্যাল সংক্রান্ত বিবিধ বিকল্প প্রদর্শন করা হবে"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2219,11 +2225,11 @@ msgstr ""
 "উইন্ডো সংক্রান্ত বিকল্প; প্রথম --window অথবা --tab আর্গুমেন্টের পূর্বে ব্যবহার করা হলে, "
 "সকল উইন্ডোর জন্য ডিফল্ট মান নির্ধারণ করা হয়:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "প্রতি উইন্ডোর জন্য বিকল্প প্রদর্শন করা হবে"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2231,7 +2237,7 @@ msgstr ""
 "টার্মিন্যাল সংক্রান্ত বিকল্প; প্রথম --window অথবা --tab আর্গুমেন্টের পূর্বে ব্যবহার করা "
 "হলে, সকল উইন্ডোর জন্য ডিফল্ট মান নির্ধারণ করা হয়:"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "প্রতি টার্মিন্যালের জন্য বিকল্প প্রদর্শন করা হবে"
 

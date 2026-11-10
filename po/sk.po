@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2021-06-11 15:53+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
@@ -155,7 +155,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "Emulátor terminálu pre GNOME"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -2226,46 +2226,52 @@ msgstr ""
 "Použite znaky „%s“ na ukončenie volieb a všetko po nich spustiť v príkazovom "
 "riadku."
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "Voľba „%s“ už nie je dostupná v tejto verzii programu Pano Terminal."
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, c-format
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "Parameter pre „%s“ nie je platný príkaz: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "Dve role dané jednému oknu"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr "Nedá sa odovzdať FD %d dvakrát"
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "„%s“ nie je platný násobok zväčšenia"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "Násobok zväčšenia „%g“ je príliš malý, použije sa %g\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "Násobok zväčšenia „%g“ je príliš veľký, použije sa %g\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
@@ -2273,25 +2279,25 @@ msgid ""
 msgstr ""
 "Voľba „%s“ vyžaduje zadanie príkazu na spustenie vo zvyšku príkazového riadku"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr "Voľba --wait môže byť použitá iba raz"
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "Neplatný konfiguračný súbor terminálu."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "Nekompatibilná verzia konfiguračného súboru."
 
 # cmd desc
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2300,153 +2306,153 @@ msgstr ""
 "aktívny terminál"
 
 # cmd desc
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "Načíta konfiguračný súbor terminálu"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "SÚBOR"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr "Neprekračuje prostredie"
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 msgid "Show preferences window"
 msgstr "Zobrazí okno s nastaveniami"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr "Vypíše premenné prostredia pre interakciu s terminálom"
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr "Zvýši diagnostickú výrečnosť"
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr "Potlačí výstup"
 
 # cmd desc
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Otvorí nové okno s kartou s predvoleným profilom"
 
 #  cmd desc
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Otvorí novú kartu v naposledy otvorenom okne pre daný profil"
 
 # cmd desc
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "Maximalizuje okno"
 
 # cmd desc
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "Zobrazí na celú obrazovku"
 
 # cmd desc
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Nastaví veľkosť okna; napr.: 80x24 alebo 80x24+200+200 (STĹPCExRIADKY+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "GEOMETRIA"
 
 #  cmd desc
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "Nastaví rolu okna"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "ROLA"
 
 #  cmd desc
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Nastaví poslednú zadanú kartu ako aktívnu v jej okne"
 
 # cmd desc
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Spustí parameter tejto voľby v termináli"
 
 # cmd desc
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "Použije zadaný profil namiesto predvoleného"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "NÁZOV-PROFILU"
 
 # cmd desc
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 msgid "Set the initial terminal title"
 msgstr "Nastaví prvotný titulok terminálu"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "TITULOK"
 
 # cmd desc
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "Nastaví pracovný adresár"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "ADRESÁR"
 
 # cmd desc
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "Počká na ukončenie dcérskeho procesu"
 
 # cmd desc
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "Prepošle popisovač súboru"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "POPISOVAČ_SÚBORU"
 
 # cmd desc
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "Nastaví násobok zväčšenia pre terminál (1.0 = normálna veľkosť)"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "ZVÄČŠENIE"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "PRÍKAZ"
 
 # PM: Emulátor terminálu pre GNOME / prostredia GNOME
 # MŠ: opravene
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "Emulátor terminálu pre GNOME"
 
 # cmd desc
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "Zobraziť voľby GNOME terminálu"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2454,11 +2460,11 @@ msgstr ""
 "Voľby na otvorenie nových okien alebo kariet; určených ich môže byť viac:"
 
 # cmd desc
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "Zobrazí voľby terminálu"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2466,11 +2472,11 @@ msgstr ""
 "Voľby okna; pokiaľ je použité pred prvým parametrom --window alebo --tab, "
 "nastavuje predvolené vlastnosti pre všetky okná:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "Zobrazí voľby jednotlivých okien"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2479,7 +2485,7 @@ msgstr ""
 "tab, nastavuje predvolené vlastnosti pre všetky terminály:"
 
 #  cmd desc
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "Zobrazí voľby jednotlivých terminálov"
 

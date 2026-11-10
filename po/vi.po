@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2021-03-24 14:02+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
@@ -145,7 +145,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "Mô phỏng thiết bị cuối GNOME"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -2001,47 +2001,53 @@ msgid ""
 "it."
 msgstr "Dùng “%s” để chấm dứt tùy chọn và đặt dòng lệnh để thực thi sau nó."
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
 "Tùy chọn “%s” không còn được Pano Terminal hỗ trợ nữa kể từ phiên bản này."
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, c-format
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "Đối số tới “%s” không phải là một lệnh hợp lệ: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "Hai nhiệm vụ được trao cho cùng một cửa sổ"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr "Không thể chuyển FD %d hai lần"
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "“%s” không phải là một hệ số thu phóng hợp lệ"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "Hệ số thu phóng “%g” quá nhỏ nên đang dùng “%g”.\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "Hệ số thu phóng “%g” quá lớn nên đang dùng “%g”.\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
@@ -2050,24 +2056,24 @@ msgstr ""
 "Tùy chọn “%s” yêu cầu xác định câu lệnh cần chạy trên phần còn lại của dòng "
 "lệnh"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr "Chỉ được dùng --wait một lần"
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "Không phải là một tập tin cấu hình thiết bị hợp lệ."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "Phiên bản tập tin cấu hình thiết bị cuối không tương thích."
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2075,135 +2081,135 @@ msgstr ""
 "Không đăng ký với máý chủ tên hoạt hóa, không dùng lại thiết bị cuối đang "
 "hoạt động"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "Nạp một tập tin cấu hình thiết bị cuối"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "TẬP_TIN"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr "Đừng có chuyển qua môi trường"
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 msgid "Show preferences window"
 msgstr "Hiện cửa sổ các tùy chọn"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr "In các biến môi trường tương tác với thiết bị cuối"
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr "Gia tăng thông báo chi tiết lỗi"
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr "Chặn mọi kết xuất"
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Mở cửa sổ mới chứa một thanh với hồ sơ mặc định"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Mở một thanh mới trong cửa sổ được mở cuối cùng với hồ sơ mặc định"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "Phóng to hết cỡ cửa sổ"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "Đặt cửa sổ chiếm toàn màn hình"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr "Đặt kích thước cửa sổ; ví dụ: 80x24, hay 80x24+200+200 (HÀNGxCỘT+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "TỌA_ĐỘ"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "Đặt vai trò cửa sổ"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "VAI_TRÒ"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Đặt thanh xác định cuối là thanh hoạt động trong cửa sổ của nó"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Thực hiện đối số tới tùy chọn này bên trong thiết bị cuối"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "Dùng hồ sơ đưa ra thay cho hồ sơ mặc định"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "TÊN_HỒ_SƠ"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 msgid "Set the initial terminal title"
 msgstr "Đặt tựa đề thiết bị cuối khởi tạo"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "TỰA_ĐỀ"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "Đặt thư mục làm việc"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "TÊN_THƯ_MỤC"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "Chờ đến khi tiến trình con kết thúc"
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "Chuyển tiếp bộ mô tả tập tin"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "Đặt hệ số thu phóng của thiết bị cuối (1.0 = kích cỡ bình thường)"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "THU_PHÓNG"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "LỆNH"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "Mô phỏng thiết bị cuối GNOME"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "Hiện tùy chọn của Thiết bị cuối GNOME"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2211,11 +2217,11 @@ msgstr ""
 "Các tùy chọn để mở cửa sổ hay thanh thiết bị cuối; cũng có thể bật đồng thời "
 "nhiều tùy chọn:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "Hiện các tùy chọn về thiết bị cuối"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2223,11 +2229,11 @@ msgstr ""
 "Các tùy chọn về cửa sổ; nếu đặt đằng trước đối số “--window” (cửa sổ) hay “--"
 "tab” (thanh) thứ nhất thì đặt giá trị mặc định cho mọi cửa sổ:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "Hiện các tùy chọn cho mỗi cửa sổ"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2235,7 +2241,7 @@ msgstr ""
 "Các tùy chọn về thiết bị cuối; nếu đặt đằng trước đối số “--window” (cửa sổ) "
 "hay “--tab” (thanh) thứ nhất thì đặt giá trị mặc định cho mọi cửa sổ:"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "Hiện các tùy chọn cho mỗi thiết bị cuối"
 

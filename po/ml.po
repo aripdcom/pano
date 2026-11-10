@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thengos\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2018-10-26 11:41+0530\n"
 "Last-Translator: Ranjith Siji <ranjith.sajeev@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -145,7 +145,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -2013,50 +2013,56 @@ msgid ""
 "it."
 msgstr ""
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, fuzzy, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "\"%s\" എന്ന ഐച്ഛികം ഗ്നോം ടെര്‍മിനലിന്റെ ഈ പതിപ്പിൽ പിന്‍തുണയ്ക്കുന്നില്ല."
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, fuzzy, c-format
 #| msgid "Argument to \"%s\" is not a valid command: %s"
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "\"%s\"-ലേക്കുളള ആര്‍ഗ്യുമെന്റ് അസാധുവായ ഒരു ആജ്ഞയാണ്: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "ഒരു ജാലകത്തിനു് രണ്ടു് ജോലികള്‍ നല്‍കിയിരിക്കുന്നു"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr ""
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, fuzzy, c-format
 #| msgid "\"%s\" is not a valid zoom factor"
 msgid "“%s” is not a valid zoom factor"
 msgstr "\"%s\" ശരിയായ സൂം ഫാക്ടര്‍ അല്ല"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ ചെറുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "സൂം ഫാക്ടര്‍ \"%g\" വളരെ വലുതാണു്, അതിനാല്‍ %g ഉപയോഗിക്കുന്നു\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2067,24 +2073,24 @@ msgid ""
 msgstr ""
 "\"%s\" ഐച്ഛികത്തിനു്, ബാക്കിയുള്ള കമാന്‍ഡ് ലൈനില്‍ പ്രവര്‍ത്തിപ്പിക്കുന്നതിനായി കമാന്‍ഡ് നല്‍കേണ്ടതുണ്ടു്"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr ""
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "ശരിയായ ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ അല്ല."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "പൊരുത്തപ്പെടാത്ത ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ പതിപ്പു്."
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2092,137 +2098,137 @@ msgstr ""
 "ആക്ടിവേഷന്‍ nameserver ഉപയോഗിച്ചു് രജിസ്ടര്‍ ചെയ്യരുതു്, സജീവമായ ഒരു ടെര്‍മിനല്‍ വീണ്ടും "
 "ഉപയോഗിക്കരുതു്"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "ഒരു ടെര്‍മിനല്‍ ക്രമീകരണ ഫയല്‍ ലഭ്യമാക്കുക"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "FILE"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr ""
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 msgid "Show preferences window"
 msgstr "മുന്‍ഗണനാ ജാലകം കാണിക്കുക"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr ""
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr ""
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr "ഔട്ട്പുട്ട് കാണിക്കണ്ട"
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉള്ള ഒരു പുതിയ കിളിവാതില്‍ അടങ്ങുന്ന പുതിയ ഒരു ജാലകം തുറക്കുക"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "ഒടുവില്‍ തുറന്ന ജാലകത്തില്‍ സ്വതവേയുള്ള പ്രൊഫൈല്‍ ഉപയോഗിച്ചു് ഒരു പുതിയ കിളിവാതിലില്‍ തുറക്കുക"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "ജാലകം വലുതാക്കുക"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "ജാലകം പൂര്‍ണ്ണവലിപ്പത്തിലാക്കുക"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "ജാലകത്തിനുള്ള വലിപ്പം ക്രമീകരിക്കുക; ഉദാഹരണത്തിനു്: 80x24, അല്ലെങ്കില്‍ 80x24+200+200 "
 "(COLSxROWS+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "ജാലകത്തിനുള്ള റോള്‍ സജ്ജമാക്കകു"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "ROLE"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "ജാലകത്തില്‍ ഏറ്റവും ഒടുവില്‍ പറഞ്ഞിരിക്കുന്ന കിളിവാതില്‍ സജീവമായി ക്രമീകരിക്കുക"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "ടെര്‍മിനലിനുള്ളിലുള്ള ഈ ഉപാധിയിലേക്കു് ആര്‍ഗ്യുമെന്റ് പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "സ്വതവേയുള്ള പ്രൊഫൈലിനു് പകരം നല്‍കിയിരിക്കുന്ന പ്രൊഫൈല്‍ ഉപയോഗിക്കുക"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 msgid "Set the initial terminal title"
 msgstr "ടെര്‍മിനലിനുള്ള ആദ്യ തലക്കെട്ടു് സജ്ജമാക്കുക"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "TITLE"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "പ്രവര്‍ത്തനത്തിലുള്ള തട്ടു് സജ്ജമാക്കുക"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "ചൈല്‍ഡ് തീരുന്നതുവരെ കാത്തിരിക്കുക"
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "ഫയല്‍ വിവരണം കൈമാറുക"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "ടെര്‍മിനലിനുള്ള സൂം ഫാക്ടര്‍ സജ്ജമാക്കുക (1.0 = സാധാരണ വലിപ്പം)"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "COMMAND"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ എമ്യുലേറ്റര്‍"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "ഗ്നോം ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2230,11 +2236,11 @@ msgstr ""
 "പുതിയ ജാലകങ്ങളും ടെര്‍മിനല്‍ റ്റാബുകളും തുറക്കുന്നതിനുള്ള ഐച്ഛികങ്ങള്‍; ഇവയില്‍ ഒന്നില്‍ കൂടുതല്‍ "
 "നിഷ്കര്‍ഷിക്കാം:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2242,11 +2248,11 @@ msgstr ""
 "ജാലകത്തിന്റെ ഐച്ഛികങ്ങള്‍; ആദ്യത്തെ --window അല്ലെങ്കില്‍ --tab ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി "
 "ഉപായോഗിച്ചാല്‍, എല്ലാ ജാലകങ്ങള്‍ക്കും സ്വതവേയുള്ളതായി സജ്ജമാക്കുന്നു:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "ഓരോ ജാലകത്തിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2254,7 +2260,7 @@ msgstr ""
 "ടെര്‍മിനല്‍ ഐച്ഛികങ്ങള്‍; ആദ്യത്തെ --window അല്ലെങ്കില്‍ --tab ആര്‍ഗ്യുമെന്റിനു് മുമ്പായി "
 "ഉപായോഗിച്ചാല്‍, എല്ലാ ടെര്‍മിനലുകള്‍ക്കും സഹജമായി സജ്ജമാക്കുന്നു:"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "ഓരോ ടെര്‍മിനലിലുമുള്ള ഐച്ഛികങ്ങള്‍ കാണിക്കുക"
 

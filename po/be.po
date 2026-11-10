@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2026-09-10 03:10+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -140,7 +140,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "Зрабіць тэрмінал GNOME _прадвызначаным тэрміналам?"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -1972,47 +1972,53 @@ msgstr ""
 "Выкарыстайце «%s», каб скончыць спіс параметраў, і змясціце далей камандны "
 "радок, які трэба выканаць."
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "Гэта версія Pano Terminal больш не падтрымлівае параметр «%s»."
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr "Немагчыма ўказаць для выканання больш за адну каманду"
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, c-format
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "Аргумент да «%s» не з'яўляецца прыдатнай камандай: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "Для аднаго акна прызначаны дзве ролі"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr "Нельга перадаць FD %d два разы"
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "Недапушчальны каэфіцыент маштабавання «%s»"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "Каэфіцыент маштабавання «%g» занадта малы, таму выкарыстоўваецца %g\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr ""
 "Каэфіцыент маштабавання «%g» занадта вялікі, таму выкарыстоўваецца %g\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
@@ -2021,24 +2027,24 @@ msgstr ""
 "Параметр «%s» патрабуе азначэння каманды для запуску ў астатняй частцы "
 "каманднага радка"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr "Занадта шмат аргументаў"
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr "Параметр --wait можна выкарыстаць толькі адзін раз"
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "Няправільны файл канфігурацыі тэрмінала."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "Несумяшчальная версія файла канфігурацыі тэрмінала."
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
@@ -2046,138 +2052,138 @@ msgstr ""
 "Не рэгістравацца з дапамогай актывацыйнага сервера назваў, не ўжываць "
 "паўторна актыўны тэрмінал"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "Загрузіць файл канфігурацыі тэрмінала"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr "Не перадаваць асяроддзе"
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 msgid "Show preferences window"
 msgstr "Паказаць акно налад"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr "Вывесці пераменныя асяроддзя для ўзаемадзеяння з тэрміналам"
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr "Больш падрабязная дыягностыка"
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr "Сцішыць вывад"
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Адкрыць укладку з прадвызначаным профілем у новым акне"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Адкрыць новую ўкладку з прадвызначаным профілем у апошнім адкрытым акне"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "Разгарнуць акно"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "Поўнаэкранны рэжым акна"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Задаць памер акна. Напрыклад: 80x24 або 80x24+200+200 (СЛУПКІxРАДКІ+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "ГЕАМЕТРЫЯ"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "Задаць ролю акна"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "РОЛЯ"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Зрабіць апошнюю вызначаную ўкладку актыўнай яе акне"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Выканаць аргумент гэтага параметра ў тэрмінале"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "Выкарыстоўваць указаны профіль замест прадвызначанага"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "ПРОФІЛЬ"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 msgid "Set the initial terminal title"
 msgstr "Задаць пачатковы загаловак тэрмінала"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "ЗАГАЛОВАК"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "Задаць працоўны каталог"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "КАТАЛОГ"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "Чакаць заканчэння працы нашчадка"
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "Перанакіраваць файлавы дэскрыптар"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr ""
 "Задаць каэфіцыент маштабавання тэксту ў тэрмінале (1.0 = звычайны памер)"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "МАШТАБ"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "КАМАНДА"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "Эмулятар тэрмінала GNOME"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "Паказаць параметры тэрмінала GNOME"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2185,11 +2191,11 @@ msgstr ""
 "Параметры для адкрыцця новых вокнаў і ўкладак тэрмінала. Можна ўказаць больш "
 "за адзін параметр:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "Паказаць параметры тэрмінала"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2197,11 +2203,11 @@ msgstr ""
 "Параметры акна. Калі ўжыты перад першым аргументам --window ці --tab, "
 "прызначаюць налады для ўсіх вокнаў:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "Паказаць параметры для асобных вокнаў"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2209,7 +2215,7 @@ msgstr ""
 "Параметры тэрмінала. Калі ўжыты перад першым аргументам --window ці --tab, "
 "прызначаюць налады для ўсіх тэрміналаў:"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "Паказаць параметры для асобных тэрміналаў"
 

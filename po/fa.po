@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal gnome-2-12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2023-11-25 15:10+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
@@ -141,7 +141,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "تنظیم پایانهٔ گنوم به پایانهٔ پیش‌گزیده‌تان؟"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -1992,46 +1992,52 @@ msgstr ""
 "برای پایان بردن گزینه و باز گرداندن خط فرمان اجرایی پس از آن، از «%s» "
 "استفاده کنید."
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, fuzzy, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "گزینهٔ «%s» دیگر در این نسخه از پایانهٔ گنوم پشتیبانی نمی‌شود."
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, c-format
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "آرگومان «%s» فرمان معتبری نیست: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "دو نقش به یک پنجره داده شده است"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr "نمی‌توان FD %Id را دوبار ارسال کرد"
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "«%s» عامل بزرگ‌نمایی معتبری نیست"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "عامل بزرگنمایی «%g» خیلی کوچک است، از %g استفاده می‌شود\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "عامل بزرگنمایی «%g» خیلی بزرگ است، از %g استفاده می‌شود\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
@@ -2039,160 +2045,160 @@ msgid ""
 msgstr ""
 "گزینهٔ «%s» نیاز به مشخص کردن فرمانی دارد که روی بقیهٔ خط فرمان اجرا می‌شود"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr "تنها یک بار می‌توان از wait استفاده کرد"
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "پروندهٔ تنظیمات پایانهٔ نامعتبر."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "نسخهٔ ناسازگار پروندهٔ تنظیمات پایانه‌."
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 "ثبت نکردن نام کارساز به کار اندازی، استفاده نشدن دوباره از یک پایانهٔ فعال"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "بارکردن یک پروندهٔ تنظیمات پایانه"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "FILE"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr "نفرستادن محیط"
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 msgid "Show preferences window"
 msgstr "نمایش پنجره ترجیحات"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr "چاپ متغیّرهای محیطی برای تعامل با پایانه"
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr "افزایش پرگویی برشناختی"
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr "حذف خروجی"
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "گشودن یک پنجرهٔ جدید حاوی یک زبانه با نمایه پیش‌گزیده"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "گشودن یک زبانهٔ جدید در آخرین پنجرهٔ باز شده با نمایه پیش‌گزیده"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "بیشینه کردن پنجره"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "تمام‌صفحه کردن پنجره"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "تنظیم اندازهٔ پنجره؛ مثلا: ۸۰x۲۴, یا ۸۰x۲۴+۲۰۰+۲۰۰ (ردیف‌هاxستون‌ها+ایکس+ایگرگ)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "GEOMETRY"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "مشخص کردن نقش پایانه"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "ROLE"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "تنظیم آخرین زبانهٔ مشخص شده به عنوان زبانهٔ فعال پنجره‌اش"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "اجرای آرگومان این گزینه داخل پایانه"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "از نمایه داده شده به‌جای نمایه پیش‌گزیده استفاده شود"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "نام نمایه"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 msgid "Set the initial terminal title"
 msgstr "تنظیم عنوان ابتدایی پنجره پایانه"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "TITLE"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "شاخهٔ کاری پایانه را تنظیم کنید"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "DIRNAME"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "صبر تا خروج فرزند"
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "ارسال شرح‌دهنده ی پرونده"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "تنظیم عامل زوم پایانه (۱٫۰ = اندازهٔ عادی)‏"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "COMMAND"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "شبیه‌ساز پایانهٔ گنوم"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "گزینه‌های پایانهٔ گنوم نمایش داده شوند"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2200,11 +2206,11 @@ msgstr ""
 "گزینه‌هایی برای گشودن پنجره‌ها زبانه‌های جدید پایانه؛ بیش از یکی از این‌ها را "
 "می‌توان مشخص کرد:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "نمایش گزینه‌های پایانه"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2212,11 +2218,11 @@ msgstr ""
 "گزینه‌های پنجره؛ اگر پیش از اولین اولین آرگومان --window یا --tab استفاده شده "
 "باشد، پیش‌گزیده همهٔ پنجره‌ها را مشخص می‌کند:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "نشان دادن گزینه‌های به ازای هر پنجره"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2224,7 +2230,7 @@ msgstr ""
 "گزینه‌های پایانه؛ اگر پیش از اولین اولین آرگومان --window یا --tab استفاده "
 "شده باشد، پیش‌گزیده همهٔ پایانه‌ها را مشخص می‌کند:"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "گزینه‌های (به ازای هر) پایانه‌ نمایش داده شوند"
 

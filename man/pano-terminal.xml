@@ -84,14 +84,6 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term><option>--help-gtk</option></term>
-        <listitem>
-          <para>
-            Show all the GTK options.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
         <term><option>--help-terminal</option></term>
         <listitem>
           <para>
@@ -132,6 +124,23 @@
         <listitem>
           <para>
             Show the preferences window.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>--quick</option></term>
+        <listitem>
+          <para>
+            Show the quick terminal, or hide it if it is shown.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>--no-environment</option></term>
+        <listitem>
+          <para>
+            Do not pass the environment of <command>pano-terminal</command>
+            to the terminals it opens.
           </para>
         </listitem>
       </varlistentry>
@@ -214,6 +223,26 @@
             For example, instead of
             <userinput>pano-terminal -x python3 -q</userinput>, prefer to use
             <userinput>pano-terminal -- python3 -q</userinput>.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-- PROGRAM [ARGS]</option></term>
+        <listitem>
+          <para>
+            Stop parsing options, and run the program with its arguments in
+            the terminal of the last <option>--tab</option> or
+            <option>--window</option> before it, or in a new window.
+          </para>
+          <para>
+            As everything after <option>--</option> belongs to the program,
+            further <option>--tab</option> and <option>--window</option>
+            options cannot follow it. To open several tabs with different
+            programs, run <command>pano-terminal --tab -- PROGRAM</command>
+            once for each of them, for example from a terminal of the window
+            that should get them, or give each tab its program with the
+            deprecated <option>--command</option>, which does not stop
+            parsing options.
           </para>
         </listitem>
       </varlistentry>
@@ -322,78 +351,6 @@
           </para>
         </listitem>
       </varlistentry>
-      <varlistentry>
-        <term><option>--class=CLASS</option></term>
-        <listitem>
-          <para>
-            Program class as used by the window manager.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--display=DISPLAY</option></term>
-        <listitem>
-          <para>
-            X display to use.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--g-fatal-warnings</option></term>
-        <listitem>
-          <para>
-            Make all warnings fatal.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--gdk-debug=FLAGS</option></term>
-        <listitem>
-          <para>
-            GDK debugging flags to set.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--gdk-no-debug=FLAGS</option></term>
-        <listitem>
-          <para>
-            GDK debugging flags to unset.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--gtk-debug=FLAGS</option></term>
-        <listitem>
-          <para>
-            GTK debugging flags to set.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--gtk-no-debug=FLAGS</option></term>
-        <listitem>
-          <para>
-            GTK debugging flags to unset.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--gtk-module=MODULES</option></term>
-        <listitem>
-          <para>
-            Load additional GTK modules.
-          </para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>--name=NAME</option></term>
-        <listitem>
-          <para>
-            Program name as used by the window manager.
-          </para>
-        </listitem>
-      </varlistentry>
     </variablelist>
   </refsect1>
 
@@ -418,6 +375,12 @@
       separate shell script, or use <literal>sh -c</literal>:
       <literallayout>
         pano-terminal -- sh -c 'if [ "$(id -u)" = 0 ]; then ...'
+      </literallayout>
+    </para>
+    <para>
+      To open a window with two tabs that run different programs:
+      <literallayout>
+        pano-terminal --tab --command=htop --tab --command='journalctl -f'
       </literallayout>
     </para>
   </refsect1>

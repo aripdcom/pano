@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2012-01-11 19:55+0100\n"
 "Last-Translator: Jovan N\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -130,7 +130,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "GNOME емулатор за терминал"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -2100,50 +2100,56 @@ msgid ""
 "it."
 msgstr ""
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, fuzzy, c-format
 #| msgid "Argument to \"%s\" is not a valid command: %s"
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "Аргументот до „%s“ е невалидна команда: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "Дадени се две улоги на еден прозорец"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr ""
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, fuzzy, c-format
 #| msgid "\"%s\" is not a valid zoom factor"
 msgid "“%s” is not a valid zoom factor"
 msgstr "„%s“ е невалиден фактор на зголемување"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "Фактор на зголемување \"%g\" е премал, се користи %g\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "Фактор на зголемување \"%g\" е преголем, се користи %g\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2155,169 +2161,169 @@ msgstr ""
 "Опцијата \"%s\" бара одредување на командата за извршување на остатокот од "
 "командната линија"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr ""
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "Не е валидна датотека со конфигурација на терминал."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "Некомпатибилна верзија на конфигурациската датотека за терминал."
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 "Не се регистрирај со серверот за активација, и не користи активен терминал"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "Вчитај датотека со конфигурација за терминал"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "FILE"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr ""
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 #, fuzzy
 #| msgid "Show per-window options"
 msgid "Show preferences window"
 msgstr "Покажи опции за прозорците"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr ""
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr ""
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr ""
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Отвори нов прозорец кој содржи јазиче со стандардниот профил"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "Отвори ново јазиче со дадениот профил во последниот отворен прозорец"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 #, fuzzy
 #| msgid "Maximise the window"
 msgid "Maximize the window"
 msgstr "Максимизирај го прозорецот"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "Постави го прозорецот на цел екран"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Постави ја големината на прозорецот; пример: 80x24, or 80x24+200+200 "
 "(COLSxROWS+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "ГЕОМЕТРИЈА"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "Постави ја улогата на прозорецот"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "УЛОГА"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Постави го последното избрано јазиче како активно во овој прозорец"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Изврши го аргументот до оваа опција внатре во терминалот"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "Користи го дадениот профил, наместо стандардниот профил"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 #, fuzzy
 #| msgid "Set the terminal title"
 msgid "Set the initial terminal title"
 msgstr "Постави го насловот на терминалот"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "НАСЛОВ"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "Постави го работниот директориум"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "ИМЕНАПАПКА"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr ""
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr ""
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr ""
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 #, fuzzy
 #| msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "Постави го факторот на зум на терминалот (1.0=нормална големина) "
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr ""
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "GNOME емулатор за терминал"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "Покажи ги опциите на GNOME терминал"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2325,11 +2331,11 @@ msgstr ""
 "Опции за отворање на нови прозорци или јазичиња во терминалот. Може да се "
 "одредат повеќе од една од следниве:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "Покажи опции за терминал"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2337,11 +2343,11 @@ msgstr ""
 "Опции за прозорецот. Ако се користат пред првиот аргумент --window или --"
 "tab, се поставува стандардно за сите прозорци: "
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "Покажи опции за прозорците"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2349,7 +2355,7 @@ msgstr ""
 "Опции за терминалот. Ако се користат пред првиот аргумент --window или --"
 "tab, се поставува стандардно за сите терминали: "
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "Покажи опции за терминалите"
 

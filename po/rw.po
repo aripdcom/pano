@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2006-01-04 16:15-0200\n"
 "Last-Translator: Steve Murphy <murf@e-tools.com>\n"
 "Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
@@ -120,7 +120,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr ""
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -1993,135 +1993,141 @@ msgid ""
 "it."
 msgstr ""
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, fuzzy, c-format
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "Kuri ni OYA a Byemewe Komandi:"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 #, fuzzy
 msgid "Two roles given for one window"
 msgstr "kugirango"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr ""
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, fuzzy, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "\"%s\"ni OYA a Byemewe Ihindurangano"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, fuzzy, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "Umubarwa ni Gitoya ikoresha"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, fuzzy, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "Umubarwa ni Binini ikoresha"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, fuzzy, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
 "command line"
 msgstr "Komandi: Kuri Gukoresha ku Bya Komandi:"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr ""
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr ""
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr ""
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 #, fuzzy
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "OYA Kwiyandikisha Na: OYA Gukoresha Gikora"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr ""
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr ""
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr ""
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 msgid "Show preferences window"
 msgstr ""
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr ""
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr ""
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr ""
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 #, fuzzy
 msgid "Open a new window containing a tab with the default profile"
 msgstr "a Gishya Idirishya a Isunika Na: Mburabuzi Ibijyana Bya Amahitamo"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 #, fuzzy
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "a Gishya Isunika in Iheruka Idirishya Na: Mburabuzi Ibijyana Bya Amahitamo"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr ""
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr ""
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 #, fuzzy
 msgid "GEOMETRY"
 msgstr "Iyigamashusho"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 #, fuzzy
 msgid "Set the window role"
 msgstr "Umutwe"
@@ -2129,112 +2135,112 @@ msgstr "Umutwe"
 # VCARD_LDAP_ROLE
 # # @name VCARD_LDAP_ROLE
 # # @loc None
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 #, fuzzy
 msgid "ROLE"
 msgstr "Inshingano"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 #, fuzzy
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Iheruka Isunika Nka Gikora in Idirishya"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 #, fuzzy
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Kuri iyi Ihitamo Mo Imbere"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 #, fuzzy
 msgid "Use the given profile instead of the default profile"
 msgstr "Ibijyana ikoresha Mburabuzi"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr ""
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 #, fuzzy
 msgid "Set the initial terminal title"
 msgstr "Umutwe"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 #, fuzzy
 msgid "TITLE"
 msgstr "Umutwe"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 #, fuzzy
 msgid "Set the working directory"
 msgstr "bushyinguro"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr ""
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr ""
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr ""
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr ""
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 #, fuzzy
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "Ihindurangano Umubarwa 1. 0 Bisanzwe Ingano"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr ""
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr ""
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 msgid "Pano Terminal Emulator"
 msgstr ""
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "a Intego- nyuguti"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr ""
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 #, fuzzy
 msgid "Show terminal options"
 msgstr "Gufungura"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
 msgstr ""
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr ""
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
 msgstr ""
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 #, fuzzy
 msgid "Show per-terminal options"
 msgstr "Gufungura"

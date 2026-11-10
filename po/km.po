@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: po_gnome-terminal-km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2014-04-10 12:04+0700\n"
 "Last-Translator: Sophea Sok <sophea@open.org.kh>\n"
 "Language-Team: Khmer <>\n"
@@ -134,7 +134,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "ម៉ាស៊ីន​កូន​ស្ថានីយ GNOME"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -2069,50 +2069,56 @@ msgid ""
 "it."
 msgstr ""
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, fuzzy, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "ជម្រើស \"%s\" មិន​គាំទ្រ​នៅ​ក្នុង​កំណែ​ស្ថានីយ​ gnome នេះ​ទៀត​ទេ។"
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, fuzzy, c-format
 #| msgid "Argument to \"%s\" is not a valid command: %s"
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "អាគុយម៉ង់​សម្រាប់ \"%s\" មិនមែន​ជា​ពាក្យ​បញ្ជា​ត្រឹមត្រូវ​ទេ៖ %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "បាន​ផ្ដល់​តួនាទី​ពីរ​សម្រាប់​បង្អួច​មួយ"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr ""
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, fuzzy, c-format
 #| msgid "\"%s\" is not a valid zoom factor"
 msgid "“%s” is not a valid zoom factor"
 msgstr "\"%s\" មិនមែន​ជា​កត្តា​ពង្រីក​ត្រឹមត្រូវ"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "កត្តា​ពង្រីក \"%g\" គឺ​តូច​ពេក ចូរ​ប្រើ %g\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "កត្តា​ពង្រីក \"%g\" គឺ​ធំ​ពេក ចូរ​ប្រើ %g\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2123,174 +2129,174 @@ msgid ""
 msgstr ""
 "ជម្រើស \"%s\" ទាមទារ​ឲ្យ​បញ្ជាក់​ពាក្យ​បញ្ជា​ដើម្បី​ដំណើរការ​នៅ​លើ​ផ្នែក​ដែល​នៅសល់​នៃ​បន្ទាត់​ពាក្យ​បញ្ជា"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr ""
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "មិនមែន​ជា​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ​ស្ថានីយ​ដែល​ត្រឹមត្រូវ។"
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "កំណែ​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ​ស្ថានីយ​ដែល​មិន​ឆបគ្នា។"
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "កុំ​ចុះឈ្មោះ​ជាមួយ​ម៉ាស៊ីនមេ​ឈ្មោះ​សម្រាប់​ធ្វើឲ្យ​សកម្ម កុំ​ប្រើ​ស្ថានីយ​សកម្ម​ឡើងវិញ"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "ផ្ទុក​ឯកសារ​ការ​កំណត់​​រចនាសម្ព័ន្ធ​ស្ថានីយ"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "ឯកសារ"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr ""
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 #, fuzzy
 #| msgid "Show per-window options"
 msgid "Show preferences window"
 msgstr "បង្ហាញ​ជម្រើស​ក្នុង​មួយ​បង្អួច"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr ""
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr ""
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr ""
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "បើក​បង្អួច​ថ្មី​ដែល​មាន​ផ្ទាំង​ជាមួយ​ទម្រង់​លំនាំដើម"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "បើក​ផ្ទាំង​ថ្មី​នៅ​ក្នុង​បង្អួច​ដែល​បាន​បើក​ចុងក្រោយ​ជាមួយ​ទម្រង់​លំនាំដើម"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "ពង្រីក​បង្អួច​អតិបរមា"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "ធ្វើឲ្យ​បង្អួច​ពេញ​អេក្រង់"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr "កំណត់​ទំហំ​​បង្អួច ឧទាហរណ៍៖ 80x24, ឬ 80x24+200+200 (COLSxROWS+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "ធរណីមាត្រ"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "កំណត់​តួនាទី​បង្អួច"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "តួនាទី"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "កំណត់​ផ្ទាំង​ដែល​បាន​បញ្ជាក់​ចុងក្រោយ​ថា​ជា​ផ្ទាំង​សកម្ម​នៅ​ក្នុង​បង្អួច​របស់​វា"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "ប្រតិបត្តិ​អាគុយម៉ង់​ទៅ​កាន់​ជម្រើស​នេះ​នៅ​ខាងក្នុង​ស្ថានីយ"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "ប្រើ​ទម្រង់​ដែល​បាន​ផ្ដល់ ជំនួស​ទម្រង់​លំនាំដើម"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "ឈ្មោះ​ទម្រង់"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 #, fuzzy
 #| msgid "Set the terminal title"
 msgid "Set the initial terminal title"
 msgstr "កំណត់​ចំណងជើង​ស្ថានីយ"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "ចំណងជើង"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "កំណត់​ថត​ធ្វើការ"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "ឈ្មោះ​ថត"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "រង់ចាំ​រហូត​ដល់​កូន​ចេញ"
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "បញ្ជូន​កម្មវិធី​ពិពណ៌នា​ឯកសារ​បន្ត"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 #, fuzzy
 #| msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "កំណត់​កត្តា​ពង្រីក​របស់​ស្ថានីយ (១.០ = ទំហំ​ធម្មតា)"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "ពង្រីក"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "COMMAND"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "វត្ថុ​ត្រាប់តាម​ស្ថានីយ GNOME"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "បង្ហាញ​ជម្រើស​ស្ថានីយ GNOME"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr "ជម្រើស​សម្រាប់​បើក​បង្អួច ឬ​ផ្ទាំង​ស្ថានីយ​ថ្មី អាច​បញ្ជាក់​លើស​ពី​មួយ៖"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "បង្ហាញ​ជម្រើស​ស្ថានីយ"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2298,11 +2304,11 @@ msgstr ""
 "ជម្រើស​បង្អួច ប្រសិនបើ​បាន​ប្រើ​ពីមុន --window  ឬ --tab argument ដំបូង កំណត់​លំនាំដើម​សម្រាប់​បង្អួច​"
 "ទាំងអស់៖"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "បង្ហាញ​ជម្រើស​ក្នុង​មួយ​បង្អួច"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2310,7 +2316,7 @@ msgstr ""
 "ជម្រើស​ស្ថានីយ ប្រសិនបើ​​បាន​ប្រើ​ពីមុន --window ឬ --tab argument ដំបូង កំណត់​លំនាំដើម​សម្រាប់​ស្ថានីយ​"
 "ទាំងអស់៖"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "បង្ហាញ​ជម្រើស​ក្នុង​មួយ​ស្ថានីយ"
 

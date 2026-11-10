@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2014-09-21 09:23+0630\n"
 "Last-Translator: rajesh <rajesh>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -136,7 +136,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "गनोम टर्मिनल एमुलेटर"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -2070,50 +2070,56 @@ msgid ""
 "it."
 msgstr ""
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, fuzzy, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "विकल्प \"%s\"  गनोम टर्मिनल के इस संस्करण में नहीं रह समर्थित है."
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, fuzzy, c-format
 #| msgid "Argument to \"%s\" is not a valid command: %s"
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "\"%s\" को आर्गुमेंट एक वैध कमांड नहीं है: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "एक विंडो हेतु दो भूमिकाएँ दी गई हैं"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr ""
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, fuzzy, c-format
 #| msgid "\"%s\" is not a valid zoom factor"
 msgid "“%s” is not a valid zoom factor"
 msgstr "\"%s\" यह एक वैध ज़ूम गुणक नहीं है"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "ज़ूम गुणक \"%g\" बहुत बड़ा है, %g उपयोग में\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "ज़ूम गुणक \"%g\" बहुत बड़ा है, %g उपयोग में\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2125,165 +2131,165 @@ msgstr ""
 "विकल्प \"%s\" को आवश्यक है कि यह निर्दिष्ट किया जाए कि कौन सा कमांड बाकी के कमांड "
 "पंक्ति में चलाया जाए"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr ""
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "कोई वैध टर्मिनल कॉन्फिग फ़ाइल नहीं."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "असंगत टर्मिनल कॉन्फिग फ़ाइल संस्करण."
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "सक्रियण नाम-सर्वर के साथ पंजीकृत न हों, किसी सक्रिय टर्मिनल को पुनः उपयोग न करें"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "कोई टर्मिनल विन्यास फ़ाइल लोड करें"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "फ़ाइल"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr ""
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 #, fuzzy
 #| msgid "Show per-window options"
 msgid "Show preferences window"
 msgstr "प्रति विंडो विकल्प दिखाएँ"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr ""
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr ""
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr "आउटपुट दबाएँ"
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "तयशुदा प्रोफ़ाइल के साथ टैब युक्त एक नया विंडो खोलें"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "तयशुदा प्रोफ़ाइल के साथ अंतिम खुले विंडो में एक नया टैब खोलें. "
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 msgid "Maximize the window"
 msgstr "विंडो अधिकतम करें"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "विंडो पूर्ण स्क्रीन करें"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "विंडो का आकार सेट करें, उदाहरण के लिए: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "ज्यामिति"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "विंडो भूमिका सेट करें"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "भूमिका"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "इस विंडो में अंतिम निर्दिष्ट टैब को सक्रिय रूप में नियत करता है"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "टर्मिनल के भीतर इस विकल्प का आर्गुमेंट चलाएँ"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "तयशुदा प्रोफ़ाइल के बजाए दिए गए प्रोफ़ाइल का प्रयोग करें"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "PROFILE-NAME"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 #, fuzzy
 #| msgid "Set the terminal title"
 msgid "Set the initial terminal title"
 msgstr "टर्मिनल शीर्षक नियत करें"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "शीर्षक"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "कार्यशील निर्देशिका नियत करें"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "डिर.नाम"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr "बच्चा बाहर निकल जाता है जब तक रुको."
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr "अग्रेषित फ़ाइल विवरक"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 #, fuzzy
 #| msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "टर्मिनल का ज़ूम गुणक नियत करें (1.0 = सामान्य आकार) "
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "ZOOM"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr "कमांड"
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "गनोम टर्मिनल एमुलेटर"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "गनोम टर्मिनल विकल्प दिखाएँ"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2291,11 +2297,11 @@ msgstr ""
 "नये विंडो या टर्मिनल टैब खोलने के लिए विकल्प; इनमें से एक अधिक निर्दिष्ट किया हुआ होना "
 "चाहिए:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "टर्मिनल विकल्प दिखाएँ"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2303,11 +2309,11 @@ msgstr ""
 "विंडो विकल्प; यदि पहले --window या --tab तर्क के पहले प्रयोग किया गया, सभी विंडो के "
 "लिए तयशुदा सेट करता है:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "प्रति विंडो विकल्प दिखाएँ"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2315,7 +2321,7 @@ msgstr ""
 "टर्मिनल विकल्प; यदि पहले --window या --tab तर्क के पहले प्रयोग किया गया, सभी टर्मिनल "
 "का तयशुदा सेट करता है:"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "प्रति टर्मिनल विकल्प दिखाएँ"
 

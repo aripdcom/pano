@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:22+0300\n"
+"POT-Creation-Date: 2026-11-11 00:26+0300\n"
 "PO-Revision-Date: 2010-05-18 10:04 -0400\n"
 "Last-Translator: Thomas Thurman <tthurman@gnome.org>\n"
 "Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
@@ -117,7 +117,7 @@ msgid "Pano Terminal Quick Terminal"
 msgstr "·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑧𐑥𐑿𐑤𐑱𐑑𐑼"
 
 #: data/com.aripd.Pano.QuickTerminal.desktop.in:3
-#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1350
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1357
 msgid "Show or hide the quick terminal"
 msgstr ""
 
@@ -2077,50 +2077,56 @@ msgid ""
 "it."
 msgstr ""
 
-#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#: src/terminal-options.cc:337
+msgid ""
+"Options such as --tab cannot follow it; see the manual page for opening "
+"several tabs."
+msgstr ""
+
+#: src/terminal-options.cc:347 src/terminal-options.cc:360
 #, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr ""
 
-#: src/terminal-options.cc:430
+#: src/terminal-options.cc:432
 #, c-format
 msgid "Cannot specify more than one command to run"
 msgstr ""
 
-#: src/terminal-options.cc:439
+#: src/terminal-options.cc:441
 #, fuzzy, c-format
 #| msgid "Argument to \"%s\" is not a valid command: %s"
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "𐑸𐑜𐑿𐑥𐑩𐑯𐑑 𐑑 \"%s\" 𐑦𐑟 𐑯𐑪𐑑 𐑩 𐑝𐑨𐑤𐑦𐑛 𐑒𐑩𐑥𐑭𐑯𐑛: %s"
 
-#: src/terminal-options.cc:612
+#: src/terminal-options.cc:614
 msgid "Two roles given for one window"
 msgstr "𐑑𐑵 𐑮𐑴𐑤𐑟 𐑜𐑦𐑝𐑩𐑯 𐑓𐑹 𐑢𐑳𐑯 𐑢𐑦𐑯𐑛𐑴"
 
-#: src/terminal-options.cc:820
+#: src/terminal-options.cc:822
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr ""
 
-#: src/terminal-options.cc:882
+#: src/terminal-options.cc:884
 #, fuzzy, c-format
 #| msgid "\"%s\" is not a valid zoom factor"
 msgid "“%s” is not a valid zoom factor"
 msgstr "\"%s\" 𐑦𐑟 𐑯𐑪𐑑 𐑩 𐑝𐑨𐑤𐑦𐑛 𐑟𐑵𐑥 𐑓𐑨𐑒𐑑𐑼"
 
-#: src/terminal-options.cc:889
+#: src/terminal-options.cc:891
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too small, using %g\n"
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "𐑟𐑵𐑥 𐑓𐑨𐑒𐑑𐑼 \"%g\" 𐑦𐑟 𐑑𐑵 𐑕𐑥𐑷𐑤, 𐑿𐑟𐑦𐑙 %g\n"
 
-#: src/terminal-options.cc:897
+#: src/terminal-options.cc:899
 #, fuzzy, c-format
 #| msgid "Zoom factor \"%g\" is too large, using %g\n"
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "𐑟𐑵𐑥 𐑓𐑨𐑒𐑑𐑼 \"%g\" 𐑦𐑟 𐑑𐑵 𐑤𐑸𐑡, 𐑿𐑟𐑦𐑙 %g\n"
 
-#: src/terminal-options.cc:935
+#: src/terminal-options.cc:937
 #, fuzzy, c-format
 #| msgid ""
 #| "Option \"%s\" requires specifying the command to run on the rest of the "
@@ -2130,78 +2136,78 @@ msgid ""
 "command line"
 msgstr "𐑪𐑐𐑖𐑩𐑯 \"%s\" 𐑮𐑦𐑒𐑢𐑲𐑼𐑟 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑦𐑙 𐑞 𐑒𐑩𐑥𐑭𐑯𐑛 𐑑 𐑮𐑳𐑯 𐑪𐑯 𐑞 𐑮𐑧𐑕𐑑 𐑝 𐑞 𐑒𐑩𐑥𐑭𐑯𐑛 𐑤𐑲𐑯"
 
-#: src/terminal-options.cc:1075
+#: src/terminal-options.cc:1077
 #, c-format
 msgid "Too many arguments"
 msgstr ""
 
-#: src/terminal-options.cc:1103
+#: src/terminal-options.cc:1110
 msgid "Can only use --wait once"
 msgstr ""
 
-#: src/terminal-options.cc:1139
+#: src/terminal-options.cc:1146
 msgid "Not a valid terminal config file."
 msgstr "𐑯𐑪𐑑 𐑩 𐑝𐑨𐑤𐑦𐑛 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑒𐑪𐑯𐑓𐑦𐑜 𐑓𐑲𐑤."
 
-#: src/terminal-options.cc:1152
+#: src/terminal-options.cc:1159
 msgid "Incompatible terminal config file version."
 msgstr "𐑦𐑯𐑒𐑩𐑥𐑐𐑨𐑑𐑩𐑚𐑩𐑤 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑒𐑪𐑯𐑓𐑦𐑜 𐑓𐑲𐑤 𐑝𐑻𐑠𐑩𐑯."
 
-#: src/terminal-options.cc:1306
+#: src/terminal-options.cc:1313
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr "𐑛𐑵 𐑯𐑪𐑑 𐑮𐑧𐑡𐑦𐑕𐑑𐑼 𐑢𐑦𐑞 𐑞 𐑨𐑒𐑑𐑩𐑝𐑱𐑖𐑩𐑯 𐑯𐑱𐑥𐑕𐑻𐑝𐑼, 𐑛𐑵 𐑯𐑪𐑑 𐑮𐑰-𐑿𐑟 𐑩𐑯 𐑨𐑒𐑑𐑦𐑝 𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
-#: src/terminal-options.cc:1315
+#: src/terminal-options.cc:1322
 msgid "Load a terminal configuration file"
 msgstr "𐑤𐑴𐑛 𐑩 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑒𐑩𐑯𐑓𐑦𐑜𐑘𐑼𐑱𐑖𐑩𐑯 𐑓𐑲𐑤"
 
-#: src/terminal-options.cc:1316
+#: src/terminal-options.cc:1323
 msgid "FILE"
 msgstr "𐑓𐑲𐑤"
 
-#: src/terminal-options.cc:1332
+#: src/terminal-options.cc:1339
 msgid "Do not pass the environment"
 msgstr ""
 
-#: src/terminal-options.cc:1341
+#: src/terminal-options.cc:1348
 #, fuzzy
 #| msgid "Show per-window options"
 msgid "Show preferences window"
 msgstr "𐑖𐑴 𐑐𐑻-𐑢𐑦𐑯𐑛𐑴 𐑪𐑐𐑖𐑩𐑯𐑟"
 
-#: src/terminal-options.cc:1359
+#: src/terminal-options.cc:1366
 msgid "Print environment variables to interact with the terminal"
 msgstr ""
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1384
 msgid "Increase diagnostic verbosity"
 msgstr ""
 
-#: src/terminal-options.cc:1386
+#: src/terminal-options.cc:1393
 msgid "Suppress output"
 msgstr ""
 
-#: src/terminal-options.cc:1399
+#: src/terminal-options.cc:1406
 msgid "Open a new window containing a tab with the default profile"
 msgstr "𐑴𐑐𐑩𐑯 𐑩 𐑯𐑿 𐑢𐑦𐑯𐑛𐑴 𐑒𐑩𐑯𐑑𐑱𐑯𐑦𐑙 𐑩 𐑑𐑨𐑚 𐑢𐑦𐑞 𐑞 𐑛𐑦𐑓𐑷𐑤𐑑 𐑐𐑮𐑴𐑓𐑲𐑤"
 
-#: src/terminal-options.cc:1408
+#: src/terminal-options.cc:1415
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "𐑴𐑐𐑩𐑯 𐑩 𐑯𐑿 𐑑𐑨𐑚 𐑦𐑯 𐑞 𐑤𐑭𐑕𐑑-𐑴𐑐𐑩𐑯𐑛 𐑢𐑦𐑯𐑛𐑴 𐑢𐑦𐑞 𐑞 𐑛𐑦𐑓𐑷𐑤𐑑 𐑐𐑮𐑴𐑓𐑲𐑤"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1446
 #, fuzzy
 #| msgid "Maximise the window"
 msgid "Maximize the window"
 msgstr "𐑥𐑨𐑒𐑕𐑦𐑥𐑲𐑟 𐑞 𐑢𐑦𐑯𐑛𐑴"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1455
 msgid "Full-screen the window"
 msgstr "𐑓𐑫𐑤-𐑕𐑒𐑮𐑰𐑯 𐑞 𐑢𐑦𐑯𐑛𐑴"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1464
 #, fuzzy
 #| msgid ""
 #| "Set the window size; for example: 80x24, or 80x24+200+200 (ROWSxCOLS+X+Y)"
@@ -2209,101 +2215,101 @@ msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr "𐑕𐑧𐑑 𐑞 𐑢𐑦𐑯𐑛𐑴 𐑕𐑲𐑟; 𐑓𐑹 𐑦𐑜𐑟𐑭𐑥𐑐𐑩𐑤: 80x24, 𐑹 80x24+200+200 (𐑮𐑴𐑟x𐑒𐑪𐑤𐑟+X+Y)"
 
-#: src/terminal-options.cc:1458
+#: src/terminal-options.cc:1465
 msgid "GEOMETRY"
 msgstr "𐑡𐑦𐑪𐑥𐑩𐑑𐑮𐑦"
 
-#: src/terminal-options.cc:1466
+#: src/terminal-options.cc:1473
 msgid "Set the window role"
 msgstr "𐑕𐑧𐑑 𐑞 𐑢𐑦𐑯𐑛𐑴 𐑮𐑴𐑤"
 
-#: src/terminal-options.cc:1467
+#: src/terminal-options.cc:1474
 msgid "ROLE"
 msgstr "𐑮𐑴𐑤"
 
-#: src/terminal-options.cc:1475
+#: src/terminal-options.cc:1482
 msgid "Set the last specified tab as the active one in its window"
 msgstr "𐑕𐑧𐑑 𐑞 𐑤𐑭𐑕𐑑 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑑𐑨𐑚 𐑨𐑟 𐑞 𐑨𐑒𐑑𐑦𐑝 𐑢𐑳𐑯 𐑦𐑯 𐑦𐑑𐑕 𐑢𐑦𐑯𐑛𐑴"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1495
 msgid "Execute the argument to this option inside the terminal"
 msgstr "𐑧𐑒𐑕𐑩𐑒𐑿𐑑 𐑞 𐑸𐑜𐑿𐑥𐑩𐑯𐑑 𐑑 𐑞𐑦𐑕 𐑪𐑐𐑖𐑩𐑯 𐑦𐑯𐑕𐑲𐑛 𐑞 𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1504
 msgid "Use the given profile instead of the default profile"
 msgstr "𐑿𐑕 𐑞 𐑜𐑦𐑝𐑩𐑯 𐑐𐑮𐑴𐑓𐑲𐑤 𐑦𐑯𐑕𐑑𐑧𐑛 𐑝 𐑞 𐑛𐑦𐑓𐑷𐑤𐑑 𐑐𐑮𐑴𐑓𐑲𐑤"
 
-#: src/terminal-options.cc:1498
+#: src/terminal-options.cc:1505
 msgid "PROFILE-NAME"
 msgstr "𐑐𐑮𐑴𐑓𐑲𐑤-𐑯𐑱𐑥"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1513
 #, fuzzy
 #| msgid "Set the terminal title"
 msgid "Set the initial terminal title"
 msgstr "𐑕𐑧𐑑 𐑞 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑑𐑲𐑑𐑩𐑤"
 
-#: src/terminal-options.cc:1507
+#: src/terminal-options.cc:1514
 msgid "TITLE"
 msgstr "𐑑𐑲𐑑𐑩𐑤"
 
-#: src/terminal-options.cc:1515
+#: src/terminal-options.cc:1522
 msgid "Set the working directory"
 msgstr "𐑕𐑧𐑑 𐑞 𐑢𐑻𐑒𐑦𐑙 𐑛𐑲𐑮𐑧𐑒𐑑𐑼𐑦"
 
-#: src/terminal-options.cc:1516
+#: src/terminal-options.cc:1523
 msgid "DIRNAME"
 msgstr "𐑛𐑽𐑯𐑱𐑥"
 
-#: src/terminal-options.cc:1524
+#: src/terminal-options.cc:1531
 msgid "Wait until the child exits"
 msgstr ""
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1540
 msgid "Forward file descriptor"
 msgstr ""
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1535
+#: src/terminal-options.cc:1542
 msgid "FD"
 msgstr ""
 
-#: src/terminal-options.cc:1543
+#: src/terminal-options.cc:1550
 #, fuzzy
 #| msgid "Set the terminal's zoom factor (1.0 = normal size)"
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "𐑕𐑧𐑑 𐑞 𐑑𐑻𐑥𐑦𐑯𐑩𐑤'𐑕 𐑟𐑵𐑥 𐑓𐑨𐑒𐑑𐑼 (1.0 = 𐑯𐑹𐑥𐑩𐑤 𐑕𐑲𐑟)"
 
-#: src/terminal-options.cc:1544
+#: src/terminal-options.cc:1551
 msgid "ZOOM"
 msgstr "𐑟𐑵𐑥"
 
-#: src/terminal-options.cc:1640
+#: src/terminal-options.cc:1647
 msgid "COMMAND"
 msgstr ""
 
-#: src/terminal-options.cc:1646
+#: src/terminal-options.cc:1653
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑧𐑥𐑿𐑤𐑱𐑑𐑼"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1654
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "𐑖𐑴 ·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑪𐑐𐑖𐑩𐑯𐑟"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1664
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
 msgstr ""
 "𐑪𐑐𐑖𐑩𐑯𐑟 𐑑 𐑴𐑐𐑩𐑯 𐑯𐑿 𐑢𐑦𐑯𐑛𐑴𐑟 𐑹 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑑𐑨𐑚𐑟; 𐑥𐑹 𐑞𐑨𐑯 𐑢𐑳𐑯 𐑝 𐑞𐑰𐑟 𐑥𐑱 𐑚𐑰 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛:"
 
-#: src/terminal-options.cc:1658
+#: src/terminal-options.cc:1665
 msgid "Show terminal options"
 msgstr "𐑖𐑴 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑪𐑐𐑖𐑩𐑯𐑟"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1673
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2311,11 +2317,11 @@ msgstr ""
 "𐑢𐑦𐑯𐑛𐑴 𐑪𐑐𐑖𐑩𐑯𐑟; 𐑦𐑓 𐑿𐑕𐑑 𐑚𐑦𐑓𐑹 𐑞 𐑓𐑻𐑕𐑑 --window 𐑹 --tab 𐑸𐑜𐑿𐑥𐑩𐑯𐑑, 𐑕𐑧𐑑𐑕 𐑞 𐑛𐑦𐑓𐑷𐑤𐑑 𐑓𐑹 "
 "𐑷𐑤 𐑢𐑦𐑯𐑛𐑴𐑟:"
 
-#: src/terminal-options.cc:1667
+#: src/terminal-options.cc:1674
 msgid "Show per-window options"
 msgstr "𐑖𐑴 𐑐𐑻-𐑢𐑦𐑯𐑛𐑴 𐑪𐑐𐑖𐑩𐑯𐑟"
 
-#: src/terminal-options.cc:1675
+#: src/terminal-options.cc:1682
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2323,7 +2329,7 @@ msgstr ""
 "𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑪𐑐𐑖𐑩𐑯𐑟; 𐑦𐑓 𐑿𐑕𐑑 𐑚𐑦𐑓𐑹 𐑞 𐑓𐑻𐑕𐑑 --window 𐑹 --tab 𐑸𐑜𐑿𐑥𐑩𐑯𐑑, 𐑕𐑧𐑑𐑕 𐑞 𐑛𐑦𐑓𐑷𐑤𐑑 "
 "𐑓𐑹 𐑷𐑤 𐑑𐑻𐑥𐑦𐑯𐑩𐑤𐑟:"
 
-#: src/terminal-options.cc:1676
+#: src/terminal-options.cc:1683
 msgid "Show per-terminal options"
 msgstr "𐑖𐑴 𐑐𐑻-𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑪𐑐𐑖𐑩𐑯𐑟"
 

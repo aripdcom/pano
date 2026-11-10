@@ -334,6 +334,8 @@ deprecated_command_option_warning (const char *option_name)
   /* %s is being replaced with "-- " (without quotes), which must be used literally, not translatable */
   terminal_printerr (_("Use “%s” to terminate the options and put the command line to execute after it."), "-- ");
   terminal_printerr ("\n");
+  terminal_printerr (_("Options such as --tab cannot follow it; see the manual page for opening several tabs."));
+  terminal_printerr ("\n");
 }
 
 static gboolean
