@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2022-03-24 22:51+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
@@ -2774,7 +2774,7 @@ msgid "Solarized dark"
 msgstr "Solarizēts tumšs"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Pielāgota"
 
@@ -2890,7 +2890,15 @@ msgstr "Mantojuma CJK kodējumi"
 msgid "Obsolete Encodings"
 msgstr "Novecojuši kodējumi"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

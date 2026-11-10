@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2005-08-08 10:53-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
@@ -2846,7 +2846,7 @@ msgid "Solarized dark"
 msgstr ""
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Custom"
 
@@ -2964,7 +2964,15 @@ msgstr ""
 msgid "Obsolete Encodings"
 msgstr "A_vailable encodings:"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 msgid "Select Font"
 msgstr ""
 

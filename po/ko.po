@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2023-09-06 23:57+0530\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
@@ -2754,7 +2754,7 @@ msgid "Solarized dark"
 msgstr "솔러라이즈 어두움"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "사용자 지정"
 
@@ -2870,7 +2870,15 @@ msgstr "레거시 CJK 인코딩"
 msgid "Obsolete Encodings"
 msgstr "오래 된 인코딩"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

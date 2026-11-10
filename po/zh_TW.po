@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2026-09-20 05:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <zh-l10n@lists.slat.org>\n"
@@ -2726,7 +2726,7 @@ msgid "Solarized dark"
 msgstr "Solarized 黑"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "自訂"
 
@@ -2842,7 +2842,15 @@ msgstr "傳統 CJK 編碼"
 msgid "Obsolete Encodings"
 msgstr "廢棄的編碼"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

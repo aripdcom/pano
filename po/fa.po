@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal gnome-2-12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2023-11-25 15:10+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
@@ -2758,7 +2758,7 @@ msgid "Solarized dark"
 msgstr "آفتاب‌زدهٔ تیره"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "سفارشی"
 
@@ -2874,7 +2874,15 @@ msgstr "رمزگذاری‌های قدیمی CJK"
 msgid "Obsolete Encodings"
 msgstr "رمزگذاری‌های منقضی"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.ne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2022-09-11 19:12+0545\n"
 "Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
 "Language-Team: Nepali Translation Team <chautari@gmail.com>\n"
@@ -2736,7 +2736,7 @@ msgid "Solarized dark"
 msgstr "सोलाराइज्ड अध्यारो"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "अनुकूल"
 
@@ -2852,7 +2852,15 @@ msgstr "पारम्पारिक CJK सङ्केतनहरू"
 msgid "Obsolete Encodings"
 msgstr "अप्रचलित सङ्केतनहरू"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

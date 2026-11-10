@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2026-09-10 03:10+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -2732,7 +2732,7 @@ msgid "Solarized dark"
 msgstr "Solarized (цёмная)"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Уласная"
 
@@ -2848,7 +2848,15 @@ msgstr "Састарэлыя кадаванні CJK"
 msgid "Obsolete Encodings"
 msgstr "Састарэлыя кадаванні"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 msgid "Select Font"
 msgstr "Выберыце шрыфт"
 

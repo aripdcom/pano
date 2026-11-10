@@ -755,6 +755,20 @@ terminal_profile_editor_palette_changed_from_settings (TerminalProfileEditor *se
   self->updating_colors = false;
 }
 
+/* Unlimited or very large scrollback can take a lot of memory and, as VTE
+ * keeps the scrollback in a file, disk space */
+static void
+terminal_profile_editor_update_scrollback_warning (TerminalProfileEditor *self)
+{
+  auto const unlimited = !adw_switch_row_get_active (self->limit_scrollback);
+  auto const lines = adw_spin_row_get_value (self->scrollback_lines);
+
+  adw_action_row_set_subtitle (ADW_ACTION_ROW (self->limit_scrollback),
+                               unlimited ? _("Unlimited scrollback can take a lot of memory and disk space") : nullptr);
+  adw_action_row_set_subtitle (ADW_ACTION_ROW (self->scrollback_lines),
+                               !unlimited && lines >= 1000000 ? _("So many lines can take a lot of memory and disk space") : nullptr);
+}
+
 static gboolean
 monospace_filter (void* item,
                   void* user_data)
@@ -1133,6 +1147,13 @@ terminal_profile_editor_constructed (GObject *object)
   terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_SCROLLBACK_LINES_KEY,
                    self->scrollback_lines, "value",
                    GSettingsBindFlags(G_SETTINGS_BIND_DEFAULT));
+  g_signal_connect_object (self->limit_scrollback, "notify::active",
+                           G_CALLBACK (terminal_profile_editor_update_scrollback_warning),
+                           self, G_CONNECT_SWAPPED);
+  g_signal_connect_object (self->scrollback_lines, "notify::value",
+                           G_CALLBACK (terminal_profile_editor_update_scrollback_warning),
+                           self, G_CONNECT_SWAPPED);
+  terminal_profile_editor_update_scrollback_warning (self);
 
   terminal_util_g_settings_bind (self->settings, TERMINAL_PROFILE_LOGIN_SHELL_KEY,
                    self->login_shell, "active",

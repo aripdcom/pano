@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2.18.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2023-01-21 10:59+0000\n"
 "Last-Translator: Fabio T. <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
@@ -2769,7 +2769,7 @@ msgid "Solarized dark"
 msgstr "Solarized scûr"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Personalizât"
 
@@ -2885,7 +2885,15 @@ msgstr "Codifichis CJK vecje maniere"
 msgid "Obsolete Encodings"
 msgstr "Codifichis sorpassadis"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2014-08-22 16:15+0530\n"
 "Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
 "Language-Team: Assamese <kde-i18n-doc@kde.org>\n"
@@ -2849,7 +2849,7 @@ msgid "Solarized dark"
 msgstr "চলাৰাইজ্ড অন্ধকাৰ"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "স্বনিৰ্বাচিত"
 
@@ -2969,7 +2969,15 @@ msgstr "এনক'ডিংসমূহ"
 msgid "Obsolete Encodings"
 msgstr "এনক'ডিংসমূহ"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

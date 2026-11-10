@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2021-06-11 15:53+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
@@ -3035,7 +3035,7 @@ msgid "Solarized dark"
 msgstr "Tmavo solarizovaná"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Vlastná"
 
@@ -3155,7 +3155,15 @@ msgstr "Zaužívané CJK kódovania"
 msgid "Obsolete Encodings"
 msgstr "Zastaralé kódovania"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

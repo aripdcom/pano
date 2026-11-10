@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -2650,7 +2650,7 @@ msgid "Solarized dark"
 msgstr "Solarize koyu"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Özel"
 
@@ -2766,7 +2766,15 @@ msgstr "Eski CJK Kodlamaları"
 msgid "Obsolete Encodings"
 msgstr "Artık Kullanılmayan Kodlamalar"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr "Sınırsız geri kaydırma çok bellek ve disk alanı kullanabilir"
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr "Bu kadar çok satır çok bellek ve disk alanı kullanabilir"
+
+#: src/terminal-profile-editor.cc:823
 msgid "Select Font"
 msgstr "Yazı Tipi Seç"
 

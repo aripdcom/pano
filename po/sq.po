@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.gnome-2-22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2008-07-15 18:05+0200\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
@@ -2878,7 +2878,7 @@ msgid "Solarized dark"
 msgstr ""
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "E personalizuar"
 
@@ -3000,7 +3000,15 @@ msgstr ""
 msgid "Obsolete Encodings"
 msgstr "Kodifikimet në _dispozicion:"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 msgid "Select Font"
 msgstr ""
 

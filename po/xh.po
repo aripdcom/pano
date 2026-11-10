@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2006-01-04 16:14-0200\n"
 "Last-Translator: Canonical Ltd <translations@canonical.com>\n"
 "Language-Team: Xhosa <xh-translate@ubuntu.com>\n"
@@ -2844,7 +2844,7 @@ msgid "Solarized dark"
 msgstr ""
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Ozenzeleyo"
 
@@ -2962,7 +2962,15 @@ msgstr ""
 msgid "Obsolete Encodings"
 msgstr "Unxulumano o_lufumanekayo:"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 msgid "Select Font"
 msgstr ""
 

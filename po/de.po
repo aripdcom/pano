@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2023-07-26 11:19+0200\n"
 "Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -2836,7 +2836,7 @@ msgid "Solarized dark"
 msgstr "Solarisiert (dunkel)"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
@@ -2952,7 +2952,15 @@ msgstr "Veraltete CJK Zeichenkodierungen"
 msgid "Obsolete Encodings"
 msgstr "Überholte Zeichenkodierungen"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

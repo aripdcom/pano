@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2023-07-24 06:11+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <Ubuntu-Georgian-Translators@googlegroups.com>\n"
@@ -2695,7 +2695,7 @@ msgid "Solarized dark"
 msgstr "სოლარიზებული მუქი"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "ხელით"
 
@@ -2811,7 +2811,15 @@ msgstr "მოძველებული CJK კოდირებები"
 msgid "Obsolete Encodings"
 msgstr "დაშიფვრის მოძველებული მეთოდები"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

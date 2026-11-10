@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2021-01-04 13:56+0530\n"
 "Last-Translator: Akarshan Biswas <akarshan.biswas@hotmail.com>\n"
 "Language-Team: Bengali <anubad@lists.ankur.org.in>\n"
@@ -2765,7 +2765,7 @@ msgid "Solarized dark"
 msgstr "সোলারাইজড অন্ধকার"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "স্বনির্বাচিত"
 
@@ -2881,7 +2881,15 @@ msgstr "লিগ্যাসি সিজেকে এনকোডিংগু�
 msgid "Obsolete Encodings"
 msgstr "অপ্রচলিত এনকোডিংগুলি"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"

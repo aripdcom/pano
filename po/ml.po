@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thengos\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:21+0300\n"
+"POT-Creation-Date: 2026-11-11 00:22+0300\n"
 "PO-Revision-Date: 2018-10-26 11:41+0530\n"
 "Last-Translator: Ranjith Siji <ranjith.sajeev@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -2788,7 +2788,7 @@ msgid "Solarized dark"
 msgstr "കടും സോളറൈസ്ഡ്"
 
 #: src/terminal-profile-editor.cc:337 src/terminal-profile-editor.cc:350
-#: src/terminal-profile-editor.cc:918
+#: src/terminal-profile-editor.cc:932
 msgid "Custom"
 msgstr "യഥേഷ്ടം"
 
@@ -2904,7 +2904,15 @@ msgstr "പുരാതന CJK എന്‍കോഡിങ്ങുകള്‍"
 msgid "Obsolete Encodings"
 msgstr "കാലഹരണപ്പെട്ട എന്‍കോഡിങ്ങുകള്‍"
 
-#: src/terminal-profile-editor.cc:809
+#: src/terminal-profile-editor.cc:767
+msgid "Unlimited scrollback can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:769
+msgid "So many lines can take a lot of memory and disk space"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:823
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Font"
