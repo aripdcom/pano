@@ -45,4 +45,13 @@
   <p><gui>New Tab Position</gui> in the same group sets whether new tabs go
   after the last tab or next to the current one.</p>
 
+  <section id="resize">
+    <title>Programs that resize the window</title>
+    <p>Programs can ask the terminal to resize its window with an escape
+    sequence, as the <cmd>resize</cmd> command does. Only the terminal in
+    front can do so, and not in a split tab. To ignore such requests, turn
+    off <gui>Let Programs Resize the Window</gui> in the <gui>Behavior</gui>
+    group of the preferences.</p>
+  </section>
+
 </page>
