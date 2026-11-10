@@ -1,12 +1,14 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="guide"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="pref-profiles">
 
   <info>
-    <revision pkgversion="3.8" date="2013-03-03" status="candidate"/>
-    <revision pkgversion="3.12" date="2014-09-08" status="candidate"/>
     <link type="guide" xref="index#preferences"/>
     <link type="guide" xref="pref#manage-profiles"/>
+    <link type="seealso" xref="gs-import"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -23,271 +25,89 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Create, rename and delete profiles.</desc>
+    <desc>Create, edit, copy, export and delete profiles, and choose the default one.</desc>
   </info>
 
   <title>Manage profiles</title>
 
-  <comment>
-    <cite href="mailto:kittykat3756@gmail.com">Kat</cite>
-    <p>Repeating that the user can edit the settings in each section is not
-    very nice, we need to find a way around this.</p>
-  </comment>
+<p>A profile is a set of settings for terminals: their font and colors,
+  their size, their scrolling, the command they run and more. You can have
+  several, for example one to <link xref="pref-custom-command">connect to
+  another computer</link> with <cmd>ssh</cmd>, and choose one for each
+  terminal.</p>
 
-  <p>A profile is a collection of <app>Pano Terminal</app> settings.
-  <app>Pano Terminal</app> supports multiple profiles. You can configure
-  <app>Pano Terminal</app> profiles to <link xref="pref-custom-command">run a custom
-  command or shell</link>, set a profile exclusively to connect to remote
-  computers using SSH or set a profile that launches a <app>GNU Screen</app>
-  session.</p>
+  <p>The profiles are listed in the <gui>Profiles</gui> group of the
+  preferences. To open them, press the menu button in the top-right corner of
+  the window and select <gui style="menuitem">Preferences</gui>.</p>
 
-  <p>The available <app>Pano Terminal</app> settings include:</p>
-
-  <list>
-    <item>
-      <p>Profile name.</p>
-    </item>
-    <item>
-      <p>Font and background colors.</p>
-    </item>
-    <item>
-      <p><gui style="tab">Compatibility</gui> with <key>Backspace</key> and
-      <key>Delete</key> keys.</p>
-    </item>
-    <item>
-      <p><gui style="tab">Scrolling</gui>.</p>
-    </item>
-  </list>
-
-  <section id="select-profile" style="task">
-    <title>Select a profile</title>
-
-    <p>If you have two or more profiles defined, you can change the profile in
-    your current <app>Pano Terminal</app> tab or
-    window by selecting a profile from <guiseq><gui style="menu">Terminal</gui>
-    <gui style="menuitem">Change Profile</gui></guiseq>.</p>
-
+  <section id="select-profile">
+    <title>Use a profile</title>
+    <p>To open a tab with another profile, click the arrow next to the
+    <gui style="button">New Tab</gui> button in the header bar and select the
+    profile. To change the profile of the current terminal, right-click it and
+    choose one in <gui style="menuitem">Profiles</gui>. The
+    <link xref="cmd-palette">command palette</link> offers both too.</p>
   </section>
 
-  <section id="new-profile" style="task">
-    <title>Create a new profile</title>
-
-    <p>To create a new profile with the default settings of
-    <app>Pano Terminal</app>:</p>
-
-    <steps>
-      <item>
-        <p>Select <guiseq><gui style="menu">Edit</gui>
-        <gui style="menuitem">Preferences</gui></guiseq>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, click on the <gui style="button">+</gui> button
-        next to the <gui>Profiles</gui> label.</p>
-      </item>
-      <item>
-        <p>Enter a name for the new profile. You can change this name later.</p>
-      </item>
-      <item>
-        <p>Click <gui style="button">Create</gui> to create the new profile.</p>
-      </item>
-      <item>
-        <p>Set your desired <link xref="#edit-profile">profile
-        preferences</link>. These will be saved automatically.</p>
-      </item>
-    </steps>
-
+  <section id="new-profile">
+    <title>Create a profile</title>
+    <p>Click the <gui style="button">+</gui> row below the profiles. A profile
+    named <gui>New Profile</gui> with the default settings is added; click it
+    to edit it.</p>
+    <p>To create a profile that starts with the settings of another one, click
+    the menu button of that profile and select
+    <gui style="menuitem">Clone</gui>.</p>
   </section>
 
-  <section id="create-profile-from-existing" style="task">
-    <title>Create a new profile based on an existing profile</title>
-
-    <p>You can create a new profile based on settings from an existing
-    profile:</p>
-
-    <steps>
-      <item>
-        <p>Select <guiseq><gui style="menu">Edit</gui>
-        <gui style="menuitem">Preferences</gui></guiseq>.</p>
-      </item>
-      <item>
-        <p>In the sidebar select the profile on which your new profile should
-        be based.</p>
-      </item>
-      <item>
-        <p>Click on the arrow next to the profile name.</p>
-      </item>
-      <item>
-        <p>Select <gui style="menuitem">Clone…</gui>.</p>
-      </item>
-      <item>
-        <p>Enter a name for the new profile. You can change this name later.</p>
-      </item>
-      <item>
-        <p>Click <gui style="button">Clone</gui> to create the new profile.</p>
-      </item>
-      <item>
-        <p>Set your desired <link xref="#edit-profile">profile
-        preferences</link>. These will be saved automatically.</p>
-      </item>
-    </steps>
-
-    <note>
-      <p>Creating a new profile from an existing profile will not affect
-      settings in an existing profile. Any changes to settings will be stored
-      in the new profile.</p>
-    </note>
-
-  </section>
-
-  <section id="edit-profile" style="task">
+  <section id="edit-profile">
     <title>Edit a profile</title>
-
-    <note style="warning">
-      <p>If the default profile is edited, it cannot be restored to its
-      original settings! If you have not already created any other
-      <app>Pano Terminal</app> profiles and have customized the default profile,
-      <app>Pano Terminal</app> <em>may</em> become unusable should any settings
-      cause problems. It is recommended that you
-      <link xref="#create-profile-from-existing">create a copy of the
-      default profile</link> then edit the copy to create a custom profile.</p>
-    </note>
-
-    <p>You can make changes to existing profiles. To edit a profile:</p>
-
-    <steps>
-      <item>
-        <p>Select <guiseq><gui style="menu">Edit</gui>
-        <gui style="menuitem">Preferences</gui></guiseq>.</p>
-      </item>
-      <item>
-        <p>Your current profile is selected in the sidebar. If you wish to edit
-        a different profile, click on its name.</p>
-      </item>
-    </steps>
-
-    <p>Once the desired profile is selected, you can:</p>
-
-    <steps>
-      <item>
-        <p>Select <link xref="app-fonts">font</link>,
-        <link xref="app-cursor">cursor shapes</link> and
-        <link xref="app-terminal-sizes"><app>Pano Terminal</app> size</link>.</p>
-      </item>
-      <item>
-        <p>You may also change behavior of <app>Pano Terminal</app> on
-        <link xref="pref-custom-exit">command exit</link>, set a
-        <link xref="pref-login-shell">custom login shell</link> or change
-        <link xref="pref-scrolling">scrollbar preferences</link>.</p>
-      </item>
-      <item>
-        <p>To change the <app>Pano Terminal</app> background and text colors, see
-        <link xref="app-colors"><app>Pano Terminal</app> color schemes</link>.</p>
-      </item>
-      <item>
-        <p>Changes to profile are saved immediately. To return to
-        <app>Pano Terminal</app>, click <gui style="button">Close</gui>.</p>
-      </item>
-    </steps>
-
+    <p>Click a profile to show its settings on a page of their own. Changes are
+    saved at once. The name of the profile is at the top of the page; edit it
+    and press the apply button to rename the profile.</p>
+    <p>There you can choose the <link xref="app-fonts">font</link>, the
+    <link xref="app-colors">colors</link>, the
+    <link xref="app-cursor">cursor</link>, the
+    <link xref="app-terminal-sizes">initial size</link>, the
+    <link xref="pref-scrolling">scrolling</link>, the
+    <link xref="pref-bell">bell</link>, the
+    <link xref="pref-custom-command">command</link> and what happens
+    <link xref="pref-custom-exit">when it exits</link>.</p>
   </section>
 
-  <section id="rename-profile" style="task">
-    <title>Rename an existing profile</title>
-
-    <p>You can rename existing profiles, including the default profile:</p>
-
-    <steps>
-      <item>
-        <p>Select <guiseq><gui style="menu">Edit</gui>
-        <gui style="menuitem">Preferences</gui></guiseq>.</p>
-      </item>
-      <item>
-        <p>Select the profile you wish to rename.</p>
-      </item>
-      <item>
-        <p>Click on the arrow next to the profile name.</p>
-      </item>
-      <item>
-        <p>Select <gui style="menuitem">Rename…</gui>.</p>
-      </item>
-      <item>
-        <p>Enter the new profile name.</p>
-      </item>
-      <item>
-        <p>Click <gui style="button">Rename</gui> to rename.</p>
-      </item>
-    </steps>
-
+  <section id="export">
+    <title>Export and import a profile</title>
+    <p>To take a profile to another computer, click its menu button, select
+    <gui style="menuitem">Export…</gui> and save it to a
+    <file>.pano-profile</file> file. On the other computer, click
+    <gui style="button">Import…</gui> above the list of profiles and choose
+    the file. The file holds the settings that differ from the defaults.</p>
+    <p>To copy the profiles of <app>GNOME Terminal</app>, see
+    <link xref="gs-import"/>.</p>
   </section>
 
-  <section id="delete-profile" style="task">
+  <section id="delete-profile">
     <title>Delete a profile</title>
-  
-    <p>To delete a profile:</p>
-
-    <steps>
-      <item>
-        <p>Select <guiseq><gui style="menu">Edit</gui>
-        <gui style="menuitem">Preferences</gui></guiseq>.</p>
-      </item>
-      <item>
-        <p>Select the profile you wish to delete.</p>
-      </item>
-      <item>
-        <p>Click on the arrow next to the profile name.</p>
-      </item>
-      <item>
-        <p>Select <gui style="menuitem">Delete…</gui>.</p>
-      </item>
-      <item>
-        <p>Click <gui style="button">Delete</gui> to confirm.</p>
-      </item>
-    </steps>
-
-    <note style="tip">
-      <p>The default profile cannot be deleted. If you wish to delete
-      that profile, first set another profile as <link
-      xref="#set-default">default</link>.</p>
-    </note>
-
+    <p>Click the menu button of the profile and select
+    <gui style="menuitem">Delete</gui>. The default profile cannot be deleted;
+    make another profile the default first.</p>
   </section>
 
-  <section id="set-default" style="task">
-    <title>Set a default profile</title>
-
-    <p>The default profile is loaded when a new terminal is opened unless you
-    have selected another profile. Any changes that you make to the settings will
-    be stored in the currently selected profile.</p>
-
-    <p>The default profile is used when <app>Pano Terminal</app> could not
-    otherwise decide which profile to use. For example, <app>Pano Terminal</app> is
-    started up freshly and opens its first terminal window. In contrast, when
-    you use a menu entry or keyboard shortcut of <app>Pano Terminal</app> to open a
-    new terminal, the profile of the existing terminal is used.</p>
-
-    <steps>
-      <item>
-        <p>Select <guiseq><gui style="menu">Edit</gui>
-        <gui style="menuitem">Preferences</gui></guiseq>.</p>
-      </item>
-      <item>
-        <p>Select the profile you wish to set as the default.</p>
-      </item>
-      <item>
-        <p>Click on the arrow next to the profile name.</p>
-      </item>
-      <item>
-        <p>Select <gui style="menuitem">Set as default</gui>.</p>
-      </item>
-    </steps>
-
-    <note>
-      <p>The default profile is marked with a check mark symbol.</p>
-    </note>
-
+  <section id="set-default">
+    <title>Set the default profile</title>
+    <p>The default profile is used when <app>Pano Terminal</app> cannot take
+    the profile of another terminal, for example for the first window after it
+    starts. New tabs and windows opened from a terminal get the profile of
+    that terminal.</p>
+    <p>To make a profile the default, click its menu button and select
+    <gui style="menuitem">Set as default</gui>.</p>
   </section>
 
 </page>

@@ -1,0 +1,37 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="cmd-broadcast">
+
+  <info>
+    <link type="guide" xref="index#commands"/>
+    <link type="seealso" xref="gs-split-panes"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Send what you type to all panes of a tab or all terminals of a window.</desc>
+  </info>
+
+  <title>Type into several terminals at once</title>
+
+<p>To run the same commands in several terminals, for example on several
+  servers, you can send what you type in one terminal to others too.</p>
+  <steps>
+<item><p>Press the menu button in the top-right corner of the window, or right-click a terminal, and select <gui style="menuitem">Broadcast Input</gui>.</p></item>
+<item><p>Select <gui style="menuitem">To All Panes in This Tab</gui> or <gui style="menuitem">To All Terminals in This Window</gui>.</p></item>
+</steps>
+
+  <p>A banner shows how many terminals get the input, and these are framed. To
+  leave a terminal out, select <gui style="menuitem">Include This Terminal</gui>
+  in its menu so that it is not checked. Select
+  <gui style="menuitem">Off</gui> to stop.</p>
+
+</page>

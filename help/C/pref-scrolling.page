@@ -1,13 +1,13 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="guide"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="pref-scrolling">
 
   <info>
-    <revision pkgversion="3.8" date="2013-02-25" status="draft"/>
-    <revision pkgversion="3.12" date="2014-09-08" status="review"/>
-    <revision version="0.2" pkgversion="3.34" date="2020-01-04" status="review"/>
     <link type="guide" xref="index#preferences"/>
     <link type="guide" xref="pref#profile"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -19,161 +19,60 @@
       <email>kittykat3756@gmail.com</email>
       <years>2013–2014</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Change the scroll output and scrollbar behavior.</desc>
+    <desc>Show or hide the scrollbar, scroll on output or keystrokes, and limit the scrollback.</desc>
   </info>
 
-  <title>Scrollbar preferences</title>
+  <title>Scrolling</title>
 
-  <p>When a lot of output is printed to your terminal screen, it can be helpful
-  to have your terminal behave in a specific manner so that it is easier to
-  work with.</p>
+<p>The scrolling settings belong to the profile:</p>
+  <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
+<item><p>Change the settings in the <gui>Scrolling</gui> group.</p></item>
+</steps>
 
-  <section id="visibility">
-    <title>Scrollbar visibility</title>
-
-    <p>You can disable the scrollbar:</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Scrolling</gui>.</p>
-      </item>
-      <item>
-        <p>Uncheck <gui>Show scrollbar</gui>.</p>
-      </item>
-    </steps>
-
-    <p>Your preference is saved immediately.</p>
-
-  </section>
-
-  <section id="on-output">
-    <title>Scroll on output</title>
-
-    <p>You can lock scrolling so that it always shows the newest output while a
-    command executes and produces output.</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Scrolling</gui>.</p>
-      </item>
-      <item>
-        <p>Check <gui style="checkbox">Scroll on output</gui>.</p>
-      </item>
-    </steps>
-
-  </section>
-
-  <section id="on-keystroke">
-    <title>Scroll on input</title>
-
-    <p>You can set the terminal to automatically scroll to the bottom of the
-    window when you input text into the prompt.</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Scrolling</gui>.</p>
-      </item>
-      <item>
-        <p>Check <gui style="checkbox">Scroll on keystroke</gui>.</p>
-      </item>
-    </steps>
-  </section>
+  <terms>
+    <item>
+      <title><gui>Show scrollbar</gui></title>
+      <p><gui>Regular</gui> always shows the scrollbar next to the text,
+      <gui>Overlay</gui> shows it over the text while you scroll, and
+      <gui>None</gui> hides it. The marks of
+      <link xref="cmd-shell-integration#marks">commands</link> are shown next
+      to the scrollbar.</p>
+    </item>
+    <item>
+      <title><gui>Kinetic scrolling</gui></title>
+      <p>Keep scrolling for a moment after you lift your fingers from a
+      touchscreen.</p>
+    </item>
+    <item>
+      <title><gui>Scroll on Output</gui></title>
+      <p>Scroll to the end when a program prints something, so that the
+      newest output is always shown.</p>
+    </item>
+    <item>
+      <title><gui>Scroll on Keystroke</gui></title>
+      <p>Scroll to the end when you press a key.</p>
+    </item>
+    <item>
+      <title><gui>Scroll on Paste</gui></title>
+      <p>Scroll to the end when you paste text.</p>
+    </item>
+  </terms>
 
   <section id="lines">
     <title>Scrollback lines</title>
-
-    <p>You can limit the number of lines of terminal output which are
-    remembered.</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Scrolling</gui>.</p>
-      </item>
-      <item>
-        <p>Check <gui>Limit scrollback to</gui> and enter a number of lines
-        to limit scrollback.</p>
-      </item>
-      <item>
-        <p>Optionally, you can click on <gui style="button">+</gui> to
-        increase and <gui style="button">-</gui> to decrease lines.</p>
-      </item>
-    </steps>
-
-    <p>You can choose to have unlimited scrollback.</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Scrolling</gui>.</p>
-      </item>
-      <item>
-        <p>Uncheck <gui>Limit scrollback to</gui>.</p>
-      </item>
-    </steps>
-
-    <note style="tip">
-      <p>Scrollback data is stored in compressed and encrypted files on disk,
-      under the system’s default location for temporary files (usually
-      <file>/tmp</file>). These files are unlinked immediately after their
-      creation, and as such, do not show up in the directory listing. The
-      occupied disk space is freed up as soon as the corresponding terminal
-      closes.</p>
-    </note>
-
-    <note style="warning">
-      <p>Make sure you have sufficient disk space available for these temporary
-      files. If in doubt, monitor disk usage for example with the command
-      <cmd>du /tmp</cmd>.</p>
-    </note>
-
-    <note style="important">
-      <p>A giant scrollback buffer makes resizing the terminal window slower.
-      As a rule of thumb, resizing gets noticeably slow at around 1 million
-      lines.</p>
-    </note>
-
+    <p>The scrollback holds the lines that have scrolled out of view. Turn on
+    <gui>Limit Scrollback</gui> and set <gui>Scrollback Lines</gui> to keep at
+    most that many lines, or turn it off to keep all of them. A large
+    scrollback uses more memory.</p>
   </section>
 
 </page>

@@ -1,0 +1,61 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="cmd-notifications">
+
+  <info>
+    <link type="guide" xref="index#commands"/>
+    <link type="seealso" xref="cmd-shell-integration"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Get notified when a long command finishes, or when a terminal prints something or goes quiet.</desc>
+  </info>
+
+  <title>Notifications for commands and activity</title>
+
+<section id="commands">
+    <title>When a long command finishes</title>
+    <p>When a command that ran for a while finishes in a terminal you are not
+    looking at, <app>Pano Terminal</app> sends a notification with the command,
+    whether it succeeded, and how long it took, and marks its tab. Click the
+    notification to go to the terminal.</p>
+    <p>This needs <link xref="cmd-shell-integration">shell integration</link>.
+    To change it:</p>
+    <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Behavior</gui> group, turn <gui>Notify When Commands Finish</gui> on or off, and set in <gui>Minimum Command Duration</gui> how many seconds a command must run. The default is 10.</p></item>
+</steps>
+  </section>
+
+  <section id="activity">
+    <title>Activity and silence</title>
+    <p>You can also watch a terminal for output, for example a download or a
+    build in another tab. Right-click the terminal and select:</p>
+    <terms>
+      <item>
+        <title><gui style="menuitem">Monitor for Activity</gui></title>
+        <p>Marks the tab and notifies you when the terminal prints
+        something.</p>
+      </item>
+      <item>
+        <title><gui style="menuitem">Monitor for Silence</gui></title>
+        <p>Marks the tab and notifies you when the terminal has printed nothing
+        for a while, by default for 10 seconds. Set how long in
+        <gui>Silence Duration</gui> in the <gui>Behavior</gui> group of the
+        preferences.</p>
+      </item>
+    </terms>
+    <p>This works with any program, without shell integration, and only while
+    you are not looking at the terminal.</p>
+  </section>
+
+</page>

@@ -1,12 +1,13 @@
 <page xmlns="http://projectmallard.org/1.0/"
       xmlns:its="http://www.w3.org/2005/11/its"
-      type="guide"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="introduction">
 
   <info>
-    <revision version="0.1" date="2013-01-08" status="candidate"/>
     <link type="guide" xref="index"/>
     <link type="seealso" xref="overview"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -23,23 +24,50 @@
       <email its:translate="no">mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Learn about the Pano Terminal emulator.</desc>
+    <desc>What <app>Pano Terminal</app> is and what it offers.</desc>
   </info>
 
   <title>Introduction</title>
 
-  <p><app>Pano Terminal</app> is a terminal emulator application for accessing a
+<p><app>Pano Terminal</app> is a terminal emulator application for accessing a
   UNIX shell environment which can be used to run programs available on your
-  system.</p>
+  system. It is a fork of <app>GNOME Terminal</app> and can be installed next
+  to it: the two keep their own profiles and preferences.</p>
 
-  <p><app>Pano Terminal</app> supports escape sequences that control cursor position
-  and colors.</p>
+  <p><app>Pano Terminal</app> supports escape sequences that control cursor
+  position and colors. Besides what <app>GNOME Terminal</app> offers, it
+  has:</p>
+
+  <list>
+    <item><p><link xref="gs-split-panes">Split panes</link>, and
+    <link xref="gs-tabs">tabs</link> at the top, bottom, left or right of the
+    window.</p></item>
+    <item><p><link xref="gs-session">Session restore</link> of windows, tabs
+    and panes.</p></item>
+    <item><p><link xref="cmd-shell-integration">Shell integration</link> for
+    bash, zsh and fish: marks for each command, jumping between prompts,
+    copying the output of a command, and
+    <link xref="cmd-notifications">notifications</link> when long commands
+    finish.</p></item>
+    <item><p>A <link xref="cmd-palette">command palette</link> and
+    <link xref="txt-quick-select">quick select</link>.</p></item>
+    <item><p>A <link xref="gs-quick-terminal">quick terminal</link> that you
+    show and hide with one key.</p></item>
+    <item><p>About 240 <link xref="app-colors">color schemes</link>,
+    transparent backgrounds, and a <link xref="app-window">header bar</link>
+    in the colors of the terminal.</p></item>
+  </list>
 
   <figure>
-    <title>Terminal</title>
+    <title>Pano Terminal</title>
     <desc>Screenshot of <app>Pano Terminal</app></desc>
     <media type="image" src="figures/pano.png" width="668">
     </media>

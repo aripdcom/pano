@@ -1,13 +1,14 @@
 <page xmlns="http://projectmallard.org/1.0/"
       xmlns:its="http://www.w3.org/2005/11/its"
-      type="guide"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="gs-tabs">
 
   <info>
-    <link type="guide" xref="index#getting-started"/>
-    <revision pkgversion="3.8" date="2013-02-17" status="candidate"/>
-    <revision pkgversion="3.12" date="2014-03-07" status="candidate"/>
-    <revision pkgversion="3.34" date="2020-01-04" status="candidate"/>
+    <link type="guide" xref="index#tabs"/>
+    <link type="seealso" xref="gs-split-panes"/>
+    <link type="seealso" xref="pref-tab-window"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -24,153 +25,117 @@
       <email its:translate="no">mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Enable, add, remove and reorder <app>Pano Terminal</app> tabs.</desc>
+    <desc>Open, close, reorder, pin and name tabs, and put the tabs on any side of the window.</desc>
   </info>
 
   <title>Use tabs</title>
 
-  <p>The tab bar is shown at the top a <app>Pano Terminal</app> window that has
-  multiple tabs open (it looks like a row of buttons). Click on a tab to switch
-  to it. You can open multiple tabs to manage your work in <app>Pano Terminal</app>.
-  This will allow you to multi-task with activities such as running programs,
-  browsing directories and editing text files in a single <app>Pano Terminal</app>
-  window.</p>
+<p>Tabs let you keep several terminals in one window. Click a tab to switch
+  to it.</p>
 
   <section id="add-tab">
     <title>Open a new tab</title>
-
-    <p>To open a new tab inside your current <app>Pano Terminal</app> window:</p>
-    <steps>
-      <item>
-        <p>Press
-        <keyseq><key>Shift</key><key>Ctrl</key><key>T</key></keyseq>.</p>
-      </item>
-    </steps>
-
+    <p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>T</key></keyseq>, or click the
+    <gui style="button">New Tab</gui> button at the left of the header bar.
+    Click the arrow next to it to open the tab with another profile.</p>
+    <p>New tabs are added after the last tab. To add them next to the current
+    tab instead, open the <gui>Preferences</gui> and set <gui>New Tab
+    Position</gui> in the <gui>Behavior</gui> group to <gui>Next</gui>.</p>
   </section>
 
-<!-- TODO: doesn't work, see bug 720693
-  <section id="rename-tab">
-    <title>Rename a tab</title>
-
-    <p>Each tab has an automatically assigned title. You can rename the tabs
-    individually:</p>
-
-    <steps>
-      <item>
-        <p>Select <guiseq><gui style="menu">Terminal</gui>
-        <gui style="menuitem">Set Title…</gui></guiseq>.</p>
-      </item>
-      <item>
-        <p>Enter the desired <gui>Title</gui> that you wish to use for the tab.
-        This will overwrite any titles that would be set by terminal commands.
-        </p>
-        <note>
-          <p>It is not possible to set back the automatically set title once it
-          has been set for a tab. To see the title, you need to allow terminal
-          command titles to be shown in the <gui style="menuitem">Profile 
-          Preferences</gui>.</p>
-        </note>
-      </item>
-      <item>
-        <p>Click <gui style="button">OK</gui>.</p>
-      </item>
-    </steps>
-  </section>-->
-
   <section id="close-tab">
-    <title>Remove a tab</title>
-
-    <p>To close an existing tab inside your current <app>Pano Terminal</app>
-    window:</p>
-
-    <steps>
-      <item>
-        <p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>W</key></keyseq>.</p>
-      </item>
-    </steps>
-
-    <p>Alternatively, you can click on the <gui style="button">×</gui> in the
-    top right corner of the tab or right click on the tab and select
+    <title>Close tabs</title>
+    <p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>W</key></keyseq>, click the
+    <gui style="button">×</gui> on the tab, or right-click the tab and select
     <gui style="menuitem">Close Terminal</gui>.</p>
+    <p>To close all tabs but one, right-click it and select
+    <gui style="menuitem">Close Other Terminals</gui>. Pinned tabs are kept.
+    If programs still run in tabs that you close, <app>Pano Terminal</app>
+    asks first.</p>
+  </section>
 
+  <section id="reopen-tab">
+    <title>Reopen a closed tab</title>
+    <p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>Alt</key><key>T</key></keyseq>, select
+    <gui style="menuitem">Reopen Closed Tab</gui> in the main menu, or click
+    <gui style="button">Undo</gui> in the notice that appears after closing a
+    tab. The tab comes back where it was, with its panes, their folders and
+    their profiles, but with new shells. The last ten closed tabs are kept,
+    also those of windows that were closed.</p>
   </section>
 
   <section id="reorder-tab">
     <title>Reorder tabs</title>
-
-    <p>To change the ordering of tabs in a window:</p>
-    <steps>
-      <item>
-        <p>Click and hold the left mouse button on the tab.</p>
-      </item>
-      <item>
-        <p>Drag the tab to the desired position among the other tabs.</p>
-      </item>
-      <item>
-        <p>Release the mouse button.</p>
-      </item>
-    </steps>
-
-    <p>The tab will be placed in the position closest to where you released the
-    tab, immediately beside other open tabs.</p>
-
-    <p>Alternatively, you can reorder a tab by right clicking on a tab and
-    selecting <gui style="menuitem">Move Terminal Left</gui> to move the tab to
-    the left or <gui style="menuitem">Move Terminal Right</gui> to move the tab
-    to the right. This will reorder the tab position by moving it one place at
-    a time.</p>
-
+    <p>Drag a tab to another place among the tabs. You can also right-click a
+    tab and select <gui style="menuitem">Move Terminal Left</gui> or
+    <gui style="menuitem">Move Terminal Right</gui>, or press
+    <keyseq><key>Shift</key><key>Ctrl</key><key>Page Up</key></keyseq> and <keyseq><key>Shift</key><key>Ctrl</key><key>Page Down</key></keyseq>.</p>
+    <p>Drag a tab onto another <app>Pano Terminal</app> window to move it
+    there, or out of the window to give it a window of its own. Right-click a
+    tab and select <gui style="menuitem">Detach Terminal</gui> to do the same
+    without dragging. Drop a tab onto a terminal of another tab to make the two
+    <link xref="gs-split-panes">panes</link> of one tab.</p>
   </section>
 
-  <!--
-  <section id="move-tab-another-window">
-    <title>Move a tab to another <app>Pano Terminal</app> window</title>
-
-    <p>If you want to move a tab from one window to another:</p>
-    <steps>
-      <item>
-        <p>Click and hold the left mouse button on the tab.</p>
-      </item>
-      <item>
-        <p>Drag the tab to the new window.</p>
-      </item>
-      <item>
-        <p>Place it beside other tabs in the new window.</p>
-      </item>
-      <item>
-        <p>Release the mouse button.</p>
-      </item>
-    </steps>
-
-    <note style="tip">
-      <p>You can move a tab from one window to another by dragging the tab to
-      the <gui>Activities</gui> hot-corner of the <gui>GNOME Shell</gui>. This
-      will reveal each of the open <app>Pano Terminal</app> windows. You can release
-      the tab that you are holding over the desired <app>Pano Terminal</app>
-      window.</p>
-    </note>
+  <section id="switch-tab">
+    <title>Switch between tabs</title>
+    <p>Press <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> and <keyseq><key>Ctrl</key><key>Page Down</key></keyseq> to go to
+    the previous and the next tab, and <keyseq><key>Alt</key><key>1</key></keyseq> to
+    <keyseq><key>Alt</key><key>0</key></keyseq> to go to the first ten tabs. Click the
+    <gui style="button">Show Open Tabs</gui> button in the header bar to see
+    all tabs at once.</p>
   </section>
 
-  <section id="move-tab-create-window">
-    <title>Move a tab to create a new <app>Pano Terminal</app> window</title>
-
-    <p>To create a new window from an existing tab:</p>
-    <steps>
-      <item>
-        <p>Click and hold the left mouse button on the tab.</p>
-      </item>
-      <item>
-        <p>Drag the tab out of the current <app>Pano Terminal</app> window.</p>
-      </item>
-      <item>
-        <p>Release the mouse button.</p>
-      </item>
-    </steps>
+  <section id="pin-tab">
+    <title>Pin tabs</title>
+    <p>Right-click a tab and select <gui style="menuitem">Pin Terminal</gui> to
+    keep it at the start of the tabs. Pinned tabs are not closed by
+    <gui style="menuitem">Close Other Terminals</gui>.</p>
   </section>
-  -->
+
+  <section id="rename-tab">
+    <title>Name a tab</title>
+    <p>Programs such as the shell set the title of their terminal, which the
+    tab shows. To give a terminal a title of your own, right-click its tab or
+    open the main menu and select <gui style="menuitem">Set Title…</gui>.
+    Programs cannot change this title, and it is kept when the
+    <link xref="gs-session">session is restored</link>. Leave it empty to
+    show the title of the program again.</p>
+    <p>To ignore the titles that programs set in every terminal, open the
+    <gui>Preferences</gui> and turn on <gui>Ignore Titles Set by Programs</gui>
+    in the <gui>Behavior</gui> group. Terminals then show their working
+    folder, unless you gave them a title.</p>
+  </section>
+
+  <section id="tab-position">
+    <title>Put the tabs on another side</title>
+    <p>To show the tabs at the bottom, left or right of the window:</p>
+    <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Appearance</gui> group, set <gui>Tab Bar Position</gui>.</p></item>
+</steps>
+    <p>On the left and right, the tabs form a list, with the pinned tabs at the
+    top. Drag the inner edge of the list to make it wider or narrower. Press
+    <keyseq><key>Shift</key><key>Ctrl</key><key>L</key></keyseq> to move the focus to the list: the arrow keys
+    then switch tabs, the menu key opens the menu of a tab, <key>Delete</key>
+    closes it, and <key>Enter</key> or <key>Esc</key> go back to the
+    terminal.</p>
+  </section>
+
+  <section id="middle-click">
+    <title>Middle-click on a tab</title>
+    <p>A middle click on a tab does nothing by default. To make it close the
+    tab, or paste the selected text into it, open the <gui>Preferences</gui>
+    and set <gui>Middle-Click on a Tab</gui> in the <gui>Behavior</gui>
+    group.</p>
+  </section>
 
 </page>

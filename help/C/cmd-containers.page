@@ -1,0 +1,38 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="cmd-containers">
+
+  <info>
+    <link type="guide" xref="index#commands"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Open tabs in containers, and keep new tabs in the container you work in.</desc>
+  </info>
+
+  <title>Toolbox and Distrobox containers</title>
+
+<p>If you use <app>Toolbox</app> or <app>Distrobox</app>, the main menu has
+  <gui style="menuitem">New Tab in Container</gui>, which opens a tab with a
+  shell in one of your containers. The containers are found with
+  <cmd>podman</cmd>.</p>
+
+  <p>New tabs and panes that you open from a terminal in a container start in
+  the same container. For that, the shell in the container has to report it,
+  which it does in <app>Toolbox</app>, or the terminal has to be started in it
+  from <app>Pano Terminal</app>. To turn this off:</p>
+  <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Behavior</gui> group, turn off <gui>Keep New Tabs in the Same Container</gui>.</p></item>
+</steps>
+
+</page>

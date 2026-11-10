@@ -1,13 +1,13 @@
 <page xmlns="http://projectmallard.org/1.0/"
       xmlns:its="http://www.w3.org/2005/11/its"
-      type="task"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="app-cursor">
 
   <info>
-    <revision version="0.1" date="2013-02-17" status="candidate"/>
-    <revision pkgversion="3.34" version="0.2" date="2020-01-04" status="candidate"/>
     <link type="guide" xref="index#appearance"/>
     <link type="guide" xref="pref#profile"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -24,49 +24,27 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Select different cursor style.</desc>
-
+    <desc>Choose the shape of the cursor and whether it blinks.</desc>
   </info>
 
   <title>Change cursor</title>
 
-  <p><app>Pano Terminal</app> has three cursors from which to choose. To select your
-  preferred cursor:</p>
+<steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
+<item><p>In the <gui>Cursor</gui> group, choose a <gui>Shape</gui>: <gui>Block</gui> (█), <gui>I-Beam</gui> (▏) or <gui>Underline</gui> (▁).</p></item>
+<item><p>Set <gui>Blinking</gui> to follow the system setting, or to always or never blink.</p></item>
+</steps>
 
-  <steps>
-    <item>
-      <p>Press the menu button in the top-right corner of the window and select
-      <gui style="menuitem">Preferences</gui>.</p>
-    </item>
-    <item>
-      <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-      section.</p>
-    </item>
-    <item>
-      <p>Select <gui style="tab">Text</gui>.</p>
-    </item>
-    <item>
-      <p>Choose your desired cursor shape from the drop down list next to
-      <gui>Cursor shape</gui>. You can choose from the following options:</p>
-      <terms>
-        <item>
-          <title its:translate="no">█</title>
-          <p><gui>Block</gui></p>
-        </item>
-        <item>
-          <title its:translate="no">▏</title>
-          <p><gui>I-Beam</gui></p>
-        </item>
-        <item>
-          <title its:translate="no">▁</title>
-          <p><gui>Underline</gui></p>
-        </item>
-      </terms>
-      <p>Upon selection of the cursor, your choice is saved automatically.</p>
-    </item>
-  </steps>
+  <p>The colors of the cursor can be changed with <gui>Override Cursor
+  Color</gui> in the <link xref="app-colors#custom">colors</link> of the
+  profile.</p>
 
 </page>

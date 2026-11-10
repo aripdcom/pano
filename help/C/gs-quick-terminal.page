@@ -1,0 +1,86 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="gs-quick-terminal">
+
+  <info>
+    <link type="guide" xref="index#getting-started"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Show and hide a terminal at the top of the screen with one key.</desc>
+  </info>
+
+  <title>Quick terminal</title>
+
+<p>The quick terminal is a <app>Pano Terminal</app> window that you show and
+  hide with one key, wherever you are. It appears at the top of the screen,
+  above the other windows.</p>
+
+  <section id="shortcut">
+    <title>Choose a key</title>
+
+    <p>On GNOME 48 or newer, and on KDE Plasma, the desktop can give
+    <app>Pano Terminal</app> a system-wide shortcut:</p>
+    <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Quick Terminal</gui> group, turn on <gui>System-Wide Shortcut</gui>.</p></item>
+<item><p>The desktop asks you for the key. <key>F12</key> is suggested.</p></item>
+</steps>
+
+    <p>The desktop sends the shortcut only to an application that runs, so
+    <app>Pano Terminal</app> then keeps running in the background, and starts
+    when you log in.</p>
+
+    <p>On other desktops, add a custom shortcut in the keyboard settings of
+    your desktop that runs this command, which shows or hides the quick
+    terminal:</p>
+    <code>pano-terminal --quick</code>
+    <p>On GNOME, this is in <guiseq><gui>Settings</gui><gui>Keyboard</gui>
+    <gui>View and Customize Shortcuts</gui><gui>Custom Shortcuts</gui></guiseq>.</p>
+  </section>
+
+  <section id="settings">
+    <title>Size and behavior</title>
+
+    <p>The <gui>Quick Terminal</gui> group of the preferences also sets:</p>
+    <terms>
+      <item>
+        <title><gui>Width</gui> and <gui>Height</gui></title>
+        <p>The size of the quick terminal, in percent of the screen.</p>
+      </item>
+      <item>
+        <title><gui>Hide When Another App Is Used</gui></title>
+        <p>Hides the quick terminal when another application gets the
+        focus.</p>
+      </item>
+      <item>
+        <title><gui>Slide In From the Top</gui></title>
+        <p>Slides the quick terminal in from the top edge of the screen.</p>
+      </item>
+    </terms>
+  </section>
+
+  <section id="wayland">
+    <title>Wayland</title>
+
+    <p>On X11, <app>Pano Terminal</app> places the quick terminal at the top of
+    the screen and keeps it above the other windows by itself. On Wayland,
+    applications cannot place their windows. On GNOME, the
+    <app>Pano Terminal Quick Terminal</app> extension of GNOME Shell, which
+    comes with <app>Pano Terminal</app>, does that: turn on
+    <gui>GNOME Shell Extension</gui> in the <gui>Quick Terminal</gui> group.
+    It then also stays on all workspaces. You may have to log out and in again
+    after installing <app>Pano Terminal</app> before the extension can be
+    turned on.</p>
+  </section>
+
+</page>

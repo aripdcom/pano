@@ -1,12 +1,14 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
       type="topic"
       id="app-colors">
 
   <info>
-    <revision version="0.1" date="2013-03-02" status="candidate"/>
-    <revision pkgversion="3.34" version="0.2" date="2020-01-04" status="candidate"/>
     <link type="guide" xref="index#appearance"/>
     <link type="guide" xref="pref#profile"/>
+    <link type="seealso" xref="app-window"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -23,173 +25,84 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Change colors and backgrounds.</desc>
-
+    <desc>Choose one of about 240 color schemes, make your own, or make the background transparent.</desc>
   </info>
 
   <title>Color schemes</title>
 
-  <p>If you do not like the default <app>Pano Terminal</app> theme, you may want to
-  change the colors that are used for the text and background. You can use
-  colors from your theme, select one of the presets or use a custom scheme.</p>
+<p>Each <link xref="pref-profiles">profile</link> has its own colors. To
+  change them:</p>
+  <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
+<item><p>Change the settings in the <gui>Colors</gui> group. They apply at once.</p></item>
+</steps>
 
-  <section id="system-theme">
-    <title>Use colors from your system theme</title>
-
-    <p>To use colors from the system theme:</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Colors</gui>.</p>
-      </item>
-      <item>
-        <p>Check <gui style="checkbox">Use colors from system theme</gui>. The
-        changes will be applied automatically.</p>
-      </item>
-    </steps>
-
+  <section id="schemes">
+    <title>Color schemes</title>
+    <p>Choose one of about 240 schemes, such as Gruvbox, Nord, Dracula,
+    Solarized or Tango, in <gui>Color Scheme</gui>. Type a few letters to find
+    one. A scheme sets the text, background and palette colors. Schemes that
+    have a light and a dark variant switch with the light or dark style of the
+    system.</p>
+    <p>To make your own schemes, put <file>.palette</file> files into the
+    folder that <gui style="button">Open Folder</gui> next to <gui>Your Own
+    Color Schemes</gui> opens, <file>~/.local/share/pano-terminal/schemes</file>.
+    They appear in the list at once.</p>
   </section>
 
-  <section id="built-in-scheme">
-    <title>Built-in schemes</title>
-
-    <p>You can choose one of the built-in color schemes: <gui>Black on light
-    yellow</gui>, <gui>Black on white</gui>, <gui>Gray on black</gui>,
-    <gui>GNOME light</gui>, <gui>GNOME dark</gui>,
-    <gui>Green on black</gui>, <gui>White on black</gui>, <gui>Tango
-    light</gui>, <gui>Tango dark</gui>, <gui>Solarized light</gui>,
-    <gui>Solarized dark</gui>. To set any of the built-in schemes:</p>
-
-    <steps>
+  <section id="custom">
+    <title>Colors of your own</title>
+    <p>Set <gui>Color Scheme</gui> to <gui>Custom</gui> to choose the colors of
+    the profile yourself:</p>
+    <terms>
       <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
+        <title><gui>Use Colors from System Style</gui></title>
+        <p>Use the text and background colors of the light or dark style of
+        the system.</p>
       </item>
       <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
+        <title><gui>Use Colors from Scheme</gui></title>
+        <p>Start from one of the built-in combinations of text and background
+        color, such as <gui>Black on white</gui> or <gui>Solarized dark</gui>.
+        The <gui>Override</gui> rows below it set the text and background, bold
+        text, cursor and highlight colors one by one.</p>
       </item>
       <item>
-        <p>Select <gui style="tab">Colors</gui>.</p>
+        <title><gui>Palette</gui></title>
+        <p>Choose the 16 colors that programs use for colored output, from a
+        built-in palette or one by one.</p>
       </item>
-      <item>
-        <p>Make sure that <gui style="checkbox">Use colors from system
-        theme</gui> is unchecked. Choose the desired color scheme from
-        <gui>Built-in schemes</gui>. Color scheme choices are applied
-        automatically.</p>
-        <note>
-	  <p>Applications can choose to use a color from the palette rather
-	  than the specified bold color.</p>
-        </note>
-      </item>
-    </steps>
-
-  </section>
-
-  <section id="custom-scheme">
-    <title>Custom color scheme</title>
-
-    <p>You can use custom colors for the text and background in
-    <app>Pano Terminal</app>:</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Colors</gui>.</p>
-      </item>
-      <item>
-        <p>Make sure that <gui style="checkbox">Use colors from system
-        theme</gui> is unchecked. Select <gui>Custom</gui> from the
-        <gui>Built-in schemes</gui> drop-down list.</p>
-      </item>
-      <item>
-        <p>Click on the color you would like to change.</p>
-      </item>
-      <item>
-        <p>Choose your desired color from the color sample and click
-        <gui style="button">Select</gui>.</p>
-        <p>You can choose the desired color in the following ways:</p>
-        <list>
-          <item>
-            <p>Input the hexadecimal color code in the input box.</p>
-          </item>
-          <item>
-            <p>Drag the slider on the left to adjust the colors and click on
-	    the desired color in the color selection area.</p>
-          </item>
-        </list>
-	<p>Your changes will be saved automatically.</p>
-      </item>
-    </steps>
-
-    <note style="tip">
-      <p>You may also alter a color when you have chosen a built-in scheme by
-      clicking on the color sample block. Once changed, your selection in the
-      built-in scheme menu will change to <gui>Custom</gui>.</p>
+    </terms>
+    <note>
+      <p>Terminals traditionally offer 16 colors, which you can change here.
+      <app>Pano Terminal</app> also supports 256 colors and “true color” with
+      over 16 million colors, which programs can use directly. If a change to
+      the palette seems to have no effect, the program probably uses such
+      colors.</p>
     </note>
-
-    <note style="tip">
-      <p>Traditionally terminal emulators offered a 16 color palette, this is
-      what you can alter here. <app>Pano Terminal</app> supports an extended set of
-      256 colors, but the additional 240 colors cannot be edited here.</p>
-
-      <p><app>Pano Terminal</app> even offers direct access to over 16 million
-      colors, this is called “true color” mode.</p>
-
-      <p>If the changes you make to the palette do not seem to have an effect,
-      presumably the contents you see consist of such extended palette colors
-      or true colors, rather than the 16 base colors.</p>
-    </note>
-
   </section>
 
-  <section id="bold-is-bright">
+  <section id="opacity">
+    <title>Transparent background</title>
+    <p>Lower <gui>Background Opacity</gui> to let the desktop show through the
+    background of the terminal. The text, the header bar and the tabs stay
+    opaque.</p>
+  </section>
+
+  <section id="bold-color">
     <title>Bright colors for bold text</title>
-
-    <p>Traditionally terminals didn't clearly separate bold font weight from
-    intense colors, often both of them were enabled together. Recent
-    improvements, such as the introduction of true color support, and certain
-    color schemes (e.g. Solarized) made it desirable to separate the two
-    concepts, that is, make the brightness independent from the font weight.</p>
-
-    <p>In order to choose your preferred behavior:</p>
-
-    <steps>
-      <item>
-        <p>Press the menu button in the top-right corner of the window and select
-        <gui style="menuitem">Preferences</gui>.</p>
-      </item>
-      <item>
-        <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-        section.</p>
-      </item>
-      <item>
-        <p>Select <gui style="tab">Colors</gui>.</p>
-      </item>
-      <item>
-        <p>Disable <gui>Show bold text in bright colors</gui> for the new
-        default behavior, the complete separation of color intensity and font
-        weight; or enable this option for improved backward compatibility.</p>
-      </item>
-    </steps>
+    <p>Traditionally, terminals showed bold text in brighter colors too. Turn
+    off <gui>Show Bold Text in Bright Colors</gui> to keep color and font
+    weight apart, which suits schemes such as Solarized; turn it on for
+    programs that expect the old behavior.</p>
   </section>
 
 </page>

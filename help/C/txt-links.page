@@ -1,10 +1,12 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="guide"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="txt-links">
 
   <info>
     <link type="guide" xref="index#textoutput"/>
-    <revision version="0.1" date="2013-03-03" status="candidate"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -21,87 +23,55 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Open links to web and email addresses.</desc>
+    <desc>Open or copy web addresses, email addresses and links in the output.</desc>
   </info>
 
   <title>Hyperlinks and email addresses</title>
 
-  <p><app>Pano Terminal</app> parses the terminal output and automatically detects
-  snippets of text that are web addresses or email addresses. Web and email
-  addresses are automatically highlighted when you point your cursor to the
-  text, indicating that the link can be opened in an application.</p>
+<p><app>Pano Terminal</app> detects web addresses, email addresses and
+  phone numbers in the output, and underlines them when you point at them.
+  Programs can also print text that links somewhere, like a link on a web
+  page.</p>
 
-  <p>For example, you may see <output>http://www.gnome.org</output> or
-  <output>username@example.com</output> generated as a part of terminal output by
-  programs such as <app>wget</app> or <app>curl</app>.</p>
+  <p>Hold down <key>Ctrl</key> and click a link to open it, or right-click it
+  and select:</p>
 
-  <section id="hyperlinks">
-    <title>Open or copy web addresses</title>
+  <terms>
+    <item>
+      <title><gui style="menuitem">Open Link</gui> and
+      <gui style="menuitem">Copy Link</gui></title>
+      <p>Open a web address in your web browser, or copy it to the
+      clipboard.</p>
+    </item>
+    <item>
+      <title><gui style="menuitem">Send Mail To…</gui> and
+      <gui style="menuitem">Copy Mail Address</gui></title>
+      <p>Write to an email address with your email application, or copy
+      it.</p>
+    </item>
+    <item>
+      <title><gui style="menuitem">Call To…</gui> and
+      <gui style="menuitem">Copy Call Address</gui></title>
+      <p>Call a phone number or a <sys>tel:</sys> or <sys>sip:</sys> address,
+      or copy it.</p>
+    </item>
+    <item>
+      <title><gui style="menuitem">Open Hyperlink</gui> and
+      <gui style="menuitem">Copy Hyperlink Address</gui></title>
+      <p>Open or copy the target of text that a program has made a link, for
+      example the file names that <cmd>ls --hyperlink</cmd> prints.</p>
+    </item>
+  </terms>
 
-    <p>Web addresses are also called hyperlinks. They can be copied to the
-    system clipboard or opened in your preferred web browser.</p>
-
-    <list>
-      <item>
-        <p>Copy a hyperlink:</p>
-        <steps>
-          <item>
-            <p>Right click on the link in <app>Pano Terminal</app>.</p>
-          </item>
-          <item>
-          <p>Select <gui style="menuitem">Copy Link</gui>.</p>
-          </item>
-        </steps>
-      </item>
-      <item>
-        <p>Open a hyperlink in your web browser:</p>
-        <steps>
-          <item>
-            <p>Right click on the hyperlink.</p>
-          </item>
-          <item>
-            <p>Select <gui style="menuitem">Open Link</gui>.</p>
-          </item>
-        </steps>
-      </item>
-    </list>
-
-  </section>
-
-  <section id="email">
-    <title>Email or copy email addresses</title>
-
-    <p>Email addresses can be copied to the system clipboard or opened in your
-    preferred email client.</p>
-
-    <list>
-      <item>
-        <p>Copy an email address:</p>
-        <steps>
-          <item>
-            <p>Right click on the email address in <app>Pano Terminal</app>.</p>
-          </item>
-          <item>
-          <p>Select <gui style="menuitem">Copy Mail Address</gui>.</p>
-          </item>
-        </steps>
-      </item>
-      <item>
-        <p>Send mail to the email address using your email client:</p>
-        <steps>
-          <item>
-            <p>Right click on the address.</p>
-          </item>
-          <item>
-            <p>Select <gui style="menuitem">Send Mail To…</gui>.</p>
-          </item>
-        </steps>
-      </item>
-    </list>
-
-  </section>
+  <p>To open or copy addresses without the mouse, see
+  <link xref="txt-quick-select"/>.</p>
 
 </page>

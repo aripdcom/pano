@@ -1,0 +1,51 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="gs-session">
+
+  <info>
+    <link type="guide" xref="index#tabs"/>
+    <link type="seealso" xref="gs-tabs"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Reopen the windows, tabs and panes of the last session, and remember the window size.</desc>
+  </info>
+
+  <title>Restore your windows and tabs</title>
+
+<p>When <app>Pano Terminal</app> is started without arguments while none of
+  its windows are open, for example from the applications menu, it reopens
+  the windows, tabs and panes that were open when it was last closed. Each
+  terminal gets a new shell in its previous folder, with its profile and
+  its title. Programs that were running are not restored.</p>
+
+  <p>To turn this off:</p>
+  <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Behavior</gui> group, turn off <gui>Restore Session</gui>.</p></item>
+</steps>
+
+  <p>The session is kept in the folder <file>~/.local/state/pano-terminal</file>.</p>
+
+  <section id="window-size">
+    <title>Remember the window size</title>
+
+    <p>New windows normally get the initial size of their profile, see
+    <link xref="app-terminal-sizes"/>. To open them with the size of the
+    terminal you used last instead:</p>
+    <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Behavior</gui> group, turn on <gui>Remember Window Size</gui>.</p></item>
+</steps>
+  </section>
+
+</page>

@@ -1,12 +1,13 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="task"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="pref-bell">
 
   <info>
-    <revision version="0.1" date="2013-02-17" status="candidate"/>
-    <revision version="0.2" pkgversion="3.34" date="2020-01-04" status="candidate"/>
     <link type="guide" xref="index#preferences"/>
     <link type="guide" xref="pref#profile"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -23,44 +24,30 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Enable audible notification in <app>Pano Terminal</app>.</desc>
-
+    <desc>Hear or see the bell of a terminal.</desc>
   </info>
 
-  <title>Set audible bell</title>
+  <title>Set the bell</title>
 
-  <p><app>Pano Terminal</app> can sound an audible bell to indicate events in
-  <app>Pano Terminal</app> windows and tabs.</p>
-
-  <p>To be notified of these events:</p>
+<p>Programs ring the bell of the terminal to draw your attention, for example
+  when a shell cannot complete what you typed. <app>Pano Terminal</app> can
+  play a sound, flash the terminal, or both:</p>
   <steps>
-    <item>
-      <p>Press the menu button in the top-right corner of the window and select
-      <gui style="menuitem">Preferences</gui>.</p>
-    </item>
-    <item>
-      <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-      section.</p>
-    </item>
-    <item>
-      <p>Select <gui style="tab">Text</gui>.</p>
-    </item>
-    <item>
-      <p>Select <gui style="checkbox">Terminal bell</gui></p>
-    </item>
-  </steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
+<item><p>In the <gui>Bell</gui> group, turn <gui>Play a Sound</gui> and <gui>Flash the Terminal</gui> on or off.</p></item>
+</steps>
 
-  <comment>
-    <p>TODO: Ctrl+G shortcut seems to do nothing in 3.34? When to press and where?
-    Preferences dialog? Before or after enabling the setting?
-    Or in the terminal window itself?</p>
-  </comment>
-  <note style="tip">
-    <p>To preview the bell sound that your system produces, press
-    <keyseq><key>Ctrl</key><key>G</key></keyseq>.</p>
-  </note>
+  <p>When the bell rings in a tab in the background, the tab is marked
+  instead of flashing.</p>
+
+  <p>To try it, press <keyseq><key>Ctrl</key><key>G</key></keyseq> at the prompt of a shell.</p>
 
 </page>

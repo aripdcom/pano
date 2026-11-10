@@ -1,14 +1,15 @@
 <page xmlns="http://projectmallard.org/1.0/"
       xmlns:its="http://www.w3.org/2005/11/its"
-      type="guide"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="gs-execute-commands">
 
   <info>
     <link type="guide" xref="index#getting-started"/>
-    <link type="seealso" xref="txt-copy-paste"/>
     <link type="seealso" xref="overview"/>
-    <revision pkgversion="3.8" date="2013-02-25" status="candidate"/>
-    <revision pkgversion="3.12" date="2014-03-24" status="candidate"/>
+    <link type="seealso" xref="txt-copy-paste"/>
+    <link type="seealso" xref="cmd-shell-integration"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -25,38 +26,37 @@
       <email its:translate="no">mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Launch programs or run commands using <app>Pano Terminal</app>.</desc>
+    <desc>Run programs in <app>Pano Terminal</app>.</desc>
   </info>
 
   <title>Execute a command</title>
 
-  <p>Any input entered in the <app>Pano Terminal</app> to be executed is referred to
-  as a <em>command</em>. You can run both command line and graphical user
-  interface (GUI) programs from the terminal.</p>
-
-  <p>To execute commands:</p>
+<p>Any input entered in the <app>Pano Terminal</app> to be executed is
+  referred to as a <em>command</em>. You can run both command line and
+  graphical user interface (GUI) programs from the terminal.</p>
 
   <steps>
-    <item>
-      <p>Type the command in the <app>Pano Terminal</app> prompt.</p>
-    </item>
-    <item>
-      <p>Press <key>Enter</key> to execute it.</p>
-    </item>
-  </steps>
+<item><p>Type the command in the <app>Pano Terminal</app> prompt.</p></item>
+<item><p>Press <key>Enter</key> to execute it.</p></item>
+</steps>
 
-  <p>If you have a program that ends abruptly without any warning or error,
-  you may want to run it in <app>Pano Terminal</app>. This will allow the program to
-  output any error or debugging messages to the <app>Pano Terminal</app> window. This
-  information can be helpful when filing a bug report.</p>
+  <p>If you have a program that ends abruptly without any warning or error, you
+  may want to run it in <app>Pano Terminal</app>. This will allow the program
+  to output any error or debugging messages to the <app>Pano Terminal</app>
+  window. This information can be helpful when filing a bug report.</p>
 
-  <note style="tip">
-    <p>Read about the
-    <link href="https://www.gnu.org/software/bash/manual/">Bash shell</link>
-    for more information on what you can do in a terminal.</p>
-  </note>
-  
+  <p>With <link xref="cmd-shell-integration">shell integration</link>, you can
+  jump back to the prompts of earlier commands and copy their output.</p>
+
+  <p>Read about the <link href="https://www.gnu.org/software/bash/manual/">Bash
+  shell</link> for more information on what you can do in a terminal.</p>
+
 </page>

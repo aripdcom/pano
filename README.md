@@ -54,7 +54,7 @@ Everything GNOME Terminal provides, plus:
   swap the active pane with a neighbouring one, and move it, with what runs
   in it, to a new tab or window. The panes you are not typing in are
   dimmed, and *Preferences → Appearance* can show a title above each pane.
-  Drag a pane by its title onto another pane to put it there, onto the
+  With these titles shown, drag a pane by its title onto another pane to put it there, onto the
   middle of a pane of the same tab to swap the two, onto the tabs to make
   it a tab, or out of the window to give it a window of its own. A tab
   dropped onto a pane becomes panes there.

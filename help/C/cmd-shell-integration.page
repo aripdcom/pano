@@ -1,0 +1,63 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="cmd-shell-integration">
+
+  <info>
+    <link type="guide" xref="index#commands"/>
+    <link type="seealso" xref="cmd-notifications"/>
+    <link type="seealso" xref="gs-execute-commands"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Jump between the prompts of earlier commands, see which failed, and copy their output.</desc>
+  </info>
+
+  <title>Shell integration and prompts</title>
+
+<p>With <em>shell integration</em>, the shell tells <app>Pano Terminal</app>
+  where each prompt and command starts and how the command ended. That is
+  what <link xref="cmd-notifications#commands">command notifications</link>,
+  jumping between prompts and copying the output of commands need.</p>
+
+  <p><app>Pano Terminal</app> sets this up by itself for <app>bash</app>,
+  <app>zsh</app> and <app>fish</app>, without changing your files, when it
+  starts the shell of a profile. It does not for
+  <link xref="pref-custom-command">custom commands</link>,
+  <link xref="pref-login-shell">login shells</link> of bash, and terminals in
+  containers. To turn it off:</p>
+  <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Behavior</gui> group, turn off <gui>Shell Integration</gui>. This applies to new terminals.</p></item>
+</steps>
+
+  <section id="marks">
+    <title>Command marks</title>
+    <p>Marks next to the scrollbar show where the commands in the scrollback
+    are. Marks of commands that failed are red.</p>
+  </section>
+
+  <section id="navigate">
+    <title>Jump between prompts</title>
+    <p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>Up</key></keyseq> to scroll to the prompt of the
+    previous command, and <keyseq><key>Shift</key><key>Ctrl</key><key>Down</key></keyseq> to scroll to the next
+    one. Without shell integration, these keys keep their usual meaning in the
+    terminal.</p>
+  </section>
+
+  <section id="copy-output">
+    <title>Copy the output of a command</title>
+    <p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>O</key></keyseq> to copy the output of the last
+    command. To copy that of an earlier command, right-click its output and
+    select <gui style="menuitem">Copy Output of This Command</gui>.</p>
+  </section>
+
+</page>

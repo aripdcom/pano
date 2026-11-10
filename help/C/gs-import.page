@@ -1,0 +1,65 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="gs-import">
+
+  <info>
+    <link type="guide" xref="index#getting-started"/>
+    <link type="seealso" xref="pref-profiles"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Copy your profiles, shortcuts and preferences from <app>GNOME Terminal</app>, and make <app>Pano Terminal</app> the default terminal.</desc>
+  </info>
+
+  <title>Move from GNOME Terminal</title>
+
+<p><app>Pano Terminal</app> keeps its own profiles and preferences, so that it
+  can be installed next to <app>GNOME Terminal</app> without changing it.</p>
+
+  <section id="import">
+    <title>Import the settings of GNOME Terminal</title>
+
+    <p>When <app>Pano Terminal</app> starts for the first time and finds
+    settings of <app>GNOME Terminal</app>, it asks whether to import your
+    profiles, keyboard shortcuts and preferences. Click
+    <gui style="button">Import</gui> to copy them.</p>
+
+    <p>To import them later:</p>
+    <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Application</gui> group, click <gui style="button">Import</gui> next to <gui>Import from GNOME Terminal</gui>.</p></item>
+</steps>
+
+    <p>The profiles are added to those you already have. A profile that both
+    have, such as the default profile they both start with, is replaced, and
+    the default profile of <app>GNOME Terminal</app> becomes the default.
+    Your keyboard shortcuts and preferences are replaced by those of
+    <app>GNOME Terminal</app>. The settings of <app>GNOME Terminal</app> are
+    not changed.</p>
+  </section>
+
+  <section id="default">
+    <title>Make Pano Terminal the default terminal</title>
+
+    <p>The default terminal is the one that the desktop and other applications,
+    such as the file manager, open. <app>Pano Terminal</app> asks whether it
+    should be the default when it is not. To make it the default:</p>
+    <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>In the <gui>Application</gui> group, click <gui style="button">Set as Default Terminal</gui>.</p></item>
+</steps>
+
+    <p>Turn off <gui>Ask to Remain Default</gui> in the same group if you do
+    not want to be asked again.</p>
+  </section>
+
+</page>

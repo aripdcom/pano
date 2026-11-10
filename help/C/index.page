@@ -4,10 +4,11 @@
       id="index">
 
   <info>
-    <title type="link" role="trail">Terminal</title>
-    <title type="link">Terminal</title>
-    <title type="text">Terminal</title>
+    <title type="link" role="trail">Pano Terminal</title>
+    <title type="link">Pano Terminal</title>
+    <title type="text">Pano Terminal</title>
     <revision version="0.1" date="2013-03-02" status="candidate"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -24,6 +25,11 @@
       <email its:translate="no">jwcampbell@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
@@ -38,6 +44,14 @@
 
   <section id="getting-started" style="2column">
     <title>Getting Started</title>
+  </section>
+
+  <section id="tabs" style="2column">
+    <title>Tabs, Panes and Windows</title>
+  </section>
+
+  <section id="commands" style="2column">
+    <title>Working With Commands</title>
   </section>
 
   <section id="textoutput" style="2column">

@@ -1,0 +1,38 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="cmd-palette">
+
+  <info>
+    <link type="guide" xref="index#commands"/>
+    <link type="seealso" xref="adv-keyboard-shortcuts"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Find actions, profiles and tabs by typing their name.</desc>
+  </info>
+
+  <title>Command palette</title>
+
+<p>The command palette lists the actions of <app>Pano Terminal</app> with
+  their shortcuts, your profiles and the open tabs, and finds them by their
+  name.</p>
+  <steps>
+<item><p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>P</key></keyseq>.</p></item>
+<item><p>Type a few letters of the words you are looking for. For example, <input>spl rig</input> finds <gui>Split Right</gui>.</p></item>
+<item><p>Press <key>Enter</key> to run the selected entry, or <key>Esc</key> to close the palette.</p></item>
+</steps>
+
+  <p>For each profile, the palette offers to open a new tab or window with it,
+  or to use it in the current terminal. For each tab, it offers to go
+  there.</p>
+
+</page>

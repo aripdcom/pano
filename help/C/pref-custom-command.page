@@ -1,15 +1,14 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
       type="topic"
       id="pref-custom-command">
 
   <info>
-    <revision pkgversion="3.8" date="2013-03-02" status="candidate"/>
-    <revision pkgversion="3.12" date="2014-09-08" status="candidate"/>
-    <revision pkgversion="3.34" date="2020-01-04" status="candidate"/>
     <link type="guide" xref="index#preferences"/>
     <link type="guide" xref="pref#profile"/>
     <link type="seealso" xref="gs-execute-commands"/>
-<!--    <link type="seealso" xref="prob-add-to-path"/>-->
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -26,57 +25,43 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Set <app>Pano Terminal</app> to run a command or a different shell on startup.</desc>
-
+    <desc>Run another program or shell than your default shell in the terminals of a profile.</desc>
   </info>
 
   <title>Custom commands and shells</title>
 
-  <p>A <em>shell</em> is software that provides an interface for users of an
-  operating system to run <em>commands</em>, which can be programs such as
-  <app>top</app> or a command line shell. The default shell is usually
-  <app>Bash</app>.</p>
-
-  <p>You can set <app>Pano Terminal</app> to run a command when it starts up instead
-  of awaiting input from you:</p>
-
+<p>A <em>shell</em> is software that provides an interface for users of an
+  operating system to run <em>commands</em>. The default shell is usually
+  <app>Bash</app>. A profile can run another shell, or a command such as
+  <cmd>ssh myserver</cmd> or <cmd>top</cmd>, instead:</p>
   <steps>
-    <item>
-      <p>Press the menu button in the top-right corner of the window and select
-      <gui style="menuitem">Preferences</gui>.</p>
-    </item>
-    <item>
-      <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-      section.</p>
-    </item>
-    <item>
-      <p>Select <gui style="tab">Command</gui>.</p>
-    </item>
-    <item>
-      <p>Check <gui>Run a custom command instead of my shell</gui>.</p>
-    </item>
-    <item>
-      <p>In the text box, type the command or the desired shell.</p>
-      <p>The command will be passed to the terminal exactly as you write it,
-      including any arguments that you specify. Environment variables will be
-      inherited from the terminal as it is a child process of the terminal.</p>
-    </item>
-    <item>
-      <p>Open a new <app>Pano Terminal</app> tab or window to see how the custom
-      shell or command executes.</p>
-    </item>
-  </steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
+<item><p>In the <gui>Command</gui> group, turn on <gui>Use Custom Command</gui>.</p></item>
+<item><p>In <gui>Custom Command</gui>, type the command with its arguments.</p></item>
+<item><p>Open a new tab or window with the profile to try it.</p></item>
+</steps>
 
-  <p>You can also <link xref="pref-custom-exit">set the behavior</link> of
-  the terminal once the command finishes executing.</p>
+  <p>The command is run as you type it, with the environment of the terminal.
+  You may have to give the full path of the command if its folder is not in
+  your <code>PATH</code>.</p>
 
-  <note style="important">
-    <p>You may have to enter full path to the command or the shell if the
-    directory where the command or shell resides is not in the
-    <code>PATH</code> variable of your system.</p>
-  </note>
+  <p>You can also <link xref="pref-custom-exit">choose what happens</link>
+  when the command exits. <link xref="cmd-shell-integration">Shell
+  integration</link> is not added to custom commands.</p>
+
+  <section id="cwd">
+    <title>Working folder</title>
+    <p><gui>Preserve Working Directory</gui> sets whether new terminals start in
+    the working folder of the terminal they are opened from: never, only for
+    the shell, or always, also for custom commands.</p>
+  </section>
 
 </page>

@@ -1,12 +1,14 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
       type="topic"
       id="txt-copy-paste">
+
   <info>
     <link type="guide" xref="index#textoutput"/>
     <link type="seealso" xref="adv-keyboard-shortcuts"/>
-
-    <revision version="0.1" date="2013-03-03" status="candidate"/>
-    <revision version="0.2" pkgversion="3.34" date="2020-01-04" status="candidate"/>
+    <link type="seealso" xref="txt-select-text"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -23,45 +25,57 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Copy and paste text in <app>Pano Terminal</app>.</desc>
-
+    <desc>Copy and paste text, also with its colors, and paste file names.</desc>
   </info>
 
   <title>Copy and paste</title>
 
-  <p>You can copy and paste text in <app>Pano Terminal</app> in a similar way to
-  other applications. However, the keyboard shortcuts differ.</p>
+<p>You can copy and paste text in <app>Pano Terminal</app> in a similar way
+  to other applications. However, the keyboard shortcuts differ.</p>
 
   <terms>
     <item>
-      <title><gui>Copy</gui></title>
-      <p>Highlight the text portions you wish to copy, then right click on the
-      text portion and select <gui style="menuitem">Copy</gui>. Alternatively,
-      you can press
-      <keyseq><key>Shift</key><key>Ctrl</key><key>C</key></keyseq>.</p>
+      <title>Copy</title>
+      <p>Select the text you wish to copy, then right-click it and select
+      <gui style="menuitem">Copy</gui>, or press <keyseq><key>Shift</key><key>Ctrl</key><key>C</key></keyseq>.
+      A short notice confirms it; to turn it off, open the
+      <gui>Preferences</gui> and turn off <gui>Confirm Copying</gui> in the
+      <gui>Behavior</gui> group.</p>
     </item>
     <item>
-      <title><gui>Copy as HTML</gui></title>
-      <p>Highlight the text portions you wish to copy with color and font
-      attributes, then right click on the text portion and select 
+      <title>Copy as HTML</title>
+      <p>Select the text you wish to copy with its colors and font attributes,
+      then right-click it and select
       <gui style="menuitem">Copy as HTML</gui>.</p>
     </item>
     <item>
-      <title><gui>Paste</gui></title>
-      <p>Right click in the <app>Pano Terminal</app> and select
-      <gui style="menuitem">Paste</gui>. Alternatively, you
-      can press
-      <keyseq><key>Shift</key><key>Ctrl</key><key>V</key></keyseq>.</p>
+      <title>Paste</title>
+      <p>Right-click in the terminal and select
+      <gui style="menuitem">Paste</gui>, or press <keyseq><key>Shift</key><key>Ctrl</key><key>V</key></keyseq>.
+      If you copied files in the file manager,
+      <gui style="menuitem">Paste as Filenames</gui> pastes their paths,
+      quoted for the shell.</p>
     </item>
   </terms>
 
-  <note>
-    <p>The standard keyboard shortcuts, such as
-    <keyseq><key>Ctrl</key><key>C</key></keyseq>, cannot be used to copy and
-    paste text.</p>
+  <p>Selected text can also be pasted with a middle click, in the terminal or
+  in another application.</p>
+
+  <note style="tip">
+    <p>The standard keyboard shortcuts, such as <keyseq><key>Ctrl</key><key>C</key></keyseq>, cannot be
+    used to copy and paste text, as programs in the terminal use them.</p>
   </note>
+
+  <p>To copy the output of a command, see
+  <link xref="cmd-shell-integration#copy-output"/>. To copy URLs, paths and
+  other text without the mouse, see <link xref="txt-quick-select"/>.</p>
 
 </page>

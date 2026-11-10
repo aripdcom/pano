@@ -1,0 +1,73 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="app-window">
+
+  <info>
+    <link type="guide" xref="index#appearance"/>
+    <link type="seealso" xref="app-colors"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Choose a dark or light style, the window corners, the space around the text and the colors of the header bar.</desc>
+  </info>
+
+  <title>Window appearance</title>
+
+<p>The <gui>Appearance</gui> group of the preferences changes how the
+  windows of <app>Pano Terminal</app> look:</p>
+  <steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item>
+<item><p>Change the settings in the <gui>Appearance</gui> group. They apply at once.</p></item>
+</steps>
+
+  <terms>
+    <item>
+      <title><gui>Theme Variant</gui></title>
+      <p>Follow the light or dark style of the system, or always use one of
+      them.</p>
+    </item>
+    <item>
+      <title><gui>Rounded corners</gui></title>
+      <p>Keep the rounded corners of the windows, round only the top ones, or
+      make all of them square.</p>
+    </item>
+    <item>
+      <title><gui>Space Around the Text</gui></title>
+      <p>Leave no space, a small space or a large space between the text and
+      the edges of the terminal.</p>
+    </item>
+    <item>
+      <title><gui>Color the Header Bar Like the Terminal</gui></title>
+      <p>When the active terminal uses a <link xref="app-colors">color
+      scheme</link> or colors of its own, give the header bar and the tabs
+      its background and text colors, so that the window looks like one
+      piece.</p>
+    </item>
+    <item>
+      <title><gui>Highlight Root and Remote Sessions</gui></title>
+      <p>While the active terminal runs a program as root, for example with
+      <cmd>sudo</cmd> or <cmd>su</cmd>, the header bar turns red. While it is
+      connected to another computer with <cmd>ssh</cmd> or <cmd>mosh</cmd>,
+      the header bar turns purple. The tabs of such terminals get a warning or
+      server icon.</p>
+    </item>
+    <item>
+      <title><gui>Tab Bar Position</gui></title>
+      <p>Show the tabs at the top, bottom, left or right of the window, see
+      <link xref="gs-tabs#tab-position"/>.</p>
+    </item>
+  </terms>
+
+  <p><gui>Dim Inactive Panes</gui> and <gui>Show Pane Titles</gui> are
+  described in <link xref="gs-split-panes#look"/>.</p>
+
+</page>

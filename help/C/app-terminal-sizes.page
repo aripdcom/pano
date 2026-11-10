@@ -1,12 +1,13 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="task"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="app-terminal-sizes">
 
   <info>
-    <revision version="0.1" date="2013-02-25" status="candidate"/>
-    <revision version="0.2" pkgversion="3.34" date="2020-01-04" status="candidate"/>
     <link type="guide" xref="index#appearance"/>
-    <link type="guide" xref="adv-keyboard-shortcuts"/>
+    <link type="seealso" xref="gs-session"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -23,77 +24,35 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Change the <app>Pano Terminal</app> window size.</desc>
-
+    <desc>Set the number of columns and rows of new terminals, or resize a window to a preset size.</desc>
   </info>
 
-  <title><app>Pano Terminal</app> sizes</title>
+  <title>Terminal sizes</title>
 
-  <p>If you work with certain command line applications that have minimum
-  terminal size requirements in order to display correctly, or if you want to
-  view long lines of terminal output with minimal line breaks on your
-  display, you may require <app>Pano Terminal</app> windows to be of a particular
-  size.</p>
+<p>Some programs need a minimum terminal size to display correctly, and long
+  lines are easier to read in wide terminals.</p>
 
-  <p>You can change the <app>Pano Terminal</app> window size to some preset
-  values:</p>
-  
+  <p>To resize the current window to a preset size, press the menu button in
+  the top-right corner of the window, select
+  <gui style="menuitem">Advanced</gui> and one of <gui>80×24</gui>,
+  <gui>80×43</gui>, <gui>132×24</gui> and <gui>132×43</gui> columns and
+  rows.</p>
+
+  <p>To set the size of new windows:</p>
   <steps>
-    <item>
-      <p>Press the menu button in the top-right corner of the window and select
-      <gui style="menuitem">Advanced</gui>.</p>
-    </item>
-    <item>
-      <p>Choose one of the following options:</p>
-      <list>
-        <item>
-          <p><gui style="menuitem">80×24</gui></p>
-        </item>
-        <item>
-          <p><gui style="menuitem">80×43</gui></p>
-        </item>
-        <item>
-          <p><gui style="menuitem">132×24</gui></p>
-        </item>
-        <item>
-          <p><gui style="menuitem">132×43</gui></p>
-        </item>
-      </list>
-    </item>
-  </steps>
+<item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
+<item><p>In the <gui>Terminal Size</gui> group, set the number of <gui>Columns</gui> and <gui>Rows</gui>.</p></item>
+</steps>
 
-  <note style="tip">
-    <p>If you have enabled <link xref="pref-keyboard-access"><gui>Menu access
-    keys</gui></link>, you can access this menu by pressing
-    <keyseq><key>Alt</key><key>T</key></keyseq> and then pressing <key>1</key>
-    to switch the <app>Pano Terminal</app> window to size <gui>80×24</gui> and so
-    on.</p>
-  </note>
-
-  <p>If you require custom size <app>Pano Terminal</app> windows, you can also set
-  the default window size according to your requirements:</p>
-
-  <steps>
-    <item>
-      <p>Press the menu button in the top-right corner of the window and select
-      <gui style="menuitem">Preferences</gui>.</p>
-    </item>
-    <item>
-      <p>In the sidebar, select your current profile in the <gui>Profiles</gui>
-      section.</p>
-    </item>
-    <item>
-      <p>Select <gui style="tab">Text</gui>.</p>
-    </item>
-    <item>
-      <p>Set <gui>Initial terminal size</gui> by typing the desired number of columns and
-      rows in the corresponding input boxes. You can also click
-      <gui style="button">+</gui> to increase or <gui style="button">-</gui> to
-      decrease the size.</p>
-    </item>
-  </steps>
+  <p>New windows can also take the size of the terminal you used last, see
+  <link xref="gs-session#window-size"/>.</p>
 
 </page>

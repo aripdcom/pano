@@ -1,12 +1,12 @@
 <page xmlns="http://projectmallard.org/1.0/"
       xmlns:its="http://www.w3.org/2005/11/its"
-      type="task"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
       id="txt-search">
 
   <info>
-    <revision version="0.1" date="2013-03-03" status="candidate"/>
-    <revision pkgversion="3.34" version="0.2" date="2020-01-04" status="candidate"/>
     <link type="guide" xref="index#textoutput"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
 
     <credit type="author copyright">
       <name>Sindhu S</name>
@@ -23,65 +23,54 @@
       <email>mdhillca@gmail.com</email>
       <years>2013</years>
     </credit>
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>Search the <app>Pano Terminal</app> output.</desc>
-
+    <desc>Find text in the output and the scrollback of a terminal.</desc>
   </info>
 
   <title>Search for text</title>
 
-  <p>You can search text in the <app>Pano Terminal</app> output:</p>
-
+<p>You can search the text of a terminal, including its scrollback:</p>
   <steps>
-    <item>
-      <p>Press <media its:translate="no" type="image" mime="image/svg" src="figures/keyboard-key-search.svg">
-      <key>Search</key> key symbol</media> in the top-right corner, or press
-      <keyseq><key>Ctrl</key><key>Shift</key><key>F</key></keyseq>.</p>
-    </item>
-    <item>
-      <p>Type in the search keyword and press <key>Enter</key> to search
-      backwards. Alternatively, click on the arrows according to the desired
-      search direction.</p>
-    </item>
-  </steps>
+<item><p>Press the search button in the header bar, or press <keyseq><key>Shift</key><key>Ctrl</key><key>F</key></keyseq>.</p></item>
+<item><p>Type what you are looking for. Every match is highlighted, and the search bar shows which match is the current one, for example <gui>3 of 17</gui>.</p></item>
+<item><p>Click the up arrow button to go to the previous match and the down arrow button to go to the next one, or press <keyseq><key>Shift</key><key>Ctrl</key><key>H</key></keyseq> and <keyseq><key>Shift</key><key>Ctrl</key><key>G</key></keyseq>.</p></item>
+</steps>
 
-  <p>You can search using the following options to narrow down your
+  <p>Click the options button in the search bar to narrow down your
   results:</p>
 
   <terms>
     <item>
-      <title><gui style="checkbox">Match case</gui></title>
-      <p>Make the search case sensitive: this restricts results to only those
-      that match the case of your search keyword.</p>
+      <title><gui>Match Case</gui></title>
+      <p>Only find text with the same upper and lower case letters as what you
+      typed.</p>
     </item>
     <item>
-      <title><gui style="checkbox">Match entire word only</gui></title>
-      <p><app>Pano Terminal</app> will look for the entire keyword and will ignore
-      results that partially match your search keyword. For example, if
-      you have searched for “cat”, <app>Pano Terminal</app> will show only
-      results that match this keyword exactly and omit results such as
+      <title><gui>Whole Words</gui></title>
+      <p>Only find whole words. For example, a search for “cat” does not find
       “bobcat”.</p>
     </item>
     <item>
-      <title><gui style="checkbox">Match as regular expression</gui></title>
-      <p>You can use regular expression patterns, also known as regex
-      patterns, in your search keywords. <app>Pano Terminal</app> will display
-      the results that match these search terms.</p>
-    </item>
-    <item>
-      <title><gui style="checkbox">Wrap around</gui></title>
-      <p><app>Pano Terminal</app> searches from your current location in the
-      scrollback to the end of available terminal output and then restarts the
-      search.</p>
+      <title><gui>Use Regular Expressions</gui></title>
+      <p>Search with a regular expression pattern. The search bar tells you if
+      the pattern is invalid.</p>
     </item>
   </terms>
 
+  <p>Press <key>Esc</key> to close the search bar, and
+  <keyseq><key>Shift</key><key>Ctrl</key><key>J</key></keyseq> to remove the highlights.</p>
+
   <note style="tip">
-    <p>If you expect to work with a lot of <app>Pano Terminal</app> output, increase
-    the <link xref="pref-scrolling#lines">scrollback lines</link> to
-    a higher limit to allow <app>Pano Terminal</app> to search further back.</p>
+    <p>If you expect to work with a lot of output, increase the
+    <link xref="pref-scrolling#lines">scrollback lines</link> so that you can
+    search further back.</p>
   </note>
 
 </page>

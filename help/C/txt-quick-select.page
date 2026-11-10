@@ -1,0 +1,43 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:ui="http://projectmallard.org/ui/1.0"
+      type="topic"
+      id="txt-quick-select">
+
+  <info>
+    <link type="guide" xref="index#textoutput"/>
+    <link type="seealso" xref="txt-copy-paste"/>
+    <link type="seealso" xref="txt-links"/>
+    <revision pkgversion="0.1" date="2026-11-10" status="candidate"/>
+
+    <credit type="editor">
+      <name>aripdcem</name>
+      <email its:translate="no">cem@aripd.com</email>
+      <years>2026</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Copy, paste or open URLs, paths, hashes and more on the screen by typing a label.</desc>
+  </info>
+
+  <title>Quick select</title>
+
+<p>Quick select puts a label of one or two letters on every URL, file path,
+  git hash, IP address, UUID and long number that the terminal shows, so that
+  you can pick one without the mouse.</p>
+  <steps>
+<item><p>Press <keyseq><key>Shift</key><key>Ctrl</key><key>Space</key></keyseq>.</p></item>
+<item><p>Type the label of the text you want. This copies it to the clipboard. Type the label with <key>Shift</key> to paste the text into the terminal instead, or with <key>Ctrl</key> to open it.</p></item>
+<item><p>Press <key>Esc</key> to stop without choosing.</p></item>
+</steps>
+
+  <section id="patterns">
+    <title>Your own patterns</title>
+    <p>To label other text too, such as ticket numbers, add Perl-compatible
+    regular expressions with this command:</p>
+    <code>gsettings set com.aripd.Pano.Legacy.Settings quick-select-patterns "['JIRA-[0-9]+']"</code>
+    <p>Their matches are offered before the others.</p>
+  </section>
+
+</page>

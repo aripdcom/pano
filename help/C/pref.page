@@ -3,6 +3,7 @@
       id="pref">
 
   <info>
+    <link type="guide" xref="index#preferences"/>
     <revision version="0.1" date="2013-03-02" status="draft"/>
 
     <credit type="author">
@@ -12,7 +13,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc></desc>
+    <desc>Preferences of <app>Pano Terminal</app> and of its profiles.</desc>
   </info>
 
   <title><app>Pano Terminal</app> preferences</title>
