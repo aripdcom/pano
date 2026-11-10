@@ -72,7 +72,9 @@
 
 #include "eggshell.hh"
 
+/* Links open with Ctrl+click, so they only look clickable while Ctrl is held */
 #define URL_MATCH_CURSOR_NAME "pointer"
+#define URL_MATCH_IDLE_CURSOR_NAME "text"
 #define SIZE_DISMISS_TIMEOUT_MSEC 1000
 #define VISUAL_BELL_DURATION_MS 300
 
@@ -128,6 +130,8 @@ typedef struct {
 
 struct _TerminalScreenPrivate
 {
+  gboolean link_cursor; /* whether links show the pointer cursor, see terminal_screen_modifiers_cb() */
+  double pointer_x, pointer_y; /* -1 while the pointer is elsewhere */
   char *uuid;
   gboolean registered; /* D-Bus interface is registered */
 
@@ -1230,6 +1234,80 @@ terminal_screen_key_event_done_cb(void* user_data)
   return G_SOURCE_REMOVE;
 }
 
+/* Shows the pointer cursor over links only while Ctrl, which opens them,
+ * is held */
+static void
+terminal_screen_set_link_cursor(TerminalScreen* screen,
+                                bool ctrl)
+{
+  if (ctrl == bool(screen->priv->link_cursor))
+    return;
+
+  screen->priv->link_cursor = ctrl;
+  for (auto l = screen->priv->match_tags; l; l = l->next) {
+    auto const tag_data = reinterpret_cast<TagData*>(l->data);
+    vte_terminal_match_set_cursor_name(VTE_TERMINAL(screen), tag_data->tag,
+                                       ctrl ? URL_MATCH_CURSOR_NAME : URL_MATCH_IDLE_CURSOR_NAME);
+  }
+
+  /* VTE only sets the cursor when the pointer moves onto a link, so set it
+   * for the link under the pointer */
+  auto const priv = screen->priv;
+  if (priv->pointer_x >= 0) {
+    int tag;
+    gs_free char *match = vte_terminal_check_match_at(VTE_TERMINAL(screen),
+                                                      priv->pointer_x, priv->pointer_y, &tag);
+    if (match)
+      gtk_widget_set_cursor_from_name(GTK_WIDGET(screen),
+                                      ctrl ? URL_MATCH_CURSOR_NAME : URL_MATCH_IDLE_CURSOR_NAME);
+  }
+}
+
+static bool
+is_ctrl_key(guint keyval)
+{
+  return keyval == GDK_KEY_Control_L || keyval == GDK_KEY_Control_R;
+}
+
+/* The state of a key event is the one from before it, so the press and
+ * release of Ctrl itself are told by its key; see the key handlers */
+static gboolean
+terminal_screen_modifiers_cb(GtkEventControllerKey* controller,
+                             GdkModifierType state,
+                             TerminalScreen* screen)
+{
+  terminal_screen_set_link_cursor(screen, (state & GDK_CONTROL_MASK) != 0);
+  return FALSE;
+}
+
+static void
+terminal_screen_key_released_cb(GtkEventControllerKey* controller,
+                                guint keyval,
+                                guint keycode,
+                                GdkModifierType state,
+                                TerminalScreen* screen)
+{
+  if (is_ctrl_key(keyval))
+    terminal_screen_set_link_cursor(screen, false);
+}
+
+static void
+terminal_screen_pointer_motion_cb(GtkEventControllerMotion* controller,
+                                  double x,
+                                  double y,
+                                  TerminalScreen* screen)
+{
+  screen->priv->pointer_x = x;
+  screen->priv->pointer_y = y;
+}
+
+static void
+terminal_screen_pointer_leave_cb(GtkEventControllerMotion* controller,
+                                 TerminalScreen* screen)
+{
+  screen->priv->pointer_x = screen->priv->pointer_y = -1;
+}
+
 /* Marks the time until the main loop runs again as handling a key press */
 static gboolean
 terminal_screen_key_pressed_cb(GtkEventControllerKey* controller,
@@ -1239,6 +1317,9 @@ terminal_screen_key_pressed_cb(GtkEventControllerKey* controller,
                                TerminalScreen* screen)
 {
   auto const priv = screen->priv;
+
+  if (is_ctrl_key(keyval))
+    terminal_screen_set_link_cursor(screen, true);
 
   if (priv->quick_select)
     return terminal_screen_quick_select_key (screen, keyval, state);
@@ -2001,6 +2082,19 @@ terminal_screen_init (TerminalScreen *screen)
   gtk_event_controller_set_propagation_phase (key_controller, GTK_PHASE_CAPTURE);
   g_signal_connect (key_controller, "key-pressed",
                     G_CALLBACK (terminal_screen_key_pressed_cb), screen);
+  g_signal_connect (key_controller, "modifiers",
+                    G_CALLBACK (terminal_screen_modifiers_cb), screen);
+  g_signal_connect (key_controller, "key-released",
+                    G_CALLBACK (terminal_screen_key_released_cb), screen);
+  priv->pointer_x = priv->pointer_y = -1;
+  auto const motion_controller = gtk_event_controller_motion_new ();
+  g_signal_connect (motion_controller, "enter",
+                    G_CALLBACK (terminal_screen_pointer_motion_cb), screen);
+  g_signal_connect (motion_controller, "motion",
+                    G_CALLBACK (terminal_screen_pointer_motion_cb), screen);
+  g_signal_connect (motion_controller, "leave",
+                    G_CALLBACK (terminal_screen_pointer_leave_cb), screen);
+  gtk_widget_add_controller (GTK_WIDGET (screen), motion_controller);
   gtk_widget_add_controller (GTK_WIDGET (screen), key_controller);
   priv->search_current = -1;
 
@@ -2024,7 +2118,7 @@ terminal_screen_init (TerminalScreen *screen)
       tag_data = g_slice_new (TagData);
       tag_data->flavor = url_regex_flavors[i];
       tag_data->tag = vte_terminal_match_add_regex (terminal, url_regexes[i], 0);
-      vte_terminal_match_set_cursor_name (terminal, tag_data->tag, URL_MATCH_CURSOR_NAME);
+      vte_terminal_match_set_cursor_name (terminal, tag_data->tag, URL_MATCH_IDLE_CURSOR_NAME);
 
       priv->match_tags = g_slist_prepend (priv->match_tags, tag_data);
     }
