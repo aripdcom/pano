@@ -11,8 +11,9 @@ It focuses on power-user features that GNOME Terminal does not offer, such
 as flexible tab placement, split panes, session restore and background
 transparency.
 
-> **Status:** early development. There are no packages yet; build it from
-> source as described below.
+> **Status:** early development. The first release is
+> [0.1.0](https://github.com/aripdcom/pano/releases/tag/v0.1.0), with
+> packages for Fedora, Debian 13 and Flatpak.
 
 Pano Terminal can be installed next to GNOME Terminal. It uses its own
 programs (`pano-terminal`, `pano-terminal-server`), application ID
@@ -175,10 +176,11 @@ roadmap.
 Packages
 --------
 
+Each [release](https://github.com/aripdcom/pano/releases/latest) has a
+source tarball, a Fedora RPM, a Debian 13 package and a Flatpak bundle.
 The [Packages workflow](https://github.com/aripdcom/pano/actions/workflows/packages.yml)
-builds a source tarball, a Fedora RPM, a Debian 13 package and a Flatpak
-bundle; download them from the artifacts of a run. To build them yourself,
-see [`packaging/`](packaging/README.md).
+builds the same from the latest code; download them from the artifacts of
+a run. To build them yourself, see [`packaging/`](packaging/README.md).
 
 The Flatpak runs the shells on the host, outside the sandbox, so it works
 like the other packages: it needs the permission to start programs on the
