@@ -132,6 +132,7 @@ struct _TerminalScreenPrivate
 {
   gboolean link_cursor; /* whether links show the pointer cursor, see terminal_screen_modifiers_cb() */
   double pointer_x, pointer_y; /* -1 while the pointer is elsewhere */
+  char *saved_word_chars; /* while a double click selects a link, see below */
   char *uuid;
   gboolean registered; /* D-Bus interface is registered */
 
@@ -2554,6 +2555,7 @@ terminal_screen_finalize (GObject *object)
   g_clear_pointer (&priv->prompts, g_array_unref);
   g_clear_pointer (&priv->prompt_anchors, g_array_unref);
   g_clear_pointer (&priv->search_matches, g_array_unref);
+  g_clear_pointer (&priv->saved_word_chars, g_free);
 
   g_free (priv->uuid);
   g_free (priv->user_title);
@@ -3932,6 +3934,43 @@ terminal_screen_bubble_click_pressed_cb (TerminalScreen  *screen,
   gtk_gesture_set_state (GTK_GESTURE (click), GTK_EVENT_SEQUENCE_DENIED);
 }
 
+/* A double click selects a word, and VTE does not count ":" as part of
+ * words, so a double click on "https://example.com" would leave out
+ * "https:". While a double click on a link selects, count it in. */
+static void
+terminal_screen_link_selection_released_cb (TerminalScreen  *screen,
+                                            int              n_press,
+                                            double           x,
+                                            double           y,
+                                            GtkGestureClick *click)
+{
+  auto const priv = screen->priv;
+  g_signal_handlers_disconnect_by_func (click, (void*)terminal_screen_link_selection_released_cb, screen);
+
+  if (priv->saved_word_chars) {
+    vte_terminal_set_word_char_exceptions (VTE_TERMINAL (screen),
+                                           priv->saved_word_chars[0] ? priv->saved_word_chars : nullptr);
+    g_clear_pointer (&priv->saved_word_chars, g_free);
+  }
+}
+
+static void
+terminal_screen_select_whole_link (TerminalScreen  *screen,
+                                   GtkGestureClick *click)
+{
+  auto const priv = screen->priv;
+  if (priv->saved_word_chars)
+    return;
+
+  auto const current = vte_terminal_get_word_char_exceptions (VTE_TERMINAL (screen));
+  priv->saved_word_chars = g_strdup (current ? current : "");
+  gs_free char *with_colon = g_strconcat (current ? current : "-#%&+,./=?@\\_~\302\267", ":", nullptr);
+  vte_terminal_set_word_char_exceptions (VTE_TERMINAL (screen), with_colon);
+
+  g_signal_connect_swapped (click, "released",
+                            G_CALLBACK (terminal_screen_link_selection_released_cb), screen);
+}
+
 static void
 terminal_screen_capture_click_pressed_cb (TerminalScreen  *screen,
                                           int              n_press,
@@ -3953,6 +3992,9 @@ terminal_screen_capture_click_pressed_cb (TerminalScreen  *screen,
   hyperlink = vte_terminal_check_hyperlink_at (VTE_TERMINAL (screen), x, y);
   url = terminal_screen_check_match (screen, x, y, &url_flavor);
   terminal_screen_check_extra (screen, x, y, &number_info, &timestamp_info);
+
+  if (n_press == 2 && button == 1 && url != nullptr && !(state & GDK_CONTROL_MASK))
+    terminal_screen_select_whole_link (screen, click);
 
   if (n_press == 1 &&
       !handled &&
