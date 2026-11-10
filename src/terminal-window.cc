@@ -2413,7 +2413,18 @@ action_shadow_activate_cb (GSimpleAction *action,
    * for the real action first, so that it's first in line for activation.
    * That means we can make this here a NOP, instead of forwarding the
    * activation to the shadowed action.
+   *
+   * Except for Copy: it is enabled when VTE says that the selection
+   * changed, which it does only when the mouse button is released, so
+   * copying while still selecting comes here.
    */
+  gs_free char *name = nullptr;
+  gs_unref_variant GVariant *target = nullptr;
+  if (g_action_parse_detailed_name (g_variant_get_string (parameter, nullptr),
+                                    &name, &target, nullptr) &&
+      g_str_equal (name, "win.copy") &&
+      target != nullptr)
+    action_copy_cb (G_SIMPLE_ACTION (lookup_action (window, "copy")), target, window);
 }
 
 static gboolean
