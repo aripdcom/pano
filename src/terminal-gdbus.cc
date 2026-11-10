@@ -401,17 +401,18 @@ terminal_factory_impl_create_instance (TerminalFactory *factory,
   TerminalApp *app = terminal_app_get ();
 
   /* If a parent screen is specified, use that to fill in missing information */
+  /* The client takes these paths from the environment of the terminal it
+   * runs in, which may have been closed since, for example when it runs in
+   * a tmux started in a tab that is gone. Then they are ignored.
+   */
   TerminalScreen *parent_screen = nullptr;
-  const char *parent_screen_object_path;
+  const char *parent_screen_object_path = nullptr;
   if (g_variant_lookup (options, "parent-screen", "&o", &parent_screen_object_path)) {
     parent_screen = terminal_app_get_screen_by_object_path (app, parent_screen_object_path);
-    if (parent_screen == nullptr) {
-      g_dbus_method_invocation_return_error (invocation,
-                                             G_DBUS_ERROR, G_DBUS_ERROR_INVALID_ARGS,
-                                             "Failed to get screen from object path %s",
-                                             parent_screen_object_path);
-      return TRUE;
-    }
+    if (parent_screen == nullptr)
+      _terminal_debug_print (TERMINAL_DEBUG_SERVER,
+                             "Ignoring the parent screen %s, which does not exist\n",
+                             parent_screen_object_path);
   }
 
   /* Try getting a parent window, first by parent screen then by window ID;
@@ -424,16 +425,14 @@ terminal_factory_impl_create_instance (TerminalFactory *factory,
     TerminalScreen *window_screen =
       terminal_app_get_screen_by_object_path (app, window_from_screen_object_path);
     if (window_screen == nullptr) {
-      g_dbus_method_invocation_return_error (invocation,
-                                             G_DBUS_ERROR, G_DBUS_ERROR_INVALID_ARGS,
-                                             "Failed to get screen from object path %s",
-                                             parent_screen_object_path);
-      return TRUE;
+      _terminal_debug_print (TERMINAL_DEBUG_SERVER,
+                             "Ignoring the window of screen %s, which does not exist\n",
+                             window_from_screen_object_path);
+    } else {
+      GtkWidget *win = GTK_WIDGET (gtk_widget_get_root (GTK_WIDGET (window_screen)));
+      if (TERMINAL_IS_WINDOW (win))
+        window = TERMINAL_WINDOW (win);
     }
-
-    GtkWidget *win = GTK_WIDGET (gtk_widget_get_root (GTK_WIDGET (window_screen)));
-    if (TERMINAL_IS_WINDOW (win))
-      window = TERMINAL_WINDOW (win);
   }
 
   /* Support old client */
