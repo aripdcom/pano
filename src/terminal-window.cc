@@ -4901,9 +4901,43 @@ terminal_window_parse_geometry (TerminalWindow *window,
 
   terminal_window_update_geometry (window);
 
-  if (geometry == nullptr ||
-      sscanf (geometry, "%d,%d", &grid_width, &grid_height) != 2)
+  /* An X geometry: [=][COLUMNSxROWS][{+-}X{+-}Y]. GTK 4 cannot place
+   * windows, so a position is accepted but has no effect.
+   */
+  if (geometry == nullptr)
     return FALSE;
+
+  auto p = geometry;
+  if (*p == '=')
+    p++;
+
+  auto have_size = false;
+  if (g_ascii_isdigit (*p)) {
+    char* end;
+    auto const columns = g_ascii_strtoll (p, &end, 10);
+    if ((*end != 'x' && *end != 'X') || !g_ascii_isdigit (end[1]))
+      return FALSE;
+    auto const rows = g_ascii_strtoll (end + 1, &end, 10);
+    if (columns < 1 || columns > 10000 || rows < 1 || rows > 10000)
+      return FALSE;
+    grid_width = int(columns);
+    grid_height = int(rows);
+    have_size = true;
+    p = end;
+  }
+
+  if (*p == '+' || *p == '-') {
+    auto const position = g_regex_match_simple ("^[+-]-?[0-9]+[+-]-?[0-9]+$", p,
+                                                GRegexCompileFlags(0),
+                                                GRegexMatchFlags(0));
+    if (!position)
+      return FALSE;
+  } else if (*p != '\0' || !have_size) {
+    return FALSE;
+  }
+
+  if (!have_size)
+    return TRUE;
 
   /* Set the size of the active screen and then reset our default-size
    * so that GtkWindow will run through layout and reallocate to the
