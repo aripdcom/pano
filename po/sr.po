@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-terminal/issues\n"
-"POT-Creation-Date: 2023-02-17 19:43+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 22:03+0300\n"
 "PO-Revision-Date: 2023-02-18 07:26+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <српски <gnome-sr@googlegroups.org>>\n"
@@ -19,181 +19,229 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Project-Style: gnome\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Poedit 3.1.1\n"
+"X-Project-Style: gnome\n"
 
-#: data/org.gnome.Terminal.desktop.in:3
-#: data/org.gnome.Terminal.metainfo.xml.in:37 src/server.cc:152
-#: src/terminal-accels.cc:232 src/terminal-menubar.ui.in:144
-#: src/terminal-tab-label.cc:81 src/terminal-window.cc:1903
-#: src/terminal-window.cc:2207 src/terminal-window.cc:2522 src/terminal.cc:598
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#, fuzzy
+msgid "Pano Terminal"
+msgstr "Гномов терминал"
+
+#: data/com.aripd.Pano.desktop.in:3 src/terminal-accels.cc:282
+#: src/terminal-command-palette.cc:269 src/terminal-window.ui:7
 msgid "Terminal"
 msgstr "Терминал"
 
-#: data/org.gnome.Terminal.desktop.in:4
-#: data/org.gnome.Terminal.metainfo.xml.in:38
+#: data/com.aripd.Pano.desktop.in:4
 msgid "Use the command line"
 msgstr "Користи линију наредби"
 
-#: data/org.gnome.Terminal.desktop.in:5
-#: data/org.gnome.Terminal.Preferences.desktop.in:8
-msgid "shell;prompt;command;commandline;cmd;"
-msgstr ""
-"љуска;шкољка;упит;наредба;команда;shell;prompt;command;commandline;cmd;"
+#: data/com.aripd.Pano.desktop.in:5
+#, fuzzy
+#| msgid "shell;prompt;command;commandline;cmd;"
+msgid "terminal;shell;prompt;command;commandline;cmd;"
+msgstr "љуска;шкољка;упит;наредба;команда;shell;prompt;command;commandline;cmd;"
 
-#: data/org.gnome.Terminal.desktop.in:18 src/terminal-accels.cc:127
+#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
 msgid "New Window"
 msgstr "Нови прозор"
 
-#: data/org.gnome.Terminal.desktop.in:22 src/terminal-accels.cc:146
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
+#: src/terminal-preferences-window.ui:50
 msgid "Preferences"
 msgstr "Поставке"
 
-#: data/org.gnome.Terminal.Preferences.desktop.in:4
+#: data/com.aripd.Pano.Preferences.desktop.in:3
 msgid "Configure the command line"
 msgstr "Подеси линију наредби"
 
-#: data/org.gnome.Terminal.Preferences.desktop.in:9 src/prefs-main.cc:143
-msgid "Terminal Preferences"
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr "љуска;шкољка;упит;наредба;команда;shell;prompt;command;commandline;cmd;"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+#| msgid "Terminal Preferences"
+msgid "Pano Terminal Preferences"
 msgstr "Поставке терминала"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:34
-#: data/org.gnome.Terminal.metainfo.xml.in:63
-msgid "org.gnome.Terminal.desktop"
-msgstr "org.gnome.Terminal.desktop"
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "Да поставим Гномов терминал као ваш основни терминал?"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:35
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:36
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
+#: src/terminal-global-shortcuts.cc:231
+msgid "Show or hide the quick terminal"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:34
+#: data/com.aripd.Pano.metainfo.xml.in:63
+msgid "com.aripd.Pano.desktop"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:35
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
 msgid "GPL-3.0+ or GFDL-1.3-only"
 msgstr "само ОЈЛ-3.0+ или само GFDL-1.3"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:36
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:37
+#: data/com.aripd.Pano.metainfo.xml.in:36
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
 msgid "GPL-3.0+"
 msgstr "ОЈЛ-3.0+"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:40
+#: data/com.aripd.Pano.metainfo.xml.in:38
+msgid "Use the command line, with your tabs where you want them"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:40
 #, fuzzy
 msgid ""
-"Pano Terminal is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your "
-"system."
+"Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
+"which can be used to run programs available on your system."
 msgstr ""
 "Гномов терминал је опонашавач терминала за приступ конзолном окружењу "
 "ЈУНИКСА који може бити коришћен за покретање програма који су доступнни на "
 "вашем систему."
 
-#: data/org.gnome.Terminal.metainfo.xml.in:41
+#: data/com.aripd.Pano.metainfo.xml.in:41
+#, fuzzy
+#| msgid ""
+#| "It supports several profiles, multiple tabs and implements several "
+#| "keyboard shortcuts."
 msgid ""
 "It supports several profiles, multiple tabs and implements several keyboard "
-"shortcuts."
+"shortcuts. The tab bar can be placed at the top, bottom, left or right of "
+"the window."
 msgstr ""
 "Подржава неколико профила, отварање више језичака и примену неколико пречица "
 "тастатуре."
 
-#: data/org.gnome.Terminal.metainfo.xml.in:44
+#: data/com.aripd.Pano.metainfo.xml.in:44
 msgid "console"
 msgstr "конзола"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:45
+#: data/com.aripd.Pano.metainfo.xml.in:45
 msgid "keyboard"
 msgstr "тастатура"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:46
+#: data/com.aripd.Pano.metainfo.xml.in:46
 msgid "pointing"
 msgstr "показивање"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:50
-msgid ""
-"https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-terminal.png"
+#: data/com.aripd.Pano.metainfo.xml.in:50
+msgid "https://pano.aripd.com/images/tabs-left-light.png"
 msgstr ""
-"https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-terminal.png"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:54
+#: data/com.aripd.Pano.metainfo.xml.in:54
 msgid "HiDpiIcon"
 msgstr "HiDpiIcon"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:55
+#: data/com.aripd.Pano.metainfo.xml.in:55
 msgid "HighContrast"
 msgstr "HighContrast"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:56
+#: data/com.aripd.Pano.metainfo.xml.in:56
 msgid "ModernToolkit"
 msgstr "ModernToolkit"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:57
+#: data/com.aripd.Pano.metainfo.xml.in:57
 msgid "SearchProvider"
 msgstr "SearchProvider"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:58
+#: data/com.aripd.Pano.metainfo.xml.in:58
 msgid "UserDocs"
 msgstr "UserDocs"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:60
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:43
-msgid "https://wiki.gnome.org/Apps/Terminal"
-msgstr "https://wiki.gnome.org/Apps/Terminal"
+#: data/com.aripd.Pano.metainfo.xml.in:60
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
+msgid "https://pano.aripd.com"
+msgstr ""
 
-#. This is the name of a colour scheme
-#: data/org.gnome.Terminal.metainfo.xml.in:61
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:44 src/preferences.ui:214
-msgid "GNOME"
-msgstr "Гном"
+#: data/com.aripd.Pano.metainfo.xml.in:61
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
+msgid "https://github.com/aripdcom/pano/issues"
+msgstr ""
 
-#: data/org.gnome.Terminal.metainfo.xml.in:62
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:45
-msgid "https://wiki.gnome.org/Apps/Terminal/ReportingBugs"
-msgstr "https://wiki.gnome.org/Apps/Terminal/ReportingBugs"
+#: data/com.aripd.Pano.metainfo.xml.in:62
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
+msgid "https://github.com/aripdcom/pano"
+msgstr ""
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:34
-msgid "org.gnome.Terminal.Nautilus"
+#: data/com.aripd.Pano.metainfo.xml.in:64
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
+#, fuzzy
+#| msgid "gnome-terminal"
+msgid "pano-terminal"
+msgstr "gnome-terminal"
+
+#: data/com.aripd.Pano.metainfo.xml.in:66
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
+msgid "aripd"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:71
+msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
+msgstr ""
+
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
+#, fuzzy
+#| msgid "org.gnome.Terminal.Nautilus"
+msgid "com.aripd.Pano.Nautilus"
 msgstr "org.gnome.Terminal.Nautilus"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:35
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
 msgid "org.gnome.Nautilus.desktop"
 msgstr "org.gnome.Nautilus.desktop"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:38
-msgid "Terminal plugin for Files"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#, fuzzy
+#| msgid "Terminal plugin for Files"
+msgid "Pano Terminal plugin for Files"
 msgstr "Прикључак терминала за Датотеке"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:39
-msgid "Open a terminal from Files"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#, fuzzy
+#| msgid "Open a terminal from Files"
+msgid "Open Pano Terminal from Files"
 msgstr "Отвара терминал из Датотека"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:41
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
+#, fuzzy
+#| msgid ""
+#| "Open Terminal is a plugin for the Files application that adds a menu item "
+#| "to the context menu to open a terminal in the currently browsed directory."
 msgid ""
-"Open Terminal is a plugin for the Files application that adds a menu item to "
-"the context menu to open a terminal in the currently browsed directory."
+"Open in Pano Terminal is a plugin for the Files application that adds a menu "
+"item to the context menu to open Pano Terminal in the currently browsed "
+"directory."
 msgstr ""
 "Отвори терминал је додатак за програм Датотеке, који додаје ставку менија за "
 "отварање терминала из тренутног директоријума."
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:46
-msgid "gnome-terminal"
-msgstr "gnome-terminal"
-
-#. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
-#: src/org.gnome.Terminal.gschema.xml:133
+#. Translators: This needs to be parsed as a GVariant string, so keep the
+#. regular single quotes around the string as-is, and do not add extra quotes.
+#: src/com.aripd.Pano.gschema.xml:151
 msgctxt "visible-name"
 msgid "'Unnamed'"
 msgstr "'Неименовано'"
 
-#: src/org.gnome.Terminal.gschema.xml:134
+#: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
 msgstr "Човеку разумљив назив профила"
 
-#: src/org.gnome.Terminal.gschema.xml:135
+#: src/com.aripd.Pano.gschema.xml:153
 msgid "Human-readable name of the profile."
 msgstr "Човеку разумљив назив профила."
 
-#: src/org.gnome.Terminal.gschema.xml:139
+#: src/com.aripd.Pano.gschema.xml:157
 msgid "Default color of text in the terminal"
 msgstr "Основна боја текста у терминалу"
 
-#: src/org.gnome.Terminal.gschema.xml:140
+#: src/com.aripd.Pano.gschema.xml:158
 msgid ""
 "Default color of text in the terminal, as a color specification (can be HTML-"
 "style hex digits, or a color name such as “red”)."
@@ -202,11 +250,11 @@ msgstr ""
 "хексадекадних цифара ХТМЛ стила, или назив боје на енглеском језику, нпр.: "
 "„red“ — црвена)."
 
-#: src/org.gnome.Terminal.gschema.xml:144
+#: src/com.aripd.Pano.gschema.xml:162
 msgid "Default color of terminal background"
 msgstr "Основна боја позадине терминала"
 
-#: src/org.gnome.Terminal.gschema.xml:145
+#: src/com.aripd.Pano.gschema.xml:163
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as “red”)."
@@ -215,11 +263,11 @@ msgstr ""
 "хексадекадних цифара ХТМЛ стила, или назив боје на енглеском језику, нпр.: "
 "„red“ — црвена)."
 
-#: src/org.gnome.Terminal.gschema.xml:149
+#: src/com.aripd.Pano.gschema.xml:167
 msgid "Default color of bold text in the terminal"
 msgstr "Подразумевана боја подебљаног текста у терминалу"
 
-#: src/org.gnome.Terminal.gschema.xml:150
+#: src/com.aripd.Pano.gschema.xml:168
 msgid ""
 "Default color of bold text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as “red”). This is ignored if "
@@ -229,18 +277,18 @@ msgstr ""
 "шестословни ХТМЛ код боје, или назив боје на енглеском језику). Ова опција "
 "се не користи уколико укључите „bold-color-same-as-fg“."
 
-#: src/org.gnome.Terminal.gschema.xml:154
+#: src/com.aripd.Pano.gschema.xml:172
 msgid "Whether bold text should use the same color as normal text"
 msgstr "Да ли је подебљани текст исте боје као и уобичајени текст"
 
-#: src/org.gnome.Terminal.gschema.xml:155
+#: src/com.aripd.Pano.gschema.xml:173
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
 msgstr ""
 "Ако је изабрано, подебљани текст ће бити исписан у истој боји као и "
 "уобичајени текст."
 
-#: src/org.gnome.Terminal.gschema.xml:160
+#: src/com.aripd.Pano.gschema.xml:178
 msgid ""
 "Scale factor for the cell height to increase line spacing. (Does not "
 "increase the font’s height.)"
@@ -248,7 +296,7 @@ msgstr ""
 "Размера висине ћелије за повећање размакнутости редова (не повећава висину "
 "фонта)."
 
-#: src/org.gnome.Terminal.gschema.xml:165
+#: src/com.aripd.Pano.gschema.xml:183
 msgid ""
 "Scale factor for the cell width to increase letter spacing. (Does not "
 "increase the font’s width.)"
@@ -256,19 +304,19 @@ msgstr ""
 "Размера ширине ћелије за повећање размакнутости слова (не повећава ширину "
 "фонта)."
 
-#: src/org.gnome.Terminal.gschema.xml:169
+#: src/com.aripd.Pano.gschema.xml:187
 msgid "Whether to use custom cursor colors"
 msgstr "Да ли да користи произвољну боју курсора"
 
-#: src/org.gnome.Terminal.gschema.xml:170
+#: src/com.aripd.Pano.gschema.xml:188
 msgid "If true, use the cursor colors from the profile."
 msgstr "Уколико је укључено, користи боје курсора на основу профила."
 
-#: src/org.gnome.Terminal.gschema.xml:174
+#: src/com.aripd.Pano.gschema.xml:192
 msgid "Cursor background color"
 msgstr "Боја позадине курсора"
 
-#: src/org.gnome.Terminal.gschema.xml:175
+#: src/com.aripd.Pano.gschema.xml:193
 msgid ""
 "Custom color of the background of the terminal’s cursor, as a color "
 "specification (can be HTML-style hex digits, or a color name such as “red”). "
@@ -278,11 +326,11 @@ msgstr ""
 "шестословни ХТМЛ код боје, или назив боје на енглеском језику). Ова опција "
 "се користи уколико укључите „cursor-colors-set“."
 
-#: src/org.gnome.Terminal.gschema.xml:179
+#: src/com.aripd.Pano.gschema.xml:197
 msgid "Cursor foreground colour"
 msgstr "Боја курсора"
 
-#: src/org.gnome.Terminal.gschema.xml:180
+#: src/com.aripd.Pano.gschema.xml:198
 msgid ""
 "Custom color for the foreground of the text character at the terminal’s "
 "cursor position, as a color specification (can be HTML-style hex digits, or "
@@ -292,19 +340,19 @@ msgstr ""
 "бити шестословни ХТМЛ код боје, или назив боје на енглеском језику). Ова "
 "опција се користи уколико укључите „cursor-colors-set“."
 
-#: src/org.gnome.Terminal.gschema.xml:184
+#: src/com.aripd.Pano.gschema.xml:202
 msgid "Whether to use custom highlight colors"
 msgstr "Да ли да користи произвољне боје за истицање"
 
-#: src/org.gnome.Terminal.gschema.xml:185
+#: src/com.aripd.Pano.gschema.xml:203
 msgid "If true, use the highlight colors from the profile."
 msgstr "Уколико је укључено, користи боје за истицање из профила."
 
-#: src/org.gnome.Terminal.gschema.xml:189
+#: src/com.aripd.Pano.gschema.xml:207
 msgid "Highlight background color"
 msgstr "Боја позадине истицања"
 
-#: src/org.gnome.Terminal.gschema.xml:190
+#: src/com.aripd.Pano.gschema.xml:208
 msgid ""
 "Custom color of the background of the terminal’s highlight, as a color "
 "specification (can be HTML-style hex digits, or a color name such as “red”). "
@@ -314,11 +362,11 @@ msgstr ""
 "(може бити шестословни ХТМЛ код боје, или назив боје на енглеском језику). "
 "Ова опција се користи уколико укључите „highlight-colors-set“."
 
-#: src/org.gnome.Terminal.gschema.xml:194
+#: src/com.aripd.Pano.gschema.xml:212
 msgid "Highlight foreground colour"
 msgstr "Боја текста за истицање"
 
-#: src/org.gnome.Terminal.gschema.xml:195
+#: src/com.aripd.Pano.gschema.xml:213
 msgid ""
 "Custom color for the foreground of the text character at the terminal’s "
 "highlight position, as a color specification (can be HTML-style hex digits, "
@@ -329,35 +377,35 @@ msgstr ""
 "шестословни ХТМЛ код боје, или назив боје на енглеском језику). Ова опција "
 "се користи уколико укључите „highlight-colors-set“."
 
-#: src/org.gnome.Terminal.gschema.xml:199
+#: src/com.aripd.Pano.gschema.xml:217
 msgid "Whether to perform bidirectional text rendering"
 msgstr "Да ли треба вршити двосмерно ицртавање текста"
 
-#: src/org.gnome.Terminal.gschema.xml:200
+#: src/com.aripd.Pano.gschema.xml:218
 msgid "If true, perform bidirectional text rendering (“BiDi”)."
 msgstr "Ако је тачно, извршавај двосмерно ицртавање текста (BiDi)."
 
-#: src/org.gnome.Terminal.gschema.xml:204
+#: src/com.aripd.Pano.gschema.xml:222
 msgid "Whether to perform Arabic shaping"
 msgstr "Да ли треба обликовати арапски"
 
-#: src/org.gnome.Terminal.gschema.xml:205
+#: src/com.aripd.Pano.gschema.xml:223
 msgid "If true, shape Arabic text."
 msgstr "Ако је тачно, обликуј арапски текст."
 
-#: src/org.gnome.Terminal.gschema.xml:209
+#: src/com.aripd.Pano.gschema.xml:227
 msgid "Whether to enable SIXEL images"
 msgstr "Да ли треба омогућити СИКСЕЛ слике"
 
-#: src/org.gnome.Terminal.gschema.xml:210
+#: src/com.aripd.Pano.gschema.xml:228
 msgid "If true, SIXEL sequences are parsed and images are rendered."
 msgstr "Ако је тачно, СИКСЕЛ секвенце се обрађују и приказују као слике."
 
-#: src/org.gnome.Terminal.gschema.xml:214
+#: src/com.aripd.Pano.gschema.xml:232
 msgid "Whether bold is also bright"
 msgstr "Да ли је подебљано такође и светло"
 
-#: src/org.gnome.Terminal.gschema.xml:215
+#: src/com.aripd.Pano.gschema.xml:233
 msgid ""
 "If true, setting bold on the first 8 colors also switches to their bright "
 "variants."
@@ -365,23 +413,43 @@ msgstr ""
 "Ако је одабрано, подебљавање текста обојеног једном од првих 8 боја мења "
 "његову боју у светлију нијансу."
 
-#: src/org.gnome.Terminal.gschema.xml:219
+#: src/com.aripd.Pano.gschema.xml:237
 msgid "Whether to ring the terminal bell"
 msgstr "Да ли да зазвони терминалским звонцем"
 
-#: src/org.gnome.Terminal.gschema.xml:223
+#: src/com.aripd.Pano.gschema.xml:241
+#, fuzzy
+#| msgid "Whether to ring the terminal bell"
+msgid "Whether the terminal flashes when the bell rings"
+msgstr "Да ли да зазвони терминалским звонцем"
+
+#: src/com.aripd.Pano.gschema.xml:242
 msgid ""
-"List of ASCII punctuation characters that are not to be treated as part of a "
-"word when doing word-wise selection"
+"When the terminal is in a tab in the background, the tab is marked instead."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:246
+#, fuzzy
+#| msgid ""
+#| "List of ASCII punctuation characters that are not to be treated as part "
+#| "of a word when doing word-wise selection"
+msgid "List of punctuation characters that are treated as word characters"
 msgstr ""
 "Списак АСКРИ знакова интерпункције који се неће сматрати као део речи "
 "приликом избора на основу речи"
 
-#: src/org.gnome.Terminal.gschema.xml:228
+#: src/com.aripd.Pano.gschema.xml:247
+msgid ""
+"By default, when doing word-wise selection, most punctuation breaks up word "
+"boundaries. This list of exceptions will instead be treated as part of the "
+"word."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:252
 msgid "Default number of columns"
 msgstr "Подразумевани број колона"
 
-#: src/org.gnome.Terminal.gschema.xml:229
+#: src/com.aripd.Pano.gschema.xml:253
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -390,11 +458,11 @@ msgstr ""
 "„use_custom_default_size“ (користи подразумевану произвољну величину) није "
 "постављен."
 
-#: src/org.gnome.Terminal.gschema.xml:234
+#: src/com.aripd.Pano.gschema.xml:258
 msgid "Default number of rows"
 msgstr "Подразумевани број редова"
 
-#: src/org.gnome.Terminal.gschema.xml:235
+#: src/com.aripd.Pano.gschema.xml:259
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -403,15 +471,21 @@ msgstr ""
 "„use_custom_default_size“ (користи подразумевану произвољну величину) није "
 "постављен."
 
-#: src/org.gnome.Terminal.gschema.xml:239
+#: src/com.aripd.Pano.gschema.xml:263
 msgid "When to show the scrollbar"
 msgstr "Када да ће бити приказан клизач"
 
-#: src/org.gnome.Terminal.gschema.xml:243
+#: src/com.aripd.Pano.gschema.xml:267
+#, fuzzy
+#| msgid "Whether to enable SIXEL images"
+msgid "Whether to enable kinetic scrolling"
+msgstr "Да ли треба омогућити СИКСЕЛ слике"
+
+#: src/com.aripd.Pano.gschema.xml:271
 msgid "Number of lines to keep in scrollback"
 msgstr "Број редова који се памте у клизачу"
 
-#: src/org.gnome.Terminal.gschema.xml:244
+#: src/com.aripd.Pano.gschema.xml:272
 msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don’t fit in the scrollback are "
@@ -422,11 +496,11 @@ msgstr ""
 "подешавањем; оно је основни чинилац који одређује колико меморије ваш "
 "терминал користи."
 
-#: src/org.gnome.Terminal.gschema.xml:248
+#: src/com.aripd.Pano.gschema.xml:276
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr "Да ли ће неограничени број редова бити задржан у клизачу"
 
-#: src/org.gnome.Terminal.gschema.xml:249
+#: src/com.aripd.Pano.gschema.xml:277
 msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is "
 "stored on disk temporarily, so this may cause the system to run out of disk "
@@ -436,30 +510,44 @@ msgstr ""
 "привремено на диску, тако да можете остати без простора на диску ако има "
 "пуно редова у терминалу."
 
-#: src/org.gnome.Terminal.gschema.xml:253
+#: src/com.aripd.Pano.gschema.xml:281
+#, fuzzy
+#| msgid "Whether to scroll to the bottom when a key is pressed"
+msgid "Whether to scroll to the bottom when text is inserted"
+msgstr "Да ли да помери на дно када се притисне тастер"
+
+#: src/com.aripd.Pano.gschema.xml:282
+#, fuzzy
+#| msgid "Whether to scroll to the bottom when a key is pressed"
+msgid ""
+"If true, the terminal will scroll to the bottom when text is inserted by "
+"paste."
+msgstr "Да ли да помери на дно када се притисне тастер"
+
+#: src/com.aripd.Pano.gschema.xml:286
 msgid "Whether to scroll to the bottom when a key is pressed"
 msgstr "Да ли да помери на дно када се притисне тастер"
 
-#: src/org.gnome.Terminal.gschema.xml:254
+#: src/com.aripd.Pano.gschema.xml:287
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr ""
 "Ако је изабрано, притисак на тастер пребацује клизач на крај терминала."
 
-#: src/org.gnome.Terminal.gschema.xml:258
+#: src/com.aripd.Pano.gschema.xml:291
 msgid "Whether to scroll to the bottom when there’s new output"
 msgstr "Да ли да помери на дно када има новог излаза"
 
-#: src/org.gnome.Terminal.gschema.xml:259
+#: src/com.aripd.Pano.gschema.xml:292
 msgid ""
 "If true, whenever there’s new output the terminal will scroll to the bottom."
 msgstr ""
 "Ако је изабрано, при сваком новом излазу, терминал ће вас пребацити на крај."
 
-#: src/org.gnome.Terminal.gschema.xml:263
+#: src/com.aripd.Pano.gschema.xml:296
 msgid "What to do with the terminal when the child command exits"
 msgstr "Шта да ради са терминалом када се изврши зависна наредба"
 
-#: src/org.gnome.Terminal.gschema.xml:264
+#: src/com.aripd.Pano.gschema.xml:297
 msgid ""
 "Possible values are “close” to close the terminal, “restart” to restart the "
 "command, and “hold” to keep the terminal open with no command running inside."
@@ -468,11 +556,11 @@ msgstr ""
 "покретање наредбе и „hold“ да задржите терминал отвореним а да се наредба не "
 "извршава унутар њега."
 
-#: src/org.gnome.Terminal.gschema.xml:268
+#: src/com.aripd.Pano.gschema.xml:301
 msgid "Whether to launch the command in the terminal as a login shell"
 msgstr "Да ли да покрене наредбу у терминалу као пријавну љуску"
 
-#: src/org.gnome.Terminal.gschema.xml:269
+#: src/com.aripd.Pano.gschema.xml:302
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell "
 "(argv[0] will have a hyphen in front of it)."
@@ -480,11 +568,11 @@ msgstr ""
 "Ако је изабрано, наредба унутар терминала ће бити покренута као пријавна "
 "љуска (argv[0] ће садржати цртицу на почетку)."
 
-#: src/org.gnome.Terminal.gschema.xml:273
+#: src/com.aripd.Pano.gschema.xml:306
 msgid "Whether to preserve the working directory when opening a new terminal"
 msgstr "Да ли треба сачувати радну фасциклу приликом отварања новог терминала"
 
-#: src/org.gnome.Terminal.gschema.xml:274
+#: src/com.aripd.Pano.gschema.xml:307
 msgid ""
 "Controls when opening a new terminal from a previous one carries over the "
 "working directory of the opening terminal to the new one."
@@ -492,11 +580,11 @@ msgstr ""
 "Подешава да ли отварање новог терминала из постојећег преноси тренутну радну "
 "фасциклу већ постојећег у нови."
 
-#: src/org.gnome.Terminal.gschema.xml:280
+#: src/com.aripd.Pano.gschema.xml:313
 msgid "Whether to run a custom command instead of the shell"
 msgstr "Да ли да покрене наредбу по избору уместо љуске"
 
-#: src/org.gnome.Terminal.gschema.xml:281
+#: src/com.aripd.Pano.gschema.xml:314
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
@@ -504,11 +592,11 @@ msgstr ""
 "Ако је постављено на тачно, вредност произвољне наредбе (custom_command) ће "
 "се користити уместо покретања љуске."
 
-#: src/org.gnome.Terminal.gschema.xml:285
+#: src/com.aripd.Pano.gschema.xml:318
 msgid "Whether to blink the cursor"
 msgstr "Да ли курсор да трепће"
 
-#: src/org.gnome.Terminal.gschema.xml:286
+#: src/com.aripd.Pano.gschema.xml:319
 msgid ""
 "The possible values are “system” to use the global cursor blinking settings, "
 "or “on” or “off” to set the mode explicitly."
@@ -517,62 +605,85 @@ msgstr ""
 "трептања курсора или „on“ (укључено) и „off“ (искључено) за непосредно "
 "укључивање или искључивање треперења."
 
-#: src/org.gnome.Terminal.gschema.xml:290
+#: src/com.aripd.Pano.gschema.xml:323
 msgid "The cursor appearance"
 msgstr "Изглед курсора"
 
-#: src/org.gnome.Terminal.gschema.xml:294
+#: src/com.aripd.Pano.gschema.xml:327
 msgid ""
 "Possible values are “always” or “never” allow blinking text, or only when "
 "the terminal is “focused” or “unfocused”."
 msgstr ""
-"Дозвољене вредности за трептање текста су „always“ (увек) или "
-"„never“ (никад) или само када је терминал у фокусу или ван њега."
+"Дозвољене вредности за трептање текста су „always“ (увек) или „never“ "
+"(никад) или само када је терминал у фокусу или ван њега."
 
-#: src/org.gnome.Terminal.gschema.xml:298
+#: src/com.aripd.Pano.gschema.xml:331
 msgid "Custom command to use instead of the shell"
 msgstr "Прилагођена наредба која се користи уместо љуске"
 
-#: src/org.gnome.Terminal.gschema.xml:299
+#: src/com.aripd.Pano.gschema.xml:332
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr ""
-"Покреће ову наредбу уместо љуске, ако је изабрано "
-"„use_custom_command“ (користи произвољну наредбу)."
+"Покреће ову наредбу уместо љуске, ако је изабрано „use_custom_command“ "
+"(користи произвољну наредбу)."
 
-#: src/org.gnome.Terminal.gschema.xml:318
+#: src/com.aripd.Pano.gschema.xml:336
+msgid "The color scheme, or empty for the colors set in this profile"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:337
+msgid ""
+"The name of a .palette file, without the suffix. Its colors replace the "
+"foreground, background and palette of the profile, and follow the light or "
+"dark style of the system if the scheme has both."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:342
+#, fuzzy
+#| msgid "Default color of terminal background"
+msgid "Opacity of the terminal background"
+msgstr "Основна боја позадине терминала"
+
+#: src/com.aripd.Pano.gschema.xml:343
+msgid ""
+"1.0 is opaque. With lower values the desktop shows through the background of "
+"the terminal; the text stays opaque."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:362
 msgid "Palette for terminal applications"
 msgstr "Палета за програме терминала"
 
-#: src/org.gnome.Terminal.gschema.xml:322
+#: src/com.aripd.Pano.gschema.xml:366
 msgid "A Pango font name and size"
 msgstr "Врста и величина Панго фонта"
 
-#: src/org.gnome.Terminal.gschema.xml:326
+#: src/com.aripd.Pano.gschema.xml:370
 msgid "The code sequence the Backspace key generates"
 msgstr "Кодни низ који ствара тастер за враћање уназад"
 
-#: src/org.gnome.Terminal.gschema.xml:330
+#: src/com.aripd.Pano.gschema.xml:374
 msgid "The code sequence the Delete key generates"
 msgstr "Кодни низ који ствара тастер за брисање"
 
-#: src/org.gnome.Terminal.gschema.xml:334
+#: src/com.aripd.Pano.gschema.xml:378
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr "Да ли да користи боје из теме за терминалски елемент"
 
-#: src/org.gnome.Terminal.gschema.xml:338
+#: src/com.aripd.Pano.gschema.xml:382
 msgid "Whether to use the system monospace font"
 msgstr "Да ли ће бити коришћен системски фонт утврђене ширине"
 
-#: src/org.gnome.Terminal.gschema.xml:342
+#: src/com.aripd.Pano.gschema.xml:386
 msgid "Whether to rewrap the terminal contents on window resize"
 msgstr ""
 "Да ли ће поново преломити садржај терминала приликом премене величине прозора"
 
-#: src/org.gnome.Terminal.gschema.xml:346
+#: src/com.aripd.Pano.gschema.xml:390
 msgid "Which encoding to use"
 msgstr "Које кодирање ће бити коришћено"
 
-#: src/org.gnome.Terminal.gschema.xml:350
+#: src/com.aripd.Pano.gschema.xml:394
 msgid ""
 "Whether ambiguous-width characters are narrow or wide when using UTF-8 "
 "encoding"
@@ -580,195 +691,354 @@ msgstr ""
 "Да ли су знаци нејасне ширине уски или широки приликом коришћења УТФ-8 "
 "кодирања"
 
-#: src/org.gnome.Terminal.gschema.xml:359
+#: src/com.aripd.Pano.gschema.xml:403
 msgid "Keyboard shortcut to open a new tab"
 msgstr "Пречица за отварање новог језичка"
 
-#: src/org.gnome.Terminal.gschema.xml:363
+#: src/com.aripd.Pano.gschema.xml:407
 msgid "Keyboard shortcut to open a new window"
 msgstr "Пречица за отварање новог прозора"
 
-#: src/org.gnome.Terminal.gschema.xml:367
-msgid "Keyboard shortcut to save the current tab contents to file"
+#: src/com.aripd.Pano.gschema.xml:411
+#, fuzzy
+#| msgid "Keyboard shortcut to save the current tab contents to file"
+msgid ""
+"Keyboard shortcut to save the contents of the current terminal, with its "
+"scrollback, to a file"
 msgstr "Пречица за чување садржаја тренутног језичка у датотеку"
 
-#: src/org.gnome.Terminal.gschema.xml:371
-msgid ""
-"Keyboard shortcut to export the current tab contents to file in various "
-"formats"
-msgstr ""
-"Пречица за извоз садржаја тренутног језичка у датотеке различитих формата"
-
-#: src/org.gnome.Terminal.gschema.xml:375
-msgid "Keyboard shortcut to print the current tab contents to printer or file"
-msgstr ""
-"Пречица за штампање садржаја тренутног језичка преко штампача или у датотеку"
-
-#: src/org.gnome.Terminal.gschema.xml:379
+#: src/com.aripd.Pano.gschema.xml:415
 msgid "Keyboard shortcut to close a tab"
 msgstr "Пречица за затварање језичка"
 
-#: src/org.gnome.Terminal.gschema.xml:383
+#: src/com.aripd.Pano.gschema.xml:419
+#, fuzzy
+#| msgid "Keyboard shortcut to save the current tab contents to file"
+msgid ""
+"Keyboard shortcut to close the tabs other than the current one, except "
+"pinned tabs"
+msgstr "Пречица за чување садржаја тренутног језичка у датотеку"
+
+#: src/com.aripd.Pano.gschema.xml:423
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new tab"
+msgid "Keyboard shortcut to reopen the last closed tab"
+msgstr "Пречица за отварање новог језичка"
+
+#: src/com.aripd.Pano.gschema.xml:427
 msgid "Keyboard shortcut to close a window"
 msgstr "Пречица за затварање прозора"
 
-#: src/org.gnome.Terminal.gschema.xml:387
+#: src/com.aripd.Pano.gschema.xml:431
 msgid "Keyboard shortcut to copy text"
 msgstr "Пречица за копирање текста"
 
-#: src/org.gnome.Terminal.gschema.xml:391
+#: src/com.aripd.Pano.gschema.xml:435
 msgid "Keyboard shortcut to copy text as HTML"
 msgstr "Пречица за копирање текста као ХТМЛ"
 
-#: src/org.gnome.Terminal.gschema.xml:395
+#: src/com.aripd.Pano.gschema.xml:439
 msgid "Keyboard shortcut to paste text"
 msgstr "Пречица за убацивање текста"
 
-#: src/org.gnome.Terminal.gschema.xml:399
+#: src/com.aripd.Pano.gschema.xml:443
 msgid "Keyboard shortcut to select all text"
 msgstr "Пречица за одабир целог текста"
 
-#: src/org.gnome.Terminal.gschema.xml:403
+#: src/com.aripd.Pano.gschema.xml:447
 msgid "Keyboard shortcut to open the Preferences dialog"
 msgstr "Пречица за отварање поставки програма"
 
-#: src/org.gnome.Terminal.gschema.xml:407
+#: src/com.aripd.Pano.gschema.xml:451
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "Пречица за пребацивање режима приказа преко целог екрана"
 
-#: src/org.gnome.Terminal.gschema.xml:411
-msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr "Пречица за измену видљивости траке изборника"
-
-#: src/org.gnome.Terminal.gschema.xml:415
+#: src/com.aripd.Pano.gschema.xml:455
 msgid "Keyboard shortcut to toggle the read-only state"
 msgstr "Пречица за окидање „само за читање“ стања"
 
-#: src/org.gnome.Terminal.gschema.xml:419
+#: src/com.aripd.Pano.gschema.xml:459
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid ""
+"Keyboard shortcut to label URLs, paths and more on the screen, to copy them "
+"by typing the label"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:463
+#, fuzzy
+#| msgid "Keyboard shortcut to open the search dialog"
+msgid "Keyboard shortcut to open the command palette"
+msgstr "Пречица са тастатуре за отварање прозорчета претраге"
+
+#: src/com.aripd.Pano.gschema.xml:467
+#, fuzzy
+#| msgid "Keyboard shortcut to reset and clear the terminal"
+msgid ""
+"Keyboard shortcut to set a title for the terminal that programs cannot change"
+msgstr "Пречица за ресетовање и чишћење терминала"
+
+#: src/com.aripd.Pano.gschema.xml:471
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "Пречица за ресетовање терминала"
 
-#: src/org.gnome.Terminal.gschema.xml:423
+#: src/com.aripd.Pano.gschema.xml:475
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "Пречица за ресетовање и чишћење терминала"
 
-#: src/org.gnome.Terminal.gschema.xml:427
+#: src/com.aripd.Pano.gschema.xml:479
 msgid "Keyboard shortcut to open the search dialog"
 msgstr "Пречица са тастатуре за отварање прозорчета претраге"
 
-#: src/org.gnome.Terminal.gschema.xml:431
+#: src/com.aripd.Pano.gschema.xml:483
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr "Пречица за налажење следеће појаве термина претраге"
 
-#: src/org.gnome.Terminal.gschema.xml:435
+#: src/com.aripd.Pano.gschema.xml:487
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr "Пречица за налажење претхдне појаве термина претраге"
 
-#: src/org.gnome.Terminal.gschema.xml:439
+#: src/com.aripd.Pano.gschema.xml:491
 msgid "Keyboard shortcut to clear the find highlighting"
 msgstr "Пречица за уклањање истицања налажења"
 
-#: src/org.gnome.Terminal.gschema.xml:443
+#: src/com.aripd.Pano.gschema.xml:495
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "Пречица за пребацивање на претходни језичак"
 
-#: src/org.gnome.Terminal.gschema.xml:447
+#: src/com.aripd.Pano.gschema.xml:499
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "Пречица за пребацивање на следећи језичак"
 
-#: src/org.gnome.Terminal.gschema.xml:451
+#: src/com.aripd.Pano.gschema.xml:503
 msgid "Keyboard shortcut to move the current tab to the left"
 msgstr "Пречица за премештање текућег језичка на лево"
 
-#: src/org.gnome.Terminal.gschema.xml:455
+#: src/com.aripd.Pano.gschema.xml:507
 msgid "Keyboard shortcut to move the current tab to the right"
 msgstr "Пречица за премештање текућег језичка на десно"
 
-#: src/org.gnome.Terminal.gschema.xml:459
+#: src/com.aripd.Pano.gschema.xml:511
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the current tab to the start"
+msgstr "Пречица за премештање текућег језичка на десно"
+
+#: src/com.aripd.Pano.gschema.xml:515
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the current tab to the end"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:519
 msgid "Keyboard shortcut to detach current tab"
 msgstr "Пречица за откачињање текућег језичка"
 
-#: src/org.gnome.Terminal.gschema.xml:463
-#: src/org.gnome.Terminal.gschema.xml:467
-#: src/org.gnome.Terminal.gschema.xml:471
-#: src/org.gnome.Terminal.gschema.xml:475
-#: src/org.gnome.Terminal.gschema.xml:479
-#: src/org.gnome.Terminal.gschema.xml:483
-#: src/org.gnome.Terminal.gschema.xml:487
-#: src/org.gnome.Terminal.gschema.xml:491
-#: src/org.gnome.Terminal.gschema.xml:495
-#: src/org.gnome.Terminal.gschema.xml:499
-#: src/org.gnome.Terminal.gschema.xml:503
-#: src/org.gnome.Terminal.gschema.xml:507
-#: src/org.gnome.Terminal.gschema.xml:511
-#: src/org.gnome.Terminal.gschema.xml:515
-#: src/org.gnome.Terminal.gschema.xml:519
-#: src/org.gnome.Terminal.gschema.xml:523
-#: src/org.gnome.Terminal.gschema.xml:527
-#: src/org.gnome.Terminal.gschema.xml:531
-#: src/org.gnome.Terminal.gschema.xml:535
-#: src/org.gnome.Terminal.gschema.xml:539
-#: src/org.gnome.Terminal.gschema.xml:543
-#: src/org.gnome.Terminal.gschema.xml:547
-#: src/org.gnome.Terminal.gschema.xml:551
-#: src/org.gnome.Terminal.gschema.xml:555
-#: src/org.gnome.Terminal.gschema.xml:559
-#: src/org.gnome.Terminal.gschema.xml:563
-#: src/org.gnome.Terminal.gschema.xml:567
-#: src/org.gnome.Terminal.gschema.xml:571
-#: src/org.gnome.Terminal.gschema.xml:575
-#: src/org.gnome.Terminal.gschema.xml:579
-#: src/org.gnome.Terminal.gschema.xml:583
-#: src/org.gnome.Terminal.gschema.xml:587
-#: src/org.gnome.Terminal.gschema.xml:591
-#: src/org.gnome.Terminal.gschema.xml:595
-#: src/org.gnome.Terminal.gschema.xml:599
+#: src/com.aripd.Pano.gschema.xml:523
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the previous tab"
+msgid "Keyboard shortcut to scroll to the previous shell prompt"
+msgstr "Пречица за пребацивање на претходни језичак"
+
+#: src/com.aripd.Pano.gschema.xml:527
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to scroll to the next shell prompt"
+msgstr "Пречица за пребацивање на следећи језичак"
+
+#: src/com.aripd.Pano.gschema.xml:531
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the last tab"
+msgid "Keyboard shortcut to copy the output of the last command"
+msgstr "Пречица за пребацивање на последњи језичак"
+
+#: src/com.aripd.Pano.gschema.xml:535
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to send input to all panes of the tab, or to stop"
+msgstr "Пречица за пребацивање на следећи језичак"
+
+#: src/com.aripd.Pano.gschema.xml:539
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new window"
+msgid ""
+"Keyboard shortcut to send input to all terminals of the window, or to stop"
+msgstr "Пречица за отварање новог прозора"
+
+#: src/com.aripd.Pano.gschema.xml:543
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid ""
+"Keyboard shortcut to move the focus to the tab list, when the tabs are on "
+"the left or right"
+msgstr "Пречица за премештање текућег језичка на десно"
+
+#: src/com.aripd.Pano.gschema.xml:547
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to split the terminal and open a new one on the right"
+msgstr "Пречица за премештање текућег језичка на десно"
+
+#: src/com.aripd.Pano.gschema.xml:551
+#, fuzzy
+#| msgid "Keyboard shortcut to reset the terminal"
+msgid "Keyboard shortcut to split the terminal and open a new one below"
+msgstr "Пречица за ресетовање терминала"
+
+#: src/com.aripd.Pano.gschema.xml:555
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the last tab"
+msgid "Keyboard shortcut to close the active pane of a split tab"
+msgstr "Пречица за пребацивање на последњи језичак"
+
+#: src/com.aripd.Pano.gschema.xml:559
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid ""
+"Keyboard shortcut to show only the active pane of a split tab, or all panes "
+"again"
+msgstr "Пречица за премештање текућег језичка на десно"
+
+#: src/com.aripd.Pano.gschema.xml:563
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to give the panes of a tab the same size"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:567
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the active pane to a new tab"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:571
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the focus to the pane on the left"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:575
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the focus to the pane on the right"
+msgstr "Пречица за премештање текућег језичка на десно"
+
+#: src/com.aripd.Pano.gschema.xml:579
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the focus to the pane above"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:583
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the focus to the pane below"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:587
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the divider of the active pane to the left"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:591
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the divider of the active pane to the right"
+msgstr "Пречица за премештање текућег језичка на десно"
+
+#: src/com.aripd.Pano.gschema.xml:595
+#, fuzzy
+#| msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgid "Keyboard shortcut to move the divider of the active pane up"
+msgstr "Пречица за измену видљивости траке изборника"
+
+#: src/com.aripd.Pano.gschema.xml:599
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the divider of the active pane down"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:603
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to swap the active pane with the pane on the left"
+msgstr "Пречица за премештање текућег језичка на лево"
+
+#: src/com.aripd.Pano.gschema.xml:607
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to swap the active pane with the pane on the right"
+msgstr "Пречица за премештање текућег језичка на десно"
+
+#: src/com.aripd.Pano.gschema.xml:611
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane above"
+msgstr "Пречица за пребацивање на следећи језичак"
+
+#: src/com.aripd.Pano.gschema.xml:615
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane below"
+msgstr "Пречица за пребацивање на следећи језичак"
+
+#: src/com.aripd.Pano.gschema.xml:619
+#, fuzzy
+#| msgid "Keyboard shortcut to show the primary menu"
+msgid "Keyboard shortcut to show the tabs overview"
+msgstr "Пречица за приказ примарног изборника"
+
+#: src/com.aripd.Pano.gschema.xml:623 src/com.aripd.Pano.gschema.xml:627
+#: src/com.aripd.Pano.gschema.xml:631 src/com.aripd.Pano.gschema.xml:635
+#: src/com.aripd.Pano.gschema.xml:639 src/com.aripd.Pano.gschema.xml:643
+#: src/com.aripd.Pano.gschema.xml:647 src/com.aripd.Pano.gschema.xml:651
+#: src/com.aripd.Pano.gschema.xml:655 src/com.aripd.Pano.gschema.xml:659
+#: src/com.aripd.Pano.gschema.xml:663 src/com.aripd.Pano.gschema.xml:667
+#: src/com.aripd.Pano.gschema.xml:671 src/com.aripd.Pano.gschema.xml:675
+#: src/com.aripd.Pano.gschema.xml:679 src/com.aripd.Pano.gschema.xml:683
+#: src/com.aripd.Pano.gschema.xml:687 src/com.aripd.Pano.gschema.xml:691
+#: src/com.aripd.Pano.gschema.xml:695 src/com.aripd.Pano.gschema.xml:699
+#: src/com.aripd.Pano.gschema.xml:703 src/com.aripd.Pano.gschema.xml:707
+#: src/com.aripd.Pano.gschema.xml:711 src/com.aripd.Pano.gschema.xml:715
+#: src/com.aripd.Pano.gschema.xml:719 src/com.aripd.Pano.gschema.xml:723
+#: src/com.aripd.Pano.gschema.xml:727 src/com.aripd.Pano.gschema.xml:731
+#: src/com.aripd.Pano.gschema.xml:735 src/com.aripd.Pano.gschema.xml:739
+#: src/com.aripd.Pano.gschema.xml:743 src/com.aripd.Pano.gschema.xml:747
+#: src/com.aripd.Pano.gschema.xml:751 src/com.aripd.Pano.gschema.xml:755
+#: src/com.aripd.Pano.gschema.xml:759
 msgid "Keyboard shortcut to switch to the numbered tab"
 msgstr "Пречица за пребацивање на нумерисани језичак"
 
-#: src/org.gnome.Terminal.gschema.xml:603
+#: src/com.aripd.Pano.gschema.xml:763
 msgid "Keyboard shortcut to switch to the last tab"
 msgstr "Пречица за пребацивање на последњи језичак"
 
-#: src/org.gnome.Terminal.gschema.xml:607
+#: src/com.aripd.Pano.gschema.xml:767
 msgid "Keyboard shortcut to launch help"
 msgstr "Пречица за приказивање помоћи"
 
-#: src/org.gnome.Terminal.gschema.xml:611
+#: src/com.aripd.Pano.gschema.xml:771
 msgid "Keyboard shortcut to make font larger"
 msgstr "Пречица за повећавање фонта"
 
-#: src/org.gnome.Terminal.gschema.xml:615
+#: src/com.aripd.Pano.gschema.xml:775
 msgid "Keyboard shortcut to make font smaller"
 msgstr "Пречица за умањивање фонта"
 
-#: src/org.gnome.Terminal.gschema.xml:619
+#: src/com.aripd.Pano.gschema.xml:779
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "Пречица за подразумевану величину фонта"
 
-#: src/org.gnome.Terminal.gschema.xml:623
+#: src/com.aripd.Pano.gschema.xml:783
 msgid "Keyboard shortcut to show the primary menu"
 msgstr "Пречица за приказ примарног изборника"
 
-#: src/org.gnome.Terminal.gschema.xml:633
-msgid "Whether the menubar has access keys"
-msgstr "Да ли главни изборник садржи пречице"
-
-#: src/org.gnome.Terminal.gschema.xml:634
-msgid ""
-"Whether to have Alt+letter access keys for the menubar. They may interfere "
-"with some applications run inside the terminal so it’s possible to turn them "
-"off."
-msgstr ""
-"Да ли да користи Alt+слово пречице за главни изборник. Оне могу да се "
-"сударају са неким програмима који се покрећу унутар терминала па их је "
-"могуће искључити."
-
-#: src/org.gnome.Terminal.gschema.xml:643
+#: src/com.aripd.Pano.gschema.xml:797
 msgid "Whether shortcuts are enabled"
 msgstr "Да су укључене пречице"
 
-#: src/org.gnome.Terminal.gschema.xml:644
+#: src/com.aripd.Pano.gschema.xml:798
 msgid ""
 "Whether shortcuts are enabled. They may interfere with some applications run "
 "inside the terminal so it’s possible to turn them off."
@@ -776,11 +1046,11 @@ msgstr ""
 "Да ли су пречице укључене. Оне могу да се сударају са неким програмима који "
 "се покрећу унутар терминала па их је могуће искључити."
 
-#: src/org.gnome.Terminal.gschema.xml:653
+#: src/com.aripd.Pano.gschema.xml:807
 msgid "Whether the standard GTK shortcut for menubar access is enabled"
 msgstr "Да ли је укључена обична подршка за Гтк пречице за изборник"
 
-#: src/org.gnome.Terminal.gschema.xml:654
+#: src/com.aripd.Pano.gschema.xml:808
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
@@ -790,1163 +1060,960 @@ msgstr ""
 "помоћу гткрц (gtk-menu-bar-accell = \"whatever\"). Ова опција омогућава да "
 "се искључи стандардна пречица за главни изборник."
 
-#: src/org.gnome.Terminal.gschema.xml:664
+#: src/com.aripd.Pano.gschema.xml:818
 msgid "Whether the shell integration is enabled"
 msgstr "Да ли је укључено сједињавање шкољке"
 
-#: src/org.gnome.Terminal.gschema.xml:669
+#: src/com.aripd.Pano.gschema.xml:819
+msgid ""
+"This is about GNOME Shell: whether terminals can be found in its search. See "
+"inject-shell-integration for the integration of the shells in the terminals."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:824
+#, fuzzy
+#| msgid "Whether the shell integration is enabled"
+msgid "Whether to add shell integration to bash, zsh and fish"
+msgstr "Да ли је укључено сједињавање шкољке"
+
+#: src/com.aripd.Pano.gschema.xml:825
+msgid ""
+"If true, the default shell of a profile is started so that it reports its "
+"prompts, commands and working directory, which command notifications, prompt "
+"navigation and copying command output need. Custom commands, login bash "
+"shells and terminals in containers are left alone."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:830
 msgid "Whether to ask for confirmation before closing a terminal"
 msgstr "Да ли да тражи потврду пре затварања терминала"
 
-#: src/org.gnome.Terminal.gschema.xml:674
+#: src/com.aripd.Pano.gschema.xml:835
 msgid "Additional info section items to appear in the context menu"
 msgstr ""
 "Додатне ставке у инфо одељку које треба приказати у контекстуалном менију"
 
-#: src/org.gnome.Terminal.gschema.xml:679
-msgid "Whether to show the menubar in new windows"
-msgstr "Да ли да приказује траку изборника у новим прозорима"
-
-#: src/org.gnome.Terminal.gschema.xml:684
+#: src/com.aripd.Pano.gschema.xml:840
 msgid "Whether to open new terminals as windows or tabs"
 msgstr "Да ли ће нови терминали бити отворени као прозори или језичци"
 
-#: src/org.gnome.Terminal.gschema.xml:689
+#: src/com.aripd.Pano.gschema.xml:845
 msgid "When to show the tabs bar"
 msgstr "Када се приказују картице"
 
-#: src/org.gnome.Terminal.gschema.xml:694
-msgid "The position of the tab bar"
+#: src/com.aripd.Pano.gschema.xml:851
+msgid "Width of the tab list when the tabs are on the left or right"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:855
+#, fuzzy
+#| msgid "The position of the tab bar"
+msgid "The position of the tabs bar"
 msgstr "Положај траке језичака"
 
-#: src/org.gnome.Terminal.gschema.xml:699
+#: src/com.aripd.Pano.gschema.xml:860
 msgid "Which theme variant to use"
 msgstr "Коју варијанту теме ћете користити"
 
-#: src/org.gnome.Terminal.gschema.xml:704
+#: src/com.aripd.Pano.gschema.xml:865
 msgid ""
 "Whether new tabs should open next to the current one or at the last position"
 msgstr ""
 "Да ли нове језичке треба отворити поред постојећих или на последњи положај"
 
-#: src/org.gnome.Terminal.gschema.xml:711
+#: src/com.aripd.Pano.gschema.xml:870
+msgid "What a middle click on a tab does"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:871
+msgid ""
+"“close” closes the tab; “paste” switches to the tab and pastes the primary "
+"selection into it."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:876
+msgid "Whether windows should have rounded corners"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:881
+msgid "The space between the terminal text and the edges of the terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:882
+msgid ""
+"“none” removes it, also next to rounded window corners; “small” keeps the "
+"text clear of rounded corners; “large” leaves more room."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:889
+msgid ""
+"Whether the user has been asked to import the settings of GNOME Terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:894
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to give the header bar and the tabs the colors of the active terminal"
+msgstr "Да ли да користи боје из теме за терминалски елемент"
+
+#: src/com.aripd.Pano.gschema.xml:895
+msgid ""
+"Only when the terminal uses a color scheme or colors of its own, not the "
+"system style; the colors for root and remote sessions take precedence."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:900
+msgid "Whether to dim the panes of a split tab other than the active one"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:905
+msgid "Whether to show a title bar above each pane of a split tab"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:910
+msgid "Regular expressions for more text that quick select offers"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:911
+msgid ""
+"Quick select labels URLs, paths, hashes, addresses and numbers; matches of "
+"these Perl-compatible regular expressions are offered too, before those."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:916
+#, fuzzy
+#| msgid "Whether to ring the terminal bell"
+msgid "Whether to ignore the titles that programs set"
+msgstr "Да ли да зазвони терминалским звонцем"
+
+#: src/com.aripd.Pano.gschema.xml:917
+msgid ""
+"If true, terminals show the title set with “Set Title…” or the --title "
+"option, or else their working directory, instead of the title that programs "
+"set with escape sequences."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:922
+msgid "Whether to show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:927
+msgid ""
+"Whether to notify when a long-running command finishes in the background"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:928
+msgid ""
+"Needs a shell that reports its commands, for example bash or zsh with the "
+"VTE shell integration (vte.sh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:934
+msgid "How long a command must run, in seconds, before its end is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:940
+msgid ""
+"How long, in seconds, a terminal monitored for silence must be quiet before "
+"that is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:946
+msgid "Width of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:952
+msgid "Height of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:957
+msgid ""
+"Whether the quick terminal hides when another application gets the focus"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:962
+msgid "Whether the quick terminal slides in from the top edge of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:963
+msgid "Only on X11, where applications can place their windows."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:968
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to ask the desktop for a system-wide shortcut for the quick terminal"
+msgstr "Да ли да користи боје из теме за терминалски елемент"
+
+#: src/com.aripd.Pano.gschema.xml:969
+msgid ""
+"Uses the GlobalShortcuts portal (GNOME 48 or newer, KDE Plasma). The desktop "
+"sends the shortcut only to a running application, so Pano Terminal then "
+"keeps running in the background and starts when you log in."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:974
+#, fuzzy
+#| msgid "Whether to open new terminals as windows or tabs"
+msgid "Whether to show when a terminal runs as root or over SSH"
+msgstr "Да ли ће нови терминали бити отворени као прозори или језичци"
+
+#: src/com.aripd.Pano.gschema.xml:975
+msgid ""
+"Colors the header bar and marks the tab while the foreground program of the "
+"terminal runs as root (for example sudo or su) or connects to another "
+"computer (ssh, mosh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:980
+msgid ""
+"Whether new tabs and panes start in the container of the terminal they are "
+"opened from"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:981
+msgid ""
+"Works for Toolbox and Distrobox containers. The shell inside the container "
+"has to report it (Toolbox does), or the terminal has to be started in it "
+"from Pano Terminal."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:986
+msgid ""
+"Whether to reopen the windows, tabs and panes of the last session on startup"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:987
+msgid ""
+"Applies when Pano Terminal is started without arguments and no window is "
+"open. Each terminal gets a new shell in its previous working directory; "
+"running programs are not restored."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:992
+msgid "Whether new windows get the size of the last used terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:993
+msgid ""
+"When enabled, new windows use the number of columns and rows of the terminal "
+"used last, instead of the initial size of the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:998
 #, fuzzy
 msgid "Always check whether Pano Terminal is the default terminal"
 msgstr "Увек проверава да ли је Гномов терминал основни терминал"
 
-#. Open new terminal in new window
-#: src/preferences.ui:14
-msgid "Window"
-msgstr "Прозор"
-
-#. Open new terminal in new tab
-#: src/preferences.ui:18
-msgid "Tab"
-msgstr "Језичак"
-
-#. New tab opens at the last position
-#: src/preferences.ui:32
-msgid "Last"
-msgstr "Последње"
-
-#. New tab opens next to current tab
-#: src/preferences.ui:36
-msgid "Next"
-msgstr "Следеће"
-
-#: src/preferences.ui:50
-msgctxt "theme variant"
-msgid "Default"
-msgstr "Подразумевана"
-
-#: src/preferences.ui:54
-msgctxt "theme variant"
-msgid "Light"
-msgstr "Светла"
-
-#: src/preferences.ui:58
-msgctxt "theme variant"
-msgid "Dark"
-msgstr "Тамна"
-
-#. ambiguous-width characers are
-#: src/preferences.ui:107
-msgid "Narrow"
-msgstr "Уски"
-
-#. ambiguous-width characers are
-#: src/preferences.ui:111
-msgid "Wide"
-msgstr "Широки"
-
-#. Cursor shape
-#: src/preferences.ui:123
-msgid "Block"
-msgstr "Блок"
-
-#. Cursor shape
-#: src/preferences.ui:126
-msgid "I-Beam"
-msgstr "Усправна цртица"
-
-#. Cursor shape
-#: src/preferences.ui:129
-msgid "Underline"
-msgstr "Доња цртица"
-
-#. Cursor blink mode
-#: src/preferences.ui:140
-msgid "Default"
-msgstr "Основно"
-
-#. Cursor blink mode
-#: src/preferences.ui:143
-msgid "Enabled"
-msgstr "Омогућено"
-
-#. Cursor blink mode
-#: src/preferences.ui:146
-msgid "Disabled"
-msgstr "Онемогућено"
-
-#. Text blink mode
-#. Preserve working directory
-#: src/preferences.ui:157 src/preferences.ui:268
-msgid "Never"
-msgstr "Никад"
-
-#. Text blink mode
-#: src/preferences.ui:160
-msgid "When focused"
-msgstr "Када је у фокусу"
-
-#. Text blink mode
-#: src/preferences.ui:163
-msgid "When unfocused"
-msgstr "Када није у фокусу"
-
-#. Text blink mode
-#. Preserve working directory
-#: src/preferences.ui:166 src/preferences.ui:276
-msgid "Always"
-msgstr "Увек"
-
-#. When terminal commands set their own titles
-#: src/preferences.ui:177
-msgid "Replace initial title"
-msgstr "Замени почетни наслов"
-
-#. When terminal commands set their own titles
-#: src/preferences.ui:180
-msgid "Append initial title"
-msgstr "Додај на почетни наслов"
-
-#. When terminal commands set their own titles
-#: src/preferences.ui:183
-msgid "Prepend initial title"
-msgstr "Уклони почетни наслов"
-
-#. When terminal commands set their own titles
-#: src/preferences.ui:186
-msgid "Keep initial title"
-msgstr "Задржи почетни наслов"
-
-#. When command exits
-#: src/preferences.ui:197
-msgid "Exit the terminal"
-msgstr "Изађи из терминала"
-
-#. When command exits
-#: src/preferences.ui:200
-msgid "Restart the command"
-msgstr "Понови наредбу"
-
-#. When command exits
-#: src/preferences.ui:203
-msgid "Hold the terminal open"
-msgstr "Држи терминал отвореним"
-
-#. This is the name of a colour scheme
-#: src/preferences.ui:217
-msgid "Tango"
-msgstr "Танго"
-
-#. This is the name of a colour scheme
-#: src/preferences.ui:220
-msgid "Linux console"
-msgstr "Линукс конзола"
-
-#. This is the name of a colour scheme
-#: src/preferences.ui:223
-msgid "XTerm"
-msgstr "ИксТерм"
-
-#. This is the name of a colour scheme
-#: src/preferences.ui:226
-msgid "Rxvt"
-msgstr "Рхвт"
-
-#. This is the name of a colour scheme
-#: src/preferences.ui:229
-msgid "Solarized"
-msgstr "Осветљена"
-
-#. This is the name of a colour scheme
-#: src/preferences.ui:232 src/profile-editor.cc:719
-msgid "Custom"
-msgstr "Произвољно"
-
-#. This refers to the Delete keybinding option
-#: src/preferences.ui:243
-msgid "Automatic"
-msgstr "Сам изабери"
-
-#. This refers to the Delete keybinding option
-#: src/preferences.ui:246
-msgid "Control-H"
-msgstr "CTRL-H"
-
-#. This refers to the Delete keybinding option
-#: src/preferences.ui:249
-msgid "ASCII DEL"
-msgstr "ASCII DEL"
-
-#. This refers to the Delete keybinding option
-#: src/preferences.ui:252
-msgid "Escape sequence"
-msgstr "Низ бекства"
-
-#. This refers to the Delete keybinding option
-#: src/preferences.ui:255
-msgid "TTY Erase"
-msgstr "Конзолно брисање"
-
-#. Preserve working directory
-#: src/preferences.ui:272
-msgid "Shell only"
-msgstr "Само шкољка"
-
-#: src/preferences.ui:340
-msgid "_Show menubar by default in new terminals"
-msgstr "Прикажи _изборник у новим терминалима по основи"
-
-#: src/preferences.ui:356
-msgid "_Enable mnemonics (such as Alt+F to open the File menu)"
-msgstr "_Укључи подсетнике (као што је Alt+F за отварање изборника Датотека)"
-
-#: src/preferences.ui:373
-msgid "Enable the _menu accelerator key (F10 by default)"
-msgstr "Укључи тастер _пречице изборника (Ф10 подразумевано)"
-
-#: src/preferences.ui:398
-msgid "Theme _variant:"
-msgstr "_Варијанта теме:"
-
-#: src/preferences.ui:430
-msgid "Open _new terminals in:"
-msgstr "Отвори _нове терминале као:"
-
-#: src/preferences.ui:462
-msgid "New tab _position:"
-msgstr "_Положај новог језичка:"
-
-#: src/preferences.ui:499
-msgid "_Always check if default terminal"
-msgstr "_Увек провери да ли је основни терминал"
-
-#: src/preferences.ui:516
-msgid "_Set as default terminal"
-msgstr "_Постави као основни терминал"
-
-#: src/preferences.ui:556
-msgid "_Enable shortcuts"
-msgstr "_Укључи пречице"
-
-#: src/preferences.ui:622
-msgid "Text Appearance"
-msgstr "Изглед текста"
-
-#: src/preferences.ui:639
-msgid "Initial terminal si_ze:"
-msgstr "Почетна _величина терминала:"
-
-#: src/preferences.ui:672
-msgid "columns"
-msgstr "колоне"
-
-#: src/preferences.ui:709
-msgid "rows"
-msgstr "реда"
-
-#: src/preferences.ui:730 src/preferences.ui:876
-msgid "Rese_t"
-msgstr "Поново _постави"
-
-#: src/preferences.ui:751
-msgid "Custom _font:"
-msgstr "Произвољан _фонт:"
-
-#: src/preferences.ui:772
-msgid "Choose A Terminal Font"
-msgstr "Изаберите фонт терминала"
-
-#: src/preferences.ui:785
-msgid "Cell spaci_ng:"
-msgstr "Размак_нутост ћелије:"
-
-#: src/preferences.ui:900
-msgid "Allow b_linking text:"
-msgstr "Дозволи трептајући текст:"
-
-#: src/preferences.ui:934
-msgid "Cursor"
-msgstr "Курсор"
-
-#: src/preferences.ui:951
-msgid "Cursor _shape:"
-msgstr "Облик _курсора:"
-
-#: src/preferences.ui:985
-msgid "Cursor blin_king:"
-msgstr "Трептање _показивача:"
-
-#: src/preferences.ui:1019
-msgid "Sound"
-msgstr "Звук"
-
-#: src/preferences.ui:1033
-msgid "Terminal _bell"
-msgstr "_Звонце терминала"
-
-#: src/preferences.ui:1059
-msgid "Profile ID:"
-msgstr "ИБ профила:"
-
-#: src/preferences.ui:1099 src/preferences.ui:1216
-msgid "Text"
-msgstr "Текст"
-
-#: src/preferences.ui:1122
-msgid "Text and Background Color"
-msgstr "Боја текста и позадине"
-
-#: src/preferences.ui:1146
-msgid "_Use colors from system theme"
-msgstr "_Користи боје које користи систем"
-
-#: src/preferences.ui:1175
-msgid "Built-in sche_mes:"
-msgstr "Постојеће _шеме:"
-
-#: src/preferences.ui:1228
-msgid "Background"
-msgstr "Позадина"
-
-#: src/preferences.ui:1241
-msgid "_Default color:"
-msgstr "Подразумевана _боја:"
-
-#: src/preferences.ui:1258
-msgid "Choose Terminal Text Color"
-msgstr "Изаберите боју текста терминала"
-
-#: src/preferences.ui:1272
-msgid "Choose Terminal Background Color"
-msgstr "Изаберите боју позадине терминала"
-
-#: src/preferences.ui:1282
-msgid "Bo_ld color:"
-msgstr "Боја _подебљања:"
-
-#: src/preferences.ui:1302
-msgid "Choose Terminal Bold Text Color"
-msgstr "Изаберите боју подебљаног текста"
-
-#: src/preferences.ui:1312
-msgid "_Underline color:"
-msgstr "Боја п_одвлачења:"
-
-#: src/preferences.ui:1330
-msgid "Choose Terminal Underlined Text Color"
-msgstr "Изаберите боју подвученог текста"
-
-#: src/preferences.ui:1339
-msgid "Cu_rsor color:"
-msgstr "Боја _курсора:"
-
-#: src/preferences.ui:1359
-msgid "Choose Terminal Cursor Foreground Color"
-msgstr "Изаберите боју курсора"
-
-#: src/preferences.ui:1373
-msgid "Choose Terminal Cursor Background Color"
-msgstr "Изаберите боју позадине курсора"
-
-#: src/preferences.ui:1383
-msgid "_Highlight color:"
-msgstr "Боја _истицања:"
-
-#: src/preferences.ui:1402
-msgid "Choose Terminal Highlight Foreground Color"
-msgstr "Изаберите боју изабраног текста"
-
-#: src/preferences.ui:1416
-msgid "Choose Terminal Highlight Background Color"
-msgstr "Изаберите боју позадине истакнутог текста"
-
-#: src/preferences.ui:1463
-msgid "Palette"
-msgstr "Палета"
-
-#: src/preferences.ui:1495
-msgid "Built-in _schemes:"
-msgstr "Постојеће ш_еме:"
-
-#: src/preferences.ui:1528
-msgid "Color p_alette:"
-msgstr "Палета _боја:"
-
-#: src/preferences.ui:1769
-msgid "Show _bold text in bright colors"
-msgstr "Прикажи _подебљан текст светлим бојама"
-
-#: src/preferences.ui:1808
-msgid "Colors"
-msgstr "Боје"
-
-#: src/preferences.ui:1826
-msgid "_Show scrollbar"
-msgstr "Прикажи _клизач"
-
-#: src/preferences.ui:1843
-msgid "Scroll on _output"
-msgstr "По_мерај при испису"
-
-#: src/preferences.ui:1860
-msgid "Scroll on _keystroke"
-msgstr "Померај на притисак _тастера"
-
-#: src/preferences.ui:1877
-msgid "_Limit scrollback to:"
-msgstr "_Ограничи клизање на:"
-
-# bug(slobo): plural forms
-#: src/preferences.ui:1915
-msgid "lines"
-msgstr "реда"
-
-#: src/preferences.ui:1941
-msgid "Scrolling"
-msgstr "Клизање"
-
-#: src/preferences.ui:1958
-msgid "_Run command as a login shell"
-msgstr "_Покрени наредбу као љуску за пријаву"
-
-#: src/preferences.ui:1973
-msgid "Ru_n a custom command instead of my shell"
-msgstr "По_крени ову наредбу уместо наредбе љуске"
-
-#: src/preferences.ui:1990
-msgid "Custom co_mmand:"
-msgstr "Произвољна наред_ба:"
-
-#: src/preferences.ui:2016
-msgid "_Preserve working directory:"
-msgstr "Сачувати _радну фасциклу:"
-
-#: src/preferences.ui:2050
-msgid "When command _exits:"
-msgstr "Након извршења наредб_е:"
-
-#: src/preferences.ui:2088
-msgid "Command"
-msgstr "Наредба"
-
-#: src/preferences.ui:2108
-msgid "_Backspace key generates:"
-msgstr "Тастер _повратнице остварује:"
-
-#: src/preferences.ui:2141
-msgid "_Delete key generates:"
-msgstr "Тастер _брисања остварује:"
-
-#: src/preferences.ui:2174
-msgid "_Encoding:"
-msgstr "_Кодирање:"
-
-#: src/preferences.ui:2206
-msgid "Ambiguous-_width characters:"
-msgstr "Нејасни _широки знаци:"
-
-#: src/preferences.ui:2238
-msgid "Enable _SIXEL images"
-msgstr "Омогући _СИКСЕЛ слике"
-
-#: src/preferences.ui:2254
-msgid "_Reset Compatibility Options to Defaults"
-msgstr "_Врати опције усклађивања на подразумеване"
-
-#: src/preferences.ui:2277
-msgid "Compatibility"
-msgstr "Усклађивање"
-
-#: src/preferences.ui:2356
-msgid "Clone…"
-msgstr "Клонирај…"
-
-#: src/preferences.ui:2363
-msgid "Rename…"
-msgstr "Преименуј…"
-
-#: src/preferences.ui:2370
-msgid "Delete…"
-msgstr "Обриши…"
-
-#: src/preferences.ui:2383
-msgid "Set as default"
-msgstr "Подеси као подразумевано"
-
-#: src/preferences.ui:2447
-msgid "Cancel"
-msgstr "Откажи"
-
-#: src/profile-editor.cc:157
-msgid "Black on light yellow"
-msgstr "Црна на светло жутој"
-
-#: src/profile-editor.cc:161
-msgid "Black on white"
-msgstr "Црна на белој"
-
-#: src/profile-editor.cc:165
-msgid "Gray on black"
-msgstr "Сива на црној"
-
-#: src/profile-editor.cc:169
-msgid "Green on black"
-msgstr "Зелена на црној"
-
-#: src/profile-editor.cc:173
-msgid "White on black"
-msgstr "Бела на црној"
-
-#. Translators: "GNOME" is the name of a colour scheme, "light" can be translated
-#: src/profile-editor.cc:178
-msgid "GNOME light"
-msgstr "Гномова светла"
-
-#. Translators: "GNOME" is the name of a colour scheme, "dark" can be translated
-#: src/profile-editor.cc:183
-msgid "GNOME dark"
-msgstr "Гномова тамна"
-
-#. Translators: "Tango" is the name of a colour scheme, "light" can be translated
-#: src/profile-editor.cc:188
-msgid "Tango light"
-msgstr "Светла танго"
-
-#. Translators: "Tango" is the name of a colour scheme, "dark" can be translated
-#: src/profile-editor.cc:193
-msgid "Tango dark"
-msgstr "Тамна танго"
-
-#. Translators: "Solarized" is the name of a colour scheme, "light" can be translated
-#: src/profile-editor.cc:198
-msgid "Solarized light"
-msgstr "Осветљена светла"
-
-#. Translators: "Solarized" is the name of a colour scheme, "dark" can be translated
-#: src/profile-editor.cc:203
-msgid "Solarized dark"
-msgstr "Осветљена тамна"
-
-#: src/profile-editor.cc:587
-#, c-format
-msgid "Error parsing command: %s"
-msgstr "Грешка при обради наредбе: %s"
-
-#: src/profile-editor.cc:744 src/profile-editor.cc:745
-#: src/profile-editor.cc:749
-msgid "Chinese Traditional"
-msgstr "традиционални кинески"
-
-#: src/profile-editor.cc:746
-msgid "Cyrillic/Russian"
-msgstr "ћирилични/руски"
-
-#: src/profile-editor.cc:747 src/profile-editor.cc:786
-msgid "Japanese"
-msgstr "јапански"
-
-#: src/profile-editor.cc:748 src/profile-editor.cc:788
-msgid "Korean"
-msgstr "корејски"
-
-#: src/profile-editor.cc:750 src/profile-editor.cc:751
-#: src/profile-editor.cc:752
-msgid "Chinese Simplified"
-msgstr "кинески поједностављени"
-
-#: src/profile-editor.cc:753 src/profile-editor.cc:759
-#: src/profile-editor.cc:763 src/profile-editor.cc:782
-#: src/profile-editor.cc:792
-msgid "Western"
-msgstr "западни"
-
-#: src/profile-editor.cc:754 src/profile-editor.cc:765
-#: src/profile-editor.cc:778 src/profile-editor.cc:790
-msgid "Central European"
-msgstr "централноевропски"
-
-#: src/profile-editor.cc:755 src/profile-editor.cc:768
-#: src/profile-editor.cc:774 src/profile-editor.cc:776
-#: src/profile-editor.cc:791
-msgid "Cyrillic"
-msgstr "ћирилични"
-
-#: src/profile-editor.cc:756 src/profile-editor.cc:773
-#: src/profile-editor.cc:784 src/profile-editor.cc:794
-msgid "Turkish"
-msgstr "турски"
-
-#: src/profile-editor.cc:757 src/profile-editor.cc:772
-#: src/profile-editor.cc:781 src/profile-editor.cc:795
-msgid "Hebrew"
-msgstr "хебрејски"
-
-#: src/profile-editor.cc:758 src/profile-editor.cc:769
-#: src/profile-editor.cc:777 src/profile-editor.cc:796
-msgid "Arabic"
-msgstr "арапски"
-
-#: src/profile-editor.cc:760
-msgid "Nordic"
-msgstr "норвешки"
-
-#: src/profile-editor.cc:761 src/profile-editor.cc:767
-#: src/profile-editor.cc:797
-msgid "Baltic"
-msgstr "балтички"
-
-#: src/profile-editor.cc:762
-msgid "Celtic"
-msgstr "келтски"
-
-#: src/profile-editor.cc:764 src/profile-editor.cc:783
-msgid "Romanian"
-msgstr "румунски"
-
-#: src/profile-editor.cc:766
-msgid "South European"
-msgstr "јужноевропски"
-
-#: src/profile-editor.cc:770 src/profile-editor.cc:780
-#: src/profile-editor.cc:793
-msgid "Greek"
-msgstr "грчки"
-
-#: src/profile-editor.cc:771
-msgid "Hebrew Visual"
-msgstr "хебрејски визуелни"
-
-#: src/profile-editor.cc:775 src/profile-editor.cc:785
-msgid "Cyrillic/Ukrainian"
-msgstr "ћирилични/украјински"
-
-#: src/profile-editor.cc:779
-msgid "Croatian"
-msgstr "хрватски"
-
-#: src/profile-editor.cc:787
-msgid "Thai"
-msgstr "тајландски"
-
-#: src/profile-editor.cc:789 src/profile-editor.cc:805
-msgid "Unicode"
-msgstr "уникод"
-
-#: src/profile-editor.cc:798
-msgid "Vietnamese"
-msgstr "вијетнамски"
-
-#: src/profile-editor.cc:806
-msgid "Legacy CJK Encodings"
-msgstr "Стара КЈК кодирања"
-
-#: src/profile-editor.cc:807
-msgid "Obsolete Encodings"
-msgstr "Застарела кодирања"
-
-#. Translators: Appears as: [numeric entry] × width
-#: src/profile-editor.cc:1011
-msgid "width"
-msgstr "ширина"
-
-#. Translators: Appears as: [numeric entry] × height
-#: src/profile-editor.cc:1016
-msgid "height"
-msgstr "висина"
-
-#: src/profile-editor.cc:1064
-#, c-format
-msgid "Choose Palette Color %u"
-msgstr "Изаберите боју у палети %u"
-
-#: src/profile-editor.cc:1068
-#, c-format
-msgid "Palette entry %u"
-msgstr "Боја у палети %u"
-
-#: src/search-popover.ui:7 src/search-popover.ui:37 src/terminal-accels.cc:150
-#: src/terminal-headerbar.ui:118
+#: src/search-popover.ui:5 src/search-popover.ui:26 src/terminal-accels.cc:166
+#: src/terminal-headerbar.ui:66
 msgid "Find"
 msgstr "Пронађи"
 
-#: src/search-popover.ui:51
+#: src/search-popover.ui:34
 msgid "Find previous occurrence"
 msgstr "Нађи претходно појављивање"
 
-#: src/search-popover.ui:73
+#: src/search-popover.ui:48
 msgid "Find next occurrence"
 msgstr "Нађи следеће појављивање"
 
-#: src/search-popover.ui:104
+#: src/search-popover.ui:68
 msgid "Toggle search options"
 msgstr "Прикажи опције претраге"
 
-#: src/search-popover.ui:167
+#: src/search-popover.ui:107
 msgid "_Match case"
 msgstr "_Упореди величину слова"
 
-#: src/search-popover.ui:186
+#: src/search-popover.ui:117
 msgid "Match _entire word only"
 msgstr "Упореди само _целе речи"
 
-#: src/search-popover.ui:204
+#: src/search-popover.ui:127
 msgid "Match as _regular expression"
 msgstr "Упореди као _регуларни израз"
 
-#: src/search-popover.ui:222
+#: src/search-popover.ui:137
 msgid "_Wrap around"
 msgstr "Преламај _около"
 
-#: src/terminal-accels.cc:126 src/terminal-headerbar.ui:48
+#. Translators: <b>%s</b> is used to show the provided text in bold
+#: src/terminal-accel-dialog.cc:437
+#, c-format
+msgid "Enter new shortcut to change <b>%s</b>."
+msgstr ""
+
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2553
+msgid "_Cancel"
+msgstr "О_ткажи"
+
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2554
+msgid "_Set"
+msgstr ""
+
+#: src/terminal-accel-dialog.ui:88
+msgid "Press Escape to cancel or Backspace to disable."
+msgstr ""
+
+#: src/terminal-accel-row.cc:54
+#, fuzzy
+#| msgid "Disabled"
+msgid "disabled"
+msgstr "Онемогућено"
+
+#: src/terminal-accel-row.cc:88
+#, fuzzy
+#| msgid "Shortcuts"
+msgid "Set Shortcut"
+msgstr "Пречице"
+
+#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
 msgid "New Tab"
 msgstr "Нови језичак"
 
-#: src/terminal-accels.cc:129
+#: src/terminal-accels.cc:150 src/terminal-window.cc:603
 msgid "Save Contents"
 msgstr "Сачувај садржај"
 
-#: src/terminal-accels.cc:132
-msgid "Export"
-msgstr "Извези"
-
-#: src/terminal-accels.cc:135
-msgid "Print"
-msgstr "Одштампај"
-
-#: src/terminal-accels.cc:137
+#: src/terminal-accels.cc:151
 msgid "Close Tab"
 msgstr "Затвори језичак"
 
-#: src/terminal-accels.cc:138
+#: src/terminal-accels.cc:152
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close Other Tabs"
+msgstr "Затвори језичак"
+
+#: src/terminal-accels.cc:153
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Reopen Closed Tab"
+msgstr "Затвори језичак"
+
+#: src/terminal-accels.cc:154
 msgid "Close Window"
 msgstr "Затвори прозор"
 
-#: src/terminal-accels.cc:142
+#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
+#: src/terminal-profile-row.cc:56
 msgid "Copy"
 msgstr "Копирај"
 
-#: src/terminal-accels.cc:143
+#: src/terminal-accels.cc:159
 msgid "Copy as HTML"
 msgstr "Копирај као ХТМЛ"
 
-#: src/terminal-accels.cc:144
+#: src/terminal-accels.cc:160
 msgid "Paste"
 msgstr "Убаци"
 
-#: src/terminal-accels.cc:145
+#: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Изабери све"
 
-#: src/terminal-accels.cc:151
+#: src/terminal-accels.cc:167
 msgid "Find Next"
 msgstr "Нађи следеће"
 
-#: src/terminal-accels.cc:152
+#: src/terminal-accels.cc:168
 msgid "Find Previous"
 msgstr "Нађи претходно"
 
-#: src/terminal-accels.cc:153
+#: src/terminal-accels.cc:169
 msgid "Clear Highlight"
 msgstr "Уклони истицање"
 
-#: src/terminal-accels.cc:157
-msgid "Hide and Show Menubar"
-msgstr "Сакриј и прикажи траку изборника"
-
-#: src/terminal-accels.cc:158
+#: src/terminal-accels.cc:173
 msgid "Full Screen"
 msgstr "Преко целог екрана"
 
-#: src/terminal-accels.cc:159
+#: src/terminal-accels.cc:174
 msgid "Zoom In"
 msgstr "Увећај"
 
-#: src/terminal-accels.cc:160
+#: src/terminal-accels.cc:175
 msgid "Zoom Out"
 msgstr "Умањи"
 
-#: src/terminal-accels.cc:161
+#: src/terminal-accels.cc:176
 msgid "Normal Size"
 msgstr "Уобичајена величина"
 
-#: src/terminal-accels.cc:165
+#: src/terminal-accels.cc:177
+#, fuzzy
+#| msgid "Palette"
+msgid "Command Palette"
+msgstr "Палета"
+
+#: src/terminal-accels.cc:178
+msgid "Quick Select"
+msgstr ""
+
+#: src/terminal-accels.cc:182
 msgid "Read-Only"
 msgstr "Само за читање"
 
-#: src/terminal-accels.cc:166
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2550
+msgid "Set Title"
+msgstr "Постави наслов"
+
+#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
+#: src/terminal-profile-editor.ui:848
 msgid "Reset"
 msgstr "Поново постави"
 
-#: src/terminal-accels.cc:167
+#: src/terminal-accels.cc:185
 msgid "Reset and Clear"
 msgstr "Поново постави и очисти"
 
-#: src/terminal-accels.cc:171
+#: src/terminal-accels.cc:186
+#, fuzzy
+#| msgid "Switch to Previous Tab"
+msgid "Scroll to Previous Prompt"
+msgstr "Пређи на претходни језичак"
+
+#: src/terminal-accels.cc:187
+#, fuzzy
+#| msgid "Scroll on _keystroke"
+msgid "Scroll to Next Prompt"
+msgstr "Померај на притисак _тастера"
+
+#: src/terminal-accels.cc:188
+msgid "Copy Output of Last Command"
+msgstr ""
+
+#: src/terminal-accels.cc:192
 msgid "Switch to Previous Tab"
 msgstr "Пређи на претходни језичак"
 
-#: src/terminal-accels.cc:172
+#: src/terminal-accels.cc:193
 msgid "Switch to Next Tab"
 msgstr "Пређи на следећи језичак"
 
-#: src/terminal-accels.cc:173
+#: src/terminal-accels.cc:194
 msgid "Move Tab to the Left"
 msgstr "Премести језичак на лево"
 
-#: src/terminal-accels.cc:174
+#: src/terminal-accels.cc:195
 msgid "Move Tab to the Right"
 msgstr "Премести језичак на десно"
 
-#: src/terminal-accels.cc:175
+#: src/terminal-accels.cc:196
+#, fuzzy
+#| msgid "Move Tab to the Left"
+msgid "Move Tab to the Start"
+msgstr "Премести језичак на лево"
+
+#: src/terminal-accels.cc:197
+#, fuzzy
+#| msgid "Move Tab to the Left"
+msgid "Move Tab to the End"
+msgstr "Премести језичак на лево"
+
+#: src/terminal-accels.cc:198
 msgid "Detach Tab"
 msgstr "Одвој језичак"
 
-#: src/terminal-accels.cc:211
+#: src/terminal-accels.cc:199
+msgid "Show Tabs Overview"
+msgstr ""
+
+#: src/terminal-accels.cc:200
+msgid "Focus the Tab List"
+msgstr ""
+
+#: src/terminal-accels.cc:236
 msgid "Switch to Last Tab"
 msgstr "Пређи на последњи језичак"
 
-#: src/terminal-accels.cc:215
+#: src/terminal-accels.cc:240
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Right"
+msgstr "Осветљена светла"
+
+#: src/terminal-accels.cc:241
+msgid "Split Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close Pane"
+msgstr "Затвори језичак"
+
+#: src/terminal-accels.cc:243
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom Pane"
+msgstr "Увећај"
+
+#: src/terminal-accels.cc:244
+msgid "Make Panes the Same Size"
+msgstr ""
+
+#: src/terminal-accels.cc:245
+msgid "Move Pane to a New Tab"
+msgstr ""
+
+#: src/terminal-accels.cc:246
+#, fuzzy
+#| msgid "Move Tab to the Left"
+msgid "Focus the Pane on the Left"
+msgstr "Премести језичак на лево"
+
+#: src/terminal-accels.cc:247
+#, fuzzy
+#| msgid "Move Tab to the Right"
+msgid "Focus the Pane on the Right"
+msgstr "Премести језичак на десно"
+
+#: src/terminal-accels.cc:248
+msgid "Focus the Pane Above"
+msgstr ""
+
+#: src/terminal-accels.cc:249
+msgid "Focus the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:250
+#, fuzzy
+#| msgid "Move Terminal _Left"
+msgid "Move Divider Left"
+msgstr "Премести терминал на _лево"
+
+#: src/terminal-accels.cc:251
+#, fuzzy
+#| msgid "Move Terminal _Right"
+msgid "Move Divider Right"
+msgstr "Премести терминал на _десно"
+
+#: src/terminal-accels.cc:252
+msgid "Move Divider Up"
+msgstr ""
+
+#: src/terminal-accels.cc:253
+msgid "Move Divider Down"
+msgstr ""
+
+#: src/terminal-accels.cc:254
+msgid "Swap With the Pane on the Left"
+msgstr ""
+
+#: src/terminal-accels.cc:255
+msgid "Swap With the Pane on the Right"
+msgstr ""
+
+#: src/terminal-accels.cc:256
+msgid "Swap With the Pane Above"
+msgstr ""
+
+#: src/terminal-accels.cc:257
+msgid "Swap With the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:258
+msgid "Broadcast Input to This Tab"
+msgstr ""
+
+#: src/terminal-accels.cc:259
+msgid "Broadcast Input to This Window"
+msgstr ""
+
+#: src/terminal-accels.cc:263
 msgid "Contents"
 msgstr "Садржај"
 
-#: src/terminal-accels.cc:219
+#: src/terminal-accels.cc:267
 msgid "Show Primary Menu"
 msgstr "Прикажи примарни изборник"
 
-#: src/terminal-accels.cc:228 src/terminal-menubar.ui.in:22
+#: src/terminal-accels.cc:278
 msgid "File"
 msgstr "Датотека"
 
-#: src/terminal-accels.cc:229 src/terminal-menubar.ui.in:56
+#: src/terminal-accels.cc:279
 msgid "Edit"
 msgstr "Уреди"
 
-#: src/terminal-accels.cc:230 src/terminal-menubar.ui.in:93
+#: src/terminal-accels.cc:280
 msgid "View"
 msgstr "Преглед"
 
-#: src/terminal-accels.cc:231 src/terminal-menubar.ui.in:122
+#: src/terminal-accels.cc:281
 msgid "Search"
 msgstr "Претражи"
 
-#: src/terminal-accels.cc:233 src/terminal-menubar.ui.in:196
+#: src/terminal-accels.cc:283
 msgid "Tabs"
 msgstr "Језичци"
 
-#: src/terminal-accels.cc:234 src/terminal-menubar.ui.in:228
+#: src/terminal-accels.cc:284
+#, fuzzy
+#| msgid "Japanese"
+msgid "Panes"
+msgstr "јапански"
+
+#: src/terminal-accels.cc:285
 msgid "Help"
 msgstr "Помоћ"
 
-#: src/terminal-accels.cc:235 src/terminal-prefs.cc:645
+#: src/terminal-accels.cc:286
 msgid "Global"
 msgstr "Опште"
 
-#: src/terminal-accels.cc:361
+#: src/terminal-accels.cc:402
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Пређи на језичак %u"
 
-#: src/terminal-accels.cc:551
-msgid "_Action"
-msgstr "_Радња"
-
-#: src/terminal-accels.cc:570
-msgid "Shortcut _Key"
-msgstr "Тастер _пречице"
-
-#: src/terminal-app.cc:552
+#: src/terminal-app.cc:518
 msgid "New Terminal"
 msgstr "Нови терминал"
 
-#: src/terminal-app.cc:562 src/terminal-window.cc:1804
-msgid "New _Terminal"
-msgstr "Нови _терминал"
-
-#: src/terminal-app.cc:564 src/terminal-window.cc:1813
-msgid "New _Tab"
-msgstr "Нови _језичак"
-
-#: src/terminal-app.cc:565 src/terminal-headermenu.ui:39
-#: src/terminal-window.cc:1809
-msgid "New _Window"
-msgstr "Нови п_розор"
-
-#: src/terminal-app.cc:614
-msgid "Change _Profile"
-msgstr "Измени _профил"
-
-#: src/terminal-app.cc:627
+#: src/terminal-app.cc:568
 msgid "_Profile"
 msgstr "_Профили"
 
-#: src/terminal-headerbar.ui:72 src/terminal-prefs.cc:657
-msgid "Profiles"
-msgstr "Профили"
+#: src/terminal-app.cc:1347
+#, c-format
+msgid "%u s"
+msgstr ""
 
-#: src/terminal-headermenu.ui:23 src/terminal-menubar.ui.in:115
+#: src/terminal-app.cc:1349
+#, c-format
+msgid "%u min %u s"
+msgstr ""
+
+#: src/terminal-app.cc:1350
+#, c-format
+msgid "%u h %u min"
+msgstr ""
+
+#: src/terminal-app.cc:1376
+#, c-format
+msgid "Finished after %s"
+msgstr ""
+
+#: src/terminal-app.cc:1377
+#, c-format
+msgid "Failed with exit status %u after %s"
+msgstr ""
+
+#: src/terminal-app.cc:1387
+#, fuzzy
+#| msgid "Command"
+msgid "Command finished"
+msgstr "Наредба"
+
+#: src/terminal-app.cc:1387
+#, fuzzy
+#| msgid "Command"
+msgid "Command failed"
+msgstr "Наредба"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:235
+#, fuzzy, c-format
+#| msgid "Profile “%s”"
+msgid "New Tab with Profile “%s”"
+msgstr "Профил „%s“"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:239
+#, fuzzy, c-format
+#| msgid "Profile “%s”"
+msgid "New Window with Profile “%s”"
+msgstr "Профил „%s“"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:244
+#, fuzzy, c-format
+#| msgid "Profile “%s”"
+msgid "Use Profile “%s” in This Terminal"
+msgstr "Профил „%s“"
+
+#. Translators: %s is the title of a terminal
+#: src/terminal-command-palette.cc:269
+#, fuzzy, c-format
+#| msgid "Profile “%s”"
+msgid "Go to “%s”"
+msgstr "Профил „%s“"
+
+#. Translators: %d is the number of a tab
+#: src/terminal-command-palette.cc:271
+#, c-format
+msgid "A pane in tab %d"
+msgstr ""
+
+#: src/terminal-command-palette.cc:272
+#, c-format
+msgid "Tab %d"
+msgstr ""
+
+#: src/terminal-command-palette.cc:465
+msgid "Search actions, profiles and tabs"
+msgstr ""
+
+#: src/terminal-find-bar.ui:67
+#, fuzzy
+#| msgid "Search"
+msgid "Search results"
+msgstr "Претражи"
+
+#: src/terminal-find-bar.ui:80
+msgid "Search up to next result"
+msgstr ""
+
+#: src/terminal-find-bar.ui:87
+msgid "Search down to next result"
+msgstr ""
+
+#: src/terminal-find-bar.ui:96
+#, fuzzy
+#| msgid "Toggle search options"
+msgid "Search Options"
+msgstr "Прикажи опције претраге"
+
+#: src/terminal-find-bar.ui:107
+#, fuzzy
+#| msgid "_Match case"
+msgid "Match _Case"
+msgstr "_Упореди величину слова"
+
+#: src/terminal-find-bar.ui:114
+msgid "Whole _Words"
+msgstr ""
+
+#: src/terminal-find-bar.ui:121
+#, fuzzy
+#| msgid "Match as _regular expression"
+msgid "Use _Regular Expressions"
+msgstr "Упореди као _регуларни израз"
+
+#: src/terminal-find-bar.ui:142
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close"
+msgstr "Затвори језичак"
+
+#: src/terminal-find-bar.ui:143
+#, fuzzy
+#| msgid "Close tab"
+msgid "Close the search bar"
+msgstr "Затворите језичак"
+
+#: src/terminal-headerbar.ui:40
+#, fuzzy
+#| msgid "New Profile"
+msgid "New Tab from Profile"
+msgstr "Нови профил"
+
+#: src/terminal-headerbar.ui:57
+#, fuzzy
+#| msgid "Open Ta_b"
+msgid "Show Open Tabs"
+msgstr "Отвори _језичак"
+
+#: src/terminal-headermenu.ui:23
 msgid "Zoom _Out"
 msgstr "У_мањи"
 
-#: src/terminal-headermenu.ui:32 src/terminal-menubar.ui.in:107
+#: src/terminal-headermenu.ui:29
+#, fuzzy
+#| msgid "Reset"
+msgid "Reset _Zoom"
+msgstr "Поново постави"
+
+#: src/terminal-headermenu.ui:35
 msgid "Zoom _In"
 msgstr "У_већај"
 
-#: src/terminal-headermenu.ui:44 src/terminal-menubar.ui.in:101
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3187
+msgid "New _Window"
+msgstr "Нови п_розор"
+
+#: src/terminal-headermenu.ui:49
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Re_open Closed Tab"
+msgstr "Затвори језичак"
+
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3116
+msgid "Split _Right"
+msgstr ""
+
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3119
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3173
+msgid "_Broadcast Input"
+msgstr ""
+
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3159
+msgid "_Off"
+msgstr ""
+
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3160
+msgid "To All Panes in This _Tab"
+msgstr ""
+
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3161
+#, fuzzy
+#| msgid "New Terminal in New Window"
+msgid "To All Terminals in This _Window"
+msgstr "Нови терминал у новом прозору"
+
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3170
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "_Include This Terminal"
+msgstr "Да затворим терминал?"
+
+#: src/terminal-headermenu.ui:93
 msgid "_Full Screen"
 msgstr "_Преко целог екрана"
 
-#: src/terminal-headermenu.ui:50 src/terminal-menubar.ui.in:155
-#: src/terminal-window.cc:1785
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3096
 msgid "Read-_Only"
 msgstr "Само за _читање"
 
-#: src/terminal-headermenu.ui:54 src/terminal-menubar.ui.in:148
-#: src/terminal-notebook-menu.ui:36
+#: src/terminal-headermenu.ui:105 src/terminal-notebook.ui:67
 msgid "Set _Title…"
 msgstr "Постави _наслов…"
 
-#: src/terminal-headermenu.ui:60
-msgid "_Advanced"
-msgstr "Н_апредно"
-
-#: src/terminal-headermenu.ui:63 src/terminal-menubar.ui.in:161
-msgid "_Reset"
-msgstr "По_ново постави"
-
-#: src/terminal-headermenu.ui:68 src/terminal-menubar.ui.in:166
-msgid "Reset and C_lear"
-msgstr "Поново постави и _очисти"
-
-#: src/terminal-headermenu.ui:75 src/terminal-menubar.ui.in:173
-msgid "_1. 80×24"
-msgstr "_1. 80×24"
-
-#: src/terminal-headermenu.ui:80 src/terminal-menubar.ui.in:178
-msgid "_2. 80×43"
-msgstr "_2. 80×43"
-
-#: src/terminal-headermenu.ui:85 src/terminal-menubar.ui.in:183
-msgid "_3. 132×24"
-msgstr "_3. 132×24"
-
-#: src/terminal-headermenu.ui:90 src/terminal-menubar.ui.in:188
-msgid "_4. 132×43"
-msgstr "_4. 132×43"
-
-#: src/terminal-headermenu.ui:97 src/terminal-menubar.ui.in:241
-msgid "_Inspector"
-msgstr "_Инспектор"
-
-#: src/terminal-headermenu.ui:106 src/terminal-screen.cc:1539
-#: src/terminal-window.cc:1797
-msgid "_Preferences"
-msgstr "_Поставке"
-
-#: src/terminal-headermenu.ui:110 src/terminal-menubar.ui.in:227
-msgid "_Help"
-msgstr "По_моћ"
-
-#: src/terminal-headermenu.ui:114 src/terminal-menubar.ui.in:235
-msgid "_About"
-msgstr "_О програму"
-
-#: src/terminal-menubar.ui.in:21
-msgid "_File"
-msgstr "_Датотека"
-
-#: src/terminal-menubar.ui.in:26
+#: src/terminal-headermenu.ui:111
 msgid "_Save Contents…"
 msgstr "_Сачувај садржај…"
 
-#: src/terminal-menubar.ui.in:31
-msgid "_Export…"
-msgstr "_Извези…"
+#: src/terminal-headermenu.ui:117
+msgid "_Advanced"
+msgstr "Н_апредно"
 
-#: src/terminal-menubar.ui.in:36
-msgid "_Print…"
-msgstr "_Одштамај…"
+#: src/terminal-headermenu.ui:120
+msgid "_Reset"
+msgstr "По_ново постави"
 
-#: src/terminal-menubar.ui.in:43
-msgid "C_lose Tab"
-msgstr "Затвори _језичак"
+#: src/terminal-headermenu.ui:126
+msgid "Reset and C_lear"
+msgstr "Поново постави и _очисти"
 
-#: src/terminal-menubar.ui.in:48
-msgid "_Close Window"
-msgstr "Затвори _прозор"
+#: src/terminal-headermenu.ui:134
+msgid "_1. 80×24"
+msgstr "_1. 80×24"
 
-#: src/terminal-menubar.ui.in:55
-msgid "_Edit"
-msgstr "_Уређивање"
+#: src/terminal-headermenu.ui:140
+msgid "_2. 80×43"
+msgstr "_2. 80×43"
 
-#: src/terminal-menubar.ui.in:59 src/terminal-window.cc:1775
-msgid "_Copy"
-msgstr "_Копирај"
+#: src/terminal-headermenu.ui:146
+msgid "_3. 132×24"
+msgstr "_3. 132×24"
 
-#: src/terminal-menubar.ui.in:64 src/terminal-window.cc:1776
-msgid "Copy as _HTML"
-msgstr "Копирај као _ХТМЛ"
+#: src/terminal-headermenu.ui:152
+msgid "_4. 132×43"
+msgstr "_4. 132×43"
 
-#: src/terminal-menubar.ui.in:69 src/terminal-window.cc:1777
-msgid "_Paste"
-msgstr "У_баци"
+#: src/terminal-headermenu.ui:160
+msgid "_Inspector"
+msgstr "_Инспектор"
 
-#: src/terminal-menubar.ui.in:73 src/terminal-window.cc:1779
-msgid "Paste as _Filenames"
-msgstr "Убаци као називе _датотека"
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3571
+#: src/terminal-window.cc:3110
+msgid "_Preferences"
+msgstr "_Поставке"
 
-#: src/terminal-menubar.ui.in:80
-msgid "Select _All"
-msgstr "Изабери _све"
+#: src/terminal-headermenu.ui:175
+msgid "_Help"
+msgstr "По_моћ"
 
-#: src/terminal-menubar.ui.in:86
-msgid "P_references"
-msgstr "П_оставке"
+#: src/terminal-headermenu.ui:180
+msgid "_About"
+msgstr "_О програму"
 
-#: src/terminal-menubar.ui.in:92
-msgid "_View"
-msgstr "Пре_глед"
-
-#: src/terminal-menubar.ui.in:96 src/terminal-window.cc:1825
-msgid "Show _Menubar"
-msgstr "Прикажи _изборник"
-
-#: src/terminal-menubar.ui.in:111
-msgid "_Normal Size"
-msgstr "_Уобичајена величина"
-
-#: src/terminal-menubar.ui.in:121
-msgid "_Search"
-msgstr "Пре_трага"
-
-#: src/terminal-menubar.ui.in:125
-msgid "_Find…"
-msgstr "_Нађи…"
-
-#: src/terminal-menubar.ui.in:129
-msgid "Find _Next"
-msgstr "Нађи _следеће"
-
-#: src/terminal-menubar.ui.in:133
-msgid "Find _Previous"
-msgstr "Нађи _претходно"
-
-#: src/terminal-menubar.ui.in:137
-msgid "_Clear Highlight"
-msgstr "Уклони _истицање"
-
-#: src/terminal-menubar.ui.in:143
-msgid "_Terminal"
-msgstr "_Терминал"
-
-#: src/terminal-menubar.ui.in:195
-msgid "Ta_bs"
-msgstr "_Језичци"
-
-#: src/terminal-menubar.ui.in:201
-msgid "_Previous Tab"
-msgstr "_Претходни језичак"
-
-#: src/terminal-menubar.ui.in:205
-msgid "_Next Tab"
-msgstr "Следећи је_зичак"
-
-#: src/terminal-menubar.ui.in:211 src/terminal-notebook-menu.ui:22
-msgid "Move Terminal _Left"
-msgstr "Премести терминал на _лево"
-
-#: src/terminal-menubar.ui.in:215 src/terminal-notebook-menu.ui:26
-msgid "Move Terminal _Right"
-msgstr "Премести терминал на _десно"
-
-#: src/terminal-menubar.ui.in:221 src/terminal-notebook-menu.ui:32
-msgid "_Detach Terminal"
-msgstr "_Одвој терминал"
-
-#: src/terminal-menubar.ui.in:231
-msgid "_Contents"
-msgstr "_Садржај"
-
-#: src/terminal-nautilus.cc:542
+#: src/terminal-nautilus.cc:512
 #, fuzzy
 msgid "Open in Pano Terminal (_Remote)"
 msgstr "Отвори у _удаљеном терминалу"
 
-#: src/terminal-nautilus.cc:544
+#: src/terminal-nautilus.cc:514
 #, fuzzy
 msgid "Open in Pano Terminal (_Local)"
 msgstr "Отвори у _локалном терминалу"
 
-#: src/terminal-nautilus.cc:548 src/terminal-nautilus.cc:559
+#: src/terminal-nautilus.cc:518 src/terminal-nautilus.cc:529
 msgid "Open the currently selected folder in a terminal"
 msgstr "Отвара текући директоријум у терминалу"
 
-#: src/terminal-nautilus.cc:550 src/terminal-nautilus.cc:561
+#: src/terminal-nautilus.cc:520 src/terminal-nautilus.cc:531
 msgid "Open the currently open folder in a terminal"
 msgstr "Отвара текући директоријум у терминалу"
 
-#: src/terminal-nautilus.cc:556
+#: src/terminal-nautilus.cc:526
 #, fuzzy
 msgid "Open in Pano _Terminal"
 msgstr "Отвори у _терминалу"
 
-#: src/terminal-nautilus.cc:566
+#: src/terminal-nautilus.cc:536
 #, fuzzy
 msgid "Open Pano _Terminal"
 msgstr "Отвори _терминал"
 
-#: src/terminal-nautilus.cc:567
+#: src/terminal-nautilus.cc:537
 msgid "Open a terminal"
 msgstr "Отвори терминал"
 
-#: src/terminal-notebook-menu.ui:43 src/terminal-window.cc:3336
+#: src/terminal-notebook.ui:36
+#, fuzzy
+msgid "_Pin Terminal"
+msgstr "Гномов терминал"
+
+#: src/terminal-notebook.ui:42
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "_Unpin Terminal"
+msgstr "Отвори _терминал"
+
+#: src/terminal-notebook.ui:50
+msgid "Move Terminal _Left"
+msgstr "Премести терминал на _лево"
+
+#: src/terminal-notebook.ui:55
+msgid "Move Terminal _Right"
+msgstr "Премести терминал на _десно"
+
+#: src/terminal-notebook.ui:62
+msgid "_Detach Terminal"
+msgstr "_Одвој терминал"
+
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5163
+#: src/terminal-window.cc:5173
 msgid "C_lose Terminal"
 msgstr "_Затвори терминал"
 
-#: src/terminal-options.cc:332
+#: src/terminal-notebook.ui:80
+#, fuzzy
+#| msgid "Close All Terminals"
+msgid "Close _Other Terminals"
+msgstr "Затвори све терминале"
+
+#: src/terminal-options.cc:324
 #, fuzzy, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of "
-"Pano Terminal."
+"Option “%s” is deprecated and might be removed in a later version of Pano "
+"Terminal."
 msgstr ""
 "Опција „%s“ је застарела и вероватно ће бити уклоњена у наредним издањима "
 "Гномовог терминала."
 
-#. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
-#: src/terminal-options.cc:343
+#. %s is being replaced with "-- " (without quotes), which must be used
+#. literally, not translatable
+#: src/terminal-options.cc:335
 #, c-format
 msgid ""
 "Use “%s” to terminate the options and put the command line to execute after "
@@ -1955,212 +2022,209 @@ msgstr ""
 "Користите „%s“ да окончате опције и да линија наредби започне извршавање "
 "након тога."
 
-#: src/terminal-options.cc:353 src/terminal-options.cc:366
+#: src/terminal-options.cc:345 src/terminal-options.cc:358
 #, fuzzy, c-format
 msgid "Option “%s” is no longer supported in this version of Pano Terminal."
 msgstr "Опција „%s“ више није подржана у новим издањима Гномовог терминала."
 
-#: src/terminal-options.cc:438
+#: src/terminal-options.cc:430
+#, c-format
+msgid "Cannot specify more than one command to run"
+msgstr ""
+
+#: src/terminal-options.cc:439
 #, c-format
 msgid "Argument to “%s” is not a valid command: %s"
 msgstr "Аргумент за „%s“ није исправна наредба: %s"
 
-#: src/terminal-options.cc:611
+#: src/terminal-options.cc:612
 msgid "Two roles given for one window"
 msgstr "Две улоге наведене за један прозор"
 
-#: src/terminal-options.cc:632 src/terminal-options.cc:665
-#, c-format
-msgid "“%s” option given twice for the same window\n"
-msgstr "„%s“ опција је наведена два пута за исти прозор\n"
-
-#: src/terminal-options.cc:884
+#: src/terminal-options.cc:819
 #, c-format
 msgid "Cannot pass FD %d twice"
 msgstr "Не могу да пропустим ФД %d два пута"
 
-#: src/terminal-options.cc:946
+#: src/terminal-options.cc:881
 #, c-format
 msgid "“%s” is not a valid zoom factor"
 msgstr "„%s“ није исправна вредност увећања"
 
-#: src/terminal-options.cc:953
+#: src/terminal-options.cc:888
 #, c-format
 msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "Вредност увећања „%g“ је премала, користим %g\n"
 
-#: src/terminal-options.cc:961
+#: src/terminal-options.cc:896
 #, c-format
 msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "Вредност увећања „%g“ је превелика, користим %g\n"
 
-#: src/terminal-options.cc:999
+#: src/terminal-options.cc:934
 #, c-format
 msgid ""
 "Option “%s” requires specifying the command to run on the rest of the "
 "command line"
 msgstr "Могућност „%s“ захтева задавање наредбе на крају линије за наредбе"
 
-#: src/terminal-options.cc:1160
+#: src/terminal-options.cc:1074
+#, c-format
+msgid "Too many arguments"
+msgstr ""
+
+#: src/terminal-options.cc:1102
 msgid "Can only use --wait once"
 msgstr "Заставицу --wait можете користити само једном"
 
-#: src/terminal-options.cc:1196
+#: src/terminal-options.cc:1138
 msgid "Not a valid terminal config file."
 msgstr "Неисправна датотека са подешавањима терминала."
 
-#: src/terminal-options.cc:1209
+#: src/terminal-options.cc:1151
 msgid "Incompatible terminal config file version."
 msgstr "Неисправно издање датотеке са подешавањима терминала."
 
-#: src/terminal-options.cc:1368
+#: src/terminal-options.cc:1305
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 "Не пријављује се на сервер за покретање, не користи исти покренути терминал"
 
-#: src/terminal-options.cc:1377
+#: src/terminal-options.cc:1314
 msgid "Load a terminal configuration file"
 msgstr "Учитава датотеку са подешавањима терминала"
 
-#: src/terminal-options.cc:1378
+#: src/terminal-options.cc:1315
 msgid "FILE"
 msgstr "ДАТОТЕКА"
 
-#: src/terminal-options.cc:1394
+#: src/terminal-options.cc:1331
 msgid "Do not pass the environment"
 msgstr "Не шаљи окружење"
 
-#: src/terminal-options.cc:1403
+#: src/terminal-options.cc:1340
 msgid "Show preferences window"
 msgstr "Приказује прозор поставки"
 
-#: src/terminal-options.cc:1412
+#: src/terminal-options.cc:1358
 msgid "Print environment variables to interact with the terminal"
 msgstr "Испиши промењиве окружења за рад са терминалом"
 
-#: src/terminal-options.cc:1430
+#: src/terminal-options.cc:1376
 msgid "Increase diagnostic verbosity"
 msgstr "Повећај опширност дијагностике"
 
-#: src/terminal-options.cc:1439
+#: src/terminal-options.cc:1385
 msgid "Suppress output"
 msgstr "Потисни излаз"
 
-#: src/terminal-options.cc:1452
+#: src/terminal-options.cc:1398
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Отвара нови прозор са језичком користећи подразумевани профил"
 
-#: src/terminal-options.cc:1461
+#: src/terminal-options.cc:1407
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Отвара нови језичак у последњем отвореном прозору користећи подразумевани "
 "профил"
 
-#: src/terminal-options.cc:1474
-msgid "Turn on the menubar"
-msgstr "Приказује траку изборника"
-
-#: src/terminal-options.cc:1483
-msgid "Turn off the menubar"
-msgstr "Уклања траку изборника"
-
-#: src/terminal-options.cc:1492
+#: src/terminal-options.cc:1438
 msgid "Maximize the window"
 msgstr "Увећава прозор"
 
-#: src/terminal-options.cc:1501
+#: src/terminal-options.cc:1447
 msgid "Full-screen the window"
 msgstr "Поставља преко целог екрана"
 
-#: src/terminal-options.cc:1510
+#: src/terminal-options.cc:1456
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
-"Поставља величину прозора, на пример: 80x24, или 80x24+200+200 (КОЛОНЕxРЕДОВИ"
-"+X+Y)"
+"Поставља величину прозора, на пример: 80x24, или 80x24+200+200 "
+"(КОЛОНЕxРЕДОВИ+X+Y)"
 
-#: src/terminal-options.cc:1511
+#: src/terminal-options.cc:1457
 msgid "GEOMETRY"
 msgstr "ГЕОМЕТРИЈА"
 
-#: src/terminal-options.cc:1519
+#: src/terminal-options.cc:1465
 msgid "Set the window role"
 msgstr "Поставља улогу прозора"
 
-#: src/terminal-options.cc:1520
+#: src/terminal-options.cc:1466
 msgid "ROLE"
 msgstr "УЛОГА"
 
-#: src/terminal-options.cc:1528
+#: src/terminal-options.cc:1474
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Поставља последње наведени језичак као активан у свом прозору"
 
-#: src/terminal-options.cc:1541
+#: src/terminal-options.cc:1487
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Извршава аргумент ове могућности унутар терминала"
 
-#: src/terminal-options.cc:1550
+#: src/terminal-options.cc:1496
 msgid "Use the given profile instead of the default profile"
 msgstr "Користи дати профил уместо подразумеваног"
 
-#: src/terminal-options.cc:1551
+#: src/terminal-options.cc:1497
 msgid "PROFILE-NAME"
 msgstr "НАЗИВ ПРОФИЛА"
 
-#: src/terminal-options.cc:1559
+#: src/terminal-options.cc:1505
 msgid "Set the initial terminal title"
 msgstr "Поставља почетни наслов прозора"
 
-#: src/terminal-options.cc:1560
+#: src/terminal-options.cc:1506
 msgid "TITLE"
 msgstr "НАСЛОВ"
 
-#: src/terminal-options.cc:1568
+#: src/terminal-options.cc:1514
 msgid "Set the working directory"
 msgstr "Поставља радни директоријум"
 
-#: src/terminal-options.cc:1569
+#: src/terminal-options.cc:1515
 msgid "DIRNAME"
 msgstr "Назив ДИРЕКТОРИЈУМА"
 
-#: src/terminal-options.cc:1577
+#: src/terminal-options.cc:1523
 msgid "Wait until the child exits"
 msgstr "Чека на потпроцесе да заврше"
 
-#: src/terminal-options.cc:1586
+#: src/terminal-options.cc:1532
 msgid "Forward file descriptor"
 msgstr "Прослеђује описника датотеке"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1588
+#: src/terminal-options.cc:1534
 msgid "FD"
 msgstr "Описник"
 
-#: src/terminal-options.cc:1596
+#: src/terminal-options.cc:1542
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "Поставља вредност увећања (1.0 = нормалан приказ)"
 
-#: src/terminal-options.cc:1597
+#: src/terminal-options.cc:1543
 msgid "ZOOM"
 msgstr "УВЕЋАЊЕ"
 
-#: src/terminal-options.cc:1693
+#: src/terminal-options.cc:1639
 msgid "COMMAND"
 msgstr "НАРЕДБА"
 
-#: src/terminal-options.cc:1701
+#: src/terminal-options.cc:1645
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "Гномов емулатор терминала"
 
-#: src/terminal-options.cc:1702
+#: src/terminal-options.cc:1646
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "Приказује могућности Гномовог терминала"
 
-#: src/terminal-options.cc:1712
+#: src/terminal-options.cc:1656
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -2168,11 +2232,11 @@ msgstr ""
 "Могућности отварања терминала у језичцима; можете одредити више од једног "
 "језичка:"
 
-#: src/terminal-options.cc:1713
+#: src/terminal-options.cc:1657
 msgid "Show terminal options"
 msgstr "Приказује опције терминала"
 
-#: src/terminal-options.cc:1721
+#: src/terminal-options.cc:1665
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -2180,11 +2244,11 @@ msgstr ""
 "Могућности прозора; уколико се користи пре аргумената „--window“ или „--tab“ "
 "поставља се подразумевано за све прозоре:"
 
-#: src/terminal-options.cc:1722
+#: src/terminal-options.cc:1666
 msgid "Show per-window options"
 msgstr "Опције приказа по прозору"
 
-#: src/terminal-options.cc:1730
+#: src/terminal-options.cc:1674
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -2192,146 +2256,1215 @@ msgstr ""
 "Могућности терминала; уколико се користи пре аргумената „--window“ или „--"
 "tab“ поставља се подразумевано за све терминале:"
 
-#: src/terminal-options.cc:1731
+#: src/terminal-options.cc:1675
 msgid "Show per-terminal options"
 msgstr "Опције приказа по терминалу"
 
-#: src/terminal-prefs.cc:130
-#, c-format
-msgid "Profile “%s”"
-msgstr "Профил „%s“"
-
-#: src/terminal-prefs.cc:133
-#, c-format
-msgid "Preferences – %s"
-msgstr "Поставке – %s"
-
-#: src/terminal-prefs.cc:368
+#: src/terminal-preferences-window.cc:169
 msgid "New Profile"
 msgstr "Нови профил"
 
-#: src/terminal-prefs.cc:369
-msgid "Enter name for new profile with default settings:"
-msgstr "Унесите назив новог профила са подразумеваним подешавањима:"
+#: src/terminal-preferences-window.cc:199
+#, fuzzy
+msgid "Pano Terminal Profiles"
+msgstr "Гномов терминал"
 
-#: src/terminal-prefs.cc:371
-msgid "Create"
-msgstr "Направи"
+#: src/terminal-preferences-window.cc:202
+#, fuzzy
+#| msgid "File"
+msgid "All Files"
+msgstr "Датотека"
 
-#: src/terminal-prefs.cc:383
-#, c-format
-msgid "Enter name for new profile based on “%s”:"
-msgstr "Унесите назив за нови профил заснован на „%s“:"
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:239
+#, fuzzy, c-format
+#| msgid "Profile “%s”"
+msgid "Exported “%s”"
+msgstr "Профил „%s“"
 
-#: src/terminal-prefs.cc:384
-#, c-format
-msgid "%s (Copy)"
-msgstr "%s (копирај)"
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:243
+#, fuzzy, c-format
+#| msgid "Could not open the address “%s”"
+msgid "Could not export the profile: %s"
+msgstr "Не могу да отворим адресу „%s“"
 
-#: src/terminal-prefs.cc:387
-msgid "Clone Profile"
+#: src/terminal-preferences-window.cc:281
+#, fuzzy
+#| msgid "Clone Profile"
+msgid "Export Profile"
 msgstr "Клонирај профил"
 
-#: src/terminal-prefs.cc:390
-msgid "Clone"
-msgstr "Клонирај"
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:312
+#, fuzzy, c-format
+#| msgid "Could not open the address “%s”"
+msgid "Could not import the profile: %s"
+msgstr "Не могу да отворим адресу „%s“"
 
-#: src/terminal-prefs.cc:405
+#: src/terminal-preferences-window.cc:322
+#, fuzzy
+#| msgid "Clone Profile"
+msgid "Imported Profile"
+msgstr "Клонирај профил"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:339
+#, fuzzy, c-format
+#| msgid "Profile “%s”"
+msgid "Imported “%s”"
+msgstr "Профил „%s“"
+
+#: src/terminal-preferences-window.cc:344
 #, c-format
-msgid "Enter new name for profile “%s”:"
-msgstr "Унесите нови назив за профил „%s“:"
+msgid "Imported “%s”, skipping %u setting"
+msgid_plural "Imported “%s”, skipping %u settings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
-#: src/terminal-prefs.cc:408
-msgid "Rename Profile"
-msgstr "Преименуј профил"
+#: src/terminal-preferences-window.cc:370
+#, fuzzy
+#| msgid "Clone Profile"
+msgid "Import Profile"
+msgstr "Клонирај профил"
 
-#: src/terminal-prefs.cc:411
-msgid "Rename"
-msgstr "Преименуј"
-
-#: src/terminal-prefs.cc:426
+#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3521
 #, c-format
-msgid "Really delete profile “%s”?"
-msgstr "Да обришем профил „%s“?"
+msgid "Imported %u profile and the preferences of GNOME Terminal"
+msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
-#: src/terminal-prefs.cc:429
-msgid "Delete Profile"
-msgstr "Обриши профил"
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
 
-#: src/terminal-prefs.cc:432
-msgid "Delete"
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:41
+#, fuzzy
+#| msgid "Set as default"
+msgid "_Reset to default"
+msgstr "Подеси као подразумевано"
+
+#: src/terminal-preferences-window.ui:53
+#, fuzzy
+#| msgid "Text Appearance"
+msgid "Appearance"
+msgstr "Изглед текста"
+
+#: src/terminal-preferences-window.ui:56
+#, fuzzy
+#| msgid "Theme _variant:"
+msgid "Theme Variant"
+msgstr "_Варијанта теме:"
+
+#. Default profile label
+#: src/terminal-preferences-window.ui:65 src/terminal-preferences-window.ui:96
+#: src/terminal-profile-editor.ui:515 src/terminal-profile-row.ui:25
+msgid "Default"
+msgstr "Основно"
+
+#: src/terminal-preferences-window.ui:71
+msgid "Dark"
+msgstr "Тамна"
+
+#: src/terminal-preferences-window.ui:77
+msgid "Light"
+msgstr "Светла"
+
+#: src/terminal-preferences-window.ui:87
+msgid "Rounded corners"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:102
+msgid "Top only"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:108 src/terminal-profile-editor.ui:644
+msgid "None"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:118
+msgid "Space Around the Text"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:127
+msgctxt "terminal-padding"
+msgid "None"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:133
+msgctxt "terminal-padding"
+msgid "Small"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:139
+msgctxt "terminal-padding"
+msgid "Large"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:149
+msgid "Color the Header Bar Like the Terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:150
+msgid "When the terminal uses a color scheme or colors of its own"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:155
+msgid "Dim Inactive Panes"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:156
+msgid "In a split tab, fade the panes other than the one you type in"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:161
+#, fuzzy
+#| msgid "Set Title"
+msgid "Show Pane Titles"
+msgstr "Постави наслов"
+
+#: src/terminal-preferences-window.ui:162
+msgid "In a split tab, show the title of each pane above it"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:167
+msgid "Highlight Root and Remote Sessions"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:168
+msgid ""
+"Color the header bar and mark the tab while a terminal runs as root or over "
+"SSH"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:173
+msgid "Tab Bar Position"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:182
+msgid "Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:188
+msgid "Bottom"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:194
+msgid "Left"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:200
+#, fuzzy
+#| msgctxt "theme variant"
+#| msgid "Light"
+msgid "Right"
+msgstr "Светла"
+
+#: src/terminal-preferences-window.ui:212
+msgid "Behavior"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:215
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open New Terminals"
+msgstr "Отвори _терминал"
+
+#: src/terminal-preferences-window.ui:224
+#, fuzzy
+#| msgid "Open Ta_b"
+msgid "In Tab"
+msgstr "Отвори _језичак"
+
+#: src/terminal-preferences-window.ui:230
+#, fuzzy
+#| msgid "Window"
+msgid "In Window"
+msgstr "Прозор"
+
+#: src/terminal-preferences-window.ui:240
+#, fuzzy
+#| msgid "New tab _position:"
+msgid "New Tab Position"
+msgstr "_Положај новог језичка:"
+
+#: src/terminal-preferences-window.ui:249
+msgid "Last"
+msgstr "Последње"
+
+#: src/terminal-preferences-window.ui:255
+msgid "Next"
+msgstr "Следеће"
+
+#: src/terminal-preferences-window.ui:265
+msgid "Middle-Click on a Tab"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:274
+msgctxt "tab-middle-click"
+msgid "Does Nothing"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:280
+#, fuzzy
+#| msgid "Close Tab"
+msgctxt "tab-middle-click"
+msgid "Closes the Tab"
+msgstr "Затвори језичак"
+
+#: src/terminal-preferences-window.ui:286
+msgctxt "tab-middle-click"
+msgid "Pastes the Selection"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:296
+msgid "Ignore Titles Set by Programs"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:297
+msgid "Show the title set with Set Title, or else the working directory"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:302
+msgid "Confirm Copying"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:303
+msgid "Show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:308
+msgid "Shell Integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:309
+msgid ""
+"Let bash, zsh and fish report their prompts and commands, for notifications, "
+"prompt navigation and copying command output. Applies to new terminals"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:314
+msgid "Notify When Commands Finish"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:315
+msgid ""
+"When a long command ends in a terminal you are not looking at. Needs shell "
+"integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:320
+msgid "Minimum Command Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:321
+msgid "In seconds"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:336
+msgid "Silence Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:337
+msgid ""
+"How long a terminal monitored for silence must be quiet, in seconds. Turn "
+"monitoring on in the context menu of a terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:351
+msgid "Keep New Tabs in the Same Container"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:352
+msgid ""
+"New tabs and panes start in the Toolbox or Distrobox container of the "
+"terminal they are opened from"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:357
+msgid "Restore Session"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:358
+msgid ""
+"Reopen the windows, tabs and panes of the last session, each in its previous "
+"folder"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:363
+msgid "Remember Window Size"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:364
+msgid ""
+"Open new windows with the size of the last used terminal instead of the "
+"initial size of the profile"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:371
+#, fuzzy
+#| msgid "Terminal"
+msgid "Quick Terminal"
+msgstr "Терминал"
+
+#: src/terminal-preferences-window.ui:372
+msgid ""
+"A terminal that you show and hide with one key. Use the system-wide shortcut "
+"below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
+"Custom Shortcuts."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:375
+msgid "System-Wide Shortcut"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:376
+msgid ""
+"The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
+"running in the background. Needs GNOME 48 or newer, or KDE Plasma."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:382
+msgid "GNOME Shell Extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:383
+msgid ""
+"On Wayland, keeps the quick terminal at the top of the screen, above other "
+"windows and on all workspaces"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:388
+#, fuzzy
+#| msgid "width"
+msgid "Width"
+msgstr "ширина"
+
+#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:404
+msgid "In percent of the screen"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:403
+#, fuzzy
+#| msgid "height"
+msgid "Height"
+msgstr "висина"
+
+#: src/terminal-preferences-window.ui:418
+msgid "Hide When Another App Is Used"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:423
+msgid "Slide In From the Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:424
+msgid "On X11, or with the GNOME Shell extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:431
+#, fuzzy
+#| msgid "Keyboard shortcut to paste text"
+msgid "Keyboard Shortcuts"
+msgstr "Пречица за убацивање текста"
+
+#: src/terminal-preferences-window.ui:434
+#, fuzzy
+#| msgid "Enable the _menu accelerator key (F10 by default)"
+msgid "Accelerator Key (F10 by default)"
+msgstr "Укључи тастер _пречице изборника (Ф10 подразумевано)"
+
+#: src/terminal-preferences-window.ui:439
+msgid "View and Customize Shortcuts"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:453
+msgid "Profiles"
+msgstr "Профили"
+
+#: src/terminal-preferences-window.ui:457
+msgid "Import a profile from a file"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:465
+#, fuzzy
+#| msgid "_Export…"
+msgid "_Import…"
+msgstr "_Извези…"
+
+#: src/terminal-preferences-window.ui:496
+#, fuzzy
+#| msgid "_Action"
+msgid "Application"
+msgstr "_Радња"
+
+#: src/terminal-preferences-window.ui:499
+msgid "Import from GNOME Terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:500
+msgid "Copy its profiles, keyboard shortcuts and preferences"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:504 src/terminal-window.cc:3552
+#, fuzzy
+#| msgid "Export"
+msgid "_Import"
+msgstr "Извези"
+
+#: src/terminal-preferences-window.ui:514
+msgid "Ask to Remain Default"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:519
+#, fuzzy
+#| msgid "_Set as default terminal"
+msgid "Set as Default Terminal"
+msgstr "_Постави као основни терминал"
+
+#: src/terminal-profile-editor.cc:134
+msgid "Black on light yellow"
+msgstr "Црна на светло жутој"
+
+#: src/terminal-profile-editor.cc:138
+msgid "Black on white"
+msgstr "Црна на белој"
+
+#: src/terminal-profile-editor.cc:142
+msgid "Gray on black"
+msgstr "Сива на црној"
+
+#: src/terminal-profile-editor.cc:146
+msgid "Green on black"
+msgstr "Зелена на црној"
+
+#: src/terminal-profile-editor.cc:150
+msgid "White on black"
+msgstr "Бела на црној"
+
+#. Translators: "GNOME" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:155
+msgid "GNOME light"
+msgstr "Гномова светла"
+
+#. Translators: "GNOME" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:160
+msgid "GNOME dark"
+msgstr "Гномова тамна"
+
+#. Translators: "Tango" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:165
+msgid "Tango light"
+msgstr "Светла танго"
+
+#. Translators: "Tango" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:170
+msgid "Tango dark"
+msgstr "Тамна танго"
+
+#. Translators: "Solarized" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:175
+msgid "Solarized light"
+msgstr "Осветљена светла"
+
+#. Translators: "Solarized" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:180
+msgid "Solarized dark"
+msgstr "Осветљена тамна"
+
+#: src/terminal-profile-editor.cc:336 src/terminal-profile-editor.cc:349
+#: src/terminal-profile-editor.cc:856
+msgid "Custom"
+msgstr "Произвољно"
+
+#: src/terminal-profile-editor.cc:373 src/terminal-profile-editor.cc:374
+#: src/terminal-profile-editor.cc:378
+msgid "Chinese Traditional"
+msgstr "традиционални кинески"
+
+#: src/terminal-profile-editor.cc:375
+msgid "Cyrillic/Russian"
+msgstr "ћирилични/руски"
+
+#: src/terminal-profile-editor.cc:376 src/terminal-profile-editor.cc:415
+msgid "Japanese"
+msgstr "јапански"
+
+#: src/terminal-profile-editor.cc:377 src/terminal-profile-editor.cc:417
+msgid "Korean"
+msgstr "корејски"
+
+#: src/terminal-profile-editor.cc:379 src/terminal-profile-editor.cc:380
+#: src/terminal-profile-editor.cc:381
+msgid "Chinese Simplified"
+msgstr "кинески поједностављени"
+
+#: src/terminal-profile-editor.cc:382 src/terminal-profile-editor.cc:388
+#: src/terminal-profile-editor.cc:392 src/terminal-profile-editor.cc:411
+#: src/terminal-profile-editor.cc:421
+msgid "Western"
+msgstr "западни"
+
+#: src/terminal-profile-editor.cc:383 src/terminal-profile-editor.cc:394
+#: src/terminal-profile-editor.cc:407 src/terminal-profile-editor.cc:419
+msgid "Central European"
+msgstr "централноевропски"
+
+#: src/terminal-profile-editor.cc:384 src/terminal-profile-editor.cc:397
+#: src/terminal-profile-editor.cc:403 src/terminal-profile-editor.cc:405
+#: src/terminal-profile-editor.cc:420
+msgid "Cyrillic"
+msgstr "ћирилични"
+
+#: src/terminal-profile-editor.cc:385 src/terminal-profile-editor.cc:402
+#: src/terminal-profile-editor.cc:413 src/terminal-profile-editor.cc:423
+msgid "Turkish"
+msgstr "турски"
+
+#: src/terminal-profile-editor.cc:386 src/terminal-profile-editor.cc:401
+#: src/terminal-profile-editor.cc:410 src/terminal-profile-editor.cc:424
+msgid "Hebrew"
+msgstr "хебрејски"
+
+#: src/terminal-profile-editor.cc:387 src/terminal-profile-editor.cc:398
+#: src/terminal-profile-editor.cc:406 src/terminal-profile-editor.cc:425
+msgid "Arabic"
+msgstr "арапски"
+
+#: src/terminal-profile-editor.cc:389
+msgid "Nordic"
+msgstr "норвешки"
+
+#: src/terminal-profile-editor.cc:390 src/terminal-profile-editor.cc:396
+#: src/terminal-profile-editor.cc:426
+msgid "Baltic"
+msgstr "балтички"
+
+#: src/terminal-profile-editor.cc:391
+msgid "Celtic"
+msgstr "келтски"
+
+#: src/terminal-profile-editor.cc:393 src/terminal-profile-editor.cc:412
+msgid "Romanian"
+msgstr "румунски"
+
+#: src/terminal-profile-editor.cc:395
+msgid "South European"
+msgstr "јужноевропски"
+
+#: src/terminal-profile-editor.cc:399 src/terminal-profile-editor.cc:409
+#: src/terminal-profile-editor.cc:422
+msgid "Greek"
+msgstr "грчки"
+
+#: src/terminal-profile-editor.cc:400
+msgid "Hebrew Visual"
+msgstr "хебрејски визуелни"
+
+#: src/terminal-profile-editor.cc:404 src/terminal-profile-editor.cc:414
+msgid "Cyrillic/Ukrainian"
+msgstr "ћирилични/украјински"
+
+#: src/terminal-profile-editor.cc:408
+msgid "Croatian"
+msgstr "хрватски"
+
+#: src/terminal-profile-editor.cc:416
+msgid "Thai"
+msgstr "тајландски"
+
+#: src/terminal-profile-editor.cc:418 src/terminal-profile-editor.cc:434
+msgid "Unicode"
+msgstr "уникод"
+
+#: src/terminal-profile-editor.cc:427
+msgid "Vietnamese"
+msgstr "вијетнамски"
+
+#: src/terminal-profile-editor.cc:435
+msgid "Legacy CJK Encodings"
+msgstr "Стара КЈК кодирања"
+
+#: src/terminal-profile-editor.cc:436
+msgid "Obsolete Encodings"
+msgstr "Застарела кодирања"
+
+#: src/terminal-profile-editor.cc:747
+#, fuzzy
+#| msgid "Select All"
+msgid "Select Font"
+msgstr "Изабери све"
+
+#: src/terminal-profile-file.cc:96
+#, fuzzy
+msgid "The file is not a Pano Terminal profile."
+msgstr "Отвори у _локалном терминалу"
+
+#: src/terminal-profile-editor.ui:20
+#, fuzzy
+#| msgid "_Profile"
+msgid "Edit Profile"
+msgstr "_Профили"
+
+#: src/terminal-profile-editor.ui:29
+msgid "Profile"
+msgstr "Профили"
+
+#: src/terminal-profile-editor.ui:34
+msgid "Name"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:40
+msgid "Identifier"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:63
+msgid "Font"
+msgstr "Словни лик"
+
+#: src/terminal-profile-editor.ui:66
+msgid "Use System Font"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:73
+#, fuzzy
+#| msgid "Custom _font:"
+msgid "Custom Font"
+msgstr "Произвољан _фонт:"
+
+#: src/terminal-profile-editor.ui:100
+#, fuzzy
+#| msgid "Allow b_linking text:"
+msgid "Allow Blinking Text"
+msgstr "Дозволи трептајући текст:"
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+msgid "Always"
+msgstr "Увек"
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+msgid "Never"
+msgstr "Никад"
+
+#: src/terminal-profile-editor.ui:121
+msgid "When focused"
+msgstr "Када је у фокусу"
+
+#: src/terminal-profile-editor.ui:127
+msgid "When unfocused"
+msgstr "Када није у фокусу"
+
+#: src/terminal-profile-editor.ui:139
+msgid "Colors"
+msgstr "Боје"
+
+#: src/terminal-profile-editor.ui:142
+msgid "Color Scheme"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:143
+msgid "Follows the light or dark style if it has both"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:149
+msgid "Your Own Color Schemes"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:150
+msgid "Add .palette files to this folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:153
+msgid "_Open Folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "_Користи боје које користи систем"
+
+#: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
+#, fuzzy
+#| msgid "Background"
+msgid "Background Opacity"
+msgstr "Позадина"
+
+#: src/terminal-profile-editor.ui:168
+msgid "Lets the desktop show through the background; the text stays opaque"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:197
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Scheme"
+msgstr "_Користи боје које користи систем"
+
+#: src/terminal-profile-editor.ui:202
+#, fuzzy
+#| msgid "_Default color:"
+msgid "Override Default Color"
+msgstr "Подразумевана _боја:"
+
+#: src/terminal-profile-editor.ui:205 src/terminal-profile-editor.ui:235
+#: src/terminal-profile-editor.ui:255 src/terminal-profile-editor.ui:285
+msgid "Text"
+msgstr "Текст"
+
+#: src/terminal-profile-editor.ui:208
+#, fuzzy
+#| msgid "Choose Terminal Text Color"
+msgid "Choose Text Color"
+msgstr "Изаберите боју текста терминала"
+
+#: src/terminal-profile-editor.ui:215 src/terminal-profile-editor.ui:265
+#: src/terminal-profile-editor.ui:295
+msgid "Background"
+msgstr "Позадина"
+
+#: src/terminal-profile-editor.ui:218
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Background Color"
+msgstr "Изаберите боју позадине терминала"
+
+#: src/terminal-profile-editor.ui:227
+msgid "Override Bold Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:238
+#, fuzzy
+#| msgid "Choose Terminal Bold Text Color"
+msgid "Choose Bold Text Color"
+msgstr "Изаберите боју подебљаног текста"
+
+#: src/terminal-profile-editor.ui:247
+#, fuzzy
+#| msgid "Cu_rsor color:"
+msgid "Override Cursor Color"
+msgstr "Боја _курсора:"
+
+#: src/terminal-profile-editor.ui:258
+#, fuzzy
+#| msgid "Choose Terminal Cursor Foreground Color"
+msgid "Choose Cursor Foreground Color"
+msgstr "Изаберите боју курсора"
+
+#: src/terminal-profile-editor.ui:268
+#, fuzzy
+#| msgid "Choose Terminal Cursor Background Color"
+msgid "Choose Cursor Background Color"
+msgstr "Изаберите боју позадине курсора"
+
+#: src/terminal-profile-editor.ui:277
+#, fuzzy
+#| msgid "_Highlight color:"
+msgid "Override Highlight Color"
+msgstr "Боја _истицања:"
+
+#: src/terminal-profile-editor.ui:288
+#, fuzzy
+#| msgid "Choose Terminal Highlight Foreground Color"
+msgid "Choose Highlight Foreground Color"
+msgstr "Изаберите боју изабраног текста"
+
+#: src/terminal-profile-editor.ui:298
+#, fuzzy
+#| msgid "Choose Terminal Highlight Background Color"
+msgid "Choose Highlight Background Color"
+msgstr "Изаберите боју позадине истакнутог текста"
+
+#: src/terminal-profile-editor.ui:309
+msgid "Palette"
+msgstr "Палета"
+
+#: src/terminal-profile-editor.ui:465
+#, fuzzy
+#| msgid "Show _bold text in bright colors"
+msgid "Show Bold Text in Bright Colors"
+msgstr "Прикажи _подебљан текст светлим бојама"
+
+#: src/terminal-profile-editor.ui:472
+msgid "Cursor"
+msgstr "Курсор"
+
+#: src/terminal-profile-editor.ui:475
+msgid "Shape"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:484
+msgid "Block"
+msgstr "Блок"
+
+#: src/terminal-profile-editor.ui:490
+msgid "I-Beam"
+msgstr "Усправна цртица"
+
+#: src/terminal-profile-editor.ui:496
+msgid "Underline"
+msgstr "Доња цртица"
+
+#: src/terminal-profile-editor.ui:506
+msgid "Blinking"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:521
+msgid "Enabled"
+msgstr "Омогућено"
+
+#: src/terminal-profile-editor.ui:527
+msgid "Disabled"
+msgstr "Онемогућено"
+
+#: src/terminal-profile-editor.ui:539
+#, fuzzy
+#| msgid "Terminal"
+msgid "Terminal Size"
+msgstr "Терминал"
+
+#: src/terminal-profile-editor.ui:542
+#, fuzzy
+#| msgid "columns"
+msgid "Columns"
+msgstr "колоне"
+
+#: src/terminal-profile-editor.ui:556
+msgid "Rows"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:574
+msgid "Cell Width Scale"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:575
+msgid "Increases the width of character cells"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:590
+msgid "Cell Height Scale"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:591
+msgid "Increase the height of character cells"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:620
+msgid "Scrolling"
+msgstr "Клизање"
+
+#: src/terminal-profile-editor.ui:623
+msgid "Show scrollbar"
+msgstr "Прикажи клизач"
+
+#: src/terminal-profile-editor.ui:632
+msgid "Regular"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:638
+msgid "Overlay"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:654
+#, fuzzy
+#| msgid "Scrolling"
+msgid "Kinetic scrolling"
+msgstr "Клизање"
+
+#: src/terminal-profile-editor.ui:655
+msgid "When used on touchscreens"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:664
+#, fuzzy
+#| msgid "Scroll on _output"
+msgid "Scroll on Output"
+msgstr "По_мерај при испису"
+
+#: src/terminal-profile-editor.ui:669
+#, fuzzy
+#| msgid "Scroll on _keystroke"
+msgid "Scroll on Keystroke"
+msgstr "Померај на притисак _тастера"
+
+#: src/terminal-profile-editor.ui:674
+#, fuzzy
+#| msgid "Scroll on _keystroke"
+msgid "Scroll on Paste"
+msgstr "Померај на притисак _тастера"
+
+#: src/terminal-profile-editor.ui:683
+#, fuzzy
+#| msgid "_Limit scrollback to:"
+msgid "Limit Scrollback"
+msgstr "_Ограничи клизање на:"
+
+#: src/terminal-profile-editor.ui:691
+#, fuzzy
+#| msgid "Scrolling"
+msgid "Scrollback Lines"
+msgstr "Клизање"
+
+#: src/terminal-profile-editor.ui:707
+msgid "Images"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:710
+msgid "Enable SIXEL images"
+msgstr "Омогући СИКСЕЛ слике"
+
+#: src/terminal-profile-editor.ui:717
+msgid "Bell"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:720
+msgid "Play a Sound"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:725
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "Flash the Terminal"
+msgstr "_Затвори терминал"
+
+#: src/terminal-profile-editor.ui:726
+msgid "A tab in the background is marked instead"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:733
+msgid "Command"
+msgstr "Наредба"
+
+#: src/terminal-profile-editor.ui:736
+msgid "Run command as a login shell"
+msgstr "Покрени наредбу као љуску за пријаву"
+
+#: src/terminal-profile-editor.ui:745
+#, fuzzy
+#| msgid "Custom co_mmand:"
+msgid "Use Custom Command"
+msgstr "Произвољна наред_ба:"
+
+#: src/terminal-profile-editor.ui:750
+#, fuzzy
+#| msgid "Custom co_mmand:"
+msgid "Custom Command"
+msgstr "Произвољна наред_ба:"
+
+#: src/terminal-profile-editor.ui:763
+#, fuzzy
+#| msgid "_Preserve working directory:"
+msgid "Preserve Working Directory"
+msgstr "Сачувати _радну фасциклу:"
+
+#: src/terminal-profile-editor.ui:764
+#, fuzzy
+#| msgid ""
+#| "Whether to preserve the working directory when opening a new terminal"
+msgid "Preserve the working directory when opening a new terminal"
+msgstr "Да ли треба сачувати радну фасциклу приликом отварања новог терминала"
+
+#: src/terminal-profile-editor.ui:777
+msgid "When command exits"
+msgstr "Након извршења наредбе"
+
+#: src/terminal-profile-editor.ui:788
+msgid "Compatibility"
+msgstr "Усклађивање"
+
+#: src/terminal-profile-editor.ui:791
+#, fuzzy
+#| msgid "_Backspace key generates:"
+msgid "Backspace Key"
+msgstr "Тастер _повратнице остварује:"
+
+#: src/terminal-profile-editor.ui:792
+#, fuzzy
+#| msgid "The code sequence the Backspace key generates"
+msgid "Sequence to send for Backspace key"
+msgstr "Кодни низ који ствара тастер за враћање уназад"
+
+#: src/terminal-profile-editor.ui:801
+#, fuzzy
+#| msgid "Delete"
+msgid "Delete Key"
 msgstr "Обриши"
 
-#: src/terminal-prefs.cc:491
-msgid "This is the default profile"
-msgstr "Ово је подразумевани профил"
+#: src/terminal-profile-editor.ui:802
+msgid "Sequence to send for Delete key"
+msgstr ""
 
-#: src/terminal-prefs.cc:515
-msgid "General"
-msgstr "Опште"
+#: src/terminal-profile-editor.ui:811
+msgid "Encoding"
+msgstr "Кодирање"
 
-#: src/terminal-prefs.cc:520
-msgid "Shortcuts"
-msgstr "Пречице"
+#: src/terminal-profile-editor.ui:819
+#, fuzzy
+#| msgid "Ambiguous-_width characters:"
+msgid "Ambiguous-width Characters"
+msgstr "Нејасни _широки знаци:"
 
-#: src/terminal-screen.cc:1402
+#: src/terminal-profile-editor.ui:828
+msgid "Narrow"
+msgstr "Уски"
+
+#: src/terminal-profile-editor.ui:834
+msgid "Wide"
+msgstr "Широки"
+
+#: src/terminal-profile-editor.ui:865
+msgid "Automatic"
+msgstr "Сам изабери"
+
+#: src/terminal-profile-editor.ui:871
+msgid "Control-H"
+msgstr "CTRL-H"
+
+#: src/terminal-profile-editor.ui:877
+msgid "ASCII DEL"
+msgstr "ASCII DEL"
+
+#: src/terminal-profile-editor.ui:883
+#, fuzzy
+#| msgid "Escape sequence"
+msgid "Escape Sequence"
+msgstr "Низ бекства"
+
+#: src/terminal-profile-editor.ui:889
+msgid "TTY Erase"
+msgstr "Конзолно брисање"
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:904
+msgid "Shell only"
+msgstr "Само шкољка"
+
+#. When command exits
+#: src/terminal-profile-editor.ui:919
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "Close terminal"
+msgstr "_Затвори терминал"
+
+#. When command exits
+#: src/terminal-profile-editor.ui:925
+#, fuzzy
+#| msgid "Restart the command"
+msgid "Restart command"
+msgstr "Понови наредбу"
+
+#. When command exits
+#: src/terminal-profile-editor.ui:931
+#, fuzzy
+#| msgid "Hold the terminal open"
+msgid "Hold terminal"
+msgstr "Држи терминал отвореним"
+
+#: src/terminal-profile-row.ui:47
+msgid "_Edit"
+msgstr "_Уређивање"
+
+#: src/terminal-profile-row.ui:51
+#, fuzzy
+#| msgid "Clone"
+msgid "_Clone"
+msgstr "Клонирај"
+
+#: src/terminal-profile-row.ui:55
+#, fuzzy
+#| msgid "_Export…"
+msgid "E_xport…"
+msgstr "_Извези…"
+
+#: src/terminal-profile-row.ui:59
+#, fuzzy
+#| msgid "Delete"
+msgid "_Delete"
+msgstr "Обриши"
+
+#: src/terminal-profile-row.ui:65
+#, fuzzy
+#| msgid "Set as default"
+msgid "_Set as default"
+msgstr "Подеси као подразумевано"
+
+#: src/terminal-screen.cc:1771
+msgid ""
+"Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
+"Esc to cancel"
+msgstr ""
+
+#: src/terminal-screen.cc:3352
 msgid "No command supplied nor shell requested"
 msgstr "Није достављена наредба нити је затражена љуска"
 
-#: src/terminal-screen.cc:1540 src/terminal-screen.cc:1887
+#: src/terminal-screen.cc:3572 src/terminal-screen.cc:3964
 msgid "_Relaunch"
 msgstr "Поново _покрени"
 
-#: src/terminal-screen.cc:1543
+#: src/terminal-screen.cc:3575
 msgid "There was an error creating the child process for this terminal"
 msgstr "Дошло је до грешке стварања потпроцеса овог терминала"
 
-#: src/terminal-screen.cc:1891
+#: src/terminal-screen.cc:3968
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Потпроцес је нормално напуштен са стањем %d."
 
-#: src/terminal-screen.cc:1894
+#: src/terminal-screen.cc:3971
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Потпроцес је окончан уз сигнал %d."
 
-#: src/terminal-screen.cc:1897
+#: src/terminal-screen.cc:3974
 msgid "The child process was aborted."
 msgstr "Потпроцес је окончан."
 
-#: src/terminal-tab-label.cc:206
-msgid "Close tab"
-msgstr "Затворите језичак"
+#: src/terminal-shortcut-editor.ui:20 src/terminal-shortcut-editor.ui:29
+msgid "Shortcuts"
+msgstr "Пречице"
 
-#: src/terminal-util.cc:156
+#: src/terminal-shortcut-editor.ui:34
+#, fuzzy
+#| msgid "_Enable shortcuts"
+msgid "Enable Shortcuts"
+msgstr "_Укључи пречице"
+
+#: src/terminal-util.cc:171
 msgid "There was an error displaying help"
 msgstr "Дошло је до грешке приказивања помоћи"
 
-#: src/terminal-util.cc:214
+#: src/terminal-util.cc:231
 msgid "Contributors:"
 msgstr "Доприносиоци:"
 
-#: src/terminal-util.cc:235
-#, c-format
-msgid "Version %s for GNOME %d"
-msgstr "Издање %s за Гном %d"
-
-#: src/terminal-util.cc:239
+#: src/terminal-util.cc:249
 #, c-format
 msgid "Using VTE version %u.%u.%u"
 msgstr "Користим ВТЕ издање %u.%u.%u"
 
-#: src/terminal-util.cc:245
+#: src/terminal-util.cc:255
 msgid "A terminal emulator for the GNOME desktop"
 msgstr "Терминал за Гномову радну површ"
 
-#: src/terminal-util.cc:252
-#, fuzzy
-msgid "Pano Terminal"
-msgstr "Гномов терминал"
-
-#: src/terminal-util.cc:262
+#: src/terminal-util.cc:271
 msgid "translator-credits"
 msgstr ""
 "Слободан Д. Средојевић <slobo@akrep.be>\n"
@@ -2342,128 +3475,328 @@ msgstr ""
 "\n"
 "https://гном.срб — превод Гнома на српски језик"
 
-#: src/terminal-util.cc:337
+#: src/terminal-util.cc:331
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Не могу да отворим адресу „%s“"
 
-#: src/terminal-util.cc:406
+#: src/terminal-util.cc:400
 #, fuzzy
 msgid ""
-"Pano Terminal is free software: you can redistribute it and/or modify "
-"it under the terms of the GNU General Public License as published by "
-"the Free Software Foundation, either version 3 of the License, or (at "
-"your option) any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version."
 msgstr ""
 "Гномов терминал је слободан софтвер: можете га расподељивати и/или мењати "
 "под условима Гнуове Опште јавне лиценце коју објављује Задужбина слободног "
 "софтвера, било издања 3 те дозволе, или (према вашем избору) било којег "
 "новијег издања."
 
-#: src/terminal-util.cc:410
+#: src/terminal-util.cc:404
 #, fuzzy
 msgid ""
-"Pano Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of "
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
-"General Public License for more details."
+"Pano Terminal is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
 msgstr ""
 "Гномов терминал се расподељује у нади да ће бити од користи, али БЕЗ ИКАКВИХ "
 "ГАРАНЦИЈА; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или "
 "ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ. Погледајте Гнуову Општу јавну лиценцу за "
 "више детаља."
 
-#: src/terminal-util.cc:414
+#: src/terminal-util.cc:408
 #, fuzzy
 msgid ""
-"You should have received a copy of the GNU General Public License "
-"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License along with "
+"Pano Terminal.  If not, see &lt;http://www.gnu.org/licenses/&gt;."
 msgstr ""
 "Требали сте да примите примерак Гнуове Опште јавне лиценце уз Гномов "
 "терминал; ако нисте, погледајте <http://www.gnu.org/licenses/>."
 
-#: src/terminal-util.cc:1149
+#: src/terminal-util.cc:1173
 msgid "“file” scheme with remote hostname not supported"
 msgstr "Шема „file“ са удаљеним називом домаћина није подржана"
 
-#: src/terminal-window.cc:474
-msgid "Could not save contents"
+#. Translators: %s is an error message
+#: src/terminal-window.cc:540 src/terminal-window.cc:579
+#, fuzzy, c-format
+#| msgid "Could not save contents"
+msgid "Could not save the contents: %s"
 msgstr "Не могу да сачувам садржај"
 
-#: src/terminal-window.cc:494
-msgid "Save as…"
-msgstr "Сачувај као…"
+#. Translators: %s is a file name
+#: src/terminal-window.cc:547
+#, fuzzy, c-format
+#| msgid "Profile “%s”"
+msgid "Saved “%s”"
+msgstr "Профил „%s“"
 
-#: src/terminal-window.cc:497
-msgid "_Cancel"
-msgstr "О_ткажи"
+#: src/terminal-window.cc:799
+msgid "Copied to clipboard"
+msgstr ""
 
-#: src/terminal-window.cc:498
-msgid "_Save"
-msgstr "_Сачувај"
+#: src/terminal-window.cc:1203
+msgid "Tab closed"
+msgstr ""
 
-#: src/terminal-window.cc:1714
+#: src/terminal-window.cc:1204
+msgid "_Undo"
+msgstr ""
+
+#: src/terminal-window.cc:1342
+msgid "Broadcasting input, but no terminal takes part"
+msgstr ""
+
+#: src/terminal-window.cc:1344
+#, fuzzy, c-format
+#| msgid "Title for terminal"
+msgid "Input goes to %u terminal"
+msgid_plural "Input goes to %u terminals"
+msgstr[0] "Наслов за терминал"
+msgstr[1] "Наслов за терминал"
+msgstr[2] "Наслов за терминал"
+msgstr[3] "Наслов за терминал"
+
+#: src/terminal-window.cc:1681
+msgid "Nothing to select"
+msgstr ""
+
+#. Translators: %s is a file name
+#: src/terminal-window.cc:1724
+#, c-format
+msgid "“%s” does not exist"
+msgstr ""
+
+#: src/terminal-window.cc:2551
+msgid ""
+"Programs cannot change this title. Leave it empty to show the title from the "
+"program again."
+msgstr ""
+
+#: src/terminal-window.cc:2761
+#, fuzzy
+#| msgid "Open a terminal"
+msgid "Activity in a terminal"
+msgstr "Отвори терминал"
+
+#: src/terminal-window.cc:2796
+#, c-format
+msgid ""
+"%s\n"
+"No output for %u second"
+msgid_plural ""
+"%s\n"
+"No output for %u seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/terminal-window.cc:2801
+#, fuzzy
+#| msgid "Open a terminal"
+msgid "Silence in a terminal"
+msgstr "Отвори терминал"
+
+#: src/terminal-window.cc:3020
 msgid "Open _Hyperlink"
 msgstr "Отвори _хипервезу"
 
-#: src/terminal-window.cc:1715
+#: src/terminal-window.cc:3021
 msgid "Copy Hyperlink _Address"
 msgstr "Копирај _адресу хипервезе"
 
-#: src/terminal-window.cc:1725
+#: src/terminal-window.cc:3031
 msgid "Send Mail _To…"
 msgstr "Пошаљи _е-пошту…"
 
-#: src/terminal-window.cc:1726
+#: src/terminal-window.cc:3032
 msgid "Copy Mail _Address"
 msgstr "_Копирај адресу е-поште"
 
-#: src/terminal-window.cc:1729
+#: src/terminal-window.cc:3035
 msgid "Call _To…"
 msgstr "_Позови…"
 
-#: src/terminal-window.cc:1730
+#: src/terminal-window.cc:3036
 msgid "Copy Call _Address "
 msgstr "Копирај _позивну адресу "
 
-#: src/terminal-window.cc:1735
+#: src/terminal-window.cc:3041
 msgid "_Open Link"
 msgstr "Отвори _везу"
 
-#: src/terminal-window.cc:1736
+#: src/terminal-window.cc:3042
 msgid "Copy _Link"
 msgstr "Копирај _везу"
 
-#: src/terminal-window.cc:1792
+#: src/terminal-window.cc:3081
+msgid "_Copy"
+msgstr "_Копирај"
+
+#: src/terminal-window.cc:3082
+msgid "Copy as _HTML"
+msgstr "Копирај као _ХТМЛ"
+
+#: src/terminal-window.cc:3083
+msgid "_Paste"
+msgstr "У_баци"
+
+#: src/terminal-window.cc:3086
+msgid "Copy _Output of This Command"
+msgstr ""
+
+#: src/terminal-window.cc:3088
+msgid "Copy _Output of Last Command"
+msgstr ""
+
+#: src/terminal-window.cc:3090
+msgid "Paste as _Filenames"
+msgstr "Убаци као називе _датотека"
+
+#: src/terminal-window.cc:3097
+msgid "Monitor for _Activity"
+msgstr ""
+
+#: src/terminal-window.cc:3098
+msgid "Monitor for _Silence"
+msgstr ""
+
+#: src/terminal-window.cc:3105
 msgid "P_rofiles"
 msgstr "_Профили"
 
-#: src/terminal-window.cc:1827
-msgid "L_eave Full Screen"
-msgstr "_Напусти цео екран"
+#: src/terminal-window.cc:3123
+#, fuzzy
+#| msgid "Zoom In"
+msgid "_Zoom Pane"
+msgstr "Увећај"
 
-#: src/terminal-window.cc:2291
+#: src/terminal-window.cc:3124
+msgid "Make Panes the Same _Size"
+msgstr ""
+
+#: src/terminal-window.cc:3127
+#, fuzzy
+#| msgid "New _Tab"
+msgid "To a New _Tab"
+msgstr "Нови _језичак"
+
+#: src/terminal-window.cc:3130
+#, fuzzy
+#| msgid "New _Window"
+msgid "To a New _Window"
+msgstr "Нови п_розор"
+
+#: src/terminal-window.cc:3135
+msgid "Swap With the Pane on the _Left"
+msgstr ""
+
+#: src/terminal-window.cc:3136
+msgid "Swap With the Pane on the _Right"
+msgstr ""
+
+#: src/terminal-window.cc:3137
+msgid "Swap With the Pane _Above"
+msgstr ""
+
+#: src/terminal-window.cc:3138
+msgid "Swap With the Pane _Below"
+msgstr ""
+
+#: src/terminal-window.cc:3152
+msgid "_Move Pane"
+msgstr ""
+
+#: src/terminal-window.cc:3154
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close P_ane"
+msgstr "Затвори језичак"
+
+#: src/terminal-window.cc:3182
+msgid "New _Terminal"
+msgstr "Нови _терминал"
+
+#: src/terminal-window.cc:3191
+msgid "New _Tab"
+msgstr "Нови _језичак"
+
+#: src/terminal-window.cc:3201
+msgid "Leave Full Screen"
+msgstr "Напусти цео екран"
+
+#: src/terminal-window.cc:3547
+msgid ""
+"Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
+msgstr ""
+
+#: src/terminal-window.cc:3553 src/terminal-window.cc:3950
+msgid "_No"
+msgstr "_Не"
+
+#: src/terminal-window.cc:3944
 #, fuzzy
 msgid "Set Pano Terminal as your default terminal?"
 msgstr "Да поставим Гномов терминал као ваш основни терминал?"
 
-#: src/terminal-window.cc:2297
+#: src/terminal-window.cc:3949
 msgid "_Yes"
 msgstr "_Да"
 
-#: src/terminal-window.cc:2298
-msgid "_No"
-msgstr "_Не"
+#: src/terminal-window.cc:4019
+msgid "_Stop"
+msgstr ""
 
-#: src/terminal-window.cc:3323
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close the other terminals?"
+msgstr "Да затворим терминал?"
+
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close the other terminal?"
+msgstr "Да затворим терминал?"
+
+#: src/terminal-window.cc:5159
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some of the other terminals. Closing "
+"them will kill all of them."
+msgstr ""
+"Неки програми су још увек покренути унутар терминала у овом прозору. "
+"Затварање прозора ће их све убити."
+
+#: src/terminal-window.cc:5161
+#, fuzzy
+#| msgid ""
+#| "There is still a process running in this terminal. Closing the terminal "
+#| "will kill it."
+msgid ""
+"There is still a process running in the other terminal. Closing the terminal "
+"will kill it."
+msgstr ""
+"Неки програм је још увек покренут унутар овог терминала. Затварање терминала "
+"ће га убити."
+
+#: src/terminal-window.cc:5163
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "C_lose Terminals"
+msgstr "_Затвори терминал"
+
+#: src/terminal-window.cc:5165
 msgid "Close this window?"
 msgstr "Да затворим прозор?"
 
-#: src/terminal-window.cc:3323
-msgid "Close this terminal?"
-msgstr "Да затворим терминал?"
-
-#: src/terminal-window.cc:3327
+#: src/terminal-window.cc:5166
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -2471,7 +3804,15 @@ msgstr ""
 "Неки програми су још увек покренути унутар терминала у овом прозору. "
 "Затварање прозора ће их све убити."
 
-#: src/terminal-window.cc:3331
+#: src/terminal-window.cc:5168
+msgid "C_lose Window"
+msgstr "_Затвори прозор"
+
+#: src/terminal-window.cc:5170
+msgid "Close this terminal?"
+msgstr "Да затворим терминал?"
+
+#: src/terminal-window.cc:5171
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -2479,14 +3820,327 @@ msgstr ""
 "Неки програм је још увек покренут унутар овог терминала. Затварање терминала "
 "ће га убити."
 
-#: src/terminal-window.cc:3336
-msgid "C_lose Window"
-msgstr "_Затвори прозор"
-
-#: src/terminal.cc:594
+#: src/terminal.cc:672
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Нисам успео да обрадим аргументе: %s\n"
+
+#~ msgid "org.gnome.Terminal.desktop"
+#~ msgstr "org.gnome.Terminal.desktop"
+
+#~ msgid ""
+#~ "https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-"
+#~ "terminal.png"
+#~ msgstr ""
+#~ "https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-"
+#~ "terminal.png"
+
+#~ msgid "https://wiki.gnome.org/Apps/Terminal"
+#~ msgstr "https://wiki.gnome.org/Apps/Terminal"
+
+#~ msgid "GNOME"
+#~ msgstr "Гном"
+
+#~ msgid "https://wiki.gnome.org/Apps/Terminal/ReportingBugs"
+#~ msgstr "https://wiki.gnome.org/Apps/Terminal/ReportingBugs"
+
+#~ msgid ""
+#~ "Keyboard shortcut to export the current tab contents to file in various "
+#~ "formats"
+#~ msgstr ""
+#~ "Пречица за извоз садржаја тренутног језичка у датотеке различитих формата"
+
+#~ msgid ""
+#~ "Keyboard shortcut to print the current tab contents to printer or file"
+#~ msgstr ""
+#~ "Пречица за штампање садржаја тренутног језичка преко штампача или у "
+#~ "датотеку"
+
+#~ msgid "Whether the menubar has access keys"
+#~ msgstr "Да ли главни изборник садржи пречице"
+
+#~ msgid ""
+#~ "Whether to have Alt+letter access keys for the menubar. They may "
+#~ "interfere with some applications run inside the terminal so it’s possible "
+#~ "to turn them off."
+#~ msgstr ""
+#~ "Да ли да користи Alt+слово пречице за главни изборник. Оне могу да се "
+#~ "сударају са неким програмима који се покрећу унутар терминала па их је "
+#~ "могуће искључити."
+
+#~ msgid "Whether to show the menubar in new windows"
+#~ msgstr "Да ли да приказује траку изборника у новим прозорима"
+
+#~ msgid "Tab"
+#~ msgstr "Језичак"
+
+#~ msgctxt "theme variant"
+#~ msgid "Default"
+#~ msgstr "Подразумевана"
+
+#~ msgid "Replace initial title"
+#~ msgstr "Замени почетни наслов"
+
+#~ msgid "Append initial title"
+#~ msgstr "Додај на почетни наслов"
+
+#~ msgid "Prepend initial title"
+#~ msgstr "Уклони почетни наслов"
+
+#~ msgid "Keep initial title"
+#~ msgstr "Задржи почетни наслов"
+
+#~ msgid "Exit the terminal"
+#~ msgstr "Изађи из терминала"
+
+#~ msgid "Tango"
+#~ msgstr "Танго"
+
+#~ msgid "Linux console"
+#~ msgstr "Линукс конзола"
+
+#~ msgid "XTerm"
+#~ msgstr "ИксТерм"
+
+#~ msgid "Rxvt"
+#~ msgstr "Рхвт"
+
+#~ msgid "Solarized"
+#~ msgstr "Осветљена"
+
+#~ msgid "_Show menubar by default in new terminals"
+#~ msgstr "Прикажи _изборник у новим терминалима по основи"
+
+#~ msgid "_Enable mnemonics (such as Alt+F to open the File menu)"
+#~ msgstr ""
+#~ "_Укључи подсетнике (као што је Alt+F за отварање изборника Датотека)"
+
+#~ msgid "Open _new terminals in:"
+#~ msgstr "Отвори _нове терминале као:"
+
+#~ msgid "_Always check if default terminal"
+#~ msgstr "_Увек провери да ли је основни терминал"
+
+#~ msgid "Initial terminal si_ze:"
+#~ msgstr "Почетна _величина терминала:"
+
+#~ msgid "rows"
+#~ msgstr "реда"
+
+#~ msgid "Rese_t"
+#~ msgstr "Поново _постави"
+
+#~ msgid "Choose A Terminal Font"
+#~ msgstr "Изаберите фонт терминала"
+
+#~ msgid "Cell spaci_ng:"
+#~ msgstr "Размак_нутост ћелије:"
+
+#~ msgid "Cursor _shape:"
+#~ msgstr "Облик _курсора:"
+
+#~ msgid "Cursor blin_king:"
+#~ msgstr "Трептање _показивача:"
+
+#~ msgid "Sound"
+#~ msgstr "Звук"
+
+#~ msgid "Terminal _bell"
+#~ msgstr "_Звонце терминала"
+
+#~ msgid "Profile ID:"
+#~ msgstr "ИБ профила:"
+
+#~ msgid "Text and Background Color"
+#~ msgstr "Боја текста и позадине"
+
+#~ msgid "Built-in sche_mes:"
+#~ msgstr "Постојеће _шеме:"
+
+#~ msgid "Bo_ld color:"
+#~ msgstr "Боја _подебљања:"
+
+#~ msgid "_Underline color:"
+#~ msgstr "Боја п_одвлачења:"
+
+#~ msgid "Choose Terminal Underlined Text Color"
+#~ msgstr "Изаберите боју подвученог текста"
+
+#~ msgid "Built-in _schemes:"
+#~ msgstr "Постојеће ш_еме:"
+
+#~ msgid "Color p_alette:"
+#~ msgstr "Палета _боја:"
+
+# bug(slobo): plural forms
+#~ msgid "lines"
+#~ msgstr "реда"
+
+#~ msgid "Ru_n a custom command instead of my shell"
+#~ msgstr "По_крени ову наредбу уместо наредбе љуске"
+
+#~ msgid "_Delete key generates:"
+#~ msgstr "Тастер _брисања остварује:"
+
+#~ msgid "_Encoding:"
+#~ msgstr "_Кодирање:"
+
+#~ msgid "_Reset Compatibility Options to Defaults"
+#~ msgstr "_Врати опције усклађивања на подразумеване"
+
+#~ msgid "Clone…"
+#~ msgstr "Клонирај…"
+
+#~ msgid "Rename…"
+#~ msgstr "Преименуј…"
+
+#~ msgid "Delete…"
+#~ msgstr "Обриши…"
+
+#~ msgid "Cancel"
+#~ msgstr "Откажи"
+
+#, c-format
+#~ msgid "Error parsing command: %s"
+#~ msgstr "Грешка при обради наредбе: %s"
+
+#, c-format
+#~ msgid "Choose Palette Color %u"
+#~ msgstr "Изаберите боју у палети %u"
+
+#, c-format
+#~ msgid "Palette entry %u"
+#~ msgstr "Боја у палети %u"
+
+#~ msgid "Print"
+#~ msgstr "Одштампај"
+
+#~ msgid "Hide and Show Menubar"
+#~ msgstr "Сакриј и прикажи траку изборника"
+
+#~ msgid "Shortcut _Key"
+#~ msgstr "Тастер _пречице"
+
+#~ msgid "Change _Profile"
+#~ msgstr "Измени _профил"
+
+#~ msgid "_File"
+#~ msgstr "_Датотека"
+
+#~ msgid "_Print…"
+#~ msgstr "_Одштамај…"
+
+#~ msgid "C_lose Tab"
+#~ msgstr "Затвори _језичак"
+
+#~ msgid "_Close Window"
+#~ msgstr "Затвори _прозор"
+
+#~ msgid "Select _All"
+#~ msgstr "Изабери _све"
+
+#~ msgid "P_references"
+#~ msgstr "П_оставке"
+
+#~ msgid "_View"
+#~ msgstr "Пре_глед"
+
+#~ msgid "Show _Menubar"
+#~ msgstr "Прикажи _изборник"
+
+#~ msgid "_Normal Size"
+#~ msgstr "_Уобичајена величина"
+
+#~ msgid "_Search"
+#~ msgstr "Пре_трага"
+
+#~ msgid "_Find…"
+#~ msgstr "_Нађи…"
+
+#~ msgid "Find _Next"
+#~ msgstr "Нађи _следеће"
+
+#~ msgid "Find _Previous"
+#~ msgstr "Нађи _претходно"
+
+#~ msgid "_Clear Highlight"
+#~ msgstr "Уклони _истицање"
+
+#~ msgid "_Terminal"
+#~ msgstr "_Терминал"
+
+#~ msgid "Ta_bs"
+#~ msgstr "_Језичци"
+
+#~ msgid "_Previous Tab"
+#~ msgstr "_Претходни језичак"
+
+#~ msgid "_Next Tab"
+#~ msgstr "Следећи је_зичак"
+
+#~ msgid "_Contents"
+#~ msgstr "_Садржај"
+
+#, c-format
+#~ msgid "“%s” option given twice for the same window\n"
+#~ msgstr "„%s“ опција је наведена два пута за исти прозор\n"
+
+#~ msgid "Turn on the menubar"
+#~ msgstr "Приказује траку изборника"
+
+#~ msgid "Turn off the menubar"
+#~ msgstr "Уклања траку изборника"
+
+#, c-format
+#~ msgid "Preferences – %s"
+#~ msgstr "Поставке – %s"
+
+#~ msgid "Enter name for new profile with default settings:"
+#~ msgstr "Унесите назив новог профила са подразумеваним подешавањима:"
+
+#~ msgid "Create"
+#~ msgstr "Направи"
+
+#, c-format
+#~ msgid "Enter name for new profile based on “%s”:"
+#~ msgstr "Унесите назив за нови профил заснован на „%s“:"
+
+#, c-format
+#~ msgid "%s (Copy)"
+#~ msgstr "%s (копирај)"
+
+#, c-format
+#~ msgid "Enter new name for profile “%s”:"
+#~ msgstr "Унесите нови назив за профил „%s“:"
+
+#~ msgid "Rename Profile"
+#~ msgstr "Преименуј профил"
+
+#~ msgid "Rename"
+#~ msgstr "Преименуј"
+
+#, c-format
+#~ msgid "Really delete profile “%s”?"
+#~ msgstr "Да обришем профил „%s“?"
+
+#~ msgid "Delete Profile"
+#~ msgstr "Обриши профил"
+
+#~ msgid "This is the default profile"
+#~ msgstr "Ово је подразумевани профил"
+
+#~ msgid "General"
+#~ msgstr "Опште"
+
+#, c-format
+#~ msgid "Version %s for GNOME %d"
+#~ msgstr "Издање %s за Гном %d"
+
+#~ msgid "Save as…"
+#~ msgstr "Сачувај као…"
+
+#~ msgid "_Save"
+#~ msgstr "_Сачувај"
 
 #~ msgid "org.gnome.Terminal"
 #~ msgstr "org.gnome.Terminal"
@@ -2715,12 +4369,6 @@ msgstr "Нисам успео да обрадим аргументе: %s\n"
 #~ msgid "New Terminal in New Tab"
 #~ msgstr "Нови терминал у новом језичку"
 
-#~ msgid "New Terminal in New Window"
-#~ msgstr "Нови терминал у новом прозору"
-
-#~ msgid "Close All Terminals"
-#~ msgstr "Затвори све терминале"
-
 #~ msgid "Clear Find Highlight"
 #~ msgstr "Уклони истицање налажења"
 
@@ -2736,9 +4384,6 @@ msgstr "Нисам успео да обрадим аргументе: %s\n"
 #~ msgid "Show"
 #~ msgstr "Покажи"
 
-#~ msgid "_Encoding"
-#~ msgstr "_Кодирање"
-
 #~ msgid "_Profile Preferences"
 #~ msgstr "_Поставке профила"
 
@@ -2747,12 +4392,6 @@ msgstr "Нисам успео да обрадим аргументе: %s\n"
 
 #~ msgid "_%c. %s"
 #~ msgstr "_%c. %s"
-
-#~ msgid "Open _Terminal"
-#~ msgstr "Отвори _терминал"
-
-#~ msgid "Open Ta_b"
-#~ msgstr "Отвори _језичак"
 
 #~ msgid "New _Profile"
 #~ msgstr "Нови _профил"
@@ -2818,13 +4457,9 @@ msgstr "Нисам успео да обрадим аргументе: %s\n"
 #~ msgid "GNOME Terminal Client"
 #~ msgstr "Клијент Гномовог терминала"
 
-#~| msgid "Terminal"
 #~ msgctxt "title"
 #~ msgid "'Terminal'"
 #~ msgstr "„Терминал“"
-
-#~ msgid "Title for terminal"
-#~ msgstr "Наслов за терминал"
 
 #~ msgid ""
 #~ "Title to display for the terminal window or tab. This title may be "
@@ -2861,9 +4496,6 @@ msgstr "Нисам успео да обрадим аргументе: %s\n"
 #~ msgid "_Use the system fixed width font"
 #~ msgstr "_Користи системски словни лик сталне ширине"
 
-#~ msgid "_Font:"
-#~ msgstr "_Словни лик:"
-
 #~ msgid "Default size:"
 #~ msgstr "Основна величина:"
 
@@ -2878,9 +4510,6 @@ msgstr "Нисам успео да обрадим аргументе: %s\n"
 
 #~ msgid "_Unlimited"
 #~ msgstr "_Неограничено"
-
-#~ msgid "Set Title"
-#~ msgstr "Постави наслов"
 
 #~ msgid "Current Locale"
 #~ msgstr "Текући локалитет"

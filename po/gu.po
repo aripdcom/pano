@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-terminal&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-08 07:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 22:03+0300\n"
 "PO-Revision-Date: 2014-09-22 12:53+0530\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -17,378 +16,451 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 "\n"
+"X-Generator: Lokalize 1.0\n"
 
-#: ../gnome-terminal.appdata.xml.in.h:1 ../gnome-terminal.desktop.in.in.h:1
-#: ../src/server.c:121 ../src/terminal-accels.c:222 ../src/terminal.c:243
-#: ../src/terminal-tab-label.c:79 ../src/terminal-tabs-menu.c:180
-#: ../src/terminal-window.c:2582 ../src/terminal-window.c:2932
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#, fuzzy
+msgid "Pano Terminal"
+msgstr "GNOME ટર્મિનલ"
+
+#: data/com.aripd.Pano.desktop.in:3 src/terminal-accels.cc:282
+#: src/terminal-command-palette.cc:269 src/terminal-window.ui:7
 msgid "Terminal"
 msgstr "ટર્મિનલ"
 
-#: ../gnome-terminal.appdata.xml.in.h:2 ../gnome-terminal.desktop.in.in.h:2
+#: data/com.aripd.Pano.desktop.in:4
 msgid "Use the command line"
 msgstr "આદેશ વાક્ય વાપરો"
 
-#: ../gnome-terminal.appdata.xml.in.h:3
-msgid ""
-"Pano Terminal is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your "
-"system."
-msgstr ""
-
-#: ../gnome-terminal.appdata.xml.in.h:4
-msgid ""
-"It supports several profiles, multiple tabs and implements several keyboard "
-"shortcuts."
-msgstr "તે ઘણી રૂપરેખા, ઘણાં ટૅબને આધાર આપે છે અને ઘણાં કિબોર્ડ ટૂંકાણોનું અમલીકરણ કરે છે."
-
-#: ../gnome-terminal.desktop.in.in.h:3
-msgid "shell;prompt;command;commandline;"
+#: data/com.aripd.Pano.desktop.in:5
+#, fuzzy
+#| msgid "shell;prompt;command;commandline;"
+msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "શેલ;પ્રોમ્પ્ટ;આદેશ;આદેશવાક્ય;"
 
-#: ../src/find-dialog.ui.h:1 ../src/terminal-accels.c:164
-#: ../src/terminal-accels.c:221
-msgid "Find"
-msgstr "શોધો"
+#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+#, fuzzy
+#| msgid "Window"
+msgid "New Window"
+msgstr "વિન્ડો"
 
-#: ../src/find-dialog.ui.h:2
-msgid "_Search for:"
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
+#: src/terminal-preferences-window.ui:50
+msgid "Preferences"
+msgstr "પસંદગીઓ"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:3
+#, fuzzy
+#| msgid "Use the command line"
+msgid "Configure the command line"
+msgstr "આદેશ વાક્ય વાપરો"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+#, fuzzy
+#| msgid "shell;prompt;command;commandline;"
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr "શેલ;પ્રોમ્પ્ટ;આદેશ;આદેશવાક્ય;"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+#| msgid "_Profile Preferences"
+msgid "Pano Terminal Preferences"
+msgstr "રૂપરેખા પસંદગીઓ (_P)"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "GNOME ટર્મિનલ એમ્યુલેટર"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
+#: src/terminal-global-shortcuts.cc:231
+msgid "Show or hide the quick terminal"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:34
+#: data/com.aripd.Pano.metainfo.xml.in:63
+msgid "com.aripd.Pano.desktop"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:35
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
+msgid "GPL-3.0+ or GFDL-1.3-only"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:36
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
+msgid "GPL-3.0+"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:38
+msgid "Use the command line, with your tabs where you want them"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:40
+msgid ""
+"Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
+"which can be used to run programs available on your system."
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:41
+#, fuzzy
+#| msgid ""
+#| "It supports several profiles, multiple tabs and implements several "
+#| "keyboard shortcuts."
+msgid ""
+"It supports several profiles, multiple tabs and implements several keyboard "
+"shortcuts. The tab bar can be placed at the top, bottom, left or right of "
+"the window."
+msgstr "તે ઘણી રૂપરેખા, ઘણાં ટૅબને આધાર આપે છે અને ઘણાં કિબોર્ડ ટૂંકાણોનું અમલીકરણ કરે છે."
+
+#: data/com.aripd.Pano.metainfo.xml.in:44
+#, fuzzy
+#| msgid "Linux console"
+msgid "console"
+msgstr "Linux કન્સોલ"
+
+#: data/com.aripd.Pano.metainfo.xml.in:45
+msgid "keyboard"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:46
+msgid "pointing"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:50
+msgid "https://pano.aripd.com/images/tabs-left-light.png"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:54
+msgid "HiDpiIcon"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:55
+msgid "HighContrast"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:56
+msgid "ModernToolkit"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:57
+#, fuzzy
+#| msgid "_Search for:"
+msgid "SearchProvider"
 msgstr "ના માટે શોધો (_S): "
 
-#: ../src/find-dialog.ui.h:3
-msgid "_Match case"
-msgstr "જોડણી સરખાવો (_M)"
+#: data/com.aripd.Pano.metainfo.xml.in:58
+msgid "UserDocs"
+msgstr ""
 
-#: ../src/find-dialog.ui.h:4
-msgid "Match _entire word only"
-msgstr "માત્ર આખા શબ્દને જ સરખાવો (_e)"
+#: data/com.aripd.Pano.metainfo.xml.in:60
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
+msgid "https://pano.aripd.com"
+msgstr ""
 
-#: ../src/find-dialog.ui.h:5
-msgid "Match as _regular expression"
-msgstr "રૅગ્યુલર એક્સપ્રેશન તરીકે બંધબેસાડો (_r)"
+#: data/com.aripd.Pano.metainfo.xml.in:61
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
+msgid "https://github.com/aripdcom/pano/issues"
+msgstr ""
 
-#: ../src/find-dialog.ui.h:6
-msgid "Search _backwards"
-msgstr "ઊંધી દિશામાં શોધો (_b)"
+#: data/com.aripd.Pano.metainfo.xml.in:62
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
+msgid "https://github.com/aripdcom/pano"
+msgstr ""
 
-#: ../src/find-dialog.ui.h:7
-msgid "_Wrap around"
-msgstr "ફરતે લપેટો (_W)"
+#: data/com.aripd.Pano.metainfo.xml.in:64
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
+#, fuzzy
+msgid "pano-terminal"
+msgstr "GNOME ટર્મિનલ"
 
-#: ../src/gterminal.vala:29
-msgid "Suppress output"
-msgstr "આઉટપુટ દબાવો"
+#: data/com.aripd.Pano.metainfo.xml.in:66
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
+msgid "aripd"
+msgstr ""
 
-#: ../src/gterminal.vala:31
-msgid "Verbose output"
-msgstr "વર્બોસ આઉટપુટ"
+#: data/com.aripd.Pano.metainfo.xml.in:71
+msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
+msgstr ""
 
-#: ../src/gterminal.vala:43
-msgid "Output options:"
-msgstr "આઉટપુટ વિકલ્પો:"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
+msgid "com.aripd.Pano.Nautilus"
+msgstr ""
 
-#: ../src/gterminal.vala:44
-msgid "Show output options"
-msgstr "આઉટપુટ વિકલ્પોને બતાવો"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
+msgid "org.gnome.Nautilus.desktop"
+msgstr ""
 
-#: ../src/gterminal.vala:84
-#, c-format
-msgid "\"%s\" is not a valid application ID"
-msgstr "\"%s\" એ યોગ્ય કાર્યક્રમ ID નથી"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#, fuzzy
+msgid "Pano Terminal plugin for Files"
+msgstr "GNOME ટર્મિનલ એમ્યુલેટર"
 
-#: ../src/gterminal.vala:96
-msgid "Server application ID"
-msgstr "સર્વર કાર્યક્રમ ID"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#, fuzzy
+msgid "Open Pano Terminal from Files"
+msgstr "ટર્મિનલ ખોલો (_e)"
 
-#: ../src/gterminal.vala:96
-msgid "ID"
-msgstr "ID"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
+msgid ""
+"Open in Pano Terminal is a plugin for the Files application that adds a menu "
+"item to the context menu to open Pano Terminal in the currently browsed "
+"directory."
+msgstr ""
 
-#: ../src/gterminal.vala:103
-msgid "Global options:"
-msgstr "વૈશ્ર્વિક વિકલ્પો:"
-
-#: ../src/gterminal.vala:104
-msgid "Show global options"
-msgstr "વૈશ્ર્વિક વિકલ્પો બતાવો"
-
-#: ../src/gterminal.vala:127 ../src/gterminal.vala:148
-msgid "FD passing of stdin is not supported"
-msgstr "stdin નું FD પાસીંગ આધારભૂત નથી"
-
-#: ../src/gterminal.vala:128 ../src/gterminal.vala:149
-msgid "FD passing of stdout is not supported"
-msgstr "stdout નું FD પાસીંગ આધારભૂત નથી"
-
-#: ../src/gterminal.vala:129 ../src/gterminal.vala:150
-msgid "FD passing of stderr is not supported"
-msgstr "stder નું FD પાસીંગ આધારભૂત નથી"
-
-#: ../src/gterminal.vala:141
-#, c-format
-msgid "Invalid argument \"%s\" to --fd option"
-msgstr "--fd વિકલ્પમાં અયોગ્ય દલીલ \"%s\""
-
-#: ../src/gterminal.vala:154
-#, c-format
-msgid "Cannot pass FD %d twice"
-msgstr "FD %d ને બે વાર પસાર કરી શકાતુ નથી"
-
-#: ../src/gterminal.vala:177
-msgid "Forward stdin"
-msgstr "stdin આગળ ધપાવો"
-
-#: ../src/gterminal.vala:179
-msgid "Forward stdout"
-msgstr "stdout આગળ ધપાવો"
-
-#: ../src/gterminal.vala:181
-msgid "Forward stderr"
-msgstr "stderr આગળ ધપાવો"
-
-#: ../src/gterminal.vala:183
-msgid "Forward file descriptor"
-msgstr "ફાઇલ વર્ણનકર્તાને આગળ ધપાવો"
-
-#: ../src/gterminal.vala:183
-msgid "FD"
-msgstr "FD"
-
-#: ../src/gterminal.vala:190
-msgid "Exec options:"
-msgstr "Exec વિકલ્પો:"
-
-#: ../src/gterminal.vala:191
-msgid "Show exec options"
-msgstr "exec વિકલ્પો બતાવો"
-
-#: ../src/gterminal.vala:210
-msgid "Maximise the window"
-msgstr "વિન્ડો ને મહત્તમ કરો"
-
-#: ../src/gterminal.vala:212 ../src/terminal-options.c:1104
-msgid "Full-screen the window"
-msgstr "વિન્ડો ને સંપૂર્ણ-સ્ક્રીન કરો"
-
-#: ../src/gterminal.vala:214 ../src/terminal-options.c:1113
-msgid "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
-msgstr "વિન્ડોનું માપ સુયોજિત કરો; ઉદાહરણ માટે: 80x24, અથવા 80x24+200+200 (COLSxROWS+X+Y)"
-
-#: ../src/gterminal.vala:215 ../src/terminal-options.c:1114
-msgid "GEOMETRY"
-msgstr "ભૂમિતિ"
-
-#: ../src/gterminal.vala:217 ../src/terminal-options.c:1122
-msgid "Set the window role"
-msgstr "વિન્ડોની ભૂમિકાને સુયોજીત કરો"
-
-#: ../src/gterminal.vala:217 ../src/terminal-options.c:1123
-msgid "ROLE"
-msgstr "ભૂમિકા"
-
-#: ../src/gterminal.vala:224
-msgid "Window options:"
-msgstr "વિન્ડો વિકલ્પો:"
-
-#: ../src/gterminal.vala:225
-msgid "Show window options"
-msgstr "વિન્ડો વિકલ્પો બતાવો"
-
-#: ../src/gterminal.vala:244
-#, c-format
-msgid "May only use option %s once"
-msgstr "ફક્ત %s ને એકવાર વાપરી શકાય છે"
-
-#: ../src/gterminal.vala:257 ../src/terminal-options.c:683
-#, c-format
-msgid "\"%s\" is not a valid zoom factor"
-msgstr "\"%s\" એ યોગ્ય નાનામોટાપણાનું પ્રમાણ નથી"
-
-#: ../src/gterminal.vala:261
-#, c-format
-msgid "Zoom value \"%s\" is outside allowed range"
-msgstr "નાનું મોટુ કરવાની કિંમત \"%s\" એ પરવાનગી થયેલ સીમાની બહાર છે"
-
-#: ../src/gterminal.vala:270 ../src/terminal-options.c:1153
-msgid "Use the given profile instead of the default profile"
-msgstr "મૂળભૂત રૂપરેખા ની જગ્યાએ આપેલ રૂપરેખાને વાપરો"
-
-#: ../src/gterminal.vala:271
-msgid "UUID"
-msgstr "UUID"
-
-#: ../src/gterminal.vala:273 ../src/terminal-options.c:1162
-msgid "Set the terminal title"
-msgstr "ટર્મિનલનું શીર્ષક સુયોજીત કરો"
-
-#: ../src/gterminal.vala:273 ../src/terminal-options.c:1163
-msgid "TITLE"
-msgstr "શીર્ષક"
-
-#: ../src/gterminal.vala:275 ../src/terminal-options.c:1171
-msgid "Set the working directory"
-msgstr "કાર્યશીલ ડિરૅક્ટરી સુયોજીત કરો"
-
-#: ../src/gterminal.vala:275 ../src/terminal-options.c:1172
-msgid "DIRNAME"
-msgstr "ડિરૅક્ટરીનું નામ"
-
-#: ../src/gterminal.vala:277 ../src/terminal-options.c:1180
-msgid "Set the terminal's zoom factor (1.0 = normal size)"
-msgstr "ટર્મિનલનુ નાનું-મોટું કરવાનું પ્રમાણ સુયોજીત કરો (૧.૦ = સામાન્ય માપ)"
-
-#: ../src/gterminal.vala:278 ../src/terminal-options.c:1181
-msgid "ZOOM"
-msgstr "નાનું-મોટુ કરો"
-
-#: ../src/gterminal.vala:285
-msgid "Terminal options:"
-msgstr "ટર્મિનલ વિકલ્પો:"
-
-#: ../src/gterminal.vala:286 ../src/terminal-options.c:1287
-msgid "Show terminal options"
-msgstr "ટર્મિનલ વિકલ્પો બતાવો"
-
-#: ../src/gterminal.vala:299
-msgid "Wait until the child exits"
-msgstr "થોભો જ્યા સુધી બાળ બહાર નીકળે"
-
-#: ../src/gterminal.vala:306
-msgid "Processing options:"
-msgstr "પ્રક્રિયા વિકલ્પો:"
-
-#: ../src/gterminal.vala:307
-msgid "Show processing options"
-msgstr "પ્રક્રિયા વિકલ્પો બતાવો"
-
-#: ../src/gterminal.vala:477
-#, c-format
-msgid "'%s' needs the command to run as arguments after '--'"
-msgstr "'--' પછી દલીલો તરીકે ચલાવવા માટે '%s' ને આદેશની જરૂર છે"
-
-#: ../src/gterminal.vala:511
-msgid "Missing argument"
-msgstr "ગેરહાજર દલીલ"
-
-#: ../src/gterminal.vala:535
-#, c-format
-msgid "Unknown completion request for \"%s\""
-msgstr "\"%s\" માટે અજ્ઞાત સમાપ્તિ માંગણી"
-
-#: ../src/gterminal.vala:560
-msgid "GTerminal"
-msgstr "GTerminal"
-
-#: ../src/gterminal.vala:564
-msgid "Missing command"
-msgstr "ગેરહાજર આદેશ"
-
-#: ../src/gterminal.vala:573
-#, c-format
-msgid "Unknown command \"%s\""
-msgstr "અજ્ઞાત આદેશ \"%s\""
-
-#: ../src/gterminal.vala:577
-#, c-format
-#| msgid "Error parsing command: %s"
-msgid "Error processing arguments: %s\n"
-msgstr "દલીલોને પ્રક્રિયા કરી રહ્યા હોય ત્યારે ભૂલ: %s\n"
-
-#: ../src/migration.c:385
-msgid "Default"
-msgstr "મૂળભૂત"
-
-#: ../src/migration.c:385 ../src/terminal-prefs.c:99
-msgid "Unnamed"
-msgstr "નામવીહિન"
-
-#: ../src/org.gnome.Terminal.gschema.xml.h:1
+#. Translators: This needs to be parsed as a GVariant string, so keep the
+#. regular single quotes around the string as-is, and do not add extra quotes.
+#: src/com.aripd.Pano.gschema.xml:151
 msgctxt "visible-name"
 msgid "'Unnamed'"
 msgstr "'નામવીહિન'"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:2
+#: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
 msgstr "રૂપરેખાનું માણસથી વાંચી શકાય તેવું નામ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:3
+#: src/com.aripd.Pano.gschema.xml:153
 msgid "Human-readable name of the profile."
 msgstr "રૂપરેખાનું માણસથી વાંચી શકાય તેવું નામ."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:4
+#: src/com.aripd.Pano.gschema.xml:157
 msgid "Default color of text in the terminal"
 msgstr "ટર્મિનલમાંના લખાણનો મૂળભૂત રંગ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:5
+#: src/com.aripd.Pano.gschema.xml:158
+#, fuzzy
+#| msgid ""
+#| "Default color of text in the terminal, as a color specification (can be "
+#| "HTML-style hex digits, or a color name such as \"red\")."
 msgid ""
 "Default color of text in the terminal, as a color specification (can be HTML-"
-"style hex digits, or a color name such as \"red\")."
+"style hex digits, or a color name such as “red”)."
 msgstr ""
 "રંગના સ્પષ્ટીકરણ રુપે ટર્મિનલમાંના લખાણનો મૂળભૂત રંગ (HTML- ની રીતનો આધાર વાળી સંખ્યા "
 "અથવા રંગનું નામ જેમ કે \"લાલ\")."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:6
+#: src/com.aripd.Pano.gschema.xml:162
 msgid "Default color of terminal background"
 msgstr "ટર્મિનલના પાશ્વ ભાગનો મૂળભૂત રંગ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:7
+#: src/com.aripd.Pano.gschema.xml:163
+#, fuzzy
+#| msgid ""
+#| "Default color of terminal background, as a color specification (can be "
+#| "HTML-style hex digits, or a color name such as \"red\")."
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
-"style hex digits, or a color name such as \"red\")."
+"style hex digits, or a color name such as “red”)."
 msgstr ""
 "રંગના સ્પષ્ટીકરણ રુપે ટર્મિનલના પાશ્વ ભાગના ભાગનો મૂળભૂત રંગ (HTML- ની રીતનો આધાર વાળી "
 "સંખ્યા અથવા રંગનું નામ જેમ કે \"લાલ\")."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:8
+#: src/com.aripd.Pano.gschema.xml:167
 msgid "Default color of bold text in the terminal"
 msgstr "ટર્મિનલમાંના ઘટ્ટ લખાણનો મૂળભૂત રંગ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:9
+#: src/com.aripd.Pano.gschema.xml:168
+#, fuzzy
+#| msgid ""
+#| "Default color of bold text in the terminal, as a color specification (can "
+#| "be HTML-style hex digits, or a color name such as \"red\"). This is "
+#| "ignored if bold_color_same_as_fg is true."
 msgid ""
 "Default color of bold text in the terminal, as a color specification (can be "
-"HTML-style hex digits, or a color name such as \"red\"). This is ignored if "
-"bold_color_same_as_fg is true."
+"HTML-style hex digits, or a color name such as “red”). This is ignored if "
+"bold-color-same-as-fg is true."
 msgstr ""
 "રંગના સ્પષ્ટીકરણ રુપે ટર્મિનલમાંના લખાણનો મૂળભૂત રંગ (HTML- ની રીતનો આધાર વાળી સંખ્યા "
 "અથવા રંગનું નામ જેમ કે \"લાલ\"). આ અવગણેલ છે જો bold_color_same_as_fg એ true હોય તો."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:10
+#: src/com.aripd.Pano.gschema.xml:172
 msgid "Whether bold text should use the same color as normal text"
 msgstr "ક્યાંતો ઘટ્ટ લખાણ એ સામાન્ય લખાણ તરીકે એજ રંગ ને વાપરવુ જ જોઇએ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:11
-msgid "If true, boldface text will be rendered using the same color as normal text."
-msgstr "જો true હોય તો, બોલ્ડફેસ લખાણ એ સામાન્ય લખાણની રીતે એજ રંગ ની મદદથી રેન્ડર થયેલ હશે."
+#: src/com.aripd.Pano.gschema.xml:173
+msgid ""
+"If true, boldface text will be rendered using the same color as normal text."
+msgstr ""
+"જો true હોય તો, બોલ્ડફેસ લખાણ એ સામાન્ય લખાણની રીતે એજ રંગ ની મદદથી રેન્ડર થયેલ હશે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:12
-msgid "Whether to allow bold text"
+#: src/com.aripd.Pano.gschema.xml:178
+msgid ""
+"Scale factor for the cell height to increase line spacing. (Does not "
+"increase the font’s height.)"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:183
+msgid ""
+"Scale factor for the cell width to increase letter spacing. (Does not "
+"increase the font’s width.)"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:187
+#, fuzzy
+#| msgid "Whether to blink the cursor"
+msgid "Whether to use custom cursor colors"
+msgstr "કર્સરને ઝબૂકાવવું કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:188
+msgid "If true, use the cursor colors from the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:192
+#, fuzzy
+#| msgid "_Background color:"
+msgid "Cursor background color"
+msgstr "પાશ્વ ભાગનો રંગ (_B):"
+
+#: src/com.aripd.Pano.gschema.xml:193
+#, fuzzy
+#| msgid ""
+#| "Default color of bold text in the terminal, as a color specification (can "
+#| "be HTML-style hex digits, or a color name such as \"red\"). This is "
+#| "ignored if bold_color_same_as_fg is true."
+msgid ""
+"Custom color of the background of the terminal’s cursor, as a color "
+"specification (can be HTML-style hex digits, or a color name such as “red”). "
+"This is ignored if cursor-colors-set is false."
+msgstr ""
+"રંગના સ્પષ્ટીકરણ રુપે ટર્મિનલમાંના લખાણનો મૂળભૂત રંગ (HTML- ની રીતનો આધાર વાળી સંખ્યા "
+"અથવા રંગનું નામ જેમ કે \"લાલ\"). આ અવગણેલ છે જો bold_color_same_as_fg એ true હોય તો."
+
+#: src/com.aripd.Pano.gschema.xml:197
+msgid "Cursor foreground colour"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:198
+#, fuzzy
+#| msgid ""
+#| "Default color of bold text in the terminal, as a color specification (can "
+#| "be HTML-style hex digits, or a color name such as \"red\"). This is "
+#| "ignored if bold_color_same_as_fg is true."
+msgid ""
+"Custom color for the foreground of the text character at the terminal’s "
+"cursor position, as a color specification (can be HTML-style hex digits, or "
+"a color name such as “red”). This is ignored if cursor-colors-set is false."
+msgstr ""
+"રંગના સ્પષ્ટીકરણ રુપે ટર્મિનલમાંના લખાણનો મૂળભૂત રંગ (HTML- ની રીતનો આધાર વાળી સંખ્યા "
+"અથવા રંગનું નામ જેમ કે \"લાલ\"). આ અવગણેલ છે જો bold_color_same_as_fg એ true હોય તો."
+
+#: src/com.aripd.Pano.gschema.xml:202
+msgid "Whether to use custom highlight colors"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:203
+msgid "If true, use the highlight colors from the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:207
+#, fuzzy
+#| msgid "_Background color:"
+msgid "Highlight background color"
+msgstr "પાશ્વ ભાગનો રંગ (_B):"
+
+#: src/com.aripd.Pano.gschema.xml:208
+#, fuzzy
+#| msgid ""
+#| "Default color of bold text in the terminal, as a color specification (can "
+#| "be HTML-style hex digits, or a color name such as \"red\"). This is "
+#| "ignored if bold_color_same_as_fg is true."
+msgid ""
+"Custom color of the background of the terminal’s highlight, as a color "
+"specification (can be HTML-style hex digits, or a color name such as “red”). "
+"This is ignored if highlight-colors-set is false."
+msgstr ""
+"રંગના સ્પષ્ટીકરણ રુપે ટર્મિનલમાંના લખાણનો મૂળભૂત રંગ (HTML- ની રીતનો આધાર વાળી સંખ્યા "
+"અથવા રંગનું નામ જેમ કે \"લાલ\"). આ અવગણેલ છે જો bold_color_same_as_fg એ true હોય તો."
+
+#: src/com.aripd.Pano.gschema.xml:212
+msgid "Highlight foreground colour"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:213
+#, fuzzy
+#| msgid ""
+#| "Default color of bold text in the terminal, as a color specification (can "
+#| "be HTML-style hex digits, or a color name such as \"red\"). This is "
+#| "ignored if bold_color_same_as_fg is true."
+msgid ""
+"Custom color for the foreground of the text character at the terminal’s "
+"highlight position, as a color specification (can be HTML-style hex digits, "
+"or a color name such as “red”). This is ignored if highlight-colors-set is "
+"false."
+msgstr ""
+"રંગના સ્પષ્ટીકરણ રુપે ટર્મિનલમાંના લખાણનો મૂળભૂત રંગ (HTML- ની રીતનો આધાર વાળી સંખ્યા "
+"અથવા રંગનું નામ જેમ કે \"લાલ\"). આ અવગણેલ છે જો bold_color_same_as_fg એ true હોય તો."
+
+#: src/com.aripd.Pano.gschema.xml:217
+msgid "Whether to perform bidirectional text rendering"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:218
+msgid "If true, perform bidirectional text rendering (“BiDi”)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:222
+msgid "Whether to perform Arabic shaping"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:223
+msgid "If true, shape Arabic text."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:227
+msgid "Whether to enable SIXEL images"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:228
+msgid "If true, SIXEL sequences are parsed and images are rendered."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:232
+#, fuzzy
+#| msgid "Whether to allow bold text"
+msgid "Whether bold is also bright"
 msgstr "ઘાટા લખાણને પરવાનગી આપવી કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:13
-msgid "If true, allow applications in the terminal to make text boldface."
-msgstr "જો true હોય તો, કાર્યક્રમને ટર્મિનલમાંના લખાણને ધાટું કરવાની પરવાનગી આપો."
+#: src/com.aripd.Pano.gschema.xml:233
+msgid ""
+"If true, setting bold on the first 8 colors also switches to their bright "
+"variants."
+msgstr ""
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:14
+#: src/com.aripd.Pano.gschema.xml:237
 msgid "Whether to ring the terminal bell"
 msgstr "ટર્મિનલની ઘંટડીને શાંત રાખવી કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:15
-msgid "Whether to show menubar in new windows/tabs"
-msgstr "નવી વિન્ડો/ટૅબમાં યાદીની પટ્ટી દર્શાવવી કે નહિં"
+#: src/com.aripd.Pano.gschema.xml:241
+#, fuzzy
+#| msgid "Whether to ring the terminal bell"
+msgid "Whether the terminal flashes when the bell rings"
+msgstr "ટર્મિનલની ઘંટડીને શાંત રાખવી કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:16
-msgid "True if the menubar should be shown in new window"
-msgstr "True જો મેનુપટ્ટીને નવી વિન્ડોમાં બતાવવી જોઇએ"
+#: src/com.aripd.Pano.gschema.xml:242
+msgid ""
+"When the terminal is in a tab in the background, the tab is marked instead."
+msgstr ""
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:17
+#: src/com.aripd.Pano.gschema.xml:246
+msgid "List of punctuation characters that are treated as word characters"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:247
+msgid ""
+"By default, when doing word-wise selection, most punctuation breaks up word "
+"boundaries. This list of exceptions will instead be treated as part of the "
+"word."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:252
 msgid "Default number of columns"
 msgstr "સ્તંભોની મૂળભૂત સંખ્યા"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:18
+#: src/com.aripd.Pano.gschema.xml:253
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -396,11 +468,11 @@ msgstr ""
 "નવી બનાવેલ ટર્મિનલ વિન્ડોમાં સ્તંભોની સંખ્યા. અસર કરતુ નથી જો use_custom_default_size "
 "સક્રિય થયેલ ન હોય."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:19
+#: src/com.aripd.Pano.gschema.xml:258
 msgid "Default number of rows"
 msgstr "હારમાળાઓની મૂળભૂત સંખ્યા"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:20
+#: src/com.aripd.Pano.gschema.xml:259
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -408,29 +480,40 @@ msgstr ""
 "નવી બનાવેલ ટર્મિનલ વિન્ડોમાં હારમાળોની સંખ્યા. અસર કરતુ નથી જો "
 "use_custom_default_size સક્રિય થયેલ ન હોય."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:21
+#: src/com.aripd.Pano.gschema.xml:263
 msgid "When to show the scrollbar"
 msgstr "સરકપટ્ટીને ક્યારે બતાવવી"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:22
+#: src/com.aripd.Pano.gschema.xml:267
+#, fuzzy
+#| msgid "Whether to blink the cursor"
+msgid "Whether to enable kinetic scrolling"
+msgstr "કર્સરને ઝબૂકાવવું કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:271
 msgid "Number of lines to keep in scrollback"
 msgstr "પાછા જવામાં સાચવી રાખેલી લીટીઓની સંખ્યા"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:23
+#: src/com.aripd.Pano.gschema.xml:272
+#, fuzzy
+#| msgid ""
+#| "Number of scrollback lines to keep around. You can scroll back in the "
+#| "terminal by this number of lines; lines that don't fit in the scrollback "
+#| "are discarded. If scrollback_unlimited is true, this value is ignored."
 msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
-"terminal by this number of lines; lines that don't fit in the scrollback are "
+"terminal by this number of lines; lines that don’t fit in the scrollback are "
 "discarded. If scrollback_unlimited is true, this value is ignored."
 msgstr ""
 "આસપાસ રહેવા માટે પાછા જવા માટેની લીટીઓની સંખ્યા. તમે ટર્મિનલમાં આટલી લાઇનો પાછી પણ "
 "લાવી શકો છો. જે લીટીઓ પાછા જવામાં બંધબેસતી ન હોય તેને દૂર કરો. જો "
 "scrollback_unlimited એ true હોય તો, આ કિંમત અવગણેલ છે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:24
+#: src/com.aripd.Pano.gschema.xml:276
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr "ક્યાંતો પાછા જવામાં અમર્યાદિત લીટીઓની સંખ્યાને રાખેલી હોવી જોઇએ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:25
+#: src/com.aripd.Pano.gschema.xml:277
 msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is "
 "stored on disk temporarily, so this may cause the system to run out of disk "
@@ -440,42 +523,64 @@ msgstr ""
 "રીતે ડિસ્ક પર સંગ્રહેલ છે, તેથી આ સિસ્ટમને ડિસ્ક જગ્યાની બહાર ચલાવવાનું કારણ બની શકે છે જો "
 "ટર્મિનલમાં ઘણાબધા આઉટપુટ હોય તો."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:26
+#: src/com.aripd.Pano.gschema.xml:281
+#, fuzzy
+#| msgid "Whether to scroll to the bottom when a key is pressed"
+msgid "Whether to scroll to the bottom when text is inserted"
+msgstr "જ્યારે કી દબાવવામાં આવે ત્યારે નીચે તરફ ખસેડવુ કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:282
+#, fuzzy
+#| msgid "Whether to scroll to the bottom when a key is pressed"
+msgid ""
+"If true, the terminal will scroll to the bottom when text is inserted by "
+"paste."
+msgstr "જ્યારે કી દબાવવામાં આવે ત્યારે નીચે તરફ ખસેડવુ કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:286
 msgid "Whether to scroll to the bottom when a key is pressed"
 msgstr "જ્યારે કી દબાવવામાં આવે ત્યારે નીચે તરફ ખસેડવુ કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:27
+#: src/com.aripd.Pano.gschema.xml:287
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr "જો true હોય તો, કી દબાવવાથી ખસેડવાની પટ્ટી નીચે તરફ ખસે છે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:28
-msgid "Whether to scroll to the bottom when there's new output"
+#: src/com.aripd.Pano.gschema.xml:291
+#, fuzzy
+#| msgid "Whether to scroll to the bottom when there's new output"
+msgid "Whether to scroll to the bottom when there’s new output"
 msgstr "જ્યારે નવું પરિણામ ગોય ત્યારે નીચે તરફ ખસેડવું કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:29
-msgid "If true, whenever there's new output the terminal will scroll to the bottom."
+#: src/com.aripd.Pano.gschema.xml:292
+#, fuzzy
+#| msgid ""
+#| "If true, whenever there's new output the terminal will scroll to the "
+#| "bottom."
+msgid ""
+"If true, whenever there’s new output the terminal will scroll to the bottom."
 msgstr "જો true હોય તો, જ્યારે નવું પરિણામ આવે ત્યારે ટર્મિનલ નીચે તરફ ખસશે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:30
+#: src/com.aripd.Pano.gschema.xml:296
 msgid "What to do with the terminal when the child command exits"
 msgstr "જ્યારે બાળ આદેશમાંથી બહાર નીકળે ત્યારે ટર્મિનલ સાથે શું કરવુ જોઇએ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:31
+#: src/com.aripd.Pano.gschema.xml:297
+#, fuzzy
+#| msgid ""
+#| "Possible values are \"close\" to close the terminal, and \"restart\" to "
+#| "restart the command."
 msgid ""
-"Possible values are \"close\" to close the terminal, and \"restart\" to "
-"restart the command."
+"Possible values are “close” to close the terminal, “restart” to restart the "
+"command, and “hold” to keep the terminal open with no command running inside."
 msgstr ""
 "સંભવિત કિંમતો \"બંધ કરો\" આ ટર્મિનલને બંધ કરવા અને \"ફરીથી શરુ કરો\" એ આદેશને ફરી શરુ "
 "કરવા માટે છે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:32
+#: src/com.aripd.Pano.gschema.xml:301
 msgid "Whether to launch the command in the terminal as a login shell"
 msgstr "ટર્મિનલમાં આદેશને પ્રવેશ શેલ તરીકે શરુ કરવો કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:33
-#| msgid ""
-#| "If true, the command inside the terminal will be launched as a login "
-#| "shell. (argv[0] will have a hyphen in front of it.)"
+#: src/com.aripd.Pano.gschema.xml:302
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell "
 "(argv[0] will have a hyphen in front of it)."
@@ -483,221 +588,490 @@ msgstr ""
 "જો true હોય તો, ટર્મિનલની અંદરનો આદેશ પ્રવેશ શૅલ તરીકે શરુ કરવો જોઇએ (argv[0] માટે "
 "તેની સામે હાઇફન હશે)."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:34
-msgid "Whether to update login records when launching terminal command"
+#: src/com.aripd.Pano.gschema.xml:306
+#, fuzzy
+#| msgid "Whether to update login records when launching terminal command"
+msgid "Whether to preserve the working directory when opening a new terminal"
 msgstr "જ્યારે ટર્મિનલમાંનો આદેશ શરુ થાય ત્યારે શું પ્રવેશ રેકોર્ડોમાં સુધારો કરવો"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:35
+#: src/com.aripd.Pano.gschema.xml:307
 msgid ""
-"If true, the system login records utmp and wtmp will be updated when the "
-"command inside the terminal is launched."
+"Controls when opening a new terminal from a previous one carries over the "
+"working directory of the opening terminal to the new one."
 msgstr ""
-"જો true હોય તો, જ્યારે ટર્મિનલમાં રહેલા આદેશની શરુઆત થાય ત્યારે પ્રવેશ રેકોર્ડો utmp અને "
-"wtmp માં સુધારો થશે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:36
+#: src/com.aripd.Pano.gschema.xml:313
 msgid "Whether to run a custom command instead of the shell"
 msgstr "શેલની જગ્યાએ કસ્ટમ આદેશ ચલાવવો કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:37
+#: src/com.aripd.Pano.gschema.xml:314
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "જો true હોય તો, ચાલી રહેલા શૅલની જગ્યાએ કસ્ટમ આદેશમાં ગોઠવાયેલ કિંમત ઉપયાગમાં લેવાશે."
+msgstr ""
+"જો true હોય તો, ચાલી રહેલા શૅલની જગ્યાએ કસ્ટમ આદેશમાં ગોઠવાયેલ કિંમત ઉપયાગમાં લેવાશે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:38
+#: src/com.aripd.Pano.gschema.xml:318
 msgid "Whether to blink the cursor"
 msgstr "કર્સરને ઝબૂકાવવું કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:39
+#: src/com.aripd.Pano.gschema.xml:319
+#, fuzzy
+#| msgid ""
+#| "The possible values are \"system\" to use the global cursor blinking "
+#| "settings, or \"on\" or \"off\" to set the mode explicitly."
 msgid ""
-"The possible values are \"system\" to use the global cursor blinking "
-"settings, or \"on\" or \"off\" to set the mode explicitly."
+"The possible values are “system” to use the global cursor blinking settings, "
+"or “on” or “off” to set the mode explicitly."
 msgstr ""
 "વૈશ્વિક કર્સર ઝબૂકવાના સુયોજનો વાપરવા માટેની શક્ય કિંમતો છે \"સિસ્ટમ\", કે પછી સ્થિતિ "
 "અલગથી સુયોજીત કરવા માટે \"ચાલુ\" કે \"બંધ\" વાપરો."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:40
+#: src/com.aripd.Pano.gschema.xml:323
 msgid "The cursor appearance"
 msgstr "કર્સર દેખાવ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:41
+#: src/com.aripd.Pano.gschema.xml:327
+msgid ""
+"Possible values are “always” or “never” allow blinking text, or only when "
+"the terminal is “focused” or “unfocused”."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:331
 msgid "Custom command to use instead of the shell"
 msgstr "શેલની જગ્યાએ કસ્ટમ આદેશ વાપરો"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:42
+#: src/com.aripd.Pano.gschema.xml:332
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr "જો use_custom_command true હોય હોય તો શેલની જગ્યાએ આ આદેશ ચલાવો."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:43
+#: src/com.aripd.Pano.gschema.xml:336
+msgid "The color scheme, or empty for the colors set in this profile"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:337
+msgid ""
+"The name of a .palette file, without the suffix. Its colors replace the "
+"foreground, background and palette of the profile, and follow the light or "
+"dark style of the system if the scheme has both."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:342
+#, fuzzy
+#| msgid "Default color of terminal background"
+msgid "Opacity of the terminal background"
+msgstr "ટર્મિનલના પાશ્વ ભાગનો મૂળભૂત રંગ"
+
+#: src/com.aripd.Pano.gschema.xml:343
+msgid ""
+"1.0 is opaque. With lower values the desktop shows through the background of "
+"the terminal; the text stays opaque."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:362
 msgid "Palette for terminal applications"
 msgstr "ટર્મિનલના કાર્યક્રમો માટેની પેલેટ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:44
+#: src/com.aripd.Pano.gschema.xml:366
 msgid "A Pango font name and size"
 msgstr "pango ફોન્ટ નામ અને માપ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:45
+#: src/com.aripd.Pano.gschema.xml:370
 msgid "The code sequence the Backspace key generates"
 msgstr "કોડ કતાર બેકસ્પેસ કી ને ઉત્પન્ન કરે છે"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:46
+#: src/com.aripd.Pano.gschema.xml:374
 msgid "The code sequence the Delete key generates"
 msgstr "કોડ કતાર દૂર કરવાની કી બનાવે છે"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:47
+#: src/com.aripd.Pano.gschema.xml:378
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr "ટર્મિનલ વિજેટ માટે થીમમાંથી રંગો વાપરવા કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:48
+#: src/com.aripd.Pano.gschema.xml:382
 msgid "Whether to use the system monospace font"
 msgstr "શું સિસ્ટમ મોનોસ્પેસ ફોન્ટ વાપરવા જોઇએ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:49
+#: src/com.aripd.Pano.gschema.xml:386
 #, fuzzy
 #| msgid "Whether to use custom terminal size for new windows"
 msgid "Whether to rewrap the terminal contents on window resize"
 msgstr "ક્યાંતો નવી વિન્ડો માટે વૈવિધ્ય ટર્મિનલ માપને વાપરો"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:50
+#: src/com.aripd.Pano.gschema.xml:390
 msgid "Which encoding to use"
 msgstr "ક્યું એનકોડીંગ વાપરવાનુ છે"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:51
+#: src/com.aripd.Pano.gschema.xml:394
 msgid ""
 "Whether ambiguous-width characters are narrow or wide when using UTF-8 "
 "encoding"
 msgstr ""
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:52
+#: src/com.aripd.Pano.gschema.xml:403
 msgid "Keyboard shortcut to open a new tab"
 msgstr "નવી ટૅબ ખોલવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:53
+#: src/com.aripd.Pano.gschema.xml:407
 msgid "Keyboard shortcut to open a new window"
 msgstr "નવી વિન્ડો ખોલવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:54
-msgid "Keyboard shortcut to create a new profile"
-msgstr "નવી રૂપરેખા બનાવવા માટે કીબોર્ડનું ટુંકાણ"
-
-#: ../src/org.gnome.Terminal.gschema.xml.h:55
-msgid "Keyboard shortcut to save the current tab contents to file"
+#: src/com.aripd.Pano.gschema.xml:411
+#, fuzzy
+#| msgid "Keyboard shortcut to save the current tab contents to file"
+msgid ""
+"Keyboard shortcut to save the contents of the current terminal, with its "
+"scrollback, to a file"
 msgstr "ફાઇલના હાલના ટૅબને સંગ્રહવા માટે કિબોર્ડ ટૂંકાણો"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:56
+#: src/com.aripd.Pano.gschema.xml:415
 msgid "Keyboard shortcut to close a tab"
 msgstr "ટેબ બંધ કરવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:57
+#: src/com.aripd.Pano.gschema.xml:419
+#, fuzzy
+#| msgid "Keyboard shortcut to save the current tab contents to file"
+msgid ""
+"Keyboard shortcut to close the tabs other than the current one, except "
+"pinned tabs"
+msgstr "ફાઇલના હાલના ટૅબને સંગ્રહવા માટે કિબોર્ડ ટૂંકાણો"
+
+#: src/com.aripd.Pano.gschema.xml:423
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new tab"
+msgid "Keyboard shortcut to reopen the last closed tab"
+msgstr "નવી ટૅબ ખોલવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:427
 msgid "Keyboard shortcut to close a window"
 msgstr "વિન્ડો બંધ કરવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:58
+#: src/com.aripd.Pano.gschema.xml:431
 msgid "Keyboard shortcut to copy text"
 msgstr "લખાણની નકલ કરવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:59
+#: src/com.aripd.Pano.gschema.xml:435
+#, fuzzy
+#| msgid "Keyboard shortcut to copy text"
+msgid "Keyboard shortcut to copy text as HTML"
+msgstr "લખાણની નકલ કરવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:439
 msgid "Keyboard shortcut to paste text"
 msgstr "લખાણને ચોંટાડવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:60
+#: src/com.aripd.Pano.gschema.xml:443
+#, fuzzy
+#| msgid "Keyboard shortcut to paste text"
+msgid "Keyboard shortcut to select all text"
+msgstr "લખાણને ચોંટાડવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:447
+#, fuzzy
+#| msgid "Keyboard shortcut to open the search dialog"
+msgid "Keyboard shortcut to open the Preferences dialog"
+msgstr "શોધ સંવાદને ખોલવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:451
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "આખી સ્ક્રીનની સ્થિતિની ફેરબદલી માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:61
-msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr "યાદીની પટ્ટીની દ્રશ્યમાન સ્થિતિની ફેરબદલી માટે કીબોર્ડનું ટુંકાણ"
+#: src/com.aripd.Pano.gschema.xml:455
+#, fuzzy
+#| msgid "Keyboard shortcut to toggle full screen mode"
+msgid "Keyboard shortcut to toggle the read-only state"
+msgstr "આખી સ્ક્રીનની સ્થિતિની ફેરબદલી માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:62
+#: src/com.aripd.Pano.gschema.xml:459
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid ""
+"Keyboard shortcut to label URLs, paths and more on the screen, to copy them "
+"by typing the label"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:463
+#, fuzzy
+#| msgid "Keyboard shortcut to open the search dialog"
+msgid "Keyboard shortcut to open the command palette"
+msgstr "શોધ સંવાદને ખોલવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:467
+#, fuzzy
+#| msgid "Keyboard shortcut to reset and clear the terminal"
+msgid ""
+"Keyboard shortcut to set a title for the terminal that programs cannot change"
+msgstr "ટર્મિનલને ફરીથી સુયોજિત કરવા અને સાફ કરવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:471
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "ટર્મિનલને ફરીથી સુયોજિત કરવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:63
+#: src/com.aripd.Pano.gschema.xml:475
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "ટર્મિનલને ફરીથી સુયોજિત કરવા અને સાફ કરવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:64
-#| msgid "Keyboard shortcut to reset the terminal"
+#: src/com.aripd.Pano.gschema.xml:479
 msgid "Keyboard shortcut to open the search dialog"
 msgstr "શોધ સંવાદને ખોલવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:65
+#: src/com.aripd.Pano.gschema.xml:483
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:66
+#: src/com.aripd.Pano.gschema.xml:487
 #, fuzzy
 #| msgid "Keyboard shortcut to move the current tab to the right"
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:67
-#| msgid "Keyboard shortcut to set the terminal title"
+#: src/com.aripd.Pano.gschema.xml:491
 msgid "Keyboard shortcut to clear the find highlighting"
 msgstr "પ્રકાશતા શોધવાનું સાફ કરવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:68
+#: src/com.aripd.Pano.gschema.xml:495
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "પહેલાના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:69
+#: src/com.aripd.Pano.gschema.xml:499
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "પછીના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:70
+#: src/com.aripd.Pano.gschema.xml:503
 msgid "Keyboard shortcut to move the current tab to the left"
 msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:71
+#: src/com.aripd.Pano.gschema.xml:507
 msgid "Keyboard shortcut to move the current tab to the right"
 msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:72
+#: src/com.aripd.Pano.gschema.xml:511
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the current tab to the start"
+msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:515
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the current tab to the end"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:519
 msgid "Keyboard shortcut to detach current tab"
 msgstr "હાલની ટૅબને અલગ કરવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:73
+#: src/com.aripd.Pano.gschema.xml:523
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the previous tab"
+msgid "Keyboard shortcut to scroll to the previous shell prompt"
+msgstr "પહેલાના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:527
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to scroll to the next shell prompt"
+msgstr "પછીના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:531
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to copy the output of the last command"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:535
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to send input to all panes of the tab, or to stop"
+msgstr "પછીના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:539
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new window"
+msgid ""
+"Keyboard shortcut to send input to all terminals of the window, or to stop"
+msgstr "નવી વિન્ડો ખોલવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:543
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid ""
+"Keyboard shortcut to move the focus to the tab list, when the tabs are on "
+"the left or right"
+msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:547
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to split the terminal and open a new one on the right"
+msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:551
+#, fuzzy
+#| msgid "Keyboard shortcut to reset the terminal"
+msgid "Keyboard shortcut to split the terminal and open a new one below"
+msgstr "ટર્મિનલને ફરીથી સુયોજિત કરવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:555
+#, fuzzy
+#| msgid "Keyboard shortcut to close a tab"
+msgid "Keyboard shortcut to close the active pane of a split tab"
+msgstr "ટેબ બંધ કરવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:559
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid ""
+"Keyboard shortcut to show only the active pane of a split tab, or all panes "
+"again"
+msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:563
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to give the panes of a tab the same size"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:567
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the active pane to a new tab"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:571
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the focus to the pane on the left"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:575
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the focus to the pane on the right"
+msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:579
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the focus to the pane above"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:583
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the focus to the pane below"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:587
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the divider of the active pane to the left"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:591
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the divider of the active pane to the right"
+msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:595
+#, fuzzy
+#| msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgid "Keyboard shortcut to move the divider of the active pane up"
+msgstr "યાદીની પટ્ટીની દ્રશ્યમાન સ્થિતિની ફેરબદલી માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:599
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the divider of the active pane down"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:603
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to swap the active pane with the pane on the left"
+msgstr "ડાબે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:607
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to swap the active pane with the pane on the right"
+msgstr "જમણે હાલની ટૅબને ખસેડવા માટે કિબોર્ડ ટૂંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:611
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane above"
+msgstr "પછીના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:615
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane below"
+msgstr "પછીના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:619
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to tab 1"
+msgid "Keyboard shortcut to show the tabs overview"
+msgstr "ટૅબ ૧ પર જવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:623 src/com.aripd.Pano.gschema.xml:627
+#: src/com.aripd.Pano.gschema.xml:631 src/com.aripd.Pano.gschema.xml:635
+#: src/com.aripd.Pano.gschema.xml:639 src/com.aripd.Pano.gschema.xml:643
+#: src/com.aripd.Pano.gschema.xml:647 src/com.aripd.Pano.gschema.xml:651
+#: src/com.aripd.Pano.gschema.xml:655 src/com.aripd.Pano.gschema.xml:659
+#: src/com.aripd.Pano.gschema.xml:663 src/com.aripd.Pano.gschema.xml:667
+#: src/com.aripd.Pano.gschema.xml:671 src/com.aripd.Pano.gschema.xml:675
+#: src/com.aripd.Pano.gschema.xml:679 src/com.aripd.Pano.gschema.xml:683
+#: src/com.aripd.Pano.gschema.xml:687 src/com.aripd.Pano.gschema.xml:691
+#: src/com.aripd.Pano.gschema.xml:695 src/com.aripd.Pano.gschema.xml:699
+#: src/com.aripd.Pano.gschema.xml:703 src/com.aripd.Pano.gschema.xml:707
+#: src/com.aripd.Pano.gschema.xml:711 src/com.aripd.Pano.gschema.xml:715
+#: src/com.aripd.Pano.gschema.xml:719 src/com.aripd.Pano.gschema.xml:723
+#: src/com.aripd.Pano.gschema.xml:727 src/com.aripd.Pano.gschema.xml:731
+#: src/com.aripd.Pano.gschema.xml:735 src/com.aripd.Pano.gschema.xml:739
+#: src/com.aripd.Pano.gschema.xml:743 src/com.aripd.Pano.gschema.xml:747
+#: src/com.aripd.Pano.gschema.xml:751 src/com.aripd.Pano.gschema.xml:755
+#: src/com.aripd.Pano.gschema.xml:759
 msgid "Keyboard shortcut to switch to the numbered tab"
 msgstr "ક્રમાંકિત થયેલ ટૅબને બદલવા માટે કિબોર્ડ ટૂંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:74
+#: src/com.aripd.Pano.gschema.xml:763
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to switch to the last tab"
+msgstr "પછીના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
+
+#: src/com.aripd.Pano.gschema.xml:767
 msgid "Keyboard shortcut to launch help"
 msgstr "મદદ લાવવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:75
+#: src/com.aripd.Pano.gschema.xml:771
 msgid "Keyboard shortcut to make font larger"
 msgstr "ફોન્ટ મોટા બનાવવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:76
+#: src/com.aripd.Pano.gschema.xml:775
 msgid "Keyboard shortcut to make font smaller"
 msgstr "ફોન્ટ નાના બનાવવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:77
+#: src/com.aripd.Pano.gschema.xml:779
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "સામાન્ય માપના ફોન્ટ બનાવવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:78
-msgid "Whether the menubar has access keys"
-msgstr "કદાચ મેનુપટ્ટી પાસે સુલભ કીઓ છે કે નહિં"
+#: src/com.aripd.Pano.gschema.xml:783
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the previous tab"
+msgid "Keyboard shortcut to show the primary menu"
+msgstr "પહેલાના ટૅબ પર જવા માટે કીબોર્ડનું ટુંકાણ"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:79
-msgid ""
-"Whether to have Alt+letter access keys for the menubar. They may interfere "
-"with some applications run inside the terminal so it's possible to turn them "
-"off."
-msgstr ""
-"યાદીની પટ્ટી માટે Alt+letter નું ટીંકાણ છે કે નહિં. તેઓ કદાચ ટર્મિનલમા ચાલતા કેટલાક "
-"કાર્યક્રમો સાથે વપરાશ ગોઠવણી ધરાવે છે માટે તેમને બંધ કરવા શક્ય છે."
-
-#: ../src/org.gnome.Terminal.gschema.xml.h:80
-#| msgid "Whether the standard GTK shortcut for menubar access is enabled"
+#: src/com.aripd.Pano.gschema.xml:797
 msgid "Whether shortcuts are enabled"
 msgstr "શું ટૂંકાણો સક્રિય થયેલ છે"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:81
+#: src/com.aripd.Pano.gschema.xml:798
 #, fuzzy
 #| msgid ""
 #| "Whether to have Alt+letter access keys for the menubar. They may "
@@ -705,16 +1079,16 @@ msgstr "શું ટૂંકાણો સક્રિય થયેલ છે"
 #| "to turn them off."
 msgid ""
 "Whether shortcuts are enabled. They may interfere with some applications run "
-"inside the terminal so it's possible to turn them off."
+"inside the terminal so it’s possible to turn them off."
 msgstr ""
 "યાદીની પટ્ટી માટે Alt+letter નું ટીંકાણ છે કે નહિં. તેઓ કદાચ ટર્મિનલમા ચાલતા કેટલાક "
 "કાર્યક્રમો સાથે વપરાશ ગોઠવણી ધરાવે છે માટે તેમને બંધ કરવા શક્ય છે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:82
+#: src/com.aripd.Pano.gschema.xml:807
 msgid "Whether the standard GTK shortcut for menubar access is enabled"
 msgstr "યાદીની પટ્ટીને પ્રાપ્ત કરવા માટેનું પ્રમાણભૂત GTK ટૂંકાણ સક્રિય છે કે નહિં"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:83
+#: src/com.aripd.Pano.gschema.xml:808
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
@@ -724,952 +1098,1213 @@ msgstr ""
 "\"whatever\") દ્વારા પણ જોઇએ એવા ફેરફાર કરી શકાય છે. આ વિકલ્પ પ્રમાણભૂત યાદીની "
 "પટ્ટીના પ્રવેગકને નિષ્ક્રય થવા દે છે."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:84
+#: src/com.aripd.Pano.gschema.xml:818
 msgid "Whether the shell integration is enabled"
 msgstr "શું શેલ એકત્રિકરણ સક્રિય થયેલ છે"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:85
-msgid "List of available encodings"
-msgstr "પર્યાપ્ત સંગ્રહપદ્ધતિઓની યાદી"
-
-#: ../src/org.gnome.Terminal.gschema.xml.h:86
-#, fuzzy
-#| msgid ""
-#| "A subset of possible encodings are presented in the Encoding submenu. "
-#| "This is a list of encodings to appear there. The special encoding name "
-#| "\"current\" means to display the encoding of the current locale."
+#: src/com.aripd.Pano.gschema.xml:819
 msgid ""
-"A subset of possible encodings are presented in the Encoding submenu. This "
-"is a list of encodings to appear there."
+"This is about GNOME Shell: whether terminals can be found in its search. See "
+"inject-shell-integration for the integration of the shells in the terminals."
 msgstr ""
-"સંગ્રહ પધ્ધતિ ગૌણ યાદીમાં શક્ય તેવી સંગ્રહ પધ્ધતિના ગૌણ સમૂહ હાજર છે. ત્યાં દર્શાવવા માટેની "
-"આ સંગ્રહ પધ્ધતિ યાદી છે. વિશિષ્ટ સંગ્રહ પધ્ધતિનું નામ વર્તમાન એટલે વર્તમાન લોકેલની સંગ્રહ "
-"પધ્ધતિ દર્શાવવી."
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:87
+#: src/com.aripd.Pano.gschema.xml:824
+#, fuzzy
+#| msgid "Whether the shell integration is enabled"
+msgid "Whether to add shell integration to bash, zsh and fish"
+msgstr "શું શેલ એકત્રિકરણ સક્રિય થયેલ છે"
+
+#: src/com.aripd.Pano.gschema.xml:825
+msgid ""
+"If true, the default shell of a profile is started so that it reports its "
+"prompts, commands and working directory, which command notifications, prompt "
+"navigation and copying command output need. Custom commands, login bash "
+"shells and terminals in containers are left alone."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:830
 msgid "Whether to ask for confirmation before closing a terminal"
 msgstr "જ્યારે ટર્મિનલ વિન્ડો બંધ કરી રહ્યા હોય ત્યારે શું ખાતરી માટે પૂછવું"
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:88
-msgid "Whether to show the menubar in new windows"
-msgstr "ક્યાંતો નવી વિન્ડોમાં મેનુપટ્ટીને બતાવવી કે નહિં"
+#: src/com.aripd.Pano.gschema.xml:835
+msgid "Additional info section items to appear in the context menu"
+msgstr ""
 
-#: ../src/org.gnome.Terminal.gschema.xml.h:89
-#, fuzzy
-#| msgid "Whether to use the system monospace font"
-msgid "Whether to use a dark theme variant"
-msgstr "શું સિસ્ટમ મોનોસ્પેસ ફોન્ટ વાપરવા જોઇએ"
-
-#: ../src/org.gnome.Terminal.gschema.xml.h:90
+#: src/com.aripd.Pano.gschema.xml:840
 #, fuzzy
 #| msgid "Whether to show menubar in new windows/tabs"
 msgid "Whether to open new terminals as windows or tabs"
 msgstr "નવી વિન્ડો/ટૅબમાં યાદીની પટ્ટી દર્શાવવી કે નહિં"
 
-#. Open new terminal in new window
-#: ../src/preferences.ui.h:2
-msgid "Window"
-msgstr "વિન્ડો"
+#: src/com.aripd.Pano.gschema.xml:845
+#, fuzzy
+#| msgid "When to show the scrollbar"
+msgid "When to show the tabs bar"
+msgstr "સરકપટ્ટીને ક્યારે બતાવવી"
 
-#. Open new terminal in new tab
-#: ../src/preferences.ui.h:4
-msgid "Tab"
-msgstr "ટેબ"
+#: src/com.aripd.Pano.gschema.xml:851
+msgid "Width of the tab list when the tabs are on the left or right"
+msgstr ""
 
-#: ../src/preferences.ui.h:5
-msgid "Preferences"
-msgstr "પસંદગીઓ"
+#: src/com.aripd.Pano.gschema.xml:855
+msgid "The position of the tabs bar"
+msgstr ""
 
-#: ../src/preferences.ui.h:6
-msgid "Show _menubar by default in new terminals"
-msgstr "નવા ટર્મિનલમાં મૂળભૂત રીતે યાદીની પટ્ટી બતાવો"
+#: src/com.aripd.Pano.gschema.xml:860
+#, fuzzy
+#| msgid "Which encoding to use"
+msgid "Which theme variant to use"
+msgstr "ક્યું એનકોડીંગ વાપરવાનુ છે"
 
-#: ../src/preferences.ui.h:7
-msgid "_Enable mnemonics (such as Alt+F to open the File menu)"
-msgstr "mnemonics સક્રિય કરો (જેમ કે ફાઈલ મેનુ ખોલવા માટે Alt+F) (_E)"
+#: src/com.aripd.Pano.gschema.xml:865
+msgid ""
+"Whether new tabs should open next to the current one or at the last position"
+msgstr ""
 
-#: ../src/preferences.ui.h:8
-msgid "Enable the _menu accelerator key (F10 by default)"
-msgstr "મેનુ ટૂંકાણ કી સક્રિય કરો (F10 મૂળભૂત રીતે ) (_m)"
+#: src/com.aripd.Pano.gschema.xml:870
+msgid "What a middle click on a tab does"
+msgstr ""
 
-#: ../src/preferences.ui.h:9
-msgid "Use _dark theme variant"
-msgstr "ઘાટ્ટી થીમ ચલને વાપરો (_d)"
+#: src/com.aripd.Pano.gschema.xml:871
+msgid ""
+"“close” closes the tab; “paste” switches to the tab and pastes the primary "
+"selection into it."
+msgstr ""
 
-#: ../src/preferences.ui.h:10
-msgid "Open _new terminals in:"
-msgstr "તેમાં નવાં ટર્મિનલને ખોલો (_n):"
+#: src/com.aripd.Pano.gschema.xml:876
+msgid "Whether windows should have rounded corners"
+msgstr ""
 
-#: ../src/preferences.ui.h:11 ../src/profile-preferences.ui.h:61
-msgid "General"
-msgstr "સામાન્ય"
+#: src/com.aripd.Pano.gschema.xml:881
+msgid "The space between the terminal text and the edges of the terminal"
+msgstr ""
 
-#: ../src/preferences.ui.h:12
-msgid "_Enable shortcuts"
-msgstr "ટૂંકાણને સક્રિય કરો (_E)"
+#: src/com.aripd.Pano.gschema.xml:882
+msgid ""
+"“none” removes it, also next to rounded window corners; “small” keeps the "
+"text clear of rounded corners; “large” leaves more room."
+msgstr ""
 
-#: ../src/preferences.ui.h:13
-msgid "Shortcuts"
+#: src/com.aripd.Pano.gschema.xml:889
+msgid ""
+"Whether the user has been asked to import the settings of GNOME Terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:894
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to give the header bar and the tabs the colors of the active terminal"
+msgstr "ટર્મિનલ વિજેટ માટે થીમમાંથી રંગો વાપરવા કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:895
+msgid ""
+"Only when the terminal uses a color scheme or colors of its own, not the "
+"system style; the colors for root and remote sessions take precedence."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:900
+msgid "Whether to dim the panes of a split tab other than the active one"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:905
+msgid "Whether to show a title bar above each pane of a split tab"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:910
+msgid "Regular expressions for more text that quick select offers"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:911
+msgid ""
+"Quick select labels URLs, paths, hashes, addresses and numbers; matches of "
+"these Perl-compatible regular expressions are offered too, before those."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:916
+#, fuzzy
+#| msgid "Whether to ring the terminal bell"
+msgid "Whether to ignore the titles that programs set"
+msgstr "ટર્મિનલની ઘંટડીને શાંત રાખવી કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:917
+msgid ""
+"If true, terminals show the title set with “Set Title…” or the --title "
+"option, or else their working directory, instead of the title that programs "
+"set with escape sequences."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:922
+msgid "Whether to show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:927
+msgid ""
+"Whether to notify when a long-running command finishes in the background"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:928
+msgid ""
+"Needs a shell that reports its commands, for example bash or zsh with the "
+"VTE shell integration (vte.sh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:934
+msgid "How long a command must run, in seconds, before its end is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:940
+msgid ""
+"How long, in seconds, a terminal monitored for silence must be quiet before "
+"that is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:946
+msgid "Width of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:952
+msgid "Height of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:957
+msgid ""
+"Whether the quick terminal hides when another application gets the focus"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:962
+msgid "Whether the quick terminal slides in from the top edge of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:963
+msgid "Only on X11, where applications can place their windows."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:968
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to ask the desktop for a system-wide shortcut for the quick terminal"
+msgstr "ટર્મિનલ વિજેટ માટે થીમમાંથી રંગો વાપરવા કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:969
+msgid ""
+"Uses the GlobalShortcuts portal (GNOME 48 or newer, KDE Plasma). The desktop "
+"sends the shortcut only to a running application, so Pano Terminal then "
+"keeps running in the background and starts when you log in."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:974
+#, fuzzy
+#| msgid "Whether to show menubar in new windows/tabs"
+msgid "Whether to show when a terminal runs as root or over SSH"
+msgstr "નવી વિન્ડો/ટૅબમાં યાદીની પટ્ટી દર્શાવવી કે નહિં"
+
+#: src/com.aripd.Pano.gschema.xml:975
+msgid ""
+"Colors the header bar and marks the tab while the foreground program of the "
+"terminal runs as root (for example sudo or su) or connects to another "
+"computer (ssh, mosh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:980
+msgid ""
+"Whether new tabs and panes start in the container of the terminal they are "
+"opened from"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:981
+msgid ""
+"Works for Toolbox and Distrobox containers. The shell inside the container "
+"has to report it (Toolbox does), or the terminal has to be started in it "
+"from Pano Terminal."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:986
+msgid ""
+"Whether to reopen the windows, tabs and panes of the last session on startup"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:987
+msgid ""
+"Applies when Pano Terminal is started without arguments and no window is "
+"open. Each terminal gets a new shell in its previous working directory; "
+"running programs are not restored."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:992
+msgid "Whether new windows get the size of the last used terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:993
+msgid ""
+"When enabled, new windows use the number of columns and rows of the terminal "
+"used last, instead of the initial size of the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:998
+msgid "Always check whether Pano Terminal is the default terminal"
+msgstr ""
+
+#: src/search-popover.ui:5 src/search-popover.ui:26 src/terminal-accels.cc:166
+#: src/terminal-headerbar.ui:66
+msgid "Find"
+msgstr "શોધો"
+
+#: src/search-popover.ui:34
+#, fuzzy
+#| msgid "Find Previous"
+msgid "Find previous occurrence"
+msgstr "પહેલાનું શોધો"
+
+#: src/search-popover.ui:48
+msgid "Find next occurrence"
+msgstr ""
+
+#: src/search-popover.ui:68
+#, fuzzy
+#| msgid "Show server options"
+msgid "Toggle search options"
+msgstr "સર્વર વિકલ્પો બતાવો"
+
+#: src/search-popover.ui:107
+msgid "_Match case"
+msgstr "જોડણી સરખાવો (_M)"
+
+#: src/search-popover.ui:117
+msgid "Match _entire word only"
+msgstr "માત્ર આખા શબ્દને જ સરખાવો (_e)"
+
+#: src/search-popover.ui:127
+msgid "Match as _regular expression"
+msgstr "રૅગ્યુલર એક્સપ્રેશન તરીકે બંધબેસાડો (_r)"
+
+#: src/search-popover.ui:137
+msgid "_Wrap around"
+msgstr "ફરતે લપેટો (_W)"
+
+#. Translators: <b>%s</b> is used to show the provided text in bold
+#: src/terminal-accel-dialog.cc:437
+#, c-format
+msgid "Enter new shortcut to change <b>%s</b>."
+msgstr ""
+
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2553
+msgid "_Cancel"
+msgstr "રદ કરો (_C)"
+
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2554
+msgid "_Set"
+msgstr ""
+
+#: src/terminal-accel-dialog.ui:88
+msgid "Press Escape to cancel or Backspace to disable."
+msgstr ""
+
+#: src/terminal-accel-row.cc:54
+#, fuzzy
+#| msgid "Disabled"
+msgid "disabled"
+msgstr "નિષ્ક્રિય"
+
+#: src/terminal-accel-row.cc:88
+#, fuzzy
+#| msgid "Shortcuts"
+msgid "Set Shortcut"
 msgstr "ટૂંકાણ કીઓ"
 
-#: ../src/preferences.ui.h:14
-msgid "_Clone"
-msgstr "ક્લોન કરો (_C)"
-
-#: ../src/preferences.ui.h:15
-msgid "_Profile used when launching a new terminal:"
-msgstr "જ્યારે નવું ટર્મિનલ લોન્ચ કરી રહ્યા હોય ત્યારે વાપરવાની રૂપરેખા (_P):"
-
-#: ../src/preferences.ui.h:16
-msgid "Profiles"
-msgstr "રૂપરેખાઓ"
-
-#: ../src/preferences.ui.h:17
-msgid "E_ncodings shown in menu:"
-msgstr "સંગ્રહ પધ્ધતિ યાદીમાં બતાવેલી છે (_n):"
-
-#: ../src/preferences.ui.h:18
-msgid "Encodings"
-msgstr "સંગ્રહ પધ્ધતિ"
-
-#: ../src/profile-editor.c:48
-msgid "Black on light yellow"
-msgstr "આછા પીળા પર કાળો"
-
-#: ../src/profile-editor.c:52
-msgid "Black on white"
-msgstr "સફેદ પર કાળો"
-
-#: ../src/profile-editor.c:56
-msgid "Gray on black"
-msgstr "કાળા પર રાખોડી"
-
-#: ../src/profile-editor.c:60
-msgid "Green on black"
-msgstr "કાળા પર લીલો"
-
-#: ../src/profile-editor.c:64
-msgid "White on black"
-msgstr "કાળા પર સફેદ"
-
-#. Translators: "Solarized" is the name of a colour scheme, "light" can be translated
-#: ../src/profile-editor.c:69
-msgid "Solarized light"
-msgstr ""
-
-#. Translators: "Solarized" is the name of a colour scheme, "dark" can be translated
-#: ../src/profile-editor.c:74
-msgid "Solarized dark"
-msgstr ""
-
-#: ../src/profile-editor.c:438
-#, c-format
-msgid "Error parsing command: %s"
-msgstr "આદેશનું પદચ્છેદન કરવામાં ભૂલ: %s"
-
-#. This is the name of a colour scheme
-#: ../src/profile-editor.c:479 ../src/profile-preferences.ui.h:32
-msgid "Custom"
-msgstr "કસ્ટમ"
-
-#: ../src/profile-editor.c:638
-#, c-format
-msgid "Editing Profile “%s”"
-msgstr "રૂપરેખા “%s” માં ફેરફાર કરવાનું"
-
-#: ../src/profile-editor.c:842
-#, c-format
-msgid "Choose Palette Color %d"
-msgstr "તકતી રંગ %d પસંદ કરો"
-
-#: ../src/profile-editor.c:846
-#, c-format
-msgid "Palette entry %d"
-msgstr "તકતી પ્રવેશ %d"
-
-#. Cursor shape
-#: ../src/profile-preferences.ui.h:2
-msgid "Block"
-msgstr "બ્લોક"
-
-#. Cursor shape
-#: ../src/profile-preferences.ui.h:4
-msgid "I-Beam"
-msgstr "I-Beam"
-
-#. Cursor shape
-#: ../src/profile-preferences.ui.h:6
-msgid "Underline"
-msgstr "Underline"
-
-#. When terminal commands set their own titles
-#: ../src/profile-preferences.ui.h:8
-msgid "Replace initial title"
-msgstr "શરુઆતનું શીર્ષક બદલો"
-
-#. When terminal commands set their own titles
-#: ../src/profile-preferences.ui.h:10
-msgid "Append initial title"
-msgstr "શરુઆતનાં શીર્ષકને જોડો"
-
-#. When terminal commands set their own titles
-#: ../src/profile-preferences.ui.h:12
-msgid "Prepend initial title"
-msgstr "શરુઆતનાં શીર્ષકની તૈયારી કરો"
-
-#. When terminal commands set their own titles
-#: ../src/profile-preferences.ui.h:14
-msgid "Keep initial title"
-msgstr "શરુઆતનાં શીર્ષકને રાખો"
-
-#. When command exits
-#: ../src/profile-preferences.ui.h:16
-msgid "Exit the terminal"
-msgstr "ટર્મિનલમાંથી બહાર નીકળો"
-
-#. When command exits
-#: ../src/profile-preferences.ui.h:18
-msgid "Restart the command"
-msgstr "આદેશને પુન:શરૂ કરો"
-
-#. When command exits
-#: ../src/profile-preferences.ui.h:20
-msgid "Hold the terminal open"
-msgstr "ટર્મિનલને ખુલ્લુ પકડો"
-
-#. This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:22
-msgid "Tango"
-msgstr "Tango"
-
-#. This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:24
-msgid "Linux console"
-msgstr "Linux કન્સોલ"
-
-#. This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:26
-msgid "XTerm"
-msgstr "XTerm"
-
-#. This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:28
-msgid "Rxvt"
-msgstr "Rxvt"
-
-#. This is the name of a colour scheme
-#: ../src/profile-preferences.ui.h:30
-msgid "Solarized"
-msgstr ""
-
-#. This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:34
-msgid "Automatic"
-msgstr "આપોઆપ"
-
-#. This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:36
-msgid "Control-H"
-msgstr "Control-H"
-
-#. This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:38
-msgid "ASCII DEL"
-msgstr "ASCII DEL"
-
-#. This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:40
-msgid "Escape sequence"
-msgstr "Escape ક્રમ"
-
-#. This refers to the Delete keybinding option
-#: ../src/profile-preferences.ui.h:42
-msgid "TTY Erase"
-msgstr "TTY Erase"
-
-#. ambiguous-width characers are
-#: ../src/profile-preferences.ui.h:44
-msgid "Narrow"
-msgstr "સાંકડુ"
-
-#. ambiguous-width characers are
-#: ../src/profile-preferences.ui.h:46
-msgid "Wide"
-msgstr "પહોળુ"
-
-#: ../src/profile-preferences.ui.h:47
-msgid "Profile Editor"
-msgstr "રૂપરેખા સંપાદક"
-
-#: ../src/profile-preferences.ui.h:48
-msgid "_Profile name:"
-msgstr "રૂપરેખાનું નામ (_P):"
-
-#: ../src/profile-preferences.ui.h:49
-msgid "Profile ID:"
-msgstr "રૂપરેખા ID:"
-
-#: ../src/profile-preferences.ui.h:50
-msgid "Initial terminal si_ze:"
-msgstr "પ્રારંભિક ટર્મિનલ માપ (_z):"
-
-#: ../src/profile-preferences.ui.h:51
-msgid "columns"
-msgstr "સ્તંભો"
-
-#: ../src/profile-preferences.ui.h:52
-msgid "rows"
-msgstr "હારમાળા"
-
-#: ../src/profile-preferences.ui.h:53
-msgid "Rese_t"
-msgstr "પુન:સુયોજિત કરો (_t)"
-
-#: ../src/profile-preferences.ui.h:54
-msgid "Cursor _shape:"
-msgstr "કર્સર આકાર (_s):"
-
-#: ../src/profile-preferences.ui.h:55
-msgid "Terminal _bell"
-msgstr "ટર્મિનલ ઘંટડી (_b)"
-
-#: ../src/profile-preferences.ui.h:56
-msgid "Text Appearance"
-msgstr "લખાણ દેખાવ"
-
-#: ../src/profile-preferences.ui.h:57
-msgid "_Allow bold text"
-msgstr "ઘાટ્ટા અક્ષરોની પરવાનગી આપો (_A)"
-
-#: ../src/profile-preferences.ui.h:58
-msgid "_Rewrap on resize"
-msgstr ""
-
-#: ../src/profile-preferences.ui.h:59
-msgid "_Custom font"
-msgstr "વૈવિધ્ય ફોન્ટ (_C)"
-
-#: ../src/profile-preferences.ui.h:60
-msgid "Choose A Terminal Font"
-msgstr "ટર્મિનલ ફોન્ટ પસંદ કરો"
-
-#: ../src/profile-preferences.ui.h:62
-msgid "Command"
-msgstr "આદેશ"
-
-#: ../src/profile-preferences.ui.h:63
-msgid "_Run command as a login shell"
-msgstr "પ્રવેશ શેલની રીતે આદેશ ચલાવો (_R)"
-
-#: ../src/profile-preferences.ui.h:64
-msgid "_Update login records when command is launched"
-msgstr "જ્યારે આદેશ શરુ કરો ત્યારે પ્રવેશ રેકોર્ડ સુધારો (_U)"
-
-#: ../src/profile-preferences.ui.h:65
-msgid "Ru_n a custom command instead of my shell"
-msgstr "મારા શેલની જગ્યાએ કસ્ટમ આદેશ વાપરો (_n)"
-
-#: ../src/profile-preferences.ui.h:66
-msgid "Custom co_mmand:"
-msgstr "કસ્ટમ આદેશ (_m):"
-
-#: ../src/profile-preferences.ui.h:67
-msgid "When command _exits:"
-msgstr "જ્યારે આદેશની બહાર નીકળે છે (_e):"
-
-#: ../src/profile-preferences.ui.h:68
-msgid "Text and Background Color"
-msgstr "લખાણ અને પાશ્ર્વભાગનો રંગ"
-
-#: ../src/profile-preferences.ui.h:69
-msgid "_Use colors from system theme"
-msgstr "સિસ્ટમ થીમમાંથી રંગો વાપરો (_U)"
-
-#: ../src/profile-preferences.ui.h:70
-msgid "Built-in sche_mes:"
-msgstr "આંતરિક પદ્ધતિઓ (_m):"
-
-#: ../src/profile-preferences.ui.h:71
-msgid "_Text color:"
-msgstr "લખાણના રંગ (_T):"
-
-#: ../src/profile-preferences.ui.h:72
-msgid "_Background color:"
-msgstr "પાશ્વ ભાગનો રંગ (_B):"
-
-#: ../src/profile-preferences.ui.h:73
-msgid "Choose Terminal Background Color"
-msgstr "ટર્મિનલનો પાશ્વ ભાગનો રંગ પસંદ કરો"
-
-#: ../src/profile-preferences.ui.h:74
-msgid "Choose Terminal Text Color"
-msgstr "ટર્મિનલનો લખાણનો રંગ પસંદ કરો"
-
-#: ../src/profile-preferences.ui.h:75
-msgid "_Underline color:"
-msgstr "રંગની નીચે લીટી દોરો (_U)"
-
-#: ../src/profile-preferences.ui.h:76
-msgid "_Same as text color"
-msgstr "લખાણ રંગનાં જેવુ (_S)"
-
-#: ../src/profile-preferences.ui.h:77
-msgid "Bol_d color:"
-msgstr "ઘટ્ટ રંગ (_d):"
-
-#: ../src/profile-preferences.ui.h:78
-msgid "Palette"
-msgstr "પેલેટ"
-
-#: ../src/profile-preferences.ui.h:79
-msgid "Built-in _schemes:"
-msgstr "અંદર રહેલી યોજના (_s):"
-
-#: ../src/profile-preferences.ui.h:80
-msgid "<b>Note:</b> Terminal applications have these colors available to them."
-msgstr "<b>નોંધ:</b> ટર્મિનલ કાર્યક્રમો પાસે તેમના આ રંગો ઉપલબ્ધ છે."
-
-#: ../src/profile-preferences.ui.h:81
-msgid "Color p_alette:"
-msgstr "રંગ પેલેટ (_a):"
-
-#: ../src/profile-preferences.ui.h:82
-msgid "Colors"
-msgstr "રંગો"
-
-#: ../src/profile-preferences.ui.h:83
-msgid "Scroll on _keystroke"
-msgstr "કીના ઝટકાને અનુલક્ષીને (_k)"
-
-#: ../src/profile-preferences.ui.h:84
-msgid "Scroll on _output"
-msgstr "આઉટપુટ પર ખસેડો (_o)"
-
-#: ../src/profile-preferences.ui.h:85
-#, fuzzy
-#| msgid "Scroll_back:"
-msgid "_Limit scrollback to:"
-msgstr "પાછા ખસવું (_b):"
-
-#: ../src/profile-preferences.ui.h:86
-msgid "lines"
-msgstr "લીટીઓ"
-
-#: ../src/profile-preferences.ui.h:87
-#| msgid "_Scrollbar is:"
-msgid "_Show scrollbar"
-msgstr "ખસેડવાનીપટ્ટી ને બતાવો (_S)"
-
-#: ../src/profile-preferences.ui.h:88
-msgid "Scrolling"
-msgstr "ખસેડી રહ્યા છે"
-
-#: ../src/profile-preferences.ui.h:89
-msgid ""
-"<b>Note:</b> These options may cause some applications to behave "
-"incorrectly.  They are only here to allow you to work around certain "
-"applications and operating systems that expect different terminal behavior."
-msgstr ""
-"<b>નોંધ:</b> આ વિકલ્પો કેટલાક કાર્યક્રમની ખોટી વર્તણૂક માટે કારણભૂત છે. અમુક કાર્યક્રમ અને "
-"ઓપરેટીંગ સિસ્ટમની ફરતે કે જે જુદી જુદી ટર્મિનલની વર્તણૂકની આશા રાખે છે."
-
-#: ../src/profile-preferences.ui.h:90
-msgid "_Delete key generates:"
-msgstr "દૂર કરવાની કી બનાવે છે (_D):"
-
-#: ../src/profile-preferences.ui.h:91
-msgid "_Backspace key generates:"
-msgstr "બેકસ્પેસ કી બનાવે છે (_B):"
-
-#: ../src/profile-preferences.ui.h:92
-msgid "_Encoding:"
-msgstr "સંગ્રહપદ્ધતિ (_E):"
-
-#: ../src/profile-preferences.ui.h:93
-#, fuzzy
-#| msgid "Select-by-_word characters:"
-msgid "Ambiguous-_width characters:"
-msgstr "શબ્દના અક્ષરો દ્વારા પસંદ કરો (_w):"
-
-#: ../src/profile-preferences.ui.h:94
-msgid "_Reset Compatibility Options to Defaults"
-msgstr "સુસંગતતા વિકલ્પોને મૂળભૂતોમાં પુનઃસુયોજિત કરો (_R)"
-
-#: ../src/profile-preferences.ui.h:95
-msgid "Compatibility"
-msgstr "અનૂકુળતા"
-
-#: ../src/terminal-accels.c:148
-msgid "New Terminal in New Tab"
-msgstr "નવી ટેબમાં નવું ટર્મિનલ"
-
-#: ../src/terminal-accels.c:149
-msgid "New Terminal in New Window"
-msgstr "નવી વિન્ડોમાં નવું ટર્મિનલ"
-
-#: ../src/terminal-accels.c:150
-msgid "New Profile"
-msgstr "નવી રૂપરેખા"
-
-#: ../src/terminal-accels.c:152
+#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
+msgid "New Tab"
+msgstr "નવી ટૅબ"
+
+#: src/terminal-accels.cc:150 src/terminal-window.cc:603
 msgid "Save Contents"
 msgstr "સમાવિષ્ટો સંગ્રહો"
 
-#: ../src/terminal-accels.c:154
-msgid "Close Terminal"
-msgstr "ટર્મિનલને બંધ કરો"
+#: src/terminal-accels.cc:151
+msgid "Close Tab"
+msgstr "ટૅબ બંધ કરો"
 
-#: ../src/terminal-accels.c:155
-msgid "Close All Terminals"
-msgstr "બધા ટર્મિનલ ને બંધ કરો"
+#: src/terminal-accels.cc:152
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close Other Tabs"
+msgstr "ટૅબ બંધ કરો"
 
-#. Edit menu
-#: ../src/terminal-accels.c:159 ../src/terminal-window.c:2398
-#: ../src/terminal-window.c:2515
+#: src/terminal-accels.cc:153
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Reopen Closed Tab"
+msgstr "ટૅબ બંધ કરો"
+
+#: src/terminal-accels.cc:154
+msgid "Close Window"
+msgstr "વિન્ડો બંધ કરો"
+
+#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
+#: src/terminal-profile-row.cc:56
 msgid "Copy"
 msgstr "નકલ"
 
-#: ../src/terminal-accels.c:160 ../src/terminal-window.c:2401
-#: ../src/terminal-window.c:2518
+#: src/terminal-accels.cc:159
+msgid "Copy as HTML"
+msgstr ""
+
+#: src/terminal-accels.cc:160
 msgid "Paste"
 msgstr "ચોંટાડો"
 
-#: ../src/terminal-accels.c:165
+#: src/terminal-accels.cc:161
+msgid "Select All"
+msgstr "બધુ પસંદ કરો"
+
+#: src/terminal-accels.cc:167
 msgid "Find Next"
 msgstr "આગળનું શોધો"
 
-#: ../src/terminal-accels.c:166
+#: src/terminal-accels.cc:168
 msgid "Find Previous"
 msgstr "પહેલાનું શોધો"
 
-#: ../src/terminal-accels.c:167
-#| msgid "_Clear Highlight"
-msgid "Clear Find Highlight"
+#: src/terminal-accels.cc:169
+msgid "Clear Highlight"
 msgstr "પ્રકાશિત ભાગને સાફ કરો"
 
-#: ../src/terminal-accels.c:171
-msgid "Hide and Show toolbar"
-msgstr "સાધનપટ્ટીને છુપાડો અને બતાવો"
-
-#: ../src/terminal-accels.c:172
+#: src/terminal-accels.cc:173
 msgid "Full Screen"
 msgstr "પૂર્ણ સ્ક્રીન"
 
-#. View menu
-#: ../src/terminal-accels.c:173 ../src/terminal-window.c:2418
+#: src/terminal-accels.cc:174
 msgid "Zoom In"
 msgstr "મોટુ કરો"
 
-#: ../src/terminal-accels.c:174 ../src/terminal-window.c:2421
+#: src/terminal-accels.cc:175
 msgid "Zoom Out"
 msgstr "નાનુ કરો"
 
-#: ../src/terminal-accels.c:175 ../src/terminal-window.c:2424
+#: src/terminal-accels.cc:176
 msgid "Normal Size"
 msgstr "સામાન્ય માપ"
 
-#: ../src/terminal-accels.c:179
+#: src/terminal-accels.cc:177
+#, fuzzy
+#| msgid "Command"
+msgid "Command Palette"
+msgstr "આદેશ"
+
+#: src/terminal-accels.cc:178
+msgid "Quick Select"
+msgstr ""
+
+#: src/terminal-accels.cc:182
+msgid "Read-Only"
+msgstr "ફક્ત વાંચી શકાય તેવુ"
+
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2550
+msgid "Set Title"
+msgstr "શીર્ષકની ગોઠવણી કરો"
+
+#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
+#: src/terminal-profile-editor.ui:848
 msgid "Reset"
 msgstr "ફરીથી ગોઠવવું"
 
-#: ../src/terminal-accels.c:180
+#: src/terminal-accels.cc:185
 msgid "Reset and Clear"
 msgstr "ફરીથી ગોઠવો અને સાફ કરો"
 
-#: ../src/terminal-accels.c:184
-#| msgid "Switch to Previous Tab"
-msgid "Switch to Previous Terminal"
+#: src/terminal-accels.cc:186
+#, fuzzy
+#| msgid "Switch to Previous Terminal"
+msgid "Scroll to Previous Prompt"
 msgstr "પહેલાનાં ટર્મિનમાં જાવો"
 
-#: ../src/terminal-accels.c:185
-#| msgid "Switch to Next Tab"
-msgid "Switch to Next Terminal"
+#: src/terminal-accels.cc:187
+#, fuzzy
+#| msgid "Scroll on _keystroke"
+msgid "Scroll to Next Prompt"
+msgstr "કીના ઝટકાને અનુલક્ષીને (_k)"
+
+#: src/terminal-accels.cc:188
+msgid "Copy Output of Last Command"
+msgstr ""
+
+#: src/terminal-accels.cc:192
+#, fuzzy
+#| msgid "Switch to Previous Terminal"
+msgid "Switch to Previous Tab"
+msgstr "પહેલાનાં ટર્મિનમાં જાવો"
+
+#: src/terminal-accels.cc:193
+#, fuzzy
+#| msgid "Switch to Next Terminal"
+msgid "Switch to Next Tab"
 msgstr "આગળનાં ટર્મિનલ પર જાવો"
 
-#: ../src/terminal-accels.c:186
-msgid "Move Terminal to the Left"
+#: src/terminal-accels.cc:194
+#, fuzzy
+#| msgid "Move Terminal to the Left"
+msgid "Move Tab to the Left"
 msgstr "ટર્મિનલને ડાબે ખસેડો"
 
-#: ../src/terminal-accels.c:187
-msgid "Move Terminal to the Right"
+#: src/terminal-accels.cc:195
+#, fuzzy
+#| msgid "Move Terminal to the Right"
+msgid "Move Tab to the Right"
 msgstr "જમણે ટર્મિનલને ખસેડો"
 
-#: ../src/terminal-accels.c:188
-#| msgid "Detach Tab"
-msgid "Detach Terminal"
-msgstr "ટર્મિનલનું જોડાણ તોડો"
+#: src/terminal-accels.cc:196
+#, fuzzy
+#| msgid "Move Terminal to the Left"
+msgid "Move Tab to the Start"
+msgstr "ટર્મિનલને ડાબે ખસેડો"
 
-#: ../src/terminal-accels.c:211
+#: src/terminal-accels.cc:197
+#, fuzzy
+#| msgid "Move Terminal to the Left"
+msgid "Move Tab to the End"
+msgstr "ટર્મિનલને ડાબે ખસેડો"
+
+#: src/terminal-accels.cc:198
+#, fuzzy
+#| msgid "_Detach tab"
+msgid "Detach Tab"
+msgstr "ટેબ છૂટી કરો (_D)"
+
+#: src/terminal-accels.cc:199
+msgid "Show Tabs Overview"
+msgstr ""
+
+#: src/terminal-accels.cc:200
+msgid "Focus the Tab List"
+msgstr ""
+
+#: src/terminal-accels.cc:236
+#, fuzzy
+#| msgid "Switch to Tab 2"
+msgid "Switch to Last Tab"
+msgstr "ટૅબ ૨ પર જાઓ"
+
+#: src/terminal-accels.cc:240
+msgid "Split Right"
+msgstr ""
+
+#: src/terminal-accels.cc:241
+msgid "Split Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242
+#, fuzzy
+#| msgid "Close tab"
+msgid "Close Pane"
+msgstr "ટેબ બંધ કરો"
+
+#: src/terminal-accels.cc:243
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom Pane"
+msgstr "મોટુ કરો"
+
+#: src/terminal-accels.cc:244
+msgid "Make Panes the Same Size"
+msgstr ""
+
+#: src/terminal-accels.cc:245
+msgid "Move Pane to a New Tab"
+msgstr ""
+
+#: src/terminal-accels.cc:246
+msgid "Focus the Pane on the Left"
+msgstr ""
+
+#: src/terminal-accels.cc:247
+#, fuzzy
+#| msgid "Move Terminal to the Right"
+msgid "Focus the Pane on the Right"
+msgstr "જમણે ટર્મિનલને ખસેડો"
+
+#: src/terminal-accels.cc:248
+msgid "Focus the Pane Above"
+msgstr ""
+
+#: src/terminal-accels.cc:249
+msgid "Focus the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:250
+#, fuzzy
+#| msgid "Move Terminal _Left"
+msgid "Move Divider Left"
+msgstr "ટર્મિનલને ડાબે ખસેડો (_L)"
+
+#: src/terminal-accels.cc:251
+#, fuzzy
+#| msgid "Move Terminal _Right"
+msgid "Move Divider Right"
+msgstr "ટર્મિનલને જમણે ખસેડો (_R)"
+
+#: src/terminal-accels.cc:252
+msgid "Move Divider Up"
+msgstr ""
+
+#: src/terminal-accels.cc:253
+msgid "Move Divider Down"
+msgstr ""
+
+#: src/terminal-accels.cc:254
+msgid "Swap With the Pane on the Left"
+msgstr ""
+
+#: src/terminal-accels.cc:255
+msgid "Swap With the Pane on the Right"
+msgstr ""
+
+#: src/terminal-accels.cc:256
+msgid "Swap With the Pane Above"
+msgstr ""
+
+#: src/terminal-accels.cc:257
+msgid "Swap With the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:258
+msgid "Broadcast Input to This Tab"
+msgstr ""
+
+#: src/terminal-accels.cc:259
+msgid "Broadcast Input to This Window"
+msgstr ""
+
+#: src/terminal-accels.cc:263
 msgid "Contents"
 msgstr "સમાવિષ્ટ ભાગો"
 
-#: ../src/terminal-accels.c:218
+#: src/terminal-accels.cc:267
+#, fuzzy
+#| msgid "Show _Menubar"
+msgid "Show Primary Menu"
+msgstr "મેનુપટ્ટી બતાવો (_M)"
+
+#: src/terminal-accels.cc:278
 msgid "File"
 msgstr "ફાઇલ"
 
-#: ../src/terminal-accels.c:219
+#: src/terminal-accels.cc:279
 msgid "Edit"
 msgstr "ફેરફાર"
 
-#: ../src/terminal-accels.c:220
+#: src/terminal-accels.cc:280
 msgid "View"
 msgstr "દૃશ્ય"
 
-#: ../src/terminal-accels.c:223
+#: src/terminal-accels.cc:281
+msgid "Search"
+msgstr "શોધો"
+
+#: src/terminal-accels.cc:283
 msgid "Tabs"
 msgstr "ટેબો"
 
-#: ../src/terminal-accels.c:224
+#: src/terminal-accels.cc:284
+#, fuzzy
+#| msgid "Japanese"
+msgid "Panes"
+msgstr "જાપાની"
+
+#: src/terminal-accels.cc:285
 msgid "Help"
 msgstr "મદદ"
 
-#: ../src/terminal-accels.c:321
-#, c-format
-msgid "Switch to Tab %d"
+#: src/terminal-accels.cc:286
+msgid "Global"
+msgstr ""
+
+#: src/terminal-accels.cc:402
+#, fuzzy, c-format
+#| msgid "Switch to Tab %d"
+msgid "Switch to Tab %u"
 msgstr "ટૅબ %d પર જાઓ"
 
-#: ../src/terminal-accels.c:529
-msgid "_Action"
-msgstr "ક્રિયા (_A)"
+#: src/terminal-app.cc:518
+msgid "New Terminal"
+msgstr "નવું ટર્મિનલ"
 
-#: ../src/terminal-accels.c:548
-msgid "Shortcut _Key"
-msgstr "ટૂંકી કી (_K)"
+#: src/terminal-app.cc:568
+#, fuzzy
+#| msgid "Profiles"
+msgid "_Profile"
+msgstr "રૂપરેખાઓ"
 
-#: ../src/terminal-app.c:677
-msgid "User Defined"
-msgstr "વપરાશકર્તા દ્વારા વ્યાખ્યાયિત"
+#: src/terminal-app.cc:1347
+#, c-format
+msgid "%u s"
+msgstr ""
 
-#: ../src/terminal-appmenu.ui.h:1
-msgid "_New Terminal"
-msgstr "નવું ટર્મિનલ (_N)"
+#: src/terminal-app.cc:1349
+#, c-format
+msgid "%u min %u s"
+msgstr ""
 
-#: ../src/terminal-appmenu.ui.h:2
+#: src/terminal-app.cc:1350
+#, c-format
+msgid "%u h %u min"
+msgstr ""
+
+#: src/terminal-app.cc:1376
+#, c-format
+msgid "Finished after %s"
+msgstr ""
+
+#: src/terminal-app.cc:1377
+#, c-format
+msgid "Failed with exit status %u after %s"
+msgstr ""
+
+#: src/terminal-app.cc:1387
+#, fuzzy
+#| msgid "Command"
+msgid "Command finished"
+msgstr "આદેશ"
+
+#: src/terminal-app.cc:1387
+#, fuzzy
+#| msgid "Command"
+msgid "Command failed"
+msgstr "આદેશ"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:235
+#, fuzzy, c-format
+#| msgid "Editing Profile “%s”"
+msgid "New Tab with Profile “%s”"
+msgstr "રૂપરેખા “%s” માં ફેરફાર કરવાનું"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:239
+#, fuzzy, c-format
+#| msgid "Editing Profile “%s”"
+msgid "New Window with Profile “%s”"
+msgstr "રૂપરેખા “%s” માં ફેરફાર કરવાનું"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:244
+#, c-format
+msgid "Use Profile “%s” in This Terminal"
+msgstr ""
+
+#. Translators: %s is the title of a terminal
+#: src/terminal-command-palette.cc:269
+#, c-format
+msgid "Go to “%s”"
+msgstr ""
+
+#. Translators: %d is the number of a tab
+#: src/terminal-command-palette.cc:271
+#, c-format
+msgid "A pane in tab %d"
+msgstr ""
+
+#: src/terminal-command-palette.cc:272
+#, c-format
+msgid "Tab %d"
+msgstr ""
+
+#: src/terminal-command-palette.cc:465
+msgid "Search actions, profiles and tabs"
+msgstr ""
+
+#: src/terminal-find-bar.ui:67
+#, fuzzy
+#| msgid "_Search for:"
+msgid "Search results"
+msgstr "ના માટે શોધો (_S): "
+
+#: src/terminal-find-bar.ui:80
+msgid "Search up to next result"
+msgstr ""
+
+#: src/terminal-find-bar.ui:87
+msgid "Search down to next result"
+msgstr ""
+
+#: src/terminal-find-bar.ui:96
+#, fuzzy
+#| msgid "Exec options:"
+msgid "Search Options"
+msgstr "Exec વિકલ્પો:"
+
+#: src/terminal-find-bar.ui:107
+#, fuzzy
+#| msgid "_Match case"
+msgid "Match _Case"
+msgstr "જોડણી સરખાવો (_M)"
+
+#: src/terminal-find-bar.ui:114
+msgid "Whole _Words"
+msgstr ""
+
+#: src/terminal-find-bar.ui:121
+#, fuzzy
+#| msgid "Match as _regular expression"
+msgid "Use _Regular Expressions"
+msgstr "રૅગ્યુલર એક્સપ્રેશન તરીકે બંધબેસાડો (_r)"
+
+#: src/terminal-find-bar.ui:142
+#, fuzzy
+#| msgid "Close tab"
+msgid "Close"
+msgstr "ટેબ બંધ કરો"
+
+#: src/terminal-find-bar.ui:143
+#, fuzzy
+#| msgid "Close tab"
+msgid "Close the search bar"
+msgstr "ટેબ બંધ કરો"
+
+#: src/terminal-headerbar.ui:40
+#, fuzzy
+#| msgid "New Profile"
+msgid "New Tab from Profile"
+msgstr "નવી રૂપરેખા"
+
+#: src/terminal-headerbar.ui:57
+#, fuzzy
+#| msgid "Open Ta_b"
+msgid "Show Open Tabs"
+msgstr "નવી ટૅબ (_b)"
+
+#: src/terminal-headermenu.ui:23
+#, fuzzy
+#| msgid "Zoom Out"
+msgid "Zoom _Out"
+msgstr "નાનુ કરો"
+
+#: src/terminal-headermenu.ui:29
+#, fuzzy
+#| msgid "Reset"
+msgid "Reset _Zoom"
+msgstr "ફરીથી ગોઠવવું"
+
+#: src/terminal-headermenu.ui:35
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom _In"
+msgstr "મોટુ કરો"
+
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3187
+#, fuzzy
+#| msgid "Window"
+msgid "New _Window"
+msgstr "વિન્ડો"
+
+#: src/terminal-headermenu.ui:49
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Re_open Closed Tab"
+msgstr "ટૅબ બંધ કરો"
+
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3116
+msgid "Split _Right"
+msgstr ""
+
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3119
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3173
+msgid "_Broadcast Input"
+msgstr ""
+
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3159
+msgid "_Off"
+msgstr ""
+
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3160
+msgid "To All Panes in This _Tab"
+msgstr ""
+
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3161
+#, fuzzy
+#| msgid "New Terminal in New Window"
+msgid "To All Terminals in This _Window"
+msgstr "નવી વિન્ડોમાં નવું ટર્મિનલ"
+
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3170
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "_Include This Terminal"
+msgstr "આ ટર્મિનલ ને બંધ કરો?"
+
+#: src/terminal-headermenu.ui:93
+msgid "_Full Screen"
+msgstr "આખી સ્ક્રિન (_F)"
+
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3096
+msgid "Read-_Only"
+msgstr "ફક્ત વાંચી શકાય તેવુ (_O)"
+
+#: src/terminal-headermenu.ui:105 src/terminal-notebook.ui:67
+#, fuzzy
+#| msgid "_Set Title…"
+msgid "Set _Title…"
+msgstr "શીર્ષકની ગોઠવણી કરો (_S)..."
+
+#: src/terminal-headermenu.ui:111
+#, fuzzy
+#| msgid "_Save Contents"
+msgid "_Save Contents…"
+msgstr "સમાવિષ્ટો ને સંગ્રહો (_S)"
+
+#: src/terminal-headermenu.ui:117
+#, fuzzy
+#| msgid "_Cancel"
+msgid "_Advanced"
+msgstr "રદ કરો (_C)"
+
+# libgnomeprint/gnome-print-paper.c:54
+#: src/terminal-headermenu.ui:120
+msgid "_Reset"
+msgstr "ફરી સુયોજીત કરો (_R)"
+
+#: src/terminal-headermenu.ui:126
+msgid "Reset and C_lear"
+msgstr "ફરી સુયોજીત કરો અને સાફ કરો (_l)"
+
+#: src/terminal-headermenu.ui:134
+msgid "_1. 80×24"
+msgstr ""
+
+#: src/terminal-headermenu.ui:140
+msgid "_2. 80×43"
+msgstr ""
+
+#: src/terminal-headermenu.ui:146
+msgid "_3. 132×24"
+msgstr ""
+
+#: src/terminal-headermenu.ui:152
+msgid "_4. 132×43"
+msgstr ""
+
+#: src/terminal-headermenu.ui:160
+msgid "_Inspector"
+msgstr "નિરીક્ષક (_I)"
+
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3571
+#: src/terminal-window.cc:3110
 msgid "_Preferences"
 msgstr "પસંદગીઓ (_P)"
 
-#: ../src/terminal-appmenu.ui.h:3 ../src/terminal-window.c:2370
+#: src/terminal-headermenu.ui:175
 msgid "_Help"
 msgstr "મદદ (_H)"
 
-#: ../src/terminal-appmenu.ui.h:4 ../src/terminal-window.c:2486
+#: src/terminal-headermenu.ui:180
 msgid "_About"
 msgstr "ના વિશે (_A)"
 
-#: ../src/terminal-appmenu.ui.h:5
-msgid "_Quit"
-msgstr "બહાર નીકળો (_Q)"
-
-#: ../src/terminal.c:236
-#, c-format
-msgid "Failed to parse arguments: %s\n"
-msgstr "દલીલોનું પદચ્છેદન કરવામાં નિષ્ફળ: %s\n"
-
-#: ../src/terminal-encoding.c:52 ../src/terminal-encoding.c:65
-#: ../src/terminal-encoding.c:79 ../src/terminal-encoding.c:101
-#: ../src/terminal-encoding.c:112
-msgid "Western"
-msgstr "પશ્ચિમ"
-
-#: ../src/terminal-encoding.c:53 ../src/terminal-encoding.c:80
-#: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:110
-msgid "Central European"
-msgstr "મધ્ય યુરોપીયન"
-
-#: ../src/terminal-encoding.c:54
-msgid "South European"
-msgstr "દક્ષિણ યુરોપીયન"
-
-#: ../src/terminal-encoding.c:55 ../src/terminal-encoding.c:63
-#: ../src/terminal-encoding.c:117
-msgid "Baltic"
-msgstr "બાલ્ટિક"
-
-#: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:81
-#: ../src/terminal-encoding.c:87 ../src/terminal-encoding.c:88
-#: ../src/terminal-encoding.c:93 ../src/terminal-encoding.c:111
-msgid "Cyrillic"
-msgstr "સીરીલ્લિક"
-
-#: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:84
-#: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:116
-msgid "Arabic"
-msgstr "અરૅબીક"
-
-#: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:96
-#: ../src/terminal-encoding.c:113
-msgid "Greek"
-msgstr "ગ્રીક"
-
-#: ../src/terminal-encoding.c:59
-msgid "Hebrew Visual"
-msgstr "દેખી શકાય તેવુ હિબ્રુ"
-
-#: ../src/terminal-encoding.c:60 ../src/terminal-encoding.c:83
-#: ../src/terminal-encoding.c:99 ../src/terminal-encoding.c:115
-msgid "Hebrew"
-msgstr "હિબ્રુ"
-
-#: ../src/terminal-encoding.c:61 ../src/terminal-encoding.c:82
-#: ../src/terminal-encoding.c:103 ../src/terminal-encoding.c:114
-msgid "Turkish"
-msgstr "તુર્કિશ"
-
-#: ../src/terminal-encoding.c:62
-msgid "Nordic"
-msgstr "નોર્ડિક"
-
-#: ../src/terminal-encoding.c:64
-msgid "Celtic"
-msgstr "સૅલ્ટિક"
-
-#: ../src/terminal-encoding.c:66 ../src/terminal-encoding.c:102
-msgid "Romanian"
-msgstr "રોમાનિયન"
-
-#. These encodings do NOT pass-through ASCII, so are always rejected.
-#. * FIXME: why are they in this table; or rather why do we need
-#. * the ASCII pass-through requirement?
-#.
-#: ../src/terminal-encoding.c:67 ../src/terminal-encoding.c:124
-#: ../src/terminal-encoding.c:125 ../src/terminal-encoding.c:126
-#: ../src/terminal-encoding.c:127
-msgid "Unicode"
-msgstr "યુનિકોડ"
-
-#: ../src/terminal-encoding.c:68
-msgid "Armenian"
-msgstr "અર્મિનિયન"
-
-#: ../src/terminal-encoding.c:69 ../src/terminal-encoding.c:70
-#: ../src/terminal-encoding.c:74
-msgid "Chinese Traditional"
-msgstr "ચીની સાંસ્કૃતિક"
-
-#: ../src/terminal-encoding.c:71
-msgid "Cyrillic/Russian"
-msgstr "સીરીલ્લિક/રસિયન"
-
-#: ../src/terminal-encoding.c:72 ../src/terminal-encoding.c:85
-#: ../src/terminal-encoding.c:105
-msgid "Japanese"
-msgstr "જાપાની"
-
-#: ../src/terminal-encoding.c:73 ../src/terminal-encoding.c:86
-#: ../src/terminal-encoding.c:108 ../src/terminal-encoding.c:128
-msgid "Korean"
-msgstr "કોરિયન"
-
-#: ../src/terminal-encoding.c:75 ../src/terminal-encoding.c:76
-#: ../src/terminal-encoding.c:77
-msgid "Chinese Simplified"
-msgstr "ચીની દ્વારા સરળ કરાયેલ"
-
-#: ../src/terminal-encoding.c:78
-msgid "Georgian"
-msgstr "જોર્જિયન"
-
-#: ../src/terminal-encoding.c:89 ../src/terminal-encoding.c:104
-msgid "Cyrillic/Ukrainian"
-msgstr "સીરીલ્લિક/યુક્રેનિયન"
-
-#: ../src/terminal-encoding.c:92
-msgid "Croatian"
-msgstr "ક્રોએશિયન"
-
-#: ../src/terminal-encoding.c:94
-msgid "Hindi"
-msgstr "હિંદી"
-
-#: ../src/terminal-encoding.c:95
-msgid "Persian"
-msgstr "પર્શિયન"
-
-#: ../src/terminal-encoding.c:97
-msgid "Gujarati"
-msgstr "ગુજરાતી"
-
-#: ../src/terminal-encoding.c:98
-msgid "Gurmukhi"
-msgstr "ગુર્મુખી"
-
-#: ../src/terminal-encoding.c:100
-msgid "Icelandic"
-msgstr "આઈસલેંડિક"
-
-#: ../src/terminal-encoding.c:106 ../src/terminal-encoding.c:109
-#: ../src/terminal-encoding.c:118
-msgid "Vietnamese"
-msgstr "વિયેતનામી"
-
-#: ../src/terminal-encoding.c:107
-msgid "Thai"
-msgstr "થાઈ"
-
-#: ../src/terminal-nautilus.c:601
+#: src/terminal-nautilus.cc:512
 #, fuzzy
 msgid "Open in Pano Terminal (_Remote)"
 msgstr "દૂરસ્થ ટર્મિનલમાં ખોલો (_R)"
 
-#: ../src/terminal-nautilus.c:603
+#: src/terminal-nautilus.cc:514
 #, fuzzy
 msgid "Open in Pano Terminal (_Local)"
 msgstr "સ્થાનિક ટર્મિનલમાં ખોલો (_L)"
 
-#: ../src/terminal-nautilus.c:607 ../src/terminal-nautilus.c:618
+#: src/terminal-nautilus.cc:518 src/terminal-nautilus.cc:529
 msgid "Open the currently selected folder in a terminal"
 msgstr "ટર્મિનલમાં હાલમાં પસંદ થયેલ ફોલ્ડરને ખોલો"
 
-#: ../src/terminal-nautilus.c:609 ../src/terminal-nautilus.c:620
-#: ../src/terminal-nautilus.c:630
+#: src/terminal-nautilus.cc:520 src/terminal-nautilus.cc:531
 msgid "Open the currently open folder in a terminal"
 msgstr "ટર્મિનલમાં હાલમાં ખોલેલ ફોલ્ડરને ખોલો"
 
-#: ../src/terminal-nautilus.c:615 ../src/terminal-nautilus.c:629
+#: src/terminal-nautilus.cc:526
 #, fuzzy
 msgid "Open in Pano _Terminal"
 msgstr "ટર્મિનલમાં ખોલો (_e)"
 
-#: ../src/terminal-nautilus.c:626
+#: src/terminal-nautilus.cc:536
 #, fuzzy
 msgid "Open Pano _Terminal"
 msgstr "ટર્મિનલ ખોલો (_e)"
 
-#: ../src/terminal-nautilus.c:627
+#: src/terminal-nautilus.cc:537
 msgid "Open a terminal"
 msgstr "ટર્મિનલ ખોલો"
 
-#: ../src/terminal-nautilus.c:645 ../src/terminal-nautilus.c:658
-msgid "Open in _Midnight Commander"
-msgstr "Midnight Commander માં ખોલો (_M)"
-
-#: ../src/terminal-nautilus.c:647
-msgid ""
-"Open the currently selected folder in the terminal file manager Midnight "
-"Commander"
-msgstr "ટર્મિનલ ફાઇલ સંચાલક Midnight Commander માં હાલમાં પસંદ થયેલ ફોલ્ડરને ખોલો"
-
-#: ../src/terminal-nautilus.c:649 ../src/terminal-nautilus.c:659
-msgid ""
-"Open the currently open folder in the terminal file manager Midnight "
-"Commander"
-msgstr "ટર્મિનલ ફાઇલ સંચાલક Midnight Commander માં હાલમાં ખોલેલ ફોલ્ડરને ખોલો"
-
-#: ../src/terminal-nautilus.c:655
-msgid "Open _Midnight Commander"
-msgstr "Midnight Commander ને ખોલો (_M)"
-
-#: ../src/terminal-nautilus.c:656
-msgid "Open the terminal file manager Midnight Commander"
-msgstr "ટર્મિનલ ફાઇલ સંચાલક Midnight Commander ને ખોલો"
-
-#: ../src/terminal-options.c:224 ../src/terminal-options.c:237
-#, c-format
-msgid "Option \"%s\" is no longer supported in this version of Pano Terminal."
-msgstr "વિક્લ્પ \"%s\" એ Pano Terminal ની આ આવૃત્તિમાં લાંબો સમય આધારભૂત નથી."
-
-#: ../src/terminal-options.c:249 ../src/terminal-util.c:217
+#: src/terminal-notebook.ui:36
 #, fuzzy
-msgid "Pano Terminal"
+msgid "_Pin Terminal"
 msgstr "GNOME ટર્મિનલ"
 
-#: ../src/terminal-options.c:289
+#: src/terminal-notebook.ui:42
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "_Unpin Terminal"
+msgstr "ટર્મિનલ ખોલો (_T)"
+
+#: src/terminal-notebook.ui:50
+msgid "Move Terminal _Left"
+msgstr "ટર્મિનલને ડાબે ખસેડો (_L)"
+
+#: src/terminal-notebook.ui:55
+msgid "Move Terminal _Right"
+msgstr "ટર્મિનલને જમણે ખસેડો (_R)"
+
+#: src/terminal-notebook.ui:62
+msgid "_Detach Terminal"
+msgstr "ટર્મિનલનું જોડાણ તોડો (_D)"
+
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5163
+#: src/terminal-window.cc:5173
+msgid "C_lose Terminal"
+msgstr "ટર્મિનલ ને બંધ કરો (_l)"
+
+#: src/terminal-notebook.ui:80
+#, fuzzy
+#| msgid "Close All Terminals"
+msgid "Close _Other Terminals"
+msgstr "બધા ટર્મિનલ ને બંધ કરો"
+
+#: src/terminal-options.cc:324
+#, fuzzy, c-format
+#| msgid ""
+#| "Option \"%s\" is no longer supported in this version of Pano Terminal."
+msgid ""
+"Option “%s” is deprecated and might be removed in a later version of Pano "
+"Terminal."
+msgstr "વિક્લ્પ \"%s\" એ Pano Terminal ની આ આવૃત્તિમાં લાંબો સમય આધારભૂત નથી."
+
+#. %s is being replaced with "-- " (without quotes), which must be used
+#. literally, not translatable
+#: src/terminal-options.cc:335
 #, c-format
-msgid "Argument to \"%s\" is not a valid command: %s"
+msgid ""
+"Use “%s” to terminate the options and put the command line to execute after "
+"it."
+msgstr ""
+
+#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#, fuzzy, c-format
+#| msgid ""
+#| "Option \"%s\" is no longer supported in this version of Pano Terminal."
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
+msgstr "વિક્લ્પ \"%s\" એ Pano Terminal ની આ આવૃત્તિમાં લાંબો સમય આધારભૂત નથી."
+
+#: src/terminal-options.cc:430
+#, c-format
+msgid "Cannot specify more than one command to run"
+msgstr ""
+
+#: src/terminal-options.cc:439
+#, fuzzy, c-format
+#| msgid "Argument to \"%s\" is not a valid command: %s"
+msgid "Argument to “%s” is not a valid command: %s"
 msgstr "\"%s\" માટે દલીલ એ ઉચિત આદેશ નથી: %s"
 
-#: ../src/terminal-options.c:438
+#: src/terminal-options.cc:612
 msgid "Two roles given for one window"
 msgstr "એક વિન્ડો માટે બે નિયમો અપાયેલ છે"
 
-#: ../src/terminal-options.c:459 ../src/terminal-options.c:492
+#: src/terminal-options.cc:819
 #, c-format
-msgid "\"%s\" option given twice for the same window\n"
-msgstr "એકની એક વિન્ડો માટે \"%s\" વિકલ્પ બે વાર અપાયુ છે\n"
+msgid "Cannot pass FD %d twice"
+msgstr "FD %d ને બે વાર પસાર કરી શકાતુ નથી"
 
-#: ../src/terminal-options.c:690
-#, c-format
-msgid "Zoom factor \"%g\" is too small, using %g\n"
+#: src/terminal-options.cc:881
+#, fuzzy, c-format
+#| msgid "\"%s\" is not a valid zoom factor"
+msgid "“%s” is not a valid zoom factor"
+msgstr "\"%s\" એ યોગ્ય નાનામોટાપણાનું પ્રમાણ નથી"
+
+#: src/terminal-options.cc:888
+#, fuzzy, c-format
+#| msgid "Zoom factor \"%g\" is too small, using %g\n"
+msgid "Zoom factor “%g” is too small, using %g\n"
 msgstr "નાનામોટાપણાનું પ્રમાણ \"%g\" ખુબ નાનું છે, %g વાપરી રહ્યા છે\n"
 
-#: ../src/terminal-options.c:698
-#, c-format
-msgid "Zoom factor \"%g\" is too large, using %g\n"
+#: src/terminal-options.cc:896
+#, fuzzy, c-format
+#| msgid "Zoom factor \"%g\" is too large, using %g\n"
+msgid "Zoom factor “%g” is too large, using %g\n"
 msgstr "નાનામોટાપણાનું પ્રમાણ \"%g\" ખુબ મોટું છે, %g વાપરી રહ્યા છે\n"
 
-#: ../src/terminal-options.c:736
-#, c-format
+#: src/terminal-options.cc:934
+#, fuzzy, c-format
+#| msgid ""
+#| "Option \"%s\" requires specifying the command to run on the rest of the "
+#| "command line"
 msgid ""
-"Option \"%s\" requires specifying the command to run on the rest of the "
+"Option “%s” requires specifying the command to run on the rest of the "
 "command line"
 msgstr ""
 "વિકલ્પ \"%s\" માટે આદેશને આદેશ વાક્યના બાકીના ભાગ પર ચલાવવા માટે સ્પષ્ટ કરવાનું જરૂરી છે"
 
-#: ../src/terminal-options.c:871
+#: src/terminal-options.cc:1074
+#, c-format
+msgid "Too many arguments"
+msgstr ""
+
+#: src/terminal-options.cc:1102
+#, fuzzy
+#| msgid "May only use option %s once"
+msgid "Can only use --wait once"
+msgstr "ફક્ત %s ને એકવાર વાપરી શકાય છે"
+
+#: src/terminal-options.cc:1138
 msgid "Not a valid terminal config file."
 msgstr "યોગ્ય ટર્મિનલ રૂપરેખાંકન ફાઇલ નથી."
 
-#: ../src/terminal-options.c:884
+#: src/terminal-options.cc:1151
 msgid "Incompatible terminal config file version."
 msgstr "અસુસંગત ટર્મિનલ રૂપરેખાંકન ફાઇલ આવૃત્તિ."
 
-#: ../src/terminal-options.c:1024
+#: src/terminal-options.cc:1305
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
-msgstr "સક્રિય કરવાના નામ સર્વરમાં નોંધણી કરવવી નહિ, સક્રિય ટર્મિનલનો ફરી ઉપયોગ કરવો નહિ"
+msgstr ""
+"સક્રિય કરવાના નામ સર્વરમાં નોંધણી કરવવી નહિ, સક્રિય ટર્મિનલનો ફરી ઉપયોગ કરવો નહિ"
 
-#: ../src/terminal-options.c:1033
+#: src/terminal-options.cc:1314
 msgid "Load a terminal configuration file"
 msgstr "ટર્મિનલ રૂપરેખાંકન ફાઇલ ને લોડ કરો"
 
-#: ../src/terminal-options.c:1034
+#: src/terminal-options.cc:1315
 msgid "FILE"
 msgstr "ફાઇલ"
 
-#: ../src/terminal-options.c:1055
+#: src/terminal-options.cc:1331
+msgid "Do not pass the environment"
+msgstr ""
+
+#: src/terminal-options.cc:1340
+#, fuzzy
+#| msgid "Show per-window options"
+msgid "Show preferences window"
+msgstr "પ્રતિ-વિન્ડો વિકલ્પો બતાવો"
+
+#: src/terminal-options.cc:1358
+msgid "Print environment variables to interact with the terminal"
+msgstr ""
+
+#: src/terminal-options.cc:1376
+msgid "Increase diagnostic verbosity"
+msgstr ""
+
+#: src/terminal-options.cc:1385
+msgid "Suppress output"
+msgstr "આઉટપુટ દબાવો"
+
+#: src/terminal-options.cc:1398
 msgid "Open a new window containing a tab with the default profile"
 msgstr "મૂળભૂત પ્રોફાઇલ સાથે નવી વિન્ડો સમાવતા ટેબ ને ખોલો"
 
-#: ../src/terminal-options.c:1064
+#: src/terminal-options.cc:1407
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr "મૂળભૂત રૂપરેખા સાથે છેલ્લી-ખૂલેલી વિન્ડોમાં નવી ટેબ ખોલો"
 
-#: ../src/terminal-options.c:1077
-msgid "Turn on the menubar"
-msgstr "મેનુબાર ને ચાલુ કરો"
-
-#: ../src/terminal-options.c:1086
-msgid "Turn off the menubar"
-msgstr "મેનુબાર ને બંધ કરો"
-
-#: ../src/terminal-options.c:1095
+#: src/terminal-options.cc:1438
 msgid "Maximize the window"
 msgstr "વિન્ડો ને મહત્તમ કરો"
 
-#: ../src/terminal-options.c:1131
+#: src/terminal-options.cc:1447
+msgid "Full-screen the window"
+msgstr "વિન્ડો ને સંપૂર્ણ-સ્ક્રીન કરો"
+
+#: src/terminal-options.cc:1456
+msgid ""
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr ""
+"વિન્ડોનું માપ સુયોજિત કરો; ઉદાહરણ માટે: 80x24, અથવા 80x24+200+200 (COLSxROWS+X+Y)"
+
+#: src/terminal-options.cc:1457
+msgid "GEOMETRY"
+msgstr "ભૂમિતિ"
+
+#: src/terminal-options.cc:1465
+msgid "Set the window role"
+msgstr "વિન્ડોની ભૂમિકાને સુયોજીત કરો"
+
+#: src/terminal-options.cc:1466
+msgid "ROLE"
+msgstr "ભૂમિકા"
+
+#: src/terminal-options.cc:1474
 msgid "Set the last specified tab as the active one in its window"
 msgstr "છેલ્લે સ્પષ્ટ કરાયેલા ટેબને એની વિન્ડોમાં સક્રિય તરીકે સુયોજીત કરો"
 
-#: ../src/terminal-options.c:1144
+#: src/terminal-options.cc:1487
 msgid "Execute the argument to this option inside the terminal"
 msgstr "ટર્મિનલની અંદર આ વિકલ્પની દલીલ ચલાવો"
 
-#: ../src/terminal-options.c:1154
+#: src/terminal-options.cc:1496
+msgid "Use the given profile instead of the default profile"
+msgstr "મૂળભૂત રૂપરેખા ની જગ્યાએ આપેલ રૂપરેખાને વાપરો"
+
+#: src/terminal-options.cc:1497
 msgid "PROFILE-NAME"
 msgstr "રૂપરેખાનું નામ"
 
-#: ../src/terminal-options.c:1269 ../src/terminal-options.c:1275
+#: src/terminal-options.cc:1505
+#, fuzzy
+#| msgid "Set the terminal title"
+msgid "Set the initial terminal title"
+msgstr "ટર્મિનલનું શીર્ષક સુયોજીત કરો"
+
+#: src/terminal-options.cc:1506
+msgid "TITLE"
+msgstr "શીર્ષક"
+
+#: src/terminal-options.cc:1514
+msgid "Set the working directory"
+msgstr "કાર્યશીલ ડિરૅક્ટરી સુયોજીત કરો"
+
+#: src/terminal-options.cc:1515
+msgid "DIRNAME"
+msgstr "ડિરૅક્ટરીનું નામ"
+
+#: src/terminal-options.cc:1523
+msgid "Wait until the child exits"
+msgstr "થોભો જ્યા સુધી બાળ બહાર નીકળે"
+
+#: src/terminal-options.cc:1532
+msgid "Forward file descriptor"
+msgstr "ફાઇલ વર્ણનકર્તાને આગળ ધપાવો"
+
+#. FD = file descriptor
+#: src/terminal-options.cc:1534
+msgid "FD"
+msgstr "FD"
+
+#: src/terminal-options.cc:1542
+#, fuzzy
+#| msgid "Set the terminal's zoom factor (1.0 = normal size)"
+msgid "Set the terminal’s zoom factor (1.0 = normal size)"
+msgstr "ટર્મિનલનુ નાનું-મોટું કરવાનું પ્રમાણ સુયોજીત કરો (૧.૦ = સામાન્ય માપ)"
+
+#: src/terminal-options.cc:1543
+msgid "ZOOM"
+msgstr "નાનું-મોટુ કરો"
+
+#: src/terminal-options.cc:1639
+msgid "COMMAND"
+msgstr "COMMAND"
+
+#: src/terminal-options.cc:1645
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "GNOME ટર્મિનલ એમ્યુલેટર"
 
-#: ../src/terminal-options.c:1276
+#: src/terminal-options.cc:1646
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "GNOME ટર્મિનલ વિકલ્પો બતાવો"
 
-#: ../src/terminal-options.c:1286
+#: src/terminal-options.cc:1656
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -1677,7 +2312,11 @@ msgstr ""
 "નવી વિન્ડો અથવા ટર્મિનલ ટેબો ખોલવા માટેના વિકલ્પો; આમાંના એક કરતાં વધુ સ્પષ્ટ થયેલ હોઈ "
 "શકે:"
 
-#: ../src/terminal-options.c:1295
+#: src/terminal-options.cc:1657
+msgid "Show terminal options"
+msgstr "ટર્મિનલ વિકલ્પો બતાવો"
+
+#: src/terminal-options.cc:1665
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -1685,11 +2324,11 @@ msgstr ""
 "વિન્ડો વિકલ્પો; જો પ્રથમ --window અથવા --tab દલીલ પહેલાં વપરાયેલ હોય, તો બધી વિન્ડો "
 "માટે મૂળભૂત સુયોજીત કરે છે:"
 
-#: ../src/terminal-options.c:1296
+#: src/terminal-options.cc:1666
 msgid "Show per-window options"
 msgstr "પ્રતિ-વિન્ડો વિકલ્પો બતાવો"
 
-#: ../src/terminal-options.c:1304
+#: src/terminal-options.cc:1674
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -1697,362 +2336,1546 @@ msgstr ""
 "ટર્મિનલ વિકલ્પો; જો પ્રથમ --window અથવા --tab દલીલ પહેલાં વપરાયેલ હોય, તો બધા "
 "ટર્મિનલો માટે મૂળભૂત સુયોજીત કરે છે:"
 
-#: ../src/terminal-options.c:1305
+#: src/terminal-options.cc:1675
 msgid "Show per-terminal options"
 msgstr "પ્રતિ-ટર્મિનલ વિકલ્પો બતાવો"
 
-#: ../src/terminal-prefs.c:214
-msgid "Click button to choose profile"
-msgstr "રૂપરેખા પસંદ કરવા માટે બટન પર ક્લિક કરો"
+#: src/terminal-preferences-window.cc:169
+msgid "New Profile"
+msgstr "નવી રૂપરેખા"
 
-#: ../src/terminal-prefs.c:316
-msgid "Profile list"
-msgstr "રૂપરેખાની યાદી"
+#: src/terminal-preferences-window.cc:199
+#, fuzzy
+msgid "Pano Terminal Profiles"
+msgstr "GNOME ટર્મિનલ"
 
-#: ../src/terminal-prefs.c:371
+#: src/terminal-preferences-window.cc:202
+#, fuzzy
+#| msgid "File"
+msgid "All Files"
+msgstr "ફાઇલ"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:239
 #, c-format
-msgid "Delete profile “%s”?"
-msgstr "શું રૂપરેખા “%s“ કાઢવી છે?"
+msgid "Exported “%s”"
+msgstr ""
 
-#: ../src/terminal-prefs.c:375 ../src/terminal-window.c:529
-msgid "_Cancel"
-msgstr "રદ કરો (_C)"
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:243
+#, fuzzy, c-format
+#| msgid "Could not open the address “%s”"
+msgid "Could not export the profile: %s"
+msgstr "સરનામું “%s” ને ખુલ્લુ કરી શક્યા નહિં"
 
-#: ../src/terminal-prefs.c:377
+#: src/terminal-preferences-window.cc:281
+#, fuzzy
+#| msgid "Delete Profile"
+msgid "Export Profile"
+msgstr "રૂપરેખા રદ કરો"
+
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:312
+#, fuzzy, c-format
+#| msgid "Could not open the address “%s”"
+msgid "Could not import the profile: %s"
+msgstr "સરનામું “%s” ને ખુલ્લુ કરી શક્યા નહિં"
+
+#: src/terminal-preferences-window.cc:322
+#, fuzzy
+#| msgid "New Profile"
+msgid "Imported Profile"
+msgstr "નવી રૂપરેખા"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:339
+#, c-format
+msgid "Imported “%s”"
+msgstr ""
+
+#: src/terminal-preferences-window.cc:344
+#, c-format
+msgid "Imported “%s”, skipping %u setting"
+msgid_plural "Imported “%s”, skipping %u settings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/terminal-preferences-window.cc:370
+#, fuzzy
+#| msgid "Delete Profile"
+msgid "Import Profile"
+msgstr "રૂપરેખા રદ કરો"
+
+#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3521
+#, c-format
+msgid "Imported %u profile and the preferences of GNOME Terminal"
+msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:41
+msgid "_Reset to default"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:53
+#, fuzzy
+#| msgid "Text Appearance"
+msgid "Appearance"
+msgstr "લખાણ દેખાવ"
+
+#: src/terminal-preferences-window.ui:56
+#, fuzzy
+#| msgid "Use _dark theme variant"
+msgid "Theme Variant"
+msgstr "ઘાટ્ટી થીમ ચલને વાપરો (_d)"
+
+#. Default profile label
+#: src/terminal-preferences-window.ui:65 src/terminal-preferences-window.ui:96
+#: src/terminal-profile-editor.ui:515 src/terminal-profile-row.ui:25
+msgid "Default"
+msgstr "મૂળભૂત"
+
+#: src/terminal-preferences-window.ui:71
+msgid "Dark"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:77
+msgid "Light"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:87
+msgid "Rounded corners"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:102
+msgid "Top only"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:108 src/terminal-profile-editor.ui:644
+msgid "None"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:118
+msgid "Space Around the Text"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:127
+msgctxt "terminal-padding"
+msgid "None"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:133
+msgctxt "terminal-padding"
+msgid "Small"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:139
+msgctxt "terminal-padding"
+msgid "Large"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:149
+msgid "Color the Header Bar Like the Terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:150
+msgid "When the terminal uses a color scheme or colors of its own"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:155
+msgid "Dim Inactive Panes"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:156
+msgid "In a split tab, fade the panes other than the one you type in"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:161
+#, fuzzy
+#| msgid "Set Title"
+msgid "Show Pane Titles"
+msgstr "શીર્ષકની ગોઠવણી કરો"
+
+#: src/terminal-preferences-window.ui:162
+msgid "In a split tab, show the title of each pane above it"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:167
+msgid "Highlight Root and Remote Sessions"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:168
+msgid ""
+"Color the header bar and mark the tab while a terminal runs as root or over "
+"SSH"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:173
+msgid "Tab Bar Position"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:182
+msgid "Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:188
+msgid "Bottom"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:194
+msgid "Left"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:200
+msgid "Right"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:212
+msgid "Behavior"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:215
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open New Terminals"
+msgstr "ટર્મિનલ ખોલો (_T)"
+
+#: src/terminal-preferences-window.ui:224
+#, fuzzy
+#| msgid "Open Ta_b"
+msgid "In Tab"
+msgstr "નવી ટૅબ (_b)"
+
+#: src/terminal-preferences-window.ui:230
+#, fuzzy
+#| msgid "Window"
+msgid "In Window"
+msgstr "વિન્ડો"
+
+#: src/terminal-preferences-window.ui:240
+#, fuzzy
+#| msgid "New Tab"
+msgid "New Tab Position"
+msgstr "નવી ટૅબ"
+
+#: src/terminal-preferences-window.ui:249
+msgid "Last"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:255
+#, fuzzy
+#| msgid "Find Next"
+msgid "Next"
+msgstr "આગળનું શોધો"
+
+#: src/terminal-preferences-window.ui:265
+msgid "Middle-Click on a Tab"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:274
+msgctxt "tab-middle-click"
+msgid "Does Nothing"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:280
+#, fuzzy
+#| msgid "Close Tab"
+msgctxt "tab-middle-click"
+msgid "Closes the Tab"
+msgstr "ટૅબ બંધ કરો"
+
+#: src/terminal-preferences-window.ui:286
+msgctxt "tab-middle-click"
+msgid "Pastes the Selection"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:296
+msgid "Ignore Titles Set by Programs"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:297
+msgid "Show the title set with Set Title, or else the working directory"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:302
+msgid "Confirm Copying"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:303
+msgid "Show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:308
+msgid "Shell Integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:309
+msgid ""
+"Let bash, zsh and fish report their prompts and commands, for notifications, "
+"prompt navigation and copying command output. Applies to new terminals"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:314
+msgid "Notify When Commands Finish"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:315
+msgid ""
+"When a long command ends in a terminal you are not looking at. Needs shell "
+"integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:320
+msgid "Minimum Command Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:321
+msgid "In seconds"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:336
+msgid "Silence Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:337
+msgid ""
+"How long a terminal monitored for silence must be quiet, in seconds. Turn "
+"monitoring on in the context menu of a terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:351
+msgid "Keep New Tabs in the Same Container"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:352
+msgid ""
+"New tabs and panes start in the Toolbox or Distrobox container of the "
+"terminal they are opened from"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:357
+msgid "Restore Session"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:358
+msgid ""
+"Reopen the windows, tabs and panes of the last session, each in its previous "
+"folder"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:363
+msgid "Remember Window Size"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:364
+msgid ""
+"Open new windows with the size of the last used terminal instead of the "
+"initial size of the profile"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:371
+#, fuzzy
+#| msgid "Terminal"
+msgid "Quick Terminal"
+msgstr "ટર્મિનલ"
+
+#: src/terminal-preferences-window.ui:372
+msgid ""
+"A terminal that you show and hide with one key. Use the system-wide shortcut "
+"below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
+"Custom Shortcuts."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:375
+msgid "System-Wide Shortcut"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:376
+msgid ""
+"The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
+"running in the background. Needs GNOME 48 or newer, or KDE Plasma."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:382
+msgid "GNOME Shell Extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:383
+msgid ""
+"On Wayland, keeps the quick terminal at the top of the screen, above other "
+"windows and on all workspaces"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:388
+msgid "Width"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:404
+msgid "In percent of the screen"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:403
+msgid "Height"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:418
+msgid "Hide When Another App Is Used"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:423
+msgid "Slide In From the Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:424
+msgid "On X11, or with the GNOME Shell extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:431
+msgid "Keyboard Shortcuts"
+msgstr "કી-બોર્ડના ટૂંકાણો"
+
+#: src/terminal-preferences-window.ui:434
+#, fuzzy
+#| msgid "Enable the _menu accelerator key (F10 by default)"
+msgid "Accelerator Key (F10 by default)"
+msgstr "મેનુ ટૂંકાણ કી સક્રિય કરો (F10 મૂળભૂત રીતે ) (_m)"
+
+#: src/terminal-preferences-window.ui:439
+msgid "View and Customize Shortcuts"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:453
+msgid "Profiles"
+msgstr "રૂપરેખાઓ"
+
+#: src/terminal-preferences-window.ui:457
+msgid "Import a profile from a file"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:465
+msgid "_Import…"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:496
+#, fuzzy
+#| msgid "_Action"
+msgid "Application"
+msgstr "ક્રિયા (_A)"
+
+#: src/terminal-preferences-window.ui:499
+msgid "Import from GNOME Terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:500
+msgid "Copy its profiles, keyboard shortcuts and preferences"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:504 src/terminal-window.cc:3552
+msgid "_Import"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:514
+msgid "Ask to Remain Default"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:519
+#, fuzzy
+#| msgid "Switch to Next Terminal"
+msgid "Set as Default Terminal"
+msgstr "આગળનાં ટર્મિનલ પર જાવો"
+
+#: src/terminal-profile-editor.cc:134
+msgid "Black on light yellow"
+msgstr "આછા પીળા પર કાળો"
+
+#: src/terminal-profile-editor.cc:138
+msgid "Black on white"
+msgstr "સફેદ પર કાળો"
+
+#: src/terminal-profile-editor.cc:142
+msgid "Gray on black"
+msgstr "કાળા પર રાખોડી"
+
+#: src/terminal-profile-editor.cc:146
+msgid "Green on black"
+msgstr "કાળા પર લીલો"
+
+#: src/terminal-profile-editor.cc:150
+msgid "White on black"
+msgstr "કાળા પર સફેદ"
+
+#. Translators: "GNOME" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:155
+msgid "GNOME light"
+msgstr ""
+
+#. Translators: "GNOME" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:160
+msgid "GNOME dark"
+msgstr ""
+
+#. Translators: "Tango" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:165
+#, fuzzy
+#| msgid "Tango"
+msgid "Tango light"
+msgstr "Tango"
+
+#. Translators: "Tango" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:170
+#, fuzzy
+#| msgid "Tango"
+msgid "Tango dark"
+msgstr "Tango"
+
+#. Translators: "Solarized" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:175
+msgid "Solarized light"
+msgstr ""
+
+#. Translators: "Solarized" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:180
+msgid "Solarized dark"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:336 src/terminal-profile-editor.cc:349
+#: src/terminal-profile-editor.cc:856
+msgid "Custom"
+msgstr "કસ્ટમ"
+
+#: src/terminal-profile-editor.cc:373 src/terminal-profile-editor.cc:374
+#: src/terminal-profile-editor.cc:378
+msgid "Chinese Traditional"
+msgstr "ચીની સાંસ્કૃતિક"
+
+#: src/terminal-profile-editor.cc:375
+msgid "Cyrillic/Russian"
+msgstr "સીરીલ્લિક/રસિયન"
+
+#: src/terminal-profile-editor.cc:376 src/terminal-profile-editor.cc:415
+msgid "Japanese"
+msgstr "જાપાની"
+
+#: src/terminal-profile-editor.cc:377 src/terminal-profile-editor.cc:417
+msgid "Korean"
+msgstr "કોરિયન"
+
+#: src/terminal-profile-editor.cc:379 src/terminal-profile-editor.cc:380
+#: src/terminal-profile-editor.cc:381
+msgid "Chinese Simplified"
+msgstr "ચીની દ્વારા સરળ કરાયેલ"
+
+#: src/terminal-profile-editor.cc:382 src/terminal-profile-editor.cc:388
+#: src/terminal-profile-editor.cc:392 src/terminal-profile-editor.cc:411
+#: src/terminal-profile-editor.cc:421
+msgid "Western"
+msgstr "પશ્ચિમ"
+
+#: src/terminal-profile-editor.cc:383 src/terminal-profile-editor.cc:394
+#: src/terminal-profile-editor.cc:407 src/terminal-profile-editor.cc:419
+msgid "Central European"
+msgstr "મધ્ય યુરોપીયન"
+
+#: src/terminal-profile-editor.cc:384 src/terminal-profile-editor.cc:397
+#: src/terminal-profile-editor.cc:403 src/terminal-profile-editor.cc:405
+#: src/terminal-profile-editor.cc:420
+msgid "Cyrillic"
+msgstr "સીરીલ્લિક"
+
+#: src/terminal-profile-editor.cc:385 src/terminal-profile-editor.cc:402
+#: src/terminal-profile-editor.cc:413 src/terminal-profile-editor.cc:423
+msgid "Turkish"
+msgstr "તુર્કિશ"
+
+#: src/terminal-profile-editor.cc:386 src/terminal-profile-editor.cc:401
+#: src/terminal-profile-editor.cc:410 src/terminal-profile-editor.cc:424
+msgid "Hebrew"
+msgstr "હિબ્રુ"
+
+#: src/terminal-profile-editor.cc:387 src/terminal-profile-editor.cc:398
+#: src/terminal-profile-editor.cc:406 src/terminal-profile-editor.cc:425
+msgid "Arabic"
+msgstr "અરૅબીક"
+
+#: src/terminal-profile-editor.cc:389
+msgid "Nordic"
+msgstr "નોર્ડિક"
+
+#: src/terminal-profile-editor.cc:390 src/terminal-profile-editor.cc:396
+#: src/terminal-profile-editor.cc:426
+msgid "Baltic"
+msgstr "બાલ્ટિક"
+
+#: src/terminal-profile-editor.cc:391
+msgid "Celtic"
+msgstr "સૅલ્ટિક"
+
+#: src/terminal-profile-editor.cc:393 src/terminal-profile-editor.cc:412
+msgid "Romanian"
+msgstr "રોમાનિયન"
+
+#: src/terminal-profile-editor.cc:395
+msgid "South European"
+msgstr "દક્ષિણ યુરોપીયન"
+
+#: src/terminal-profile-editor.cc:399 src/terminal-profile-editor.cc:409
+#: src/terminal-profile-editor.cc:422
+msgid "Greek"
+msgstr "ગ્રીક"
+
+#: src/terminal-profile-editor.cc:400
+msgid "Hebrew Visual"
+msgstr "દેખી શકાય તેવુ હિબ્રુ"
+
+#: src/terminal-profile-editor.cc:404 src/terminal-profile-editor.cc:414
+msgid "Cyrillic/Ukrainian"
+msgstr "સીરીલ્લિક/યુક્રેનિયન"
+
+#: src/terminal-profile-editor.cc:408
+msgid "Croatian"
+msgstr "ક્રોએશિયન"
+
+#: src/terminal-profile-editor.cc:416
+msgid "Thai"
+msgstr "થાઈ"
+
+#: src/terminal-profile-editor.cc:418 src/terminal-profile-editor.cc:434
+msgid "Unicode"
+msgstr "યુનિકોડ"
+
+#: src/terminal-profile-editor.cc:427
+msgid "Vietnamese"
+msgstr "વિયેતનામી"
+
+#: src/terminal-profile-editor.cc:435
+#, fuzzy
+#| msgid "Encodings"
+msgid "Legacy CJK Encodings"
+msgstr "સંગ્રહ પધ્ધતિ"
+
+#: src/terminal-profile-editor.cc:436
+#, fuzzy
+#| msgid "Encodings"
+msgid "Obsolete Encodings"
+msgstr "સંગ્રહ પધ્ધતિ"
+
+#: src/terminal-profile-editor.cc:747
+#, fuzzy
+#| msgid "Select All"
+msgid "Select Font"
+msgstr "બધુ પસંદ કરો"
+
+#: src/terminal-profile-file.cc:96
+#, fuzzy
+msgid "The file is not a Pano Terminal profile."
+msgstr "સ્થાનિક ટર્મિનલમાં ખોલો (_L)"
+
+#: src/terminal-profile-editor.ui:20
+#, fuzzy
+#| msgid "Profiles"
+msgid "Edit Profile"
+msgstr "રૂપરેખાઓ"
+
+#: src/terminal-profile-editor.ui:29
+#, fuzzy
+#| msgid "Profiles"
+msgid "Profile"
+msgstr "રૂપરેખાઓ"
+
+#: src/terminal-profile-editor.ui:34
+msgid "Name"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:40
+msgid "Identifier"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:63
+msgid "Font"
+msgstr "ફોન્ટ"
+
+#: src/terminal-profile-editor.ui:66
+msgid "Use System Font"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:73
+#, fuzzy
+#| msgid "_Custom font"
+msgid "Custom Font"
+msgstr "વૈવિધ્ય ફોન્ટ (_C)"
+
+#: src/terminal-profile-editor.ui:100
+#, fuzzy
+#| msgid "_Allow bold text"
+msgid "Allow Blinking Text"
+msgstr "ઘાટ્ટા અક્ષરોની પરવાનગી આપો (_A)"
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+#, fuzzy
+#| msgid "Always visible"
+msgid "Always"
+msgstr "હંમેશા દૃશ્યમાન"
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+msgid "Never"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:121
+msgid "When focused"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:127
+msgid "When unfocused"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:139
+msgid "Colors"
+msgstr "રંગો"
+
+#: src/terminal-profile-editor.ui:142
+msgid "Color Scheme"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:143
+msgid "Follows the light or dark style if it has both"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:149
+msgid "Your Own Color Schemes"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:150
+msgid "Add .palette files to this folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:153
+msgid "_Open Folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "સિસ્ટમ થીમમાંથી રંગો વાપરો (_U)"
+
+#: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
+#, fuzzy
+#| msgid "Background type"
+msgid "Background Opacity"
+msgstr "પાશ્વ ભાગનો પ્રકાર"
+
+#: src/terminal-profile-editor.ui:168
+msgid "Lets the desktop show through the background; the text stays opaque"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:197
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Scheme"
+msgstr "સિસ્ટમ થીમમાંથી રંગો વાપરો (_U)"
+
+#: src/terminal-profile-editor.ui:202
+msgid "Override Default Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:205 src/terminal-profile-editor.ui:235
+#: src/terminal-profile-editor.ui:255 src/terminal-profile-editor.ui:285
+msgid "Text"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:208
+#, fuzzy
+#| msgid "Choose Terminal Text Color"
+msgid "Choose Text Color"
+msgstr "ટર્મિનલનો લખાણનો રંગ પસંદ કરો"
+
+#: src/terminal-profile-editor.ui:215 src/terminal-profile-editor.ui:265
+#: src/terminal-profile-editor.ui:295
+msgid "Background"
+msgstr "પાશ્વભાગ"
+
+#: src/terminal-profile-editor.ui:218
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Background Color"
+msgstr "ટર્મિનલનો પાશ્વ ભાગનો રંગ પસંદ કરો"
+
+#: src/terminal-profile-editor.ui:227
+msgid "Override Bold Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:238
+#, fuzzy
+#| msgid "Choose Terminal Text Color"
+msgid "Choose Bold Text Color"
+msgstr "ટર્મિનલનો લખાણનો રંગ પસંદ કરો"
+
+#: src/terminal-profile-editor.ui:247
+msgid "Override Cursor Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:258
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Cursor Foreground Color"
+msgstr "ટર્મિનલનો પાશ્વ ભાગનો રંગ પસંદ કરો"
+
+#: src/terminal-profile-editor.ui:268
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Cursor Background Color"
+msgstr "ટર્મિનલનો પાશ્વ ભાગનો રંગ પસંદ કરો"
+
+#: src/terminal-profile-editor.ui:277
+#, fuzzy
+#| msgid "Clear Find Highlight"
+msgid "Override Highlight Color"
+msgstr "પ્રકાશિત ભાગને સાફ કરો"
+
+#: src/terminal-profile-editor.ui:288
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Highlight Foreground Color"
+msgstr "ટર્મિનલનો પાશ્વ ભાગનો રંગ પસંદ કરો"
+
+#: src/terminal-profile-editor.ui:298
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Highlight Background Color"
+msgstr "ટર્મિનલનો પાશ્વ ભાગનો રંગ પસંદ કરો"
+
+#: src/terminal-profile-editor.ui:309
+msgid "Palette"
+msgstr "પેલેટ"
+
+#: src/terminal-profile-editor.ui:465
+msgid "Show Bold Text in Bright Colors"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:472
+#, fuzzy
+#| msgid "Cursor _shape:"
+msgid "Cursor"
+msgstr "કર્સર આકાર (_s):"
+
+#: src/terminal-profile-editor.ui:475
+msgid "Shape"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:484
+msgid "Block"
+msgstr "બ્લોક"
+
+#: src/terminal-profile-editor.ui:490
+msgid "I-Beam"
+msgstr "I-Beam"
+
+#: src/terminal-profile-editor.ui:496
+msgid "Underline"
+msgstr "Underline"
+
+#: src/terminal-profile-editor.ui:506
+msgid "Blinking"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:521
+#, fuzzy
+#| msgid "Disabled"
+msgid "Enabled"
+msgstr "નિષ્ક્રિય"
+
+#: src/terminal-profile-editor.ui:527
+msgid "Disabled"
+msgstr "નિષ્ક્રિય"
+
+#: src/terminal-profile-editor.ui:539
+#, fuzzy
+#| msgid "Terminal"
+msgid "Terminal Size"
+msgstr "ટર્મિનલ"
+
+#: src/terminal-profile-editor.ui:542
+#, fuzzy
+#| msgid "columns"
+msgid "Columns"
+msgstr "સ્તંભો"
+
+#: src/terminal-profile-editor.ui:556
+msgid "Rows"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:574
+msgid "Cell Width Scale"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:575
+msgid "Increases the width of character cells"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:590
+msgid "Cell Height Scale"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:591
+msgid "Increase the height of character cells"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:620
+msgid "Scrolling"
+msgstr "ખસેડી રહ્યા છે"
+
+#: src/terminal-profile-editor.ui:623
+msgid "Show scrollbar"
+msgstr "ખસેડવાનીપટ્ટી ને બતાવો"
+
+#: src/terminal-profile-editor.ui:632
+msgid "Regular"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:638
+msgid "Overlay"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:654
+#, fuzzy
+#| msgid "Scrolling"
+msgid "Kinetic scrolling"
+msgstr "ખસેડી રહ્યા છે"
+
+#: src/terminal-profile-editor.ui:655
+msgid "When used on touchscreens"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:664
+#, fuzzy
+#| msgid "Scroll on _output"
+msgid "Scroll on Output"
+msgstr "આઉટપુટ પર ખસેડો (_o)"
+
+#: src/terminal-profile-editor.ui:669
+#, fuzzy
+#| msgid "Scroll on _keystroke"
+msgid "Scroll on Keystroke"
+msgstr "કીના ઝટકાને અનુલક્ષીને (_k)"
+
+#: src/terminal-profile-editor.ui:674
+#, fuzzy
+#| msgid "Scroll on _keystroke"
+msgid "Scroll on Paste"
+msgstr "કીના ઝટકાને અનુલક્ષીને (_k)"
+
+#: src/terminal-profile-editor.ui:683
+#, fuzzy
+#| msgid "Scroll_back:"
+msgid "Limit Scrollback"
+msgstr "પાછા ખસવું (_b):"
+
+#: src/terminal-profile-editor.ui:691
+#, fuzzy
+#| msgid "Scrolling"
+msgid "Scrollback Lines"
+msgstr "ખસેડી રહ્યા છે"
+
+#: src/terminal-profile-editor.ui:707
+msgid "Images"
+msgstr "ચિત્રો"
+
+#: src/terminal-profile-editor.ui:710
+msgid "Enable SIXEL images"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:717
+msgid "Bell"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:720
+msgid "Play a Sound"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:725
+#, fuzzy
+#| msgid "Close Terminal"
+msgid "Flash the Terminal"
+msgstr "ટર્મિનલને બંધ કરો"
+
+#: src/terminal-profile-editor.ui:726
+#, fuzzy
+#| msgid "How much to darken the background image"
+msgid "A tab in the background is marked instead"
+msgstr "પાશ્વ ભાગના ચિત્રને કેટલુ ઘેરુ કરવું છે"
+
+#: src/terminal-profile-editor.ui:733
+msgid "Command"
+msgstr "આદેશ"
+
+#: src/terminal-profile-editor.ui:736
+msgid "Run command as a login shell"
+msgstr "પ્રવેશ શેલની રીતે આદેશ ચલાવો"
+
+#: src/terminal-profile-editor.ui:745
+#, fuzzy
+#| msgid "Custom co_mmand:"
+msgid "Use Custom Command"
+msgstr "કસ્ટમ આદેશ (_m):"
+
+#: src/terminal-profile-editor.ui:750
+#, fuzzy
+#| msgid "Custom co_mmand:"
+msgid "Custom Command"
+msgstr "કસ્ટમ આદેશ (_m):"
+
+#: src/terminal-profile-editor.ui:763
+#, fuzzy
+#| msgid "Set the working directory"
+msgid "Preserve Working Directory"
+msgstr "કાર્યશીલ ડિરૅક્ટરી સુયોજીત કરો"
+
+#: src/terminal-profile-editor.ui:764
+#, fuzzy
+#| msgid "_Profile used when launching a new terminal:"
+msgid "Preserve the working directory when opening a new terminal"
+msgstr "જ્યારે નવું ટર્મિનલ લોન્ચ કરી રહ્યા હોય ત્યારે વાપરવાની રૂપરેખા (_P):"
+
+#: src/terminal-profile-editor.ui:777
+msgid "When command exits"
+msgstr "જ્યારે આદેશની બહાર નીકળે છે"
+
+#: src/terminal-profile-editor.ui:788
+msgid "Compatibility"
+msgstr "અનૂકુળતા"
+
+#: src/terminal-profile-editor.ui:791
+#, fuzzy
+#| msgid "_Backspace key generates:"
+msgid "Backspace Key"
+msgstr "બેકસ્પેસ કી બનાવે છે (_B):"
+
+#: src/terminal-profile-editor.ui:792
+#, fuzzy
+#| msgid "Effect of the Backspace key"
+msgid "Sequence to send for Backspace key"
+msgstr "બૅકસ્પેસ કીની અસર"
+
+#: src/terminal-profile-editor.ui:801
+#, fuzzy
+#| msgid "_Delete"
+msgid "Delete Key"
+msgstr "કાઢી નાંખો (_D)"
+
+#: src/terminal-profile-editor.ui:802
+#, fuzzy
+#| msgid "Effect of the Delete key"
+msgid "Sequence to send for Delete key"
+msgstr "દૂર કરવાની કીની અસર"
+
+#: src/terminal-profile-editor.ui:811
+#, fuzzy
+#| msgid "Encodings"
+msgid "Encoding"
+msgstr "સંગ્રહ પધ્ધતિ"
+
+#: src/terminal-profile-editor.ui:819
+#, fuzzy
+#| msgid "Select-by-_word characters:"
+msgid "Ambiguous-width Characters"
+msgstr "શબ્દના અક્ષરો દ્વારા પસંદ કરો (_w):"
+
+#: src/terminal-profile-editor.ui:828
+msgid "Narrow"
+msgstr "સાંકડુ"
+
+#: src/terminal-profile-editor.ui:834
+msgid "Wide"
+msgstr "પહોળુ"
+
+#: src/terminal-profile-editor.ui:865
+msgid "Automatic"
+msgstr "આપોઆપ"
+
+#: src/terminal-profile-editor.ui:871
+msgid "Control-H"
+msgstr "Control-H"
+
+#: src/terminal-profile-editor.ui:877
+msgid "ASCII DEL"
+msgstr "ASCII DEL"
+
+#: src/terminal-profile-editor.ui:883
+#, fuzzy
+#| msgid "Escape sequence"
+msgid "Escape Sequence"
+msgstr "Escape ક્રમ"
+
+#: src/terminal-profile-editor.ui:889
+msgid "TTY Erase"
+msgstr "TTY Erase"
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:904
+msgid "Shell only"
+msgstr ""
+
+#. When command exits
+#: src/terminal-profile-editor.ui:919
+#, fuzzy
+#| msgid "Close Terminal"
+msgid "Close terminal"
+msgstr "ટર્મિનલને બંધ કરો"
+
+#. When command exits
+#: src/terminal-profile-editor.ui:925
+#, fuzzy
+#| msgid "Restart the command"
+msgid "Restart command"
+msgstr "આદેશને પુન:શરૂ કરો"
+
+#. When command exits
+#: src/terminal-profile-editor.ui:931
+#, fuzzy
+#| msgid "Hold the terminal open"
+msgid "Hold terminal"
+msgstr "ટર્મિનલને ખુલ્લુ પકડો"
+
+#: src/terminal-profile-row.ui:47
+msgid "_Edit"
+msgstr "ફેરફાર (_E)"
+
+#: src/terminal-profile-row.ui:51
+msgid "_Clone"
+msgstr "ક્લોન કરો (_C)"
+
+#: src/terminal-profile-row.ui:55
+msgid "E_xport…"
+msgstr ""
+
+#: src/terminal-profile-row.ui:59
 msgid "_Delete"
 msgstr "કાઢી નાંખો (_D)"
 
-#: ../src/terminal-prefs.c:387
-msgid "Delete Profile"
-msgstr "રૂપરેખા રદ કરો"
+#: src/terminal-profile-row.ui:65
+msgid "_Set as default"
+msgstr ""
 
-#: ../src/terminal-prefs.c:702
-msgid "Show"
-msgstr "બતાવો"
+#: src/terminal-screen.cc:1771
+msgid ""
+"Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
+"Esc to cancel"
+msgstr ""
 
-#: ../src/terminal-prefs.c:713
-msgid "_Encoding"
-msgstr "સંગ્રહ પધ્ધતિ (_E)"
-
-#: ../src/terminal-screen.c:1042
+#: src/terminal-screen.cc:3352
 msgid "No command supplied nor shell requested"
 msgstr "કોઇ આદેશ પૂરો પાડવામાં  અથવા શેલ સૂચિક કરવામાં આવ્યુ નથી"
 
-#: ../src/terminal-screen.c:1297 ../src/terminal-window.c:2413
-msgid "_Profile Preferences"
-msgstr "રૂપરેખા પસંદગીઓ (_P)"
-
-#: ../src/terminal-screen.c:1298 ../src/terminal-screen.c:1569
+#: src/terminal-screen.cc:3572 src/terminal-screen.cc:3964
 msgid "_Relaunch"
 msgstr "પુન:શરૂ કરો (_R)"
 
-#: ../src/terminal-screen.c:1301
+#: src/terminal-screen.cc:3575
 msgid "There was an error creating the child process for this terminal"
 msgstr "આ ટર્મિનલ માટે બાળ પ્રક્રિયા બનાવવામાં ભૂલ હતી"
 
-#: ../src/terminal-screen.c:1573
+#: src/terminal-screen.cc:3968
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "બાળ પ્રક્રિયા સામાન્ય રીતે પરિસ્થિતિ %d સાથે બહાર નીકળેલ છે."
 
-#: ../src/terminal-screen.c:1576
+#: src/terminal-screen.cc:3971
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "બાળ પ્રક્રિયા સંકેત %d દ્દારા અંત આવી ગયો હતો."
 
-#: ../src/terminal-screen.c:1579
+#: src/terminal-screen.cc:3974
 msgid "The child process was aborted."
 msgstr "બાળ પ્રક્રિયાનો અંત આવી ગયો હતો."
 
-#: ../src/terminal-tab-label.c:192
-msgid "Close tab"
-msgstr "ટેબ બંધ કરો"
+#: src/terminal-shortcut-editor.ui:20 src/terminal-shortcut-editor.ui:29
+msgid "Shortcuts"
+msgstr "ટૂંકાણ કીઓ"
 
-#: ../src/terminal-tabs-menu.c:198
-msgid "Switch to this tab"
-msgstr "પછીના ટૅબ પર જાઓ"
+#: src/terminal-shortcut-editor.ui:34
+#, fuzzy
+#| msgid "_Enable shortcuts"
+msgid "Enable Shortcuts"
+msgstr "ટૂંકાણને સક્રિય કરો (_E)"
 
-#: ../src/terminal-util.c:147
+#: src/terminal-util.cc:171
 msgid "There was an error displaying help"
 msgstr "ત્યાં મદદને દર્શાવવામાં ભૂલ હતી"
 
-#: ../src/terminal-util.c:200
+#: src/terminal-util.cc:231
 msgid "Contributors:"
 msgstr "ફાળો આપનારો:"
 
-#: ../src/terminal-util.c:219
+#: src/terminal-util.cc:249
+#, c-format
+msgid "Using VTE version %u.%u.%u"
+msgstr ""
+
+#: src/terminal-util.cc:255
 msgid "A terminal emulator for the GNOME desktop"
 msgstr "GNOME ડેસ્કટોપ માટે ટર્મિનલ ઈમ્યુલેટર"
 
-#: ../src/terminal-util.c:227
+#: src/terminal-util.cc:271
 msgid "translator-credits"
 msgstr "અંકિત પટેલ <ankit644@yahoo.com>, શ્ર્વેતા કોઠારી <swkothar@redhat.com>"
 
-#: ../src/terminal-util.c:300
+#: src/terminal-util.cc:331
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "સરનામું “%s” ને ખુલ્લુ કરી શક્યા નહિં"
 
-#: ../src/terminal-util.c:369
+#: src/terminal-util.cc:400
 msgid ""
-"Pano Terminal is free software: you can redistribute it and/or modify "
-"it under the terms of the GNU General Public License as published by "
-"the Free Software Foundation, either version 3 of the License, or (at "
-"your option) any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version."
 msgstr ""
-"Pano Terminal is free software: you can redistribute it and/or modify "
-"it under the terms of the GNU General Public License as published by "
-"the Free Software Foundation, either version 3 of the License, or (at "
-"your option) any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version."
 
-#: ../src/terminal-util.c:373
+#: src/terminal-util.cc:404
 msgid ""
-"Pano Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of "
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
-"General Public License for more details."
+"Pano Terminal is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
 msgstr ""
-"Pano Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of "
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
-"General Public License for more details."
+"Pano Terminal is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
 
-#: ../src/terminal-util.c:377
+#: src/terminal-util.cc:408
+#, fuzzy
+#| msgid ""
+#| "You should have received a copy of the GNU General Public License along "
+#| "with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgid ""
-"You should have received a copy of the GNU General Public License "
-"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License along with "
+"Pano Terminal.  If not, see &lt;http://www.gnu.org/licenses/&gt;."
 msgstr ""
-"You should have received a copy of the GNU General Public License "
-"along with Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
+"You should have received a copy of the GNU General Public License along with "
+"Pano Terminal.  If not, see <http://www.gnu.org/licenses/>."
 
-#: ../src/terminal-window.c:504
-msgid "Could not save contents"
+#: src/terminal-util.cc:1173
+msgid "“file” scheme with remote hostname not supported"
+msgstr ""
+
+#. Translators: %s is an error message
+#: src/terminal-window.cc:540 src/terminal-window.cc:579
+#, fuzzy, c-format
+#| msgid "Could not save contents"
+msgid "Could not save the contents: %s"
 msgstr "સમાવિષ્ટોને સંગ્રહી શક્યા નહિં"
 
-#: ../src/terminal-window.c:526
-msgid "Save as…"
+#. Translators: %s is a file name
+#: src/terminal-window.cc:547
+#, fuzzy, c-format
+#| msgid "Save as…"
+msgid "Saved “%s”"
 msgstr "આ રીતે સંગ્રહો..."
 
-#: ../src/terminal-window.c:530
-msgid "_Save"
-msgstr "સંગ્રહો (_S)"
+#: src/terminal-window.cc:799
+msgid "Copied to clipboard"
+msgstr ""
 
-#. Translators: This is the label of a menu item to choose a profile.
-#. * _%d is used as the accelerator (with d between 1 and 9), and
-#. * the %s is the name of the terminal profile.
-#.
-#: ../src/terminal-window.c:1209
+#: src/terminal-window.cc:1203
+msgid "Tab closed"
+msgstr ""
+
+#: src/terminal-window.cc:1204
+msgid "_Undo"
+msgstr ""
+
+#: src/terminal-window.cc:1342
+msgid "Broadcasting input, but no terminal takes part"
+msgstr ""
+
+#: src/terminal-window.cc:1344
+#, fuzzy, c-format
+#| msgid "Title for terminal"
+msgid "Input goes to %u terminal"
+msgid_plural "Input goes to %u terminals"
+msgstr[0] "ટર્મિનલ માટેનું શીર્ષક"
+msgstr[1] "ટર્મિનલ માટેનું શીર્ષક"
+
+#: src/terminal-window.cc:1681
+msgid "Nothing to select"
+msgstr ""
+
+#. Translators: %s is a file name
+#: src/terminal-window.cc:1724
 #, c-format
-msgid "_%d. %s"
-msgstr "_%d. %s"
+msgid "“%s” does not exist"
+msgstr ""
 
-#. Translators: This is the label of a menu item to choose a profile.
-#. * _%c is used as the accelerator (it will be a character between A and Z),
-#. * and the %s is the name of the terminal profile.
-#.
-#: ../src/terminal-window.c:1215
+#: src/terminal-window.cc:2551
+msgid ""
+"Programs cannot change this title. Leave it empty to show the title from the "
+"program again."
+msgstr ""
+
+#: src/terminal-window.cc:2761
+#, fuzzy
+#| msgid "Open a terminal"
+msgid "Activity in a terminal"
+msgstr "ટર્મિનલ ખોલો"
+
+#: src/terminal-window.cc:2796
 #, c-format
-msgid "_%c. %s"
-msgstr "_%c. %s"
+msgid ""
+"%s\n"
+"No output for %u second"
+msgid_plural ""
+"%s\n"
+"No output for %u seconds"
+msgstr[0] ""
+msgstr[1] ""
 
-#. Toplevel
-#: ../src/terminal-window.c:2363
-msgid "_File"
-msgstr "ફાઈલ (_F)"
+#: src/terminal-window.cc:2801
+#, fuzzy
+#| msgid "Open a terminal"
+msgid "Silence in a terminal"
+msgstr "ટર્મિનલ ખોલો"
 
-#. File menu
-#: ../src/terminal-window.c:2364 ../src/terminal-window.c:2375
-#: ../src/terminal-window.c:2381 ../src/terminal-window.c:2524
-msgid "Open _Terminal"
+#: src/terminal-window.cc:3020
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open _Hyperlink"
 msgstr "ટર્મિનલ ખોલો (_T)"
 
-#: ../src/terminal-window.c:2365
-msgid "_Edit"
-msgstr "ફેરફાર (_E)"
+#: src/terminal-window.cc:3021
+#, fuzzy
+#| msgid "_Copy Link Address"
+msgid "Copy Hyperlink _Address"
+msgstr "કડીનાં સરનામાંની નકલ કરો (_C)"
 
-#: ../src/terminal-window.c:2366
-msgid "_View"
-msgstr "દૃશ્ય (_V)"
-
-#: ../src/terminal-window.c:2367
-msgid "_Search"
-msgstr "શોધો (_S)"
-
-#: ../src/terminal-window.c:2368
-msgid "_Terminal"
-msgstr "ટર્મિનલ (_T)"
-
-#: ../src/terminal-window.c:2369
-msgid "Ta_bs"
-msgstr "ટેબો (_b)"
-
-#: ../src/terminal-window.c:2378
-msgid "Open Ta_b"
-msgstr "નવી ટૅબ (_b)"
-
-#: ../src/terminal-window.c:2384
-msgid "New _Profile"
-msgstr "નવી રૂપરેખા (_P)"
-
-#: ../src/terminal-window.c:2387
-msgid "_Save Contents"
-msgstr "સમાવિષ્ટો ને સંગ્રહો (_S)"
-
-#: ../src/terminal-window.c:2390 ../src/terminal-window.c:3645
-msgid "C_lose Terminal"
-msgstr "ટર્મિનલ ને બંધ કરો (_l)"
-
-#: ../src/terminal-window.c:2393
-msgid "_Close All Terminals"
-msgstr "બધા ટર્મિનલને બંધ કરો (_C)"
-
-#: ../src/terminal-window.c:2404 ../src/terminal-window.c:2521
-msgid "Paste _Filenames"
-msgstr "ફાઈલનામો ચોંટાડો (_F)"
-
-#: ../src/terminal-window.c:2407
-msgid "Select All"
-msgstr "બધુ પસંદ કરો"
-
-#: ../src/terminal-window.c:2410
-msgid "Pre_ferences"
-msgstr "પસંદગીઓ (_f)"
-
-#. Search menu
-#: ../src/terminal-window.c:2429
-msgid "_Find…"
-msgstr "શોધો (_F)…"
-
-#: ../src/terminal-window.c:2432
-msgid "Find Ne_xt"
-msgstr "પછીનું શોધો (_x)"
-
-#: ../src/terminal-window.c:2435
-msgid "Find Pre_vious"
-msgstr "પહેલાનું શોધો (_v)"
-
-#: ../src/terminal-window.c:2438
-msgid "_Clear Highlight"
-msgstr "પ્રકાશિત ભાગને સાફ કરો (_C)"
-
-#: ../src/terminal-window.c:2442
-msgid "Go to _Line..."
-msgstr "વાક્ય પર જાઓ (_L)..."
-
-#: ../src/terminal-window.c:2445
-msgid "_Incremental Search..."
-msgstr "વધતી શોધ (_I)..."
-
-#. Terminal menu
-#: ../src/terminal-window.c:2451
-msgid "Change _Profile"
-msgstr "રૂપરેખા બદલો (_P)"
-
-#: ../src/terminal-window.c:2452
-msgid "Set _Character Encoding"
-msgstr "અક્ષર સંગ્રહપદ્ધતિ સુયોજિત કરો (_C)"
-
-# libgnomeprint/gnome-print-paper.c:54
-#: ../src/terminal-window.c:2453
-msgid "_Reset"
-msgstr "ફરી સુયોજીત કરો (_R)"
-
-#: ../src/terminal-window.c:2456
-msgid "Reset and C_lear"
-msgstr "ફરી સુયોજીત કરો અને સાફ કરો (_l)"
-
-#. Terminal/Encodings menu
-#: ../src/terminal-window.c:2461
-msgid "_Add or Remove…"
-msgstr "ઉમેરો અથવા દૂર કરો (_A)..."
-
-#. Tabs menu
-#: ../src/terminal-window.c:2466
-msgid "_Previous Terminal"
-msgstr "પહેલાનું ટર્મિનલ (_P)"
-
-#: ../src/terminal-window.c:2469
-msgid "_Next Terminal"
-msgstr "આગળનું ટર્મિનલ (_N)"
-
-#: ../src/terminal-window.c:2472
-msgid "Move Terminal _Left"
-msgstr "ટર્મિનલને ડાબે ખસેડો (_L)"
-
-#: ../src/terminal-window.c:2475
-msgid "Move Terminal _Right"
-msgstr "ટર્મિનલને જમણે ખસેડો (_R)"
-
-#: ../src/terminal-window.c:2478
-#| msgid "_Terminal"
-msgid "_Detach Terminal"
-msgstr "ટર્મિનલનું જોડાણ તોડો (_D)"
-
-#. Help menu
-#: ../src/terminal-window.c:2483
-msgid "_Contents"
-msgstr "સમાવિષ્ટો (_C)"
-
-#: ../src/terminal-window.c:2490
-msgid "_Inspector"
-msgstr "નિરીક્ષક (_I)"
-
-#. Popup menu
-#: ../src/terminal-window.c:2496
-msgid "_Send Mail To…"
+#: src/terminal-window.cc:3031
+#, fuzzy
+#| msgid "_Send Mail To…"
+msgid "Send Mail _To…"
 msgstr "આને મેઈલ મોકલો (_S)..."
 
-#: ../src/terminal-window.c:2499
-msgid "_Copy E-mail Address"
+#: src/terminal-window.cc:3032
+#, fuzzy
+#| msgid "_Copy E-mail Address"
+msgid "Copy Mail _Address"
 msgstr "ઈ-મેઈલ સરનામાની નકલ કરો (_C)"
 
-#: ../src/terminal-window.c:2502
-msgid "C_all To…"
+#: src/terminal-window.cc:3035
+#, fuzzy
+#| msgid "C_all To…"
+msgid "Call _To…"
 msgstr "ને કોલ કરો (_a)…"
 
-#: ../src/terminal-window.c:2505
-msgid "_Copy Call Address"
+#: src/terminal-window.cc:3036
+#, fuzzy
+#| msgid "_Copy Call Address"
+msgid "Copy Call _Address "
 msgstr "કોલ સરનામાની નકલ કરો (_C)"
 
-#: ../src/terminal-window.c:2508
+#: src/terminal-window.cc:3041
 msgid "_Open Link"
 msgstr "કડી ખોલો (_O)"
 
-#: ../src/terminal-window.c:2511
-msgid "_Copy Link Address"
+#: src/terminal-window.cc:3042
+#, fuzzy
+#| msgid "_Copy Link Address"
+msgid "Copy _Link"
 msgstr "કડીનાં સરનામાંની નકલ કરો (_C)"
 
-#: ../src/terminal-window.c:2514
+#: src/terminal-window.cc:3081
+#, fuzzy
+#| msgid "Copy"
+msgid "_Copy"
+msgstr "નકલ"
+
+#: src/terminal-window.cc:3082
+msgid "Copy as _HTML"
+msgstr ""
+
+#: src/terminal-window.cc:3083
+#, fuzzy
+#| msgid "Paste"
+msgid "_Paste"
+msgstr "ચોંટાડો"
+
+#: src/terminal-window.cc:3086
+msgid "Copy _Output of This Command"
+msgstr ""
+
+#: src/terminal-window.cc:3088
+msgid "Copy _Output of Last Command"
+msgstr ""
+
+#: src/terminal-window.cc:3090
+#, fuzzy
+#| msgid "Paste _Filenames"
+msgid "Paste as _Filenames"
+msgstr "ફાઈલનામો ચોંટાડો (_F)"
+
+#: src/terminal-window.cc:3097
+msgid "Monitor for _Activity"
+msgstr ""
+
+#: src/terminal-window.cc:3098
+msgid "Monitor for _Silence"
+msgstr ""
+
+#: src/terminal-window.cc:3105
 msgid "P_rofiles"
 msgstr "રૂપરેખાઓ (_r)"
 
-#: ../src/terminal-window.c:2527
-msgid "L_eave Full Screen"
-msgstr "સંપૂર્ણ સ્ક્રીનને છોડો (_e)"
+#: src/terminal-window.cc:3123
+#, fuzzy
+#| msgid "Zoom In"
+msgid "_Zoom Pane"
+msgstr "મોટુ કરો"
 
-#. View Menu
-#: ../src/terminal-window.c:2535
-msgid "Show _Menubar"
-msgstr "મેનુપટ્ટી બતાવો (_M)"
+#: src/terminal-window.cc:3124
+msgid "Make Panes the Same _Size"
+msgstr ""
 
-#: ../src/terminal-window.c:2539
-msgid "_Full Screen"
-msgstr "આખી સ્ક્રિન (_F)"
+#: src/terminal-window.cc:3127
+#, fuzzy
+#| msgid "New Tab"
+msgid "To a New _Tab"
+msgstr "નવી ટૅબ"
 
-#. Terminal menu
-#: ../src/terminal-window.c:2544
-msgid "Read-_Only"
-msgstr "ફક્ત વાંચી શકાય તેવુ (_O)"
+#: src/terminal-window.cc:3130
+#, fuzzy
+#| msgid "Close Window"
+msgid "To a New _Window"
+msgstr "વિન્ડો બંધ કરો"
 
-#: ../src/terminal-window.c:3632
+#: src/terminal-window.cc:3135
+msgid "Swap With the Pane on the _Left"
+msgstr ""
+
+#: src/terminal-window.cc:3136
+msgid "Swap With the Pane on the _Right"
+msgstr ""
+
+#: src/terminal-window.cc:3137
+msgid "Swap With the Pane _Above"
+msgstr ""
+
+#: src/terminal-window.cc:3138
+msgid "Swap With the Pane _Below"
+msgstr ""
+
+#: src/terminal-window.cc:3152
+msgid "_Move Pane"
+msgstr ""
+
+#: src/terminal-window.cc:3154
+#, fuzzy
+#| msgid "Close tab"
+msgid "Close P_ane"
+msgstr "ટેબ બંધ કરો"
+
+#: src/terminal-window.cc:3182
+#, fuzzy
+#| msgid "_New Terminal"
+msgid "New _Terminal"
+msgstr "નવું ટર્મિનલ (_N)"
+
+#: src/terminal-window.cc:3191
+#, fuzzy
+#| msgid "New Tab"
+msgid "New _Tab"
+msgstr "નવી ટૅબ"
+
+#: src/terminal-window.cc:3201
+msgid "Leave Full Screen"
+msgstr "સંપૂર્ણ સ્ક્રીનને છોડો"
+
+#: src/terminal-window.cc:3547
+msgid ""
+"Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
+msgstr ""
+
+#: src/terminal-window.cc:3553 src/terminal-window.cc:3950
+msgid "_No"
+msgstr ""
+
+#: src/terminal-window.cc:3944
+msgid "Set Pano Terminal as your default terminal?"
+msgstr ""
+
+#: src/terminal-window.cc:3949
+msgid "_Yes"
+msgstr ""
+
+#: src/terminal-window.cc:4019
+msgid "_Stop"
+msgstr ""
+
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close the other terminals?"
+msgstr "આ ટર્મિનલ ને બંધ કરો?"
+
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close the other terminal?"
+msgstr "આ ટર્મિનલ ને બંધ કરો?"
+
+#: src/terminal-window.cc:5159
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some of the other terminals. Closing "
+"them will kill all of them."
+msgstr ""
+"આ વિન્ડો માં કેટલાક ટર્મિનલોમાં હજુ પ્રક્રિયાઓ ચાલી રહી છે. વિન્ડો ને બંધ કરવા દરમ્યાન "
+"તેઓનાં બધાને મારશે."
+
+#: src/terminal-window.cc:5161
+#, fuzzy
+#| msgid ""
+#| "There is still a process running in this terminal. Closing the terminal "
+#| "will kill it."
+msgid ""
+"There is still a process running in the other terminal. Closing the terminal "
+"will kill it."
+msgstr "આ ટર્મિનલ માં હજુ પ્રક્રિયા ચાલુ રહી છે. ટર્મિનલમાં બંધ કરવા દરમ્યાન તેને મારશે."
+
+#: src/terminal-window.cc:5163
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "C_lose Terminals"
+msgstr "ટર્મિનલ ને બંધ કરો (_l)"
+
+#: src/terminal-window.cc:5165
 msgid "Close this window?"
 msgstr "શું આ વિન્ડો બંધ કરવી છે?"
 
-#: ../src/terminal-window.c:3632
-msgid "Close this terminal?"
-msgstr "આ ટર્મિનલ ને બંધ કરો?"
-
-#: ../src/terminal-window.c:3636
+#: src/terminal-window.cc:5166
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -2060,18 +3883,461 @@ msgstr ""
 "આ વિન્ડો માં કેટલાક ટર્મિનલોમાં હજુ પ્રક્રિયાઓ ચાલી રહી છે. વિન્ડો ને બંધ કરવા દરમ્યાન "
 "તેઓનાં બધાને મારશે."
 
-#: ../src/terminal-window.c:3640
+#: src/terminal-window.cc:5168
+msgid "C_lose Window"
+msgstr "વિન્ડો બંધ કરો (_l)"
+
+#: src/terminal-window.cc:5170
+msgid "Close this terminal?"
+msgstr "આ ટર્મિનલ ને બંધ કરો?"
+
+#: src/terminal-window.cc:5171
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
 msgstr "આ ટર્મિનલ માં હજુ પ્રક્રિયા ચાલુ રહી છે. ટર્મિનલમાં બંધ કરવા દરમ્યાન તેને મારશે."
 
-#: ../src/terminal-window.c:3645
-msgid "C_lose Window"
-msgstr "વિન્ડો બંધ કરો (_l)"
+#: src/terminal.cc:672
+#, c-format
+msgid "Failed to parse arguments: %s\n"
+msgstr "દલીલોનું પદચ્છેદન કરવામાં નિષ્ફળ: %s\n"
 
-#~ msgid "COMMAND"
-#~ msgstr "COMMAND"
+#~ msgid "Search _backwards"
+#~ msgstr "ઊંધી દિશામાં શોધો (_b)"
+
+#~ msgid "Verbose output"
+#~ msgstr "વર્બોસ આઉટપુટ"
+
+#~ msgid "Output options:"
+#~ msgstr "આઉટપુટ વિકલ્પો:"
+
+#~ msgid "Show output options"
+#~ msgstr "આઉટપુટ વિકલ્પોને બતાવો"
+
+#, c-format
+#~ msgid "\"%s\" is not a valid application ID"
+#~ msgstr "\"%s\" એ યોગ્ય કાર્યક્રમ ID નથી"
+
+#~ msgid "Server application ID"
+#~ msgstr "સર્વર કાર્યક્રમ ID"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Global options:"
+#~ msgstr "વૈશ્ર્વિક વિકલ્પો:"
+
+#~ msgid "Show global options"
+#~ msgstr "વૈશ્ર્વિક વિકલ્પો બતાવો"
+
+#~ msgid "FD passing of stdin is not supported"
+#~ msgstr "stdin નું FD પાસીંગ આધારભૂત નથી"
+
+#~ msgid "FD passing of stdout is not supported"
+#~ msgstr "stdout નું FD પાસીંગ આધારભૂત નથી"
+
+#~ msgid "FD passing of stderr is not supported"
+#~ msgstr "stder નું FD પાસીંગ આધારભૂત નથી"
+
+#, c-format
+#~ msgid "Invalid argument \"%s\" to --fd option"
+#~ msgstr "--fd વિકલ્પમાં અયોગ્ય દલીલ \"%s\""
+
+#~ msgid "Forward stdin"
+#~ msgstr "stdin આગળ ધપાવો"
+
+#~ msgid "Forward stdout"
+#~ msgstr "stdout આગળ ધપાવો"
+
+#~ msgid "Forward stderr"
+#~ msgstr "stderr આગળ ધપાવો"
+
+#~ msgid "Show exec options"
+#~ msgstr "exec વિકલ્પો બતાવો"
+
+#~ msgid "Maximise the window"
+#~ msgstr "વિન્ડો ને મહત્તમ કરો"
+
+#~ msgid "Window options:"
+#~ msgstr "વિન્ડો વિકલ્પો:"
+
+#~ msgid "Show window options"
+#~ msgstr "વિન્ડો વિકલ્પો બતાવો"
+
+#, c-format
+#~ msgid "Zoom value \"%s\" is outside allowed range"
+#~ msgstr "નાનું મોટુ કરવાની કિંમત \"%s\" એ પરવાનગી થયેલ સીમાની બહાર છે"
+
+#~ msgid "UUID"
+#~ msgstr "UUID"
+
+#~ msgid "Terminal options:"
+#~ msgstr "ટર્મિનલ વિકલ્પો:"
+
+#~ msgid "Processing options:"
+#~ msgstr "પ્રક્રિયા વિકલ્પો:"
+
+#~ msgid "Show processing options"
+#~ msgstr "પ્રક્રિયા વિકલ્પો બતાવો"
+
+#, c-format
+#~ msgid "'%s' needs the command to run as arguments after '--'"
+#~ msgstr "'--' પછી દલીલો તરીકે ચલાવવા માટે '%s' ને આદેશની જરૂર છે"
+
+#~ msgid "Missing argument"
+#~ msgstr "ગેરહાજર દલીલ"
+
+#, c-format
+#~ msgid "Unknown completion request for \"%s\""
+#~ msgstr "\"%s\" માટે અજ્ઞાત સમાપ્તિ માંગણી"
+
+#~ msgid "GTerminal"
+#~ msgstr "GTerminal"
+
+#~ msgid "Missing command"
+#~ msgstr "ગેરહાજર આદેશ"
+
+#, c-format
+#~ msgid "Unknown command \"%s\""
+#~ msgstr "અજ્ઞાત આદેશ \"%s\""
+
+#, c-format
+#~ msgid "Error processing arguments: %s\n"
+#~ msgstr "દલીલોને પ્રક્રિયા કરી રહ્યા હોય ત્યારે ભૂલ: %s\n"
+
+#~ msgid "Unnamed"
+#~ msgstr "નામવીહિન"
+
+#~ msgid "If true, allow applications in the terminal to make text boldface."
+#~ msgstr "જો true હોય તો, કાર્યક્રમને ટર્મિનલમાંના લખાણને ધાટું કરવાની પરવાનગી આપો."
+
+#~ msgid "Whether to show menubar in new windows/tabs"
+#~ msgstr "નવી વિન્ડો/ટૅબમાં યાદીની પટ્ટી દર્શાવવી કે નહિં"
+
+#~ msgid "True if the menubar should be shown in new window"
+#~ msgstr "True જો મેનુપટ્ટીને નવી વિન્ડોમાં બતાવવી જોઇએ"
+
+#~ msgid ""
+#~ "If true, the system login records utmp and wtmp will be updated when the "
+#~ "command inside the terminal is launched."
+#~ msgstr ""
+#~ "જો true હોય તો, જ્યારે ટર્મિનલમાં રહેલા આદેશની શરુઆત થાય ત્યારે પ્રવેશ રેકોર્ડો utmp "
+#~ "અને wtmp માં સુધારો થશે."
+
+#~ msgid "Keyboard shortcut to create a new profile"
+#~ msgstr "નવી રૂપરેખા બનાવવા માટે કીબોર્ડનું ટુંકાણ"
+
+#~ msgid "Whether the menubar has access keys"
+#~ msgstr "કદાચ મેનુપટ્ટી પાસે સુલભ કીઓ છે કે નહિં"
+
+#~ msgid ""
+#~ "Whether to have Alt+letter access keys for the menubar. They may "
+#~ "interfere with some applications run inside the terminal so it's possible "
+#~ "to turn them off."
+#~ msgstr ""
+#~ "યાદીની પટ્ટી માટે Alt+letter નું ટીંકાણ છે કે નહિં. તેઓ કદાચ ટર્મિનલમા ચાલતા કેટલાક "
+#~ "કાર્યક્રમો સાથે વપરાશ ગોઠવણી ધરાવે છે માટે તેમને બંધ કરવા શક્ય છે."
+
+#~ msgid "List of available encodings"
+#~ msgstr "પર્યાપ્ત સંગ્રહપદ્ધતિઓની યાદી"
+
+#, fuzzy
+#~ msgid ""
+#~ "A subset of possible encodings are presented in the Encoding submenu. "
+#~ "This is a list of encodings to appear there."
+#~ msgstr ""
+#~ "સંગ્રહ પધ્ધતિ ગૌણ યાદીમાં શક્ય તેવી સંગ્રહ પધ્ધતિના ગૌણ સમૂહ હાજર છે. ત્યાં દર્શાવવા "
+#~ "માટેની આ સંગ્રહ પધ્ધતિ યાદી છે. વિશિષ્ટ સંગ્રહ પધ્ધતિનું નામ વર્તમાન એટલે વર્તમાન "
+#~ "લોકેલની સંગ્રહ પધ્ધતિ દર્શાવવી."
+
+#~ msgid "Whether to show the menubar in new windows"
+#~ msgstr "ક્યાંતો નવી વિન્ડોમાં મેનુપટ્ટીને બતાવવી કે નહિં"
+
+#, fuzzy
+#~ msgid "Whether to use a dark theme variant"
+#~ msgstr "શું સિસ્ટમ મોનોસ્પેસ ફોન્ટ વાપરવા જોઇએ"
+
+#~ msgid "Tab"
+#~ msgstr "ટેબ"
+
+#~ msgid "Show _menubar by default in new terminals"
+#~ msgstr "નવા ટર્મિનલમાં મૂળભૂત રીતે યાદીની પટ્ટી બતાવો"
+
+#~ msgid "_Enable mnemonics (such as Alt+F to open the File menu)"
+#~ msgstr "mnemonics સક્રિય કરો (જેમ કે ફાઈલ મેનુ ખોલવા માટે Alt+F) (_E)"
+
+#~ msgid "Open _new terminals in:"
+#~ msgstr "તેમાં નવાં ટર્મિનલને ખોલો (_n):"
+
+#~ msgid "General"
+#~ msgstr "સામાન્ય"
+
+#~ msgid "E_ncodings shown in menu:"
+#~ msgstr "સંગ્રહ પધ્ધતિ યાદીમાં બતાવેલી છે (_n):"
+
+#, c-format
+#~ msgid "Error parsing command: %s"
+#~ msgstr "આદેશનું પદચ્છેદન કરવામાં ભૂલ: %s"
+
+#, c-format
+#~ msgid "Choose Palette Color %d"
+#~ msgstr "તકતી રંગ %d પસંદ કરો"
+
+#, c-format
+#~ msgid "Palette entry %d"
+#~ msgstr "તકતી પ્રવેશ %d"
+
+#~ msgid "Replace initial title"
+#~ msgstr "શરુઆતનું શીર્ષક બદલો"
+
+#~ msgid "Append initial title"
+#~ msgstr "શરુઆતનાં શીર્ષકને જોડો"
+
+#~ msgid "Prepend initial title"
+#~ msgstr "શરુઆતનાં શીર્ષકની તૈયારી કરો"
+
+#~ msgid "Keep initial title"
+#~ msgstr "શરુઆતનાં શીર્ષકને રાખો"
+
+#~ msgid "Exit the terminal"
+#~ msgstr "ટર્મિનલમાંથી બહાર નીકળો"
+
+#~ msgid "XTerm"
+#~ msgstr "XTerm"
+
+#~ msgid "Rxvt"
+#~ msgstr "Rxvt"
+
+#~ msgid "Profile Editor"
+#~ msgstr "રૂપરેખા સંપાદક"
+
+#~ msgid "_Profile name:"
+#~ msgstr "રૂપરેખાનું નામ (_P):"
+
+#~ msgid "Profile ID:"
+#~ msgstr "રૂપરેખા ID:"
+
+#~ msgid "Initial terminal si_ze:"
+#~ msgstr "પ્રારંભિક ટર્મિનલ માપ (_z):"
+
+#~ msgid "rows"
+#~ msgstr "હારમાળા"
+
+#~ msgid "Rese_t"
+#~ msgstr "પુન:સુયોજિત કરો (_t)"
+
+#~ msgid "Terminal _bell"
+#~ msgstr "ટર્મિનલ ઘંટડી (_b)"
+
+#~ msgid "Choose A Terminal Font"
+#~ msgstr "ટર્મિનલ ફોન્ટ પસંદ કરો"
+
+#~ msgid "_Update login records when command is launched"
+#~ msgstr "જ્યારે આદેશ શરુ કરો ત્યારે પ્રવેશ રેકોર્ડ સુધારો (_U)"
+
+#~ msgid "Ru_n a custom command instead of my shell"
+#~ msgstr "મારા શેલની જગ્યાએ કસ્ટમ આદેશ વાપરો (_n)"
+
+#~ msgid "Text and Background Color"
+#~ msgstr "લખાણ અને પાશ્ર્વભાગનો રંગ"
+
+#~ msgid "Built-in sche_mes:"
+#~ msgstr "આંતરિક પદ્ધતિઓ (_m):"
+
+#~ msgid "_Text color:"
+#~ msgstr "લખાણના રંગ (_T):"
+
+#~ msgid "_Underline color:"
+#~ msgstr "રંગની નીચે લીટી દોરો (_U)"
+
+#~ msgid "_Same as text color"
+#~ msgstr "લખાણ રંગનાં જેવુ (_S)"
+
+#~ msgid "Bol_d color:"
+#~ msgstr "ઘટ્ટ રંગ (_d):"
+
+#~ msgid "Built-in _schemes:"
+#~ msgstr "અંદર રહેલી યોજના (_s):"
+
+#~ msgid ""
+#~ "<b>Note:</b> Terminal applications have these colors available to them."
+#~ msgstr "<b>નોંધ:</b> ટર્મિનલ કાર્યક્રમો પાસે તેમના આ રંગો ઉપલબ્ધ છે."
+
+#~ msgid "Color p_alette:"
+#~ msgstr "રંગ પેલેટ (_a):"
+
+#~ msgid "lines"
+#~ msgstr "લીટીઓ"
+
+#~ msgid ""
+#~ "<b>Note:</b> These options may cause some applications to behave "
+#~ "incorrectly.  They are only here to allow you to work around certain "
+#~ "applications and operating systems that expect different terminal "
+#~ "behavior."
+#~ msgstr ""
+#~ "<b>નોંધ:</b> આ વિકલ્પો કેટલાક કાર્યક્રમની ખોટી વર્તણૂક માટે કારણભૂત છે. અમુક કાર્યક્રમ "
+#~ "અને ઓપરેટીંગ સિસ્ટમની ફરતે કે જે જુદી જુદી ટર્મિનલની વર્તણૂકની આશા રાખે છે."
+
+#~ msgid "_Delete key generates:"
+#~ msgstr "દૂર કરવાની કી બનાવે છે (_D):"
+
+#~ msgid "_Encoding:"
+#~ msgstr "સંગ્રહપદ્ધતિ (_E):"
+
+#~ msgid "_Reset Compatibility Options to Defaults"
+#~ msgstr "સુસંગતતા વિકલ્પોને મૂળભૂતોમાં પુનઃસુયોજિત કરો (_R)"
+
+#~ msgid "New Terminal in New Tab"
+#~ msgstr "નવી ટેબમાં નવું ટર્મિનલ"
+
+#~ msgid "Hide and Show toolbar"
+#~ msgstr "સાધનપટ્ટીને છુપાડો અને બતાવો"
+
+#~ msgid "Detach Terminal"
+#~ msgstr "ટર્મિનલનું જોડાણ તોડો"
+
+#~ msgid "Shortcut _Key"
+#~ msgstr "ટૂંકી કી (_K)"
+
+#~ msgid "User Defined"
+#~ msgstr "વપરાશકર્તા દ્વારા વ્યાખ્યાયિત"
+
+#~ msgid "_Quit"
+#~ msgstr "બહાર નીકળો (_Q)"
+
+#~ msgid "Armenian"
+#~ msgstr "અર્મિનિયન"
+
+#~ msgid "Georgian"
+#~ msgstr "જોર્જિયન"
+
+#~ msgid "Hindi"
+#~ msgstr "હિંદી"
+
+#~ msgid "Persian"
+#~ msgstr "પર્શિયન"
+
+#~ msgid "Gujarati"
+#~ msgstr "ગુજરાતી"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "ગુર્મુખી"
+
+#~ msgid "Icelandic"
+#~ msgstr "આઈસલેંડિક"
+
+#~ msgid "Open in _Midnight Commander"
+#~ msgstr "Midnight Commander માં ખોલો (_M)"
+
+#~ msgid ""
+#~ "Open the currently selected folder in the terminal file manager Midnight "
+#~ "Commander"
+#~ msgstr "ટર્મિનલ ફાઇલ સંચાલક Midnight Commander માં હાલમાં પસંદ થયેલ ફોલ્ડરને ખોલો"
+
+#~ msgid ""
+#~ "Open the currently open folder in the terminal file manager Midnight "
+#~ "Commander"
+#~ msgstr "ટર્મિનલ ફાઇલ સંચાલક Midnight Commander માં હાલમાં ખોલેલ ફોલ્ડરને ખોલો"
+
+#~ msgid "Open _Midnight Commander"
+#~ msgstr "Midnight Commander ને ખોલો (_M)"
+
+#~ msgid "Open the terminal file manager Midnight Commander"
+#~ msgstr "ટર્મિનલ ફાઇલ સંચાલક Midnight Commander ને ખોલો"
+
+#, c-format
+#~ msgid "\"%s\" option given twice for the same window\n"
+#~ msgstr "એકની એક વિન્ડો માટે \"%s\" વિકલ્પ બે વાર અપાયુ છે\n"
+
+#~ msgid "Turn on the menubar"
+#~ msgstr "મેનુબાર ને ચાલુ કરો"
+
+#~ msgid "Turn off the menubar"
+#~ msgstr "મેનુબાર ને બંધ કરો"
+
+#~ msgid "Click button to choose profile"
+#~ msgstr "રૂપરેખા પસંદ કરવા માટે બટન પર ક્લિક કરો"
+
+#~ msgid "Profile list"
+#~ msgstr "રૂપરેખાની યાદી"
+
+#, c-format
+#~ msgid "Delete profile “%s”?"
+#~ msgstr "શું રૂપરેખા “%s“ કાઢવી છે?"
+
+#~ msgid "Show"
+#~ msgstr "બતાવો"
+
+#~ msgid "_Encoding"
+#~ msgstr "સંગ્રહ પધ્ધતિ (_E)"
+
+#~ msgid "Switch to this tab"
+#~ msgstr "પછીના ટૅબ પર જાઓ"
+
+#~ msgid "_Save"
+#~ msgstr "સંગ્રહો (_S)"
+
+#, c-format
+#~ msgid "_%d. %s"
+#~ msgstr "_%d. %s"
+
+#, c-format
+#~ msgid "_%c. %s"
+#~ msgstr "_%c. %s"
+
+#~ msgid "_File"
+#~ msgstr "ફાઈલ (_F)"
+
+#~ msgid "_View"
+#~ msgstr "દૃશ્ય (_V)"
+
+#~ msgid "_Terminal"
+#~ msgstr "ટર્મિનલ (_T)"
+
+#~ msgid "Ta_bs"
+#~ msgstr "ટેબો (_b)"
+
+#~ msgid "New _Profile"
+#~ msgstr "નવી રૂપરેખા (_P)"
+
+#~ msgid "_Close All Terminals"
+#~ msgstr "બધા ટર્મિનલને બંધ કરો (_C)"
+
+#~ msgid "Pre_ferences"
+#~ msgstr "પસંદગીઓ (_f)"
+
+#~ msgid "_Find…"
+#~ msgstr "શોધો (_F)…"
+
+#~ msgid "Find Ne_xt"
+#~ msgstr "પછીનું શોધો (_x)"
+
+#~ msgid "Find Pre_vious"
+#~ msgstr "પહેલાનું શોધો (_v)"
+
+#~ msgid "Go to _Line..."
+#~ msgstr "વાક્ય પર જાઓ (_L)..."
+
+#~ msgid "_Incremental Search..."
+#~ msgstr "વધતી શોધ (_I)..."
+
+#~ msgid "Change _Profile"
+#~ msgstr "રૂપરેખા બદલો (_P)"
+
+#~ msgid "Set _Character Encoding"
+#~ msgstr "અક્ષર સંગ્રહપદ્ધતિ સુયોજિત કરો (_C)"
+
+#~ msgid "_Add or Remove…"
+#~ msgstr "ઉમેરો અથવા દૂર કરો (_A)..."
+
+#~ msgid "_Previous Terminal"
+#~ msgstr "પહેલાનું ટર્મિનલ (_P)"
+
+#~ msgid "_Next Terminal"
+#~ msgstr "આગળનું ટર્મિનલ (_N)"
+
+#~ msgid "_Contents"
+#~ msgstr "સમાવિષ્ટો (_C)"
 
 #~ msgid ""
 #~ "Commands:\n"
@@ -2094,9 +4360,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "GNOME Terminal Client"
 #~ msgstr "GNOME ટર્મિનલ ક્લાયન્ટ"
 
-#~ msgid "Show server options"
-#~ msgstr "સર્વર વિકલ્પો બતાવો"
-
 #~ msgid "What to do with dynamic title"
 #~ msgstr "બદલી શકાતા શીર્ષક સાથે શું કરવુ જોઇએ"
 
@@ -2110,9 +4373,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ "કરવા દે છે), તો બદલાતી ગોઠવણીવાળુ શીર્ષક, ગોઠવેલા શીર્ષકની આગળ જશે, પાશ્વ ભાગે જશે, "
 #~ "અથવા બદલી નાખશે. શક્ય કિંમતો \"જગ્યા બદલો\", \"પહેલા\", \"પછી\", અને \"અવગણો\" "
 #~ "છે."
-
-#~ msgid "Title for terminal"
-#~ msgstr "ટર્મિનલ માટેનું શીર્ષક"
 
 #~ msgid ""
 #~ "Title to display for the terminal window or tab. This title may be "
@@ -2141,9 +4401,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgstr ""
 #~ "જો true હોય તો, નવી બનાવેલ ટર્મિનલ વિન્ડો પાસે default_size_columns અને "
 #~ "default_size_rows દ્દારા સ્પષ્ટ થયેલ વૈવિધ્ય માપ હશે."
-
-#~ msgid "Always visible"
-#~ msgstr "હંમેશા દૃશ્યમાન"
 
 #~ msgid "Visible only when necessary"
 #~ msgstr "જ્યારે જરૂરી હોય ત્યારે દૃશ્યમાન થાઓ"
@@ -2175,18 +4432,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "_Unlimited"
 #~ msgstr "અસીમિત (_U)"
 
-#~ msgid "New Tab"
-#~ msgstr "નવી ટૅબ"
-
-#~ msgid "Close Tab"
-#~ msgstr "ટૅબ બંધ કરો"
-
-#~ msgid "Close Window"
-#~ msgstr "વિન્ડો બંધ કરો"
-
-#~ msgid "Set Title"
-#~ msgstr "શીર્ષકની ગોઠવણી કરો"
-
 #~ msgid "The shortcut key “%s” is already bound to the “%s” action"
 #~ msgstr "ટુંકાણ કી “%s“ એ પહેલાથી ક્રિયા “%s“ સાથે બંધાયેલી છે"
 
@@ -2199,23 +4444,14 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "_Close Window"
 #~ msgstr "વિન્ડો બંધ કરો (_C)"
 
-#~ msgid "_Set Title…"
-#~ msgstr "શીર્ષકની ગોઠવણી કરો (_S)..."
-
 #~ msgid "_Next Tab"
 #~ msgstr "પછીનું ટેબ (_N)"
-
-#~ msgid "_Detach tab"
-#~ msgstr "ટેબ છૂટી કરો (_D)"
 
 #~ msgid "_Input Methods"
 #~ msgstr "ઈનપુટ માટેની પધ્ધિતિઓ (_I)"
 
 #~ msgid "_Title:"
 #~ msgstr "શીર્ષક (_T):"
-
-#~ msgid "Keyboard shortcut to switch to tab 1"
-#~ msgstr "ટૅબ ૧ પર જવા માટે કીબોર્ડનું ટુંકાણ"
 
 #~ msgid "Keyboard shortcut to switch to tab 2"
 #~ msgstr "ટૅબ ૨ પર જવા માટે કીબોર્ડનું ટુંકાણ"
@@ -2250,9 +4486,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "Keyboard shortcut to switch to tab 12"
 #~ msgstr "ટૅબ ૧૨ પર જવા માટે કીબોર્ડનું ટુંકાણ"
 
-#~ msgid "Switch to Tab 2"
-#~ msgstr "ટૅબ ૨ પર જાઓ"
-
 #~ msgid "Switch to Tab 3"
 #~ msgstr "ટૅબ ૩ પર જાઓ"
 
@@ -2283,7 +4516,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "Switch to Tab 12"
 #~ msgstr "ટૅબ ૧૨ પર જાઓ"
 
-#~| msgid "<b>Foreground, Background, Bold and Underline</b>"
 #~ msgid "Foreground, Background, Bold and Underline"
 #~ msgstr "અગ્રભાગ અને પાશ્વભાગ, ઘટ્ટ અને નીચે લીટી દોરો"
 
@@ -2295,9 +4527,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 
 #~ msgid "A_vailable encodings:"
 #~ msgstr "પ્રાપ્ય સંગ્રહ પધ્ધતિ (_v):"
-
-#~ msgid "Keyboard Shortcuts"
-#~ msgstr "કી-બોર્ડના ટૂંકાણો"
 
 #~ msgid "C_reate"
 #~ msgstr "સર્જન કરો (_r)"
@@ -2381,7 +4610,6 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "_Keyboard Shortcuts…"
 #~ msgstr "કી-બોર્ડના ટૂંકાણો (_K)..."
 
-#~| msgid "_Profile Preferences"
 #~ msgid "_Preferences…"
 #~ msgstr "પસંદગીઓ (_P)…"
 
@@ -2452,23 +4680,8 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "Background image"
 #~ msgstr "પાશ્વ ભાગનું ચિત્ર"
 
-#~ msgid "Background type"
-#~ msgstr "પાશ્વ ભાગનો પ્રકાર"
-
-#~ msgid "Effect of the Backspace key"
-#~ msgstr "બૅકસ્પેસ કીની અસર"
-
-#~ msgid "Effect of the Delete key"
-#~ msgstr "દૂર કરવાની કીની અસર"
-
 #~ msgid "Filename of a background image."
 #~ msgstr "પાશ્વ ભાગના ચિત્રનું ફાઇલનામ."
-
-#~ msgid "Font"
-#~ msgstr "ફોન્ટ"
-
-#~ msgid "How much to darken the background image"
-#~ msgstr "પાશ્વ ભાગના ચિત્રને કેટલુ ઘેરુ કરવું છે"
 
 #~ msgid "Icon to use for tabs/windows containing this profile."
 #~ msgstr "આ રૂપરેખા ધરાવતા ટૅબ/વિન્ડો માટે ઉપયોગમાં લેવાતુ ચિહ્ન."
@@ -2538,8 +4751,8 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ "no keyboard shortcut for this action."
 #~ msgstr ""
 #~ "પસંદ કરેલ લખાણની ક્લીપબોર્ડમાં નકલ કરવા માટેની પ્રવેગ કી. GTK+ સ્ત્રોત ફાઇલો માટે "
-#~ "વપરાયેલ સમાન બંધારણના શબ્દમાળા તરીકે રજૂ કર્યુ હતું. જો તમે વિશિષ્ટ શબ્દમાળા \"નિષ્ક્રિય"
-#~ "\" માટે વિકલ્પ સુયોજિત કરશો તો આ ક્રિયા માટે કીજોડાણ થઇ શકશે નહિં."
+#~ "વપરાયેલ સમાન બંધારણના શબ્દમાળા તરીકે રજૂ કર્યુ હતું. જો તમે વિશિષ્ટ શબ્દમાળા "
+#~ "\"નિષ્ક્રિય\" માટે વિકલ્પ સુયોજિત કરશો તો આ ક્રિયા માટે કીજોડાણ થઇ શકશે નહિં."
 
 #~ msgid ""
 #~ "Keyboard shortcut key for launching help. Expressed as a string in the "
@@ -2738,8 +4951,8 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ "shortcut for this action."
 #~ msgstr ""
 #~ "આખી સ્ક્રીન દર્શાવતી સ્થિતિની ફેરબદલી કરવા માટેની પ્રવેગ કી. GTK+ સ્ત્રોત ફાઇલો માટે "
-#~ "વપરાયેલ સમાન બંધારણના શબ્દમાળા તરીકે રજૂ કર્યુ હતું. જો તમે વિશિષ્ટ શબ્દમાળા \"નિષ્ક્રિય"
-#~ "\" માટે વિકલ્પ સુયોજિત કરશો તો આ ક્રિયા માટે કીજોડાણ થઇ શકશે નહિં."
+#~ "વપરાયેલ સમાન બંધારણના શબ્દમાળા તરીકે રજૂ કર્યુ હતું. જો તમે વિશિષ્ટ શબ્દમાળા "
+#~ "\"નિષ્ક્રિય\" માટે વિકલ્પ સુયોજિત કરશો તો આ ક્રિયા માટે કીજોડાણ થઇ શકશે નહિં."
 
 #~ msgid ""
 #~ "Keyboard shortcut key to reset and clear the terminal. Expressed as a "
@@ -2768,8 +4981,8 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ "no keyboard shortcut for this action."
 #~ msgstr ""
 #~ "ફાઇલના હાલના ટૅબ સમાવિષ્ટોને સંગ્રહવા માટે કિબોર્ડ ટૂંકાણ કી. GTK+ સ્ત્રોત ફાઇલો માટે "
-#~ "વપરાયેલ સમાન બંધારણના શબ્દમાળા તરીકે રજૂ કર્યુ હતું. જો તમે વિશિષ્ટ શબ્દમાળા \"નિષ્ક્રિય"
-#~ "\" માટે વિકલ્પ સુયોજિત કરશો તો આ ક્રિયા માટે કીજોડાણ થઇ શકશે નહિં."
+#~ "વપરાયેલ સમાન બંધારણના શબ્દમાળા તરીકે રજૂ કર્યુ હતું. જો તમે વિશિષ્ટ શબ્દમાળા "
+#~ "\"નિષ્ક્રિય\" માટે વિકલ્પ સુયોજિત કરશો તો આ ક્રિયા માટે કીજોડાણ થઇ શકશે નહિં."
 
 #~ msgid ""
 #~ "Keyboard shortcut key to set the terminal title. Expressed as a string in "
@@ -2839,13 +5052,13 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ "considered the correct setting for the Backspace key."
 #~ msgstr ""
 #~ "બૅકસ્પેસ કી એ બનાવેલ કોડ સુયોજિત કરો. સંભવિત કિંમતો \"ascii-del\" એ ASCII DEL "
-#~ "અક્ષર માટે,\"control-h\" એ Control-H (ASCII BS અક્ષર AKA), \"escape-sequence"
-#~ "\" એ બચેલા ક્રમાંક માટે લાક્ષણિક રીતે બૅકસ્પેસ અથવા દૂર કરવુ ને બાંધે છે. બૅકસ્પેસ કી માટે "
-#~ "\"ascii-del\" ને સામાન્ય રીતે સાચું સુયોજન ગણવામાં આવે છે."
+#~ "અક્ષર માટે,\"control-h\" એ Control-H (ASCII BS અક્ષર AKA), \"escape-"
+#~ "sequence\" એ બચેલા ક્રમાંક માટે લાક્ષણિક રીતે બૅકસ્પેસ અથવા દૂર કરવુ ને બાંધે છે. બૅકસ્પેસ "
+#~ "કી માટે \"ascii-del\" ને સામાન્ય રીતે સાચું સુયોજન ગણવામાં આવે છે."
 
 #~ msgid ""
-#~ "Sets what code the delete key generates. Possible values are \"ascii-del"
-#~ "\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
+#~ "Sets what code the delete key generates. Possible values are \"ascii-"
+#~ "del\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the "
 #~ "ASCII BS character), \"escape-sequence\" for the escape sequence "
 #~ "typically bound to backspace or delete. \"escape-sequence\" is normally "
 #~ "considered the correct setting for the Delete key."
@@ -2872,17 +5085,18 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ "નીચે લીટીવાળું કર્સર વાપરવા માટે \"નીચે રેખા\" શક્ય કિંમતો છે."
 
 #~ msgid ""
-#~ "Type of terminal background. May be \"solid\" for a solid color, \"image"
-#~ "\" for an image, or \"transparent\" for either real transparency if a "
-#~ "compositing window manager is running, or pseudo-transparency otherwise."
+#~ "Type of terminal background. May be \"solid\" for a solid color, "
+#~ "\"image\" for an image, or \"transparent\" for either real transparency "
+#~ "if a compositing window manager is running, or pseudo-transparency "
+#~ "otherwise."
 #~ msgstr ""
 #~ "ટર્મિનલ પાશ્વભાગનો પ્રકાર. ઘાટા રંગ માટે \"ધાટો\", ચિત્ર માટે \"ચિત્ર\", અથવા ક્યાં "
 #~ "તો વાસ્તવિક પારદર્શકતા માટે \"પારદર્શક\" જો કમ્પોઝીટીંગ વિન્ડો વ્યવસ્થાપક ચાલી રહ્યું "
 #~ "હોય, અથવા સ્યુડો-પાદર્શકતા હોય એ શક્ય છે."
 
 #~ msgid ""
-#~ "Where to put the terminal scrollbar. Possibilities are \"left\", \"right"
-#~ "\", and \"hidden\"."
+#~ "Where to put the terminal scrollbar. Possibilities are \"left\", "
+#~ "\"right\", and \"hidden\"."
 #~ msgstr ""
 #~ "ટર્મિનલની ખસેડવાની પટ્ટીને ક્યાં મૂકવી જોઇએ. \"ડાબે\", \"જમણે\" અને \"છુપાયેલ\" "
 #~ "શક્યતાઓ છે."
@@ -2900,17 +5114,11 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 #~ msgid "[UTF-8,current]"
 #~ msgstr "[UTF-8,current]"
 
-#~ msgid "Images"
-#~ msgstr "ચિત્રો"
-
 #~ msgid "<small><i>Maximum</i></small>"
 #~ msgstr "<small><i>મહત્તમ</i></small>"
 
 #~ msgid "<small><i>None</i></small>"
 #~ msgstr "<small><i>કંઈ નહિ</i></small>"
-
-#~ msgid "Background"
-#~ msgstr "પાશ્વભાગ"
 
 #~ msgid "Background image _scrolls"
 #~ msgstr "પાશ્વ ભાગનું ચિત્ર ખસેડો (_s)"
@@ -2980,6 +5188,3 @@ msgstr "વિન્ડો બંધ કરો (_l)"
 
 #~ msgid "On the right side"
 #~ msgstr "જમણી બાજુ પર"
-
-#~ msgid "Disabled"
-#~ msgstr "નિષ્ક્રિય"

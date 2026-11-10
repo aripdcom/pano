@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-terminal/issues/\n"
-"POT-Creation-Date: 2026-09-09 13:11+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 22:03+0300\n"
 "PO-Revision-Date: 2026-09-09 15:49+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
@@ -27,264 +27,270 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: data/org.gnome.Terminal.desktop.in:2
-#: data/org.gnome.Terminal.metainfo.xml.in:37 src/server.cc:184
-#: src/terminal-accels.cc:237 src/terminal-window.cc:1839
-#: src/terminal-window.cc:2489 src/terminal-window.cc:2663
-#: src/terminal-window.ui:7 src/terminal.cc:593
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#, fuzzy
+msgid "Pano Terminal"
+msgstr "GNOME Terminál"
+
+#: data/com.aripd.Pano.desktop.in:3 src/terminal-accels.cc:282
+#: src/terminal-command-palette.cc:269 src/terminal-window.ui:7
 msgid "Terminal"
 msgstr "Terminál"
 
-#: data/org.gnome.Terminal.desktop.in:3
-#: data/org.gnome.Terminal.metainfo.xml.in:38
+#: data/com.aripd.Pano.desktop.in:4
 msgid "Use the command line"
 msgstr "Parancssor használata"
 
-#: data/org.gnome.Terminal.desktop.in:4
-#: data/org.gnome.Terminal.Preferences.desktop.in:7
-msgid "shell;prompt;command;commandline;cmd;"
+#: data/com.aripd.Pano.desktop.in:5
+#, fuzzy
+#| msgid "shell;prompt;command;commandline;cmd;"
+msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr "parancsértelmező;prompt;parancs;parancssor;cmd;"
 
-#: data/org.gnome.Terminal.desktop.in:22 src/terminal-accels.cc:130
+#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
 msgid "New Window"
 msgstr "Új ablak"
 
-#: data/org.gnome.Terminal.desktop.in:26 src/terminal-accels.cc:149
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
 #: src/terminal-preferences-window.ui:50
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: data/org.gnome.Terminal.Preferences.desktop.in:3
+#: data/com.aripd.Pano.Preferences.desktop.in:3
 msgid "Configure the command line"
 msgstr "A parancssor beállítása"
 
-#: data/org.gnome.Terminal.Preferences.desktop.in:8 src/prefs-main.cc:146
-msgid "Terminal Preferences"
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr "parancsértelmező;prompt;parancs;parancssor;cmd;"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+#| msgid "Terminal Preferences"
+msgid "Pano Terminal Preferences"
 msgstr "Terminál beállítások"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:34
-#: data/org.gnome.Terminal.metainfo.xml.in:67
-msgid "org.gnome.Terminal.desktop"
-msgstr "org.gnome.Terminal.desktop"
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "Beállítja a GNOME Terminált alapértelmezett terminálként?"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:35
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:36
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
+#: src/terminal-global-shortcuts.cc:231
+msgid "Show or hide the quick terminal"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:34
+#: data/com.aripd.Pano.metainfo.xml.in:63
+msgid "com.aripd.Pano.desktop"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:35
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
 msgid "GPL-3.0+ or GFDL-1.3-only"
 msgstr "GPL-3.0+ vagy csak GFDL-1.3"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:36
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:37
+#: data/com.aripd.Pano.metainfo.xml.in:36
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
 msgid "GPL-3.0+"
 msgstr "GPL-3.0+"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:40
+#: data/com.aripd.Pano.metainfo.xml.in:38
+msgid "Use the command line, with your tabs where you want them"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:40
 #, fuzzy
 msgid ""
-"Pano Terminal is a terminal emulator application for accessing a UNIX "
-"shell environment which can be used to run programs available on your "
-"system."
+"Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
+"which can be used to run programs available on your system."
 msgstr ""
 "A GNOME Terminál egy terminál emulációs alkalmazás, mely hozzáférést nyújt "
 "az UNIX shell környezethez. A shell környezetben futtathatja az Ön "
 "rendszerén elérhető programokat."
 
-#: data/org.gnome.Terminal.metainfo.xml.in:41
+#: data/com.aripd.Pano.metainfo.xml.in:41
+#, fuzzy
+#| msgid ""
+#| "It supports several profiles, multiple tabs and implements several "
+#| "keyboard shortcuts."
 msgid ""
 "It supports several profiles, multiple tabs and implements several keyboard "
-"shortcuts."
+"shortcuts. The tab bar can be placed at the top, bottom, left or right of "
+"the window."
 msgstr ""
 "A GNOME Terminál támogatja több profil és több lap használatát, és számos "
 "billentyűkombinációt tartalmaz."
 
-#: data/org.gnome.Terminal.metainfo.xml.in:44
+#: data/com.aripd.Pano.metainfo.xml.in:44
 msgid "console"
 msgstr "konzol"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:45
+#: data/com.aripd.Pano.metainfo.xml.in:45
 msgid "keyboard"
 msgstr "billentyűzet"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:46
+#: data/com.aripd.Pano.metainfo.xml.in:46
 msgid "pointing"
 msgstr "mutatás"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:50
-msgid ""
-"https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-terminal.png"
+#: data/com.aripd.Pano.metainfo.xml.in:50
+msgid "https://pano.aripd.com/images/tabs-left-light.png"
 msgstr ""
-"https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-terminal.png"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:54
+#: data/com.aripd.Pano.metainfo.xml.in:54
 msgid "HiDpiIcon"
 msgstr "HiDpiIcon"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:55
+#: data/com.aripd.Pano.metainfo.xml.in:55
 msgid "HighContrast"
 msgstr "HighContrast"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:56
+#: data/com.aripd.Pano.metainfo.xml.in:56
 msgid "ModernToolkit"
 msgstr "ModernToolkit"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:57
+#: data/com.aripd.Pano.metainfo.xml.in:57
 msgid "SearchProvider"
 msgstr "SearchProvider"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:58
+#: data/com.aripd.Pano.metainfo.xml.in:58
 msgid "UserDocs"
 msgstr "UserDocs"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:60
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:43
-#| msgid ""
-#| "https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-"
-#| "terminal.png"
-msgid "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/home"
-msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/home"
+#: data/com.aripd.Pano.metainfo.xml.in:60
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
+msgid "https://pano.aripd.com"
+msgstr ""
 
-#: data/org.gnome.Terminal.metainfo.xml.in:61
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:44
-#| msgid ""
-#| "https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-"
-#| "terminal.png"
-msgid "https://gitlab.gnome.org/GNOME/gnome-terminal/-/issues"
-msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal/-/issues"
+#: data/com.aripd.Pano.metainfo.xml.in:61
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
+msgid "https://github.com/aripdcom/pano/issues"
+msgstr ""
 
-#: data/org.gnome.Terminal.metainfo.xml.in:62
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:45
-#| msgid "https://wiki.gnome.org/Apps/Terminal"
-msgid "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/FAQ"
-msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/FAQ"
+#: data/com.aripd.Pano.metainfo.xml.in:62
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
+msgid "https://github.com/aripdcom/pano"
+msgstr ""
 
-#: data/org.gnome.Terminal.metainfo.xml.in:63
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:46
-#| msgid ""
-#| "https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-"
-#| "terminal.png"
-msgid "https://help.gnome.org/users/gnome-terminal/stable/"
-msgstr "https://help.gnome.org/users/gnome-terminal/stable/"
-
-#: data/org.gnome.Terminal.metainfo.xml.in:64
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:47
-#| msgid "https://wiki.gnome.org/Apps/Terminal"
-msgid "https://l10n.gnome.org/module/gnome-terminal/"
-msgstr "https://l10n.gnome.org/module/gnome-terminal/"
-
-#: data/org.gnome.Terminal.metainfo.xml.in:65
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:48
-#| msgid "https://wiki.gnome.org/Apps/Terminal"
-msgid "https://gitlab.gnome.org/GNOME/gnome-terminal"
-msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal"
-
-#: data/org.gnome.Terminal.metainfo.xml.in:66
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:49
-msgid "GNOME"
-msgstr "GNOME"
-
-#: data/org.gnome.Terminal.metainfo.xml.in:68
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:50
-msgid "gnome-terminal"
+#: data/com.aripd.Pano.metainfo.xml.in:64
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
+#, fuzzy
+#| msgid "gnome-terminal"
+msgid "pano-terminal"
 msgstr "gnome-terminal"
 
-#: data/org.gnome.Terminal.metainfo.xml.in:69
-#: data/org.gnome.Terminal.metainfo.xml.in:71
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:51
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:53
-#, fuzzy
-#| msgid "GNOME Terminal Emulator"
-msgid "Pano Terminal Developers"
-msgstr "A GNOME Terminál fejlesztői"
+#: data/com.aripd.Pano.metainfo.xml.in:66
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
+msgid "aripd"
+msgstr ""
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:34
-msgid "org.gnome.Terminal.Nautilus"
+#: data/com.aripd.Pano.metainfo.xml.in:71
+msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
+msgstr ""
+
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
+#, fuzzy
+#| msgid "org.gnome.Terminal.Nautilus"
+msgid "com.aripd.Pano.Nautilus"
 msgstr "org.gnome.Terminal.Nautilus"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:35
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
 msgid "org.gnome.Nautilus.desktop"
 msgstr "org.gnome.Nautilus.desktop"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:38
-msgid "Terminal plugin for Files"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#, fuzzy
+#| msgid "Terminal plugin for Files"
+msgid "Pano Terminal plugin for Files"
 msgstr "Terminál bővítmény a Fájlokhoz"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:39
-msgid "Open a terminal from Files"
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#, fuzzy
+#| msgid "Open a terminal from Files"
+msgid "Open Pano Terminal from Files"
 msgstr "Terminál megnyitása a Fájlokban"
 
-#: data/org.gnome.Terminal.Nautilus.metainfo.xml.in:41
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
+#, fuzzy
+#| msgid ""
+#| "Open Terminal is a plugin for the Files application that adds a menu item "
+#| "to the context menu to open a terminal in the currently browsed directory."
 msgid ""
-"Open Terminal is a plugin for the Files application that adds a menu item to "
-"the context menu to open a terminal in the currently browsed directory."
+"Open in Pano Terminal is a plugin for the Files application that adds a menu "
+"item to the context menu to open Pano Terminal in the currently browsed "
+"directory."
 msgstr ""
 "A terminál megnyitása egy bővítmény a Fájlok alkalmazáshoz, amely egy "
 "menüelemet ad a helyi menühöz, ahonnan terminálablak nyitható az éppen "
 "nyitott mappában."
 
-#. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
-#: src/org.gnome.Terminal.gschema.xml:137
+#. Translators: This needs to be parsed as a GVariant string, so keep the
+#. regular single quotes around the string as-is, and do not add extra quotes.
+#: src/com.aripd.Pano.gschema.xml:151
 msgctxt "visible-name"
 msgid "'Unnamed'"
 msgstr "'Névtelen'"
 
-#: src/org.gnome.Terminal.gschema.xml:138
+#: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
 msgstr "A profil emberek által olvasható neve"
 
-#: src/org.gnome.Terminal.gschema.xml:139
+#: src/com.aripd.Pano.gschema.xml:153
 msgid "Human-readable name of the profile."
 msgstr "A profil emberek által olvasható neve."
 
-#: src/org.gnome.Terminal.gschema.xml:143
+#: src/com.aripd.Pano.gschema.xml:157
 msgid "Default color of text in the terminal"
 msgstr "A terminál szövegének alapértelmezett színe"
 
-#: src/org.gnome.Terminal.gschema.xml:144
+#: src/com.aripd.Pano.gschema.xml:158
 msgid ""
 "Default color of text in the terminal, as a color specification (can be HTML-"
 "style hex digits, or a color name such as “red”)."
 msgstr ""
-"A terminál szövegének alapértelmezett színe, színmegadásként (Lehet HTML-stílu"
-"sú hexadecimális számjegyekkel vagy színnévvel, például „red” = vörös)."
+"A terminál szövegének alapértelmezett színe, színmegadásként (Lehet HTML-"
+"stílusú hexadecimális számjegyekkel vagy színnévvel, például „red” = vörös)."
 
-#: src/org.gnome.Terminal.gschema.xml:148
+#: src/com.aripd.Pano.gschema.xml:162
 msgid "Default color of terminal background"
 msgstr "A terminálháttér alapértelmezett színe"
 
-#: src/org.gnome.Terminal.gschema.xml:149
+#: src/com.aripd.Pano.gschema.xml:163
 msgid ""
 "Default color of terminal background, as a color specification (can be HTML-"
 "style hex digits, or a color name such as “red”)."
 msgstr ""
-"A terminál hátterének alapértelmezett színe, színmegadásként (Lehet HTML-stílu"
-"sú hexadecimális számjegyekkel vagy színnévvel, például „red” = vörös)."
+"A terminál hátterének alapértelmezett színe, színmegadásként (Lehet HTML-"
+"stílusú hexadecimális számjegyekkel vagy színnévvel, például „red” = vörös)."
 
-#: src/org.gnome.Terminal.gschema.xml:153
+#: src/com.aripd.Pano.gschema.xml:167
 msgid "Default color of bold text in the terminal"
 msgstr "A terminál félkövér szövegének alapértelmezett színe"
 
-#: src/org.gnome.Terminal.gschema.xml:154
+#: src/com.aripd.Pano.gschema.xml:168
 msgid ""
 "Default color of bold text in the terminal, as a color specification (can be "
 "HTML-style hex digits, or a color name such as “red”). This is ignored if "
 "bold-color-same-as-fg is true."
 msgstr ""
 "A terminál félkövér szövegének alapértelmezett színe, színmegadásként (Lehet "
-"HTML-stílusú hexadecimális számjegyekkel vagy színnévvel, például „red” = vörö"
-"s). Ez "
-"figyelmen kívül lesz hagyva, ha a bold-color-same-as-fg igaz."
+"HTML-stílusú hexadecimális számjegyekkel vagy színnévvel, például „red” = "
+"vörös). Ez figyelmen kívül lesz hagyva, ha a bold-color-same-as-fg igaz."
 
-#: src/org.gnome.Terminal.gschema.xml:158
+#: src/com.aripd.Pano.gschema.xml:172
 msgid "Whether bold text should use the same color as normal text"
 msgstr "A félkövér szöveg a normállal egyező színt használjon-e"
 
-#: src/org.gnome.Terminal.gschema.xml:159
+#: src/com.aripd.Pano.gschema.xml:173
 msgid ""
 "If true, boldface text will be rendered using the same color as normal text."
 msgstr ""
 "Ha igazra van állítva, akkor a félkövér szöveg a normál szövegével egyező "
 "színnel jelenik meg."
 
-#: src/org.gnome.Terminal.gschema.xml:164
+#: src/com.aripd.Pano.gschema.xml:178
 msgid ""
 "Scale factor for the cell height to increase line spacing. (Does not "
 "increase the font’s height.)"
@@ -292,7 +298,7 @@ msgstr ""
 "A cella magasságának nagyítási tényezője a sortávolság növeléséhez (nem "
 "növeli a betűkészlet magasságát)."
 
-#: src/org.gnome.Terminal.gschema.xml:169
+#: src/com.aripd.Pano.gschema.xml:183
 msgid ""
 "Scale factor for the cell width to increase letter spacing. (Does not "
 "increase the font’s width.)"
@@ -300,73 +306,70 @@ msgstr ""
 "A cella szélességének nagyítási tényezője a betűköz növeléséhez (nem növeli "
 "a betűkészlet szélességét)."
 
-#: src/org.gnome.Terminal.gschema.xml:173
+#: src/com.aripd.Pano.gschema.xml:187
 msgid "Whether to use custom cursor colors"
 msgstr "Egyéni kurzor színek legyenek-e használatban"
 
-#: src/org.gnome.Terminal.gschema.xml:174
+#: src/com.aripd.Pano.gschema.xml:188
 msgid "If true, use the cursor colors from the profile."
 msgstr "Ha igaz, akkor a profil kurzor színei lesznek használatban."
 
-#: src/org.gnome.Terminal.gschema.xml:178
+#: src/com.aripd.Pano.gschema.xml:192
 msgid "Cursor background color"
 msgstr "Kurzor háttérszíne"
 
-#: src/org.gnome.Terminal.gschema.xml:179
+#: src/com.aripd.Pano.gschema.xml:193
 msgid ""
 "Custom color of the background of the terminal’s cursor, as a color "
 "specification (can be HTML-style hex digits, or a color name such as “red”). "
 "This is ignored if cursor-colors-set is false."
 msgstr ""
 "A terminál félkövér szövegének alapértelmezett színe, színmegadásként (Lehet "
-"HTML-stílusú hexadecimális számjegyekkel vagy színnévvel, például „red” = vörö"
-"s). "
-"Figyelmen kívül lesz hagyva, ha a cursor-colors-set hamis."
+"HTML-stílusú hexadecimális számjegyekkel vagy színnévvel, például „red” = "
+"vörös). Figyelmen kívül lesz hagyva, ha a cursor-colors-set hamis."
 
-#: src/org.gnome.Terminal.gschema.xml:183
+#: src/com.aripd.Pano.gschema.xml:197
 msgid "Cursor foreground colour"
 msgstr "Kurzor előtérszíne"
 
-#: src/org.gnome.Terminal.gschema.xml:184
+#: src/com.aripd.Pano.gschema.xml:198
 msgid ""
 "Custom color for the foreground of the text character at the terminal’s "
 "cursor position, as a color specification (can be HTML-style hex digits, or "
 "a color name such as “red”). This is ignored if cursor-colors-set is false."
 msgstr ""
 "Egyéni szín a terminál kurzorpozíciójánál található karakter előteréhez, "
-"színmegadásként (lehet HTML-stílusú hexadecimális számjegyekkel vagy színnévve"
-"l, "
-"például „red” = vörös). Ez figyelmen kívül lesz hagyva, ha a custom-colors-"
-"set hamis."
+"színmegadásként (lehet HTML-stílusú hexadecimális számjegyekkel vagy "
+"színnévvel, például „red” = vörös). Ez figyelmen kívül lesz hagyva, ha a "
+"custom-colors-set hamis."
 
-#: src/org.gnome.Terminal.gschema.xml:188
+#: src/com.aripd.Pano.gschema.xml:202
 msgid "Whether to use custom highlight colors"
 msgstr "Egyéni kiemelésszínek legyenek-e használatban"
 
-#: src/org.gnome.Terminal.gschema.xml:189
+#: src/com.aripd.Pano.gschema.xml:203
 msgid "If true, use the highlight colors from the profile."
 msgstr "Ha igaz, akkor a profil kiemelésszínei lesznek használatban."
 
-#: src/org.gnome.Terminal.gschema.xml:193
+#: src/com.aripd.Pano.gschema.xml:207
 msgid "Highlight background color"
 msgstr "Kiemelés háttérszíne"
 
-#: src/org.gnome.Terminal.gschema.xml:194
+#: src/com.aripd.Pano.gschema.xml:208
 msgid ""
 "Custom color of the background of the terminal’s highlight, as a color "
 "specification (can be HTML-style hex digits, or a color name such as “red”). "
 "This is ignored if highlight-colors-set is false."
 msgstr ""
 "Egyéni szín a terminálkiemelés hátteréhez, színmegadásként (Lehet HTML-"
-"stílusú hexadecimális számjegyekkel vagy angol színnévvel, például „red” = vör"
-"ös). "
-"Figyelmen kívül lesz hagyva, ha a highlight-colors-set hamis."
+"stílusú hexadecimális számjegyekkel vagy angol színnévvel, például „red” = "
+"vörös). Figyelmen kívül lesz hagyva, ha a highlight-colors-set hamis."
 
-#: src/org.gnome.Terminal.gschema.xml:198
+#: src/com.aripd.Pano.gschema.xml:212
 msgid "Highlight foreground colour"
 msgstr "Kiemelés előtérszíne"
 
-#: src/org.gnome.Terminal.gschema.xml:199
+#: src/com.aripd.Pano.gschema.xml:213
 msgid ""
 "Custom color for the foreground of the text character at the terminal’s "
 "highlight position, as a color specification (can be HTML-style hex digits, "
@@ -378,37 +381,37 @@ msgstr ""
 "színnévvel, például „red” = vörös). Ez figyelmen kívül lesz hagyva, ha a "
 "highlight-colors-set hamis."
 
-#: src/org.gnome.Terminal.gschema.xml:203
+#: src/com.aripd.Pano.gschema.xml:217
 msgid "Whether to perform bidirectional text rendering"
 msgstr "Hajtson-e végre kétirányú szövegmegjelenítést"
 
-#: src/org.gnome.Terminal.gschema.xml:204
+#: src/com.aripd.Pano.gschema.xml:218
 msgid "If true, perform bidirectional text rendering (“BiDi”)."
 msgstr "Ha igaz, akkor kétirányú szövegmegjelenítést („BiDi”) hajt végre."
 
-#: src/org.gnome.Terminal.gschema.xml:208
+#: src/com.aripd.Pano.gschema.xml:222
 msgid "Whether to perform Arabic shaping"
 msgstr "Hajtson-e végre arab formálást"
 
-#: src/org.gnome.Terminal.gschema.xml:209
+#: src/com.aripd.Pano.gschema.xml:223
 msgid "If true, shape Arabic text."
 msgstr "Ha igaz, akkor megformálja az arab szöveget."
 
-#: src/org.gnome.Terminal.gschema.xml:213
+#: src/com.aripd.Pano.gschema.xml:227
 msgid "Whether to enable SIXEL images"
 msgstr "Engedélyezze-e a SIXEL-képeket"
 
-#: src/org.gnome.Terminal.gschema.xml:214
+#: src/com.aripd.Pano.gschema.xml:228
 msgid "If true, SIXEL sequences are parsed and images are rendered."
 msgstr ""
-"Ha igaz, akkor a SIXEL-szekvenciák feldolgozásra, a képek pedig megjelenítésre"
-" kerülnek."
+"Ha igaz, akkor a SIXEL-szekvenciák feldolgozásra, a képek pedig "
+"megjelenítésre kerülnek."
 
-#: src/org.gnome.Terminal.gschema.xml:218
+#: src/com.aripd.Pano.gschema.xml:232
 msgid "Whether bold is also bright"
 msgstr "A félkövér is legyen-e világos"
 
-#: src/org.gnome.Terminal.gschema.xml:219
+#: src/com.aripd.Pano.gschema.xml:233
 msgid ""
 "If true, setting bold on the first 8 colors also switches to their bright "
 "variants."
@@ -416,31 +419,39 @@ msgstr ""
 "Ha igaz, akkor a félkövér beállítás az első 8 színen is átváltja a világos "
 "változataira."
 
-#: src/org.gnome.Terminal.gschema.xml:223
+#: src/com.aripd.Pano.gschema.xml:237
 msgid "Whether to ring the terminal bell"
 msgstr "Bekapcsolja-e a terminálcsengőt"
 
-#: src/org.gnome.Terminal.gschema.xml:227
-#| msgid ""
-#| "List of ASCII punctuation characters that are not to be treated as part "
-#| "of a word when doing word-wise selection"
+#: src/com.aripd.Pano.gschema.xml:241
+#, fuzzy
+#| msgid "Whether to ring the terminal bell"
+msgid "Whether the terminal flashes when the bell rings"
+msgstr "Bekapcsolja-e a terminálcsengőt"
+
+#: src/com.aripd.Pano.gschema.xml:242
+msgid ""
+"When the terminal is in a tab in the background, the tab is marked instead."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:246
 msgid "List of punctuation characters that are treated as word characters"
 msgstr "Az írásjelek listája, amelyek szókarakterként legyenek kezelve"
 
-#: src/org.gnome.Terminal.gschema.xml:228
+#: src/com.aripd.Pano.gschema.xml:247
 msgid ""
 "By default, when doing word-wise selection, most punctuation breaks up word "
 "boundaries. This list of exceptions will instead be treated as part of the "
 "word."
 msgstr ""
-"Alapértelmezetten a szavankénti kijelöléskor a legtöbb írásjel megszakítja a s"
-"zóhatárokat. Ez a kivétellista viszont a szó részének lesz tekintve."
+"Alapértelmezetten a szavankénti kijelöléskor a legtöbb írásjel megszakítja a "
+"szóhatárokat. Ez a kivétellista viszont a szó részének lesz tekintve."
 
-#: src/org.gnome.Terminal.gschema.xml:233
+#: src/com.aripd.Pano.gschema.xml:252
 msgid "Default number of columns"
 msgstr "Oszlopok alapértelmezett száma"
 
-#: src/org.gnome.Terminal.gschema.xml:234
+#: src/com.aripd.Pano.gschema.xml:253
 msgid ""
 "Number of columns in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -448,11 +459,11 @@ msgstr ""
 "Oszlopok száma újonnan létrehozott terminálablakokban. Hatástalan, ha a "
 "use_custom_default_size kulcs nincs engedélyezve."
 
-#: src/org.gnome.Terminal.gschema.xml:239
+#: src/com.aripd.Pano.gschema.xml:258
 msgid "Default number of rows"
 msgstr "Sorok alapértelmezett száma"
 
-#: src/org.gnome.Terminal.gschema.xml:240
+#: src/com.aripd.Pano.gschema.xml:259
 msgid ""
 "Number of rows in newly created terminal windows. Has no effect if "
 "use_custom_default_size is not enabled."
@@ -460,20 +471,19 @@ msgstr ""
 "Sorok száma újonnan létrehozott terminálablakokban. Hatástalan, ha a "
 "use_custom_default_size kulcs nincs engedélyezve."
 
-#: src/org.gnome.Terminal.gschema.xml:244
+#: src/com.aripd.Pano.gschema.xml:263
 msgid "When to show the scrollbar"
 msgstr "Mikor jelenjen meg a görgetősáv"
 
-#: src/org.gnome.Terminal.gschema.xml:248
-#| msgid "Whether to enable SIXEL images"
+#: src/com.aripd.Pano.gschema.xml:267
 msgid "Whether to enable kinetic scrolling"
 msgstr "Engedélyezze-e a kinetikus görgetést"
 
-#: src/org.gnome.Terminal.gschema.xml:252
+#: src/com.aripd.Pano.gschema.xml:271
 msgid "Number of lines to keep in scrollback"
 msgstr "A visszagörgethető sorok száma"
 
-#: src/org.gnome.Terminal.gschema.xml:253
+#: src/com.aripd.Pano.gschema.xml:272
 msgid ""
 "Number of scrollback lines to keep around. You can scroll back in the "
 "terminal by this number of lines; lines that don’t fit in the scrollback are "
@@ -483,11 +493,11 @@ msgstr ""
 "terminálban; azon sorok, amik nem férnek bele ebbe, el lesznek dobva. Ha a "
 "scrollback_unlimited kulcs értéke igaz, akkor figyelmen kívül marad."
 
-#: src/org.gnome.Terminal.gschema.xml:257
+#: src/com.aripd.Pano.gschema.xml:276
 msgid "Whether an unlimited number of lines should be kept in scrollback"
 msgstr "Végtelen számú sor tárolása a visszagörgetéshez"
 
-#: src/org.gnome.Terminal.gschema.xml:258
+#: src/com.aripd.Pano.gschema.xml:277
 msgid ""
 "If true, scrollback lines will never be discarded. The scrollback history is "
 "stored on disk temporarily, so this may cause the system to run out of disk "
@@ -498,13 +508,11 @@ msgstr ""
 "tárolva, így emiatt a rendszeren elfogyhat a szabad hely, ha túl sok a "
 "kimenet a terminálon."
 
-#: src/org.gnome.Terminal.gschema.xml:262
-#| msgid "Whether to scroll to the bottom when a key is pressed"
+#: src/com.aripd.Pano.gschema.xml:281
 msgid "Whether to scroll to the bottom when text is inserted"
 msgstr "Görgessen-e a terminál aljára szöveg beszúrásakor"
 
-#: src/org.gnome.Terminal.gschema.xml:263
-#| msgid "Whether to scroll to the bottom when a key is pressed"
+#: src/com.aripd.Pano.gschema.xml:282
 msgid ""
 "If true, the terminal will scroll to the bottom when text is inserted by "
 "paste."
@@ -512,28 +520,28 @@ msgstr ""
 "Ha igaz, akkor a terminál az aljára gördül, ha szöveg kerül beszúrásra "
 "beillesztéssel."
 
-#: src/org.gnome.Terminal.gschema.xml:267
+#: src/com.aripd.Pano.gschema.xml:286
 msgid "Whether to scroll to the bottom when a key is pressed"
 msgstr "Billentyűleütésre görgessen-e a terminál aljára"
 
-#: src/org.gnome.Terminal.gschema.xml:268
+#: src/com.aripd.Pano.gschema.xml:287
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgstr "Ha be van állítva, gombnyomásra a görgetősáv aljára ugrik."
 
-#: src/org.gnome.Terminal.gschema.xml:272
+#: src/com.aripd.Pano.gschema.xml:291
 msgid "Whether to scroll to the bottom when there’s new output"
 msgstr "Görgessen-e a terminál aljára ha új kimenet jelenik meg"
 
-#: src/org.gnome.Terminal.gschema.xml:273
+#: src/com.aripd.Pano.gschema.xml:292
 msgid ""
 "If true, whenever there’s new output the terminal will scroll to the bottom."
 msgstr "Ha be van állítva, a terminál új kimenet kiírásakor az aljára görget."
 
-#: src/org.gnome.Terminal.gschema.xml:277
+#: src/com.aripd.Pano.gschema.xml:296
 msgid "What to do with the terminal when the child command exits"
 msgstr "Mi a teendő a terminállal, ha a gyermek parancs kilép"
 
-#: src/org.gnome.Terminal.gschema.xml:278
+#: src/com.aripd.Pano.gschema.xml:297
 msgid ""
 "Possible values are “close” to close the terminal, “restart” to restart the "
 "command, and “hold” to keep the terminal open with no command running inside."
@@ -541,12 +549,12 @@ msgstr ""
 "Lehetséges értékek: „close” a terminál bezárásához, „restart” a parancs "
 "újraindításához és „hold” a terminál nyitva tartásához, futó parancs nélkül."
 
-#: src/org.gnome.Terminal.gschema.xml:282
+#: src/com.aripd.Pano.gschema.xml:301
 msgid "Whether to launch the command in the terminal as a login shell"
 msgstr ""
 "A parancsot a terminálban bejelentkezési parancsértelmezőként indítsa-e"
 
-#: src/org.gnome.Terminal.gschema.xml:283
+#: src/com.aripd.Pano.gschema.xml:302
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell "
 "(argv[0] will have a hyphen in front of it)."
@@ -554,11 +562,11 @@ msgstr ""
 "Ha be van állítva, a terminálban lévő parancs bejelentkezési "
 "parancsértelmezőként indul (argv[0] kötőjellel fog kezdődni)."
 
-#: src/org.gnome.Terminal.gschema.xml:287
+#: src/com.aripd.Pano.gschema.xml:306
 msgid "Whether to preserve the working directory when opening a new terminal"
 msgstr "Megőrizze-e a munkakönyvtárat egy új terminál megnyitásakor"
 
-#: src/org.gnome.Terminal.gschema.xml:288
+#: src/com.aripd.Pano.gschema.xml:307
 msgid ""
 "Controls when opening a new terminal from a previous one carries over the "
 "working directory of the opening terminal to the new one."
@@ -566,11 +574,11 @@ msgstr ""
 "Azt vezérli, hogy ha új terminált nyit egy előzőből, akkor a munkakönyvtár "
 "átkerül-e az előzőből az új terminálablakba."
 
-#: src/org.gnome.Terminal.gschema.xml:294
+#: src/com.aripd.Pano.gschema.xml:313
 msgid "Whether to run a custom command instead of the shell"
 msgstr "Egyéni parancs futtatása a parancsértelmező helyett"
 
-#: src/org.gnome.Terminal.gschema.xml:295
+#: src/com.aripd.Pano.gschema.xml:314
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
@@ -578,11 +586,11 @@ msgstr ""
 "Ha be van állítva, a custom_command beállítást fogja használni a "
 "parancsértelmező futtatása helyén."
 
-#: src/org.gnome.Terminal.gschema.xml:299
+#: src/com.aripd.Pano.gschema.xml:318
 msgid "Whether to blink the cursor"
 msgstr "Villogjon-e a kurzor"
 
-#: src/org.gnome.Terminal.gschema.xml:300
+#: src/com.aripd.Pano.gschema.xml:319
 msgid ""
 "The possible values are “system” to use the global cursor blinking settings, "
 "or “on” or “off” to set the mode explicitly."
@@ -590,11 +598,11 @@ msgstr ""
 "A lehetséges értékek: „system” (globális kurzorvillogási beállítás "
 "használata), illetve „on” (be) vagy „off” (ki) a mód explicit beállításához."
 
-#: src/org.gnome.Terminal.gschema.xml:304
+#: src/com.aripd.Pano.gschema.xml:323
 msgid "The cursor appearance"
 msgstr "A kurzor megjelenése"
 
-#: src/org.gnome.Terminal.gschema.xml:308
+#: src/com.aripd.Pano.gschema.xml:327
 msgid ""
 "Possible values are “always” or “never” allow blinking text, or only when "
 "the terminal is “focused” or “unfocused”."
@@ -603,49 +611,72 @@ msgstr ""
 "engedélyezéséhez, vagy csak akkor, amikor a terminál „focused” (fókuszba "
 "kerül) vagy „unfocused” (elveszti a fókuszt)."
 
-#: src/org.gnome.Terminal.gschema.xml:312
+#: src/com.aripd.Pano.gschema.xml:331
 msgid "Custom command to use instead of the shell"
 msgstr "Egyéni parancs futtatása a parancsértelmező helyett"
 
-#: src/org.gnome.Terminal.gschema.xml:313
+#: src/com.aripd.Pano.gschema.xml:332
 msgid "Run this command in place of the shell, if use_custom_command is true."
 msgstr ""
 "Ezen parancs futtatása a parancsértelmező helyén, ha a use_custom_command "
 "engedélyezett."
 
-#: src/org.gnome.Terminal.gschema.xml:332
+#: src/com.aripd.Pano.gschema.xml:336
+msgid "The color scheme, or empty for the colors set in this profile"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:337
+msgid ""
+"The name of a .palette file, without the suffix. Its colors replace the "
+"foreground, background and palette of the profile, and follow the light or "
+"dark style of the system if the scheme has both."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:342
+#, fuzzy
+#| msgid "Default color of terminal background"
+msgid "Opacity of the terminal background"
+msgstr "A terminálháttér alapértelmezett színe"
+
+#: src/com.aripd.Pano.gschema.xml:343
+msgid ""
+"1.0 is opaque. With lower values the desktop shows through the background of "
+"the terminal; the text stays opaque."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:362
 msgid "Palette for terminal applications"
 msgstr "Paletta a terminálalkalmazásokhoz"
 
-#: src/org.gnome.Terminal.gschema.xml:336
+#: src/com.aripd.Pano.gschema.xml:366
 msgid "A Pango font name and size"
 msgstr "Egy Pango betűkészlet neve és mérete"
 
-#: src/org.gnome.Terminal.gschema.xml:340
+#: src/com.aripd.Pano.gschema.xml:370
 msgid "The code sequence the Backspace key generates"
 msgstr "A kódsorozat amit a Backspace generál"
 
-#: src/org.gnome.Terminal.gschema.xml:344
+#: src/com.aripd.Pano.gschema.xml:374
 msgid "The code sequence the Delete key generates"
 msgstr "A kódsorozat amit a Delete generál"
 
-#: src/org.gnome.Terminal.gschema.xml:348
+#: src/com.aripd.Pano.gschema.xml:378
 msgid "Whether to use the colors from the theme for the terminal widget"
 msgstr "Használja-e a terminálelem témájának színeit"
 
-#: src/org.gnome.Terminal.gschema.xml:352
+#: src/com.aripd.Pano.gschema.xml:382
 msgid "Whether to use the system monospace font"
 msgstr "Használja-e a rendszer rögzített szélességű betűkészletét"
 
-#: src/org.gnome.Terminal.gschema.xml:356
+#: src/com.aripd.Pano.gschema.xml:386
 msgid "Whether to rewrap the terminal contents on window resize"
 msgstr "A terminál tartalma újra legyen-e tördelve az ablak átméretezésekor"
 
-#: src/org.gnome.Terminal.gschema.xml:360
+#: src/com.aripd.Pano.gschema.xml:390
 msgid "Which encoding to use"
 msgstr "Használandó kódolás"
 
-#: src/org.gnome.Terminal.gschema.xml:364
+#: src/com.aripd.Pano.gschema.xml:394
 msgid ""
 "Whether ambiguous-width characters are narrow or wide when using UTF-8 "
 "encoding"
@@ -653,195 +684,349 @@ msgstr ""
 "A nem egyértelmű szélességű karakterek keskenyek vagy szélesek UTF-8 kódolás "
 "használatakor"
 
-#: src/org.gnome.Terminal.gschema.xml:373
+#: src/com.aripd.Pano.gschema.xml:403
 msgid "Keyboard shortcut to open a new tab"
 msgstr "Gyorsbillentyű új lap megnyitásához"
 
-#: src/org.gnome.Terminal.gschema.xml:377
+#: src/com.aripd.Pano.gschema.xml:407
 msgid "Keyboard shortcut to open a new window"
 msgstr "Gyorsbillentyű új ablak megnyitásához"
 
-#: src/org.gnome.Terminal.gschema.xml:381
-msgid "Keyboard shortcut to save the current tab contents to file"
+#: src/com.aripd.Pano.gschema.xml:411
+#, fuzzy
+#| msgid "Keyboard shortcut to save the current tab contents to file"
+msgid ""
+"Keyboard shortcut to save the contents of the current terminal, with its "
+"scrollback, to a file"
 msgstr "Gyorsbillentyű az aktuális lap tartalmának fájlba mentéséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:385
-msgid ""
-"Keyboard shortcut to export the current tab contents to file in various "
-"formats"
-msgstr ""
-"Gyorsbillentyű az aktuális lap tartalmának fájlba exportálásához különböző "
-"formátumokban"
-
-#: src/org.gnome.Terminal.gschema.xml:389
-msgid "Keyboard shortcut to print the current tab contents to printer or file"
-msgstr ""
-"Gyorsbillentyű az aktuális lap tartalmának fájlba vagy nyomtatóval történő "
-"nyomtatásához"
-
-#: src/org.gnome.Terminal.gschema.xml:393
+#: src/com.aripd.Pano.gschema.xml:415
 msgid "Keyboard shortcut to close a tab"
 msgstr "Gyorsbillentyű egy lap bezárásához"
 
-#: src/org.gnome.Terminal.gschema.xml:397
+#: src/com.aripd.Pano.gschema.xml:419
+#, fuzzy
+#| msgid "Keyboard shortcut to save the current tab contents to file"
+msgid ""
+"Keyboard shortcut to close the tabs other than the current one, except "
+"pinned tabs"
+msgstr "Gyorsbillentyű az aktuális lap tartalmának fájlba mentéséhez"
+
+#: src/com.aripd.Pano.gschema.xml:423
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new tab"
+msgid "Keyboard shortcut to reopen the last closed tab"
+msgstr "Gyorsbillentyű új lap megnyitásához"
+
+#: src/com.aripd.Pano.gschema.xml:427
 msgid "Keyboard shortcut to close a window"
 msgstr "Gyorsbillentyű egy ablak bezárásához"
 
-#: src/org.gnome.Terminal.gschema.xml:401
+#: src/com.aripd.Pano.gschema.xml:431
 msgid "Keyboard shortcut to copy text"
 msgstr "Gyorsbillentyű szöveg másolásához"
 
-#: src/org.gnome.Terminal.gschema.xml:405
+#: src/com.aripd.Pano.gschema.xml:435
 msgid "Keyboard shortcut to copy text as HTML"
 msgstr "Gyorsbillentyű szöveg HTML-ként való másolásához"
 
-#: src/org.gnome.Terminal.gschema.xml:409
+#: src/com.aripd.Pano.gschema.xml:439
 msgid "Keyboard shortcut to paste text"
 msgstr "Gyorsbillentyű szöveg beillesztéséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:413
+#: src/com.aripd.Pano.gschema.xml:443
 msgid "Keyboard shortcut to select all text"
 msgstr "Gyorsbillentyű az összes szöveg kijelöléséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:417
+#: src/com.aripd.Pano.gschema.xml:447
 msgid "Keyboard shortcut to open the Preferences dialog"
 msgstr "Gyorsbillentyű a beállítások párbeszédablak megnyitásához"
 
-#: src/org.gnome.Terminal.gschema.xml:421
+#: src/com.aripd.Pano.gschema.xml:451
 msgid "Keyboard shortcut to toggle full screen mode"
 msgstr "Gyorsbillentyű a teljes képernyős mód váltásához"
 
-#: src/org.gnome.Terminal.gschema.xml:425
+#: src/com.aripd.Pano.gschema.xml:455
 msgid "Keyboard shortcut to toggle the read-only state"
 msgstr "Gyorsbillentyű a csak olvasható állapot átállításához"
 
-#: src/org.gnome.Terminal.gschema.xml:429
+#: src/com.aripd.Pano.gschema.xml:459
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid ""
+"Keyboard shortcut to label URLs, paths and more on the screen, to copy them "
+"by typing the label"
+msgstr "Gyorsbillentyű az aktuális lap balra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:463
+#, fuzzy
+#| msgid "Keyboard shortcut to open the search dialog"
+msgid "Keyboard shortcut to open the command palette"
+msgstr "Gyorsbillentyű a keresés párbeszédablak megnyitásához"
+
+#: src/com.aripd.Pano.gschema.xml:467
+#, fuzzy
+#| msgid "Keyboard shortcut to reset and clear the terminal"
+msgid ""
+"Keyboard shortcut to set a title for the terminal that programs cannot change"
+msgstr "Gyorsbillentyű a terminál visszaállításához és törléséhez"
+
+#: src/com.aripd.Pano.gschema.xml:471
 msgid "Keyboard shortcut to reset the terminal"
 msgstr "Gyorsbillentyű a terminál visszaállításához"
 
-#: src/org.gnome.Terminal.gschema.xml:433
+#: src/com.aripd.Pano.gschema.xml:475
 msgid "Keyboard shortcut to reset and clear the terminal"
 msgstr "Gyorsbillentyű a terminál visszaállításához és törléséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:437
+#: src/com.aripd.Pano.gschema.xml:479
 msgid "Keyboard shortcut to open the search dialog"
 msgstr "Gyorsbillentyű a keresés párbeszédablak megnyitásához"
 
-#: src/org.gnome.Terminal.gschema.xml:441
+#: src/com.aripd.Pano.gschema.xml:483
 msgid "Keyboard shortcut to find the next occurrence of the search term"
 msgstr ""
 "Gyorsbillentyű a keresett kifejezés következő előfordulásának kereséséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:445
+#: src/com.aripd.Pano.gschema.xml:487
 msgid "Keyboard shortcut to find the previous occurrence of the search term"
 msgstr "Gyorsbillentyű a keresett kifejezés előző előfordulásának kereséséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:449
+#: src/com.aripd.Pano.gschema.xml:491
 msgid "Keyboard shortcut to clear the find highlighting"
 msgstr "Gyorsbillentyű a találat kiemelésének törléséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:453
+#: src/com.aripd.Pano.gschema.xml:495
 msgid "Keyboard shortcut to switch to the previous tab"
 msgstr "Gyorsbillentyű az előző lapra váltáshoz"
 
-#: src/org.gnome.Terminal.gschema.xml:457
+#: src/com.aripd.Pano.gschema.xml:499
 msgid "Keyboard shortcut to switch to the next tab"
 msgstr "Gyorsbillentyű a következő lapra váltáshoz"
 
-#: src/org.gnome.Terminal.gschema.xml:461
+#: src/com.aripd.Pano.gschema.xml:503
 msgid "Keyboard shortcut to move the current tab to the left"
 msgstr "Gyorsbillentyű az aktuális lap balra mozgatásához"
 
-#: src/org.gnome.Terminal.gschema.xml:465
+#: src/com.aripd.Pano.gschema.xml:507
 msgid "Keyboard shortcut to move the current tab to the right"
 msgstr "Gyorsbillentyű az aktuális lap jobbra mozgatásához"
 
-#: src/org.gnome.Terminal.gschema.xml:469
-#| msgid "Keyboard shortcut to move the current tab to the right"
+#: src/com.aripd.Pano.gschema.xml:511
 msgid "Keyboard shortcut to move the current tab to the start"
 msgstr "Gyorsbillentyű az aktuális lap kezdésre mozgatásához"
 
-#: src/org.gnome.Terminal.gschema.xml:473
-#| msgid "Keyboard shortcut to move the current tab to the left"
+#: src/com.aripd.Pano.gschema.xml:515
 msgid "Keyboard shortcut to move the current tab to the end"
 msgstr "Gyorsbillentyű az aktuális lap végére mozgatásához"
 
-#: src/org.gnome.Terminal.gschema.xml:477
+#: src/com.aripd.Pano.gschema.xml:519
 msgid "Keyboard shortcut to detach current tab"
 msgstr "Gyorsbillentyű az aktuális lap leválasztásához"
 
-#: src/org.gnome.Terminal.gschema.xml:481
-#| msgid "Keyboard shortcut to show the primary menu"
+#: src/com.aripd.Pano.gschema.xml:523
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the previous tab"
+msgid "Keyboard shortcut to scroll to the previous shell prompt"
+msgstr "Gyorsbillentyű az előző lapra váltáshoz"
+
+#: src/com.aripd.Pano.gschema.xml:527
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to scroll to the next shell prompt"
+msgstr "Gyorsbillentyű a következő lapra váltáshoz"
+
+#: src/com.aripd.Pano.gschema.xml:531
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the last tab"
+msgid "Keyboard shortcut to copy the output of the last command"
+msgstr "Gyorsbillentyű az utolsó lapra váltáshoz"
+
+#: src/com.aripd.Pano.gschema.xml:535
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to send input to all panes of the tab, or to stop"
+msgstr "Gyorsbillentyű a következő lapra váltáshoz"
+
+#: src/com.aripd.Pano.gschema.xml:539
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new window"
+msgid ""
+"Keyboard shortcut to send input to all terminals of the window, or to stop"
+msgstr "Gyorsbillentyű új ablak megnyitásához"
+
+#: src/com.aripd.Pano.gschema.xml:543
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid ""
+"Keyboard shortcut to move the focus to the tab list, when the tabs are on "
+"the left or right"
+msgstr "Gyorsbillentyű az aktuális lap jobbra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:547
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to split the terminal and open a new one on the right"
+msgstr "Gyorsbillentyű az aktuális lap jobbra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:551
+#, fuzzy
+#| msgid "Keyboard shortcut to reset the terminal"
+msgid "Keyboard shortcut to split the terminal and open a new one below"
+msgstr "Gyorsbillentyű a terminál visszaállításához"
+
+#: src/com.aripd.Pano.gschema.xml:555
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the last tab"
+msgid "Keyboard shortcut to close the active pane of a split tab"
+msgstr "Gyorsbillentyű az utolsó lapra váltáshoz"
+
+#: src/com.aripd.Pano.gschema.xml:559
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the end"
+msgid ""
+"Keyboard shortcut to show only the active pane of a split tab, or all panes "
+"again"
+msgstr "Gyorsbillentyű az aktuális lap végére mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:563
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the start"
+msgid "Keyboard shortcut to give the panes of a tab the same size"
+msgstr "Gyorsbillentyű az aktuális lap kezdésre mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:567
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the start"
+msgid "Keyboard shortcut to move the active pane to a new tab"
+msgstr "Gyorsbillentyű az aktuális lap kezdésre mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:571
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the focus to the pane on the left"
+msgstr "Gyorsbillentyű az aktuális lap balra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:575
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the focus to the pane on the right"
+msgstr "Gyorsbillentyű az aktuális lap jobbra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:579
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the end"
+msgid "Keyboard shortcut to move the focus to the pane above"
+msgstr "Gyorsbillentyű az aktuális lap végére mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:583
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the end"
+msgid "Keyboard shortcut to move the focus to the pane below"
+msgstr "Gyorsbillentyű az aktuális lap végére mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:587
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to move the divider of the active pane to the left"
+msgstr "Gyorsbillentyű az aktuális lap balra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:591
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to move the divider of the active pane to the right"
+msgstr "Gyorsbillentyű az aktuális lap jobbra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:595
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the end"
+msgid "Keyboard shortcut to move the divider of the active pane up"
+msgstr "Gyorsbillentyű az aktuális lap végére mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:599
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the end"
+msgid "Keyboard shortcut to move the divider of the active pane down"
+msgstr "Gyorsbillentyű az aktuális lap végére mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:603
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the left"
+msgid "Keyboard shortcut to swap the active pane with the pane on the left"
+msgstr "Gyorsbillentyű az aktuális lap balra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:607
+#, fuzzy
+#| msgid "Keyboard shortcut to move the current tab to the right"
+msgid "Keyboard shortcut to swap the active pane with the pane on the right"
+msgstr "Gyorsbillentyű az aktuális lap jobbra mozgatásához"
+
+#: src/com.aripd.Pano.gschema.xml:611
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane above"
+msgstr "Gyorsbillentyű a következő lapra váltáshoz"
+
+#: src/com.aripd.Pano.gschema.xml:615
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane below"
+msgstr "Gyorsbillentyű a következő lapra váltáshoz"
+
+#: src/com.aripd.Pano.gschema.xml:619
 msgid "Keyboard shortcut to show the tabs overview"
 msgstr "Gyorsbillentyű a lapok áttekintésének megjelenítéséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:485
-#: src/org.gnome.Terminal.gschema.xml:489
-#: src/org.gnome.Terminal.gschema.xml:493
-#: src/org.gnome.Terminal.gschema.xml:497
-#: src/org.gnome.Terminal.gschema.xml:501
-#: src/org.gnome.Terminal.gschema.xml:505
-#: src/org.gnome.Terminal.gschema.xml:509
-#: src/org.gnome.Terminal.gschema.xml:513
-#: src/org.gnome.Terminal.gschema.xml:517
-#: src/org.gnome.Terminal.gschema.xml:521
-#: src/org.gnome.Terminal.gschema.xml:525
-#: src/org.gnome.Terminal.gschema.xml:529
-#: src/org.gnome.Terminal.gschema.xml:533
-#: src/org.gnome.Terminal.gschema.xml:537
-#: src/org.gnome.Terminal.gschema.xml:541
-#: src/org.gnome.Terminal.gschema.xml:545
-#: src/org.gnome.Terminal.gschema.xml:549
-#: src/org.gnome.Terminal.gschema.xml:553
-#: src/org.gnome.Terminal.gschema.xml:557
-#: src/org.gnome.Terminal.gschema.xml:561
-#: src/org.gnome.Terminal.gschema.xml:565
-#: src/org.gnome.Terminal.gschema.xml:569
-#: src/org.gnome.Terminal.gschema.xml:573
-#: src/org.gnome.Terminal.gschema.xml:577
-#: src/org.gnome.Terminal.gschema.xml:581
-#: src/org.gnome.Terminal.gschema.xml:585
-#: src/org.gnome.Terminal.gschema.xml:589
-#: src/org.gnome.Terminal.gschema.xml:593
-#: src/org.gnome.Terminal.gschema.xml:597
-#: src/org.gnome.Terminal.gschema.xml:601
-#: src/org.gnome.Terminal.gschema.xml:605
-#: src/org.gnome.Terminal.gschema.xml:609
-#: src/org.gnome.Terminal.gschema.xml:613
-#: src/org.gnome.Terminal.gschema.xml:617
-#: src/org.gnome.Terminal.gschema.xml:621
+#: src/com.aripd.Pano.gschema.xml:623 src/com.aripd.Pano.gschema.xml:627
+#: src/com.aripd.Pano.gschema.xml:631 src/com.aripd.Pano.gschema.xml:635
+#: src/com.aripd.Pano.gschema.xml:639 src/com.aripd.Pano.gschema.xml:643
+#: src/com.aripd.Pano.gschema.xml:647 src/com.aripd.Pano.gschema.xml:651
+#: src/com.aripd.Pano.gschema.xml:655 src/com.aripd.Pano.gschema.xml:659
+#: src/com.aripd.Pano.gschema.xml:663 src/com.aripd.Pano.gschema.xml:667
+#: src/com.aripd.Pano.gschema.xml:671 src/com.aripd.Pano.gschema.xml:675
+#: src/com.aripd.Pano.gschema.xml:679 src/com.aripd.Pano.gschema.xml:683
+#: src/com.aripd.Pano.gschema.xml:687 src/com.aripd.Pano.gschema.xml:691
+#: src/com.aripd.Pano.gschema.xml:695 src/com.aripd.Pano.gschema.xml:699
+#: src/com.aripd.Pano.gschema.xml:703 src/com.aripd.Pano.gschema.xml:707
+#: src/com.aripd.Pano.gschema.xml:711 src/com.aripd.Pano.gschema.xml:715
+#: src/com.aripd.Pano.gschema.xml:719 src/com.aripd.Pano.gschema.xml:723
+#: src/com.aripd.Pano.gschema.xml:727 src/com.aripd.Pano.gschema.xml:731
+#: src/com.aripd.Pano.gschema.xml:735 src/com.aripd.Pano.gschema.xml:739
+#: src/com.aripd.Pano.gschema.xml:743 src/com.aripd.Pano.gschema.xml:747
+#: src/com.aripd.Pano.gschema.xml:751 src/com.aripd.Pano.gschema.xml:755
+#: src/com.aripd.Pano.gschema.xml:759
 msgid "Keyboard shortcut to switch to the numbered tab"
 msgstr "Gyorsbillentyű a számozott lapra váltáshoz"
 
-#: src/org.gnome.Terminal.gschema.xml:625
+#: src/com.aripd.Pano.gschema.xml:763
 msgid "Keyboard shortcut to switch to the last tab"
 msgstr "Gyorsbillentyű az utolsó lapra váltáshoz"
 
-#: src/org.gnome.Terminal.gschema.xml:629
+#: src/com.aripd.Pano.gschema.xml:767
 msgid "Keyboard shortcut to launch help"
 msgstr "Gyorsbillentyű a súgó elindításához"
 
-#: src/org.gnome.Terminal.gschema.xml:633
+#: src/com.aripd.Pano.gschema.xml:771
 msgid "Keyboard shortcut to make font larger"
 msgstr "Gyorsbillentyű a betűméret növeléséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:637
+#: src/com.aripd.Pano.gschema.xml:775
 msgid "Keyboard shortcut to make font smaller"
 msgstr "Gyorsbillentyű a betűméret csökkentéséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:641
+#: src/com.aripd.Pano.gschema.xml:779
 msgid "Keyboard shortcut to make font normal-size"
 msgstr "Gyorsbillentyű a normál betűmérethez"
 
-#: src/org.gnome.Terminal.gschema.xml:645
+#: src/com.aripd.Pano.gschema.xml:783
 msgid "Keyboard shortcut to show the primary menu"
 msgstr "Gyorsbillentyű az elsődleges menü megjelenítéséhez"
 
-#: src/org.gnome.Terminal.gschema.xml:659
+#: src/com.aripd.Pano.gschema.xml:797
 msgid "Whether shortcuts are enabled"
 msgstr "A gyorsbillentyűk engedélyezve vannak-e"
 
-#: src/org.gnome.Terminal.gschema.xml:660
+#: src/com.aripd.Pano.gschema.xml:798
 msgid ""
 "Whether shortcuts are enabled. They may interfere with some applications run "
 "inside the terminal so it’s possible to turn them off."
@@ -849,11 +1034,11 @@ msgstr ""
 "A gyorsbillentyűk engedélyezettek-e. Ezek néhány, a terminálban futó "
 "alkalmazással összeütközhetnek, ezért kikapcsolhatóak."
 
-#: src/org.gnome.Terminal.gschema.xml:669
+#: src/com.aripd.Pano.gschema.xml:807
 msgid "Whether the standard GTK shortcut for menubar access is enabled"
 msgstr "A menüsor eléréséhez a szabvány GTK gyorsbillentyű engedélyezése"
 
-#: src/org.gnome.Terminal.gschema.xml:670
+#: src/com.aripd.Pano.gschema.xml:808
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
@@ -863,47 +1048,254 @@ msgstr ""
 "gtkrc-vel (gtk-menu-bar-accel = „Akármi”). Ezt a gyorsbillentyűt itt "
 "kikapcsolhatja."
 
-#: src/org.gnome.Terminal.gschema.xml:680
+#: src/com.aripd.Pano.gschema.xml:818
 msgid "Whether the shell integration is enabled"
 msgstr "Meghatározza, hogy a shell integráció engedélyezett-e"
 
-#: src/org.gnome.Terminal.gschema.xml:685
+#: src/com.aripd.Pano.gschema.xml:819
+msgid ""
+"This is about GNOME Shell: whether terminals can be found in its search. See "
+"inject-shell-integration for the integration of the shells in the terminals."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:824
+#, fuzzy
+#| msgid "Whether the shell integration is enabled"
+msgid "Whether to add shell integration to bash, zsh and fish"
+msgstr "Meghatározza, hogy a shell integráció engedélyezett-e"
+
+#: src/com.aripd.Pano.gschema.xml:825
+msgid ""
+"If true, the default shell of a profile is started so that it reports its "
+"prompts, commands and working directory, which command notifications, prompt "
+"navigation and copying command output need. Custom commands, login bash "
+"shells and terminals in containers are left alone."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:830
 msgid "Whether to ask for confirmation before closing a terminal"
 msgstr "Kérjen-e megerősítést terminálablak bezárása előtt"
 
-#: src/org.gnome.Terminal.gschema.xml:690
+#: src/com.aripd.Pano.gschema.xml:835
 msgid "Additional info section items to appear in the context menu"
 msgstr "A helyi menüben megjelenítendő további információszakasz-elemek"
 
-#: src/org.gnome.Terminal.gschema.xml:695
+#: src/com.aripd.Pano.gschema.xml:840
 msgid "Whether to open new terminals as windows or tabs"
 msgstr "Az új terminálok megnyitása ablakokban vagy lapokon"
 
-#: src/org.gnome.Terminal.gschema.xml:700
+#: src/com.aripd.Pano.gschema.xml:845
 msgid "When to show the tabs bar"
 msgstr "Mikor jelenjen meg a lapsáv"
 
-#: src/org.gnome.Terminal.gschema.xml:705
+#: src/com.aripd.Pano.gschema.xml:851
+msgid "Width of the tab list when the tabs are on the left or right"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:855
+#, fuzzy
+#| msgid "When to show the tabs bar"
+msgid "The position of the tabs bar"
+msgstr "Mikor jelenjen meg a lapsáv"
+
+#: src/com.aripd.Pano.gschema.xml:860
 msgid "Which theme variant to use"
 msgstr "Használandó témaváltozat"
 
-#: src/org.gnome.Terminal.gschema.xml:710
+#: src/com.aripd.Pano.gschema.xml:865
 msgid ""
 "Whether new tabs should open next to the current one or at the last position"
 msgstr ""
 "Az új lapok a jelenlegi mellett jelenjenek-e meg, vagy a legutóbbi pozíciónál"
 
-#: src/org.gnome.Terminal.gschema.xml:715
+#: src/com.aripd.Pano.gschema.xml:870
+msgid "What a middle click on a tab does"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:871
+msgid ""
+"“close” closes the tab; “paste” switches to the tab and pastes the primary "
+"selection into it."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:876
 msgid "Whether windows should have rounded corners"
 msgstr "Kerekített sarkúak legyenek-e az ablakok"
 
-#: src/org.gnome.Terminal.gschema.xml:722
+#: src/com.aripd.Pano.gschema.xml:881
+msgid "The space between the terminal text and the edges of the terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:882
+msgid ""
+"“none” removes it, also next to rounded window corners; “small” keeps the "
+"text clear of rounded corners; “large” leaves more room."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:889
+msgid ""
+"Whether the user has been asked to import the settings of GNOME Terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:894
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to give the header bar and the tabs the colors of the active terminal"
+msgstr "Használja-e a terminálelem témájának színeit"
+
+#: src/com.aripd.Pano.gschema.xml:895
+msgid ""
+"Only when the terminal uses a color scheme or colors of its own, not the "
+"system style; the colors for root and remote sessions take precedence."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:900
+msgid "Whether to dim the panes of a split tab other than the active one"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:905
+msgid "Whether to show a title bar above each pane of a split tab"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:910
+msgid "Regular expressions for more text that quick select offers"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:911
+msgid ""
+"Quick select labels URLs, paths, hashes, addresses and numbers; matches of "
+"these Perl-compatible regular expressions are offered too, before those."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:916
+#, fuzzy
+#| msgid "Whether to ring the terminal bell"
+msgid "Whether to ignore the titles that programs set"
+msgstr "Bekapcsolja-e a terminálcsengőt"
+
+#: src/com.aripd.Pano.gschema.xml:917
+msgid ""
+"If true, terminals show the title set with “Set Title…” or the --title "
+"option, or else their working directory, instead of the title that programs "
+"set with escape sequences."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:922
+msgid "Whether to show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:927
+msgid ""
+"Whether to notify when a long-running command finishes in the background"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:928
+msgid ""
+"Needs a shell that reports its commands, for example bash or zsh with the "
+"VTE shell integration (vte.sh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:934
+msgid "How long a command must run, in seconds, before its end is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:940
+msgid ""
+"How long, in seconds, a terminal monitored for silence must be quiet before "
+"that is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:946
+msgid "Width of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:952
+msgid "Height of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:957
+msgid ""
+"Whether the quick terminal hides when another application gets the focus"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:962
+msgid "Whether the quick terminal slides in from the top edge of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:963
+msgid "Only on X11, where applications can place their windows."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:968
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to ask the desktop for a system-wide shortcut for the quick terminal"
+msgstr "Használja-e a terminálelem témájának színeit"
+
+#: src/com.aripd.Pano.gschema.xml:969
+msgid ""
+"Uses the GlobalShortcuts portal (GNOME 48 or newer, KDE Plasma). The desktop "
+"sends the shortcut only to a running application, so Pano Terminal then "
+"keeps running in the background and starts when you log in."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:974
+#, fuzzy
+#| msgid "Whether to open new terminals as windows or tabs"
+msgid "Whether to show when a terminal runs as root or over SSH"
+msgstr "Az új terminálok megnyitása ablakokban vagy lapokon"
+
+#: src/com.aripd.Pano.gschema.xml:975
+msgid ""
+"Colors the header bar and marks the tab while the foreground program of the "
+"terminal runs as root (for example sudo or su) or connects to another "
+"computer (ssh, mosh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:980
+msgid ""
+"Whether new tabs and panes start in the container of the terminal they are "
+"opened from"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:981
+msgid ""
+"Works for Toolbox and Distrobox containers. The shell inside the container "
+"has to report it (Toolbox does), or the terminal has to be started in it "
+"from Pano Terminal."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:986
+msgid ""
+"Whether to reopen the windows, tabs and panes of the last session on startup"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:987
+msgid ""
+"Applies when Pano Terminal is started without arguments and no window is "
+"open. Each terminal gets a new shell in its previous working directory; "
+"running programs are not restored."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:992
+msgid "Whether new windows get the size of the last used terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:993
+msgid ""
+"When enabled, new windows use the number of columns and rows of the terminal "
+"used last, instead of the initial size of the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:998
 #, fuzzy
 msgid "Always check whether Pano Terminal is the default terminal"
 msgstr ""
 "Mindig ellenőrizze, hogy a GNOME Terminál az alapértelmezett terminál-e"
 
-#: src/search-popover.ui:5 src/search-popover.ui:26 src/terminal-accels.cc:153
+#: src/search-popover.ui:5 src/search-popover.ui:26 src/terminal-accels.cc:166
 #: src/terminal-headerbar.ui:66
 msgid "Find"
 msgstr "Keresés"
@@ -942,238 +1334,454 @@ msgstr "Kö_rbe"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr "Új gyorsbillentyű megadása a(z) <b>%s</b> megváltoztatásához."
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:491
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2553
 msgid "_Cancel"
 msgstr "Mé_gse"
 
-#: src/terminal-accel-dialog.ui:47
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2554
 msgid "_Set"
 msgstr "_Beállítás"
 
 #: src/terminal-accel-dialog.ui:88
 msgid "Press Escape to cancel or Backspace to disable."
 msgstr ""
-"Nyomja meg az Escape billentyűt a megszakításhoz vagy a Backspace billentyűt a"
-" letiltáshoz."
+"Nyomja meg az Escape billentyűt a megszakításhoz vagy a Backspace billentyűt "
+"a letiltáshoz."
 
 #: src/terminal-accel-row.cc:54
-#| msgid "Disabled"
 msgid "disabled"
 msgstr "letiltva"
 
 #: src/terminal-accel-row.cc:88
-#| msgid "Shortcuts"
 msgid "Set Shortcut"
 msgstr "Gyorsbillentyű beállítása"
 
-#: src/terminal-accels.cc:129 src/terminal-headerbar.ui:29
+#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
 msgid "New Tab"
 msgstr "Új lap"
 
-#: src/terminal-accels.cc:132
+#: src/terminal-accels.cc:150 src/terminal-window.cc:603
 msgid "Save Contents"
 msgstr "Tartalom mentése"
 
-#: src/terminal-accels.cc:135
-msgid "Export"
-msgstr "Exportálás"
-
-#: src/terminal-accels.cc:138
-msgid "Print"
-msgstr "Nyomtatás"
-
-#: src/terminal-accels.cc:140
+#: src/terminal-accels.cc:151
 msgid "Close Tab"
 msgstr "Lap bezárása"
 
-#: src/terminal-accels.cc:141
+#: src/terminal-accels.cc:152
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close Other Tabs"
+msgstr "Lap bezárása"
+
+#: src/terminal-accels.cc:153
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Reopen Closed Tab"
+msgstr "Lap bezárása"
+
+#: src/terminal-accels.cc:154
 msgid "Close Window"
 msgstr "Ablak bezárása"
 
-#: src/terminal-accels.cc:145 src/terminal-profile-editor.ui:51
+#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
 #: src/terminal-profile-row.cc:56
 msgid "Copy"
 msgstr "Másolás"
 
-#: src/terminal-accels.cc:146
+#: src/terminal-accels.cc:159
 msgid "Copy as HTML"
 msgstr "Másolás HTML-ként"
 
-#: src/terminal-accels.cc:147
+#: src/terminal-accels.cc:160
 msgid "Paste"
 msgstr "Beillesztés"
 
-#: src/terminal-accels.cc:148
+#: src/terminal-accels.cc:161
 msgid "Select All"
 msgstr "Összes kijelölése"
 
-#: src/terminal-accels.cc:154
+#: src/terminal-accels.cc:167
 msgid "Find Next"
 msgstr "Következő találat"
 
-#: src/terminal-accels.cc:155
+#: src/terminal-accels.cc:168
 msgid "Find Previous"
 msgstr "Előző találat"
 
-#: src/terminal-accels.cc:156
+#: src/terminal-accels.cc:169
 msgid "Clear Highlight"
 msgstr "Kiemelés törlése"
 
-#: src/terminal-accels.cc:160
+#: src/terminal-accels.cc:173
 msgid "Full Screen"
 msgstr "Teljes képernyő"
 
-#: src/terminal-accels.cc:161
+#: src/terminal-accels.cc:174
 msgid "Zoom In"
 msgstr "Nagyítás"
 
-#: src/terminal-accels.cc:162
+#: src/terminal-accels.cc:175
 msgid "Zoom Out"
 msgstr "Kicsinyítés"
 
-#: src/terminal-accels.cc:163
+#: src/terminal-accels.cc:176
 msgid "Normal Size"
 msgstr "Normál méret"
 
-#: src/terminal-accels.cc:167
+#: src/terminal-accels.cc:177
+#, fuzzy
+#| msgid "Palette"
+msgid "Command Palette"
+msgstr "Paletta"
+
+#: src/terminal-accels.cc:178
+msgid "Quick Select"
+msgstr ""
+
+#: src/terminal-accels.cc:182
 msgid "Read-Only"
 msgstr "Csak olvasható"
 
-#: src/terminal-accels.cc:168 src/terminal-profile-editor.ui:566
-#: src/terminal-profile-editor.ui:798
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2550
+#, fuzzy
+#| msgid "Set _Title…"
+msgid "Set Title"
+msgstr "_Cím beállítása…"
+
+#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
+#: src/terminal-profile-editor.ui:848
 msgid "Reset"
 msgstr "Visszaállítás"
 
-#: src/terminal-accels.cc:169
+#: src/terminal-accels.cc:185
 msgid "Reset and Clear"
 msgstr "Visszaállítás és törlés"
 
-#: src/terminal-accels.cc:173
+#: src/terminal-accels.cc:186
+#, fuzzy
+#| msgid "Switch to Previous Tab"
+msgid "Scroll to Previous Prompt"
+msgstr "Váltás az előző lapra"
+
+#: src/terminal-accels.cc:187
+#, fuzzy
+#| msgid "Scroll on Keystroke"
+msgid "Scroll to Next Prompt"
+msgstr "Görgetés billentyűleütéskor"
+
+#: src/terminal-accels.cc:188
+msgid "Copy Output of Last Command"
+msgstr ""
+
+#: src/terminal-accels.cc:192
 msgid "Switch to Previous Tab"
 msgstr "Váltás az előző lapra"
 
-#: src/terminal-accels.cc:174
+#: src/terminal-accels.cc:193
 msgid "Switch to Next Tab"
 msgstr "Váltás a következő lapra"
 
-#: src/terminal-accels.cc:175
+#: src/terminal-accels.cc:194
 msgid "Move Tab to the Left"
 msgstr "Lap mozgatása balra"
 
-#: src/terminal-accels.cc:176
+#: src/terminal-accels.cc:195
 msgid "Move Tab to the Right"
 msgstr "Lap mozgatása jobbra"
 
-#: src/terminal-accels.cc:177
-#| msgid "Move Tab to the Left"
+#: src/terminal-accels.cc:196
 msgid "Move Tab to the Start"
 msgstr "Lap mozgatása a kezdésre"
 
-#: src/terminal-accels.cc:178
-#| msgid "Move Tab to the Left"
+#: src/terminal-accels.cc:197
 msgid "Move Tab to the End"
 msgstr "Lap mozgatása a végére"
 
-#: src/terminal-accels.cc:179
+#: src/terminal-accels.cc:198
 msgid "Detach Tab"
 msgstr "Lap leválasztása"
 
-#: src/terminal-accels.cc:180
+#: src/terminal-accels.cc:199
 msgid "Show Tabs Overview"
 msgstr "Lapok áttekintésének megjelenítése"
 
-#: src/terminal-accels.cc:216
+#: src/terminal-accels.cc:200
+msgid "Focus the Tab List"
+msgstr ""
+
+#: src/terminal-accels.cc:236
 msgid "Switch to Last Tab"
 msgstr "Váltás az utolsó lapra"
 
-#: src/terminal-accels.cc:220
+# Megjegyzés: erre a színsémára nem volt jó ötletem
+#: src/terminal-accels.cc:240
+#, fuzzy
+#| msgid "Solarized light"
+msgid "Split Right"
+msgstr "Solarized, világos"
+
+#: src/terminal-accels.cc:241
+msgid "Split Down"
+msgstr ""
+
+#: src/terminal-accels.cc:242
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close Pane"
+msgstr "Lap bezárása"
+
+#: src/terminal-accels.cc:243
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom Pane"
+msgstr "Nagyítás"
+
+#: src/terminal-accels.cc:244
+msgid "Make Panes the Same Size"
+msgstr ""
+
+#: src/terminal-accels.cc:245
+#, fuzzy
+#| msgid "Move Tab to the Start"
+msgid "Move Pane to a New Tab"
+msgstr "Lap mozgatása a kezdésre"
+
+#: src/terminal-accels.cc:246
+#, fuzzy
+#| msgid "Move Tab to the Left"
+msgid "Focus the Pane on the Left"
+msgstr "Lap mozgatása balra"
+
+#: src/terminal-accels.cc:247
+#, fuzzy
+#| msgid "Move Tab to the Right"
+msgid "Focus the Pane on the Right"
+msgstr "Lap mozgatása jobbra"
+
+#: src/terminal-accels.cc:248
+msgid "Focus the Pane Above"
+msgstr ""
+
+#: src/terminal-accels.cc:249
+msgid "Focus the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:250
+#, fuzzy
+#| msgid "Move Terminal _Left"
+msgid "Move Divider Left"
+msgstr "Terminál mozgatása _balra"
+
+#: src/terminal-accels.cc:251
+#, fuzzy
+#| msgid "Move Terminal _Right"
+msgid "Move Divider Right"
+msgstr "Terminál mozgatása j_obbra"
+
+#: src/terminal-accels.cc:252
+msgid "Move Divider Up"
+msgstr ""
+
+#: src/terminal-accels.cc:253
+msgid "Move Divider Down"
+msgstr ""
+
+#: src/terminal-accels.cc:254
+msgid "Swap With the Pane on the Left"
+msgstr ""
+
+#: src/terminal-accels.cc:255
+msgid "Swap With the Pane on the Right"
+msgstr ""
+
+#: src/terminal-accels.cc:256
+msgid "Swap With the Pane Above"
+msgstr ""
+
+#: src/terminal-accels.cc:257
+msgid "Swap With the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:258
+msgid "Broadcast Input to This Tab"
+msgstr ""
+
+#: src/terminal-accels.cc:259
+msgid "Broadcast Input to This Window"
+msgstr ""
+
+#: src/terminal-accels.cc:263
 msgid "Contents"
 msgstr "Tartalom"
 
-#: src/terminal-accels.cc:224
+#: src/terminal-accels.cc:267
 msgid "Show Primary Menu"
 msgstr "Elsődleges menü megjelenítése"
 
-#: src/terminal-accels.cc:233
+#: src/terminal-accels.cc:278
 msgid "File"
 msgstr "Fájl"
 
-#: src/terminal-accels.cc:234
+#: src/terminal-accels.cc:279
 msgid "Edit"
 msgstr "Szerkesztés"
 
-#: src/terminal-accels.cc:235
+#: src/terminal-accels.cc:280
 msgid "View"
 msgstr "Nézet"
 
-#: src/terminal-accels.cc:236
+#: src/terminal-accels.cc:281
 msgid "Search"
 msgstr "Keresés"
 
-#: src/terminal-accels.cc:238
+#: src/terminal-accels.cc:283
 msgid "Tabs"
 msgstr "Lapok"
 
-#: src/terminal-accels.cc:239
+#: src/terminal-accels.cc:284
+#, fuzzy
+#| msgid "Japanese"
+msgid "Panes"
+msgstr "Japán"
+
+#: src/terminal-accels.cc:285
 msgid "Help"
 msgstr "Súgó"
 
-#: src/terminal-accels.cc:240
+#: src/terminal-accels.cc:286
 msgid "Global"
 msgstr "Globális"
 
-#: src/terminal-accels.cc:356
+#: src/terminal-accels.cc:402
 #, c-format
 msgid "Switch to Tab %u"
 msgstr "Váltás a(z) %u. lapra"
 
-#: src/terminal-app.cc:512
+#: src/terminal-app.cc:518
 msgid "New Terminal"
 msgstr "Új terminál"
 
-#: src/terminal-app.cc:562
+#: src/terminal-app.cc:568
 msgid "_Profile"
 msgstr "_Profil"
 
-#: src/terminal-find-bar.ui:66
+#: src/terminal-app.cc:1347
+#, c-format
+msgid "%u s"
+msgstr ""
+
+#: src/terminal-app.cc:1349
+#, c-format
+msgid "%u min %u s"
+msgstr ""
+
+#: src/terminal-app.cc:1350
+#, c-format
+msgid "%u h %u min"
+msgstr ""
+
+#: src/terminal-app.cc:1376
+#, c-format
+msgid "Finished after %s"
+msgstr ""
+
+#: src/terminal-app.cc:1377
+#, c-format
+msgid "Failed with exit status %u after %s"
+msgstr ""
+
+#: src/terminal-app.cc:1387
+#, fuzzy
+#| msgid "Command"
+msgid "Command finished"
+msgstr "Parancs"
+
+#: src/terminal-app.cc:1387
+#, fuzzy
+#| msgid "Command"
+msgid "Command failed"
+msgstr "Parancs"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:235
+#, fuzzy, c-format
+#| msgid "New Tab from Profile"
+msgid "New Tab with Profile “%s”"
+msgstr "Új lap profilból"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:239
+#, c-format
+msgid "New Window with Profile “%s”"
+msgstr ""
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:244
+#, c-format
+msgid "Use Profile “%s” in This Terminal"
+msgstr ""
+
+#. Translators: %s is the title of a terminal
+#: src/terminal-command-palette.cc:269
+#, c-format
+msgid "Go to “%s”"
+msgstr ""
+
+#. Translators: %d is the number of a tab
+#: src/terminal-command-palette.cc:271
+#, c-format
+msgid "A pane in tab %d"
+msgstr ""
+
+#: src/terminal-command-palette.cc:272
+#, c-format
+msgid "Tab %d"
+msgstr ""
+
+#: src/terminal-command-palette.cc:465
+msgid "Search actions, profiles and tabs"
+msgstr ""
+
+#: src/terminal-find-bar.ui:67
+#, fuzzy
+#| msgid "Search up to next result"
+msgid "Search results"
+msgstr "Keresés felfelé a következő találatig"
+
+#: src/terminal-find-bar.ui:80
 msgid "Search up to next result"
 msgstr "Keresés felfelé a következő találatig"
 
-#: src/terminal-find-bar.ui:73
+#: src/terminal-find-bar.ui:87
 msgid "Search down to next result"
 msgstr "Keresés lefelé a következő találatig"
 
-#: src/terminal-find-bar.ui:82
-#| msgid "Toggle search options"
+#: src/terminal-find-bar.ui:96
 msgid "Search Options"
 msgstr "Keresési beállítások"
 
-#: src/terminal-find-bar.ui:93
-#| msgid "_Match case"
+#: src/terminal-find-bar.ui:107
 msgid "Match _Case"
 msgstr "Kis- és _nagybetű"
 
-#: src/terminal-find-bar.ui:99
+#: src/terminal-find-bar.ui:114
 msgid "Whole _Words"
 msgstr "Teljes s_zavak"
 
-#: src/terminal-find-bar.ui:105
-#| msgid "Match as _regular expression"
+#: src/terminal-find-bar.ui:121
 msgid "Use _Regular Expressions"
 msgstr "_Reguláris kifejezések használata"
 
-#: src/terminal-find-bar.ui:125
-#| msgid "Close Tab"
+#: src/terminal-find-bar.ui:142
 msgid "Close"
 msgstr "Bezárás"
 
-#: src/terminal-find-bar.ui:126
-#| msgid "Close tab"
+#: src/terminal-find-bar.ui:143
 msgid "Close the search bar"
 msgstr "A keresési sáv bezárása"
 
 #: src/terminal-headerbar.ui:40
-#| msgid "New Profile"
 msgid "New Tab from Profile"
 msgstr "Új lap profilból"
 
@@ -1186,7 +1794,6 @@ msgid "Zoom _Out"
 msgstr "_Kicsinyítés"
 
 #: src/terminal-headermenu.ui:29
-#| msgid "Reset"
 msgid "Reset _Zoom"
 msgstr "_Nagyítás visszaállítása"
 
@@ -1194,106 +1801,146 @@ msgstr "_Nagyítás visszaállítása"
 msgid "Zoom _In"
 msgstr "N_agyítás"
 
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:1747
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3187
 msgid "New _Window"
 msgstr "Új _ablak"
 
 #: src/terminal-headermenu.ui:49
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Re_open Closed Tab"
+msgstr "Lap bezárása"
+
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3116
+msgid "Split _Right"
+msgstr ""
+
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3119
+msgid "Split _Down"
+msgstr ""
+
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3173
+msgid "_Broadcast Input"
+msgstr ""
+
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3159
+msgid "_Off"
+msgstr ""
+
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3160
+msgid "To All Panes in This _Tab"
+msgstr ""
+
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3161
+msgid "To All Terminals in This _Window"
+msgstr ""
+
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3170
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "_Include This Terminal"
+msgstr "Bezárja ezt a terminált?"
+
+#: src/terminal-headermenu.ui:93
 msgid "_Full Screen"
 msgstr "_Teljes képernyő"
 
-#: src/terminal-headermenu.ui:56 src/terminal-window.cc:1723
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3096
 msgid "Read-_Only"
 msgstr "Írás_védett"
 
-#: src/terminal-headermenu.ui:61 src/terminal-notebook.ui:67
+#: src/terminal-headermenu.ui:105 src/terminal-notebook.ui:67
 msgid "Set _Title…"
 msgstr "_Cím beállítása…"
 
-#: src/terminal-headermenu.ui:68
+#: src/terminal-headermenu.ui:111
+#, fuzzy
+#| msgid "Save Contents"
+msgid "_Save Contents…"
+msgstr "Tartalom mentése"
+
+#: src/terminal-headermenu.ui:117
 msgid "_Advanced"
 msgstr "_Speciális"
 
-#: src/terminal-headermenu.ui:71
+#: src/terminal-headermenu.ui:120
 msgid "_Reset"
 msgstr "_Visszaállítás"
 
-#: src/terminal-headermenu.ui:77
+#: src/terminal-headermenu.ui:126
 msgid "Reset and C_lear"
 msgstr "Visszaállítás és _törlés"
 
-#: src/terminal-headermenu.ui:85
+#: src/terminal-headermenu.ui:134
 msgid "_1. 80×24"
 msgstr "_1. 80×24"
 
-#: src/terminal-headermenu.ui:91
+#: src/terminal-headermenu.ui:140
 msgid "_2. 80×43"
 msgstr "_2. 80×43"
 
-#: src/terminal-headermenu.ui:97
+#: src/terminal-headermenu.ui:146
 msgid "_3. 132×24"
 msgstr "_3. 132×24"
 
-#: src/terminal-headermenu.ui:103
+#: src/terminal-headermenu.ui:152
 msgid "_4. 132×43"
 msgstr "_4. 132×43"
 
-#: src/terminal-headermenu.ui:111
+#: src/terminal-headermenu.ui:160
 msgid "_Inspector"
 msgstr "_Vizsgáló"
 
-#: src/terminal-headermenu.ui:121 src/terminal-screen.cc:2022
-#: src/terminal-window.cc:1735
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3571
+#: src/terminal-window.cc:3110
 msgid "_Preferences"
 msgstr "_Beállítások"
 
-#: src/terminal-headermenu.ui:126
+#: src/terminal-headermenu.ui:175
 msgid "_Help"
 msgstr "_Súgó"
 
-#: src/terminal-headermenu.ui:131
+#: src/terminal-headermenu.ui:180
 msgid "_About"
 msgstr "_Névjegy"
 
-#: src/terminal-nautilus.cc:543
+#: src/terminal-nautilus.cc:512
 #, fuzzy
 msgid "Open in Pano Terminal (_Remote)"
 msgstr "Megnyitás tá_voli terminálban"
 
-#: src/terminal-nautilus.cc:545
+#: src/terminal-nautilus.cc:514
 #, fuzzy
 msgid "Open in Pano Terminal (_Local)"
 msgstr "Megnyitás _helyi terminálban"
 
-#: src/terminal-nautilus.cc:549 src/terminal-nautilus.cc:560
+#: src/terminal-nautilus.cc:518 src/terminal-nautilus.cc:529
 msgid "Open the currently selected folder in a terminal"
 msgstr "A jelenleg kijelölt mappa megnyitása egy terminálban"
 
-#: src/terminal-nautilus.cc:551 src/terminal-nautilus.cc:562
+#: src/terminal-nautilus.cc:520 src/terminal-nautilus.cc:531
 msgid "Open the currently open folder in a terminal"
 msgstr "A jelenleg nyitott mappa megnyitása egy terminálban"
 
-#: src/terminal-nautilus.cc:557
+#: src/terminal-nautilus.cc:526
 #, fuzzy
 msgid "Open in Pano _Terminal"
 msgstr "_Megnyitás terminálban"
 
-#: src/terminal-nautilus.cc:567
+#: src/terminal-nautilus.cc:536
 #, fuzzy
 msgid "Open Pano _Terminal"
 msgstr "_Terminál megnyitása"
 
-#: src/terminal-nautilus.cc:568
+#: src/terminal-nautilus.cc:537
 msgid "Open a terminal"
 msgstr "Terminál megnyitása"
 
 #: src/terminal-notebook.ui:36
-#| msgid "_Terminal"
 msgid "_Pin Terminal"
 msgstr "Terminál _kitűzése"
 
 #: src/terminal-notebook.ui:42
-#| msgid "Open T_erminal"
 msgid "_Unpin Terminal"
 msgstr "Terminál kitűzésének _megszüntetése"
 
@@ -1309,20 +1956,28 @@ msgstr "Terminál mozgatása j_obbra"
 msgid "_Detach Terminal"
 msgstr "Terminál _leválasztása"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:3178
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5163
+#: src/terminal-window.cc:5173
 msgid "C_lose Terminal"
 msgstr "_Terminál bezárása"
+
+#: src/terminal-notebook.ui:80
+#, fuzzy
+#| msgid "Close terminal"
+msgid "Close _Other Terminals"
+msgstr "Terminál bezárása"
 
 #: src/terminal-options.cc:324
 #, fuzzy, c-format
 msgid ""
-"Option “%s” is deprecated and might be removed in a later version of "
-"Pano Terminal."
+"Option “%s” is deprecated and might be removed in a later version of Pano "
+"Terminal."
 msgstr ""
 "A(z) „%s” kapcsoló elavult, és eltávolításra kerülhet a gnome-terminál "
 "későbbi verziójában."
 
-#. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
+#. %s is being replaced with "-- " (without quotes), which must be used
+#. literally, not translatable
 #: src/terminal-options.cc:335
 #, c-format
 msgid ""
@@ -1422,121 +2077,121 @@ msgstr "Ne adja át a környezetet"
 msgid "Show preferences window"
 msgstr "Beállítások ablak megjelenítése"
 
-#: src/terminal-options.cc:1349
+#: src/terminal-options.cc:1358
 msgid "Print environment variables to interact with the terminal"
 msgstr "A terminállal kapcsolatos környezeti változók kiíratása"
 
-#: src/terminal-options.cc:1367
+#: src/terminal-options.cc:1376
 msgid "Increase diagnostic verbosity"
 msgstr "Diagnosztika részletességének növelése"
 
-#: src/terminal-options.cc:1376
+#: src/terminal-options.cc:1385
 msgid "Suppress output"
 msgstr "Kimenet kikapcsolása"
 
-#: src/terminal-options.cc:1389
+#: src/terminal-options.cc:1398
 msgid "Open a new window containing a tab with the default profile"
 msgstr "Új ablak megnyitása az alapértelmezett profillal rendelkező lappal"
 
-#: src/terminal-options.cc:1398
+#: src/terminal-options.cc:1407
 msgid "Open a new tab in the last-opened window with the default profile"
 msgstr ""
 "Új lap megnyitása az utolsó megnyitott ablakban az alapértelmezett profillal"
 
-#: src/terminal-options.cc:1429
+#: src/terminal-options.cc:1438
 msgid "Maximize the window"
 msgstr "Az ablak maximalizálása"
 
-#: src/terminal-options.cc:1438
+#: src/terminal-options.cc:1447
 msgid "Full-screen the window"
 msgstr "Ablak teljes méretűvé tétele"
 
-#: src/terminal-options.cc:1447
+#: src/terminal-options.cc:1456
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr ""
 "Ablakméret beállítása, például: 80x24, vagy 80x24+200+200 (OSZLOPxSOR+X+Y)"
 
-#: src/terminal-options.cc:1448
+#: src/terminal-options.cc:1457
 msgid "GEOMETRY"
 msgstr "GEOMETRIA"
 
-#: src/terminal-options.cc:1456
+#: src/terminal-options.cc:1465
 msgid "Set the window role"
 msgstr "Az ablak szerepének beállítása"
 
-#: src/terminal-options.cc:1457
+#: src/terminal-options.cc:1466
 msgid "ROLE"
 msgstr "SZEREP"
 
-#: src/terminal-options.cc:1465
+#: src/terminal-options.cc:1474
 msgid "Set the last specified tab as the active one in its window"
 msgstr "Az utolsóként használt lap beállítása aktívként a saját ablakában"
 
-#: src/terminal-options.cc:1478
+#: src/terminal-options.cc:1487
 msgid "Execute the argument to this option inside the terminal"
 msgstr "Ezen kapcsoló paraméterének futtatása a terminálon belül"
 
-#: src/terminal-options.cc:1487
+#: src/terminal-options.cc:1496
 msgid "Use the given profile instead of the default profile"
 msgstr "A megadott profil használata az alapértelmezettet helyett"
 
-#: src/terminal-options.cc:1488
+#: src/terminal-options.cc:1497
 msgid "PROFILE-NAME"
 msgstr "PROFILNÉV"
 
-#: src/terminal-options.cc:1496
+#: src/terminal-options.cc:1505
 msgid "Set the initial terminal title"
 msgstr "A terminál kiinduló címének beállítása"
 
-#: src/terminal-options.cc:1497
+#: src/terminal-options.cc:1506
 msgid "TITLE"
 msgstr "CÍM"
 
-#: src/terminal-options.cc:1505
+#: src/terminal-options.cc:1514
 msgid "Set the working directory"
 msgstr "A munkakönyvtár beállítása"
 
-#: src/terminal-options.cc:1506
+#: src/terminal-options.cc:1515
 msgid "DIRNAME"
 msgstr "KÖNYVTÁRNÉV"
 
-#: src/terminal-options.cc:1514
+#: src/terminal-options.cc:1523
 msgid "Wait until the child exits"
 msgstr "Várja meg a gyermekfolyamat kilépését"
 
-#: src/terminal-options.cc:1523
+#: src/terminal-options.cc:1532
 msgid "Forward file descriptor"
 msgstr "Fájlleíró továbbítása"
 
 #. FD = file descriptor
-#: src/terminal-options.cc:1525
+#: src/terminal-options.cc:1534
 msgid "FD"
 msgstr "FD"
 
-#: src/terminal-options.cc:1533
+#: src/terminal-options.cc:1542
 msgid "Set the terminal’s zoom factor (1.0 = normal size)"
 msgstr "A terminál nagyítási arányának beállítása (1.0 = normál méret)"
 
-#: src/terminal-options.cc:1534
+#: src/terminal-options.cc:1543
 msgid "ZOOM"
 msgstr "NAGYÍTÁS"
 
-#: src/terminal-options.cc:1630
+#: src/terminal-options.cc:1639
 msgid "COMMAND"
 msgstr "PARANCS"
 
-#: src/terminal-options.cc:1636
+#: src/terminal-options.cc:1645
 #, fuzzy
 msgid "Pano Terminal Emulator"
 msgstr "GNOME Terminálemulátor"
 
-#: src/terminal-options.cc:1637
+#: src/terminal-options.cc:1646
 #, fuzzy
 msgid "Show Pano Terminal options"
 msgstr "A GNOME Terminál kapcsolóinak megjelenítése"
 
-#: src/terminal-options.cc:1647
+#: src/terminal-options.cc:1656
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
@@ -1544,11 +2199,11 @@ msgstr ""
 "Új ablakok vagy terminállapok megnyitására használt kapcsolók, több is "
 "megadható:"
 
-#: src/terminal-options.cc:1648
+#: src/terminal-options.cc:1657
 msgid "Show terminal options"
 msgstr "Terminál kapcsolóinak megjelenítése"
 
-#: src/terminal-options.cc:1656
+#: src/terminal-options.cc:1665
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
@@ -1556,11 +2211,11 @@ msgstr ""
 "Ablakkapcsolók, az első --window vagy --tab kapcsoló előtt használva minden "
 "ablak alapértelmezését megadják:"
 
-#: src/terminal-options.cc:1657
+#: src/terminal-options.cc:1666
 msgid "Show per-window options"
 msgstr "Ablakonkénti kapcsolók megjelenítése"
 
-#: src/terminal-options.cc:1665
+#: src/terminal-options.cc:1674
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
@@ -1568,32 +2223,106 @@ msgstr ""
 "Terminálkapcsolók, az első --window vagy --tab kapcsoló előtt használva "
 "minden terminál alapértelmezését megadják:"
 
-#: src/terminal-options.cc:1666
+#: src/terminal-options.cc:1675
 msgid "Show per-terminal options"
 msgstr "Terminálonkénti kapcsolók megjelenítése"
 
-#: src/terminal-preferences-window.cc:134
+#: src/terminal-preferences-window.cc:169
 msgid "New Profile"
 msgstr "Új profil"
 
+#: src/terminal-preferences-window.cc:199
+#, fuzzy
+msgid "Pano Terminal Profiles"
+msgstr "GNOME Terminál"
+
+#: src/terminal-preferences-window.cc:202
+#, fuzzy
+#| msgid "File"
+msgid "All Files"
+msgstr "Fájl"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:239
+#, c-format
+msgid "Exported “%s”"
+msgstr ""
+
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:243
+#, fuzzy, c-format
+#| msgid "Could not open the address “%s”"
+msgid "Could not export the profile: %s"
+msgstr "Nem lehet a(z) „%s” címet megnyitni"
+
+#: src/terminal-preferences-window.cc:281
+#, fuzzy
+#| msgid "Edit Profile"
+msgid "Export Profile"
+msgstr "Profil szerkesztése"
+
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:312
+#, fuzzy, c-format
+#| msgid "Could not open the address “%s”"
+msgid "Could not import the profile: %s"
+msgstr "Nem lehet a(z) „%s” címet megnyitni"
+
+#: src/terminal-preferences-window.cc:322
+#, fuzzy
+#| msgid "New Profile"
+msgid "Imported Profile"
+msgstr "Új profil"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:339
+#, c-format
+msgid "Imported “%s”"
+msgstr ""
+
+#: src/terminal-preferences-window.cc:344
+#, c-format
+msgid "Imported “%s”, skipping %u setting"
+msgid_plural "Imported “%s”, skipping %u settings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/terminal-preferences-window.cc:370
+#, fuzzy
+#| msgid "Edit Profile"
+msgid "Import Profile"
+msgstr "Profil szerkesztése"
+
+#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3521
+#, c-format
+msgid "Imported %u profile and the preferences of GNOME Terminal"
+msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
+
 #: src/terminal-preferences-window.ui:41
-#| msgid "Set as default"
 msgid "_Reset to default"
 msgstr "_Visszaállítás az alapértelmezettre"
 
 #: src/terminal-preferences-window.ui:53
-#| msgid "Text Appearance"
 msgid "Appearance"
 msgstr "Megjelenés"
 
 #: src/terminal-preferences-window.ui:56
-#| msgid "Theme _variant:"
 msgid "Theme Variant"
 msgstr "Témaváltozat"
 
 #. Default profile label
 #: src/terminal-preferences-window.ui:65 src/terminal-preferences-window.ui:96
-#: src/terminal-profile-editor.ui:471 src/terminal-profile-row.ui:25
+#: src/terminal-profile-editor.ui:515 src/terminal-profile-row.ui:25
 msgid "Default"
 msgstr "Alapértelmezett"
 
@@ -1602,7 +2331,6 @@ msgid "Dark"
 msgstr "Sötét"
 
 #: src/terminal-preferences-window.ui:77
-#| msgid "height"
 msgid "Light"
 msgstr "Világos"
 
@@ -1614,254 +2342,524 @@ msgstr "Lekerekített sarkok"
 msgid "Top only"
 msgstr "Csak felül"
 
-#: src/terminal-preferences-window.ui:108 src/terminal-profile-editor.ui:600
+#: src/terminal-preferences-window.ui:108 src/terminal-profile-editor.ui:644
 msgid "None"
 msgstr "Nincs"
 
-#: src/terminal-preferences-window.ui:120
+#: src/terminal-preferences-window.ui:118
+msgid "Space Around the Text"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:127
+msgctxt "terminal-padding"
+msgid "None"
+msgstr "Nincs"
+
+#: src/terminal-preferences-window.ui:133
+msgctxt "terminal-padding"
+msgid "Small"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:139
+msgctxt "terminal-padding"
+msgid "Large"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:149
+msgid "Color the Header Bar Like the Terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:150
+msgid "When the terminal uses a color scheme or colors of its own"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:155
+msgid "Dim Inactive Panes"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:156
+msgid "In a split tab, fade the panes other than the one you type in"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:161
+#, fuzzy
+msgid "Show Pane Titles"
+msgstr "A GNOME Terminál kapcsolóinak megjelenítése"
+
+#: src/terminal-preferences-window.ui:162
+msgid "In a split tab, show the title of each pane above it"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:167
+msgid "Highlight Root and Remote Sessions"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:168
+msgid ""
+"Color the header bar and mark the tab while a terminal runs as root or over "
+"SSH"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:173
+#, fuzzy
+#| msgid "New Tab Position"
+msgid "Tab Bar Position"
+msgstr "Új lap pozíciója"
+
+#: src/terminal-preferences-window.ui:182
+msgid "Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:188
+msgid "Bottom"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:194
+msgid "Left"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:200
+#, fuzzy
+#| msgid "Light"
+msgid "Right"
+msgstr "Világos"
+
+#: src/terminal-preferences-window.ui:212
 msgid "Behavior"
 msgstr "Viselkedés"
 
-#: src/terminal-preferences-window.ui:123
-#| msgid "Open T_erminal"
+#: src/terminal-preferences-window.ui:215
 msgid "Open New Terminals"
 msgstr "Új terminálok megnyitása"
 
-#: src/terminal-preferences-window.ui:132
-#| msgid "New Tab"
+#: src/terminal-preferences-window.ui:224
 msgid "In Tab"
 msgstr "Lapon"
 
-#: src/terminal-preferences-window.ui:138
-#| msgid "Window"
+#: src/terminal-preferences-window.ui:230
 msgid "In Window"
 msgstr "Ablakban"
 
-#: src/terminal-preferences-window.ui:148
-#| msgid "New tab _position:"
+#: src/terminal-preferences-window.ui:240
 msgid "New Tab Position"
 msgstr "Új lap pozíciója"
 
-#: src/terminal-preferences-window.ui:157
+#: src/terminal-preferences-window.ui:249
 msgid "Last"
 msgstr "Utolsó"
 
-#: src/terminal-preferences-window.ui:163
+#: src/terminal-preferences-window.ui:255
 msgid "Next"
 msgstr "Következő"
 
-#: src/terminal-preferences-window.ui:175
-#| msgid "Keyboard shortcut to paste text"
+#: src/terminal-preferences-window.ui:265
+msgid "Middle-Click on a Tab"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:274
+msgctxt "tab-middle-click"
+msgid "Does Nothing"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:280
+#, fuzzy
+#| msgid "Close Tab"
+msgctxt "tab-middle-click"
+msgid "Closes the Tab"
+msgstr "Lap bezárása"
+
+#: src/terminal-preferences-window.ui:286
+msgctxt "tab-middle-click"
+msgid "Pastes the Selection"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:296
+msgid "Ignore Titles Set by Programs"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:297
+msgid "Show the title set with Set Title, or else the working directory"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:302
+msgid "Confirm Copying"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:303
+msgid "Show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:308
+msgid "Shell Integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:309
+msgid ""
+"Let bash, zsh and fish report their prompts and commands, for notifications, "
+"prompt navigation and copying command output. Applies to new terminals"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:314
+#, fuzzy
+#| msgid "When command exits"
+msgid "Notify When Commands Finish"
+msgstr "Ha a parancs kilép"
+
+#: src/terminal-preferences-window.ui:315
+msgid ""
+"When a long command ends in a terminal you are not looking at. Needs shell "
+"integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:320
+msgid "Minimum Command Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:321
+msgid "In seconds"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:336
+msgid "Silence Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:337
+msgid ""
+"How long a terminal monitored for silence must be quiet, in seconds. Turn "
+"monitoring on in the context menu of a terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:351
+msgid "Keep New Tabs in the Same Container"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:352
+msgid ""
+"New tabs and panes start in the Toolbox or Distrobox container of the "
+"terminal they are opened from"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:357
+msgid "Restore Session"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:358
+msgid ""
+"Reopen the windows, tabs and panes of the last session, each in its previous "
+"folder"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:363
+msgid "Remember Window Size"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:364
+msgid ""
+"Open new windows with the size of the last used terminal instead of the "
+"initial size of the profile"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:371
+#, fuzzy
+#| msgid "_Pin Terminal"
+msgid "Quick Terminal"
+msgstr "Terminál _kitűzése"
+
+#: src/terminal-preferences-window.ui:372
+msgid ""
+"A terminal that you show and hide with one key. Use the system-wide shortcut "
+"below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
+"Custom Shortcuts."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:375
+#, fuzzy
+#| msgid "Set Shortcut"
+msgid "System-Wide Shortcut"
+msgstr "Gyorsbillentyű beállítása"
+
+#: src/terminal-preferences-window.ui:376
+msgid ""
+"The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
+"running in the background. Needs GNOME 48 or newer, or KDE Plasma."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:382
+msgid "GNOME Shell Extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:383
+msgid ""
+"On Wayland, keeps the quick terminal at the top of the screen, above other "
+"windows and on all workspaces"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:388
+msgid "Width"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:404
+msgid "In percent of the screen"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:403
+#, fuzzy
+#| msgid "Light"
+msgid "Height"
+msgstr "Világos"
+
+#: src/terminal-preferences-window.ui:418
+msgid "Hide When Another App Is Used"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:423
+msgid "Slide In From the Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:424
+msgid "On X11, or with the GNOME Shell extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:431
 msgid "Keyboard Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: src/terminal-preferences-window.ui:178
-#| msgid "Enable the _menu accelerator key (F10 by default)"
+#: src/terminal-preferences-window.ui:434
 msgid "Accelerator Key (F10 by default)"
 msgstr "Menüelérés billentyűje (alapértelmezetten F10)"
 
-#: src/terminal-preferences-window.ui:183
+#: src/terminal-preferences-window.ui:439
 msgid "View and Customize Shortcuts"
 msgstr "Gyorsbillentyűk megtekintése és személyre szabása"
 
-#: src/terminal-preferences-window.ui:197
+#: src/terminal-preferences-window.ui:453
 msgid "Profiles"
 msgstr "Profilok"
 
-#: src/terminal-preferences-window.ui:223
-#| msgid "_Action"
+#: src/terminal-preferences-window.ui:457
+msgid "Import a profile from a file"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:465
+msgid "_Import…"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:496
 msgid "Application"
 msgstr "Alkalmazás"
 
-#: src/terminal-preferences-window.ui:226
+#: src/terminal-preferences-window.ui:499
+msgid "Import from GNOME Terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:500
+msgid "Copy its profiles, keyboard shortcuts and preferences"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:504 src/terminal-window.cc:3552
+#, fuzzy
+#| msgid "Export"
+msgid "_Import"
+msgstr "Exportálás"
+
+#: src/terminal-preferences-window.ui:514
 msgid "Ask to Remain Default"
 msgstr "Kérje, hogy alapértelmezett maradjon"
 
-#: src/terminal-preferences-window.ui:231
-#| msgid "_Set as default terminal"
+#: src/terminal-preferences-window.ui:519
 msgid "Set as Default Terminal"
 msgstr "Beállítás alapértelmezett terminálként"
 
-#: src/terminal-profile-editor.cc:123
+#: src/terminal-profile-editor.cc:134
 msgid "Black on light yellow"
 msgstr "Fekete a világossárgán"
 
-#: src/terminal-profile-editor.cc:127
+#: src/terminal-profile-editor.cc:138
 msgid "Black on white"
 msgstr "Fekete a fehéren"
 
-#: src/terminal-profile-editor.cc:131
+#: src/terminal-profile-editor.cc:142
 msgid "Gray on black"
 msgstr "Szürke a feketén"
 
-#: src/terminal-profile-editor.cc:135
+#: src/terminal-profile-editor.cc:146
 msgid "Green on black"
 msgstr "Zöld a feketén"
 
-#: src/terminal-profile-editor.cc:139
+#: src/terminal-profile-editor.cc:150
 msgid "White on black"
 msgstr "Fehér a feketén"
 
-#. Translators: "GNOME" is the name of a colour scheme, "light" can be translated
-#: src/terminal-profile-editor.cc:144
+#. Translators: "GNOME" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:155
 msgid "GNOME light"
 msgstr "GNOME világos"
 
-#. Translators: "GNOME" is the name of a colour scheme, "dark" can be translated
-#: src/terminal-profile-editor.cc:149
+#. Translators: "GNOME" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:160
 msgid "GNOME dark"
 msgstr "GNOME sötét"
 
-#. Translators: "Tango" is the name of a colour scheme, "light" can be translated
-#: src/terminal-profile-editor.cc:154
+#. Translators: "Tango" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:165
 msgid "Tango light"
 msgstr "Tango, világos"
 
-#. Translators: "Tango" is the name of a colour scheme, "dark" can be translated
-#: src/terminal-profile-editor.cc:159
+#. Translators: "Tango" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:170
 msgid "Tango dark"
 msgstr "Tango, sötét"
 
 # Megjegyzés: erre a színsémára nem volt jó ötletem
-#. Translators: "Solarized" is the name of a colour scheme, "light" can be translated
-#: src/terminal-profile-editor.cc:164
+#. Translators: "Solarized" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:175
 msgid "Solarized light"
 msgstr "Solarized, világos"
 
 # Megjegyzés: erre a színsémára nem volt jó ötletem
-#. Translators: "Solarized" is the name of a colour scheme, "dark" can be translated
-#: src/terminal-profile-editor.cc:169
+#. Translators: "Solarized" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:180
 msgid "Solarized dark"
 msgstr "Solarized, sötét"
 
-#: src/terminal-profile-editor.cc:325 src/terminal-profile-editor.cc:338
+#: src/terminal-profile-editor.cc:336 src/terminal-profile-editor.cc:349
+#: src/terminal-profile-editor.cc:856
 msgid "Custom"
 msgstr "Egyéni"
 
-#: src/terminal-profile-editor.cc:362 src/terminal-profile-editor.cc:363
-#: src/terminal-profile-editor.cc:367
+#: src/terminal-profile-editor.cc:373 src/terminal-profile-editor.cc:374
+#: src/terminal-profile-editor.cc:378
 msgid "Chinese Traditional"
 msgstr "Hagyományos kínai"
 
-#: src/terminal-profile-editor.cc:364
+#: src/terminal-profile-editor.cc:375
 msgid "Cyrillic/Russian"
 msgstr "Cirill/orosz"
 
-#: src/terminal-profile-editor.cc:365 src/terminal-profile-editor.cc:404
+#: src/terminal-profile-editor.cc:376 src/terminal-profile-editor.cc:415
 msgid "Japanese"
 msgstr "Japán"
 
-#: src/terminal-profile-editor.cc:366 src/terminal-profile-editor.cc:406
+#: src/terminal-profile-editor.cc:377 src/terminal-profile-editor.cc:417
 msgid "Korean"
 msgstr "Koreai"
 
-#: src/terminal-profile-editor.cc:368 src/terminal-profile-editor.cc:369
-#: src/terminal-profile-editor.cc:370
+#: src/terminal-profile-editor.cc:379 src/terminal-profile-editor.cc:380
+#: src/terminal-profile-editor.cc:381
 msgid "Chinese Simplified"
 msgstr "Egyszerűsített kínai"
 
-#: src/terminal-profile-editor.cc:371 src/terminal-profile-editor.cc:377
-#: src/terminal-profile-editor.cc:381 src/terminal-profile-editor.cc:400
-#: src/terminal-profile-editor.cc:410
+#: src/terminal-profile-editor.cc:382 src/terminal-profile-editor.cc:388
+#: src/terminal-profile-editor.cc:392 src/terminal-profile-editor.cc:411
+#: src/terminal-profile-editor.cc:421
 msgid "Western"
 msgstr "Nyugati"
 
-#: src/terminal-profile-editor.cc:372 src/terminal-profile-editor.cc:383
-#: src/terminal-profile-editor.cc:396 src/terminal-profile-editor.cc:408
+#: src/terminal-profile-editor.cc:383 src/terminal-profile-editor.cc:394
+#: src/terminal-profile-editor.cc:407 src/terminal-profile-editor.cc:419
 msgid "Central European"
 msgstr "Közép-európai"
 
-#: src/terminal-profile-editor.cc:373 src/terminal-profile-editor.cc:386
-#: src/terminal-profile-editor.cc:392 src/terminal-profile-editor.cc:394
-#: src/terminal-profile-editor.cc:409
+#: src/terminal-profile-editor.cc:384 src/terminal-profile-editor.cc:397
+#: src/terminal-profile-editor.cc:403 src/terminal-profile-editor.cc:405
+#: src/terminal-profile-editor.cc:420
 msgid "Cyrillic"
 msgstr "Cirill"
 
-#: src/terminal-profile-editor.cc:374 src/terminal-profile-editor.cc:391
-#: src/terminal-profile-editor.cc:402 src/terminal-profile-editor.cc:412
+#: src/terminal-profile-editor.cc:385 src/terminal-profile-editor.cc:402
+#: src/terminal-profile-editor.cc:413 src/terminal-profile-editor.cc:423
 msgid "Turkish"
 msgstr "Török"
 
-#: src/terminal-profile-editor.cc:375 src/terminal-profile-editor.cc:390
-#: src/terminal-profile-editor.cc:399 src/terminal-profile-editor.cc:413
+#: src/terminal-profile-editor.cc:386 src/terminal-profile-editor.cc:401
+#: src/terminal-profile-editor.cc:410 src/terminal-profile-editor.cc:424
 msgid "Hebrew"
 msgstr "Héber"
 
-#: src/terminal-profile-editor.cc:376 src/terminal-profile-editor.cc:387
-#: src/terminal-profile-editor.cc:395 src/terminal-profile-editor.cc:414
+#: src/terminal-profile-editor.cc:387 src/terminal-profile-editor.cc:398
+#: src/terminal-profile-editor.cc:406 src/terminal-profile-editor.cc:425
 msgid "Arabic"
 msgstr "Arab"
 
-#: src/terminal-profile-editor.cc:378
+#: src/terminal-profile-editor.cc:389
 msgid "Nordic"
 msgstr "Északi"
 
-#: src/terminal-profile-editor.cc:379 src/terminal-profile-editor.cc:385
-#: src/terminal-profile-editor.cc:415
+#: src/terminal-profile-editor.cc:390 src/terminal-profile-editor.cc:396
+#: src/terminal-profile-editor.cc:426
 msgid "Baltic"
 msgstr "Balti"
 
-#: src/terminal-profile-editor.cc:380
+#: src/terminal-profile-editor.cc:391
 msgid "Celtic"
 msgstr "Kelta"
 
-#: src/terminal-profile-editor.cc:382 src/terminal-profile-editor.cc:401
+#: src/terminal-profile-editor.cc:393 src/terminal-profile-editor.cc:412
 msgid "Romanian"
 msgstr "Román"
 
-#: src/terminal-profile-editor.cc:384
+#: src/terminal-profile-editor.cc:395
 msgid "South European"
 msgstr "Dél-európai"
 
-#: src/terminal-profile-editor.cc:388 src/terminal-profile-editor.cc:398
-#: src/terminal-profile-editor.cc:411
+#: src/terminal-profile-editor.cc:399 src/terminal-profile-editor.cc:409
+#: src/terminal-profile-editor.cc:422
 msgid "Greek"
 msgstr "Görög"
 
-#: src/terminal-profile-editor.cc:389
+#: src/terminal-profile-editor.cc:400
 msgid "Hebrew Visual"
 msgstr "Héber (képi)"
 
-#: src/terminal-profile-editor.cc:393 src/terminal-profile-editor.cc:403
+#: src/terminal-profile-editor.cc:404 src/terminal-profile-editor.cc:414
 msgid "Cyrillic/Ukrainian"
 msgstr "Cirill/ukrán"
 
-#: src/terminal-profile-editor.cc:397
+#: src/terminal-profile-editor.cc:408
 msgid "Croatian"
 msgstr "Horvát"
 
-#: src/terminal-profile-editor.cc:405
+#: src/terminal-profile-editor.cc:416
 msgid "Thai"
 msgstr "Thai"
 
-#: src/terminal-profile-editor.cc:407 src/terminal-profile-editor.cc:423
+#: src/terminal-profile-editor.cc:418 src/terminal-profile-editor.cc:434
 msgid "Unicode"
 msgstr "Unicode"
 
-#: src/terminal-profile-editor.cc:416
+#: src/terminal-profile-editor.cc:427
 msgid "Vietnamese"
 msgstr "Vietnami"
 
-#: src/terminal-profile-editor.cc:424
+#: src/terminal-profile-editor.cc:435
 msgid "Legacy CJK Encodings"
 msgstr "Örökölt CJK kódolások"
 
-#: src/terminal-profile-editor.cc:425
+#: src/terminal-profile-editor.cc:436
 msgid "Obsolete Encodings"
 msgstr "Elavult kódolások"
 
-#: src/terminal-profile-editor.cc:736
-#| msgid "Select All"
+#: src/terminal-profile-editor.cc:747
 msgid "Select Font"
 msgstr "Betűkészlet kiválasztása"
 
+#: src/terminal-profile-file.cc:96
+#, fuzzy
+msgid "The file is not a Pano Terminal profile."
+msgstr "Megnyitás _helyi terminálban"
+
 #: src/terminal-profile-editor.ui:20
-#| msgid "_Profile"
 msgid "Edit Profile"
 msgstr "Profil szerkesztése"
 
 #: src/terminal-profile-editor.ui:29
-#| msgid "_Profile"
 msgid "Profile"
 msgstr "Profil"
 
@@ -1882,22 +2880,20 @@ msgid "Use System Font"
 msgstr "Rendszerbetűkészlet használata"
 
 #: src/terminal-profile-editor.ui:73
-#| msgid "Custom _font:"
 msgid "Custom Font"
 msgstr "Egyéni betűkészlet"
 
 #: src/terminal-profile-editor.ui:100
-#| msgid "Allow b_linking text:"
 msgid "Allow Blinking Text"
 msgstr "Villogó szöveg engedélyezése"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:860
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
 msgid "Always"
 msgstr "Mindig"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:848
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
 msgid "Never"
 msgstr "Soha"
 
@@ -1913,339 +2909,341 @@ msgstr "Amikor nincs fókuszban"
 msgid "Colors"
 msgstr "Színek"
 
-#: src/terminal-profile-editor.ui:142 src/terminal-profile-editor.ui:268
-#| msgid "_Use colors from system theme"
+#: src/terminal-profile-editor.ui:142
+#, fuzzy
+#| msgid "Use Colors from Scheme"
+msgid "Color Scheme"
+msgstr "Sémából származó színek használata"
+
+#: src/terminal-profile-editor.ui:143
+msgid "Follows the light or dark style if it has both"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:149
+msgid "Your Own Color Schemes"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:150
+msgid "Add .palette files to this folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:153
+msgid "_Open Folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
 msgid "Use Colors from Palette"
 msgstr "Palettából származó színek használata"
 
-#: src/terminal-profile-editor.ui:153
-#| msgid "_Use colors from system theme"
+#: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
+#, fuzzy
+#| msgid "Background"
+msgid "Background Opacity"
+msgstr "Háttér"
+
+#: src/terminal-profile-editor.ui:168
+msgid "Lets the desktop show through the background; the text stays opaque"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:197
 msgid "Use Colors from Scheme"
 msgstr "Sémából származó színek használata"
 
-#: src/terminal-profile-editor.ui:158
-#| msgid "_Default color:"
+#: src/terminal-profile-editor.ui:202
 msgid "Override Default Color"
 msgstr "Alapértelmezett szín felülbírálása"
 
-#: src/terminal-profile-editor.ui:161 src/terminal-profile-editor.ui:191
-#: src/terminal-profile-editor.ui:211 src/terminal-profile-editor.ui:241
+#: src/terminal-profile-editor.ui:205 src/terminal-profile-editor.ui:235
+#: src/terminal-profile-editor.ui:255 src/terminal-profile-editor.ui:285
 msgid "Text"
 msgstr "Szöveg"
 
 # ez a colorpicker fejlécszövege
-#: src/terminal-profile-editor.ui:164
-#| msgid "Choose Terminal Text Color"
+#: src/terminal-profile-editor.ui:208
 msgid "Choose Text Color"
 msgstr "Szövegszín kiválasztása"
 
-#: src/terminal-profile-editor.ui:171 src/terminal-profile-editor.ui:221
-#: src/terminal-profile-editor.ui:251
+#: src/terminal-profile-editor.ui:215 src/terminal-profile-editor.ui:265
+#: src/terminal-profile-editor.ui:295
 msgid "Background"
 msgstr "Háttér"
 
-#: src/terminal-profile-editor.ui:174
-#| msgid "Choose Terminal Background Color"
+#: src/terminal-profile-editor.ui:218
 msgid "Choose Background Color"
 msgstr "Háttérszín kiválasztása"
 
-#: src/terminal-profile-editor.ui:183
+#: src/terminal-profile-editor.ui:227
 msgid "Override Bold Color"
 msgstr "Félkövér szín felülbírálása"
 
 # ez a colorpicker fejlécszövege
-#: src/terminal-profile-editor.ui:194
-#| msgid "Choose Terminal Bold Text Color"
+#: src/terminal-profile-editor.ui:238
 msgid "Choose Bold Text Color"
 msgstr "Félkövér szövegszín kiválasztása"
 
-#: src/terminal-profile-editor.ui:203
-#| msgid "Cu_rsor color:"
+#: src/terminal-profile-editor.ui:247
 msgid "Override Cursor Color"
 msgstr "Kurzorszín felülbírálása"
 
-#: src/terminal-profile-editor.ui:214
-#| msgid "Choose Terminal Cursor Foreground Color"
+#: src/terminal-profile-editor.ui:258
 msgid "Choose Cursor Foreground Color"
 msgstr "Kurzor előtérszínének kiválasztása"
 
-#: src/terminal-profile-editor.ui:224
-#| msgid "Choose Terminal Cursor Background Color"
+#: src/terminal-profile-editor.ui:268
 msgid "Choose Cursor Background Color"
 msgstr "Kurzor háttérszínének kiválasztása"
 
-#: src/terminal-profile-editor.ui:233
-#| msgid "_Highlight color:"
+#: src/terminal-profile-editor.ui:277
 msgid "Override Highlight Color"
 msgstr "Kiemelés színének felülbírálása"
 
-#: src/terminal-profile-editor.ui:244
-#| msgid "Choose Terminal Highlight Foreground Color"
+#: src/terminal-profile-editor.ui:288
 msgid "Choose Highlight Foreground Color"
 msgstr "Kiemelés előtérszínének kiválasztása"
 
-#: src/terminal-profile-editor.ui:254
-#| msgid "Choose Terminal Highlight Background Color"
+#: src/terminal-profile-editor.ui:298
 msgid "Choose Highlight Background Color"
 msgstr "Kiemelés háttérszínének kiválasztása"
 
-#: src/terminal-profile-editor.ui:265
+#: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "Paletta"
 
-#: src/terminal-profile-editor.ui:421
-#| msgid "Show _bold text in bright colors"
+#: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"
 msgstr "Félkövér szöveg megjelenítése világos színekkel"
 
-#: src/terminal-profile-editor.ui:428
+#: src/terminal-profile-editor.ui:472
 msgid "Cursor"
 msgstr "Kurzor"
 
-#: src/terminal-profile-editor.ui:431
+#: src/terminal-profile-editor.ui:475
 msgid "Shape"
 msgstr "Alak"
 
-#: src/terminal-profile-editor.ui:440
+#: src/terminal-profile-editor.ui:484
 msgid "Block"
 msgstr "Blokk"
 
-#: src/terminal-profile-editor.ui:446
+#: src/terminal-profile-editor.ui:490
 msgid "I-Beam"
 msgstr "I-betű"
 
-#: src/terminal-profile-editor.ui:452
+#: src/terminal-profile-editor.ui:496
 msgid "Underline"
 msgstr "Aláhúzás"
 
-#: src/terminal-profile-editor.ui:462
+#: src/terminal-profile-editor.ui:506
 msgid "Blinking"
 msgstr "Villogás"
 
-#: src/terminal-profile-editor.ui:477
+#: src/terminal-profile-editor.ui:521
 msgid "Enabled"
 msgstr "Engedélyezve"
 
-#: src/terminal-profile-editor.ui:483
+#: src/terminal-profile-editor.ui:527
 msgid "Disabled"
 msgstr "Letiltva"
 
-#: src/terminal-profile-editor.ui:495
-#| msgid "Terminal"
+#: src/terminal-profile-editor.ui:539
 msgid "Terminal Size"
 msgstr "Terminál mérete"
 
-#: src/terminal-profile-editor.ui:498
-#| msgid "columns"
+#: src/terminal-profile-editor.ui:542
 msgid "Columns"
 msgstr "Oszlopok"
 
-#: src/terminal-profile-editor.ui:512
+#: src/terminal-profile-editor.ui:556
 msgid "Rows"
 msgstr "Sorok"
 
-#: src/terminal-profile-editor.ui:530
+#: src/terminal-profile-editor.ui:574
 msgid "Cell Width Scale"
 msgstr "Cellaszélesség méretezése"
 
-#: src/terminal-profile-editor.ui:531
+#: src/terminal-profile-editor.ui:575
 msgid "Increases the width of character cells"
 msgstr "Növeli a karaktercellák szélességét"
 
-#: src/terminal-profile-editor.ui:546
+#: src/terminal-profile-editor.ui:590
 msgid "Cell Height Scale"
 msgstr "Cellamagasság méretezése"
 
-#: src/terminal-profile-editor.ui:547
+#: src/terminal-profile-editor.ui:591
 msgid "Increase the height of character cells"
 msgstr "A karaktercellák magasságának növelése"
 
-#: src/terminal-profile-editor.ui:576
+#: src/terminal-profile-editor.ui:620
 msgid "Scrolling"
 msgstr "Görgetés"
 
-#: src/terminal-profile-editor.ui:579
-#| msgid "_Show scrollbar"
+#: src/terminal-profile-editor.ui:623
 msgid "Show scrollbar"
 msgstr "Görgetősáv megjelenítése"
 
-#: src/terminal-profile-editor.ui:588
+#: src/terminal-profile-editor.ui:632
 msgid "Regular"
 msgstr "Szabályos"
 
-#: src/terminal-profile-editor.ui:594
+#: src/terminal-profile-editor.ui:638
 msgid "Overlay"
 msgstr "Rétét"
 
-#: src/terminal-profile-editor.ui:610
-#| msgid "Scrolling"
+#: src/terminal-profile-editor.ui:654
 msgid "Kinetic scrolling"
 msgstr "Kinetikus görgetés"
 
-#: src/terminal-profile-editor.ui:611
+#: src/terminal-profile-editor.ui:655
 msgid "When used on touchscreens"
 msgstr "Ha érintőképernyőkön van használva"
 
-#: src/terminal-profile-editor.ui:620
-#| msgid "Scroll on _output"
+#: src/terminal-profile-editor.ui:664
 msgid "Scroll on Output"
 msgstr "Görgetés új kimenet kiírásakor"
 
-#: src/terminal-profile-editor.ui:625
-#| msgid "Scroll on _keystroke"
+#: src/terminal-profile-editor.ui:669
 msgid "Scroll on Keystroke"
 msgstr "Görgetés billentyűleütéskor"
 
-#: src/terminal-profile-editor.ui:630
-#| msgid "Scroll on _keystroke"
+#: src/terminal-profile-editor.ui:674
 msgid "Scroll on Paste"
 msgstr "Görgetés beillesztéskor"
 
-#: src/terminal-profile-editor.ui:639
-#| msgid "_Limit scrollback to:"
+#: src/terminal-profile-editor.ui:683
 msgid "Limit Scrollback"
 msgstr "Visszagörgetés korlátozása"
 
-#: src/terminal-profile-editor.ui:647
-#| msgid "Scrolling"
+#: src/terminal-profile-editor.ui:691
 msgid "Scrollback Lines"
 msgstr "Visszagörgetési sorok"
 
-#: src/terminal-profile-editor.ui:663
+#: src/terminal-profile-editor.ui:707
 msgid "Images"
 msgstr "Képek"
 
-#: src/terminal-profile-editor.ui:666
-#| msgid "Enable _SIXEL images"
+#: src/terminal-profile-editor.ui:710
 msgid "Enable SIXEL images"
 msgstr "SIXEL-képek engedélyezése"
 
-#: src/terminal-profile-editor.ui:673
-msgid "Sound"
-msgstr "Hang"
+#: src/terminal-profile-editor.ui:717
+msgid "Bell"
+msgstr ""
 
-#: src/terminal-profile-editor.ui:676
-#| msgid "Terminal _bell"
-msgid "Terminal bell"
-msgstr "Terminálcsengő"
+#: src/terminal-profile-editor.ui:720
+msgid "Play a Sound"
+msgstr ""
 
-#: src/terminal-profile-editor.ui:683
+#: src/terminal-profile-editor.ui:725
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "Flash the Terminal"
+msgstr "_Terminál bezárása"
+
+#: src/terminal-profile-editor.ui:726
+msgid "A tab in the background is marked instead"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:733
 msgid "Command"
 msgstr "Parancs"
 
-#: src/terminal-profile-editor.ui:686
-#| msgid "_Run command as a login shell"
+#: src/terminal-profile-editor.ui:736
 msgid "Run command as a login shell"
 msgstr "Parancs futtatása bejelentkezési parancsértelmezőként"
 
-#: src/terminal-profile-editor.ui:695
-#| msgid "Custom co_mmand:"
+#: src/terminal-profile-editor.ui:745
 msgid "Use Custom Command"
 msgstr "Egyéni parancs használata"
 
-#: src/terminal-profile-editor.ui:700
-#| msgid "Custom co_mmand:"
+#: src/terminal-profile-editor.ui:750
 msgid "Custom Command"
 msgstr "Egyéni parancs"
 
-#: src/terminal-profile-editor.ui:713
-#| msgid "_Preserve working directory:"
+#: src/terminal-profile-editor.ui:763
 msgid "Preserve Working Directory"
 msgstr "Munkakönyvtár megőrzése"
 
-#: src/terminal-profile-editor.ui:714
-#| msgid ""
-#| "Whether to preserve the working directory when opening a new terminal"
+#: src/terminal-profile-editor.ui:764
 msgid "Preserve the working directory when opening a new terminal"
 msgstr "A munkakönyvtár megőrzése új terminál megnyitásakor"
 
-#: src/terminal-profile-editor.ui:727
-#| msgid "When command _exits:"
+#: src/terminal-profile-editor.ui:777
 msgid "When command exits"
 msgstr "Ha a parancs kilép"
 
-#: src/terminal-profile-editor.ui:738
+#: src/terminal-profile-editor.ui:788
 msgid "Compatibility"
 msgstr "Kompatibilitás"
 
-#: src/terminal-profile-editor.ui:741
-#| msgid "_Backspace key generates:"
+#: src/terminal-profile-editor.ui:791
 msgid "Backspace Key"
 msgstr "Backspace billentyű"
 
-#: src/terminal-profile-editor.ui:742
-#| msgid "The code sequence the Backspace key generates"
+#: src/terminal-profile-editor.ui:792
 msgid "Sequence to send for Backspace key"
 msgstr "A Backspace billentyűnél küldendő sorozat"
 
-#: src/terminal-profile-editor.ui:751
-#| msgid "Delete"
+#: src/terminal-profile-editor.ui:801
 msgid "Delete Key"
 msgstr "Delete billentyű"
 
-#: src/terminal-profile-editor.ui:752
+#: src/terminal-profile-editor.ui:802
 msgid "Sequence to send for Delete key"
 msgstr "A Delete billentyűnél küldendő sorozat"
 
-#: src/terminal-profile-editor.ui:761
-#| msgid "_Encoding:"
+#: src/terminal-profile-editor.ui:811
 msgid "Encoding"
 msgstr "Kódolás"
 
-#: src/terminal-profile-editor.ui:769
-#| msgid "Ambiguous-_width characters:"
+#: src/terminal-profile-editor.ui:819
 msgid "Ambiguous-width Characters"
 msgstr "Nem egyértelmű szélességű karakterek"
 
-#: src/terminal-profile-editor.ui:778
+#: src/terminal-profile-editor.ui:828
 msgid "Narrow"
 msgstr "Keskeny"
 
-#: src/terminal-profile-editor.ui:784
+#: src/terminal-profile-editor.ui:834
 msgid "Wide"
 msgstr "Széles"
 
-#: src/terminal-profile-editor.ui:815
+#: src/terminal-profile-editor.ui:865
 msgid "Automatic"
 msgstr "Automatikus"
 
-#: src/terminal-profile-editor.ui:821
+#: src/terminal-profile-editor.ui:871
 msgid "Control-H"
 msgstr "Control-H"
 
-#: src/terminal-profile-editor.ui:827
+#: src/terminal-profile-editor.ui:877
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
-#: src/terminal-profile-editor.ui:833
-#| msgid "Escape sequence"
+#: src/terminal-profile-editor.ui:883
 msgid "Escape Sequence"
 msgstr "Escape sorozat"
 
-#: src/terminal-profile-editor.ui:839
+#: src/terminal-profile-editor.ui:889
 msgid "TTY Erase"
 msgstr "TTY-törlés"
 
 #. Preserve working directory
-#: src/terminal-profile-editor.ui:854
+#: src/terminal-profile-editor.ui:904
 msgid "Shell only"
 msgstr "Csak parancsértelmező"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:869
-#| msgid "C_lose Terminal"
+#: src/terminal-profile-editor.ui:919
 msgid "Close terminal"
 msgstr "Terminál bezárása"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:875
-#| msgid "Restart the command"
+#: src/terminal-profile-editor.ui:925
 msgid "Restart command"
 msgstr "Parancs újraindítása"
 
 #. When command exits
-#: src/terminal-profile-editor.ui:881
-#| msgid "Hold the terminal open"
+#: src/terminal-profile-editor.ui:931
 msgid "Hold terminal"
 msgstr "Terminál tartása"
 
@@ -2254,43 +3252,52 @@ msgid "_Edit"
 msgstr "S_zerkesztés"
 
 #: src/terminal-profile-row.ui:51
-#| msgid "Clone"
 msgid "_Clone"
 msgstr "_Klónozás"
 
 #: src/terminal-profile-row.ui:55
-#| msgid "Delete"
+#, fuzzy
+#| msgid "Export"
+msgid "E_xport…"
+msgstr "Exportálás"
+
+#: src/terminal-profile-row.ui:59
 msgid "_Delete"
 msgstr "_Törlés"
 
-#: src/terminal-profile-row.ui:61
-#| msgid "Set as default"
+#: src/terminal-profile-row.ui:65
 msgid "_Set as default"
 msgstr "_Beállítás alapértelmezettként"
 
-#: src/terminal-screen.cc:1879
+#: src/terminal-screen.cc:1771
+msgid ""
+"Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
+"Esc to cancel"
+msgstr ""
+
+#: src/terminal-screen.cc:3352
 msgid "No command supplied nor shell requested"
 msgstr "Nincs parancs megadva és parancsértelmező sincs kérve"
 
-#: src/terminal-screen.cc:2023 src/terminal-screen.cc:2386
+#: src/terminal-screen.cc:3572 src/terminal-screen.cc:3964
 msgid "_Relaunch"
 msgstr "Újr_aindítás"
 
-#: src/terminal-screen.cc:2026
+#: src/terminal-screen.cc:3575
 msgid "There was an error creating the child process for this terminal"
 msgstr "Hiba történt a terminál gyermekfolyamatának létrehozásakor"
 
-#: src/terminal-screen.cc:2390
+#: src/terminal-screen.cc:3968
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "A gyermekfolyamat normálisan lépett ki a következő állapottal: %d."
 
-#: src/terminal-screen.cc:2393
+#: src/terminal-screen.cc:3971
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "A gyermekfolyamat meg lett szakítva %d szignállal."
 
-#: src/terminal-screen.cc:2396
+#: src/terminal-screen.cc:3974
 msgid "The child process was aborted."
 msgstr "A gyermekfolyamat meg lett szakítva."
 
@@ -2299,7 +3306,6 @@ msgid "Shortcuts"
 msgstr "Gyorsbillentyűk"
 
 #: src/terminal-shortcut-editor.ui:34
-#| msgid "_Enable shortcuts"
 msgid "Enable Shortcuts"
 msgstr "Gyorsbillentyűk engedélyezése"
 
@@ -2307,30 +3313,20 @@ msgstr "Gyorsbillentyűk engedélyezése"
 msgid "There was an error displaying help"
 msgstr "Hiba történt a súgó megjelenítése közben"
 
-#: src/terminal-util.cc:230
+#: src/terminal-util.cc:231
 msgid "Contributors:"
 msgstr "Hozzájárultak:"
 
-#: src/terminal-util.cc:253
-#, c-format
-msgid "Version %s for GNOME %d"
-msgstr "%s verzió a GNOME %d számára"
-
-#: src/terminal-util.cc:257
+#: src/terminal-util.cc:249
 #, c-format
 msgid "Using VTE version %u.%u.%u"
 msgstr "A VTE %u.%u.%u verziójának használata"
 
-#: src/terminal-util.cc:263
+#: src/terminal-util.cc:255
 msgid "A terminal emulator for the GNOME desktop"
 msgstr "Terminálemulátor a GNOME asztali környezethez"
 
-#: src/terminal-util.cc:270
-#, fuzzy
-msgid "Pano Terminal"
-msgstr "GNOME Terminál"
-
-#: src/terminal-util.cc:279
+#: src/terminal-util.cc:271
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -2343,153 +3339,327 @@ msgstr ""
 "Tímár András <timar at gnome dot hu>\n"
 "Úr Balázs <ur dot balazs at fsf dot hu>"
 
-#: src/terminal-util.cc:339
+#: src/terminal-util.cc:331
 #, c-format
 msgid "Could not open the address “%s”"
 msgstr "Nem lehet a(z) „%s” címet megnyitni"
 
-#: src/terminal-util.cc:408
+#: src/terminal-util.cc:400
 #, fuzzy
 msgid ""
-"Pano Terminal is free software: you can redistribute it and/or modify "
-"it under the terms of the GNU General Public License as published by "
-"the Free Software Foundation, either version 3 of the License, or (at "
-"your option) any later version."
+"Pano Terminal is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version."
 msgstr ""
 "A GNOME Terminál szabad szoftver, terjesztheti és/vagy módosíthatja a Free "
 "Software Foundation által kiadott GNU General Public License harmadik (vagy "
 "bármely későbbi) változatában foglaltak alapján."
 
-#: src/terminal-util.cc:412
+#: src/terminal-util.cc:404
 #, fuzzy
 msgid ""
-"Pano Terminal is distributed in the hope that it will be useful, but "
-"WITHOUT ANY WARRANTY; without even the implied warranty of "
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU "
-"General Public License for more details."
+"Pano Terminal is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
 msgstr ""
 "A GNOME Terminál programot abban a reményben terjesztjük, hogy hasznos lesz, "
 "de nem vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a "
 "program alkalmas-e a KÖZREADÁSRA vagy EGY BIZONYOS FELADAT ELVÉGZÉSÉRE. "
 "További részletekért tanulmányozza a GNU GPL licencet."
 
-#: src/terminal-util.cc:416
+#: src/terminal-util.cc:408
 #, fuzzy
 #| msgid ""
 #| "You should have received a copy of the GNU General Public License along "
 #| "with GNOME Terminal.  If not, see <http://www.gnu.org/licenses/>."
 msgid ""
-"You should have received a copy of the GNU General Public License "
-"along with Pano Terminal.  If not, see "
-"&lt;http://www.gnu.org/licenses/&gt;."
+"You should have received a copy of the GNU General Public License along with "
+"Pano Terminal.  If not, see &lt;http://www.gnu.org/licenses/&gt;."
 msgstr ""
-"A GNOME Terminál programmal együtt meg kell kapnia a GNU General Public Licens"
-"e egy példányát; ha mégsem, akkor itt megtekintheti: &lt;http://www.gnu.org/li"
-"censes/&gt;."
+"A GNOME Terminál programmal együtt meg kell kapnia a GNU General Public "
+"License egy példányát; ha mégsem, akkor itt megtekintheti: &lt;http://"
+"www.gnu.org/licenses/&gt;."
 
-#: src/terminal-util.cc:1181
+#: src/terminal-util.cc:1173
 msgid "“file” scheme with remote hostname not supported"
 msgstr "A „fájl” séma távoli gépnévvel nem támogatott"
 
-#: src/terminal-window.cc:468
-msgid "Could not save contents"
+#. Translators: %s is an error message
+#: src/terminal-window.cc:540 src/terminal-window.cc:579
+#, fuzzy, c-format
+#| msgid "Could not save contents"
+msgid "Could not save the contents: %s"
 msgstr "A tartalom mentése nem sikerült"
 
-#: src/terminal-window.cc:488
-msgid "Save as…"
+#. Translators: %s is a file name
+#: src/terminal-window.cc:547
+#, fuzzy, c-format
+#| msgid "Save as…"
+msgid "Saved “%s”"
 msgstr "Mentés másként…"
 
-#: src/terminal-window.cc:492
-msgid "_Save"
-msgstr "M_entés"
+#: src/terminal-window.cc:799
+msgid "Copied to clipboard"
+msgstr ""
 
-#: src/terminal-window.cc:1652
+#: src/terminal-window.cc:1203
+msgid "Tab closed"
+msgstr ""
+
+#: src/terminal-window.cc:1204
+msgid "_Undo"
+msgstr ""
+
+#: src/terminal-window.cc:1342
+msgid "Broadcasting input, but no terminal takes part"
+msgstr ""
+
+#: src/terminal-window.cc:1344
+#, fuzzy, c-format
+#| msgid "Open a terminal"
+msgid "Input goes to %u terminal"
+msgid_plural "Input goes to %u terminals"
+msgstr[0] "Terminál megnyitása"
+msgstr[1] "Terminál megnyitása"
+
+#: src/terminal-window.cc:1681
+msgid "Nothing to select"
+msgstr ""
+
+#. Translators: %s is a file name
+#: src/terminal-window.cc:1724
+#, c-format
+msgid "“%s” does not exist"
+msgstr ""
+
+#: src/terminal-window.cc:2551
+msgid ""
+"Programs cannot change this title. Leave it empty to show the title from the "
+"program again."
+msgstr ""
+
+#: src/terminal-window.cc:2761
+#, fuzzy
+#| msgid "Open a terminal"
+msgid "Activity in a terminal"
+msgstr "Terminál megnyitása"
+
+#: src/terminal-window.cc:2796
+#, c-format
+msgid ""
+"%s\n"
+"No output for %u second"
+msgid_plural ""
+"%s\n"
+"No output for %u seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/terminal-window.cc:2801
+#, fuzzy
+#| msgid "Open a terminal"
+msgid "Silence in a terminal"
+msgstr "Terminál megnyitása"
+
+#: src/terminal-window.cc:3020
 msgid "Open _Hyperlink"
 msgstr "_Hiperhivatkozás megnyitása"
 
-#: src/terminal-window.cc:1653
+#: src/terminal-window.cc:3021
 msgid "Copy Hyperlink _Address"
 msgstr "Hiperhivatkozás _címének másolása"
 
-#: src/terminal-window.cc:1663
+#: src/terminal-window.cc:3031
 msgid "Send Mail _To…"
 msgstr "E-mail _küldése…"
 
-#: src/terminal-window.cc:1664
+#: src/terminal-window.cc:3032
 msgid "Copy Mail _Address"
 msgstr "E-mail-_cím másolása"
 
-#: src/terminal-window.cc:1667
+#: src/terminal-window.cc:3035
 msgid "Call _To…"
 msgstr "_Hívás…"
 
-#: src/terminal-window.cc:1668
+#: src/terminal-window.cc:3036
 msgid "Copy Call _Address "
 msgstr "Hívási cím _másolása "
 
-#: src/terminal-window.cc:1673
+#: src/terminal-window.cc:3041
 msgid "_Open Link"
 msgstr "Hivatkozás _megnyitása"
 
-#: src/terminal-window.cc:1674
+#: src/terminal-window.cc:3042
 msgid "Copy _Link"
 msgstr "_Hivatkozás másolása"
 
-#: src/terminal-window.cc:1713
+#: src/terminal-window.cc:3081
 msgid "_Copy"
 msgstr "_Másolás"
 
-#: src/terminal-window.cc:1714
+#: src/terminal-window.cc:3082
 msgid "Copy as _HTML"
 msgstr "Másolás _HTML-ként"
 
-#: src/terminal-window.cc:1715
+#: src/terminal-window.cc:3083
 msgid "_Paste"
 msgstr "_Beillesztés"
 
-#: src/terminal-window.cc:1717
+#: src/terminal-window.cc:3086
+msgid "Copy _Output of This Command"
+msgstr ""
+
+#: src/terminal-window.cc:3088
+msgid "Copy _Output of Last Command"
+msgstr ""
+
+#: src/terminal-window.cc:3090
 msgid "Paste as _Filenames"
 msgstr "Beillesztés _fájlnevekként"
 
-#: src/terminal-window.cc:1730
+#: src/terminal-window.cc:3097
+msgid "Monitor for _Activity"
+msgstr ""
+
+#: src/terminal-window.cc:3098
+msgid "Monitor for _Silence"
+msgstr ""
+
+#: src/terminal-window.cc:3105
 msgid "P_rofiles"
 msgstr "P_rofilok"
 
-#: src/terminal-window.cc:1742
+#: src/terminal-window.cc:3123
+#, fuzzy
+#| msgid "Zoom In"
+msgid "_Zoom Pane"
+msgstr "Nagyítás"
+
+#: src/terminal-window.cc:3124
+msgid "Make Panes the Same _Size"
+msgstr ""
+
+#: src/terminal-window.cc:3127
+#, fuzzy
+#| msgid "New _Tab"
+msgid "To a New _Tab"
+msgstr "Új _lap"
+
+#: src/terminal-window.cc:3130
+#, fuzzy
+#| msgid "New _Window"
+msgid "To a New _Window"
+msgstr "Új _ablak"
+
+#: src/terminal-window.cc:3135
+msgid "Swap With the Pane on the _Left"
+msgstr ""
+
+#: src/terminal-window.cc:3136
+msgid "Swap With the Pane on the _Right"
+msgstr ""
+
+#: src/terminal-window.cc:3137
+msgid "Swap With the Pane _Above"
+msgstr ""
+
+#: src/terminal-window.cc:3138
+msgid "Swap With the Pane _Below"
+msgstr ""
+
+#: src/terminal-window.cc:3152
+msgid "_Move Pane"
+msgstr ""
+
+#: src/terminal-window.cc:3154
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close P_ane"
+msgstr "Lap bezárása"
+
+#: src/terminal-window.cc:3182
 msgid "New _Terminal"
 msgstr "Új _terminál"
 
-#: src/terminal-window.cc:1751
+#: src/terminal-window.cc:3191
 msgid "New _Tab"
 msgstr "Új _lap"
 
-#: src/terminal-window.cc:1761
-#| msgid "L_eave Full Screen"
+#: src/terminal-window.cc:3201
 msgid "Leave Full Screen"
 msgstr "Teljes képernyő elhagyása"
 
-#: src/terminal-window.cc:2184
+#: src/terminal-window.cc:3547
+msgid ""
+"Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
+msgstr ""
+
+#: src/terminal-window.cc:3553 src/terminal-window.cc:3950
+msgid "_No"
+msgstr "_Nem"
+
+#: src/terminal-window.cc:3944
 #, fuzzy
 msgid "Set Pano Terminal as your default terminal?"
 msgstr "Beállítja a GNOME Terminált alapértelmezett terminálként?"
 
-#: src/terminal-window.cc:2189
+#: src/terminal-window.cc:3949
 msgid "_Yes"
 msgstr "_Igen"
 
-#: src/terminal-window.cc:2190
-msgid "_No"
-msgstr "_Nem"
+#: src/terminal-window.cc:4019
+msgid "_Stop"
+msgstr ""
 
-#: src/terminal-window.cc:3165
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close the other terminals?"
+msgstr "Bezárja ezt a terminált?"
+
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Close this terminal?"
+msgid "Close the other terminal?"
+msgstr "Bezárja ezt a terminált?"
+
+#: src/terminal-window.cc:5159
+#, fuzzy
+#| msgid ""
+#| "There are still processes running in some terminals in this window. "
+#| "Closing the window will kill all of them."
+msgid ""
+"There are still processes running in some of the other terminals. Closing "
+"them will kill all of them."
+msgstr ""
+"Még vannak futó folyamatok ezen ablak termináljain. Az ablak bezárása ezeket "
+"mind befejezteti."
+
+#: src/terminal-window.cc:5161
+#, fuzzy
+#| msgid ""
+#| "There is still a process running in this terminal. Closing the terminal "
+#| "will kill it."
+msgid ""
+"There is still a process running in the other terminal. Closing the terminal "
+"will kill it."
+msgstr ""
+"Még van futó folyamat ebben a terminálban. A terminál bezárása ezeket mind "
+"befejezteti."
+
+#: src/terminal-window.cc:5163
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "C_lose Terminals"
+msgstr "_Terminál bezárása"
+
+#: src/terminal-window.cc:5165
 msgid "Close this window?"
 msgstr "Bezárja ezt az ablakot?"
 
-#: src/terminal-window.cc:3165
-msgid "Close this terminal?"
-msgstr "Bezárja ezt a terminált?"
-
-#: src/terminal-window.cc:3169
+#: src/terminal-window.cc:5166
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -2497,7 +3667,15 @@ msgstr ""
 "Még vannak futó folyamatok ezen ablak termináljain. Az ablak bezárása ezeket "
 "mind befejezteti."
 
-#: src/terminal-window.cc:3173
+#: src/terminal-window.cc:5168
+msgid "C_lose Window"
+msgstr "_Ablak bezárása"
+
+#: src/terminal-window.cc:5170
+msgid "Close this terminal?"
+msgstr "Bezárja ezt a terminált?"
+
+#: src/terminal-window.cc:5171
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -2505,11 +3683,71 @@ msgstr ""
 "Még van futó folyamat ebben a terminálban. A terminál bezárása ezeket mind "
 "befejezteti."
 
-#: src/terminal-window.cc:3178
-msgid "C_lose Window"
-msgstr "_Ablak bezárása"
-
-#: src/terminal.cc:589
+#: src/terminal.cc:672
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "A paraméterek feldolgozása meghiúsult: %s\n"
+
+#~ msgid "org.gnome.Terminal.desktop"
+#~ msgstr "org.gnome.Terminal.desktop"
+
+#~ msgid ""
+#~ "https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-"
+#~ "terminal.png"
+#~ msgstr ""
+#~ "https://help.gnome.org/users/gnome-terminal/stable/figures/gnome-"
+#~ "terminal.png"
+
+#~ msgid "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/home"
+#~ msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/home"
+
+#~ msgid "https://gitlab.gnome.org/GNOME/gnome-terminal/-/issues"
+#~ msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal/-/issues"
+
+#~ msgid "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/FAQ"
+#~ msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal/-/wikis/FAQ"
+
+#~ msgid "https://help.gnome.org/users/gnome-terminal/stable/"
+#~ msgstr "https://help.gnome.org/users/gnome-terminal/stable/"
+
+#~ msgid "https://l10n.gnome.org/module/gnome-terminal/"
+#~ msgstr "https://l10n.gnome.org/module/gnome-terminal/"
+
+#~ msgid "https://gitlab.gnome.org/GNOME/gnome-terminal"
+#~ msgstr "https://gitlab.gnome.org/GNOME/gnome-terminal"
+
+#~ msgid "GNOME"
+#~ msgstr "GNOME"
+
+#, fuzzy
+#~ msgid "Pano Terminal Developers"
+#~ msgstr "A GNOME Terminál fejlesztői"
+
+#~ msgid ""
+#~ "Keyboard shortcut to export the current tab contents to file in various "
+#~ "formats"
+#~ msgstr ""
+#~ "Gyorsbillentyű az aktuális lap tartalmának fájlba exportálásához "
+#~ "különböző formátumokban"
+
+#~ msgid ""
+#~ "Keyboard shortcut to print the current tab contents to printer or file"
+#~ msgstr ""
+#~ "Gyorsbillentyű az aktuális lap tartalmának fájlba vagy nyomtatóval "
+#~ "történő nyomtatásához"
+
+#~ msgid "Print"
+#~ msgstr "Nyomtatás"
+
+#~ msgid "Sound"
+#~ msgstr "Hang"
+
+#~ msgid "Terminal bell"
+#~ msgstr "Terminálcsengő"
+
+#, c-format
+#~ msgid "Version %s for GNOME %d"
+#~ msgstr "%s verzió a GNOME %d számára"
+
+#~ msgid "_Save"
+#~ msgstr "M_entés"

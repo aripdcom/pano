@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @ekiga@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-24 03:39+0100\n"
+"POT-Creation-Date: 2026-11-10 22:03+0300\n"
 "PO-Revision-Date: 2006-12-24 03:41+0100\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -17,2530 +17,4478 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Rosetta-Version: 0.1\n"
 "Plural-Forms: nplurals=2; plural= n != 1\n"
 "X-Generator: KBabel 1.11.4\n"
 "X-Rosetta-Export-Date: 2006-12-24 02:08+0000\n"
+"X-Rosetta-Version: 0.1\n"
 
-#: ../gnome-terminal.desktop.in.in.h:1 ../src/gnome-terminal.schemas.in.h:121
-#: ../src/terminal-accels.c:181 ../src/terminal-profile.c:278
-#: ../src/terminal-window.c:799 ../src/terminal.c:1206 ../src/terminal.c:1638
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#, fuzzy
+msgid "Pano Terminal"
+msgstr "Termînala GNOME"
+
+#: data/com.aripd.Pano.desktop.in:3 src/terminal-accels.cc:282
+#: src/terminal-command-palette.cc:269 src/terminal-window.ui:7
 msgid "Terminal"
 msgstr "Termînal"
 
-#: ../gnome-terminal.desktop.in.in.h:2
+#: data/com.aripd.Pano.desktop.in:4
 msgid "Use the command line"
 msgstr "Rêzika fermanan bikar bîne"
 
-#: ../src/eggcellrendererkeys.c:160 ../src/eggcellrendererkeys.c:161
-msgid "Accelerator key"
-msgstr "Bişkoka Lezker"
-
-#: ../src/eggcellrendererkeys.c:170 ../src/eggcellrendererkeys.c:171
-msgid "Accelerator modifiers"
-msgstr "Sererastkerên lezkeran"
-
-#: ../src/eggcellrendererkeys.c:180
-msgid "Accelerator Mode"
-msgstr "Moda Lezker"
-
-#: ../src/eggcellrendererkeys.c:181
-msgid "The type of accelerator."
-msgstr "Cureyê Lezkeran"
-
-#: ../src/eggcellrendererkeys.c:219 ../src/terminal-accels.c:726
-msgid "Disabled"
-msgstr "Neçalak"
-
-#: ../src/eggcellrendererkeys.c:330 ../src/eggcellrendererkeys.c:564
-msgid "Type a new accelerator, or press Backspace to clear"
-msgstr "Lezkereke nû binivîse, an jî pêl bişkoka Jêbirinê bike û paqij bike"
-
-#: ../src/eggcellrendererkeys.c:567
-msgid "Type a new accelerator"
-msgstr "Lezkereke nû binivîse"
-
-#: ../src/encoding.c:55
-msgid "Current Locale"
-msgstr "Locale ya heyî"
-
-#: ../src/encoding.c:58 ../src/encoding.c:84 ../src/encoding.c:127
-#: ../src/encoding.c:175 ../src/encoding.c:199
-msgid "Western"
-msgstr "Rojavayî"
-
-#: ../src/encoding.c:60 ../src/encoding.c:129 ../src/encoding.c:155
-#: ../src/encoding.c:195
-msgid "Central European"
-msgstr "Ewropaya Navînî"
-
-#: ../src/encoding.c:62
-msgid "South European"
-msgstr "Ewropaya Başûrî"
-
-#: ../src/encoding.c:64 ../src/encoding.c:80 ../src/encoding.c:209
-msgid "Baltic"
-msgstr "Baltîk"
-
-#: ../src/encoding.c:66 ../src/encoding.c:131 ../src/encoding.c:144
-#: ../src/encoding.c:148 ../src/encoding.c:159 ../src/encoding.c:197
-msgid "Cyrillic"
-msgstr "Kîrîl"
-
-#: ../src/encoding.c:68 ../src/encoding.c:137 ../src/encoding.c:153
-#: ../src/encoding.c:207
-msgid "Arabic"
-msgstr "Erebî"
-
-#: ../src/encoding.c:70 ../src/encoding.c:165 ../src/encoding.c:201
-msgid "Greek"
-msgstr "Yewnanî"
-
-#: ../src/encoding.c:72
-msgid "Hebrew Visual"
-msgstr "Îbraniya Dîtbarî"
-
-#: ../src/encoding.c:74 ../src/encoding.c:135 ../src/encoding.c:171
-#: ../src/encoding.c:205
-msgid "Hebrew"
-msgstr "Îbranî"
-
-#: ../src/encoding.c:76 ../src/encoding.c:133 ../src/encoding.c:179
-#: ../src/encoding.c:203
-msgid "Turkish"
-msgstr "Tirkî"
-
-#: ../src/encoding.c:78
-msgid "Nordic"
-msgstr "Nordîk"
-
-#: ../src/encoding.c:82
-msgid "Celtic"
-msgstr "Keltik"
-
-#: ../src/encoding.c:86 ../src/encoding.c:177
-msgid "Romanian"
-msgstr "Romanî"
-
-#: ../src/encoding.c:89 ../src/encoding.c:91 ../src/encoding.c:93
-#: ../src/encoding.c:95 ../src/encoding.c:97
-msgid "Unicode"
-msgstr "Unîcode"
-
-#: ../src/encoding.c:100
-msgid "Armenian"
-msgstr "Ermenî"
-
-#: ../src/encoding.c:102 ../src/encoding.c:104 ../src/encoding.c:113
-msgid "Chinese Traditional"
-msgstr "Çîniya Kevneşopî"
-
-#: ../src/encoding.c:106
-msgid "Cyrillic/Russian"
-msgstr "Kîrîl/Rûsî"
-
-#: ../src/encoding.c:109 ../src/encoding.c:140 ../src/encoding.c:184
-msgid "Japanese"
-msgstr "Japonî"
-
-#: ../src/encoding.c:111 ../src/encoding.c:142 ../src/encoding.c:146
-#: ../src/encoding.c:190
-msgid "Korean"
-msgstr "Koreyî"
-
-#: ../src/encoding.c:116 ../src/encoding.c:118 ../src/encoding.c:120
-#: ../src/encoding.c:124
-msgid "Chinese Simplified"
-msgstr "Çîniya Hêsankirî"
-
-#: ../src/encoding.c:122
-msgid "Georgian"
-msgstr "Gurcî"
-
-#: ../src/encoding.c:150 ../src/encoding.c:181
-msgid "Cyrillic/Ukrainian"
-msgstr "Kîrîl/Ûkraynî"
-
-#: ../src/encoding.c:157
-msgid "Croatian"
-msgstr "Kroatî"
-
-#: ../src/encoding.c:161
-msgid "Hindi"
-msgstr "Hindî"
-
-#: ../src/encoding.c:163
-msgid "Persian"
-msgstr "Farisî"
-
-#: ../src/encoding.c:167
-msgid "Gujarati"
-msgstr "Gujaratî"
-
-#: ../src/encoding.c:169
-msgid "Gurmukhi"
-msgstr "Gurmukî"
-
-#: ../src/encoding.c:173
-msgid "Icelandic"
-msgstr "Îzlandî"
-
-#: ../src/encoding.c:186 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Vietnamese"
-msgstr "Vîetnamî"
-
-#: ../src/encoding.c:188
-msgid "Thai"
-msgstr "Tay"
-
-#: ../src/encoding.c:377
-msgid "User Defined"
-msgstr "Bi Bikarhêner Hatiye Danasîn"
-
-#: ../src/encoding.c:735 ../src/encoding.c:799
-msgid "_Description"
-msgstr "_Daxuyanî"
-
-#: ../src/encoding.c:744 ../src/encoding.c:808
-msgid "_Encoding"
-msgstr "_Kodkirin"
-
-#: ../src/encoding.c:977
-#, c-format
-msgid ""
-"There was an error subscribing to notification of terminal encoding list "
-"changes. (%s)\n"
-msgstr ""
-"Lîsteya kodkirinên termînalê dema tomarî hişyariya guherînan dibû çewtiyek "
-"çêbû: (%s)\n"
-
-#: ../src/gnome-terminal.glade2.h:1
-msgid "    "
-msgstr "    "
-
-#: ../src/gnome-terminal.glade2.h:2
-msgid "<b>Background</b>"
-msgstr "<b>Zemîn</b>"
-
-#: ../src/gnome-terminal.glade2.h:3
-msgid "<b>Command</b>"
-msgstr "<b>Ferman</b>"
-
-#: ../src/gnome-terminal.glade2.h:4
-msgid "<b>Compatibility</b>"
-msgstr "<b>Lihevkirin</b>"
-
-#: ../src/gnome-terminal.glade2.h:5
-msgid "<b>Foreground and Background</b>"
+#: data/com.aripd.Pano.desktop.in:5
+msgid "terminal;shell;prompt;command;commandline;cmd;"
 msgstr ""
 
-#: ../src/gnome-terminal.glade2.h:6
-msgid "<b>General</b>"
-msgstr "<b>Giştî</b>"
+#: data/com.aripd.Pano.desktop.in:23 src/terminal-accels.cc:149
+msgid "New Window"
+msgstr "Paceya nû"
 
-#: ../src/gnome-terminal.glade2.h:7
-msgid "<b>Palette</b>"
-msgstr "<b>Palet</b>"
-
-#: ../src/gnome-terminal.glade2.h:8
-msgid "<b>Scrolling</b>"
-msgstr "<b>Şemitandin</b>"
-
-#: ../src/gnome-terminal.glade2.h:9
-msgid "<b>Title</b>"
-msgstr "<b>Sernav</b>"
-
-#: ../src/gnome-terminal.glade2.h:10
-msgid ""
-"<small><i><b>Note:</b> Terminal applications have these colors available to "
-"them.</i></small>"
-msgstr ""
-"<small><i><b>Not:</b> Li sepanên termînalê ev reng dikarin werine sepandin.</"
-"i></small>"
-
-#: ../src/gnome-terminal.glade2.h:11
-msgid ""
-"<small><i><b>Note:</b> The command running inside the terminal may "
-"dynamically set a new title.</i></small>"
-msgstr ""
-"<small><i><b>Nîşe:</b> Fermana ku di termînalê de tê xebitandin dibe ku bi "
-"awayekî dînamîk sernavekî mîheng bike.</i></small>"
-
-#: ../src/gnome-terminal.glade2.h:12
-msgid ""
-"<small><i><b>Note:</b> These options may cause some applications to behave "
-"incorrectly.  They are only here to allow you to work around certain "
-"applications and operating systems that expect different terminal behavior.</"
-"i></small>"
-msgstr ""
-"<small><i><b>Nîşe:</b> Dibe ku ev vebijêrkên hanê bibe sedema tevgerên çewt "
-"ên hin sepanan.  Sedema hebûna van tiştan ev e ku ji bo ku tu li ser hin "
-"pergalên xebitandinê û sepanên ku li benda tevgerên termînalên cuda ne "
-"bixebite.</i></small>"
-
-#: ../src/gnome-terminal.glade2.h:13
-msgid "<small><i>Maximum</i></small>"
-msgstr "<small><i>Pirtirîn</i></small>"
-
-#: ../src/gnome-terminal.glade2.h:14
-msgid "<small><i>None</i></small>"
-msgstr "<small><i>Tune</i></small>"
-
-#: ../src/gnome-terminal.glade2.h:15
-msgid ""
-"ASCII DEL\n"
-"Escape sequence\n"
-"Control-H"
+#: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
+#: src/terminal-preferences-window.ui:50
+msgid "Preferences"
 msgstr ""
 
-#: ../src/gnome-terminal.glade2.h:18
-msgid "A_vailable encodings:"
-msgstr "Kodkirinên ku dikarin werine bikaranîn:"
-
-#: ../src/gnome-terminal.glade2.h:19
-msgid "Add encoding to menu."
-msgstr "Kodkirinê li pêşekê zêde bike."
-
-#: ../src/gnome-terminal.glade2.h:20
-msgid "Add or Remove Terminal Encodings"
-msgstr "Kodkirina Termînalê Têxê/Derxe"
-
-#: ../src/gnome-terminal.glade2.h:21
-msgid "Background _image"
-msgstr "Wêneya _zemînê"
-
-#: ../src/gnome-terminal.glade2.h:22
-msgid "Background image _scrolls"
-msgstr "Bila rûpelê rûerd _bişemite"
-
-#: ../src/gnome-terminal.glade2.h:23
-msgid "Built-_in schemes:"
-msgstr "_Şemayên sazkirî:"
-
-#: ../src/gnome-terminal.glade2.h:24
-msgid "Built-in _schemes:"
-msgstr "_Şemayên sazkirî:"
-
-#: ../src/gnome-terminal.glade2.h:25
-msgid "C_reate"
-msgstr "Bi_afirîne"
-
-#: ../src/gnome-terminal.glade2.h:26
-msgid "Choose A Profile Icon"
-msgstr "Îkoneke Profîlê Hilbijêre"
-
-#: ../src/gnome-terminal.glade2.h:27
-msgid "Choose Terminal Background Color"
-msgstr "Rengê Rûerdê Termînalê Hilbijêrî"
-
-#: ../src/gnome-terminal.glade2.h:28
-msgid "Choose Terminal Text Color"
-msgstr "Rengê Nivîsa Termînalê Hilbijêre"
-
-#: ../src/gnome-terminal.glade2.h:29
-msgid "Color _palette:"
-msgstr "_Paleta rengan:"
-
-#: ../src/gnome-terminal.glade2.h:30
-msgid "Colors"
-msgstr "Reng"
-
-#: ../src/gnome-terminal.glade2.h:31
-msgid "Compatibility"
-msgstr "Lihevkirin"
-
-#: ../src/gnome-terminal.glade2.h:32
-msgid "Cursor blin_ks"
-msgstr "Bila nîşane _vêkeve û vemire"
-
-#: ../src/gnome-terminal.glade2.h:33
-msgid "Custom"
-msgstr "Taybet"
-
-#: ../src/gnome-terminal.glade2.h:34
-msgid "Custom co_mmand:"
-msgstr "Fe_rmana taybet:"
-
-#: ../src/gnome-terminal.glade2.h:35
-msgid "Disable all me_nu access keys (such as Alt+f to open File menu)"
-msgstr "Çalakkirina bişkokên gihiştinê yên pê_şekê rake (ji bo pêşeka pel wekî Alt+f)"
-
-#: ../src/gnome-terminal.glade2.h:36
-msgid "Disable m_enu shortcut key (F10 by default)"
-msgstr "Çalakkirina bişkokên kurteriyên p_êşekê rake (F10 standard)"
-
-#: ../src/gnome-terminal.glade2.h:37
-msgid "E_ncodings shown in menu:"
-msgstr "_Kodkirinên ku di pêşekê de dixuyin:"
-
-#: ../src/gnome-terminal.glade2.h:38
-msgid "Effects"
-msgstr "Bandor"
-
-#: ../src/gnome-terminal.glade2.h:39
-msgid ""
-"Exit the terminal\n"
-"Restart the command\n"
-"Hold the terminal open"
-msgstr ""
-"Ji termînalê derkeve\n"
-"Fermanê dîsa bide xebitandin\n"
-"Termînalê vekirî bihêle"
-
-#: ../src/gnome-terminal.glade2.h:42
-msgid "General"
-msgstr "Giştî"
-
-#: ../src/gnome-terminal.glade2.h:43
-msgid "Image _file:"
-msgstr "Pelê _wêneyê:"
-
-#: ../src/gnome-terminal.glade2.h:44
-msgid "Initial _title:"
-msgstr "Sernavê _pêşîn:"
-
-#: ../src/gnome-terminal.glade2.h:45
-msgid "Keyboard Shortcuts"
-msgstr "Kurteriyên Klavyeyê"
-
-#: ../src/gnome-terminal.glade2.h:46 ../src/terminal-accels.c:82
-msgid "New Profile"
-msgstr "Profîla nû"
-
-#: ../src/gnome-terminal.glade2.h:47
-msgid ""
-"On the left side\n"
-"On the right side\n"
-"Disabled"
-msgstr ""
-"Li aliyê çepê\n"
-"Li aliyê rastê\n"
-"Neçalak"
-
-#: ../src/gnome-terminal.glade2.h:50
-msgid "Password:"
-msgstr "Şîfre:"
-
-#: ../src/gnome-terminal.glade2.h:51
-msgid "Profile Editor"
-msgstr "Edîtorê profîlê"
-
-#: ../src/gnome-terminal.glade2.h:52
-msgid "Profile _icon:"
-msgstr "Î_kona profilê:"
-
-#: ../src/gnome-terminal.glade2.h:53
-msgid "Profile _name:"
-msgstr "_Navê profîlê:"
-
-#: ../src/gnome-terminal.glade2.h:54
-msgid "Remove encoding from menu."
-msgstr "Kodkirinê ji pêşekê rake."
-
-#: ../src/gnome-terminal.glade2.h:55
-msgid ""
-"Replaces initial title\n"
-"Goes before initial title\n"
-"Goes after initial title\n"
-"Isn't displayed"
-msgstr ""
-"Sernavê pêşîn biguherîne\n"
-"Berî sernavê pêşîn diçe\n"
-"Piştî sernavê pêşîn biçe\n"
-"Nayê nîşandan"
-
-#: ../src/gnome-terminal.glade2.h:59
-msgid "Ru_n a custom command instead of my shell"
-msgstr "Dêvila qalik fermaneke taybet bixebitîne"
-
-#: ../src/gnome-terminal.glade2.h:60
-msgid "S/Key Challenge Response"
-msgstr ""
-
-#: ../src/gnome-terminal.glade2.h:61
-msgid "S_hade transparent or image background:"
-msgstr "Rûerdê şeffaf yan jî wêneyê rûerd:"
-
-#: ../src/gnome-terminal.glade2.h:62
-msgid "Sc_roll on output"
-msgstr ""
-
-#: ../src/gnome-terminal.glade2.h:63
-msgid "Scr_ollback:"
-msgstr ""
-
-#: ../src/gnome-terminal.glade2.h:64
-msgid "Scroll on _keystroke"
-msgstr ""
-
-#: ../src/gnome-terminal.glade2.h:65
-msgid "Scrolling"
-msgstr "Şemitandin"
-
-#: ../src/gnome-terminal.glade2.h:66
-msgid "Select Background Image"
-msgstr "Wêneya zemînê hilbijêre"
-
-#: ../src/gnome-terminal.glade2.h:67
-msgid "Select-by-_word characters:"
-msgstr ""
-
-#: ../src/gnome-terminal.glade2.h:68
-msgid "Show _menubar by default in new terminals"
-msgstr "_Darikê pêşekê di termînala nû de wekî standard nîşan bide"
-
-#: ../src/gnome-terminal.glade2.h:69
-msgid "Terminal _bell"
-msgstr "_Zengilê Termînalê"
-
-#: ../src/gnome-terminal.glade2.h:70
-msgid "Title and Command"
-msgstr "Sernav û Ferman"
-
-#: ../src/gnome-terminal.glade2.h:71
-msgid "Use colors from s_ystem theme"
-msgstr "Rengên dirbên p_ergalê bikar bîne"
-
-#: ../src/gnome-terminal.glade2.h:72
-msgid "When command _exits:"
-msgstr "Dema ferman _qediya:"
-
-#: ../src/gnome-terminal.glade2.h:73
-msgid "_Allow bold text"
-msgstr "_Destûrê bide nivîsa stûr"
-
-#: ../src/gnome-terminal.glade2.h:74
-msgid "_Background color:"
-msgstr "_Rengê zemînê:"
-
-#: ../src/gnome-terminal.glade2.h:75
-msgid "_Backspace key generates:"
-msgstr ""
-
-#: ../src/gnome-terminal.glade2.h:76
-msgid "_Base on:"
-msgstr "_Bi bingeh ser:"
-
-#: ../src/gnome-terminal.glade2.h:77
-msgid "_Delete key generates:"
-msgstr "Ya wê bişkoka jêbirinê pêk bîne:"
-
-#: ../src/gnome-terminal.glade2.h:78
-msgid "_Dynamically-set title:"
-msgstr "Sernavê ku bi awayekî _dînamîk hatiye mîhengkirin:"
-
-#: ../src/gnome-terminal.glade2.h:79
-msgid "_None (use solid color)"
-msgstr "Ne yek jî (tenê rengekî bikar bîne)"
-
-#: ../src/gnome-terminal.glade2.h:80
-msgid "_Profile name:"
-msgstr "Navê _profîlê:"
-
-#: ../src/gnome-terminal.glade2.h:81
-msgid "_Reset Compatibility Options to Defaults"
-msgstr ""
-
-#: ../src/gnome-terminal.glade2.h:82
-msgid "_Run command as a login shell"
-msgstr "Dêvila qalikê têketinê fermanê bide xebitandin"
-
-#: ../src/gnome-terminal.glade2.h:83
-msgid "_Scrollbar is:"
-msgstr "_Darikê şemitandinê:"
-
-#: ../src/gnome-terminal.glade2.h:84
-msgid "_Shortcut keys:"
-msgstr "Bişkokên _kurteriyan:"
-
-#: ../src/gnome-terminal.glade2.h:85
-msgid "_Text color:"
-msgstr "Rengê _nivîsê:"
-
-#: ../src/gnome-terminal.glade2.h:86
-msgid "_Transparent background"
-msgstr "Rûerdê _transparan"
-
-#: ../src/gnome-terminal.glade2.h:87
-msgid "_Update login records when command is launched"
-msgstr "Dema ferman hate destpêkirin tomarên têketinê rojane bike"
-
-#: ../src/gnome-terminal.glade2.h:88
+#: data/com.aripd.Pano.Preferences.desktop.in:3
 #, fuzzy
-msgid "_Use the system fixed width font"
-msgstr "Curenivîsa termînala pergalê _bikar bîne"
+#| msgid "Use the command line"
+msgid "Configure the command line"
+msgstr "Rêzika fermanan bikar bîne"
 
-#: ../src/gnome-terminal.glade2.h:89
-msgid "_lines"
-msgstr "_rêzik"
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr ""
 
-#: ../src/gnome-terminal.glade2.h:90
-msgid "kilo_bytes"
-msgstr "kîlo_bayt"
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+msgid "Pano Terminal Preferences"
+msgstr "Termînala GNOME"
 
-#: ../src/gnome-terminal.schemas.in.h:1
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "Termînala GNOME"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
+#: src/terminal-global-shortcuts.cc:231
+msgid "Show or hide the quick terminal"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:34
+#: data/com.aripd.Pano.metainfo.xml.in:63
+msgid "com.aripd.Pano.desktop"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:35
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
+msgid "GPL-3.0+ or GFDL-1.3-only"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:36
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
+msgid "GPL-3.0+"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:38
+msgid "Use the command line, with your tabs where you want them"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:40
 msgid ""
-"A subset of possible encodings are presented in the Encoding submenu. This "
-"is a list of encodings to appear there. The special encoding name \"current"
-"\" means to display the encoding of the current locale."
+"Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
+"which can be used to run programs available on your system."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:2
+#: data/com.aripd.Pano.metainfo.xml.in:41
 msgid ""
-"A value between 0.0 and 1.0 indicating how much to darken the background "
-"image. 0.0 means no darkness, 1.0 means fully dark. In the current "
-"implementation, there are only two levels of darkness possible, so the "
-"setting behaves as a boolean, where 0.0 disables the darkening effect."
+"It supports several profiles, multiple tabs and implements several keyboard "
+"shortcuts. The tab bar can be placed at the top, bottom, left or right of "
+"the window."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:3
+#: data/com.aripd.Pano.metainfo.xml.in:44
+#, fuzzy
+#| msgid "Linux console"
+msgid "console"
+msgstr "Konsola Linuxê"
+
+#: data/com.aripd.Pano.metainfo.xml.in:45
+msgid "keyboard"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:46
+msgid "pointing"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:50
+msgid "https://pano.aripd.com/images/tabs-left-light.png"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:54
+msgid "HiDpiIcon"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:55
+msgid "HighContrast"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:56
+msgid "ModernToolkit"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:57
+#, fuzzy
+#| msgid "_Search for:"
+msgid "SearchProvider"
+msgstr "_Lêgerîn: "
+
+#: data/com.aripd.Pano.metainfo.xml.in:58
+msgid "UserDocs"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:60
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
+msgid "https://pano.aripd.com"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:61
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
+msgid "https://github.com/aripdcom/pano/issues"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:62
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
+msgid "https://github.com/aripdcom/pano"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:64
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
+#, fuzzy
+msgid "pano-terminal"
+msgstr "Termînala GNOME"
+
+#: data/com.aripd.Pano.metainfo.xml.in:66
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
+msgid "aripd"
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:71
+msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
+msgstr ""
+
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
+msgid "com.aripd.Pano.Nautilus"
+msgstr ""
+
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
+msgid "org.gnome.Nautilus.desktop"
+msgstr ""
+
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#, fuzzy
+msgid "Pano Terminal plugin for Files"
+msgstr "Termînala GNOME"
+
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#, fuzzy
+msgid "Open Pano Terminal from Files"
+msgstr "Termînala GNOME"
+
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
 msgid ""
-"Accelerator key to detach current tab. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keybinding for this action."
+"Open in Pano Terminal is a plugin for the Files application that adds a menu "
+"item to the context menu to open Pano Terminal in the currently browsed "
+"directory."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:4
-msgid ""
-"Accelerator key to move the current tab to the left. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keybinding for this "
-"action."
+#. Translators: This needs to be parsed as a GVariant string, so keep the
+#. regular single quotes around the string as-is, and do not add extra quotes.
+#: src/com.aripd.Pano.gschema.xml:151
+msgctxt "visible-name"
+msgid "'Unnamed'"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:5
-msgid ""
-"Accelerator key to move the current tab to the right. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keybinding for this "
-"action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:6
-msgid "Accelerator to detach current tab."
-msgstr "Lezkera ku wê hilpekîna derbasdar ji hev veqetîne."
-
-#: ../src/gnome-terminal.schemas.in.h:7
-msgid "Accelerator to move the current tab to the left."
-msgstr "Lezkera ku wê hilpekîna derbasdar bibe aliyê çepê."
-
-#: ../src/gnome-terminal.schemas.in.h:8
-msgid "Accelerator to move the current tab to the right."
-msgstr "Lezkera ku wê hilpekîna derbasdar bibe aliyê rastê."
-
-#: ../src/gnome-terminal.schemas.in.h:9
-msgid "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr "Navê curenivîsa Pango. \"Sans 12\" yan jî \"Monospace Bold 14\" mînak e."
-
-#: ../src/gnome-terminal.schemas.in.h:10
-msgid ""
-"An X font name. See the X man page (type \"man X\") for more details on the "
-"format of X font names."
-msgstr ""
-"Navê curenivîsa X. Ji bo agahiyên berfireh li cureyên navên curenivîsên Xê "
-"yên di rûpela rêberê Xê (\"man X\" binivîse) de ye binihêre."
-
-#: ../src/gnome-terminal.schemas.in.h:11
-msgid "Background image"
-msgstr "Wêneya zemîne"
-
-#: ../src/gnome-terminal.schemas.in.h:12
-msgid "Background type"
-msgstr "Cureyê zemînê"
-
-#: ../src/gnome-terminal.schemas.in.h:13
-msgid "Characters that are considered \"part of a word\""
-msgstr "Karakterên ku mirov dikare bibêje \"perçeyekî peyvê ye\""
-
-#: ../src/gnome-terminal.schemas.in.h:14
-msgid "Custom command to use instead of the shell"
-msgstr "Fermana taybet ya wê dêvila qalik were bikaranîn"
-
-#: ../src/gnome-terminal.schemas.in.h:15
-msgid "Default"
-msgstr "Standart"
-
-#: ../src/gnome-terminal.schemas.in.h:16
-msgid "Default color of terminal background"
-msgstr "Rengê standard ya rûerdê termînalê"
-
-#: ../src/gnome-terminal.schemas.in.h:17
-msgid ""
-"Default color of terminal background, as a color specification (can be HTML-"
-"style hex digits, or a color name such as \"red\")."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:18
-msgid "Default color of text in the terminal"
-msgstr "Rengê standard ya nivîsa di termînalê de ye"
-
-#: ../src/gnome-terminal.schemas.in.h:19
-msgid ""
-"Default color of text in the terminal, as a color specification (can be HTML-"
-"style hex digits, or a color name such as \"red\")."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:20
-msgid "Effect of the Backspace key"
-msgstr "Bandora bişkoka jêbirina ber paş ve"
-
-#: ../src/gnome-terminal.schemas.in.h:21
-msgid "Effect of the Delete key"
-msgstr "Bandora bişkoka Jêbirinê"
-
-#: ../src/gnome-terminal.schemas.in.h:22
-msgid "Filename of a background image."
-msgstr "Navê pelgeha wêneyê rûerd."
-
-#: ../src/gnome-terminal.schemas.in.h:23
-msgid "Font"
-msgstr "Curenivîs"
-
-#. Translators: S/Key is the name of an application, so it should
-#. not be translated.
-#: ../src/gnome-terminal.schemas.in.h:26
-msgid "Highlight S/Key challenges"
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:27
-msgid "How much to darken the background image"
-msgstr "Wê wêneyê rûerd çi qasî were tarîkirin"
-
-#: ../src/gnome-terminal.schemas.in.h:28
+#: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:29
+#: src/com.aripd.Pano.gschema.xml:153
 msgid "Human-readable name of the profile."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:30
-msgid "Icon for terminal window"
-msgstr "Ji bo paceya termînalê îkon"
+#: src/com.aripd.Pano.gschema.xml:157
+msgid "Default color of text in the terminal"
+msgstr "Rengê standard ya nivîsa di termînalê de ye"
 
-#: ../src/gnome-terminal.schemas.in.h:31
-msgid "Icon to use for tabs/windows containing this profile."
-msgstr "Îkona wê hilpekîn/paceyên ku di vê profîlê de ne bikar bîne."
-
-#: ../src/gnome-terminal.schemas.in.h:32
+#: src/com.aripd.Pano.gschema.xml:158
 msgid ""
-"If the application in the terminal sets the title (most typically people "
-"have their shell set up to do this), the dynamically-set title can erase the "
-"configured title, go before it, go after it, or replace it. The possible "
-"values are \"replace\", \"before\", \"after\", and \"ignore\"."
+"Default color of text in the terminal, as a color specification (can be HTML-"
+"style hex digits, or a color name such as “red”)."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:33
-msgid "If true, allow applications in the terminal to make text boldface."
-msgstr ""
-"Heke hatibe hilbijartin, sepanên ku di termînalê de dixebitin dikarin nivîsa "
-"stûr bide nivîsandin."
+#: src/com.aripd.Pano.gschema.xml:162
+msgid "Default color of terminal background"
+msgstr "Rengê standard ya rûerdê termînalê"
 
-#: ../src/gnome-terminal.schemas.in.h:34
+#: src/com.aripd.Pano.gschema.xml:163
 msgid ""
-"If true, don't make a noise when applications send the escape sequence for "
-"the terminal bell."
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as “red”)."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:35
+#: src/com.aripd.Pano.gschema.xml:167
+#, fuzzy
+#| msgid "Default color of text in the terminal"
+msgid "Default color of bold text in the terminal"
+msgstr "Rengê standard ya nivîsa di termînalê de ye"
+
+#: src/com.aripd.Pano.gschema.xml:168
 msgid ""
-"If true, font anti-aliasing will be disabled when running without the X "
-"RENDER extension, which gives a considerable performance improvement in "
-"these situations."
+"Default color of bold text in the terminal, as a color specification (can be "
+"HTML-style hex digits, or a color name such as “red”). This is ignored if "
+"bold-color-same-as-fg is true."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:36
+#: src/com.aripd.Pano.gschema.xml:172
+msgid "Whether bold text should use the same color as normal text"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:173
+msgid ""
+"If true, boldface text will be rendered using the same color as normal text."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:178
+msgid ""
+"Scale factor for the cell height to increase line spacing. (Does not "
+"increase the font’s height.)"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:183
+msgid ""
+"Scale factor for the cell width to increase letter spacing. (Does not "
+"increase the font’s width.)"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:187
+#, fuzzy
+#| msgid "Whether to use the system font"
+msgid "Whether to use custom cursor colors"
+msgstr "Bikaranîna curenivîsên pergalê"
+
+#: src/com.aripd.Pano.gschema.xml:188
+msgid "If true, use the cursor colors from the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:192
+#, fuzzy
+#| msgid "_Background color:"
+msgid "Cursor background color"
+msgstr "_Rengê zemînê:"
+
+#: src/com.aripd.Pano.gschema.xml:193
+msgid ""
+"Custom color of the background of the terminal’s cursor, as a color "
+"specification (can be HTML-style hex digits, or a color name such as “red”). "
+"This is ignored if cursor-colors-set is false."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:197
+msgid "Cursor foreground colour"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:198
+msgid ""
+"Custom color for the foreground of the text character at the terminal’s "
+"cursor position, as a color specification (can be HTML-style hex digits, or "
+"a color name such as “red”). This is ignored if cursor-colors-set is false."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:202
+msgid "Whether to use custom highlight colors"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:203
+msgid "If true, use the highlight colors from the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:207
+#, fuzzy
+#| msgid "_Background color:"
+msgid "Highlight background color"
+msgstr "_Rengê zemînê:"
+
+#: src/com.aripd.Pano.gschema.xml:208
+msgid ""
+"Custom color of the background of the terminal’s highlight, as a color "
+"specification (can be HTML-style hex digits, or a color name such as “red”). "
+"This is ignored if highlight-colors-set is false."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:212
+msgid "Highlight foreground colour"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:213
+msgid ""
+"Custom color for the foreground of the text character at the terminal’s "
+"highlight position, as a color specification (can be HTML-style hex digits, "
+"or a color name such as “red”). This is ignored if highlight-colors-set is "
+"false."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:217
+msgid "Whether to perform bidirectional text rendering"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:218
+msgid "If true, perform bidirectional text rendering (“BiDi”)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:222
+msgid "Whether to perform Arabic shaping"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:223
+msgid "If true, shape Arabic text."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:227
+msgid "Whether to enable SIXEL images"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:228
+msgid "If true, SIXEL sequences are parsed and images are rendered."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:232
+#, fuzzy
+#| msgid "Whether to allow bold text"
+msgid "Whether bold is also bright"
+msgstr "Destûrdayîna nivîsa stûr"
+
+#: src/com.aripd.Pano.gschema.xml:233
+msgid ""
+"If true, setting bold on the first 8 colors also switches to their bright "
+"variants."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:237
+#, fuzzy
+#| msgid "Whether to silence terminal bell"
+msgid "Whether to ring the terminal bell"
+msgstr "Qutkirina dengê zengilê termînalê"
+
+#: src/com.aripd.Pano.gschema.xml:241
+#, fuzzy
+#| msgid "Whether to silence terminal bell"
+msgid "Whether the terminal flashes when the bell rings"
+msgstr "Qutkirina dengê zengilê termînalê"
+
+#: src/com.aripd.Pano.gschema.xml:242
+msgid ""
+"When the terminal is in a tab in the background, the tab is marked instead."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:246
+msgid "List of punctuation characters that are treated as word characters"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:247
+msgid ""
+"By default, when doing word-wise selection, most punctuation breaks up word "
+"boundaries. This list of exceptions will instead be treated as part of the "
+"word."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:252
+msgid "Default number of columns"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:253
+msgid ""
+"Number of columns in newly created terminal windows. Has no effect if "
+"use_custom_default_size is not enabled."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:258
+msgid "Default number of rows"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:259
+msgid ""
+"Number of rows in newly created terminal windows. Has no effect if "
+"use_custom_default_size is not enabled."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:263
+#, fuzzy
+#| msgid "Position of the scrollbar"
+msgid "When to show the scrollbar"
+msgstr "Cihê darikê şemitandinê"
+
+#: src/com.aripd.Pano.gschema.xml:267
+msgid "Whether to enable kinetic scrolling"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:271
+msgid "Number of lines to keep in scrollback"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:272
+msgid ""
+"Number of scrollback lines to keep around. You can scroll back in the "
+"terminal by this number of lines; lines that don’t fit in the scrollback are "
+"discarded. If scrollback_unlimited is true, this value is ignored."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:276
+msgid "Whether an unlimited number of lines should be kept in scrollback"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:277
+msgid ""
+"If true, scrollback lines will never be discarded. The scrollback history is "
+"stored on disk temporarily, so this may cause the system to run out of disk "
+"space if there is a lot of output to the terminal."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:281
+msgid "Whether to scroll to the bottom when text is inserted"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:282
+msgid ""
+"If true, the terminal will scroll to the bottom when text is inserted by "
+"paste."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:286
+msgid "Whether to scroll to the bottom when a key is pressed"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:287
 msgid "If true, pressing a key jumps the scrollbar to the bottom."
-msgstr "Heke hatibe hilbijartin, tu pêl bişkokê bike wê darikê şemitandinê bibe jêr."
-
-#: ../src/gnome-terminal.schemas.in.h:37
-msgid ""
-"If true, scroll the background image with the foreground text; if false, "
-"keep the image in a fixed position and scroll the text above it."
 msgstr ""
-"Heke hatibe hilbijartin, wêneyê rûerd tevî nivîsên heyî wê bi hev re "
-"bişemitîne, lê heke nehatibe hilbijartin, wêne di cihê xwe de dihêle û nivîs "
-"li ser wê bişemite."
+"Heke hatibe hilbijartin, tu pêl bişkokê bike wê darikê şemitandinê bibe jêr."
 
-#: ../src/gnome-terminal.schemas.in.h:38
-msgid ""
-"If true, the command inside the terminal will be launched as a login shell. "
-"(argv[0] will have a hyphen in front of it.)"
+#: src/com.aripd.Pano.gschema.xml:291
+msgid "Whether to scroll to the bottom when there’s new output"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:39
+#: src/com.aripd.Pano.gschema.xml:292
+#, fuzzy
+#| msgid "If true, pressing a key jumps the scrollbar to the bottom."
 msgid ""
-"If true, the system login records utmp and wtmp will be updated when the "
-"command inside the terminal is launched."
+"If true, whenever there’s new output the terminal will scroll to the bottom."
 msgstr ""
-"Heke hatibe hilbijartin, dema di termînalê de sepanek were destpêkirin "
-"tomara destpêkirinê wê were rojanekirin."
+"Heke hatibe hilbijartin, tu pêl bişkokê bike wê darikê şemitandinê bibe jêr."
 
-#: ../src/gnome-terminal.schemas.in.h:40
-msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
-"monospace (and the most similar font it can come up with otherwise)."
+#: src/com.aripd.Pano.gschema.xml:296
+msgid "What to do with the terminal when the child command exits"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:41
+#: src/com.aripd.Pano.gschema.xml:297
 msgid ""
-"If true, the theme color scheme used for text entry boxes will be used for "
-"the terminal, instead of colors provided by the user."
+"Possible values are “close” to close the terminal, “restart” to restart the "
+"command, and “hold” to keep the terminal open with no command running inside."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:42
+#: src/com.aripd.Pano.gschema.xml:301
+msgid "Whether to launch the command in the terminal as a login shell"
+msgstr "Wêkî qalikê têketinê xebitandina fermana termînalê"
+
+#: src/com.aripd.Pano.gschema.xml:302
+msgid ""
+"If true, the command inside the terminal will be launched as a login shell "
+"(argv[0] will have a hyphen in front of it)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:306
+#, fuzzy
+#| msgid "Whether to update login records when launching terminal command"
+msgid "Whether to preserve the working directory when opening a new terminal"
+msgstr "Dema fermanên termînalê hate destpêkirin rojanekirina tomarên têketinê"
+
+#: src/com.aripd.Pano.gschema.xml:307
+msgid ""
+"Controls when opening a new terminal from a previous one carries over the "
+"working directory of the opening terminal to the new one."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:313
+msgid "Whether to run a custom command instead of the shell"
+msgstr "Dêvila qalik xebitandina fermaneke taybet"
+
+#: src/com.aripd.Pano.gschema.xml:314
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:43
-msgid "If true, whenever there's new output the terminal will scroll to the bottom."
+#: src/com.aripd.Pano.gschema.xml:318
+msgid "Whether to blink the cursor"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:44
+#: src/com.aripd.Pano.gschema.xml:319
 msgid ""
-"Keyboard shortcut key for bringing up the dialog for profile creation. "
-"Expressed as a string in the same format used for GTK+ resource files. If "
-"you set the option to the special string \"disabled\", then there will be no "
-"keyboard shortcut for this action."
+"The possible values are “system” to use the global cursor blinking settings, "
+"or “on” or “off” to set the mode explicitly."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:45
+#: src/com.aripd.Pano.gschema.xml:323
+msgid "The cursor appearance"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:327
 msgid ""
-"Keyboard shortcut key for closing a tab. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Possible values are “always” or “never” allow blinking text, or only when "
+"the terminal is “focused” or “unfocused”."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:46
+#: src/com.aripd.Pano.gschema.xml:331
+msgid "Custom command to use instead of the shell"
+msgstr "Fermana taybet ya wê dêvila qalik were bikaranîn"
+
+#: src/com.aripd.Pano.gschema.xml:332
+msgid "Run this command in place of the shell, if use_custom_command is true."
+msgstr ""
+"Heke custom_command hatibe hilbijartin dêvila qalik vê fermanê bixebitîne."
+
+#: src/com.aripd.Pano.gschema.xml:336
+msgid "The color scheme, or empty for the colors set in this profile"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:337
 msgid ""
-"Keyboard shortcut key for closing a window. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
+"The name of a .palette file, without the suffix. Its colors replace the "
+"foreground, background and palette of the profile, and follow the light or "
+"dark style of the system if the scheme has both."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:47
+#: src/com.aripd.Pano.gschema.xml:342
+#, fuzzy
+#| msgid "Default color of terminal background"
+msgid "Opacity of the terminal background"
+msgstr "Rengê standard ya rûerdê termînalê"
+
+#: src/com.aripd.Pano.gschema.xml:343
 msgid ""
-"Keyboard shortcut key for copying selected text to the clipboard. Expressed "
-"as a string in the same format used for GTK+ resource files. If you set the "
-"option to the special string \"disabled\", then there will be no keyboard "
-"shortcut for this action."
+"1.0 is opaque. With lower values the desktop shows through the background of "
+"the terminal; the text stays opaque."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:48
+#: src/com.aripd.Pano.gschema.xml:362
+msgid "Palette for terminal applications"
+msgstr "Ji bo sepanên termînalê palet"
+
+#: src/com.aripd.Pano.gschema.xml:366
+msgid "A Pango font name and size"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:370
+msgid "The code sequence the Backspace key generates"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:374
+#, fuzzy
+#| msgid "_Delete key generates:"
+msgid "The code sequence the Delete key generates"
+msgstr "Ya wê bişkoka jêbirinê pêk bîne:"
+
+#: src/com.aripd.Pano.gschema.xml:378
+msgid "Whether to use the colors from the theme for the terminal widget"
+msgstr "Ji dirbê perçekê termînalê bikaranîna rengan"
+
+#: src/com.aripd.Pano.gschema.xml:382
+#, fuzzy
+#| msgid "Whether to use the system font"
+msgid "Whether to use the system monospace font"
+msgstr "Bikaranîna curenivîsên pergalê"
+
+#: src/com.aripd.Pano.gschema.xml:386
+msgid "Whether to rewrap the terminal contents on window resize"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:390
+#, fuzzy
+#| msgid "Add encoding to menu."
+msgid "Which encoding to use"
+msgstr "Kodkirinê li pêşekê zêde bike."
+
+#: src/com.aripd.Pano.gschema.xml:394
 msgid ""
-"Keyboard shortcut key for launching help. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
+"Whether ambiguous-width characters are narrow or wide when using UTF-8 "
+"encoding"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:49
+#: src/com.aripd.Pano.gschema.xml:403
+msgid "Keyboard shortcut to open a new tab"
+msgstr "Ji bo vekirina hilpekîna nû kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:407
+msgid "Keyboard shortcut to open a new window"
+msgstr "Ji bo vekirina paceyeke nû kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:411
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
 msgid ""
-"Keyboard shortcut key for making font larger. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
+"Keyboard shortcut to save the contents of the current terminal, with its "
+"scrollback, to a file"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:50
-msgid ""
-"Keyboard shortcut key for making font smaller. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:51
-msgid ""
-"Keyboard shortcut key for making font the normal size. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:52
-msgid ""
-"Keyboard shortcut key for opening a new tab. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:53
-msgid ""
-"Keyboard shortcut key for opening a new window. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:54
-msgid ""
-"Keyboard shortcut key for pasting the contents of the clipboard into the "
-"terminal. Expressed as a string in the same format used for GTK+ resource "
-"files. If you set the option to the special string \"disabled\", then there "
-"will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:55
-msgid ""
-"Keyboard shortcut key for switch to tab 1. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:56
-msgid ""
-"Keyboard shortcut key for switch to tab 10. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:57
-msgid ""
-"Keyboard shortcut key for switch to tab 11. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:58
-msgid ""
-"Keyboard shortcut key for switch to tab 12. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:59
-msgid ""
-"Keyboard shortcut key for switch to tab 2. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:60
-msgid ""
-"Keyboard shortcut key for switch to tab 3. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:61
-msgid ""
-"Keyboard shortcut key for switch to tab 4. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:62
-msgid ""
-"Keyboard shortcut key for switch to tab 5. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:63
-msgid ""
-"Keyboard shortcut key for switch to tab 6. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:64
-msgid ""
-"Keyboard shortcut key for switch to tab 7. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:65
-msgid ""
-"Keyboard shortcut key for switch to tab 8. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:66
-msgid ""
-"Keyboard shortcut key for switch to tab 9. Expressed as a string in the same "
-"format used for GTK+ resource files. If you set the option to the special "
-"string \"disabled\", then there will be no keyboard shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:67
-msgid ""
-"Keyboard shortcut key for toggling full screen mode. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:68
-msgid ""
-"Keyboard shortcut key to reset and clear the terminal. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:69
-msgid ""
-"Keyboard shortcut key to reset the terminal. Expressed as a string in the "
-"same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:70
-msgid ""
-"Keyboard shortcut key to set the terminal title. Expressed as a string in "
-"the same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:71
-msgid ""
-"Keyboard shortcut key to switch to the next tab. Expressed as a string in "
-"the same format used for GTK+ resource files. If you set the option to the "
-"special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:72
-msgid ""
-"Keyboard shortcut key to switch to the previous tab. Expressed as a string "
-"in the same format used for GTK+ resource files. If you set the option to "
-"the special string \"disabled\", then there will be no keyboard shortcut for "
-"this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:73
-msgid ""
-"Keyboard shortcut key to toggle the visibility of the menubar. Expressed as "
-"a string in the same format used for GTK+ resource files. If you set the "
-"option to the special string \"disabled\", then there will be no keyboard "
-"shortcut for this action."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:74
+#: src/com.aripd.Pano.gschema.xml:415
 msgid "Keyboard shortcut to close a tab"
 msgstr "Ji bo girtina hilpekînê kurteriya klavyeyê ya tê bikaranîn"
 
-#: ../src/gnome-terminal.schemas.in.h:75
+#: src/com.aripd.Pano.gschema.xml:419
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid ""
+"Keyboard shortcut to close the tabs other than the current one, except "
+"pinned tabs"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:423
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new tab"
+msgid "Keyboard shortcut to reopen the last closed tab"
+msgstr "Ji bo vekirina hilpekîna nû kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:427
 msgid "Keyboard shortcut to close a window"
 msgstr "Ji bo girtina paceyê kurteriya klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:76
+#: src/com.aripd.Pano.gschema.xml:431
 msgid "Keyboard shortcut to copy text"
 msgstr "Ji bo jibergirtina nivîsê kurteriya klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:77
-msgid "Keyboard shortcut to create a new profile"
-msgstr "Ji bo avakirina profîleke nû kurteriya klavyeyê"
+#: src/com.aripd.Pano.gschema.xml:435
+#, fuzzy
+#| msgid "Keyboard shortcut to copy text"
+msgid "Keyboard shortcut to copy text as HTML"
+msgstr "Ji bo jibergirtina nivîsê kurteriya klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:78
+#: src/com.aripd.Pano.gschema.xml:439
+msgid "Keyboard shortcut to paste text"
+msgstr "Ji bo pêvekirina nivîsê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:443
+#, fuzzy
+#| msgid "Keyboard shortcut to paste text"
+msgid "Keyboard shortcut to select all text"
+msgstr "Ji bo pêvekirina nivîsê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:447
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new tab"
+msgid "Keyboard shortcut to open the Preferences dialog"
+msgstr "Ji bo vekirina hilpekîna nû kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:451
+msgid "Keyboard shortcut to toggle full screen mode"
+msgstr "Ji bo moda dîmender tije kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:455
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid "Keyboard shortcut to toggle the read-only state"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:459
+msgid ""
+"Keyboard shortcut to label URLs, paths and more on the screen, to copy them "
+"by typing the label"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:463
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid "Keyboard shortcut to open the command palette"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:467
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid ""
+"Keyboard shortcut to set a title for the terminal that programs cannot change"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:471
+msgid "Keyboard shortcut to reset the terminal"
+msgstr "Ji bo vesazkirina termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:475
+msgid "Keyboard shortcut to reset and clear the terminal"
+msgstr "Ji bo vesazkirin û jêbirina dîmenderê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:479
+#, fuzzy
+#| msgid "Keyboard shortcut to reset the terminal"
+msgid "Keyboard shortcut to open the search dialog"
+msgstr "Ji bo vesazkirina termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:483
+#, fuzzy
+#| msgid "Keyboard shortcut to reset and clear the terminal"
+msgid "Keyboard shortcut to find the next occurrence of the search term"
+msgstr "Ji bo vesazkirin û jêbirina dîmenderê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:487
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the previous tab"
+msgid "Keyboard shortcut to find the previous occurrence of the search term"
+msgstr "Ji bo çûyîna hilpekîna berê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:491
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid "Keyboard shortcut to clear the find highlighting"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:495
+msgid "Keyboard shortcut to switch to the previous tab"
+msgstr "Ji bo çûyîna hilpekîna berê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:499
+msgid "Keyboard shortcut to switch to the next tab"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:503
+#, fuzzy
+#| msgid "Accelerator to move the current tab to the left."
+msgid "Keyboard shortcut to move the current tab to the left"
+msgstr "Lezkera ku wê hilpekîna derbasdar bibe aliyê çepê."
+
+#: src/com.aripd.Pano.gschema.xml:507
+#, fuzzy
+#| msgid "Accelerator to move the current tab to the right."
+msgid "Keyboard shortcut to move the current tab to the right"
+msgstr "Lezkera ku wê hilpekîna derbasdar bibe aliyê rastê."
+
+#: src/com.aripd.Pano.gschema.xml:511
+#, fuzzy
+#| msgid "Accelerator to move the current tab to the right."
+msgid "Keyboard shortcut to move the current tab to the start"
+msgstr "Lezkera ku wê hilpekîna derbasdar bibe aliyê rastê."
+
+#: src/com.aripd.Pano.gschema.xml:515
+#, fuzzy
+#| msgid "Accelerator to move the current tab to the left."
+msgid "Keyboard shortcut to move the current tab to the end"
+msgstr "Lezkera ku wê hilpekîna derbasdar bibe aliyê çepê."
+
+#: src/com.aripd.Pano.gschema.xml:519
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to tab 1"
+msgid "Keyboard shortcut to detach current tab"
+msgstr "Ji bo tu karibî derbasî hilpekîna 1em bibe kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:523
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the previous tab"
+msgid "Keyboard shortcut to scroll to the previous shell prompt"
+msgstr "Ji bo çûyîna hilpekîna berê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:527
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to scroll to the next shell prompt"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:531
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to copy the output of the last command"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:535
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to send input to all panes of the tab, or to stop"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:539
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid ""
+"Keyboard shortcut to send input to all terminals of the window, or to stop"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:543
+msgid ""
+"Keyboard shortcut to move the focus to the tab list, when the tabs are on "
+"the left or right"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:547
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid "Keyboard shortcut to split the terminal and open a new one on the right"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:551
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid "Keyboard shortcut to split the terminal and open a new one below"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:555
+#, fuzzy
+#| msgid "Keyboard shortcut to close a tab"
+msgid "Keyboard shortcut to close the active pane of a split tab"
+msgstr "Ji bo girtina hilpekînê kurteriya klavyeyê ya tê bikaranîn"
+
+#: src/com.aripd.Pano.gschema.xml:559
+msgid ""
+"Keyboard shortcut to show only the active pane of a split tab, or all panes "
+"again"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:563
+#, fuzzy
+#| msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgid "Keyboard shortcut to give the panes of a tab the same size"
+msgstr "Kurteriya klavyeyê ya ji bo darikê pêşekan tê bikaranîn"
+
+#: src/com.aripd.Pano.gschema.xml:567
+#, fuzzy
+#| msgid "Keyboard shortcut to open a new tab"
+msgid "Keyboard shortcut to move the active pane to a new tab"
+msgstr "Ji bo vekirina hilpekîna nû kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:571
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to move the focus to the pane on the left"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:575
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to move the focus to the pane on the right"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:579
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to move the focus to the pane above"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:583
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to move the focus to the pane below"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:587
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid "Keyboard shortcut to move the divider of the active pane to the left"
+msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:591
+#, fuzzy
+#| msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgid "Keyboard shortcut to move the divider of the active pane to the right"
+msgstr "Kurteriya klavyeyê ya ji bo darikê pêşekan tê bikaranîn"
+
+#: src/com.aripd.Pano.gschema.xml:595
+#, fuzzy
+#| msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgid "Keyboard shortcut to move the divider of the active pane up"
+msgstr "Kurteriya klavyeyê ya ji bo darikê pêşekan tê bikaranîn"
+
+#: src/com.aripd.Pano.gschema.xml:599
+#, fuzzy
+#| msgid "Keyboard shortcut to toggle the visibility of the menubar"
+msgid "Keyboard shortcut to move the divider of the active pane down"
+msgstr "Kurteriya klavyeyê ya ji bo darikê pêşekan tê bikaranîn"
+
+#: src/com.aripd.Pano.gschema.xml:603
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane on the left"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:607
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane on the right"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:611
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane above"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:615
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to swap the active pane with the pane below"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:619
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to tab 1"
+msgid "Keyboard shortcut to show the tabs overview"
+msgstr "Ji bo tu karibî derbasî hilpekîna 1em bibe kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:623 src/com.aripd.Pano.gschema.xml:627
+#: src/com.aripd.Pano.gschema.xml:631 src/com.aripd.Pano.gschema.xml:635
+#: src/com.aripd.Pano.gschema.xml:639 src/com.aripd.Pano.gschema.xml:643
+#: src/com.aripd.Pano.gschema.xml:647 src/com.aripd.Pano.gschema.xml:651
+#: src/com.aripd.Pano.gschema.xml:655 src/com.aripd.Pano.gschema.xml:659
+#: src/com.aripd.Pano.gschema.xml:663 src/com.aripd.Pano.gschema.xml:667
+#: src/com.aripd.Pano.gschema.xml:671 src/com.aripd.Pano.gschema.xml:675
+#: src/com.aripd.Pano.gschema.xml:679 src/com.aripd.Pano.gschema.xml:683
+#: src/com.aripd.Pano.gschema.xml:687 src/com.aripd.Pano.gschema.xml:691
+#: src/com.aripd.Pano.gschema.xml:695 src/com.aripd.Pano.gschema.xml:699
+#: src/com.aripd.Pano.gschema.xml:703 src/com.aripd.Pano.gschema.xml:707
+#: src/com.aripd.Pano.gschema.xml:711 src/com.aripd.Pano.gschema.xml:715
+#: src/com.aripd.Pano.gschema.xml:719 src/com.aripd.Pano.gschema.xml:723
+#: src/com.aripd.Pano.gschema.xml:727 src/com.aripd.Pano.gschema.xml:731
+#: src/com.aripd.Pano.gschema.xml:735 src/com.aripd.Pano.gschema.xml:739
+#: src/com.aripd.Pano.gschema.xml:743 src/com.aripd.Pano.gschema.xml:747
+#: src/com.aripd.Pano.gschema.xml:751 src/com.aripd.Pano.gschema.xml:755
+#: src/com.aripd.Pano.gschema.xml:759
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to switch to the numbered tab"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:763
+#, fuzzy
+#| msgid "Keyboard shortcut to switch to the next tab"
+msgid "Keyboard shortcut to switch to the last tab"
+msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:767
 msgid "Keyboard shortcut to launch help"
 msgstr "Ji bo destpêkirina alîkariyê kurteriya klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:79
+#: src/com.aripd.Pano.gschema.xml:771
 msgid "Keyboard shortcut to make font larger"
 msgstr "Ji bo mezinkirina curenivîsan kurteriya klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:80
+#: src/com.aripd.Pano.gschema.xml:775
+msgid "Keyboard shortcut to make font smaller"
+msgstr "Ji bo biçûkkirina curenivîsan kurteriya klavyeyê"
+
+#: src/com.aripd.Pano.gschema.xml:779
 msgid "Keyboard shortcut to make font normal-size"
 msgstr ""
 "Ji bo ku tu karibî mezinahiya curenivîsan wekî asayî mîheng bike kurteriya "
 "klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:81
-msgid "Keyboard shortcut to make font smaller"
-msgstr "Ji bo biçûkkirina curenivîsan kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:82
-msgid "Keyboard shortcut to open a new tab"
-msgstr "Ji bo vekirina hilpekîna nû kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:83
-msgid "Keyboard shortcut to open a new window"
-msgstr "Ji bo vekirina paceyeke nû kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:84
-msgid "Keyboard shortcut to paste text"
-msgstr "Ji bo pêvekirina nivîsê kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:85
-msgid "Keyboard shortcut to reset and clear the terminal"
-msgstr "Ji bo vesazkirin û jêbirina dîmenderê kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:86
-msgid "Keyboard shortcut to reset the terminal"
-msgstr "Ji bo vesazkirina termînalê kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:87
-msgid "Keyboard shortcut to set the terminal title"
+#: src/com.aripd.Pano.gschema.xml:783
+#, fuzzy
+#| msgid "Keyboard shortcut to set the terminal title"
+msgid "Keyboard shortcut to show the primary menu"
 msgstr "Ji bo guherandina sernavê termînalê kurteriya klavyeyê"
 
-#: ../src/gnome-terminal.schemas.in.h:88
-msgid "Keyboard shortcut to switch to tab 1"
-msgstr "Ji bo tu karibî derbasî hilpekîna 1em bibe kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:89
-msgid "Keyboard shortcut to switch to tab 10"
-msgstr "Ji bo tu karibî derbasî hilpekîna 10em bibe kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:90
-msgid "Keyboard shortcut to switch to tab 11"
-msgstr "Ji bo tu karibî derbasî hilpekîna 11em bibe kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:91
-msgid "Keyboard shortcut to switch to tab 12"
-msgstr "Ji bo tu karibî derbasî hilpekîna 12em bibe kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:92
-msgid "Keyboard shortcut to switch to tab 2"
-msgstr "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 2'yan bibe"
-
-#: ../src/gnome-terminal.schemas.in.h:93
-msgid "Keyboard shortcut to switch to tab 3"
-msgstr "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 3'yan bibe"
-
-#: ../src/gnome-terminal.schemas.in.h:94
-msgid "Keyboard shortcut to switch to tab 4"
-msgstr "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 4'an bibe"
-
-#: ../src/gnome-terminal.schemas.in.h:95
-msgid "Keyboard shortcut to switch to tab 5"
-msgstr "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 5'an bibe"
-
-#: ../src/gnome-terminal.schemas.in.h:96
-msgid "Keyboard shortcut to switch to tab 6"
-msgstr "Ji bo çûyîna hilpekîna 6an kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:97
-msgid "Keyboard shortcut to switch to tab 7"
-msgstr "Ji bo çûyîna hilpekîna 7an kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:98
-msgid "Keyboard shortcut to switch to tab 8"
-msgstr "Ji bo çûyîna hilpekîna 8an kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:99
-msgid "Keyboard shortcut to switch to tab 9"
-msgstr "Ji bo çûyîna hilpekîna 9an kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:100
-msgid "Keyboard shortcut to switch to the next tab"
-msgstr "Ji bo çûyîna hilpekîna dû re kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:101
-msgid "Keyboard shortcut to switch to the previous tab"
-msgstr "Ji bo çûyîna hilpekîna berê kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:102
-msgid "Keyboard shortcut to toggle full screen mode"
-msgstr "Ji bo moda dîmender tije kurteriya klavyeyê"
-
-#: ../src/gnome-terminal.schemas.in.h:103
-msgid "Keyboard shortcut to toggle the visibility of the menubar"
-msgstr "Kurteriya klavyeyê ya ji bo darikê pêşekan tê bikaranîn"
-
-#: ../src/gnome-terminal.schemas.in.h:104
-msgid "List of available encodings"
-msgstr "Lîsteya kodkirinên ku dikarin werine bikaranîn"
-
-#: ../src/gnome-terminal.schemas.in.h:105
-msgid "List of profiles"
-msgstr "Lîsteya profîlan"
-
-#: ../src/gnome-terminal.schemas.in.h:106
-msgid ""
-"List of profiles known to gnome-terminal. The list contains strings naming "
-"subdirectories relative to /apps/gnome-terminal/profiles."
+#: src/com.aripd.Pano.gschema.xml:797
+msgid "Whether shortcuts are enabled"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:107
+#: src/com.aripd.Pano.gschema.xml:798
+msgid ""
+"Whether shortcuts are enabled. They may interfere with some applications run "
+"inside the terminal so it’s possible to turn them off."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:807
+msgid "Whether the standard GTK shortcut for menubar access is enabled"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:808
 msgid ""
 "Normally you can access the menubar with F10. This can also be customized "
 "via gtkrc (gtk-menu-bar-accel = \"whatever\"). This option allows the "
 "standard menubar accelerator to be disabled."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:108
-msgid "Number of lines to keep in scrollback"
+#: src/com.aripd.Pano.gschema.xml:818
+msgid "Whether the shell integration is enabled"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:109
+#: src/com.aripd.Pano.gschema.xml:819
 msgid ""
-"Number of scrollback lines to keep around. You can scroll back in the "
-"terminal by this number of lines; lines that don't fit in the scrollback are "
-"discarded. Be careful with this setting; it's the primary factor in "
-"determining how much memory the terminal will use."
+"This is about GNOME Shell: whether terminals can be found in its search. See "
+"inject-shell-integration for the integration of the shells in the terminals."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:110
-msgid "Palette for terminal applications"
-msgstr "Ji bo sepanên termînalê palet"
+#: src/com.aripd.Pano.gschema.xml:824
+msgid "Whether to add shell integration to bash, zsh and fish"
+msgstr ""
 
-#. Translators: S/Key is the name of an application, so it should
-#. not be translated.
-#: ../src/gnome-terminal.schemas.in.h:113
+#: src/com.aripd.Pano.gschema.xml:825
 msgid ""
-"Popup a dialog when an S/Key challenge response query is detected and "
-"clicked on. Typing a password into the dialog will send it to the terminal."
+"If true, the default shell of a profile is started so that it reports its "
+"prompts, commands and working directory, which command notifications, prompt "
+"navigation and copying command output need. Custom commands, login bash "
+"shells and terminals in containers are left alone."
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:114
-msgid "Position of the scrollbar"
-msgstr "Cihê darikê şemitandinê"
-
-#: ../src/gnome-terminal.schemas.in.h:115
-msgid ""
-"Possible values are \"close\" to close the terminal, and \"restart\" to "
-"restart the command."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:116
-msgid "Profile to be used when opening a new window or tab. Must be in profile_list."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:117
-msgid "Profile to use for new terminals"
-msgstr "Ji bo termînalên nû profîla ku wê were bikaranîn"
-
-#: ../src/gnome-terminal.schemas.in.h:118
-msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "Heke custom_command hatibe hilbijartin dêvila qalik vê fermanê bixebitîne."
-
-#: ../src/gnome-terminal.schemas.in.h:119
-msgid ""
-"Sets what code the backspace key generates. Possible values are \"ascii-del"
-"\" for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII "
-"BS character), \"escape-sequence\" for the escape sequence typically bound "
-"to backspace or delete. \"ascii-del\" is normally considered the correct "
-"setting for the Backspace key."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:120
-msgid ""
-"Sets what code the delete key generates. Possible values are \"ascii-del\" "
-"for the ASCII DEL character, \"control-h\" for Control-H (AKA the ASCII BS "
-"character), \"escape-sequence\" for the escape sequence typically bound to "
-"backspace or delete. \"escape-sequence\" is normally considered the correct "
-"setting for the Delete key."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:122
-msgid ""
-"Terminals have a 16-color palette that applications inside the terminal can "
-"use. This is that palette, in the form of a colon-separated list of color "
-"names. Color names should be in hex format e.g. \"#FF00FF\""
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:123
-msgid "Title for terminal"
-msgstr "Sernavê termînalê"
-
-#: ../src/gnome-terminal.schemas.in.h:124
-msgid ""
-"Title to display for the terminal window or tab. This title may be replaced "
-"by or combined with the title set by the application inside the terminal, "
-"depending on the title_mode setting."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:125
-msgid ""
-"True if the cursor should blink when the terminal has focus, for windows/"
-"tabs with this profile."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:126
-msgid ""
-"True if the menubar should be shown in new windows, for windows/tabs with "
-"this profile."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:127
-msgid ""
-"Type of terminal background. May be \"solid\" for a solid color, \"image\" "
-"for an image, or \"transparent\" for pseudo-transparency."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:128
-msgid "What to do with dynamic title"
-msgstr "Wê bi sernavê dînamîk çi were kirin"
-
-#: ../src/gnome-terminal.schemas.in.h:129
-msgid "What to do with the terminal when the child command exits"
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:130
-msgid ""
-"When selecting text by word, sequences of these characters are considered "
-"single words. Ranges can be given as \"A-Z\". Literal hyphen (not expressing "
-"a range) should be the first character given."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:131
-msgid ""
-"Where to put the terminal scrollbar. Possibilities are \"left\", \"right\", "
-"and \"disabled\"."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:132
-msgid "Whether the menubar has access keys"
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:133
-msgid "Whether the standard GTK shortcut for menubar access is enabled"
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:134
-msgid "Whether to allow bold text"
-msgstr "Destûrdayîna nivîsa stûr"
-
-#: ../src/gnome-terminal.schemas.in.h:135
-msgid ""
-"Whether to ask for confirmation when closing a terminal window which has "
-"more than one open tab."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:136
-msgid "Whether to ask for confirmation when closing terminal windows"
+#: src/com.aripd.Pano.gschema.xml:830
+#, fuzzy
+#| msgid "Whether to ask for confirmation when closing terminal windows"
+msgid "Whether to ask for confirmation before closing a terminal"
 msgstr "Dema paceyên termînalê werine girtin ji bo pirskirina erekirinê"
 
-#: ../src/gnome-terminal.schemas.in.h:137
-msgid "Whether to blink the cursor"
+#: src/com.aripd.Pano.gschema.xml:835
+msgid "Additional info section items to appear in the context menu"
 msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:138
-msgid "Whether to disable anti-aliasing without the X RENDER extension"
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:139
-msgid ""
-"Whether to have Alt+letter access keys for the menubar. They may interfere "
-"with some applications run inside the terminal so it's possible to turn them "
-"off."
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:140
-msgid "Whether to launch the command in the terminal as a login shell"
-msgstr "Wêkî qalikê têketinê xebitandina fermana termînalê"
-
-#: ../src/gnome-terminal.schemas.in.h:141
-msgid "Whether to run a custom command instead of the shell"
-msgstr "Dêvila qalik xebitandina fermaneke taybet"
-
-#: ../src/gnome-terminal.schemas.in.h:142
-msgid "Whether to scroll background image"
-msgstr "Şemitandina wêneyê rûerd"
-
-#: ../src/gnome-terminal.schemas.in.h:143
-msgid "Whether to scroll to the bottom when a key is pressed"
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:144
-msgid "Whether to scroll to the bottom when there's new output"
-msgstr ""
-
-#: ../src/gnome-terminal.schemas.in.h:145
-msgid "Whether to show menubar in new windows/tabs"
+#: src/com.aripd.Pano.gschema.xml:840
+#, fuzzy
+#| msgid "Whether to show menubar in new windows/tabs"
+msgid "Whether to open new terminals as windows or tabs"
 msgstr "Di pace/hilpekînan de nîşandana darikê pêşekê"
 
-#: ../src/gnome-terminal.schemas.in.h:146
-msgid "Whether to silence terminal bell"
-msgstr "Qutkirina dengê zengilê termînalê"
+#: src/com.aripd.Pano.gschema.xml:845
+msgid "When to show the tabs bar"
+msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:147
-msgid "Whether to update login records when launching terminal command"
-msgstr "Dema fermanên termînalê hate destpêkirin rojanekirina tomarên têketinê"
+#: src/com.aripd.Pano.gschema.xml:851
+msgid "Width of the tab list when the tabs are on the left or right"
+msgstr ""
 
-#: ../src/gnome-terminal.schemas.in.h:148
-msgid "Whether to use the colors from the theme for the terminal widget"
+#: src/com.aripd.Pano.gschema.xml:855
+#, fuzzy
+#| msgid "Position of the scrollbar"
+msgid "The position of the tabs bar"
+msgstr "Cihê darikê şemitandinê"
+
+#: src/com.aripd.Pano.gschema.xml:860
+msgid "Which theme variant to use"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:865
+msgid ""
+"Whether new tabs should open next to the current one or at the last position"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:870
+msgid "What a middle click on a tab does"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:871
+msgid ""
+"“close” closes the tab; “paste” switches to the tab and pastes the primary "
+"selection into it."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:876
+msgid "Whether windows should have rounded corners"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:881
+msgid "The space between the terminal text and the edges of the terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:882
+msgid ""
+"“none” removes it, also next to rounded window corners; “small” keeps the "
+"text clear of rounded corners; “large” leaves more room."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:889
+msgid ""
+"Whether the user has been asked to import the settings of GNOME Terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:894
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to give the header bar and the tabs the colors of the active terminal"
 msgstr "Ji dirbê perçekê termînalê bikaranîna rengan"
 
-#: ../src/gnome-terminal.schemas.in.h:149
-msgid "Whether to use the system font"
-msgstr "Bikaranîna curenivîsên pergalê"
-
-#. Translators: Please note that this has to be a list of
-#. valid encodings (which are to be taken from the list in src/encoding.c).
-#. It has to include UTF-8 and the word 'current', which is not to be
-#. translated. This is provided for customization of the default encoding
-#. menu; see bug 144810 for an use case. In most cases, this should be
-#. left alone.
-#: ../src/gnome-terminal.schemas.in.h:156
-msgid "[UTF-8,current]"
-msgstr "[UTF-8,current]"
-
-#: ../src/profile-editor.c:49
-msgid "Black on light yellow"
-msgstr "Li ser zerê vekirî reş"
-
-#: ../src/profile-editor.c:51
-msgid "Black on white"
-msgstr "Reş ser spî"
-
-#: ../src/profile-editor.c:53
-msgid "Gray on black"
-msgstr "Li ser reş cûn"
-
-#: ../src/profile-editor.c:55
-msgid "Green on black"
-msgstr "Li ser reş kesk"
-
-#: ../src/profile-editor.c:57
-msgid "White on black"
-msgstr "Spî ser reş"
-
-#: ../src/profile-editor.c:70
-msgid "Linux console"
-msgstr "Konsola Linuxê"
-
-#: ../src/profile-editor.c:71
-msgid "XTerm"
-msgstr "XTerm"
-
-#: ../src/profile-editor.c:72
-msgid "Rxvt"
-msgstr "Rxvt"
-
-#: ../src/profile-editor.c:73
-msgid "Tango"
-msgstr "Tango"
-
-#: ../src/profile-editor.c:890
-msgid "Images"
-msgstr "Wêne"
-
-#: ../src/profile-editor.c:894
-msgid "All Files"
-msgstr "Hemû Pel"
-
-#: ../src/profile-editor.c:1205
-#, c-format
-msgid "Choose Palette Color %d"
-msgstr "Paleta Reng Hilbijêere %d"
-
-#: ../src/profile-editor.c:1209
-#, c-format
-msgid "Palette entry %d"
-msgstr "Ketana paletê %d"
-
-#: ../src/profile-editor.c:1237 ../src/profile-editor.c:1270
-msgid "Choose A Terminal Font"
-msgstr "Ji Bo Termînalê Curenivîsekê Hilbijêre"
-
-#: ../src/profile-editor.c:1248 ../src/simple-x-font-selector.c:327
-msgid "_Font:"
-msgstr "_Curenivîs:"
-
-#: ../src/profile-editor.c:1548
-#, c-format
-msgid "Editing Profile \"%s\""
-msgstr "Profîla \"%s\" tê guherandin"
-
-#: ../src/simple-x-font-selector.c:332
-msgid "Si_ze:"
-msgstr "_Mezinahî:"
-
-#: ../src/simple-x-font-selector.c:334
-msgid "_Use bold version of font"
-msgstr "Awayê stûr yê curenivîsê _bikar bîne"
-
-#: ../src/simple-x-font-selector.c:341
-msgid "Click to choose font type"
-msgstr "Ji bo hilbijartina curenivîsê bitikîne"
-
-#: ../src/simple-x-font-selector.c:345
-msgid "Click to choose font size"
-msgstr "Ji bo hilbijartina mezinahiya curenivîsê bitikîne"
-
-#: ../src/simple-x-font-selector.c:656
-msgid "roman"
-msgstr "roman"
-
-#: ../src/simple-x-font-selector.c:657
-msgid "italic"
-msgstr "paldayî"
-
-#: ../src/simple-x-font-selector.c:658
-msgid "oblique"
-msgstr "raketî"
-
-#: ../src/simple-x-font-selector.c:659
-msgid "reverse italic"
-msgstr "vajî paldayî"
-
-#: ../src/simple-x-font-selector.c:660
-msgid "reverse oblique"
-msgstr "vajî raketî"
-
-#: ../src/simple-x-font-selector.c:661
-msgid "other"
-msgstr "wekî din"
-
-#: ../src/simple-x-font-selector.c:668
-msgid "proportional"
-msgstr "birêje"
-
-#: ../src/simple-x-font-selector.c:669
-msgid "monospaced"
-msgstr "bi navberên wekhev"
-
-#: ../src/simple-x-font-selector.c:670
-msgid "char cell"
-msgstr "malika karakteran"
-
-#: ../src/simple-x-font-selector.c:1265
-msgid "MAX_FONTS exceeded. Some fonts may be missing."
-msgstr "MAX_FONTS hate derbasbûn. Dibe ku hîn awayê nivêsê xelet bin."
-
-#: ../src/skey-popup.c:122
-msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
+#: src/com.aripd.Pano.gschema.xml:895
+msgid ""
+"Only when the terminal uses a color scheme or colors of its own, not the "
+"system style; the colors for root and remote sessions take precedence."
 msgstr ""
 
-#: ../src/skey-popup.c:133
-msgid "The text you clicked on doesn't seem to be a valid OTP challenge."
+#: src/com.aripd.Pano.gschema.xml:900
+msgid "Whether to dim the panes of a split tab other than the active one"
 msgstr ""
 
-#: ../src/terminal-accels.c:78
+#: src/com.aripd.Pano.gschema.xml:905
+msgid "Whether to show a title bar above each pane of a split tab"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:910
+msgid "Regular expressions for more text that quick select offers"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:911
+msgid ""
+"Quick select labels URLs, paths, hashes, addresses and numbers; matches of "
+"these Perl-compatible regular expressions are offered too, before those."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:916
+msgid "Whether to ignore the titles that programs set"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:917
+msgid ""
+"If true, terminals show the title set with “Set Title…” or the --title "
+"option, or else their working directory, instead of the title that programs "
+"set with escape sequences."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:922
+msgid "Whether to show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:927
+msgid ""
+"Whether to notify when a long-running command finishes in the background"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:928
+msgid ""
+"Needs a shell that reports its commands, for example bash or zsh with the "
+"VTE shell integration (vte.sh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:934
+msgid "How long a command must run, in seconds, before its end is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:940
+msgid ""
+"How long, in seconds, a terminal monitored for silence must be quiet before "
+"that is notified"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:946
+msgid "Width of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:952
+msgid "Height of the quick terminal, in percent of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:957
+msgid ""
+"Whether the quick terminal hides when another application gets the focus"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:962
+msgid "Whether the quick terminal slides in from the top edge of the screen"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:963
+msgid "Only on X11, where applications can place their windows."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:968
+#, fuzzy
+#| msgid "Whether to use the colors from the theme for the terminal widget"
+msgid ""
+"Whether to ask the desktop for a system-wide shortcut for the quick terminal"
+msgstr "Ji dirbê perçekê termînalê bikaranîna rengan"
+
+#: src/com.aripd.Pano.gschema.xml:969
+msgid ""
+"Uses the GlobalShortcuts portal (GNOME 48 or newer, KDE Plasma). The desktop "
+"sends the shortcut only to a running application, so Pano Terminal then "
+"keeps running in the background and starts when you log in."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:974
+msgid "Whether to show when a terminal runs as root or over SSH"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:975
+msgid ""
+"Colors the header bar and marks the tab while the foreground program of the "
+"terminal runs as root (for example sudo or su) or connects to another "
+"computer (ssh, mosh)."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:980
+msgid ""
+"Whether new tabs and panes start in the container of the terminal they are "
+"opened from"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:981
+msgid ""
+"Works for Toolbox and Distrobox containers. The shell inside the container "
+"has to report it (Toolbox does), or the terminal has to be started in it "
+"from Pano Terminal."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:986
+msgid ""
+"Whether to reopen the windows, tabs and panes of the last session on startup"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:987
+msgid ""
+"Applies when Pano Terminal is started without arguments and no window is "
+"open. Each terminal gets a new shell in its previous working directory; "
+"running programs are not restored."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:992
+msgid "Whether new windows get the size of the last used terminal"
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:993
+msgid ""
+"When enabled, new windows use the number of columns and rows of the terminal "
+"used last, instead of the initial size of the profile."
+msgstr ""
+
+#: src/com.aripd.Pano.gschema.xml:998
+msgid "Always check whether Pano Terminal is the default terminal"
+msgstr ""
+
+#: src/search-popover.ui:5 src/search-popover.ui:26 src/terminal-accels.cc:166
+#: src/terminal-headerbar.ui:66
+msgid "Find"
+msgstr "Bibîne"
+
+#: src/search-popover.ui:34
+msgid "Find previous occurrence"
+msgstr ""
+
+#: src/search-popover.ui:48
+msgid "Find next occurrence"
+msgstr ""
+
+#: src/search-popover.ui:68
+msgid "Toggle search options"
+msgstr ""
+
+#: src/search-popover.ui:107
+msgid "_Match case"
+msgstr ""
+
+#: src/search-popover.ui:117
+msgid "Match _entire word only"
+msgstr ""
+
+#: src/search-popover.ui:127
+msgid "Match as _regular expression"
+msgstr ""
+
+#: src/search-popover.ui:137
+msgid "_Wrap around"
+msgstr "Rûerdê _şeffaf"
+
+#. Translators: <b>%s</b> is used to show the provided text in bold
+#: src/terminal-accel-dialog.cc:437
+#, c-format
+msgid "Enter new shortcut to change <b>%s</b>."
+msgstr ""
+
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2553
+msgid "_Cancel"
+msgstr ""
+
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2554
+msgid "_Set"
+msgstr ""
+
+#: src/terminal-accel-dialog.ui:88
+msgid "Press Escape to cancel or Backspace to disable."
+msgstr ""
+
+#: src/terminal-accel-row.cc:54
+#, fuzzy
+#| msgid "Disabled"
+msgid "disabled"
+msgstr "Neçalak"
+
+#: src/terminal-accel-row.cc:88
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "Set Shortcut"
+msgstr "Kurteriyên Klavyeyê"
+
+#: src/terminal-accels.cc:148 src/terminal-headerbar.ui:29
 msgid "New Tab"
 msgstr "Hilfirîna Nû"
 
-#: ../src/terminal-accels.c:80
-msgid "New Window"
-msgstr "Paceya nû"
+#: src/terminal-accels.cc:150 src/terminal-window.cc:603
+#, fuzzy
+#| msgid "Contents"
+msgid "Save Contents"
+msgstr "Naverok"
 
-#: ../src/terminal-accels.c:84
+#: src/terminal-accels.cc:151
 msgid "Close Tab"
 msgstr "Hilfirînê Bigire"
 
-#: ../src/terminal-accels.c:86
+#: src/terminal-accels.cc:152
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close Other Tabs"
+msgstr "Hilfirînê Bigire"
+
+#: src/terminal-accels.cc:153
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Reopen Closed Tab"
+msgstr "Hilfirînê Bigire"
+
+#: src/terminal-accels.cc:154
 msgid "Close Window"
 msgstr "Paceyê bigire"
 
-#: ../src/terminal-accels.c:92
+#: src/terminal-accels.cc:158 src/terminal-profile-editor.ui:51
+#: src/terminal-profile-row.cc:56
 msgid "Copy"
 msgstr "Ji ber bigire"
 
-#: ../src/terminal-accels.c:94
+#: src/terminal-accels.cc:159
+msgid "Copy as HTML"
+msgstr ""
+
+#: src/terminal-accels.cc:160
 msgid "Paste"
 msgstr "Pêveke"
 
-#: ../src/terminal-accels.c:100
-msgid "Hide and Show menubar"
-msgstr "Darikê Pêşekê Veşêre û Nîşan Bide"
+#: src/terminal-accels.cc:161
+msgid "Select All"
+msgstr ""
 
-#: ../src/terminal-accels.c:102
+#: src/terminal-accels.cc:167
+#, fuzzy
+#| msgid "Find"
+msgid "Find Next"
+msgstr "Bibîne"
+
+#: src/terminal-accels.cc:168
+#, fuzzy
+#| msgid "_Previous Tab"
+msgid "Find Previous"
+msgstr "Hilfirîna _Berê"
+
+#: src/terminal-accels.cc:169
+msgid "Clear Highlight"
+msgstr ""
+
+#: src/terminal-accels.cc:173
 msgid "Full Screen"
 msgstr "Dîmender Tije"
 
-#: ../src/terminal-accels.c:104
+#: src/terminal-accels.cc:174
 msgid "Zoom In"
 msgstr "Nêzîkkirin"
 
-#: ../src/terminal-accels.c:106
+#: src/terminal-accels.cc:175
 msgid "Zoom Out"
 msgstr "Dûrkirin"
 
-#: ../src/terminal-accels.c:108
+#: src/terminal-accels.cc:176
 msgid "Normal Size"
 msgstr "Mezinahiya asayî"
 
-#: ../src/terminal-accels.c:114 ../src/terminal-screen.c:2213
+#: src/terminal-accels.cc:177
+#, fuzzy
+#| msgid "Color _palette:"
+msgid "Command Palette"
+msgstr "_Paleta rengan:"
+
+#: src/terminal-accels.cc:178
+msgid "Quick Select"
+msgstr ""
+
+#: src/terminal-accels.cc:182
+msgid "Read-Only"
+msgstr ""
+
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2550
 msgid "Set Title"
 msgstr "Sernav Sererast Bike"
 
-#: ../src/terminal-accels.c:116
+#: src/terminal-accels.cc:184 src/terminal-profile-editor.ui:610
+#: src/terminal-profile-editor.ui:848
 msgid "Reset"
 msgstr "Vesazkirin"
 
-#: ../src/terminal-accels.c:118
+#: src/terminal-accels.cc:185
 msgid "Reset and Clear"
 msgstr "Vesaz Bike û Paqij Bike"
 
-#: ../src/terminal-accels.c:124
+#: src/terminal-accels.cc:186
+#, fuzzy
+#| msgid "Switch to Previous Tab"
+msgid "Scroll to Previous Prompt"
+msgstr "Biçe Hilfirîna Berê"
+
+#: src/terminal-accels.cc:187
+msgid "Scroll to Next Prompt"
+msgstr ""
+
+#: src/terminal-accels.cc:188
+msgid "Copy Output of Last Command"
+msgstr ""
+
+#: src/terminal-accels.cc:192
 msgid "Switch to Previous Tab"
 msgstr "Biçe Hilfirîna Berê"
 
-#: ../src/terminal-accels.c:126
+#: src/terminal-accels.cc:193
 msgid "Switch to Next Tab"
 msgstr "Biçe Hilfirîna Dûre"
 
-#: ../src/terminal-accels.c:128
+#: src/terminal-accels.cc:194
 msgid "Move Tab to the Left"
 msgstr "Hilpekînê Bibe Aliyê Çepê"
 
-#: ../src/terminal-accels.c:130
+#: src/terminal-accels.cc:195
 msgid "Move Tab to the Right"
 msgstr "Hilpekînê Bibe Aliyê Rastê"
 
-#: ../src/terminal-accels.c:132
+#: src/terminal-accels.cc:196
+#, fuzzy
+#| msgid "Move Tab to the Left"
+msgid "Move Tab to the Start"
+msgstr "Hilpekînê Bibe Aliyê Çepê"
+
+#: src/terminal-accels.cc:197
+#, fuzzy
+#| msgid "Move Tab to the Left"
+msgid "Move Tab to the End"
+msgstr "Hilpekînê Bibe Aliyê Çepê"
+
+#: src/terminal-accels.cc:198
 msgid "Detach Tab"
 msgstr "Hilfirînê Veqetîne"
 
-#: ../src/terminal-accels.c:134
-msgid "Switch to Tab 1"
-msgstr "Biçe Hilfirîna 1an"
+#: src/terminal-accels.cc:199
+msgid "Show Tabs Overview"
+msgstr ""
 
-#: ../src/terminal-accels.c:137
-msgid "Switch to Tab 2"
-msgstr "Biçe Hilfirîna 2yan"
+#: src/terminal-accels.cc:200
+msgid "Focus the Tab List"
+msgstr ""
 
-#: ../src/terminal-accels.c:140
-msgid "Switch to Tab 3"
-msgstr "Biçe Hilfirîna 3an"
+#: src/terminal-accels.cc:236
+#, fuzzy
+#| msgid "Switch to Next Tab"
+msgid "Switch to Last Tab"
+msgstr "Biçe Hilfirîna Dûre"
 
-#: ../src/terminal-accels.c:143
-msgid "Switch to Tab 4"
-msgstr "Biçe Hilfirîna 4an"
+#: src/terminal-accels.cc:240
+msgid "Split Right"
+msgstr ""
 
-#: ../src/terminal-accels.c:146
-msgid "Switch to Tab 5"
-msgstr "Biçe Hilfirîna 5an"
+#: src/terminal-accels.cc:241
+msgid "Split Down"
+msgstr ""
 
-#: ../src/terminal-accels.c:149
-msgid "Switch to Tab 6"
-msgstr "Biçe Hilfirîna 6an"
+#: src/terminal-accels.cc:242
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close Pane"
+msgstr "Hilfirînê Bigire"
 
-#: ../src/terminal-accels.c:152
-msgid "Switch to Tab 7"
-msgstr "Biçe Hilfirîna 7an"
+#: src/terminal-accels.cc:243
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom Pane"
+msgstr "Nêzîkkirin"
 
-#: ../src/terminal-accels.c:155
-msgid "Switch to Tab 8"
-msgstr "Biçe Hilfirîna 8an"
+#: src/terminal-accels.cc:244
+msgid "Make Panes the Same Size"
+msgstr ""
 
-#: ../src/terminal-accels.c:158
-msgid "Switch to Tab 9"
-msgstr "Biçe Hilfirîna 9an"
+#: src/terminal-accels.cc:245
+msgid "Move Pane to a New Tab"
+msgstr ""
 
-#: ../src/terminal-accels.c:161
-msgid "Switch to Tab 10"
-msgstr "Biçe Hilfirîna 10an"
+#: src/terminal-accels.cc:246
+#, fuzzy
+#| msgid "Move Tab to the Left"
+msgid "Focus the Pane on the Left"
+msgstr "Hilpekînê Bibe Aliyê Çepê"
 
-#: ../src/terminal-accels.c:164
-msgid "Switch to Tab 11"
-msgstr "Biçe Hilfirîna 11an"
+#: src/terminal-accels.cc:247
+#, fuzzy
+#| msgid "Move Tab to the Right"
+msgid "Focus the Pane on the Right"
+msgstr "Hilpekînê Bibe Aliyê Rastê"
 
-#: ../src/terminal-accels.c:167
-msgid "Switch to Tab 12"
-msgstr "Biçe Hilfirîna 12an"
+#: src/terminal-accels.cc:248
+msgid "Focus the Pane Above"
+msgstr ""
 
-#: ../src/terminal-accels.c:173
+#: src/terminal-accels.cc:249
+msgid "Focus the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:250
+msgid "Move Divider Left"
+msgstr ""
+
+#: src/terminal-accels.cc:251
+#, fuzzy
+#| msgid "Move Tab to the Right"
+msgid "Move Divider Right"
+msgstr "Hilpekînê Bibe Aliyê Rastê"
+
+#: src/terminal-accels.cc:252
+msgid "Move Divider Up"
+msgstr ""
+
+#: src/terminal-accels.cc:253
+msgid "Move Divider Down"
+msgstr ""
+
+#: src/terminal-accels.cc:254
+msgid "Swap With the Pane on the Left"
+msgstr ""
+
+#: src/terminal-accels.cc:255
+msgid "Swap With the Pane on the Right"
+msgstr ""
+
+#: src/terminal-accels.cc:256
+msgid "Swap With the Pane Above"
+msgstr ""
+
+#: src/terminal-accels.cc:257
+msgid "Swap With the Pane Below"
+msgstr ""
+
+#: src/terminal-accels.cc:258
+msgid "Broadcast Input to This Tab"
+msgstr ""
+
+#: src/terminal-accels.cc:259
+msgid "Broadcast Input to This Window"
+msgstr ""
+
+#: src/terminal-accels.cc:263
 msgid "Contents"
 msgstr "Naverok"
 
-#: ../src/terminal-accels.c:178
+#: src/terminal-accels.cc:267
+#, fuzzy
+#| msgid "Show Menu_bar"
+msgid "Show Primary Menu"
+msgstr "_Darika menuyê nîşan bide"
+
+#: src/terminal-accels.cc:278
 msgid "File"
 msgstr "Pel"
 
-#: ../src/terminal-accels.c:179
+#: src/terminal-accels.cc:279
 msgid "Edit"
 msgstr "Biguherîne"
 
-#: ../src/terminal-accels.c:180
+#: src/terminal-accels.cc:280
 msgid "View"
 msgstr "Dîtin"
 
-#: ../src/terminal-accels.c:182
-msgid "Go"
-msgstr "Biçe"
+#: src/terminal-accels.cc:281
+msgid "Search"
+msgstr "Lê bigere"
 
-#: ../src/terminal-accels.c:183
+#: src/terminal-accels.cc:283
+msgid "Tabs"
+msgstr ""
+
+#: src/terminal-accels.cc:284
+#, fuzzy
+#| msgid "Japanese"
+msgid "Panes"
+msgstr "Japonî"
+
+#: src/terminal-accels.cc:285
 msgid "Help"
 msgstr "Alîkarî"
 
-#: ../src/terminal-accels.c:273 ../src/terminal-profile.c:395
-#: ../src/terminal-screen.c:204 ../src/terminal.c:1724
-#, c-format
-msgid "There was an error loading config from %s. (%s)\n"
-msgstr "Dema ji %s mîheng dihatine barkirin çewtî çêbû. (%s)\n"
-
-#: ../src/terminal-accels.c:287
-#, c-format
-msgid ""
-"There was an error subscribing to notification of terminal keybinding "
-"changes. (%s)\n"
+#: src/terminal-accels.cc:286
+msgid "Global"
 msgstr ""
 
-#: ../src/terminal-accels.c:328
-#, c-format
-msgid "There was an error loading a terminal keybinding. (%s)\n"
-msgstr "Dema girêdanên bişkokên termînalê dihate barkirin çewtî çêbû. (%s)\n"
+#: src/terminal-accels.cc:402
+#, fuzzy, c-format
+#| msgid "Switch to Tab 1"
+msgid "Switch to Tab %u"
+msgstr "Biçe Hilfirîna 1an"
 
-#: ../src/terminal-accels.c:344
-#, c-format
-msgid "The value of configuration key %s is not valid; value is \"%s\"\n"
-msgstr "Nirxa mifteya veavakirinê ya %s ne derbasdar e, nirx \"%s\"\n"
+#: src/terminal-app.cc:518
+#, fuzzy
+#| msgid "Terminal"
+msgid "New Terminal"
+msgstr "Termînal"
 
-#: ../src/terminal-accels.c:367
+#: src/terminal-app.cc:568
+#, fuzzy
+#| msgid "_Profiles:"
+msgid "_Profile"
+msgstr "_Profîl:"
+
+#: src/terminal-app.cc:1347
 #, c-format
-msgid ""
-"There was an error loading config value for whether to use menubar access "
-"keys. (%s)\n"
+msgid "%u s"
 msgstr ""
 
-#: ../src/terminal-accels.c:381
+#: src/terminal-app.cc:1349
 #, c-format
-msgid ""
-"There was an error subscribing to notification on changes on whether to use "
-"menubar access keys (%s)\n"
+msgid "%u min %u s"
 msgstr ""
 
-#: ../src/terminal-accels.c:392
+#: src/terminal-app.cc:1350
 #, c-format
-msgid ""
-"There was an error loading config value for whether to use menu "
-"accelerators. (%s)\n"
+msgid "%u h %u min"
 msgstr ""
 
-#: ../src/terminal-accels.c:408
+#: src/terminal-app.cc:1376
 #, c-format
-msgid ""
-"There was an error subscribing to notification for use_menu_accelerators (%"
-"s)\n"
+msgid "Finished after %s"
 msgstr ""
 
-#: ../src/terminal-accels.c:786
+#: src/terminal-app.cc:1377
 #, c-format
-msgid "Error propagating accelerator change to configuration database: %s\n"
+msgid "Failed with exit status %u after %s"
 msgstr ""
 
-#: ../src/terminal-accels.c:995
+#: src/terminal-app.cc:1387
+msgid "Command finished"
+msgstr ""
+
+#: src/terminal-app.cc:1387
+msgid "Command failed"
+msgstr ""
+
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:235
 #, c-format
-msgid "The shortcut key \"%s\" is already bound to the \"%s\" action"
-msgstr "Bişkoka kurteriyê ya \"%s\" jixwe bi çalakiya \"%s\" hatiye girêdan"
+msgid "New Tab with Profile “%s”"
+msgstr ""
 
-#: ../src/terminal-accels.c:1028
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:239
 #, c-format
-msgid "Error setting new accelerator in configuration database: %s\n"
-msgstr "Dema lezkereke nû li danegira veavakirinan mîheng dikir çewtî derket: %s\n"
+msgid "New Window with Profile “%s”"
+msgstr ""
 
-#: ../src/terminal-accels.c:1059
+#. Translators: %s is the name of a profile
+#: src/terminal-command-palette.cc:244
 #, c-format
-msgid "Error setting %s config key: %s\n"
-msgstr "Dema %s mifte mîheng dikir çewtî çêbû: %s\n"
+msgid "Use Profile “%s” in This Terminal"
+msgstr ""
 
-#: ../src/terminal-accels.c:1087
+#. Translators: %s is the title of a terminal
+#: src/terminal-command-palette.cc:269
 #, c-format
-msgid "Error setting use_menu_accelerators key: %s\n"
-msgstr "Dema mifteya use_menu_accelerators dihate mîhengkirin çewtî çêbû: %s\n"
+msgid "Go to “%s”"
+msgstr ""
 
-#: ../src/terminal-accels.c:1206
-msgid "_Action"
-msgstr "Çala_kî"
+#. Translators: %d is the number of a tab
+#: src/terminal-command-palette.cc:271
+#, c-format
+msgid "A pane in tab %d"
+msgstr ""
 
-#: ../src/terminal-accels.c:1226
-msgid "Shortcut _Key"
-msgstr "_Bişkoka Kurteriyan"
+#: src/terminal-command-palette.cc:272
+#, c-format
+msgid "Tab %d"
+msgstr ""
 
-#: ../src/terminal-notebook.c:818
-msgid "Close tab"
+#: src/terminal-command-palette.cc:465
+msgid "Search actions, profiles and tabs"
+msgstr ""
+
+#: src/terminal-find-bar.ui:67
+#, fuzzy
+#| msgid "_Search for:"
+msgid "Search results"
+msgstr "_Lêgerîn: "
+
+#: src/terminal-find-bar.ui:80
+msgid "Search up to next result"
+msgstr ""
+
+#: src/terminal-find-bar.ui:87
+msgid "Search down to next result"
+msgstr ""
+
+#: src/terminal-find-bar.ui:96
+#, fuzzy
+#| msgid "_Search for:"
+msgid "Search Options"
+msgstr "_Lêgerîn: "
+
+#: src/terminal-find-bar.ui:107
+msgid "Match _Case"
+msgstr ""
+
+#: src/terminal-find-bar.ui:114
+msgid "Whole _Words"
+msgstr ""
+
+#: src/terminal-find-bar.ui:121
+msgid "Use _Regular Expressions"
+msgstr ""
+
+#: src/terminal-find-bar.ui:142
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close"
+msgstr "Hilfirînê Bigire"
+
+#: src/terminal-find-bar.ui:143
+#, fuzzy
+#| msgid "Close tab"
+msgid "Close the search bar"
 msgstr "Hilfirînê bigire"
 
-#: ../src/terminal-profile.c:410
-#, c-format
-msgid ""
-"There was an error subscribing to notification of terminal profile changes. "
-"(%s)\n"
-msgstr ""
-"Dema li danezanên guherînên profîlên termînalê dihate tomarkirin çewtî çêbû. "
-"(%s)\n"
+#: src/terminal-headerbar.ui:40
+#, fuzzy
+#| msgid "New Profile"
+msgid "New Tab from Profile"
+msgstr "Profîla nû"
 
-#: ../src/terminal-profile.c:1005
-#, c-format
-msgid "Could not find an icon called \"%s\" for terminal profile \"%s\"\n"
-msgstr ""
-"Ji bo profîla termînalê ya \"%s\" şiklekî ku bi navê xwe \"%s\" ye nehate "
-"dîtin\n"
-
-#: ../src/terminal-profile.c:1019
-#, c-format
-msgid "Failed to load icon \"%s\" for terminal profile \"%s\": %s\n"
-msgstr "Ji bo profîla \"%s\" bi navê \"%s\" tu îkon nehate dîtin. %s\n"
-
-#: ../src/terminal-profile.c:1205
-#, c-format
-msgid "Could not find a background image called \"%s\" for terminal profile \"%s\"\n"
-msgstr ""
-
-#: ../src/terminal-profile.c:1219
-#, c-format
-msgid "Failed to load background image \"%s\" for terminal profile \"%s\": %s\n"
-msgstr ""
-
-#: ../src/terminal-profile.c:1894
-#, fuzzy, c-format
-msgid ""
-"Pano Terminal: font name \"%s\" set in configuration database is not "
-"valid\n"
-msgstr ""
-"Termînala GNOME: navê curenivîsa \"%s\" ya di danegeha veavakirinê de ye "
-"nedernasdar e\n"
-
-#: ../src/terminal-profile.c:2197
-#, c-format
-msgid "Error getting default value of %s: %s\n"
-msgstr "Dema nirxa standard ya %s dihate stendin çewtî: %s\n"
-
-#: ../src/terminal-profile.c:2203
-#, c-format
-msgid "There wasn't a default value for %s\n"
-msgstr "Ji bo %s tu nirxa standard tuneye\n"
-
-#: ../src/terminal-profile.c:2218
-#, c-format
-msgid "Error setting key %s back to default: %s\n"
-msgstr "Dema mifteya %s li nirxên standard dihate mîhengkirin çewtî çêbû: %s\n"
-
-#: ../src/terminal-profile.c:2421
-#, c-format
-msgid "There was an error while removing the configuration directory %s. (%s)\n"
-msgstr ""
-
-#: ../src/terminal-profile.c:2478
-#, c-format
-msgid ""
-"There was an error subscribing to notification of changes to default "
-"profile. (%s)\n"
-msgstr ""
-
-#: ../src/terminal-profile.c:2523
-msgid "_Details"
-msgstr "_Hûragahî"
-
-#: ../src/terminal-profile.c:2966 ../src/terminal.c:2396
-#, c-format
-msgid "There was an error creating the profile \"%s\""
-msgstr "Dema profîla \"%s\" dihate afirandin çewtiyek çêbû"
-
-#: ../src/terminal-profile.c:3058
-msgid "There was an error deleting the profiles"
-msgstr "Dema profîl jê dihatin birin çewtî çêbû"
-
-#: ../src/terminal-profile.c:3161
-#, c-format
-msgid "Could not parse string \"%s\" as a color palette\n"
-msgstr ""
-
-#: ../src/terminal-profile.c:3170
-#, c-format
-msgid "Palette had %d entry instead of %d\n"
-msgid_plural "Palette had %d entries instead of %d\n"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../src/terminal-screen.c:220
-#, c-format
-msgid ""
-"There was an error subscribing to notification of monospace font changes. (%"
-"s)\n"
-msgstr ""
-
-#: ../src/terminal-screen.c:906
-#, c-format
-msgid "Could not load font \"%s\"\n"
-msgstr "Nikarî curenivîsa \"%s\" bar bike\n"
-
-#: ../src/terminal-screen.c:1053
-#, c-format
-msgid "There was a problem with the command for this terminal: %s"
-msgstr "Di vê fermana ku ji bo termînalê ye çewtî heye: %s"
-
-#: ../src/terminal-screen.c:1493
-#, c-format
-msgid ""
-"Could not open the address \"%s\":\n"
-"%s"
-msgstr ""
-"Nikarî navnîşana \"%s\" veke:\n"
-"%s"
-
-#: ../src/terminal-screen.c:1590 ../src/terminal-window.c:827
-#, c-format
-msgid ""
-"There was an error loading config value for whether to use image in menus. (%"
-"s)\n"
-msgstr ""
-
-#: ../src/terminal-screen.c:1677
-msgid "_Send Mail To..."
-msgstr ""
-
-#: ../src/terminal-screen.c:1682
-msgid "_Copy E-mail Address"
-msgstr "Navnîşana e-peyam ji _ber bigire"
-
-#: ../src/terminal-screen.c:1689
-msgid "_Open Link"
-msgstr "Girêdanê _veke"
-
-#: ../src/terminal-screen.c:1694
-msgid "_Copy Link Address"
-msgstr "Navnîşana _girêdanê ji ber bigire"
-
-#: ../src/terminal-screen.c:1705 ../src/terminal-window.c:890
-msgid "Open _Terminal"
-msgstr "_Termînalê veke"
-
-#: ../src/terminal-screen.c:1710 ../src/terminal-window.c:893
-msgid "Open Ta_b"
+#: src/terminal-headerbar.ui:57
+#, fuzzy
+#| msgid "Open Ta_b"
+msgid "Show Open Tabs"
 msgstr "H_ilfirînekê Veke"
 
-#: ../src/terminal-screen.c:1720 ../src/terminal-window.c:908
-msgid "C_lose Tab"
-msgstr "Hilfirînê B_igire"
+#: src/terminal-headermenu.ui:23
+#, fuzzy
+#| msgid "Zoom Out"
+msgid "Zoom _Out"
+msgstr "Dûrkirin"
 
-#: ../src/terminal-screen.c:1720
-msgid "C_lose Window"
-msgstr "Paceyê _Bigire"
+#: src/terminal-headermenu.ui:29
+#, fuzzy
+#| msgid "Reset"
+msgid "Reset _Zoom"
+msgstr "Vesazkirin"
 
-#: ../src/terminal-screen.c:1745
-msgid "Change P_rofile"
-msgstr "P_rofîlê Biguherîne"
+#: src/terminal-headermenu.ui:35
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom _In"
+msgstr "Nêzîkkirin"
 
-#: ../src/terminal-screen.c:1781
-msgid "_Edit Current Profile..."
-msgstr "Profîla Rojane _Sererast Bike..."
+#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3187
+#, fuzzy
+#| msgid "New Window"
+msgid "New _Window"
+msgstr "Paceya nû"
 
-#: ../src/terminal-screen.c:1786
-msgid "Show _Menubar"
-msgstr "_Darikê Pêşekan Nîşan Bide"
+#: src/terminal-headermenu.ui:49
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Re_open Closed Tab"
+msgstr "Hilfirînê Bigire"
 
-#: ../src/terminal-screen.c:1802
-msgid "_Input Methods"
-msgstr "Metodên _Têketinê"
-
-#: ../src/terminal-screen.c:2242
-msgid "_Title:"
-msgstr "_Sernav:"
-
-#: ../src/terminal-screen.c:2356
-#, c-format
-msgid "text/plain dropped on terminal had wrong format (%d) or length (%d)\n"
+#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3116
+msgid "Split _Right"
 msgstr ""
 
-#: ../src/terminal-screen.c:2379
-#, c-format
-msgid "Color dropped on terminal had wrong format (%d) or length (%d)\n"
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3119
+msgid "Split _Down"
 msgstr ""
 
-#: ../src/terminal-screen.c:2422
-#, c-format
-msgid "Mozilla url dropped on terminal had wrong format (%d) or length (%d)\n"
+#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3173
+msgid "_Broadcast Input"
 msgstr ""
 
-#: ../src/terminal-screen.c:2471
-#, c-format
-msgid "URI list dropped on terminal had wrong format (%d) or length (%d)\n"
+#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3159
+msgid "_Off"
 msgstr ""
 
-#: ../src/terminal-screen.c:2530
-#, c-format
-msgid "Image filename dropped on terminal had wrong format (%d) or length (%d)\n"
+#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3160
+msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: ../src/terminal-screen.c:2556
-#, c-format
-msgid "Error converting URI \"%s\" into filename: %s\n"
+#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3161
+msgid "To All Terminals in This _Window"
 msgstr ""
 
-#: ../src/terminal-widget-vte.c:584
-msgid "There was an error creating the child process for this terminal"
+#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3170
+msgid "_Include This Terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:367
-#, c-format
-msgid ""
-"There was an error subscribing to notification of menu icon visibility "
-"changes. (%s)\n"
-msgstr ""
-
-#: ../src/terminal-window.c:579
-#, c-format
-msgid "_%d. %s"
-msgstr "_%d. %s"
-
-#: ../src/terminal-window.c:581
-#, c-format
-msgid "_%c. %s"
-msgstr "_%c. %s"
-
-#: ../src/terminal-window.c:704
-msgid "_Add or Remove..."
-msgstr "_Zêde bike an rake..."
-
-#. This is fairly bogus to have here but I don't know
-#. * where else to put it really
-#.
-#: ../src/terminal-window.c:901
-msgid "New _Profile..."
-msgstr "_Profîla nû..."
-
-#: ../src/terminal-window.c:912
-msgid "_Close Window"
-msgstr "_Paceyê bigire"
-
-#: ../src/terminal-window.c:945
-msgid "P_rofiles..."
-msgstr "Pr_ofîl..."
-
-#: ../src/terminal-window.c:948
-msgid "_Keyboard Shortcuts..."
-msgstr "Kurteriyên _Klavyeyê..."
-
-#: ../src/terminal-window.c:952
-msgid "C_urrent Profile..."
-msgstr "Profîla _heyî..."
-
-#. This is a check menu item so that the togglability is evident, but when it is not checked,
-#. * it won't be seen, of course, because the menubar will be then hidden.
-#: ../src/terminal-window.c:967
-msgid "Show Menu_bar"
-msgstr "_Darika menuyê nîşan bide"
-
-#: ../src/terminal-window.c:971
+#: src/terminal-headermenu.ui:93
 msgid "_Full Screen"
 msgstr "Dîmendera _Tijî"
 
-#: ../src/terminal-window.c:1014
-msgid "Change _Profile"
-msgstr "_Profîlê Biguherîne"
+#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3096
+msgid "Read-_Only"
+msgstr ""
 
-#: ../src/terminal-window.c:1017
-msgid "_Set Title..."
-msgstr "Sernav _Mîheng Bike..."
+#: src/terminal-headermenu.ui:105 src/terminal-notebook.ui:67
+#, fuzzy
+#| msgid "Set Title"
+msgid "Set _Title…"
+msgstr "Sernav Sererast Bike"
 
-#: ../src/terminal-window.c:1024
-msgid "Set _Character Encoding"
-msgstr "Kodkirina _Karakteran Mîheng Bike"
+#: src/terminal-headermenu.ui:111
+#, fuzzy
+#| msgid "_Contents"
+msgid "_Save Contents…"
+msgstr "_Naverok"
 
-#: ../src/terminal-window.c:1034
+#: src/terminal-headermenu.ui:117
+msgid "_Advanced"
+msgstr ""
+
+#: src/terminal-headermenu.ui:120
 msgid "_Reset"
 msgstr "_Vesazkirin"
 
-#: ../src/terminal-window.c:1037
+#: src/terminal-headermenu.ui:126
 msgid "Reset and C_lear"
 msgstr "Vesaz Bike û Paqij Bike"
 
-#: ../src/terminal-window.c:1051
-msgid "_Previous Tab"
-msgstr "Hilfirîna _Berê"
-
-#: ../src/terminal-window.c:1055
-msgid "_Next Tab"
-msgstr "Hilfirîna _Dûre"
-
-#: ../src/terminal-window.c:1066
-msgid "Move Tab to the _Left"
+#: src/terminal-headermenu.ui:134
+msgid "_1. 80×24"
 msgstr ""
 
-#: ../src/terminal-window.c:1070
-msgid "Move Tab to the _Right"
+#: src/terminal-headermenu.ui:140
+msgid "_2. 80×43"
 msgstr ""
 
-#: ../src/terminal-window.c:1077
-msgid "_Detach Tab"
-msgstr "Hilpekînê Ve_qetîne"
-
-#: ../src/terminal-window.c:1096
-msgid "_Contents"
-msgstr "_Naverok"
-
-#: ../src/terminal-window.c:1106
-msgid "_About"
-msgstr "_Der barê"
-
-#: ../src/terminal-window.c:1292
-#, c-format
-msgid "There was an error loading config value for whether to use mnemonics. (%s)\n"
+#: src/terminal-headermenu.ui:146
+msgid "_3. 132×24"
 msgstr ""
 
-#: ../src/terminal-window.c:1311
-#, c-format
-msgid ""
-"There was an error subscribing to notification of terminal window "
-"configuration changes. (%s)\n"
+#: src/terminal-headermenu.ui:152
+msgid "_4. 132×43"
 msgstr ""
 
-#: ../src/terminal-window.c:2113
-msgid "_File"
-msgstr "_Pel"
+#: src/terminal-headermenu.ui:160
+msgid "_Inspector"
+msgstr ""
 
-#: ../src/terminal-window.c:2115 ../src/terminal.c:2988
-msgid "_Edit"
-msgstr "_Biguherîne"
+#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3571
+#: src/terminal-window.cc:3110
+msgid "_Preferences"
+msgstr ""
 
-#: ../src/terminal-window.c:2117
-msgid "_View"
-msgstr "_Dîtin"
-
-#: ../src/terminal-window.c:2119
-msgid "_Terminal"
-msgstr "_Termînal"
-
-#: ../src/terminal-window.c:2121
-msgid "Ta_bs"
-msgstr "Hilfirîn"
-
-#: ../src/terminal-window.c:2123
+#: src/terminal-headermenu.ui:175
 msgid "_Help"
 msgstr "_Alîkarî"
 
-#: ../src/terminal-window.c:2345
-msgid "Close all tabs?"
-msgstr "hemû hilpekînan bigire?"
+#: src/terminal-headermenu.ui:180
+msgid "_About"
+msgstr "_Der barê"
 
-#: ../src/terminal-window.c:2347
-#, c-format
-msgid "This window has one tab open. Closing the window will close it."
-msgid_plural "This window has %d tabs open. Closing the window will also close all tabs."
-msgstr[0] ""
-"Di vê paceyê de hilpekîneke vekirî heye. Heke tu paceyê bigire wê hilpekîn "
-"jî were girtin."
-msgstr[1] ""
-"%d hilpekînên vê paceyê vekirî ye. Heke tu paceyê bigire wê hilpekîn jî were "
-"girtin."
+#: src/terminal-nautilus.cc:512
+msgid "Open in Pano Terminal (_Remote)"
+msgstr ""
 
-#: ../src/terminal-window.c:2356
-msgid "Close All _Tabs"
-msgstr "Hemû _Hilfirînan Bigire"
-
-#: ../src/terminal-window.c:2908
+#: src/terminal-nautilus.cc:514
 #, fuzzy
-msgid "Pano Terminal"
+msgid "Open in Pano Terminal (_Local)"
 msgstr "Termînala GNOME"
 
-#: ../src/terminal-window.c:2910
-msgid "A terminal emulator for the GNOME desktop"
+#: src/terminal-nautilus.cc:518 src/terminal-nautilus.cc:529
+msgid "Open the currently selected folder in a terminal"
 msgstr ""
 
-#: ../src/terminal-window.c:2915
-msgid "translator-credits"
-msgstr "Elîxan Loran, Erdal Ronahî"
-
-#: ../src/terminal.c:190
-msgid "Execute the argument to this option inside the terminal."
-msgstr "Ev vebijêrk parametreyan di hundirê termînalê de dixebitîne."
-
-#: ../src/terminal.c:199
-msgid "Execute the remainder of the command line inside the terminal."
+#: src/terminal-nautilus.cc:520 src/terminal-nautilus.cc:531
+msgid "Open the currently open folder in a terminal"
 msgstr ""
 
-#: ../src/terminal.c:208
+#: src/terminal-nautilus.cc:526
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open in Pano _Terminal"
+msgstr "_Termînalê veke"
+
+#: src/terminal-nautilus.cc:536
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open Pano _Terminal"
+msgstr "_Termînalê veke"
+
+#: src/terminal-nautilus.cc:537
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open a terminal"
+msgstr "_Termînalê veke"
+
+#: src/terminal-notebook.ui:36
+#, fuzzy
+msgid "_Pin Terminal"
+msgstr "Termînala GNOME"
+
+#: src/terminal-notebook.ui:42
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "_Unpin Terminal"
+msgstr "_Termînalê veke"
+
+#: src/terminal-notebook.ui:50
+#, fuzzy
+#| msgid "Terminal _bell"
+msgid "Move Terminal _Left"
+msgstr "_Zengilê Termînalê"
+
+#: src/terminal-notebook.ui:55
+#, fuzzy
+#| msgid "Move Tab to the Right"
+msgid "Move Terminal _Right"
+msgstr "Hilpekînê Bibe Aliyê Rastê"
+
+#: src/terminal-notebook.ui:62
+#, fuzzy
+#| msgid "_Detach Tab"
+msgid "_Detach Terminal"
+msgstr "Hilpekînê Ve_qetîne"
+
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5163
+#: src/terminal-window.cc:5173
+#, fuzzy
+#| msgid "_Terminal"
+msgid "C_lose Terminal"
+msgstr "_Termînal"
+
+#: src/terminal-notebook.ui:80
+#, fuzzy
+#| msgid "Choose A Terminal Font"
+msgid "Close _Other Terminals"
+msgstr "Ji Bo Termînalê Curenivîsekê Hilbijêre"
+
+#: src/terminal-options.cc:324
+#, c-format
 msgid ""
-"Open a new window containing a tab with the default profile. More than one "
-"of these options can be provided."
+"Option “%s” is deprecated and might be removed in a later version of Pano "
+"Terminal."
 msgstr ""
 
-#: ../src/terminal.c:217
+#. %s is being replaced with "-- " (without quotes), which must be used
+#. literally, not translatable
+#: src/terminal-options.cc:335
+#, c-format
 msgid ""
-"Open a new window containing a tab with the given profile. More than one of "
-"these options can be provided."
+"Use “%s” to terminate the options and put the command line to execute after "
+"it."
 msgstr ""
 
-#: ../src/terminal.c:218 ../src/terminal.c:236
-msgid "PROFILENAME"
-msgstr "NAVÊPROFÎLE"
+#: src/terminal-options.cc:345 src/terminal-options.cc:358
+#, c-format
+msgid "Option “%s” is no longer supported in this version of Pano Terminal."
+msgstr ""
 
-#: ../src/terminal.c:226
+#: src/terminal-options.cc:430
+#, c-format
+msgid "Cannot specify more than one command to run"
+msgstr ""
+
+#: src/terminal-options.cc:439
+#, c-format
+msgid "Argument to “%s” is not a valid command: %s"
+msgstr ""
+
+#: src/terminal-options.cc:612
+#, fuzzy
+#| msgid "Two roles given for one window\n"
+msgid "Two roles given for one window"
+msgstr "Ji bo paceyekê du heb rol hatiye dayîn\n"
+
+#: src/terminal-options.cc:819
+#, c-format
+msgid "Cannot pass FD %d twice"
+msgstr ""
+
+#: src/terminal-options.cc:881
+#, c-format
+msgid "“%s” is not a valid zoom factor"
+msgstr ""
+
+#: src/terminal-options.cc:888
+#, fuzzy, c-format
+#| msgid "Zoom factor \"%g\" is too small, using %g\n"
+msgid "Zoom factor “%g” is too small, using %g\n"
+msgstr "Rêjeya mezinkirinê ya \"%g\" pir biçûk e, %g tê bikaranîn\n"
+
+#: src/terminal-options.cc:896
+#, fuzzy, c-format
+#| msgid "Zoom factor \"%g\" is too large, using %g\n"
+msgid "Zoom factor “%g” is too large, using %g\n"
+msgstr "Rêjeya mezinkirinê ya \"%g\" pir mezin e, %g tê bikaranîn\n"
+
+#: src/terminal-options.cc:934
+#, c-format
 msgid ""
-"Open a new tab in the last-opened window with the default profile. More than "
-"one of these options can be provided."
+"Option “%s” requires specifying the command to run on the rest of the "
+"command line"
 msgstr ""
 
-#: ../src/terminal.c:235
-msgid ""
-"Open a new tab in the last-opened window with the given profile. More than "
-"one of these options can be provided."
+#: src/terminal-options.cc:1074
+#, c-format
+msgid "Too many arguments"
 msgstr ""
 
-#: ../src/terminal.c:244
-msgid ""
-"Open a new window containing a tab with the given profile ID. Used "
-"internally to save sessions."
+#: src/terminal-options.cc:1102
+msgid "Can only use --wait once"
 msgstr ""
 
-#: ../src/terminal.c:245 ../src/terminal.c:254
-msgid "PROFILEID"
+#: src/terminal-options.cc:1138
+msgid "Not a valid terminal config file."
 msgstr ""
 
-#: ../src/terminal.c:253
-msgid ""
-"Open a new tab in the last-opened window with the given profile ID. Used "
-"internally to save sessions."
+#: src/terminal-options.cc:1151
+msgid "Incompatible terminal config file version."
 msgstr ""
 
-#: ../src/terminal.c:262
-msgid ""
-"Set the role for the last-specified window; applies to only one window; can "
-"be specified once for each window you create from the command line."
-msgstr ""
-
-#: ../src/terminal.c:263
-msgid "ROLE"
-msgstr "ROL"
-
-#: ../src/terminal.c:271
-msgid ""
-"Turn on the menubar for the last-specified window; applies to only one "
-"window; can be specified once for each window you create from the command "
-"line."
-msgstr ""
-
-#: ../src/terminal.c:280
-msgid ""
-"Turn off the menubar for the last-specified window; applies to only one "
-"window; can be specified once for each window you create from the command "
-"line."
-msgstr ""
-
-#: ../src/terminal.c:289
-msgid ""
-"Set the last-specified window into fullscreen mode; applies to only one "
-"window; can be specified once for each window you create from the command "
-"line."
-msgstr ""
-
-#: ../src/terminal.c:298
-msgid ""
-"X geometry specification (see \"X\" man page), can be specified once per "
-"window to be opened."
-msgstr ""
-
-#: ../src/terminal.c:299
-msgid "GEOMETRY"
-msgstr "GEOMETRÎ"
-
-#: ../src/terminal.c:307
+#: src/terminal-options.cc:1305
 msgid ""
 "Do not register with the activation nameserver, do not re-use an active "
 "terminal"
 msgstr ""
 
-#: ../src/terminal.c:316
-msgid "Register with the activation nameserver [default]"
+#: src/terminal-options.cc:1314
+msgid "Load a terminal configuration file"
 msgstr ""
 
-#: ../src/terminal.c:325
-msgid "ID for startup notification protocol."
-msgstr "Ji bo protokola hişyariya destpêkê ID."
+#: src/terminal-options.cc:1315
+msgid "FILE"
+msgstr ""
 
-#: ../src/terminal.c:334
-msgid "Set the terminal's title"
+#: src/terminal-options.cc:1331
+msgid "Do not pass the environment"
+msgstr ""
+
+#: src/terminal-options.cc:1340
+msgid "Show preferences window"
+msgstr ""
+
+#: src/terminal-options.cc:1358
+msgid "Print environment variables to interact with the terminal"
+msgstr ""
+
+#: src/terminal-options.cc:1376
+msgid "Increase diagnostic verbosity"
+msgstr ""
+
+#: src/terminal-options.cc:1385
+msgid "Suppress output"
+msgstr ""
+
+#: src/terminal-options.cc:1398
+msgid "Open a new window containing a tab with the default profile"
+msgstr ""
+
+#: src/terminal-options.cc:1407
+msgid "Open a new tab in the last-opened window with the default profile"
+msgstr ""
+
+#: src/terminal-options.cc:1438
+msgid "Maximize the window"
+msgstr ""
+
+#: src/terminal-options.cc:1447
+msgid "Full-screen the window"
+msgstr ""
+
+#: src/terminal-options.cc:1456
+msgid ""
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr ""
+
+#: src/terminal-options.cc:1457
+msgid "GEOMETRY"
+msgstr "GEOMETRÎ"
+
+#: src/terminal-options.cc:1465
+#, fuzzy
+#| msgid "Set the terminal's title"
+msgid "Set the window role"
 msgstr "Sernavê termînalê mîheng bike"
 
-#: ../src/terminal.c:335
-msgid "TITLE"
-msgstr "SERNAV"
+#: src/terminal-options.cc:1466
+msgid "ROLE"
+msgstr "ROL"
 
-#: ../src/terminal.c:343
-msgid "Set the terminal's working directory"
-msgstr "Pelrêça xebatê ya termînalê mîheng bike"
-
-#: ../src/terminal.c:344 ../src/terminal.c:353
-msgid "DIRNAME"
-msgstr ""
-
-#: ../src/terminal.c:352
-msgid "Set the default terminal's working directory. Used internally"
-msgstr ""
-
-#: ../src/terminal.c:361
-msgid "Set the terminal's zoom factor (1.0 = normal size)"
-msgstr ""
-
-#: ../src/terminal.c:362 ../src/terminal.c:371
-msgid "ZOOMFACTOR"
-msgstr ""
-
-#: ../src/terminal.c:370
+#: src/terminal-options.cc:1474
 msgid "Set the last specified tab as the active one in its window"
 msgstr ""
 
-#: ../src/terminal.c:713
-#, c-format
-msgid "Could not load icon \"%s\": %s\n"
-msgstr "Îkona \"%s\" nehate barkirin:%s\n"
+#: src/terminal-options.cc:1487
+#, fuzzy
+#| msgid "Execute the argument to this option inside the terminal."
+msgid "Execute the argument to this option inside the terminal"
+msgstr "Ev vebijêrk parametreyan di hundirê termînalê de dixebitîne."
 
-#: ../src/terminal.c:778
-#, c-format
-msgid "Option \"%s\" requires specifying the command to run\n"
-msgstr ""
-
-#: ../src/terminal.c:786
-#, c-format
-msgid "Argument to \"%s\" is not a valid command: %s\n"
-msgstr ""
-
-#: ../src/terminal.c:796 ../src/terminal.c:820
-#, c-format
-msgid "\"%s\" specified more than once for the same window or tab\n"
-msgstr ""
-
-#: ../src/terminal.c:811
-#, c-format
-msgid ""
-"Option \"%s\" requires specifying the command to run on the rest of the "
-"command line\n"
-msgstr ""
-
-#: ../src/terminal.c:842 ../src/terminal.c:866
-#, c-format
-msgid "Option \"%s\" requires an argument specifying what profile to use\n"
-msgstr ""
-
-#: ../src/terminal.c:900 ../src/terminal.c:926
-#, c-format
-msgid "\"%s\" option given twice for the same window\n"
-msgstr ""
-
-#: ../src/terminal.c:966
-#, c-format
-msgid "Option \"%s\" requires an argument giving the role\n"
-msgstr ""
-
-#: ../src/terminal.c:975
-msgid "Two roles given for one window\n"
-msgstr "Ji bo paceyekê du heb rol hatiye dayîn\n"
-
-#: ../src/terminal.c:991
-#, c-format
-msgid "Option \"%s\" requires an argument giving the geometry\n"
-msgstr "Vebijêrka \"%s\" parametreyeke ku geometriyê dide dixwaze\n"
-
-#: ../src/terminal.c:1000
-#, c-format
-msgid "Two \"%s\" options given for one window\n"
-msgstr "Ji bo paceyekê du vebijêrkên \"%s\" hatiye dayîn\n"
-
-#: ../src/terminal.c:1010
-msgid "Two geometries given for one window\n"
-msgstr "Ji bo paceyekê du heb geometrî hatiye dayîn\n"
-
-#: ../src/terminal.c:1036
-#, c-format
-msgid "Option \"%s\" requires an argument giving the title\n"
-msgstr "Vebijêrka \"%s\" parametreyeke ku sernav dide dixwaze\n"
-
-#: ../src/terminal.c:1044 ../src/terminal.c:1067 ../src/terminal.c:1109
-#, c-format
-msgid "Two \"%s\" options given for one tab\n"
-msgstr "Ji bo hilpekînekê du vebijêrkên \"%s\" hatiye dayîn\n"
-
-#: ../src/terminal.c:1059
-#, c-format
-msgid "Option \"%s\" requires an argument giving the directory\n"
-msgstr ""
-
-#: ../src/terminal.c:1079
-msgid ""
-"Option --default-working-directory requires an argument giving the "
-"directory\n"
-msgstr ""
-
-#: ../src/terminal.c:1085
-msgid "Two --default-working-directories given\n"
-msgstr ""
-
-#: ../src/terminal.c:1101
-#, c-format
-msgid "Option \"%s\" requires an argument giving the zoom factor\n"
-msgstr ""
-
-#: ../src/terminal.c:1124
-#, c-format
-msgid "\"%s\" is not a valid zoom factor\n"
-msgstr ""
-
-#: ../src/terminal.c:1132
-#, c-format
-msgid "Zoom factor \"%g\" is too small, using %g\n"
-msgstr "Rêjeya mezinkirinê ya \"%g\" pir biçûk e, %g tê bikaranîn\n"
-
-#: ../src/terminal.c:1139
-#, c-format
-msgid "Zoom factor \"%g\" is too large, using %g\n"
-msgstr "Rêjeya mezinkirinê ya \"%g\" pir mezin e, %g tê bikaranîn\n"
-
-#: ../src/terminal.c:1160
-#, c-format
-msgid ""
-"Option --%s is no longer supported in this version of gnome-terminal; you "
-"might want to create a profile with the desired setting, and use the new --"
-"window-with-profile option\n"
-msgstr ""
-
-#: ../src/terminal.c:1166
-#, c-format
-msgid "\"%s\" option given twice\n"
-msgstr "Vebijêrka \"%s\" du caran hatiye dayîn.\n"
-
-#: ../src/terminal.c:1171 ../src/terminal.c:1312
-#, c-format
-msgid "\"%s\" option requires an argument\n"
-msgstr "Vebijêrka \"%s\" parametreyekê dixwaze\n"
-
-#: ../src/terminal.c:1290
-#, c-format
-msgid "No argument given to \"%s\" option\n"
-msgstr "Ji bo vebijêrka \"%s\" tu guhêrbareke serbixwe nehatiye dayîn\n"
-
-#: ../src/terminal.c:1424
-#, c-format
-msgid "No such profile '%s', using default profile\n"
+#: src/terminal-options.cc:1496
+#, fuzzy
+#| msgid "No such profile '%s', using default profile\n"
+msgid "Use the given profile instead of the default profile"
 msgstr "Profîla '%s' tuneye, profîla standard tê bikaranîn\n"
 
-#: ../src/terminal.c:1667
-#, c-format
-msgid "Invalid argument: \"%s\"\n"
-msgstr "Parametreya nederbasdar: \"%s\"\n"
+#: src/terminal-options.cc:1497
+#, fuzzy
+#| msgid "PROFILENAME"
+msgid "PROFILE-NAME"
+msgstr "NAVÊPROFÎLE"
 
-#: ../src/terminal.c:1740
-#, c-format
-msgid ""
-"There was an error subscribing to notification of terminal profile list "
-"changes. (%s)\n"
-msgstr "Dema tomarî danezana guherînên profîlên termînalê dibû çewtiyek çêbû. (%s)\n"
+#: src/terminal-options.cc:1505
+#, fuzzy
+#| msgid "Set the terminal's title"
+msgid "Set the initial terminal title"
+msgstr "Sernavê termînalê mîheng bike"
 
-#: ../src/terminal.c:1991
-#, c-format
-msgid "Invalid geometry string \"%s\"\n"
-msgstr "Rêza geometriya nederbasdar \"%s\"\n"
+#: src/terminal-options.cc:1506
+msgid "TITLE"
+msgstr "SERNAV"
 
-#: ../src/terminal.c:2057
-#, c-format
-msgid "There was an error getting the list of terminal profiles. (%s)\n"
-msgstr "Dema rêza lîsteya profîlên termînalê dihate stendin çewtiyek çêbû. (%s)\n"
+#: src/terminal-options.cc:1514
+#, fuzzy
+#| msgid "Set the terminal's working directory"
+msgid "Set the working directory"
+msgstr "Pelrêça xebatê ya termînalê mîheng bike"
 
-#: ../src/terminal.c:2361
-#, c-format
-msgid ""
-"You already have a profile called \"%s\". Do you want to create another "
-"profile with the same name?"
+#: src/terminal-options.cc:1515
+msgid "DIRNAME"
 msgstr ""
-"Jixwe bi navê \"%s\" profîlek te heye. Tu dixwazî bi heman navî profîleke nû "
-"pêk bîne?"
 
-#: ../src/terminal.c:2375
-msgid "The profile you selected as a base for your new profile no longer exists"
-msgstr "Profîla zemînê ya te ji bo profîla xwe ya nû hilbijartibû nayê dîtin"
+#: src/terminal-options.cc:1523
+msgid "Wait until the child exits"
+msgstr ""
 
-#: ../src/terminal.c:2471
-msgid "Enter profile name"
-msgstr "Navê profîlê binivîse"
+#: src/terminal-options.cc:1532
+msgid "Forward file descriptor"
+msgstr ""
 
-#: ../src/terminal.c:2481
-msgid "Choose base profile"
-msgstr "Profîla bingehî hilbijêre"
+#. FD = file descriptor
+#: src/terminal-options.cc:1534
+msgid "FD"
+msgstr ""
 
-#: ../src/terminal.c:2620
-msgid "Profile list"
-msgstr "Lîsteya profîlan"
+#: src/terminal-options.cc:1542
+msgid "Set the terminal’s zoom factor (1.0 = normal size)"
+msgstr ""
 
-#: ../src/terminal.c:2689
-msgid "You must select one or more profiles to delete."
-msgstr "Ji bo jêbirinê yan profîlekê yan jî gelek profîlan hilbijêrî."
+#: src/terminal-options.cc:1543
+msgid "ZOOM"
+msgstr ""
 
-#: ../src/terminal.c:2700
-msgid "You must have at least one profile; you can't delete all of them."
-msgstr "Herî kêm divê tu profîlekê hilbijêrî; tu nikarî hemû profîlan jê bibe."
+#: src/terminal-options.cc:1639
+msgid "COMMAND"
+msgstr ""
 
-#: ../src/terminal.c:2708
+#: src/terminal-options.cc:1645
+#, fuzzy
+msgid "Pano Terminal Emulator"
+msgstr "Termînala GNOME"
+
+#: src/terminal-options.cc:1646
+#, fuzzy
+msgid "Show Pano Terminal options"
+msgstr "Termînala GNOME"
+
+#: src/terminal-options.cc:1656
+msgid ""
+"Options to open new windows or terminal tabs; more than one of these may be "
+"specified:"
+msgstr ""
+
+#: src/terminal-options.cc:1657
+#, fuzzy
+#| msgid "Palette for terminal applications"
+msgid "Show terminal options"
+msgstr "Ji bo sepanên termînalê palet"
+
+#: src/terminal-options.cc:1665
+msgid ""
+"Window options; if used before the first --window or --tab argument, sets "
+"the default for all windows:"
+msgstr ""
+
+#: src/terminal-options.cc:1666
+msgid "Show per-window options"
+msgstr ""
+
+#: src/terminal-options.cc:1674
+msgid ""
+"Terminal options; if used before the first --window or --tab argument, sets "
+"the default for all terminals:"
+msgstr ""
+
+#: src/terminal-options.cc:1675
+msgid "Show per-terminal options"
+msgstr ""
+
+#: src/terminal-preferences-window.cc:169
+msgid "New Profile"
+msgstr "Profîla nû"
+
+#: src/terminal-preferences-window.cc:199
+#, fuzzy
+msgid "Pano Terminal Profiles"
+msgstr "Termînala GNOME"
+
+#: src/terminal-preferences-window.cc:202
+msgid "All Files"
+msgstr "Hemû Pel"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:239
 #, c-format
-msgid "Delete this profile?\n"
-msgid_plural "Delete these %d profiles?\n"
-msgstr[0] "Ev profîl were jêbirin?\n"
-msgstr[1] "Ev %d profîl werin jêbirin?\n"
+msgid "Exported “%s”"
+msgstr ""
 
-#: ../src/terminal.c:2729
-#, c-format
-msgid "Delete profile \"%s\"?"
-msgstr "Profîla \"%s\" were jêbirin?"
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:243
+#, fuzzy, c-format
+#| msgid ""
+#| "Could not open the address \"%s\":\n"
+#| "%s"
+msgid "Could not export the profile: %s"
+msgstr ""
+"Nikarî navnîşana \"%s\" veke:\n"
+"%s"
 
-#: ../src/terminal.c:2751
-msgid "Delete Profile"
+#: src/terminal-preferences-window.cc:281
+#, fuzzy
+#| msgid "Delete Profile"
+msgid "Export Profile"
 msgstr "Profîlê jê bibe"
 
-#: ../src/terminal.c:3024
+#. Translators: %s is an error message
+#: src/terminal-preferences-window.cc:312
+#, fuzzy, c-format
+#| msgid ""
+#| "Could not open the address \"%s\":\n"
+#| "%s"
+msgid "Could not import the profile: %s"
+msgstr ""
+"Nikarî navnîşana \"%s\" veke:\n"
+"%s"
+
+#: src/terminal-preferences-window.cc:322
+#, fuzzy
+#| msgid "New Profile"
+msgid "Imported Profile"
+msgstr "Profîla nû"
+
+#. Translators: %s is the name of a profile
+#: src/terminal-preferences-window.cc:339
+#, c-format
+msgid "Imported “%s”"
+msgstr ""
+
+#: src/terminal-preferences-window.cc:344
+#, c-format
+msgid "Imported “%s”, skipping %u setting"
+msgid_plural "Imported “%s”, skipping %u settings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/terminal-preferences-window.cc:370
+#, fuzzy
+#| msgid "Delete Profile"
+msgid "Import Profile"
+msgstr "Profîlê jê bibe"
+
+#: src/terminal-preferences-window.cc:389 src/terminal-window.cc:3521
+#, c-format
+msgid "Imported %u profile and the preferences of GNOME Terminal"
+msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:41
+msgid "_Reset to default"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:53
+msgid "Appearance"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:56
+msgid "Theme Variant"
+msgstr ""
+
+#. Default profile label
+#: src/terminal-preferences-window.ui:65 src/terminal-preferences-window.ui:96
+#: src/terminal-profile-editor.ui:515 src/terminal-profile-row.ui:25
+msgid "Default"
+msgstr "Standart"
+
+#: src/terminal-preferences-window.ui:71
+msgid "Dark"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:77
+msgid "Light"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:87
+msgid "Rounded corners"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:102
+msgid "Top only"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:108 src/terminal-profile-editor.ui:644
+msgid "None"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:118
+msgid "Space Around the Text"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:127
+msgctxt "terminal-padding"
+msgid "None"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:133
+msgctxt "terminal-padding"
+msgid "Small"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:139
+msgctxt "terminal-padding"
+msgid "Large"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:149
+msgid "Color the Header Bar Like the Terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:150
+msgid "When the terminal uses a color scheme or colors of its own"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:155
+msgid "Dim Inactive Panes"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:156
+msgid "In a split tab, fade the panes other than the one you type in"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:161
+#, fuzzy
+#| msgid "Set Title"
+msgid "Show Pane Titles"
+msgstr "Sernav Sererast Bike"
+
+#: src/terminal-preferences-window.ui:162
+msgid "In a split tab, show the title of each pane above it"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:167
+msgid "Highlight Root and Remote Sessions"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:168
+msgid ""
+"Color the header bar and mark the tab while a terminal runs as root or over "
+"SSH"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:173
+msgid "Tab Bar Position"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:182
+msgid "Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:188
+msgid "Bottom"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:194
+msgid "Left"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:200
+msgid "Right"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:212
+msgid "Behavior"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:215
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open New Terminals"
+msgstr "_Termînalê veke"
+
+#: src/terminal-preferences-window.ui:224
+#, fuzzy
+#| msgid "Open Ta_b"
+msgid "In Tab"
+msgstr "H_ilfirînekê Veke"
+
+#: src/terminal-preferences-window.ui:230
+#, fuzzy
+#| msgid "New Window"
+msgid "In Window"
+msgstr "Paceya nû"
+
+#: src/terminal-preferences-window.ui:240
+#, fuzzy
+#| msgid "New Tab"
+msgid "New Tab Position"
+msgstr "Hilfirîna Nû"
+
+#: src/terminal-preferences-window.ui:249
+msgid "Last"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:255
+#, fuzzy
+#| msgid "_Next Tab"
+msgid "Next"
+msgstr "Hilfirîna _Dûre"
+
+#: src/terminal-preferences-window.ui:265
+msgid "Middle-Click on a Tab"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:274
+msgctxt "tab-middle-click"
+msgid "Does Nothing"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:280
+#, fuzzy
+#| msgid "Close Tab"
+msgctxt "tab-middle-click"
+msgid "Closes the Tab"
+msgstr "Hilfirînê Bigire"
+
+#: src/terminal-preferences-window.ui:286
+msgctxt "tab-middle-click"
+msgid "Pastes the Selection"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:296
+msgid "Ignore Titles Set by Programs"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:297
+#, fuzzy
+#| msgid "Set the terminal's working directory"
+msgid "Show the title set with Set Title, or else the working directory"
+msgstr "Pelrêça xebatê ya termînalê mîheng bike"
+
+#: src/terminal-preferences-window.ui:302
+msgid "Confirm Copying"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:303
+msgid "Show a short notice after copying to the clipboard"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:308
+msgid "Shell Integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:309
+msgid ""
+"Let bash, zsh and fish report their prompts and commands, for notifications, "
+"prompt navigation and copying command output. Applies to new terminals"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:314
+msgid "Notify When Commands Finish"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:315
+msgid ""
+"When a long command ends in a terminal you are not looking at. Needs shell "
+"integration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:320
+msgid "Minimum Command Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:321
+msgid "In seconds"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:336
+msgid "Silence Duration"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:337
+msgid ""
+"How long a terminal monitored for silence must be quiet, in seconds. Turn "
+"monitoring on in the context menu of a terminal"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:351
+msgid "Keep New Tabs in the Same Container"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:352
+msgid ""
+"New tabs and panes start in the Toolbox or Distrobox container of the "
+"terminal they are opened from"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:357
+msgid "Restore Session"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:358
+msgid ""
+"Reopen the windows, tabs and panes of the last session, each in its previous "
+"folder"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:363
+msgid "Remember Window Size"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:364
+msgid ""
+"Open new windows with the size of the last used terminal instead of the "
+"initial size of the profile"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:371
+#, fuzzy
+#| msgid "Terminal"
+msgid "Quick Terminal"
+msgstr "Termînal"
+
+#: src/terminal-preferences-window.ui:372
+msgid ""
+"A terminal that you show and hide with one key. Use the system-wide shortcut "
+"below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
+"Custom Shortcuts."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:375
+msgid "System-Wide Shortcut"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:376
+msgid ""
+"The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
+"running in the background. Needs GNOME 48 or newer, or KDE Plasma."
+msgstr ""
+
+#: src/terminal-preferences-window.ui:382
+msgid "GNOME Shell Extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:383
+msgid ""
+"On Wayland, keeps the quick terminal at the top of the screen, above other "
+"windows and on all workspaces"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:388
+msgid "Width"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:389
+#: src/terminal-preferences-window.ui:404
+msgid "In percent of the screen"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:403
+msgid "Height"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:418
+msgid "Hide When Another App Is Used"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:423
+msgid "Slide In From the Top"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:424
+msgid "On X11, or with the GNOME Shell extension"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:431
+msgid "Keyboard Shortcuts"
+msgstr "Kurteriyên Klavyeyê"
+
+#: src/terminal-preferences-window.ui:434
+#, fuzzy
+#| msgid "Disable m_enu shortcut key (F10 by default)"
+msgid "Accelerator Key (F10 by default)"
+msgstr "Çalakkirina bişkokên kurteriyên p_êşekê rake (F10 standard)"
+
+#: src/terminal-preferences-window.ui:439
+msgid "View and Customize Shortcuts"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:453
 msgid "Profiles"
 msgstr "Profîl"
 
-#: ../src/terminal.c:3065
-msgid "_Profiles:"
-msgstr "_Profîl:"
+#: src/terminal-preferences-window.ui:457
+msgid "Import a profile from a file"
+msgstr ""
 
-#: ../src/terminal.c:3097
-msgid "Click to open new profile dialog"
-msgstr "Ji bo vekirina diyaloga profîla nû bitikîne"
+#: src/terminal-preferences-window.ui:465
+msgid "_Import…"
+msgstr ""
 
-#: ../src/terminal.c:3105
-msgid "Click to open edit profile dialog"
-msgstr "Ji bo vekirina diyaloga profîlê biguherîne bitikîne"
+#: src/terminal-preferences-window.ui:496
+#, fuzzy
+#| msgid "_Action"
+msgid "Application"
+msgstr "Çala_kî"
 
-#: ../src/terminal.c:3113
-msgid "Click to delete selected profile"
-msgstr "Ji bo jêbirina profîla hilbijartî bitikîne"
+#: src/terminal-preferences-window.ui:499
+msgid "Import from GNOME Terminal"
+msgstr ""
 
-#: ../src/terminal.c:3118
-msgid "Profile _used when launching a new terminal:"
+#: src/terminal-preferences-window.ui:500
+msgid "Copy its profiles, keyboard shortcuts and preferences"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:504 src/terminal-window.cc:3552
+msgid "_Import"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:514
+msgid "Ask to Remain Default"
+msgstr ""
+
+#: src/terminal-preferences-window.ui:519
+msgid "Set as Default Terminal"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:134
+msgid "Black on light yellow"
+msgstr "Li ser zerê vekirî reş"
+
+#: src/terminal-profile-editor.cc:138
+msgid "Black on white"
+msgstr "Reş ser spî"
+
+#: src/terminal-profile-editor.cc:142
+msgid "Gray on black"
+msgstr "Li ser reş cûn"
+
+#: src/terminal-profile-editor.cc:146
+msgid "Green on black"
+msgstr "Li ser reş kesk"
+
+#: src/terminal-profile-editor.cc:150
+msgid "White on black"
+msgstr "Spî ser reş"
+
+#. Translators: "GNOME" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:155
+msgid "GNOME light"
+msgstr ""
+
+#. Translators: "GNOME" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:160
+msgid "GNOME dark"
+msgstr ""
+
+#. Translators: "Tango" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:165
+#, fuzzy
+#| msgid "Tango"
+msgid "Tango light"
+msgstr "Tango"
+
+#. Translators: "Tango" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:170
+#, fuzzy
+#| msgid "Tango"
+msgid "Tango dark"
+msgstr "Tango"
+
+#. Translators: "Solarized" is the name of a colour scheme, "light" can be
+#. translated
+#: src/terminal-profile-editor.cc:175
+msgid "Solarized light"
+msgstr ""
+
+#. Translators: "Solarized" is the name of a colour scheme, "dark" can be
+#. translated
+#: src/terminal-profile-editor.cc:180
+msgid "Solarized dark"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:336 src/terminal-profile-editor.cc:349
+#: src/terminal-profile-editor.cc:856
+msgid "Custom"
+msgstr "Taybet"
+
+#: src/terminal-profile-editor.cc:373 src/terminal-profile-editor.cc:374
+#: src/terminal-profile-editor.cc:378
+msgid "Chinese Traditional"
+msgstr "Çîniya Kevneşopî"
+
+#: src/terminal-profile-editor.cc:375
+msgid "Cyrillic/Russian"
+msgstr "Kîrîl/Rûsî"
+
+#: src/terminal-profile-editor.cc:376 src/terminal-profile-editor.cc:415
+msgid "Japanese"
+msgstr "Japonî"
+
+#: src/terminal-profile-editor.cc:377 src/terminal-profile-editor.cc:417
+msgid "Korean"
+msgstr "Koreyî"
+
+#: src/terminal-profile-editor.cc:379 src/terminal-profile-editor.cc:380
+#: src/terminal-profile-editor.cc:381
+msgid "Chinese Simplified"
+msgstr "Çîniya Hêsankirî"
+
+#: src/terminal-profile-editor.cc:382 src/terminal-profile-editor.cc:388
+#: src/terminal-profile-editor.cc:392 src/terminal-profile-editor.cc:411
+#: src/terminal-profile-editor.cc:421
+msgid "Western"
+msgstr "Rojavayî"
+
+#: src/terminal-profile-editor.cc:383 src/terminal-profile-editor.cc:394
+#: src/terminal-profile-editor.cc:407 src/terminal-profile-editor.cc:419
+msgid "Central European"
+msgstr "Ewropaya Navînî"
+
+#: src/terminal-profile-editor.cc:384 src/terminal-profile-editor.cc:397
+#: src/terminal-profile-editor.cc:403 src/terminal-profile-editor.cc:405
+#: src/terminal-profile-editor.cc:420
+msgid "Cyrillic"
+msgstr "Kîrîl"
+
+#: src/terminal-profile-editor.cc:385 src/terminal-profile-editor.cc:402
+#: src/terminal-profile-editor.cc:413 src/terminal-profile-editor.cc:423
+msgid "Turkish"
+msgstr "Tirkî"
+
+#: src/terminal-profile-editor.cc:386 src/terminal-profile-editor.cc:401
+#: src/terminal-profile-editor.cc:410 src/terminal-profile-editor.cc:424
+msgid "Hebrew"
+msgstr "Îbranî"
+
+#: src/terminal-profile-editor.cc:387 src/terminal-profile-editor.cc:398
+#: src/terminal-profile-editor.cc:406 src/terminal-profile-editor.cc:425
+msgid "Arabic"
+msgstr "Erebî"
+
+#: src/terminal-profile-editor.cc:389
+msgid "Nordic"
+msgstr "Nordîk"
+
+#: src/terminal-profile-editor.cc:390 src/terminal-profile-editor.cc:396
+#: src/terminal-profile-editor.cc:426
+msgid "Baltic"
+msgstr "Baltîk"
+
+#: src/terminal-profile-editor.cc:391
+msgid "Celtic"
+msgstr "Keltik"
+
+#: src/terminal-profile-editor.cc:393 src/terminal-profile-editor.cc:412
+msgid "Romanian"
+msgstr "Romanî"
+
+#: src/terminal-profile-editor.cc:395
+msgid "South European"
+msgstr "Ewropaya Başûrî"
+
+#: src/terminal-profile-editor.cc:399 src/terminal-profile-editor.cc:409
+#: src/terminal-profile-editor.cc:422
+msgid "Greek"
+msgstr "Yewnanî"
+
+#: src/terminal-profile-editor.cc:400
+msgid "Hebrew Visual"
+msgstr "Îbraniya Dîtbarî"
+
+#: src/terminal-profile-editor.cc:404 src/terminal-profile-editor.cc:414
+msgid "Cyrillic/Ukrainian"
+msgstr "Kîrîl/Ûkraynî"
+
+#: src/terminal-profile-editor.cc:408
+msgid "Croatian"
+msgstr "Kroatî"
+
+#: src/terminal-profile-editor.cc:416
+msgid "Thai"
+msgstr "Tay"
+
+#: src/terminal-profile-editor.cc:418 src/terminal-profile-editor.cc:434
+msgid "Unicode"
+msgstr "Unîcode"
+
+#: src/terminal-profile-editor.cc:427
+msgid "Vietnamese"
+msgstr "Vîetnamî"
+
+#: src/terminal-profile-editor.cc:435
+msgid "Legacy CJK Encodings"
+msgstr ""
+
+#: src/terminal-profile-editor.cc:436
+#, fuzzy
+#| msgid "A_vailable encodings:"
+msgid "Obsolete Encodings"
+msgstr "Kodkirinên ku dikarin werine bikaranîn:"
+
+#: src/terminal-profile-editor.cc:747
+msgid "Select Font"
+msgstr ""
+
+#: src/terminal-profile-file.cc:96
+msgid "The file is not a Pano Terminal profile."
+msgstr ""
+
+#: src/terminal-profile-editor.ui:20
+#, fuzzy
+#| msgid "Editing Profile \"%s\""
+msgid "Edit Profile"
+msgstr "Profîla \"%s\" tê guherandin"
+
+#: src/terminal-profile-editor.ui:29
+#, fuzzy
+#| msgid "Profiles"
+msgid "Profile"
+msgstr "Profîl"
+
+#: src/terminal-profile-editor.ui:34
+msgid "Name"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:40
+msgid "Identifier"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:63
+msgid "Font"
+msgstr "Curenivîs"
+
+#: src/terminal-profile-editor.ui:66
+msgid "Use System Font"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:73
+#, fuzzy
+#| msgid "Custom"
+msgid "Custom Font"
+msgstr "Taybet"
+
+#: src/terminal-profile-editor.ui:100
+#, fuzzy
+#| msgid "_Allow bold text"
+msgid "Allow Blinking Text"
+msgstr "_Destûrê bide nivîsa stûr"
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:109 src/terminal-profile-editor.ui:910
+msgid "Always"
+msgstr ""
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:115 src/terminal-profile-editor.ui:898
+msgid "Never"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:121
+msgid "When focused"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:127
+msgid "When unfocused"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:139
+msgid "Colors"
+msgstr "Reng"
+
+#: src/terminal-profile-editor.ui:142
+msgid "Color Scheme"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:143
+msgid "Follows the light or dark style if it has both"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:149
+msgid "Your Own Color Schemes"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:150
+msgid "Add .palette files to this folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:153
+msgid "_Open Folder"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "Use colors from s_ystem theme"
+msgid "Use Colors from Palette"
+msgstr "Rengên dirbên p_ergalê bikar bîne"
+
+#: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
+#, fuzzy
+#| msgid "Background type"
+msgid "Background Opacity"
+msgstr "Cureyê zemînê"
+
+#: src/terminal-profile-editor.ui:168
+msgid "Lets the desktop show through the background; the text stays opaque"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:197
+#, fuzzy
+#| msgid "Use colors from s_ystem theme"
+msgid "Use Colors from Scheme"
+msgstr "Rengên dirbên p_ergalê bikar bîne"
+
+#: src/terminal-profile-editor.ui:202
+msgid "Override Default Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:205 src/terminal-profile-editor.ui:235
+#: src/terminal-profile-editor.ui:255 src/terminal-profile-editor.ui:285
+msgid "Text"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:208
+#, fuzzy
+#| msgid "Choose Terminal Text Color"
+msgid "Choose Text Color"
+msgstr "Rengê Nivîsa Termînalê Hilbijêre"
+
+#: src/terminal-profile-editor.ui:215 src/terminal-profile-editor.ui:265
+#: src/terminal-profile-editor.ui:295
+#, fuzzy
+#| msgid "Background type"
+msgid "Background"
+msgstr "Cureyê zemînê"
+
+#: src/terminal-profile-editor.ui:218
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Background Color"
+msgstr "Rengê Rûerdê Termînalê Hilbijêrî"
+
+#: src/terminal-profile-editor.ui:227
+msgid "Override Bold Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:238
+#, fuzzy
+#| msgid "Choose Terminal Text Color"
+msgid "Choose Bold Text Color"
+msgstr "Rengê Nivîsa Termînalê Hilbijêre"
+
+#: src/terminal-profile-editor.ui:247
+msgid "Override Cursor Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:258
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Cursor Foreground Color"
+msgstr "Rengê Rûerdê Termînalê Hilbijêrî"
+
+#: src/terminal-profile-editor.ui:268
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Cursor Background Color"
+msgstr "Rengê Rûerdê Termînalê Hilbijêrî"
+
+#: src/terminal-profile-editor.ui:277
+msgid "Override Highlight Color"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:288
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Highlight Foreground Color"
+msgstr "Rengê Rûerdê Termînalê Hilbijêrî"
+
+#: src/terminal-profile-editor.ui:298
+#, fuzzy
+#| msgid "Choose Terminal Background Color"
+msgid "Choose Highlight Background Color"
+msgstr "Rengê Rûerdê Termînalê Hilbijêrî"
+
+#: src/terminal-profile-editor.ui:309
+#, fuzzy
+#| msgid "<b>Palette</b>"
+msgid "Palette"
+msgstr "<b>Palet</b>"
+
+#: src/terminal-profile-editor.ui:465
+msgid "Show Bold Text in Bright Colors"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:472
+#, fuzzy
+#| msgid "Cursor blin_ks"
+msgid "Cursor"
+msgstr "Bila nîşane _vêkeve û vemire"
+
+#: src/terminal-profile-editor.ui:475
+msgid "Shape"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:484
+msgid "Block"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:490
+msgid "I-Beam"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:496
+msgid "Underline"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:506
+msgid "Blinking"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:521
+#, fuzzy
+#| msgid "Disabled"
+msgid "Enabled"
+msgstr "Neçalak"
+
+#: src/terminal-profile-editor.ui:527
+msgid "Disabled"
+msgstr "Neçalak"
+
+#: src/terminal-profile-editor.ui:539
+#, fuzzy
+#| msgid "Terminal"
+msgid "Terminal Size"
+msgstr "Termînal"
+
+#: src/terminal-profile-editor.ui:542
+msgid "Columns"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:556
+msgid "Rows"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:574
+msgid "Cell Width Scale"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:575
+msgid "Increases the width of character cells"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:590
+msgid "Cell Height Scale"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:591
+msgid "Increase the height of character cells"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:620
+msgid "Scrolling"
+msgstr "Şemitandin"
+
+#: src/terminal-profile-editor.ui:623
+#, fuzzy
+#| msgid "_Scrollbar is:"
+msgid "Show scrollbar"
+msgstr "_Darikê şemitandinê:"
+
+#: src/terminal-profile-editor.ui:632
+msgid "Regular"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:638
+msgid "Overlay"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:654
+#, fuzzy
+#| msgid "Scrolling"
+msgid "Kinetic scrolling"
+msgstr "Şemitandin"
+
+#: src/terminal-profile-editor.ui:655
+msgid "When used on touchscreens"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:664
+msgid "Scroll on Output"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:669
+msgid "Scroll on Keystroke"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:674
+msgid "Scroll on Paste"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:683
+msgid "Limit Scrollback"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:691
+#, fuzzy
+#| msgid "_Scrollbar is:"
+msgid "Scrollback Lines"
+msgstr "_Darikê şemitandinê:"
+
+#: src/terminal-profile-editor.ui:707
+msgid "Images"
+msgstr "Wêne"
+
+#: src/terminal-profile-editor.ui:710
+msgid "Enable SIXEL images"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:717
+msgid "Bell"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:720
+msgid "Play a Sound"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:725
+#, fuzzy
+msgid "Flash the Terminal"
+msgstr "Termînala GNOME"
+
+#: src/terminal-profile-editor.ui:726
+#, fuzzy
+#| msgid "How much to darken the background image"
+msgid "A tab in the background is marked instead"
+msgstr "Wê wêneyê rûerd çi qasî were tarîkirin"
+
+#: src/terminal-profile-editor.ui:733
+#, fuzzy
+#| msgid "<b>Command</b>"
+msgid "Command"
+msgstr "<b>Ferman</b>"
+
+#: src/terminal-profile-editor.ui:736
+msgid "Run command as a login shell"
+msgstr "Dêvila qalikê têketinê fermanê bide xebitandin"
+
+#: src/terminal-profile-editor.ui:745
+#, fuzzy
+#| msgid "Custom co_mmand:"
+msgid "Use Custom Command"
+msgstr "Fe_rmana taybet:"
+
+#: src/terminal-profile-editor.ui:750
+#, fuzzy
+#| msgid "Custom co_mmand:"
+msgid "Custom Command"
+msgstr "Fe_rmana taybet:"
+
+#: src/terminal-profile-editor.ui:763
+#, fuzzy
+#| msgid "Set the terminal's working directory"
+msgid "Preserve Working Directory"
+msgstr "Pelrêça xebatê ya termînalê mîheng bike"
+
+#: src/terminal-profile-editor.ui:764
+#, fuzzy
+#| msgid "Profile _used when launching a new terminal:"
+msgid "Preserve the working directory when opening a new terminal"
 msgstr "Profîla ku dema termînaleke nû hate vekirin ya wê were _bikaranîn:"
 
-#: ../src/terminal.c:3174
-msgid "Click button to choose profile"
-msgstr "Ji bo hilbjartina profîlê pêl bişkokê bike"
+#: src/terminal-profile-editor.ui:777
+msgid "When command exits"
+msgstr "Dema ferman qediya"
 
-#: ../src/terminal.c:3592
+#: src/terminal-profile-editor.ui:788
+msgid "Compatibility"
+msgstr "Lihevkirin"
+
+#: src/terminal-profile-editor.ui:791
+#, fuzzy
+#| msgid "Effect of the Backspace key"
+msgid "Backspace Key"
+msgstr "Bandora bişkoka jêbirina ber paş ve"
+
+#: src/terminal-profile-editor.ui:792
+#, fuzzy
+#| msgid "Effect of the Backspace key"
+msgid "Sequence to send for Backspace key"
+msgstr "Bandora bişkoka jêbirina ber paş ve"
+
+#: src/terminal-profile-editor.ui:801
+#, fuzzy
+#| msgid "Delete Profile"
+msgid "Delete Key"
+msgstr "Profîlê jê bibe"
+
+#: src/terminal-profile-editor.ui:802
+#, fuzzy
+#| msgid "Effect of the Delete key"
+msgid "Sequence to send for Delete key"
+msgstr "Bandora bişkoka Jêbirinê"
+
+#: src/terminal-profile-editor.ui:811
+msgid "Encoding"
+msgstr "Kodkirin"
+
+#: src/terminal-profile-editor.ui:819
+msgid "Ambiguous-width Characters"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:828
+msgid "Narrow"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:834
+msgid "Wide"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:865
+msgid "Automatic"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:871
+msgid "Control-H"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:877
+msgid "ASCII DEL"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:883
+msgid "Escape Sequence"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:889
+msgid "TTY Erase"
+msgstr ""
+
+#. Preserve working directory
+#: src/terminal-profile-editor.ui:904
+msgid "Shell only"
+msgstr ""
+
+#. When command exits
+#: src/terminal-profile-editor.ui:919
+#, fuzzy
+#| msgid "Close tab"
+msgid "Close terminal"
+msgstr "Hilfirînê bigire"
+
+#. When command exits
+#: src/terminal-profile-editor.ui:925
+#, fuzzy
+#| msgid "Custom co_mmand:"
+msgid "Restart command"
+msgstr "Fe_rmana taybet:"
+
+#. When command exits
+#: src/terminal-profile-editor.ui:931
+#, fuzzy
+msgid "Hold terminal"
+msgstr "Termînala GNOME"
+
+#: src/terminal-profile-row.ui:47
+msgid "_Edit"
+msgstr "_Biguherîne"
+
+#: src/terminal-profile-row.ui:51
+msgid "_Clone"
+msgstr ""
+
+#: src/terminal-profile-row.ui:55
+msgid "E_xport…"
+msgstr ""
+
+#: src/terminal-profile-row.ui:59
+msgid "_Delete"
+msgstr ""
+
+#: src/terminal-profile-row.ui:65
+msgid "_Set as default"
+msgstr ""
+
+#: src/terminal-screen.cc:1771
+msgid ""
+"Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
+"Esc to cancel"
+msgstr ""
+
+#: src/terminal-screen.cc:3352
+msgid "No command supplied nor shell requested"
+msgstr ""
+
+#: src/terminal-screen.cc:3572 src/terminal-screen.cc:3964
+msgid "_Relaunch"
+msgstr ""
+
+#: src/terminal-screen.cc:3575
+msgid "There was an error creating the child process for this terminal"
+msgstr ""
+
+#: src/terminal-screen.cc:3968
 #, c-format
-msgid "There was an error displaying help: %s"
+msgid "The child process exited normally with status %d."
+msgstr ""
+
+#: src/terminal-screen.cc:3971
+#, c-format
+msgid "The child process was aborted by signal %d."
+msgstr ""
+
+#: src/terminal-screen.cc:3974
+msgid "The child process was aborted."
+msgstr ""
+
+#: src/terminal-shortcut-editor.ui:20 src/terminal-shortcut-editor.ui:29
+#, fuzzy
+#| msgid "_Shortcut keys:"
+msgid "Shortcuts"
+msgstr "Bişkokên _kurteriyan:"
+
+#: src/terminal-shortcut-editor.ui:34
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "Enable Shortcuts"
+msgstr "Kurteriyên Klavyeyê"
+
+#: src/terminal-util.cc:171
+#, fuzzy
+#| msgid "There was an error displaying help: %s"
+msgid "There was an error displaying help"
 msgstr "Di nîşandana alîkariyê de çewtî çêbû: %s"
 
-#: ../src/terminal.c:3663
+#: src/terminal-util.cc:231
+msgid "Contributors:"
+msgstr ""
+
+#: src/terminal-util.cc:249
+#, c-format
+msgid "Using VTE version %u.%u.%u"
+msgstr ""
+
+#: src/terminal-util.cc:255
+msgid "A terminal emulator for the GNOME desktop"
+msgstr ""
+
+#: src/terminal-util.cc:271
+msgid "translator-credits"
+msgstr "Elîxan Loran, Erdal Ronahî"
+
+#: src/terminal-util.cc:331
+#, fuzzy, c-format
+#| msgid ""
+#| "Could not open the address \"%s\":\n"
+#| "%s"
+msgid "Could not open the address “%s”"
+msgstr ""
+"Nikarî navnîşana \"%s\" veke:\n"
+"%s"
+
+#: src/terminal-util.cc:400
+msgid ""
+"Pano Terminal is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version."
+msgstr ""
+
+#: src/terminal-util.cc:404
+msgid ""
+"Pano Terminal is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+
+#: src/terminal-util.cc:408
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"Pano Terminal.  If not, see &lt;http://www.gnu.org/licenses/&gt;."
+msgstr ""
+
+#: src/terminal-util.cc:1173
+msgid "“file” scheme with remote hostname not supported"
+msgstr ""
+
+#. Translators: %s is an error message
+#: src/terminal-window.cc:540 src/terminal-window.cc:579
+#, fuzzy, c-format
+#| msgid "Could not load icon \"%s\": %s\n"
+msgid "Could not save the contents: %s"
+msgstr "Îkona \"%s\" nehate barkirin:%s\n"
+
+#. Translators: %s is a file name
+#: src/terminal-window.cc:547
+#, c-format
+msgid "Saved “%s”"
+msgstr ""
+
+#: src/terminal-window.cc:799
+msgid "Copied to clipboard"
+msgstr ""
+
+#: src/terminal-window.cc:1203
+msgid "Tab closed"
+msgstr ""
+
+#: src/terminal-window.cc:1204
+msgid "_Undo"
+msgstr ""
+
+#: src/terminal-window.cc:1342
+msgid "Broadcasting input, but no terminal takes part"
+msgstr ""
+
+#: src/terminal-window.cc:1344
+#, fuzzy, c-format
+#| msgid "Title for terminal"
+msgid "Input goes to %u terminal"
+msgid_plural "Input goes to %u terminals"
+msgstr[0] "Sernavê termînalê"
+msgstr[1] "Sernavê termînalê"
+
+#: src/terminal-window.cc:1681
+msgid "Nothing to select"
+msgstr ""
+
+#. Translators: %s is a file name
+#: src/terminal-window.cc:1724
+#, c-format
+msgid "“%s” does not exist"
+msgstr ""
+
+#: src/terminal-window.cc:2551
+msgid ""
+"Programs cannot change this title. Leave it empty to show the title from the "
+"program again."
+msgstr ""
+
+#: src/terminal-window.cc:2761
+#, fuzzy
+#| msgid "Title for terminal"
+msgid "Activity in a terminal"
+msgstr "Sernavê termînalê"
+
+#: src/terminal-window.cc:2796
 #, c-format
 msgid ""
-"The file \"%s\" is missing. This indicates that the application is installed "
-"incorrectly."
-msgstr "Pelê \"%s\" nayê dîtin. Ev nîşan dide ku sepan şaş hatiye barkirin."
+"%s\n"
+"No output for %u second"
+msgid_plural ""
+"%s\n"
+"No output for %u seconds"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/terminal.c:3835
-msgid ""
-"It appears that you do not have gnome-terminal.server installed in a valid "
-"location. Factory mode disabled.\n"
+#: src/terminal-window.cc:2801
+#, fuzzy
+#| msgid "Title for terminal"
+msgid "Silence in a terminal"
+msgstr "Sernavê termînalê"
+
+#: src/terminal-window.cc:3020
+#, fuzzy
+#| msgid "Open _Terminal"
+msgid "Open _Hyperlink"
+msgstr "_Termînalê veke"
+
+#: src/terminal-window.cc:3021
+#, fuzzy
+#| msgid "_Copy Link Address"
+msgid "Copy Hyperlink _Address"
+msgstr "Navnîşana _girêdanê ji ber bigire"
+
+#: src/terminal-window.cc:3031
+msgid "Send Mail _To…"
 msgstr ""
-"Wisa dixuye ku gnome-terminal.server li ser cihekî rast nehatiye sazkirin. "
-"Moda hilberîner hate girtin.\n"
 
-#: ../src/terminal.c:3838
-msgid ""
-"Error registering terminal with the activation service; factory mode "
-"disabled.\n"
+#: src/terminal-window.cc:3032
+#, fuzzy
+#| msgid "_Copy E-mail Address"
+msgid "Copy Mail _Address"
+msgstr "Navnîşana e-peyam ji _ber bigire"
+
+#: src/terminal-window.cc:3035
+msgid "Call _To…"
 msgstr ""
-"Dema tomarî xizmeta çalakkirinê dibû çewtiyek çêbû; moda hilberîner hate "
-"girtin.\n"
 
-#: ../src/terminal.c:3874
-msgid "Failed to retrieve terminal server from activation server\n"
-msgstr "Ji pêşkêşkerê çalakkirinê pêşkêşkerê termînalê nehate stendin\n"
+#: src/terminal-window.cc:3036
+#, fuzzy
+#| msgid "_Copy E-mail Address"
+msgid "Copy Call _Address "
+msgstr "Navnîşana e-peyam ji _ber bigire"
 
+#: src/terminal-window.cc:3041
+msgid "_Open Link"
+msgstr "Girêdanê _veke"
 
-msgid "_Search"
-msgstr "_Lê bigere"
+#: src/terminal-window.cc:3042
+#, fuzzy
+#| msgid "_Copy Link Address"
+msgid "Copy _Link"
+msgstr "Navnîşana _girêdanê ji ber bigire"
 
-msgid "_Find..."
-msgstr "_Bibîne..."
+#: src/terminal-window.cc:3081
+#, fuzzy
+#| msgid "Copy"
+msgid "_Copy"
+msgstr "Ji ber bigire"
 
-msgid "Find"
-msgstr "Bibîne"
+#: src/terminal-window.cc:3082
+msgid "Copy as _HTML"
+msgstr ""
 
-msgid "_Search for:"
-msgstr "_Lêgerîn: "
+#: src/terminal-window.cc:3083
+#, fuzzy
+#| msgid "Paste"
+msgid "_Paste"
+msgstr "Pêveke"
 
-msgid "_Wrap around"
-msgstr "Rûerdê _şeffaf"
+#: src/terminal-window.cc:3086
+msgid "Copy _Output of This Command"
+msgstr ""
+
+#: src/terminal-window.cc:3088
+msgid "Copy _Output of Last Command"
+msgstr ""
+
+#: src/terminal-window.cc:3090
+msgid "Paste as _Filenames"
+msgstr ""
+
+#: src/terminal-window.cc:3097
+msgid "Monitor for _Activity"
+msgstr ""
+
+#: src/terminal-window.cc:3098
+msgid "Monitor for _Silence"
+msgstr ""
+
+#: src/terminal-window.cc:3105
+#, fuzzy
+#| msgid "Profiles"
+msgid "P_rofiles"
+msgstr "Profîl"
+
+#: src/terminal-window.cc:3123
+#, fuzzy
+#| msgid "Zoom In"
+msgid "_Zoom Pane"
+msgstr "Nêzîkkirin"
+
+#: src/terminal-window.cc:3124
+msgid "Make Panes the Same _Size"
+msgstr ""
+
+#: src/terminal-window.cc:3127
+#, fuzzy
+#| msgid "New Tab"
+msgid "To a New _Tab"
+msgstr "Hilfirîna Nû"
+
+#: src/terminal-window.cc:3130
+#, fuzzy
+#| msgid "New Window"
+msgid "To a New _Window"
+msgstr "Paceya nû"
+
+#: src/terminal-window.cc:3135
+msgid "Swap With the Pane on the _Left"
+msgstr ""
+
+#: src/terminal-window.cc:3136
+msgid "Swap With the Pane on the _Right"
+msgstr ""
+
+#: src/terminal-window.cc:3137
+msgid "Swap With the Pane _Above"
+msgstr ""
+
+#: src/terminal-window.cc:3138
+msgid "Swap With the Pane _Below"
+msgstr ""
+
+#: src/terminal-window.cc:3152
+msgid "_Move Pane"
+msgstr ""
+
+#: src/terminal-window.cc:3154
+#, fuzzy
+#| msgid "Close Tab"
+msgid "Close P_ane"
+msgstr "Hilfirînê Bigire"
+
+#: src/terminal-window.cc:3182
+#, fuzzy
+#| msgid "_Terminal"
+msgid "New _Terminal"
+msgstr "_Termînal"
+
+#: src/terminal-window.cc:3191
+#, fuzzy
+#| msgid "New Tab"
+msgid "New _Tab"
+msgstr "Hilfirîna Nû"
+
+#: src/terminal-window.cc:3201
+#, fuzzy
+#| msgid "Full Screen"
+msgid "Leave Full Screen"
+msgstr "Dîmender Tije"
+
+#: src/terminal-window.cc:3547
+msgid ""
+"Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
+msgstr ""
+
+#: src/terminal-window.cc:3553 src/terminal-window.cc:3950
+msgid "_No"
+msgstr ""
+
+#: src/terminal-window.cc:3944
+msgid "Set Pano Terminal as your default terminal?"
+msgstr ""
+
+#: src/terminal-window.cc:3949
+msgid "_Yes"
+msgstr ""
+
+#: src/terminal-window.cc:4019
+msgid "_Stop"
+msgstr ""
+
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Set the terminal's title"
+msgid "Close the other terminals?"
+msgstr "Sernavê termînalê mîheng bike"
+
+#: src/terminal-window.cc:5157
+#, fuzzy
+#| msgid "Title for terminal"
+msgid "Close the other terminal?"
+msgstr "Sernavê termînalê"
+
+#: src/terminal-window.cc:5159
+msgid ""
+"There are still processes running in some of the other terminals. Closing "
+"them will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5161
+msgid ""
+"There is still a process running in the other terminal. Closing the terminal "
+"will kill it."
+msgstr ""
+
+#: src/terminal-window.cc:5163
+#, fuzzy
+#| msgid "_Terminal"
+msgid "C_lose Terminals"
+msgstr "_Termînal"
+
+#: src/terminal-window.cc:5165
+#, fuzzy
+#| msgid "Close Window"
+msgid "Close this window?"
+msgstr "Paceyê bigire"
+
+#: src/terminal-window.cc:5166
+msgid ""
+"There are still processes running in some terminals in this window. Closing "
+"the window will kill all of them."
+msgstr ""
+
+#: src/terminal-window.cc:5168
+msgid "C_lose Window"
+msgstr "Paceyê _Bigire"
+
+#: src/terminal-window.cc:5170
+#, fuzzy
+#| msgid "Title for terminal"
+msgid "Close this terminal?"
+msgstr "Sernavê termînalê"
+
+#: src/terminal-window.cc:5171
+msgid ""
+"There is still a process running in this terminal. Closing the terminal will "
+"kill it."
+msgstr ""
+
+#: src/terminal.cc:672
+#, fuzzy, c-format
+#| msgid "Invalid argument: \"%s\"\n"
+msgid "Failed to parse arguments: %s\n"
+msgstr "Parametreya nederbasdar: \"%s\"\n"
+
+#~ msgid "Accelerator key"
+#~ msgstr "Bişkoka Lezker"
+
+#~ msgid "Accelerator modifiers"
+#~ msgstr "Sererastkerên lezkeran"
+
+#~ msgid "Accelerator Mode"
+#~ msgstr "Moda Lezker"
+
+#~ msgid "The type of accelerator."
+#~ msgstr "Cureyê Lezkeran"
+
+#~ msgid "Type a new accelerator, or press Backspace to clear"
+#~ msgstr "Lezkereke nû binivîse, an jî pêl bişkoka Jêbirinê bike û paqij bike"
+
+#~ msgid "Type a new accelerator"
+#~ msgstr "Lezkereke nû binivîse"
+
+#~ msgid "Current Locale"
+#~ msgstr "Locale ya heyî"
+
+#~ msgid "Armenian"
+#~ msgstr "Ermenî"
+
+#~ msgid "Georgian"
+#~ msgstr "Gurcî"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindî"
+
+#~ msgid "Persian"
+#~ msgstr "Farisî"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujaratî"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmukî"
+
+#~ msgid "Icelandic"
+#~ msgstr "Îzlandî"
+
+#~ msgid "User Defined"
+#~ msgstr "Bi Bikarhêner Hatiye Danasîn"
+
+#~ msgid "_Description"
+#~ msgstr "_Daxuyanî"
+
+#, c-format
+#~ msgid ""
+#~ "There was an error subscribing to notification of terminal encoding list "
+#~ "changes. (%s)\n"
+#~ msgstr ""
+#~ "Lîsteya kodkirinên termînalê dema tomarî hişyariya guherînan dibû "
+#~ "çewtiyek çêbû: (%s)\n"
+
+#~ msgid "    "
+#~ msgstr "    "
+
+#~ msgid "<b>Background</b>"
+#~ msgstr "<b>Zemîn</b>"
+
+#~ msgid "<b>Compatibility</b>"
+#~ msgstr "<b>Lihevkirin</b>"
+
+#~ msgid "<b>General</b>"
+#~ msgstr "<b>Giştî</b>"
+
+#~ msgid "<b>Scrolling</b>"
+#~ msgstr "<b>Şemitandin</b>"
+
+#~ msgid "<b>Title</b>"
+#~ msgstr "<b>Sernav</b>"
+
+#~ msgid ""
+#~ "<small><i><b>Note:</b> Terminal applications have these colors available "
+#~ "to them.</i></small>"
+#~ msgstr ""
+#~ "<small><i><b>Not:</b> Li sepanên termînalê ev reng dikarin werine "
+#~ "sepandin.</i></small>"
+
+#~ msgid ""
+#~ "<small><i><b>Note:</b> The command running inside the terminal may "
+#~ "dynamically set a new title.</i></small>"
+#~ msgstr ""
+#~ "<small><i><b>Nîşe:</b> Fermana ku di termînalê de tê xebitandin dibe ku "
+#~ "bi awayekî dînamîk sernavekî mîheng bike.</i></small>"
+
+#~ msgid ""
+#~ "<small><i><b>Note:</b> These options may cause some applications to "
+#~ "behave incorrectly.  They are only here to allow you to work around "
+#~ "certain applications and operating systems that expect different terminal "
+#~ "behavior.</i></small>"
+#~ msgstr ""
+#~ "<small><i><b>Nîşe:</b> Dibe ku ev vebijêrkên hanê bibe sedema tevgerên "
+#~ "çewt ên hin sepanan.  Sedema hebûna van tiştan ev e ku ji bo ku tu li ser "
+#~ "hin pergalên xebitandinê û sepanên ku li benda tevgerên termînalên cuda "
+#~ "ne bixebite.</i></small>"
+
+#~ msgid "<small><i>Maximum</i></small>"
+#~ msgstr "<small><i>Pirtirîn</i></small>"
+
+#~ msgid "<small><i>None</i></small>"
+#~ msgstr "<small><i>Tune</i></small>"
+
+#~ msgid "Add or Remove Terminal Encodings"
+#~ msgstr "Kodkirina Termînalê Têxê/Derxe"
+
+#~ msgid "Background _image"
+#~ msgstr "Wêneya _zemînê"
+
+#~ msgid "Background image _scrolls"
+#~ msgstr "Bila rûpelê rûerd _bişemite"
+
+#~ msgid "Built-_in schemes:"
+#~ msgstr "_Şemayên sazkirî:"
+
+#~ msgid "Built-in _schemes:"
+#~ msgstr "_Şemayên sazkirî:"
+
+#~ msgid "C_reate"
+#~ msgstr "Bi_afirîne"
+
+#~ msgid "Choose A Profile Icon"
+#~ msgstr "Îkoneke Profîlê Hilbijêre"
+
+#~ msgid "Disable all me_nu access keys (such as Alt+f to open File menu)"
+#~ msgstr ""
+#~ "Çalakkirina bişkokên gihiştinê yên pê_şekê rake (ji bo pêşeka pel wekî "
+#~ "Alt+f)"
+
+#~ msgid "E_ncodings shown in menu:"
+#~ msgstr "_Kodkirinên ku di pêşekê de dixuyin:"
+
+#~ msgid "Effects"
+#~ msgstr "Bandor"
+
+#~ msgid ""
+#~ "Exit the terminal\n"
+#~ "Restart the command\n"
+#~ "Hold the terminal open"
+#~ msgstr ""
+#~ "Ji termînalê derkeve\n"
+#~ "Fermanê dîsa bide xebitandin\n"
+#~ "Termînalê vekirî bihêle"
+
+#~ msgid "General"
+#~ msgstr "Giştî"
+
+#~ msgid "Image _file:"
+#~ msgstr "Pelê _wêneyê:"
+
+#~ msgid "Initial _title:"
+#~ msgstr "Sernavê _pêşîn:"
+
+#~ msgid ""
+#~ "On the left side\n"
+#~ "On the right side\n"
+#~ "Disabled"
+#~ msgstr ""
+#~ "Li aliyê çepê\n"
+#~ "Li aliyê rastê\n"
+#~ "Neçalak"
+
+#~ msgid "Password:"
+#~ msgstr "Şîfre:"
+
+#~ msgid "Profile Editor"
+#~ msgstr "Edîtorê profîlê"
+
+#~ msgid "Profile _icon:"
+#~ msgstr "Î_kona profilê:"
+
+#~ msgid "Profile _name:"
+#~ msgstr "_Navê profîlê:"
+
+#~ msgid "Remove encoding from menu."
+#~ msgstr "Kodkirinê ji pêşekê rake."
+
+#~ msgid ""
+#~ "Replaces initial title\n"
+#~ "Goes before initial title\n"
+#~ "Goes after initial title\n"
+#~ "Isn't displayed"
+#~ msgstr ""
+#~ "Sernavê pêşîn biguherîne\n"
+#~ "Berî sernavê pêşîn diçe\n"
+#~ "Piştî sernavê pêşîn biçe\n"
+#~ "Nayê nîşandan"
+
+#~ msgid "Ru_n a custom command instead of my shell"
+#~ msgstr "Dêvila qalik fermaneke taybet bixebitîne"
+
+#~ msgid "S_hade transparent or image background:"
+#~ msgstr "Rûerdê şeffaf yan jî wêneyê rûerd:"
+
+#~ msgid "Select Background Image"
+#~ msgstr "Wêneya zemînê hilbijêre"
+
+#~ msgid "Show _menubar by default in new terminals"
+#~ msgstr "_Darikê pêşekê di termînala nû de wekî standard nîşan bide"
+
+#~ msgid "Title and Command"
+#~ msgstr "Sernav û Ferman"
+
+#~ msgid "_Base on:"
+#~ msgstr "_Bi bingeh ser:"
+
+#~ msgid "_Dynamically-set title:"
+#~ msgstr "Sernavê ku bi awayekî _dînamîk hatiye mîhengkirin:"
+
+#~ msgid "_None (use solid color)"
+#~ msgstr "Ne yek jî (tenê rengekî bikar bîne)"
+
+#~ msgid "_Profile name:"
+#~ msgstr "Navê _profîlê:"
+
+#~ msgid "_Text color:"
+#~ msgstr "Rengê _nivîsê:"
+
+#~ msgid "_Transparent background"
+#~ msgstr "Rûerdê _transparan"
+
+#~ msgid "_Update login records when command is launched"
+#~ msgstr "Dema ferman hate destpêkirin tomarên têketinê rojane bike"
+
+#, fuzzy
+#~ msgid "_Use the system fixed width font"
+#~ msgstr "Curenivîsa termînala pergalê _bikar bîne"
+
+#~ msgid "_lines"
+#~ msgstr "_rêzik"
+
+#~ msgid "kilo_bytes"
+#~ msgstr "kîlo_bayt"
+
+#~ msgid "Accelerator to detach current tab."
+#~ msgstr "Lezkera ku wê hilpekîna derbasdar ji hev veqetîne."
+
+#~ msgid ""
+#~ "An Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+#~ msgstr ""
+#~ "Navê curenivîsa Pango. \"Sans 12\" yan jî \"Monospace Bold 14\" mînak e."
+
+#~ msgid ""
+#~ "An X font name. See the X man page (type \"man X\") for more details on "
+#~ "the format of X font names."
+#~ msgstr ""
+#~ "Navê curenivîsa X. Ji bo agahiyên berfireh li cureyên navên curenivîsên "
+#~ "Xê yên di rûpela rêberê Xê (\"man X\" binivîse) de ye binihêre."
+
+#~ msgid "Background image"
+#~ msgstr "Wêneya zemîne"
+
+#~ msgid "Characters that are considered \"part of a word\""
+#~ msgstr "Karakterên ku mirov dikare bibêje \"perçeyekî peyvê ye\""
+
+#~ msgid "Filename of a background image."
+#~ msgstr "Navê pelgeha wêneyê rûerd."
+
+#~ msgid "Icon for terminal window"
+#~ msgstr "Ji bo paceya termînalê îkon"
+
+#~ msgid "Icon to use for tabs/windows containing this profile."
+#~ msgstr "Îkona wê hilpekîn/paceyên ku di vê profîlê de ne bikar bîne."
+
+#~ msgid "If true, allow applications in the terminal to make text boldface."
+#~ msgstr ""
+#~ "Heke hatibe hilbijartin, sepanên ku di termînalê de dixebitin dikarin "
+#~ "nivîsa stûr bide nivîsandin."
+
+#~ msgid ""
+#~ "If true, scroll the background image with the foreground text; if false, "
+#~ "keep the image in a fixed position and scroll the text above it."
+#~ msgstr ""
+#~ "Heke hatibe hilbijartin, wêneyê rûerd tevî nivîsên heyî wê bi hev re "
+#~ "bişemitîne, lê heke nehatibe hilbijartin, wêne di cihê xwe de dihêle û "
+#~ "nivîs li ser wê bişemite."
+
+#~ msgid ""
+#~ "If true, the system login records utmp and wtmp will be updated when the "
+#~ "command inside the terminal is launched."
+#~ msgstr ""
+#~ "Heke hatibe hilbijartin, dema di termînalê de sepanek were destpêkirin "
+#~ "tomara destpêkirinê wê were rojanekirin."
+
+#~ msgid "Keyboard shortcut to create a new profile"
+#~ msgstr "Ji bo avakirina profîleke nû kurteriya klavyeyê"
+
+#~ msgid "Keyboard shortcut to switch to tab 10"
+#~ msgstr "Ji bo tu karibî derbasî hilpekîna 10em bibe kurteriya klavyeyê"
+
+#~ msgid "Keyboard shortcut to switch to tab 11"
+#~ msgstr "Ji bo tu karibî derbasî hilpekîna 11em bibe kurteriya klavyeyê"
+
+#~ msgid "Keyboard shortcut to switch to tab 12"
+#~ msgstr "Ji bo tu karibî derbasî hilpekîna 12em bibe kurteriya klavyeyê"
+
+#~ msgid "Keyboard shortcut to switch to tab 2"
+#~ msgstr ""
+#~ "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 2'yan bibe"
+
+#~ msgid "Keyboard shortcut to switch to tab 3"
+#~ msgstr ""
+#~ "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 3'yan bibe"
+
+#~ msgid "Keyboard shortcut to switch to tab 4"
+#~ msgstr ""
+#~ "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 4'an bibe"
+
+#~ msgid "Keyboard shortcut to switch to tab 5"
+#~ msgstr ""
+#~ "Kurteriya klavyeyê ya ji bo ku tu karibî derbasî hilpekîna 5'an bibe"
+
+#~ msgid "Keyboard shortcut to switch to tab 6"
+#~ msgstr "Ji bo çûyîna hilpekîna 6an kurteriya klavyeyê"
+
+#~ msgid "Keyboard shortcut to switch to tab 7"
+#~ msgstr "Ji bo çûyîna hilpekîna 7an kurteriya klavyeyê"
+
+#~ msgid "Keyboard shortcut to switch to tab 8"
+#~ msgstr "Ji bo çûyîna hilpekîna 8an kurteriya klavyeyê"
+
+#~ msgid "Keyboard shortcut to switch to tab 9"
+#~ msgstr "Ji bo çûyîna hilpekîna 9an kurteriya klavyeyê"
+
+#~ msgid "List of available encodings"
+#~ msgstr "Lîsteya kodkirinên ku dikarin werine bikaranîn"
+
+#~ msgid "List of profiles"
+#~ msgstr "Lîsteya profîlan"
+
+#~ msgid "Profile to use for new terminals"
+#~ msgstr "Ji bo termînalên nû profîla ku wê were bikaranîn"
+
+#~ msgid "What to do with dynamic title"
+#~ msgstr "Wê bi sernavê dînamîk çi were kirin"
+
+#~ msgid "Whether to scroll background image"
+#~ msgstr "Şemitandina wêneyê rûerd"
+
+#~ msgid "[UTF-8,current]"
+#~ msgstr "[UTF-8,current]"
+
+#~ msgid "XTerm"
+#~ msgstr "XTerm"
+
+#~ msgid "Rxvt"
+#~ msgstr "Rxvt"
+
+#, c-format
+#~ msgid "Choose Palette Color %d"
+#~ msgstr "Paleta Reng Hilbijêere %d"
+
+#, c-format
+#~ msgid "Palette entry %d"
+#~ msgstr "Ketana paletê %d"
+
+#~ msgid "_Font:"
+#~ msgstr "_Curenivîs:"
+
+#~ msgid "Si_ze:"
+#~ msgstr "_Mezinahî:"
+
+#~ msgid "_Use bold version of font"
+#~ msgstr "Awayê stûr yê curenivîsê _bikar bîne"
+
+#~ msgid "Click to choose font type"
+#~ msgstr "Ji bo hilbijartina curenivîsê bitikîne"
+
+#~ msgid "Click to choose font size"
+#~ msgstr "Ji bo hilbijartina mezinahiya curenivîsê bitikîne"
+
+#~ msgid "roman"
+#~ msgstr "roman"
+
+#~ msgid "italic"
+#~ msgstr "paldayî"
+
+#~ msgid "oblique"
+#~ msgstr "raketî"
+
+#~ msgid "reverse italic"
+#~ msgstr "vajî paldayî"
+
+#~ msgid "reverse oblique"
+#~ msgstr "vajî raketî"
+
+#~ msgid "other"
+#~ msgstr "wekî din"
+
+#~ msgid "proportional"
+#~ msgstr "birêje"
+
+#~ msgid "monospaced"
+#~ msgstr "bi navberên wekhev"
+
+#~ msgid "char cell"
+#~ msgstr "malika karakteran"
+
+#~ msgid "MAX_FONTS exceeded. Some fonts may be missing."
+#~ msgstr "MAX_FONTS hate derbasbûn. Dibe ku hîn awayê nivêsê xelet bin."
+
+#~ msgid "Hide and Show menubar"
+#~ msgstr "Darikê Pêşekê Veşêre û Nîşan Bide"
+
+#~ msgid "Switch to Tab 2"
+#~ msgstr "Biçe Hilfirîna 2yan"
+
+#~ msgid "Switch to Tab 3"
+#~ msgstr "Biçe Hilfirîna 3an"
+
+#~ msgid "Switch to Tab 4"
+#~ msgstr "Biçe Hilfirîna 4an"
+
+#~ msgid "Switch to Tab 5"
+#~ msgstr "Biçe Hilfirîna 5an"
+
+#~ msgid "Switch to Tab 6"
+#~ msgstr "Biçe Hilfirîna 6an"
+
+#~ msgid "Switch to Tab 7"
+#~ msgstr "Biçe Hilfirîna 7an"
+
+#~ msgid "Switch to Tab 8"
+#~ msgstr "Biçe Hilfirîna 8an"
+
+#~ msgid "Switch to Tab 9"
+#~ msgstr "Biçe Hilfirîna 9an"
+
+#~ msgid "Switch to Tab 10"
+#~ msgstr "Biçe Hilfirîna 10an"
+
+#~ msgid "Switch to Tab 11"
+#~ msgstr "Biçe Hilfirîna 11an"
+
+#~ msgid "Switch to Tab 12"
+#~ msgstr "Biçe Hilfirîna 12an"
+
+#~ msgid "Go"
+#~ msgstr "Biçe"
+
+#, c-format
+#~ msgid "There was an error loading config from %s. (%s)\n"
+#~ msgstr "Dema ji %s mîheng dihatine barkirin çewtî çêbû. (%s)\n"
+
+#, c-format
+#~ msgid "There was an error loading a terminal keybinding. (%s)\n"
+#~ msgstr ""
+#~ "Dema girêdanên bişkokên termînalê dihate barkirin çewtî çêbû. (%s)\n"
+
+#, c-format
+#~ msgid "The value of configuration key %s is not valid; value is \"%s\"\n"
+#~ msgstr "Nirxa mifteya veavakirinê ya %s ne derbasdar e, nirx \"%s\"\n"
+
+#, c-format
+#~ msgid "The shortcut key \"%s\" is already bound to the \"%s\" action"
+#~ msgstr "Bişkoka kurteriyê ya \"%s\" jixwe bi çalakiya \"%s\" hatiye girêdan"
+
+#, c-format
+#~ msgid "Error setting new accelerator in configuration database: %s\n"
+#~ msgstr ""
+#~ "Dema lezkereke nû li danegira veavakirinan mîheng dikir çewtî derket: %s\n"
+
+#, c-format
+#~ msgid "Error setting %s config key: %s\n"
+#~ msgstr "Dema %s mifte mîheng dikir çewtî çêbû: %s\n"
+
+#, c-format
+#~ msgid "Error setting use_menu_accelerators key: %s\n"
+#~ msgstr ""
+#~ "Dema mifteya use_menu_accelerators dihate mîhengkirin çewtî çêbû: %s\n"
+
+#~ msgid "Shortcut _Key"
+#~ msgstr "_Bişkoka Kurteriyan"
+
+#, c-format
+#~ msgid ""
+#~ "There was an error subscribing to notification of terminal profile "
+#~ "changes. (%s)\n"
+#~ msgstr ""
+#~ "Dema li danezanên guherînên profîlên termînalê dihate tomarkirin çewtî "
+#~ "çêbû. (%s)\n"
+
+#, c-format
+#~ msgid "Could not find an icon called \"%s\" for terminal profile \"%s\"\n"
+#~ msgstr ""
+#~ "Ji bo profîla termînalê ya \"%s\" şiklekî ku bi navê xwe \"%s\" ye nehate "
+#~ "dîtin\n"
+
+#, c-format
+#~ msgid "Failed to load icon \"%s\" for terminal profile \"%s\": %s\n"
+#~ msgstr "Ji bo profîla \"%s\" bi navê \"%s\" tu îkon nehate dîtin. %s\n"
+
+#, fuzzy, c-format
+#~ msgid ""
+#~ "Pano Terminal: font name \"%s\" set in configuration database is not "
+#~ "valid\n"
+#~ msgstr ""
+#~ "Termînala GNOME: navê curenivîsa \"%s\" ya di danegeha veavakirinê de ye "
+#~ "nedernasdar e\n"
+
+#, c-format
+#~ msgid "Error getting default value of %s: %s\n"
+#~ msgstr "Dema nirxa standard ya %s dihate stendin çewtî: %s\n"
+
+#, c-format
+#~ msgid "There wasn't a default value for %s\n"
+#~ msgstr "Ji bo %s tu nirxa standard tuneye\n"
+
+#, c-format
+#~ msgid "Error setting key %s back to default: %s\n"
+#~ msgstr ""
+#~ "Dema mifteya %s li nirxên standard dihate mîhengkirin çewtî çêbû: %s\n"
+
+#~ msgid "_Details"
+#~ msgstr "_Hûragahî"
+
+#, c-format
+#~ msgid "There was an error creating the profile \"%s\""
+#~ msgstr "Dema profîla \"%s\" dihate afirandin çewtiyek çêbû"
+
+#~ msgid "There was an error deleting the profiles"
+#~ msgstr "Dema profîl jê dihatin birin çewtî çêbû"
+
+#, c-format
+#~ msgid "Could not load font \"%s\"\n"
+#~ msgstr "Nikarî curenivîsa \"%s\" bar bike\n"
+
+#, c-format
+#~ msgid "There was a problem with the command for this terminal: %s"
+#~ msgstr "Di vê fermana ku ji bo termînalê ye çewtî heye: %s"
+
+#~ msgid "C_lose Tab"
+#~ msgstr "Hilfirînê B_igire"
+
+#~ msgid "Change P_rofile"
+#~ msgstr "P_rofîlê Biguherîne"
+
+#~ msgid "_Edit Current Profile..."
+#~ msgstr "Profîla Rojane _Sererast Bike..."
+
+#~ msgid "Show _Menubar"
+#~ msgstr "_Darikê Pêşekan Nîşan Bide"
+
+#~ msgid "_Input Methods"
+#~ msgstr "Metodên _Têketinê"
+
+#~ msgid "_Title:"
+#~ msgstr "_Sernav:"
+
+#, c-format
+#~ msgid "_%d. %s"
+#~ msgstr "_%d. %s"
+
+#, c-format
+#~ msgid "_%c. %s"
+#~ msgstr "_%c. %s"
+
+#~ msgid "_Add or Remove..."
+#~ msgstr "_Zêde bike an rake..."
+
+#~ msgid "New _Profile..."
+#~ msgstr "_Profîla nû..."
+
+#~ msgid "_Close Window"
+#~ msgstr "_Paceyê bigire"
+
+#~ msgid "P_rofiles..."
+#~ msgstr "Pr_ofîl..."
+
+#~ msgid "_Keyboard Shortcuts..."
+#~ msgstr "Kurteriyên _Klavyeyê..."
+
+#~ msgid "C_urrent Profile..."
+#~ msgstr "Profîla _heyî..."
+
+#~ msgid "Change _Profile"
+#~ msgstr "_Profîlê Biguherîne"
+
+#~ msgid "_Set Title..."
+#~ msgstr "Sernav _Mîheng Bike..."
+
+#~ msgid "Set _Character Encoding"
+#~ msgstr "Kodkirina _Karakteran Mîheng Bike"
+
+#~ msgid "_File"
+#~ msgstr "_Pel"
+
+#~ msgid "_View"
+#~ msgstr "_Dîtin"
+
+#~ msgid "Ta_bs"
+#~ msgstr "Hilfirîn"
+
+#~ msgid "Close all tabs?"
+#~ msgstr "hemû hilpekînan bigire?"
+
+#, c-format
+#~ msgid "This window has one tab open. Closing the window will close it."
+#~ msgid_plural ""
+#~ "This window has %d tabs open. Closing the window will also close all tabs."
+#~ msgstr[0] ""
+#~ "Di vê paceyê de hilpekîneke vekirî heye. Heke tu paceyê bigire wê "
+#~ "hilpekîn jî were girtin."
+#~ msgstr[1] ""
+#~ "%d hilpekînên vê paceyê vekirî ye. Heke tu paceyê bigire wê hilpekîn jî "
+#~ "were girtin."
+
+#~ msgid "Close All _Tabs"
+#~ msgstr "Hemû _Hilfirînan Bigire"
+
+#~ msgid "ID for startup notification protocol."
+#~ msgstr "Ji bo protokola hişyariya destpêkê ID."
+
+#, c-format
+#~ msgid "Option \"%s\" requires an argument giving the geometry\n"
+#~ msgstr "Vebijêrka \"%s\" parametreyeke ku geometriyê dide dixwaze\n"
+
+#, c-format
+#~ msgid "Two \"%s\" options given for one window\n"
+#~ msgstr "Ji bo paceyekê du vebijêrkên \"%s\" hatiye dayîn\n"
+
+#~ msgid "Two geometries given for one window\n"
+#~ msgstr "Ji bo paceyekê du heb geometrî hatiye dayîn\n"
+
+#, c-format
+#~ msgid "Option \"%s\" requires an argument giving the title\n"
+#~ msgstr "Vebijêrka \"%s\" parametreyeke ku sernav dide dixwaze\n"
+
+#, c-format
+#~ msgid "Two \"%s\" options given for one tab\n"
+#~ msgstr "Ji bo hilpekînekê du vebijêrkên \"%s\" hatiye dayîn\n"
+
+#, c-format
+#~ msgid "\"%s\" option given twice\n"
+#~ msgstr "Vebijêrka \"%s\" du caran hatiye dayîn.\n"
+
+#, c-format
+#~ msgid "\"%s\" option requires an argument\n"
+#~ msgstr "Vebijêrka \"%s\" parametreyekê dixwaze\n"
+
+#, c-format
+#~ msgid "No argument given to \"%s\" option\n"
+#~ msgstr "Ji bo vebijêrka \"%s\" tu guhêrbareke serbixwe nehatiye dayîn\n"
+
+#, c-format
+#~ msgid ""
+#~ "There was an error subscribing to notification of terminal profile list "
+#~ "changes. (%s)\n"
+#~ msgstr ""
+#~ "Dema tomarî danezana guherînên profîlên termînalê dibû çewtiyek çêbû. "
+#~ "(%s)\n"
+
+#, c-format
+#~ msgid "Invalid geometry string \"%s\"\n"
+#~ msgstr "Rêza geometriya nederbasdar \"%s\"\n"
+
+#, c-format
+#~ msgid "There was an error getting the list of terminal profiles. (%s)\n"
+#~ msgstr ""
+#~ "Dema rêza lîsteya profîlên termînalê dihate stendin çewtiyek çêbû. (%s)\n"
+
+#, c-format
+#~ msgid ""
+#~ "You already have a profile called \"%s\". Do you want to create another "
+#~ "profile with the same name?"
+#~ msgstr ""
+#~ "Jixwe bi navê \"%s\" profîlek te heye. Tu dixwazî bi heman navî profîleke "
+#~ "nû pêk bîne?"
+
+#~ msgid ""
+#~ "The profile you selected as a base for your new profile no longer exists"
+#~ msgstr ""
+#~ "Profîla zemînê ya te ji bo profîla xwe ya nû hilbijartibû nayê dîtin"
+
+#~ msgid "Enter profile name"
+#~ msgstr "Navê profîlê binivîse"
+
+#~ msgid "Choose base profile"
+#~ msgstr "Profîla bingehî hilbijêre"
+
+#~ msgid "Profile list"
+#~ msgstr "Lîsteya profîlan"
+
+#~ msgid "You must select one or more profiles to delete."
+#~ msgstr "Ji bo jêbirinê yan profîlekê yan jî gelek profîlan hilbijêrî."
+
+#~ msgid "You must have at least one profile; you can't delete all of them."
+#~ msgstr ""
+#~ "Herî kêm divê tu profîlekê hilbijêrî; tu nikarî hemû profîlan jê bibe."
+
+#, c-format
+#~ msgid "Delete this profile?\n"
+#~ msgid_plural "Delete these %d profiles?\n"
+#~ msgstr[0] "Ev profîl were jêbirin?\n"
+#~ msgstr[1] "Ev %d profîl werin jêbirin?\n"
+
+#, c-format
+#~ msgid "Delete profile \"%s\"?"
+#~ msgstr "Profîla \"%s\" were jêbirin?"
+
+#~ msgid "Click to open new profile dialog"
+#~ msgstr "Ji bo vekirina diyaloga profîla nû bitikîne"
+
+#~ msgid "Click to open edit profile dialog"
+#~ msgstr "Ji bo vekirina diyaloga profîlê biguherîne bitikîne"
+
+#~ msgid "Click to delete selected profile"
+#~ msgstr "Ji bo jêbirina profîla hilbijartî bitikîne"
+
+#~ msgid "Click button to choose profile"
+#~ msgstr "Ji bo hilbjartina profîlê pêl bişkokê bike"
+
+#, c-format
+#~ msgid ""
+#~ "The file \"%s\" is missing. This indicates that the application is "
+#~ "installed incorrectly."
+#~ msgstr "Pelê \"%s\" nayê dîtin. Ev nîşan dide ku sepan şaş hatiye barkirin."
+
+#~ msgid ""
+#~ "It appears that you do not have gnome-terminal.server installed in a "
+#~ "valid location. Factory mode disabled.\n"
+#~ msgstr ""
+#~ "Wisa dixuye ku gnome-terminal.server li ser cihekî rast nehatiye "
+#~ "sazkirin. Moda hilberîner hate girtin.\n"
+
+#~ msgid ""
+#~ "Error registering terminal with the activation service; factory mode "
+#~ "disabled.\n"
+#~ msgstr ""
+#~ "Dema tomarî xizmeta çalakkirinê dibû çewtiyek çêbû; moda hilberîner hate "
+#~ "girtin.\n"
+
+#~ msgid "Failed to retrieve terminal server from activation server\n"
+#~ msgstr "Ji pêşkêşkerê çalakkirinê pêşkêşkerê termînalê nehate stendin\n"
+
+#~ msgid "_Find..."
+#~ msgstr "_Bibîne..."

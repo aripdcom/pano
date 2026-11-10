@@ -18,6 +18,7 @@
 -->
 <interface>
   <template class="TerminalPreferencesWindow" parent="AdwPreferencesWindow">
+    <property name="title" translatable="yes">Preferences</property>
     <child>
       <object class="GtkShortcutController">
         <child>
