@@ -125,105 +125,53 @@ xte_data_check_one(char const* file,
   return true;
 }
 
+/* The directories to look in for desktop files and lists of terminals:
+ * $XDG_DATA_HOME, then $XDG_DATA_DIRS, and where Pano Terminal is installed
+ * and Flatpak exports, if those are not among them */
+static GPtrArray*
+xte_data_dirs(void)
+{
+  auto const dirs = g_ptr_array_new_with_free_func(g_free);
+  auto const add = [&](char const* dir) {
+    for (auto i = 0u; i < dirs->len; ++i)
+      if (g_str_equal(g_ptr_array_index(dirs, i), dir))
+        return;
+    g_ptr_array_add(dirs, g_strdup(dir));
+  };
+
+  add(g_get_user_data_dir());
+  gs_free auto user_flatpak = g_build_filename(g_get_user_data_dir(),
+                                               "flatpak", "exports", "share",
+                                               nullptr);
+  add(user_flatpak);
+  for (auto dir = g_get_system_data_dirs(); *dir; ++dir)
+    add(*dir);
+  add(TERM_DATADIR);
+  add("/var/lib/flatpak/exports/share");
+  return dirs;
+}
+
 static bool
 xte_data_check(char const* name,
                bool full)
 {
+  // An entry may name an action of the desktop file, "ID.desktop:action"
   gs_strfreev auto segments = g_strsplit(name, ":", 2);
 
   auto const desktop_id = segments[0];
   if (!desktop_id || !desktop_id[0])
     return false;
 
-  { // Legacy x-t-e spec
-    gs_free auto path = g_build_filename(g_get_user_data_dir(),
-                                         XTE_CONFIG_DIRNAME,
-                                         desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-  }
-  {
-    gs_free auto path = g_build_filename(g_get_user_data_dir(),
-                                         "applications",
-                                         desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-  }
-  {
-    gs_free auto path = g_build_filename(g_get_user_data_dir(),
-                                         "flatpak",
-                                         "exports",
-                                         "share",
-                                         "applications",
-                                         desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-  }
-  if (!g_str_equal(TERM_PREFIX, "/usr/local")) {
-    gs_free auto path = g_build_filename(TERM_PREFIX,
-                                         "local",
-                                         "share",
-                                         XTE_CONFIG_DIRNAME,
-                                         desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-
-    gs_free auto path2 = g_build_filename(TERM_PREFIX,
-                                          "local",
-                                          "share",
-                                          "applications",
-                                          desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path2, full))
-      return true;
-  }
-  {
-    gs_free auto path = g_build_filename(TERM_DATADIR,
-                                         XTE_CONFIG_DIRNAME,
-                                         name,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-  }
-  {
-    gs_free auto path = g_build_filename(TERM_DATADIR,
-                                         "applications",
-                                         desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-  }
-  {
-    gs_free auto path = g_build_filename("/var",
-                                         "lib",
-                                         "flatpak",
-                                         "exports",
-                                         "share",
-                                         "applications",
-                                         desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-  }
-  if (!g_str_equal(TERM_PREFIX, "/usr")) {
-    gs_free auto path = g_build_filename("/usr", "share",
-                                         XTE_CONFIG_DIRNAME,
-                                         desktop_id,
-                                         nullptr);
-    if (xte_data_check_one(path, full))
-      return true;
-
-    gs_free auto path2 = g_build_filename("/usr",
-                                          "share",
-                                          "applications",
-                                          desktop_id,
-                                          nullptr);
-    if (xte_data_check_one(path2, full))
-      return true;
+  g_autoptr(GPtrArray) dirs = xte_data_dirs();
+  for (auto i = 0u; i < dirs->len; ++i) {
+    auto const dir = reinterpret_cast<char const*>(g_ptr_array_index(dirs, i));
+    // "applications", and the "xdg-terminals" of earlier versions of the spec
+    static char const* const subdirs[] = {"applications", XTE_CONFIG_DIRNAME};
+    for (auto sub : subdirs) {
+      gs_free auto path = g_build_filename(dir, sub, desktop_id, nullptr);
+      if (xte_data_check_one(path, full))
+        return true;
+    }
   }
 
   return false;
@@ -397,14 +345,14 @@ xte_config_get_default_for_path(char const* path,
     if (!line[0] || line[0] == '#')
       continue;
 
-    // If a foreign terminal is default, check whether it is actually installed.
-    // (We always ensure our own desktop file exists.)
+    // An entry for a terminal that is not installed is skipped, and the
+    // next one is the default. (We always ensure our own desktop file exists.)
     if (xte_config_is_foreign(line, native_name) &&
         !xte_data_check(line, true)) {
       _terminal_debug_print(TERMINAL_DEBUG_DEFAULT,
-                            "Default entry \"%s\" from config \"%s\" is not installed, skipping.\n",
+                            "Entry \"%s\" from config \"%s\" is not installed, skipping.\n",
                             line, path);
-      return nullptr;
+      continue;
     }
 
     return g_strdup(line);
@@ -439,17 +387,22 @@ static char*
 xte_config_get_default(char const* native_name)
 {
   gs_strfreev auto desktops = get_desktops_lc();
-  auto const user_dir = g_get_user_config_dir();
-  if (auto term = xte_config_get_default_for_path_and_desktops(user_dir, desktops, native_name))
+
+  // $XDG_CONFIG_HOME, then $XDG_CONFIG_DIRS, and the vendor configuration
+  // that some distributions keep in /usr/etc/xdg
+  if (auto term = xte_config_get_default_for_path_and_desktops(g_get_user_config_dir(), desktops, native_name))
     return term;
-  if (auto term = xte_config_get_default_for_path_and_desktops("/etc/xdg", desktops, native_name))
-    return term;
+  for (auto dir = g_get_system_config_dirs(); *dir; ++dir)
+    if (auto term = xte_config_get_default_for_path_and_desktops(*dir, desktops, native_name))
+      return term;
   if (auto term = xte_config_get_default_for_path_and_desktops("/usr/etc/xdg", desktops, native_name))
     return term;
 
-  auto data_dirs = g_get_system_data_dirs();
-  for (auto i = gsize{0}; data_dirs[i]; ++i) {
-    gs_free auto path = g_build_filename(data_dirs[i], "xdg-terminal-exec", nullptr);
+  // Then the defaults of the data directories
+  g_autoptr(GPtrArray) dirs = xte_data_dirs();
+  for (auto i = 0u; i < dirs->len; ++i) {
+    gs_free auto path = g_build_filename(reinterpret_cast<char const*>(g_ptr_array_index(dirs, i)),
+                                         "xdg-terminal-exec", nullptr);
     if (auto term = xte_config_get_default_for_path_and_desktops(path, desktops, native_name))
       return term;
   }
