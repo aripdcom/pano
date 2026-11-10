@@ -1,10 +1,10 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 data/com.aripd.Pano.desktop.in
-data/com.aripd.Pano.Preferences.desktop.in
-data/com.aripd.Pano.QuickTerminal.desktop.in
 data/com.aripd.Pano.metainfo.xml.in
 data/com.aripd.Pano.Nautilus.metainfo.xml.in
+data/com.aripd.Pano.Preferences.desktop.in
+data/com.aripd.Pano.QuickTerminal.desktop.in
 src/com.aripd.Pano.gschema.xml
 src/prefs-main.cc
 src/search-popover.ui
@@ -15,26 +15,29 @@ src/terminal-accel-row.cc
 src/terminal-accels.cc
 src/terminal-app.cc
 src/terminal-command-palette.cc
+src/terminal-containers.cc
+src/terminal-find-bar.cc
 src/terminal-find-bar.ui
+src/terminal-global-shortcuts.cc
 src/terminal-headerbar.cc
 src/terminal-headerbar.ui
 src/terminal-headermenu.ui
 src/terminal-nautilus.cc
-src/terminal-notebook.ui
 src/terminal-notebook.cc
+src/terminal-notebook.ui
 src/terminal-options.cc
 src/terminal-preferences-window.cc
-src/terminal-global-shortcuts.cc
 src/terminal-preferences-window.ui
 src/terminal-prefs-process.cc
 src/terminal-profile-editor.cc
-src/terminal-profile-file.cc
 src/terminal-profile-editor.ui
+src/terminal-profile-file.cc
 src/terminal-profile-row.cc
 src/terminal-profile-row.ui
 src/terminal-screen.cc
 src/terminal-search-popover.cc
 src/terminal-shortcut-editor.ui
+src/terminal-tab-sidebar.cc
 src/terminal-util.cc
 src/terminal-window.cc
 src/terminal-window.ui

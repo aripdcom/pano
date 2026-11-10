@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:10+0300\n"
+"POT-Creation-Date: 2026-11-10 22:31+0300\n"
 "PO-Revision-Date: 2021-03-24 14:02+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
@@ -52,35 +52,6 @@ msgstr "Cửa sổ mới"
 #: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Tùy thích"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:3
-#, fuzzy
-#| msgid "Use the command line"
-msgid "Configure the command line"
-msgstr "Dùng dòng lệnh"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:7
-msgid "shell;prompt;command;commandline;cmd;"
-msgstr ""
-"shell;hệ vỏ;he vo;prompt;nhắc lệnh;nhac "
-"lenh;command;lệnh;lenh;commandline;dòng lệnh;dong lenh;cmd;"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
-#, fuzzy
-#| msgid "Profile Preferences"
-msgid "Pano Terminal Preferences"
-msgstr "Tùy thích Hồ sơ"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
-#: src/terminal-global-shortcuts.cc:412
-#, fuzzy
-msgid "Pano Terminal Quick Terminal"
-msgstr "Mô phỏng thiết bị cuối GNOME"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
-#: src/terminal-global-shortcuts.cc:231
-msgid "Show or hide the quick terminal"
-msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:34
 #: data/com.aripd.Pano.metainfo.xml.in:63
@@ -233,6 +204,35 @@ msgstr ""
 "Mở Thiết bị cuối là phần bổ sung dành cho ứng dụng “Tập tin” cái mà sẽ thêm "
 "một mục vào trình đơn ngữ cảnh để mở thiết bị cuối ở thư mục hiện đang được "
 "duyệt."
+
+#: data/com.aripd.Pano.Preferences.desktop.in:3
+#, fuzzy
+#| msgid "Use the command line"
+msgid "Configure the command line"
+msgstr "Dùng dòng lệnh"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr ""
+"shell;hệ vỏ;he vo;prompt;nhắc lệnh;nhac "
+"lenh;command;lệnh;lenh;commandline;dòng lệnh;dong lenh;cmd;"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+#| msgid "Profile Preferences"
+msgid "Pano Terminal Preferences"
+msgstr "Tùy thích Hồ sơ"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "Mô phỏng thiết bị cuối GNOME"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1349
+msgid "Show or hide the quick terminal"
+msgstr ""
 
 # Cần dùng dấu nháy đơn. Xem:
 # <https://mail.gnome.org/archives/gnome-i18n/2014-September/msg00155.html>
@@ -1765,6 +1765,47 @@ msgstr ""
 msgid "Search actions, profiles and tabs"
 msgstr ""
 
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:67
+#, c-format
+msgid "%s (Toolbox)"
+msgstr ""
+
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:71
+#, c-format
+msgid "%s (Distrobox)"
+msgstr ""
+
+#: src/terminal-containers.cc:84
+#, fuzzy
+#| msgid "New tab _position:"
+msgid "New Tab in _Container"
+msgstr "_Vị trí thanh mới:"
+
+#: src/terminal-find-bar.cc:124
+#, fuzzy
+#| msgid "Search"
+msgid "No results"
+msgstr "Tìm kiếm"
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:127
+#, c-format
+msgid "%d of more than %u"
+msgstr ""
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:130
+#, c-format
+msgid "%d of %u"
+msgstr ""
+
+#. Keep it short; the tooltip has the details
+#: src/terminal-find-bar.cc:250
+msgid "Invalid pattern"
+msgstr ""
+
 #: src/terminal-find-bar.ui:67
 #, fuzzy
 #| msgid "Search"
@@ -1812,6 +1853,14 @@ msgstr "Đóng thanh"
 #| msgid "Close tab"
 msgid "Close the search bar"
 msgstr "Đóng thanh"
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
 
 #: src/terminal-headerbar.ui:40
 #, fuzzy
@@ -2335,14 +2384,6 @@ msgstr "Nhân bản hồ sơ"
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
 msgstr[0] ""
-
-#: src/terminal-global-shortcuts.cc:387
-msgid "The quick terminal’s shortcut works while Pano Terminal runs"
-msgstr ""
-
-#: src/terminal-global-shortcuts.cc:413
-msgid "Makes the quick terminal’s shortcut work after logging in"
-msgstr ""
 
 #: src/terminal-preferences-window.ui:42
 #, fuzzy
@@ -2902,11 +2943,6 @@ msgstr "Các bảng mã đã lạc hậu"
 msgid "Select Font"
 msgstr "Chọn tất cả"
 
-#: src/terminal-profile-file.cc:96
-#, fuzzy
-msgid "The file is not a Pano Terminal profile."
-msgstr "Mở Thiết bị cuối _nội bộ"
-
 #: src/terminal-profile-editor.ui:20
 #, fuzzy
 #| msgid "_Profile"
@@ -3373,6 +3409,11 @@ msgstr "Chạy lại lệnh"
 msgid "Hold terminal"
 msgstr "Luôn để thiết bị đầu cuối mở"
 
+#: src/terminal-profile-file.cc:96
+#, fuzzy
+msgid "The file is not a Pano Terminal profile."
+msgstr "Mở Thiết bị cuối _nội bộ"
+
 #: src/terminal-profile-row.ui:47
 msgid "_Edit"
 msgstr "_Sửa"
@@ -3442,6 +3483,10 @@ msgstr "Phím tắt"
 #| msgid "_Enable shortcuts"
 msgid "Enable Shortcuts"
 msgstr "_Bật phím tắt"
+
+#: src/terminal-tab-sidebar.cc:525
+msgid "Pinned"
+msgstr ""
 
 #: src/terminal-util.cc:171
 msgid "There was an error displaying help"

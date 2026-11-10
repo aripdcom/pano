@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.hy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:10+0300\n"
+"POT-Creation-Date: 2026-11-10 22:31+0300\n"
 "PO-Revision-Date: 2009-01-30 20:17+0400\n"
 "Last-Translator: Norayr Chilingaryan <chnorik@gmail.com>\n"
 "Language-Team: <norik@freenet.am>\n"
@@ -44,31 +44,6 @@ msgstr "Նոր Պատուհան"
 #: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
 #: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
 msgid "Preferences"
-msgstr ""
-
-#: data/com.aripd.Pano.Preferences.desktop.in:3
-#, fuzzy
-msgid "Configure the command line"
-msgstr "Հրամանային տող"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:7
-msgid "shell;prompt;command;commandline;cmd;"
-msgstr ""
-
-#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
-#, fuzzy
-msgid "Pano Terminal Preferences"
-msgstr "ԳՆՈՄ Տերմինալ"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
-#: src/terminal-global-shortcuts.cc:412
-#, fuzzy
-msgid "Pano Terminal Quick Terminal"
-msgstr "ԳՆՈՄ Տերմինալ"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
-#: src/terminal-global-shortcuts.cc:231
-msgid "Show or hide the quick terminal"
 msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:34
@@ -201,6 +176,31 @@ msgid ""
 "Open in Pano Terminal is a plugin for the Files application that adds a menu "
 "item to the context menu to open Pano Terminal in the currently browsed "
 "directory."
+msgstr ""
+
+#: data/com.aripd.Pano.Preferences.desktop.in:3
+#, fuzzy
+msgid "Configure the command line"
+msgstr "Հրամանային տող"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr ""
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+msgid "Pano Terminal Preferences"
+msgstr "ԳՆՈՄ Տերմինալ"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "ԳՆՈՄ Տերմինալ"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1349
+msgid "Show or hide the quick terminal"
 msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
@@ -1569,6 +1569,47 @@ msgstr ""
 msgid "Search actions, profiles and tabs"
 msgstr ""
 
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:67
+#, c-format
+msgid "%s (Toolbox)"
+msgstr ""
+
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:71
+#, c-format
+msgid "%s (Distrobox)"
+msgstr ""
+
+#: src/terminal-containers.cc:84
+#, fuzzy
+#| msgid "New Tab"
+msgid "New Tab in _Container"
+msgstr "Նոր Թերթ"
+
+#: src/terminal-find-bar.cc:124
+#, fuzzy
+#| msgid "_Search for:"
+msgid "No results"
+msgstr "Փնտրել սա՝"
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:127
+#, c-format
+msgid "%d of more than %u"
+msgstr ""
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:130
+#, c-format
+msgid "%d of %u"
+msgstr ""
+
+#. Keep it short; the tooltip has the details
+#: src/terminal-find-bar.cc:250
+msgid "Invalid pattern"
+msgstr ""
+
 #: src/terminal-find-bar.ui:67
 #, fuzzy
 #| msgid "_Search for:"
@@ -1611,6 +1652,14 @@ msgstr "Փակել Թերթը"
 #, fuzzy
 msgid "Close the search bar"
 msgstr "Փակել Թերթը"
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
 
 #: src/terminal-headerbar.ui:40
 #, fuzzy
@@ -2139,14 +2188,6 @@ msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
 msgstr[0] ""
 msgstr[1] ""
-
-#: src/terminal-global-shortcuts.cc:387
-msgid "The quick terminal’s shortcut works while Pano Terminal runs"
-msgstr ""
-
-#: src/terminal-global-shortcuts.cc:413
-msgid "Makes the quick terminal’s shortcut work after logging in"
-msgstr ""
 
 #: src/terminal-preferences-window.ui:42
 msgid "_Reset to default"
@@ -2684,10 +2725,6 @@ msgstr ""
 msgid "Select Font"
 msgstr ""
 
-#: src/terminal-profile-file.cc:96
-msgid "The file is not a Pano Terminal profile."
-msgstr ""
-
 #: src/terminal-profile-editor.ui:20
 #, fuzzy
 #| msgid "Profiles"
@@ -3112,6 +3149,10 @@ msgstr "Վերաբեռնել հրամանը"
 msgid "Hold terminal"
 msgstr "ԳՆՈՄ Տերմինալ"
 
+#: src/terminal-profile-file.cc:96
+msgid "The file is not a Pano Terminal profile."
+msgstr ""
+
 #: src/terminal-profile-row.ui:47
 msgid "_Edit"
 msgstr "Խմբագրել"
@@ -3170,6 +3211,10 @@ msgstr ""
 
 #: src/terminal-shortcut-editor.ui:34
 msgid "Enable Shortcuts"
+msgstr ""
+
+#: src/terminal-tab-sidebar.cc:525
+msgid "Pinned"
 msgstr ""
 
 #: src/terminal-util.cc:171

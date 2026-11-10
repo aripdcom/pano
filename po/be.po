@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:10+0300\n"
+"POT-Creation-Date: 2026-11-10 22:31+0300\n"
 "PO-Revision-Date: 2026-09-10 03:10+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -49,33 +49,6 @@ msgstr "Новае акно"
 #: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Налады"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:3
-msgid "Configure the command line"
-msgstr "Наладзіць камандны радок"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:7
-msgid "shell;prompt;command;commandline;cmd;"
-msgstr ""
-"shell;prompt;command;commandline;cmd;абалонка;камандны "
-"радок;загад;каманда;камандны радок;"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
-#, fuzzy
-#| msgid "Terminal Preferences"
-msgid "Pano Terminal Preferences"
-msgstr "Налады тэрмінала"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
-#: src/terminal-global-shortcuts.cc:412
-#, fuzzy
-msgid "Pano Terminal Quick Terminal"
-msgstr "Зрабіць тэрмінал GNOME _прадвызначаным тэрміналам?"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
-#: src/terminal-global-shortcuts.cc:231
-msgid "Show or hide the quick terminal"
-msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:34
 #: data/com.aripd.Pano.metainfo.xml.in:63
@@ -226,6 +199,33 @@ msgid ""
 msgstr ""
 "Плагін тэрмінала для праграмы «Файлы» дадае пункт у кантэкстнае меню, які "
 "адкрывае тэрмінал у бягучым каталогу."
+
+#: data/com.aripd.Pano.Preferences.desktop.in:3
+msgid "Configure the command line"
+msgstr "Наладзіць камандны радок"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr ""
+"shell;prompt;command;commandline;cmd;абалонка;камандны "
+"радок;загад;каманда;камандны радок;"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+#| msgid "Terminal Preferences"
+msgid "Pano Terminal Preferences"
+msgstr "Налады тэрмінала"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "Зрабіць тэрмінал GNOME _прадвызначаным тэрміналам?"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1349
+msgid "Show or hide the quick terminal"
+msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
@@ -1750,6 +1750,47 @@ msgstr ""
 msgid "Search actions, profiles and tabs"
 msgstr ""
 
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:67
+#, c-format
+msgid "%s (Toolbox)"
+msgstr ""
+
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:71
+#, c-format
+msgid "%s (Distrobox)"
+msgstr ""
+
+#: src/terminal-containers.cc:84
+#, fuzzy
+#| msgid "New Tab Position"
+msgid "New Tab in _Container"
+msgstr "Пазіцыя новай укладкі"
+
+#: src/terminal-find-bar.cc:124
+#, fuzzy
+#| msgid "Search up to next result"
+msgid "No results"
+msgstr "Пошук выніку вышэй"
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:127
+#, c-format
+msgid "%d of more than %u"
+msgstr ""
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:130
+#, c-format
+msgid "%d of %u"
+msgstr ""
+
+#. Keep it short; the tooltip has the details
+#: src/terminal-find-bar.cc:250
+msgid "Invalid pattern"
+msgstr ""
+
 #: src/terminal-find-bar.ui:67
 #, fuzzy
 #| msgid "Search up to next result"
@@ -1787,6 +1828,14 @@ msgstr "Закрыць"
 #: src/terminal-find-bar.ui:143
 msgid "Close the search bar"
 msgstr "Закрыць панэль пошуку"
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
 
 #: src/terminal-headerbar.ui:40
 msgid "New Tab from Profile"
@@ -2307,14 +2356,6 @@ msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-
-#: src/terminal-global-shortcuts.cc:387
-msgid "The quick terminal’s shortcut works while Pano Terminal runs"
-msgstr ""
-
-#: src/terminal-global-shortcuts.cc:413
-msgid "Makes the quick terminal’s shortcut work after logging in"
-msgstr ""
 
 #: src/terminal-preferences-window.ui:42
 msgid "_Reset to default"
@@ -2854,11 +2895,6 @@ msgstr "Састарэлыя кадаванні"
 msgid "Select Font"
 msgstr "Выберыце шрыфт"
 
-#: src/terminal-profile-file.cc:96
-#, fuzzy
-msgid "The file is not a Pano Terminal profile."
-msgstr "Адкрыць _лакальны тэрмінал"
-
 #: src/terminal-profile-editor.ui:20
 msgid "Edit Profile"
 msgstr "Рэдагаванне профілю"
@@ -3249,6 +3285,11 @@ msgstr "Перазапусціць каманду"
 msgid "Hold terminal"
 msgstr "Пакінуць тэрмінал"
 
+#: src/terminal-profile-file.cc:96
+#, fuzzy
+msgid "The file is not a Pano Terminal profile."
+msgstr "Адкрыць _лакальны тэрмінал"
+
 #: src/terminal-profile-row.ui:47
 msgid "_Edit"
 msgstr "_Рэдагаваць"
@@ -3310,6 +3351,10 @@ msgstr "Спалучэнні клавіш"
 #: src/terminal-shortcut-editor.ui:34
 msgid "Enable Shortcuts"
 msgstr "Уключыць спалучэнні клавіш"
+
+#: src/terminal-tab-sidebar.cc:525
+msgid "Pinned"
+msgstr ""
 
 #: src/terminal-util.cc:171
 msgid "There was an error displaying help"

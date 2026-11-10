@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:10+0300\n"
+"POT-Creation-Date: 2026-11-10 22:31+0300\n"
 "PO-Revision-Date: 2023-08-13 12:44+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -64,31 +64,6 @@ msgstr "Xanela nova"
 #: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "Preferencias"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:3
-msgid "Configure the command line"
-msgstr "Configurar a liña de ordes"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:7
-msgid "shell;prompt;command;commandline;cmd;"
-msgstr "shell;consola;orde;liña de ordes;cmd;comando;"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
-#, fuzzy
-#| msgid "Terminal Preferences"
-msgid "Pano Terminal Preferences"
-msgstr "Preferencias de Terminal"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
-#: src/terminal-global-shortcuts.cc:412
-#, fuzzy
-msgid "Pano Terminal Quick Terminal"
-msgstr "Desexa estabelecer o Terminal de GNOME como terminal predeterminado?"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
-#: src/terminal-global-shortcuts.cc:231
-msgid "Show or hide the quick terminal"
-msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:34
 #: data/com.aripd.Pano.metainfo.xml.in:63
@@ -241,6 +216,31 @@ msgstr ""
 "Abrir un Terminal é un engadido para a aplicación Ficheiros que engade un "
 "elemento no menú contextual para abrir un terminal no cartafol que se está "
 "explorando actualmente."
+
+#: data/com.aripd.Pano.Preferences.desktop.in:3
+msgid "Configure the command line"
+msgstr "Configurar a liña de ordes"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr "shell;consola;orde;liña de ordes;cmd;comando;"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+#| msgid "Terminal Preferences"
+msgid "Pano Terminal Preferences"
+msgstr "Preferencias de Terminal"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "Desexa estabelecer o Terminal de GNOME como terminal predeterminado?"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1349
+msgid "Show or hide the quick terminal"
+msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
@@ -1794,6 +1794,47 @@ msgstr ""
 msgid "Search actions, profiles and tabs"
 msgstr ""
 
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:67
+#, c-format
+msgid "%s (Toolbox)"
+msgstr ""
+
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:71
+#, c-format
+msgid "%s (Distrobox)"
+msgstr ""
+
+#: src/terminal-containers.cc:84
+#, fuzzy
+#| msgid "New tab _position:"
+msgid "New Tab in _Container"
+msgstr "Posición da nova _lapela:"
+
+#: src/terminal-find-bar.cc:124
+#, fuzzy
+#| msgid "Search"
+msgid "No results"
+msgstr "Buscar"
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:127
+#, c-format
+msgid "%d of more than %u"
+msgstr ""
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:130
+#, c-format
+msgid "%d of %u"
+msgstr ""
+
+#. Keep it short; the tooltip has the details
+#: src/terminal-find-bar.cc:250
+msgid "Invalid pattern"
+msgstr ""
+
 #: src/terminal-find-bar.ui:67
 #, fuzzy
 #| msgid "Search"
@@ -1841,6 +1882,14 @@ msgstr "Pechar a lapela"
 #| msgid "Close tab"
 msgid "Close the search bar"
 msgstr "Pechar lapela"
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
 
 #: src/terminal-headerbar.ui:40
 #, fuzzy
@@ -2366,14 +2415,6 @@ msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
 msgstr[0] ""
 msgstr[1] ""
-
-#: src/terminal-global-shortcuts.cc:387
-msgid "The quick terminal’s shortcut works while Pano Terminal runs"
-msgstr ""
-
-#: src/terminal-global-shortcuts.cc:413
-msgid "Makes the quick terminal’s shortcut work after logging in"
-msgstr ""
 
 #: src/terminal-preferences-window.ui:42
 #, fuzzy
@@ -2933,11 +2974,6 @@ msgstr "Codificacións obsoletas"
 msgid "Select Font"
 msgstr "Seleccionar todo"
 
-#: src/terminal-profile-file.cc:96
-#, fuzzy
-msgid "The file is not a Pano Terminal profile."
-msgstr "Abrir un _terminal local"
-
 #: src/terminal-profile-editor.ui:20
 #, fuzzy
 #| msgid "_Profile"
@@ -3399,6 +3435,11 @@ msgstr "Reiniciar a orde"
 msgid "Hold terminal"
 msgstr "Deixar o terminal aberto"
 
+#: src/terminal-profile-file.cc:96
+#, fuzzy
+msgid "The file is not a Pano Terminal profile."
+msgstr "Abrir un _terminal local"
+
 #: src/terminal-profile-row.ui:47
 msgid "_Edit"
 msgstr "_Editar"
@@ -3468,6 +3509,10 @@ msgstr "Atallos"
 #| msgid "_Enable shortcuts"
 msgid "Enable Shortcuts"
 msgstr "_Activar atallos"
+
+#: src/terminal-tab-sidebar.cc:525
+msgid "Pinned"
+msgstr ""
 
 #: src/terminal-util.cc:171
 msgid "There was an error displaying help"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:10+0300\n"
+"POT-Creation-Date: 2026-11-10 22:31+0300\n"
 "PO-Revision-Date: 2013-04-01 16:16+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -46,34 +46,6 @@ msgstr "ନୂଆ ଉଇଣ୍ଡୋ"
 #: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "ପସନ୍ଦ"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:3
-#, fuzzy
-#| msgid "Use the command line"
-msgid "Configure the command line"
-msgstr "ନିର୍ଦ୍ଦେଶ ଧାରାକୁ ବ୍ୟବହାର କରନ୍ତୁ"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:7
-#, fuzzy
-#| msgid "shell;prompt;command;commandline;"
-msgid "shell;prompt;command;commandline;cmd;"
-msgstr "ସେଲ;ପ୍ରମ୍ପ୍ଟ;ନିର୍ଦ୍ଦେଶ;ନିର୍ଦ୍ଦେଶ ଧାରା;"
-
-#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
-#, fuzzy
-msgid "Pano Terminal Preferences"
-msgstr "GNOME ଟର୍ମିନାଲ କ୍ଲାଏଣ୍ଟ"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
-#: src/terminal-global-shortcuts.cc:412
-#, fuzzy
-msgid "Pano Terminal Quick Terminal"
-msgstr "GNOME ଟର୍ମିନାଲ କ୍ଲାଏଣ୍ଟ"
-
-#: data/com.aripd.Pano.QuickTerminal.desktop.in:3 src/terminal-options.cc:1349
-#: src/terminal-global-shortcuts.cc:231
-msgid "Show or hide the quick terminal"
-msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:34
 #: data/com.aripd.Pano.metainfo.xml.in:63
@@ -207,6 +179,34 @@ msgid ""
 "Open in Pano Terminal is a plugin for the Files application that adds a menu "
 "item to the context menu to open Pano Terminal in the currently browsed "
 "directory."
+msgstr ""
+
+#: data/com.aripd.Pano.Preferences.desktop.in:3
+#, fuzzy
+#| msgid "Use the command line"
+msgid "Configure the command line"
+msgstr "ନିର୍ଦ୍ଦେଶ ଧାରାକୁ ବ୍ୟବହାର କରନ୍ତୁ"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:7
+#, fuzzy
+#| msgid "shell;prompt;command;commandline;"
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr "ସେଲ;ପ୍ରମ୍ପ୍ଟ;ନିର୍ଦ୍ଦେଶ;ନିର୍ଦ୍ଦେଶ ଧାରା;"
+
+#: data/com.aripd.Pano.Preferences.desktop.in:8 src/prefs-main.cc:146
+#, fuzzy
+msgid "Pano Terminal Preferences"
+msgstr "GNOME ଟର୍ମିନାଲ କ୍ଲାଏଣ୍ଟ"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:2
+#: src/terminal-global-shortcuts.cc:412
+#, fuzzy
+msgid "Pano Terminal Quick Terminal"
+msgstr "GNOME ଟର୍ମିନାଲ କ୍ଲାଏଣ୍ଟ"
+
+#: data/com.aripd.Pano.QuickTerminal.desktop.in:3
+#: src/terminal-global-shortcuts.cc:231 src/terminal-options.cc:1349
+msgid "Show or hide the quick terminal"
 msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
@@ -1819,6 +1819,47 @@ msgstr ""
 msgid "Search actions, profiles and tabs"
 msgstr ""
 
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:67
+#, c-format
+msgid "%s (Toolbox)"
+msgstr ""
+
+#. Translators: a container name, and the tool that made it
+#: src/terminal-containers.cc:71
+#, c-format
+msgid "%s (Distrobox)"
+msgstr ""
+
+#: src/terminal-containers.cc:84
+#, fuzzy
+#| msgid "New Tab"
+msgid "New Tab in _Container"
+msgstr "ନୂଆ ଟାବ"
+
+#: src/terminal-find-bar.cc:124
+#, fuzzy
+#| msgid "_Search for:"
+msgid "No results"
+msgstr "ଏହା ପାଇଁ ସନ୍ଧାନ କରନ୍ତୁ (_S):"
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:127
+#, c-format
+msgid "%d of more than %u"
+msgstr ""
+
+#. Translators: the current search match, and the number of matches
+#: src/terminal-find-bar.cc:130
+#, c-format
+msgid "%d of %u"
+msgstr ""
+
+#. Keep it short; the tooltip has the details
+#: src/terminal-find-bar.cc:250
+msgid "Invalid pattern"
+msgstr ""
+
 #: src/terminal-find-bar.ui:67
 #, fuzzy
 #| msgid "_Search for:"
@@ -1866,6 +1907,14 @@ msgstr "ଟାବ ବନ୍ଦକର"
 #| msgid "Close tab"
 msgid "Close the search bar"
 msgstr "ଟ୍ୟାବ ବନ୍ଦ କରନ୍ତୁ"
+
+#: src/terminal-global-shortcuts.cc:387
+msgid "The quick terminal’s shortcut works while Pano Terminal runs"
+msgstr ""
+
+#: src/terminal-global-shortcuts.cc:413
+msgid "Makes the quick terminal’s shortcut work after logging in"
+msgstr ""
 
 #: src/terminal-headerbar.ui:40
 #, fuzzy
@@ -2417,14 +2466,6 @@ msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/terminal-global-shortcuts.cc:387
-msgid "The quick terminal’s shortcut works while Pano Terminal runs"
-msgstr ""
-
-#: src/terminal-global-shortcuts.cc:413
-msgid "Makes the quick terminal’s shortcut work after logging in"
-msgstr ""
-
 #: src/terminal-preferences-window.ui:42
 msgid "_Reset to default"
 msgstr ""
@@ -2972,11 +3013,6 @@ msgstr "ସାଙ୍କେତିକରଣଗୁଡ଼ିକ"
 msgid "Select Font"
 msgstr ""
 
-#: src/terminal-profile-file.cc:96
-#, fuzzy
-msgid "The file is not a Pano Terminal profile."
-msgstr "ସ୍ଥାନିୟ ଟର୍ମିନାଲରେ ଖୋଲନ୍ତୁ (_L)"
-
 #: src/terminal-profile-editor.ui:20
 #, fuzzy
 #| msgid "Profiles"
@@ -3445,6 +3481,11 @@ msgstr "ନିର୍ଦ୍ଦେଶ ଧାରାକୁ ପୁନଃ ଚାଳନ
 msgid "Hold terminal"
 msgstr "ଟର୍ମିନାଲକୁ ଖୋଲା ରଖନ୍ତୁ"
 
+#: src/terminal-profile-file.cc:96
+#, fuzzy
+msgid "The file is not a Pano Terminal profile."
+msgstr "ସ୍ଥାନିୟ ଟର୍ମିନାଲରେ ଖୋଲନ୍ତୁ (_L)"
+
 #: src/terminal-profile-row.ui:47
 msgid "_Edit"
 msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (_E)"
@@ -3506,6 +3547,10 @@ msgstr "ସଂକ୍ଷିପ୍ତ ପଥ"
 #| msgid "Shortcuts"
 msgid "Enable Shortcuts"
 msgstr "ସଂକ୍ଷିପ୍ତ ପଥ"
+
+#: src/terminal-tab-sidebar.cc:525
+msgid "Pinned"
+msgstr ""
 
 #: src/terminal-util.cc:171
 msgid "There was an error displaying help"
