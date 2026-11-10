@@ -313,7 +313,8 @@ flatpak install ./pano-terminal.flatpak     # any distribution</code></pre>
 cd pano
 meson setup _build --prefix=$HOME/.local -Dsearch_provider=false -Dnautilus_extension=false
 ninja -C _build
-ninja -C _build install</code></pre>
+ninja -C _build install
+systemctl --user daemon-reload</code></pre>
 
         <p class="note">
           If your distribution ships an older VTE, for example Ubuntu 24.04,
