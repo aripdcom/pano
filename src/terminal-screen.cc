@@ -2742,6 +2742,11 @@ terminal_screen_exec (TerminalScreen *screen,
 
   TerminalScreenPrivate *priv = screen->priv;
 
+  /* The cursor stops blinking while a terminal is held after its command
+   * exited; blink as the profile says again */
+  vte_terminal_set_cursor_blink_mode (VTE_TERMINAL (screen),
+                                      VteCursorBlinkMode(g_settings_get_enum (priv->profile, TERMINAL_PROFILE_CURSOR_BLINK_MODE_KEY)));
+
   ExecData *data = exec_data_new ();
   data->callback = callback;
   data->callback_data = user_data;
@@ -4215,6 +4220,9 @@ terminal_screen_child_exited (VteTerminal *terminal,
       GtkWidget *info_bar;
 
       /* Offer the shell, unless that is what exited */
+      /* Nothing can be typed now, so the cursor does not blink */
+      vte_terminal_set_cursor_blink_mode (VTE_TERMINAL (screen), VTE_CURSOR_BLINK_OFF);
+
       auto const data = priv->exec_data;
       gs_free char *custom_command = profile_dup_custom_command (priv->profile);
       auto const ran_command = data && (data->argv || custom_command);
