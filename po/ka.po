@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:03+0300\n"
+"POT-Creation-Date: 2026-11-10 22:10+0300\n"
 "PO-Revision-Date: 2023-07-24 06:11+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <Ubuntu-Georgian-Translators@googlegroups.com>\n"
@@ -45,7 +45,7 @@ msgid "New Window"
 msgstr "ახალი ფანჯარა"
 
 #: data/com.aripd.Pano.desktop.in:27 src/terminal-accels.cc:162
-#: src/terminal-preferences-window.ui:50
+#: src/terminal-preferences-window.ui:21 src/terminal-preferences-window.ui:51
 msgid "Preferences"
 msgstr "მორგება"
 
@@ -183,6 +183,13 @@ msgid "aripd"
 msgstr ""
 
 #: data/com.aripd.Pano.metainfo.xml.in:71
+msgid ""
+"Pano Terminal opens from the applications menu when it is built from source "
+"and installed to a prefix such as ~/.local. The Turkish translation is "
+"complete, and the other translations are up to date with the current strings."
+msgstr ""
+
+#: data/com.aripd.Pano.metainfo.xml.in:76
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
@@ -215,8 +222,7 @@ msgid ""
 "directory."
 msgstr ""
 
-#. Translators: This needs to be parsed as a GVariant string, so keep the
-#. regular single quotes around the string as-is, and do not add extra quotes.
+#. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
 msgctxt "visible-name"
 msgid "'Unnamed'"
@@ -1949,8 +1955,7 @@ msgid ""
 "Terminal."
 msgstr ""
 
-#. %s is being replaced with "-- " (without quotes), which must be used
-#. literally, not translatable
+#. %s is being replaced with "-- " (without quotes), which must be used literally, not translatable
 #: src/terminal-options.cc:335
 #, c-format
 msgid ""
@@ -2266,384 +2271,384 @@ msgstr ""
 msgid "Makes the quick terminal’s shortcut work after logging in"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:41
+#: src/terminal-preferences-window.ui:42
 #, fuzzy
 #| msgid "Set as default"
 msgid "_Reset to default"
 msgstr "ნაგულისხმებად დაყენება"
 
-#: src/terminal-preferences-window.ui:53
+#: src/terminal-preferences-window.ui:54
 #, fuzzy
 #| msgid "Text Appearance"
 msgid "Appearance"
 msgstr "ტექსტის გარეგნობა"
 
-#: src/terminal-preferences-window.ui:56
+#: src/terminal-preferences-window.ui:57
 #, fuzzy
 #| msgid "Theme _variant:"
 msgid "Theme Variant"
 msgstr "_თემის ვარიანტი:"
 
 #. Default profile label
-#: src/terminal-preferences-window.ui:65 src/terminal-preferences-window.ui:96
+#: src/terminal-preferences-window.ui:66 src/terminal-preferences-window.ui:97
 #: src/terminal-profile-editor.ui:515 src/terminal-profile-row.ui:25
 msgid "Default"
 msgstr "ნაგულისხმები"
 
-#: src/terminal-preferences-window.ui:71
+#: src/terminal-preferences-window.ui:72
 msgid "Dark"
 msgstr "ბნელი"
 
-#: src/terminal-preferences-window.ui:77
+#: src/terminal-preferences-window.ui:78
 #, fuzzy
 #| msgid "height"
 msgid "Light"
 msgstr "სიმაღლე"
 
-#: src/terminal-preferences-window.ui:87
+#: src/terminal-preferences-window.ui:88
 msgid "Rounded corners"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:102
+#: src/terminal-preferences-window.ui:103
 msgid "Top only"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:108 src/terminal-profile-editor.ui:644
+#: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
 msgid "None"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:118
+#: src/terminal-preferences-window.ui:119
 msgid "Space Around the Text"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:127
+#: src/terminal-preferences-window.ui:128
 msgctxt "terminal-padding"
 msgid "None"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:133
+#: src/terminal-preferences-window.ui:134
 msgctxt "terminal-padding"
 msgid "Small"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:139
+#: src/terminal-preferences-window.ui:140
 msgctxt "terminal-padding"
 msgid "Large"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:149
+#: src/terminal-preferences-window.ui:150
 msgid "Color the Header Bar Like the Terminal"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:150
+#: src/terminal-preferences-window.ui:151
 msgid "When the terminal uses a color scheme or colors of its own"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:155
+#: src/terminal-preferences-window.ui:156
 msgid "Dim Inactive Panes"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:156
+#: src/terminal-preferences-window.ui:157
 msgid "In a split tab, fade the panes other than the one you type in"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:161
+#: src/terminal-preferences-window.ui:162
 #, fuzzy
 msgid "Show Pane Titles"
 msgstr "GNOME-ის ტერმინალის ემულატორის მორგება"
 
-#: src/terminal-preferences-window.ui:162
+#: src/terminal-preferences-window.ui:163
 msgid "In a split tab, show the title of each pane above it"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:167
+#: src/terminal-preferences-window.ui:168
 msgid "Highlight Root and Remote Sessions"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:168
+#: src/terminal-preferences-window.ui:169
 msgid ""
 "Color the header bar and mark the tab while a terminal runs as root or over "
 "SSH"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:173
+#: src/terminal-preferences-window.ui:174
 msgid "Tab Bar Position"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:182
+#: src/terminal-preferences-window.ui:183
 msgid "Top"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:188
+#: src/terminal-preferences-window.ui:189
 msgid "Bottom"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:194
+#: src/terminal-preferences-window.ui:195
 msgid "Left"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:200
+#: src/terminal-preferences-window.ui:201
 #, fuzzy
 #| msgid "height"
 msgid "Right"
 msgstr "სიმაღლე"
 
-#: src/terminal-preferences-window.ui:212
+#: src/terminal-preferences-window.ui:213
 msgid "Behavior"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:215
+#: src/terminal-preferences-window.ui:216
 #, fuzzy
 #| msgid "New Terminal"
 msgid "Open New Terminals"
 msgstr "ახალი ტერმინალი"
 
-#: src/terminal-preferences-window.ui:224
+#: src/terminal-preferences-window.ui:225
 #, fuzzy
 #| msgid "Open Ta_b"
 msgid "In Tab"
 msgstr "გახსენი ჩ_ანართი"
 
-#: src/terminal-preferences-window.ui:230
+#: src/terminal-preferences-window.ui:231
 #, fuzzy
 #| msgid "Window"
 msgid "In Window"
 msgstr "ფანჯარა"
 
-#: src/terminal-preferences-window.ui:240
+#: src/terminal-preferences-window.ui:241
 #, fuzzy
 #| msgid "New tab _position:"
 msgid "New Tab Position"
 msgstr "ახალი ჩანართის _მდებარეობა:"
 
-#: src/terminal-preferences-window.ui:249
+#: src/terminal-preferences-window.ui:250
 msgid "Last"
 msgstr "ბოლო"
 
-#: src/terminal-preferences-window.ui:255
+#: src/terminal-preferences-window.ui:256
 msgid "Next"
 msgstr "შემდეგი"
 
-#: src/terminal-preferences-window.ui:265
+#: src/terminal-preferences-window.ui:266
 msgid "Middle-Click on a Tab"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:274
+#: src/terminal-preferences-window.ui:275
 msgctxt "tab-middle-click"
 msgid "Does Nothing"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:280
+#: src/terminal-preferences-window.ui:281
 #, fuzzy
 #| msgid "Close Tab"
 msgctxt "tab-middle-click"
 msgid "Closes the Tab"
 msgstr "ჩანართის დახურვა"
 
-#: src/terminal-preferences-window.ui:286
+#: src/terminal-preferences-window.ui:287
 msgctxt "tab-middle-click"
 msgid "Pastes the Selection"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:296
+#: src/terminal-preferences-window.ui:297
 msgid "Ignore Titles Set by Programs"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:297
+#: src/terminal-preferences-window.ui:298
 msgid "Show the title set with Set Title, or else the working directory"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:302
+#: src/terminal-preferences-window.ui:303
 msgid "Confirm Copying"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:303
+#: src/terminal-preferences-window.ui:304
 msgid "Show a short notice after copying to the clipboard"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:308
+#: src/terminal-preferences-window.ui:309
 msgid "Shell Integration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:309
+#: src/terminal-preferences-window.ui:310
 msgid ""
 "Let bash, zsh and fish report their prompts and commands, for notifications, "
 "prompt navigation and copying command output. Applies to new terminals"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:314
+#: src/terminal-preferences-window.ui:315
 msgid "Notify When Commands Finish"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:315
+#: src/terminal-preferences-window.ui:316
 msgid ""
 "When a long command ends in a terminal you are not looking at. Needs shell "
 "integration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:320
+#: src/terminal-preferences-window.ui:321
 msgid "Minimum Command Duration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:321
+#: src/terminal-preferences-window.ui:322
 msgid "In seconds"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:336
+#: src/terminal-preferences-window.ui:337
 msgid "Silence Duration"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:337
+#: src/terminal-preferences-window.ui:338
 msgid ""
 "How long a terminal monitored for silence must be quiet, in seconds. Turn "
 "monitoring on in the context menu of a terminal"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:351
+#: src/terminal-preferences-window.ui:352
 msgid "Keep New Tabs in the Same Container"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:352
+#: src/terminal-preferences-window.ui:353
 msgid ""
 "New tabs and panes start in the Toolbox or Distrobox container of the "
 "terminal they are opened from"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:357
+#: src/terminal-preferences-window.ui:358
 msgid "Restore Session"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:358
+#: src/terminal-preferences-window.ui:359
 msgid ""
 "Reopen the windows, tabs and panes of the last session, each in its previous "
 "folder"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:363
+#: src/terminal-preferences-window.ui:364
 msgid "Remember Window Size"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:364
+#: src/terminal-preferences-window.ui:365
 msgid ""
 "Open new windows with the size of the last used terminal instead of the "
 "initial size of the profile"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:371
+#: src/terminal-preferences-window.ui:372
 #, fuzzy
 #| msgid "Terminal"
 msgid "Quick Terminal"
 msgstr "ტერმინალი"
 
-#: src/terminal-preferences-window.ui:372
+#: src/terminal-preferences-window.ui:373
 msgid ""
 "A terminal that you show and hide with one key. Use the system-wide shortcut "
 "below, or add the command “pano-terminal --quick” in Settings → Keyboard → "
 "Custom Shortcuts."
 msgstr ""
 
-#: src/terminal-preferences-window.ui:375
+#: src/terminal-preferences-window.ui:376
 msgid "System-Wide Shortcut"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:376
+#: src/terminal-preferences-window.ui:377
 msgid ""
 "The desktop asks for the key; F12 is suggested. Pano Terminal then keeps "
 "running in the background. Needs GNOME 48 or newer, or KDE Plasma."
 msgstr ""
 
-#: src/terminal-preferences-window.ui:382
+#: src/terminal-preferences-window.ui:383
 msgid "GNOME Shell Extension"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:383
+#: src/terminal-preferences-window.ui:384
 msgid ""
 "On Wayland, keeps the quick terminal at the top of the screen, above other "
 "windows and on all workspaces"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:388
+#: src/terminal-preferences-window.ui:389
 #, fuzzy
 #| msgid "width"
 msgid "Width"
 msgstr "სიგანე"
 
-#: src/terminal-preferences-window.ui:389
-#: src/terminal-preferences-window.ui:404
+#: src/terminal-preferences-window.ui:390
+#: src/terminal-preferences-window.ui:405
 msgid "In percent of the screen"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:403
+#: src/terminal-preferences-window.ui:404
 #, fuzzy
 #| msgid "height"
 msgid "Height"
 msgstr "სიმაღლე"
 
-#: src/terminal-preferences-window.ui:418
+#: src/terminal-preferences-window.ui:419
 msgid "Hide When Another App Is Used"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:423
+#: src/terminal-preferences-window.ui:424
 msgid "Slide In From the Top"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:424
+#: src/terminal-preferences-window.ui:425
 msgid "On X11, or with the GNOME Shell extension"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:431
+#: src/terminal-preferences-window.ui:432
 msgid "Keyboard Shortcuts"
 msgstr "კლავიატურის ბმულები"
 
-#: src/terminal-preferences-window.ui:434
+#: src/terminal-preferences-window.ui:435
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
 msgid "Accelerator Key (F10 by default)"
 msgstr "მენიუს მალსახმობი ღილაკის გამორთვა (F10)"
 
-#: src/terminal-preferences-window.ui:439
+#: src/terminal-preferences-window.ui:440
 msgid "View and Customize Shortcuts"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:453
+#: src/terminal-preferences-window.ui:454
 msgid "Profiles"
 msgstr "პროფილები"
 
-#: src/terminal-preferences-window.ui:457
+#: src/terminal-preferences-window.ui:458
 msgid "Import a profile from a file"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:465
+#: src/terminal-preferences-window.ui:466
 #, fuzzy
 #| msgid "_Export…"
 msgid "_Import…"
 msgstr "_გატანა…"
 
-#: src/terminal-preferences-window.ui:496
+#: src/terminal-preferences-window.ui:497
 #, fuzzy
 #| msgid "_Action"
 msgid "Application"
 msgstr "_მოქმედება"
 
-#: src/terminal-preferences-window.ui:499
+#: src/terminal-preferences-window.ui:500
 msgid "Import from GNOME Terminal"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:500
+#: src/terminal-preferences-window.ui:501
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:504 src/terminal-window.cc:3552
+#: src/terminal-preferences-window.ui:505 src/terminal-window.cc:3552
 #, fuzzy
 #| msgid "Export"
 msgid "_Import"
 msgstr "გატანა"
 
-#: src/terminal-preferences-window.ui:514
+#: src/terminal-preferences-window.ui:515
 msgid "Ask to Remain Default"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:519
+#: src/terminal-preferences-window.ui:520
 #, fuzzy
 #| msgid "_Set as default terminal"
 msgid "Set as Default Terminal"
@@ -2669,38 +2674,32 @@ msgstr "მწვანე შავ ფონზე"
 msgid "White on black"
 msgstr "თეთრი შავ ფონზე"
 
-#. Translators: "GNOME" is the name of a colour scheme, "light" can be
-#. translated
+#. Translators: "GNOME" is the name of a colour scheme, "light" can be translated
 #: src/terminal-profile-editor.cc:155
 msgid "GNOME light"
 msgstr "GNOME ღია"
 
-#. Translators: "GNOME" is the name of a colour scheme, "dark" can be
-#. translated
+#. Translators: "GNOME" is the name of a colour scheme, "dark" can be translated
 #: src/terminal-profile-editor.cc:160
 msgid "GNOME dark"
 msgstr "GNOME მუქი"
 
-#. Translators: "Tango" is the name of a colour scheme, "light" can be
-#. translated
+#. Translators: "Tango" is the name of a colour scheme, "light" can be translated
 #: src/terminal-profile-editor.cc:165
 msgid "Tango light"
 msgstr "ტანგო ღია"
 
-#. Translators: "Tango" is the name of a colour scheme, "dark" can be
-#. translated
+#. Translators: "Tango" is the name of a colour scheme, "dark" can be translated
 #: src/terminal-profile-editor.cc:170
 msgid "Tango dark"
 msgstr "ტანგო მუქი"
 
-#. Translators: "Solarized" is the name of a colour scheme, "light" can be
-#. translated
+#. Translators: "Solarized" is the name of a colour scheme, "light" can be translated
 #: src/terminal-profile-editor.cc:175
 msgid "Solarized light"
 msgstr "სოლარიზებული ღია"
 
-#. Translators: "Solarized" is the name of a colour scheme, "dark" can be
-#. translated
+#. Translators: "Solarized" is the name of a colour scheme, "dark" can be translated
 #: src/terminal-profile-editor.cc:180
 msgid "Solarized dark"
 msgstr "სოლარიზებული მუქი"

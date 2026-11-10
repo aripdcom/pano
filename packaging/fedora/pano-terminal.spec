@@ -1,5 +1,5 @@
 Name:           pano-terminal
-Version:        0.1.0
+Version:        0.1.1
 Release:        1%{?dist}
 Summary:        Terminal emulator for GNOME with split panes and tabs on any side
 
@@ -70,5 +70,9 @@ It can be installed next to GNOME Terminal.
 %{_userunitdir}/pano-terminal-server.service
 
 %changelog
+* Tue Nov 10 2026 aripdcem <cem@aripd.com> - 0.1.1-1
+- Install the systemd user unit where systemd finds it
+- Complete the Turkish translation and update the others
+
 * Tue Nov 10 2026 aripdcem <cem@aripd.com> - 0.1.0-1
 - First release of Pano Terminal

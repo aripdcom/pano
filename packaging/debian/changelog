@@ -1,3 +1,11 @@
+pano-terminal (0.1.1) unstable; urgency=medium
+
+  * Install the systemd user unit where systemd finds it, for prefixes
+    other than /usr and /usr/local.
+  * Complete the Turkish translation and update the others.
+
+ -- aripdcem <cem@aripd.com>  Tue, 10 Nov 2026 23:30:00 +0300
+
 pano-terminal (0.1.0) unstable; urgency=medium
 
   * First release of Pano Terminal.

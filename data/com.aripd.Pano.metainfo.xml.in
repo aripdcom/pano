@@ -66,6 +66,11 @@
     <name>aripd</name>
   </developer>
   <releases>
+    <release version="0.1.1" date="2026-11-10">
+      <description>
+        <p>Pano Terminal opens from the applications menu when it is built from source and installed to a prefix such as ~/.local. The Turkish translation is complete, and the other translations are up to date with the current strings.</p>
+      </description>
+    </release>
     <release version="0.1.0" date="2026-11-10">
       <description>
         <p>The first release of Pano Terminal, a fork of GNOME Terminal.</p>

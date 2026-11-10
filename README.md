@@ -11,8 +11,8 @@ It focuses on power-user features that GNOME Terminal does not offer, such
 as flexible tab placement, split panes, session restore and background
 transparency.
 
-> **Status:** early development. The first release is
-> [0.1.0](https://github.com/aripdcom/pano/releases/tag/v0.1.0), with
+> **Status:** early development. The latest release is
+> [0.1.1](https://github.com/aripdcom/pano/releases/tag/v0.1.1), with
 > packages for Fedora, Debian 13 and Flatpak.
 
 Pano Terminal can be installed next to GNOME Terminal. It uses its own
