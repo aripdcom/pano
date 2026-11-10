@@ -132,6 +132,8 @@ void terminal_screen_save_config (TerminalScreen *screen,
                                   GKeyFile *key_file,
                                   const char *group);
 
+gboolean terminal_screen_has_running_jobs (TerminalScreen *screen);
+
 gboolean terminal_screen_has_foreground_process (TerminalScreen *screen,
                                                  char           **process_name,
                                                  char           **cmdline);

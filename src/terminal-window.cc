@@ -5207,7 +5207,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
 
   if (kind == CloseKind::PANE)
     {
-      do_confirm = terminal_screen_has_foreground_process (screen, nullptr, nullptr);
+      do_confirm = terminal_screen_has_running_jobs (screen);
       n_tabs = 1;
     }
   else
@@ -5231,7 +5231,7 @@ confirm_close_window_or_tab (TerminalWindow *window,
       do_confirm = FALSE;
       for (auto l = screens; l != nullptr; l = l->next)
         {
-          if (terminal_screen_has_foreground_process (TERMINAL_SCREEN (l->data), nullptr, nullptr))
+          if (terminal_screen_has_running_jobs (TERMINAL_SCREEN (l->data)))
             {
               do_confirm = TRUE;
               break;

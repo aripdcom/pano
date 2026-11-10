@@ -4527,6 +4527,57 @@ terminal_screen_check_extra (TerminalScreen  *screen,
     }
 }
 
+/* Whether a child of the shell is stopped, as jobs suspended with Ctrl+Z
+ * are, which closing the terminal would kill. Running background jobs are
+ * not counted, as shells such as zsh run helpers for their prompts in the
+ * background. */
+static gboolean
+terminal_screen_has_stopped_jobs (TerminalScreen *screen)
+{
+#ifdef __linux__
+  auto const pid = screen->priv->child_pid;
+  if (pid <= 0 || terminal_flatpak_is_sandboxed ())
+    return FALSE;
+
+  char filename[64];
+  g_snprintf (filename, sizeof (filename), "/proc/%d/task/%d/children", int(pid), int(pid));
+  gs_free char *children = nullptr;
+  if (!g_file_get_contents (filename, &children, nullptr, nullptr))
+    return FALSE;
+
+  gs_strfreev char **pids = g_strsplit_set (children, " \n", -1);
+  for (auto p = pids; *p; ++p) {
+    if (!**p)
+      continue;
+
+    g_snprintf (filename, sizeof (filename), "/proc/%s/stat", *p);
+    gs_free char *stat = nullptr;
+    if (!g_file_get_contents (filename, &stat, nullptr, nullptr))
+      continue;
+
+    /* "PID (COMM) STATE ...", where COMM may contain spaces and parentheses */
+    auto const end = strrchr (stat, ')');
+    if (end && end[1] == ' ' && (end[2] == 'T' || end[2] == 't'))
+      return TRUE;
+  }
+#endif
+  return FALSE;
+}
+
+/**
+ * terminal_screen_has_running_jobs:
+ * @screen:
+ *
+ * Returns: %TRUE if closing @screen would kill something besides its idle
+ *   shell: a program in the foreground or a stopped job
+ */
+gboolean
+terminal_screen_has_running_jobs (TerminalScreen *screen)
+{
+  return terminal_screen_has_foreground_process (screen, nullptr, nullptr) ||
+    terminal_screen_has_stopped_jobs (screen);
+}
+
 /**
  * terminal_screen_has_foreground_process:
  * @screen:
