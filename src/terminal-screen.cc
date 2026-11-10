@@ -2111,6 +2111,9 @@ terminal_screen_init (TerminalScreen *screen)
   vte_terminal_set_allow_hyperlink (terminal, TRUE);
   vte_terminal_set_scroll_unit_is_pixels (terminal, TRUE);
   vte_terminal_set_enable_fallback_scrolling (terminal, FALSE);
+  /* When the height is not a multiple of the line height, leave the rest
+   * blank at the bottom instead of showing part of a line there */
+  vte_terminal_set_yfill (terminal, FALSE);
 
   for (i = 0; i < n_url_regexes; ++i)
     {
