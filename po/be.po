@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:36+0300\n"
+"POT-Creation-Date: 2026-11-10 23:40+0300\n"
 "PO-Revision-Date: 2026-09-10 03:10+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -1348,7 +1348,7 @@ msgid "_Wrap around"
 msgstr "За_цыкліць пошук"
 
 #. Translators: <b>%s</b> is used to show the provided text in bold
-#: src/terminal-accel-dialog.cc:437
+#: src/terminal-accel-dialog.cc:439
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr "Увядзіце новае спалучэнне клавіш для дзеяння <b>%s</b>."
@@ -1365,11 +1365,17 @@ msgstr "_Задаць"
 msgid "Press Escape to cancel or Backspace to disable."
 msgstr "Націсніце Escape, каб скасаваць або Backspace, каб адключыць."
 
-#: src/terminal-accel-row.cc:54
+#: src/terminal-accel-row.cc:55
 msgid "disabled"
 msgstr "адключана"
 
-#: src/terminal-accel-row.cc:88
+#. Translators: %s is the name of an action, such as "New Tab"
+#: src/terminal-accel-row.cc:90
+#, c-format
+msgid "This shortcut is used for “%s”, which will then have none."
+msgstr ""
+
+#: src/terminal-accel-row.cc:109
 msgid "Set Shortcut"
 msgstr "Задаць спалучэнне клавіш"
 

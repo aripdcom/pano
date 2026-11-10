@@ -33,6 +33,7 @@ struct _TerminalAccelDialog
   GtkLabel             *display_label;
   GtkShortcutLabel     *display_shortcut;
   GtkLabel             *selection_label;
+  GtkLabel             *note_label;
 
   char                 *shortcut_title;
 
@@ -357,6 +358,7 @@ terminal_accel_dialog_class_init (TerminalAccelDialogClass *klass)
 
   gtk_widget_class_bind_template_child (widget_class, TerminalAccelDialog, stack);
   gtk_widget_class_bind_template_child (widget_class, TerminalAccelDialog, selection_label);
+  gtk_widget_class_bind_template_child (widget_class, TerminalAccelDialog, note_label);
   gtk_widget_class_bind_template_child (widget_class, TerminalAccelDialog, display_label);
   gtk_widget_class_bind_template_child (widget_class, TerminalAccelDialog, display_shortcut);
   gtk_widget_class_bind_template_callback (widget_class, terminal_accel_dialog_key_pressed);
@@ -444,6 +446,17 @@ terminal_accel_dialog_set_shortcut_title (TerminalAccelDialog *self,
 
       g_object_notify_by_pspec (G_OBJECT (self), properties [PROP_SHORTCUT_TITLE]);
     }
+}
+
+/* Shows @note, for example that the shortcut is taken, below the shortcut */
+void
+terminal_accel_dialog_set_note (TerminalAccelDialog *self,
+                                const char          *note)
+{
+  g_return_if_fail (TERMINAL_IS_ACCEL_DIALOG (self));
+
+  gtk_label_set_label (self->note_label, note ? note : "");
+  gtk_widget_set_visible (GTK_WIDGET (self->note_label), note != nullptr);
 }
 
 const gchar *

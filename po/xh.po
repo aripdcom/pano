@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:36+0300\n"
+"POT-Creation-Date: 2026-11-10 23:40+0300\n"
 "PO-Revision-Date: 2006-01-04 16:14-0200\n"
 "Last-Translator: Canonical Ltd <translations@canonical.com>\n"
 "Language-Team: Xhosa <xh-translate@ubuntu.com>\n"
@@ -1408,7 +1408,7 @@ msgid "_Wrap around"
 msgstr "U_qhubeleko-magama kumacala onke"
 
 #. Translators: <b>%s</b> is used to show the provided text in bold
-#: src/terminal-accel-dialog.cc:437
+#: src/terminal-accel-dialog.cc:439
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
@@ -1425,13 +1425,19 @@ msgstr ""
 msgid "Press Escape to cancel or Backspace to disable."
 msgstr ""
 
-#: src/terminal-accel-row.cc:54
+#: src/terminal-accel-row.cc:55
 #, fuzzy
 #| msgid "Disabled"
 msgid "disabled"
 msgstr "Yenziwe ingasebenzi"
 
-#: src/terminal-accel-row.cc:88
+#. Translators: %s is the name of an action, such as "New Tab"
+#: src/terminal-accel-row.cc:90
+#, c-format
+msgid "This shortcut is used for “%s”, which will then have none."
+msgstr ""
+
+#: src/terminal-accel-row.cc:109
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
 msgid "Set Shortcut"

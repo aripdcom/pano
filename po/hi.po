@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:36+0300\n"
+"POT-Creation-Date: 2026-11-10 23:40+0300\n"
 "PO-Revision-Date: 2014-09-21 09:23+0630\n"
 "Last-Translator: rajesh <rajesh>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -1401,7 +1401,7 @@ msgid "_Wrap around"
 msgstr "लपेटें (_W)"
 
 #. Translators: <b>%s</b> is used to show the provided text in bold
-#: src/terminal-accel-dialog.cc:437
+#: src/terminal-accel-dialog.cc:439
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
@@ -1418,13 +1418,19 @@ msgstr ""
 msgid "Press Escape to cancel or Backspace to disable."
 msgstr ""
 
-#: src/terminal-accel-row.cc:54
+#: src/terminal-accel-row.cc:55
 #, fuzzy
 #| msgid "Disabled"
 msgid "disabled"
 msgstr "निष्क्रिय"
 
-#: src/terminal-accel-row.cc:88
+#. Translators: %s is the name of an action, such as "New Tab"
+#: src/terminal-accel-row.cc:90
+#, c-format
+msgid "This shortcut is used for “%s”, which will then have none."
+msgstr ""
+
+#: src/terminal-accel-row.cc:109
 #, fuzzy
 #| msgid "Shortcuts"
 msgid "Set Shortcut"

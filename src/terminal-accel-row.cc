@@ -22,6 +22,7 @@
 #include "terminal-accel-dialog.hh"
 #include "terminal-accel-row.hh"
 #include "terminal-accels.hh"
+#include "terminal-libgsystem.hh"
 #include "terminal-app.hh"
 #include "terminal-util.hh"
 
@@ -68,7 +69,27 @@ terminal_accel_row_shortcut_set_cb (TerminalAccelRow    *self,
 
   settings = terminal_accels_get_settings ();
 
+  /* A shortcut does one thing: take it from the action that had it, which
+   * the dialog has said */
+  if (accelerator)
+    terminal_accels_take_accelerator (self->key, accelerator);
+
   g_settings_set_string (settings, self->key, accelerator ? accelerator : "disabled");
+}
+
+static void
+terminal_accel_row_dialog_accelerator_cb (TerminalAccelRow    *self,
+                                          GParamSpec          *pspec,
+                                          TerminalAccelDialog *dialog)
+{
+  gs_free char *accelerator = terminal_accel_dialog_get_accelerator (dialog);
+  gs_free char *other = accelerator
+    ? terminal_accels_find_accelerator (self->key, accelerator) : nullptr;
+  gs_free char *note = other
+    /* Translators: %s is the name of an action, such as "New Tab" */
+    ? g_strdup_printf (_("This shortcut is used for “%s”, which will then have none."), other)
+    : nullptr;
+  terminal_accel_dialog_set_note (dialog, note);
 }
 
 static void
@@ -90,6 +111,11 @@ terminal_accel_row_activate (AdwActionRow *row)
   g_signal_connect_object (dialog,
                            "shortcut-set",
                            G_CALLBACK (terminal_accel_row_shortcut_set_cb),
+                           self,
+                           G_CONNECT_SWAPPED);
+  g_signal_connect_object (dialog,
+                           "notify::accelerator",
+                           G_CALLBACK (terminal_accel_row_dialog_accelerator_cb),
                            self,
                            G_CONNECT_SWAPPED);
 

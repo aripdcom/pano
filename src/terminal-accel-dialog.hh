@@ -28,6 +28,8 @@ G_DECLARE_FINAL_TYPE (TerminalAccelDialog, terminal_accel_dialog, TERMINAL, ACCE
 
 GtkWidget  *terminal_accel_dialog_new                (void);
 char       *terminal_accel_dialog_get_accelerator    (TerminalAccelDialog *self);
+void        terminal_accel_dialog_set_note           (TerminalAccelDialog *self,
+                                                      const char          *note);
 void        terminal_accel_dialog_set_accelerator    (TerminalAccelDialog *self,
                                                       const char          *accelerator);
 const char *terminal_accel_dialog_get_shortcut_title (TerminalAccelDialog *self);

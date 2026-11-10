@@ -116,6 +116,17 @@
                         </style>
                       </object>
                     </child>
+                    <child>
+                      <object class="GtkLabel" id="note_label">
+                        <property name="visible">false</property>
+                        <property name="xalign">0.5</property>
+                        <property name="wrap">true</property>
+                        <property name="justify">center</property>
+                        <style>
+                          <class name="warning"/>
+                        </style>
+                      </object>
+                    </child>
                   </object>
                 </property>
               </object>

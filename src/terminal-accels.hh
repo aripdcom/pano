@@ -41,6 +41,12 @@ void terminal_accels_foreach_action (TerminalAccelsForeachFunc func,
                                      void* user_data);
 
 #ifdef TERMINAL_PREFERENCES
+char *terminal_accels_find_accelerator (const char *settings_key,
+                                        const char *accelerator);
+
+void terminal_accels_take_accelerator (const char *settings_key,
+                                       const char *accelerator);
+
 void terminal_accels_populate_preferences (AdwPreferencesPage *page);
 #endif
 

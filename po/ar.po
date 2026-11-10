@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:36+0300\n"
+"POT-Creation-Date: 2026-11-10 23:40+0300\n"
 "PO-Revision-Date: 2019-03-15 23:36+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -1337,7 +1337,7 @@ msgid "_Wrap around"
 msgstr "_لف حول"
 
 #. Translators: <b>%s</b> is used to show the provided text in bold
-#: src/terminal-accel-dialog.cc:437
+#: src/terminal-accel-dialog.cc:439
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
@@ -1354,13 +1354,19 @@ msgstr ""
 msgid "Press Escape to cancel or Backspace to disable."
 msgstr ""
 
-#: src/terminal-accel-row.cc:54
+#: src/terminal-accel-row.cc:55
 #, fuzzy
 #| msgid "Disabled"
 msgid "disabled"
 msgstr "معطل"
 
-#: src/terminal-accel-row.cc:88
+#. Translators: %s is the name of an action, such as "New Tab"
+#: src/terminal-accel-row.cc:90
+#, c-format
+msgid "This shortcut is used for “%s”, which will then have none."
+msgstr ""
+
+#: src/terminal-accel-row.cc:109
 #, fuzzy
 #| msgid "Shortcuts"
 msgid "Set Shortcut"

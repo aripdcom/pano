@@ -501,6 +501,86 @@ terminal_accels_get_settings (void)
 }
 
 #ifdef TERMINAL_PREFERENCES
+static gboolean
+accelerators_equal (const char *a,
+                    const char *b)
+{
+  guint key_a, key_b;
+  GdkModifierType mods_a, mods_b;
+
+  if (!a || !b ||
+      !gtk_accelerator_parse (a, &key_a, &mods_a) ||
+      !gtk_accelerator_parse (b, &key_b, &mods_b))
+    return FALSE;
+
+  return gdk_keyval_to_lower (key_a) == gdk_keyval_to_lower (key_b) &&
+    mods_a == mods_b;
+}
+
+/* Calls @func with each action other than that of @settings_key that has
+ * @accelerator, and returns the name of the first */
+static char *
+foreach_other_with_accelerator (const char *settings_key,
+                                const char *accelerator,
+                                void (*func) (const KeyEntry *entry))
+{
+  char *name = nullptr;
+
+  for (guint i = 0; i < G_N_ELEMENTS (all_entries); i++) {
+    for (guint j = 0; j < all_entries[i].n_elements; ++j) {
+      auto const entry = &all_entries[i].key_entry[j];
+      if (g_str_equal (entry->settings_key, settings_key))
+        continue;
+
+      gs_free char *value = g_settings_get_string (keybinding_settings, entry->settings_key);
+      if (!accelerators_equal (value, accelerator))
+        continue;
+
+      if (func)
+        func (entry);
+      if (!name && entry->user_visible_name)
+        name = g_strdup (_(entry->user_visible_name));
+    }
+  }
+
+  return name;
+}
+
+/**
+ * terminal_accels_find_accelerator:
+ * @settings_key: the key that would get @accelerator
+ * @accelerator: an accelerator
+ *
+ * Returns: (transfer full) (nullable): the name of another action that has
+ *   @accelerator, or %NULL
+ */
+char *
+terminal_accels_find_accelerator (const char *settings_key,
+                                  const char *accelerator)
+{
+  return foreach_other_with_accelerator (settings_key, accelerator, nullptr);
+}
+
+/**
+ * terminal_accels_take_accelerator:
+ * @settings_key: the key that gets @accelerator
+ * @accelerator: the new accelerator
+ *
+ * Disables @accelerator for the other actions that have it, so that it
+ * does not silently do only one of them.
+ */
+void
+terminal_accels_take_accelerator (const char *settings_key,
+                                  const char *accelerator)
+{
+  g_free (foreach_other_with_accelerator (settings_key, accelerator,
+                                          [](const KeyEntry *entry) {
+                                            g_settings_set_string (keybinding_settings,
+                                                                   entry->settings_key,
+                                                                   "disabled");
+                                          }));
+}
+
 void
 terminal_accels_populate_preferences (AdwPreferencesPage *page)
 {
@@ -510,7 +590,7 @@ terminal_accels_populate_preferences (AdwPreferencesPage *page)
     {
       AdwPreferencesGroup *group = ADW_PREFERENCES_GROUP (adw_preferences_group_new ());
 
-      adw_preferences_group_set_title (group, all_entries[i].user_visible_name);
+      adw_preferences_group_set_title (group, _(all_entries[i].user_visible_name));
 
       for (guint j = 0; j < all_entries[i].n_elements; ++j)
         {
@@ -519,7 +599,7 @@ terminal_accels_populate_preferences (AdwPreferencesPage *page)
 
           row = (TerminalAccelRow *)g_object_new (TERMINAL_TYPE_ACCEL_ROW,
                                                   "key", key_entry->settings_key,
-                                                  "title", key_entry->user_visible_name,
+                                                  "title", _(key_entry->user_visible_name),
                                                   nullptr);
           adw_preferences_group_add (group, GTK_WIDGET (row));
         }

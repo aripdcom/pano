@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:36+0300\n"
+"POT-Creation-Date: 2026-11-10 23:40+0300\n"
 "PO-Revision-Date: 2026-09-09 15:49+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
@@ -1347,7 +1347,7 @@ msgid "_Wrap around"
 msgstr "Kö_rbe"
 
 #. Translators: <b>%s</b> is used to show the provided text in bold
-#: src/terminal-accel-dialog.cc:437
+#: src/terminal-accel-dialog.cc:439
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr "Új gyorsbillentyű megadása a(z) <b>%s</b> megváltoztatásához."
@@ -1366,11 +1366,17 @@ msgstr ""
 "Nyomja meg az Escape billentyűt a megszakításhoz vagy a Backspace billentyűt "
 "a letiltáshoz."
 
-#: src/terminal-accel-row.cc:54
+#: src/terminal-accel-row.cc:55
 msgid "disabled"
 msgstr "letiltva"
 
-#: src/terminal-accel-row.cc:88
+#. Translators: %s is the name of an action, such as "New Tab"
+#: src/terminal-accel-row.cc:90
+#, c-format
+msgid "This shortcut is used for “%s”, which will then have none."
+msgstr ""
+
+#: src/terminal-accel-row.cc:109
 msgid "Set Shortcut"
 msgstr "Gyorsbillentyű beállítása"
 
