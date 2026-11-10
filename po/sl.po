@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2026-10-08 22:53+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
@@ -2304,11 +2304,15 @@ msgid "Light"
 msgstr "Svetla"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+#, fuzzy
+#| msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr "Zaokrožena oglišča"
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+#, fuzzy
+#| msgid "Top only"
+msgid "Top Only"
 msgstr "Samo zgornje"
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2613,7 +2617,9 @@ msgid "Keyboard Shortcuts"
 msgstr "Tipkovne bližnjice\t"
 
 #: src/terminal-preferences-window.ui:442
-msgid "Accelerator Key (F10 by default)"
+#, fuzzy
+#| msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Tipka za dostop do ukazov (privzeto F10)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2876,11 +2882,15 @@ msgid "Never"
 msgstr "Nikoli"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "Kadar je v žarišču"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "Kadar ni v žarišču"
 
 #: src/terminal-profile-editor.ui:139
@@ -3064,7 +3074,9 @@ msgid "Scrolling"
 msgstr "Drsenje"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "Pokaži drsnik"
 
 #: src/terminal-profile-editor.ui:632
@@ -3076,7 +3088,9 @@ msgid "Overlay"
 msgstr "Prekrito"
 
 #: src/terminal-profile-editor.ui:654
-msgid "Kinetic scrolling"
+#, fuzzy
+#| msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Kinetično drsenje"
 
 #: src/terminal-profile-editor.ui:655
@@ -3108,7 +3122,9 @@ msgid "Images"
 msgstr "Slike"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr "Omogoči slike SIXEL"
 
 #: src/terminal-profile-editor.ui:717
@@ -3134,7 +3150,9 @@ msgid "Command"
 msgstr "Ukaz"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Zaženi ukaz kot prijavno lupino"
 
 #: src/terminal-profile-editor.ui:737
@@ -3158,7 +3176,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "Ohrani delovno mapo ob zagonu novega okna terminala"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Ko se ukaz zaključi"
 
 #: src/terminal-profile-editor.ui:789
@@ -3219,22 +3239,30 @@ msgstr "TTY izbris"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+#, fuzzy
+#| msgid "Shell only"
+msgid "Shell Only"
 msgstr "Le lupina"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
-msgid "Close terminal"
-msgstr "Zapri terminal"
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "Close Terminal"
+msgstr "_Zapri terminal"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
-msgid "Restart command"
+#, fuzzy
+#| msgid "Restart command"
+msgid "Restart Command"
 msgstr "Ponovno zaženi ukaz"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
-msgid "Hold terminal"
+#, fuzzy
+#| msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Zadrži terminal"
 
 #: src/terminal-profile-file.cc:96
@@ -3663,6 +3691,9 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Napaka med razčlenjevanjem argumentov: %s\n"
+
+#~ msgid "Close terminal"
+#~ msgstr "Zapri terminal"
 
 #, fuzzy
 #~| msgid "Close Tab"

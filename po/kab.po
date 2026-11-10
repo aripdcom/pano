@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2021-05-29 20:52+0100\n"
 "Last-Translator: Slimane Selyan Amiri <selyan.kab@protonmail.com>\n"
 "Language-Team: \n"
@@ -2090,11 +2090,11 @@ msgid "Light"
 msgstr "Aceεlal"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2403,7 +2403,7 @@ msgid "Keyboard Shortcuts"
 msgstr "Iberdan igezmen"
 
 #: src/terminal-preferences-window.ui:442
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:447
@@ -2676,11 +2676,11 @@ msgid "Never"
 msgstr "Werǧin"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -2864,7 +2864,7 @@ msgid "Scrolling"
 msgstr "Adrudem"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:632
@@ -2878,7 +2878,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Adrudem"
 
 #: src/terminal-profile-editor.ui:655
@@ -2912,7 +2912,7 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -2938,7 +2938,7 @@ msgid "Command"
 msgstr "Taladna"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:737
@@ -2964,7 +2964,7 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+msgid "When Command Exits"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:789
@@ -3027,26 +3027,28 @@ msgstr ""
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-#| msgid "Close tab"
-msgid "Close terminal"
-msgstr "Mdel Iccer"
+#| msgid "Terminal"
+msgid "Close Terminal"
+msgstr "Anemdu"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
-msgid "Restart command"
-msgstr ""
+#, fuzzy
+#| msgid "Command"
+msgid "Restart Command"
+msgstr "Taladna"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Terminal"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Anemdu"
 
 #: src/terminal-profile-file.cc:96
@@ -3425,6 +3427,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Close tab"
+#~ msgid "Close terminal"
+#~ msgstr "Mdel Iccer"
 
 #, fuzzy
 #~| msgid "Close Tab"

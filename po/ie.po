@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2022-12-10 05:08+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: IE\n"
@@ -2243,11 +2243,11 @@ msgid "Light"
 msgstr "Lucid"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2558,7 +2558,7 @@ msgid "Keyboard Shortcuts"
 msgstr "Rapid-taste:"
 
 #: src/terminal-preferences-window.ui:442
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:447
@@ -2843,12 +2843,12 @@ msgstr "Nequande"
 
 #: src/terminal-profile-editor.ui:121
 #, fuzzy
-msgid "When focused"
+msgid "When Focused"
 msgstr "Quande"
 
 #: src/terminal-profile-editor.ui:127
 #, fuzzy
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "Quande"
 
 #: src/terminal-profile-editor.ui:139
@@ -3049,7 +3049,7 @@ msgstr ""
 
 #: src/terminal-profile-editor.ui:623
 #, fuzzy
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "Monstra li barre de rulament"
 
 #: src/terminal-profile-editor.ui:632
@@ -3061,7 +3061,7 @@ msgid "Overlay"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:654
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:655
@@ -3097,7 +3097,7 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3124,7 +3124,7 @@ msgstr "Comande"
 
 #: src/terminal-profile-editor.ui:736
 #, fuzzy
-msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Lansar un comande"
 
 #: src/terminal-profile-editor.ui:737
@@ -3153,7 +3153,7 @@ msgstr ""
 # CHECK
 #: src/terminal-profile-editor.ui:778
 #, fuzzy
-msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Comande predefinit por creation un lansator"
 
 #: src/terminal-profile-editor.ui:789
@@ -3223,26 +3223,26 @@ msgstr "_Eraser..."
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "C_luder li terminal"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Comande"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "_Aperter in li Terminal"
 
 #: src/terminal-profile-file.cc:96
@@ -3658,6 +3658,11 @@ msgstr ""
 #, fuzzy, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Ne successat analisar li argumentes: %s\n"
+
+#, fuzzy
+#~| msgid "C_lose Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "C_luder li terminal"
 
 #, fuzzy
 #~| msgid "Close Tab"

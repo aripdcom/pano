@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2014-09-21 09:23+0630\n"
 "Last-Translator: rajesh <rajesh>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -2420,11 +2420,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2732,7 +2732,7 @@ msgstr "कुंजीपट शॉर्टकट"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "मेनू त्वरक कुंजी अक्षम करें (तयशुदा से F10) (_m)"
 
 #: src/terminal-preferences-window.ui:447
@@ -3017,11 +3017,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -3231,7 +3231,9 @@ msgid "Scrolling"
 msgstr "स्क्रॉल कर रहे"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "स्क्रॉल-पट्टी दिखाएँ"
 
 #: src/terminal-profile-editor.ui:632
@@ -3245,7 +3247,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "स्क्रॉल कर रहे"
 
 #: src/terminal-profile-editor.ui:655
@@ -3287,7 +3289,7 @@ msgid "Images"
 msgstr "छवियाँ"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3315,7 +3317,9 @@ msgid "Command"
 msgstr "कमांड"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "कमांड को लॉगइन शैल के रूप में चलाएँ"
 
 #: src/terminal-profile-editor.ui:737
@@ -3347,7 +3351,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "जब नया टर्मिनल चालू किया जाए तो प्रयोग में प्रोफ़ाइल (_P):"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "जब कमांड बाहर हो"
 
 #: src/terminal-profile-editor.ui:789
@@ -3422,28 +3428,28 @@ msgstr "TTY मिटाएँ"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-#| msgid "Close Terminal"
-msgid "Close terminal"
-msgstr "टर्मिनल बंद करें"
+#| msgid "C_lose Terminal"
+msgid "Close Terminal"
+msgstr "टर्मिनल बंद करें (_l)"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "कमांड पुनःप्रारंभ करें"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "टर्मिनल खुला रखें "
 
 #: src/terminal-profile-file.cc:96
@@ -3873,6 +3879,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "तर्क विश्लेषण में विफल: %s\n"
+
+#, fuzzy
+#~| msgid "Close Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "टर्मिनल बंद करें"
 
 #, fuzzy
 #~| msgid "Close Tab"

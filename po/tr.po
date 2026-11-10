@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -2238,12 +2238,12 @@ msgid "Light"
 msgstr "Açık"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
-msgstr "Yuvarlak köşeler"
+msgid "Rounded Corners"
+msgstr "Yuvarlak Köşeler"
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
-msgstr "Yalnızca üstte"
+msgid "Top Only"
+msgstr "Yalnızca Üstte"
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
 msgid "None"
@@ -2556,8 +2556,8 @@ msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
 #: src/terminal-preferences-window.ui:442
-msgid "Accelerator Key (F10 by default)"
-msgstr "Hızlandırıcı Tuş (öntanımlı F10)"
+msgid "Accelerator Key (F10 by Default)"
+msgstr "Hızlandırıcı Tuş (Öntanımlı F10)"
 
 #: src/terminal-preferences-window.ui:447
 msgid "View and Customize Shortcuts"
@@ -2817,12 +2817,12 @@ msgid "Never"
 msgstr "Asla"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr "Odaktayken"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
-msgstr "Odak dışı olduğunda"
+msgid "When Unfocused"
+msgstr "Odakta Değilken"
 
 #: src/terminal-profile-editor.ui:139
 msgid "Colors"
@@ -2999,8 +2999,8 @@ msgid "Scrolling"
 msgstr "Kaydırma"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
-msgstr "Kaydırma çubuğunu göster"
+msgid "Show Scrollbar"
+msgstr "Kaydırma Çubuğunu Göster"
 
 #: src/terminal-profile-editor.ui:632
 msgid "Regular"
@@ -3011,8 +3011,8 @@ msgid "Overlay"
 msgstr "Kaplama"
 
 #: src/terminal-profile-editor.ui:654
-msgid "Kinetic scrolling"
-msgstr "Kinetik kaydırma"
+msgid "Kinetic Scrolling"
+msgstr "Kinetik Kaydırma"
 
 #: src/terminal-profile-editor.ui:655
 msgid "When used on touchscreens"
@@ -3043,8 +3043,8 @@ msgid "Images"
 msgstr "Görüntüler"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
-msgstr "SIXEL görüntülerini etkinleştir"
+msgid "Enable SIXEL Images"
+msgstr "SIXEL Görüntülerini Etkinleştir"
 
 #: src/terminal-profile-editor.ui:717
 msgid "Bell"
@@ -3067,8 +3067,8 @@ msgid "Command"
 msgstr "Komut"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
-msgstr "Komutu, giriş kabuğu olarak çalıştır"
+msgid "Run Command as a Login Shell"
+msgstr "Komutu Giriş Kabuğu Olarak Çalıştır"
 
 #: src/terminal-profile-editor.ui:737
 msgid "Applies to the shell, not to a custom command"
@@ -3091,8 +3091,8 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "Yeni uçbirim açılırken çalışma dizinini koru"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
-msgstr "Komut sona erdiğinde"
+msgid "When Command Exits"
+msgstr "Komut Sona Erdiğinde"
 
 #: src/terminal-profile-editor.ui:789
 msgid "Compatibility"
@@ -3153,23 +3153,23 @@ msgstr "TTY Sil"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
-msgstr "Yalnızca kabuk"
+msgid "Shell Only"
+msgstr "Yalnızca Kabuk"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
-msgid "Close terminal"
-msgstr "Uçbirimi kapat"
+msgid "Close Terminal"
+msgstr "Uçbirimi Kapat"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
-msgid "Restart command"
-msgstr "Komutu yeniden başlat"
+msgid "Restart Command"
+msgstr "Komutu Yeniden Başlat"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
-msgid "Hold terminal"
-msgstr "Uçbirimi açık tut"
+msgid "Hold Terminal"
+msgstr "Uçbirimi Açık Tut"
 
 #: src/terminal-profile-file.cc:96
 msgid "The file is not a Pano Terminal profile."
@@ -3549,6 +3549,9 @@ msgstr "Bu uçbirimde çalışan süreç var. Uçbirimi kapatmak onu sonlandıra
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Bağımsız değişkenler ayrıştırılamadı: %s\n"
+
+#~ msgid "Close terminal"
+#~ msgstr "Uçbirimi kapat"
 
 #~ msgid "Reopen Closed Tab"
 #~ msgstr "Kapatılan Sekmeyi Yeniden Aç"

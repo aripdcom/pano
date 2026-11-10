@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2024-02-05 23:00+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
@@ -2353,11 +2353,11 @@ msgid "Light"
 msgstr "aukštis"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2670,7 +2670,7 @@ msgstr "Klaviatūros trumpinys tekstui įdėti"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Įjungti _meniu spartūjį klavišą (numatytasis klavišas – F10)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2947,11 +2947,15 @@ msgid "Never"
 msgstr "Niekada"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "Kai fokusuota"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "Kai nefokusuota"
 
 #: src/terminal-profile-editor.ui:139
@@ -3163,7 +3167,9 @@ msgid "Scrolling"
 msgstr "Slinkimas"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "Rodyti slankiklį"
 
 #: src/terminal-profile-editor.ui:632
@@ -3177,7 +3183,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Slinkimas"
 
 #: src/terminal-profile-editor.ui:655
@@ -3219,7 +3225,9 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr "Įjungti SIXEL paveikslėlius"
 
 #: src/terminal-profile-editor.ui:717
@@ -3245,7 +3253,9 @@ msgid "Command"
 msgstr "Komanda"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Paleisti komandą kaip prisijungimo aplinką"
 
 #: src/terminal-profile-editor.ui:737
@@ -3278,7 +3288,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "Ar išlaikyti darbinį katalogą atveriant naują terminalą"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Kai komanda baigia darbą"
 
 #: src/terminal-profile-editor.ui:789
@@ -3349,28 +3361,30 @@ msgstr "TTY trynimas"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+#, fuzzy
+#| msgid "Shell only"
+msgid "Shell Only"
 msgstr "Tik apvalkalas"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "_Užverti terminalą"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Paleisti komandą iš naujo"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Laikyti terminalą atvertą"
 
 #: src/terminal-profile-file.cc:96
@@ -3815,6 +3829,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Nepavyko apdoroti argumentų: %s\n"
+
+#, fuzzy
+#~| msgid "C_lose Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "_Užverti terminalą"
 
 #, fuzzy
 #~| msgid "Close Tab"

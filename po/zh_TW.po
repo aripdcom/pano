@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 3.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2026-09-20 05:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <zh-l10n@lists.slat.org>\n"
@@ -2296,11 +2296,11 @@ msgid "Light"
 msgstr "高度"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2620,7 +2620,7 @@ msgstr "鍵盤捷徑鍵(_K)…"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "啟用選單快捷鍵 (預設為 F10)(_M)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2897,11 +2897,15 @@ msgid "Never"
 msgstr "永不"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "當取得焦點時"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "當未取得焦點時"
 
 #: src/terminal-profile-editor.ui:139
@@ -3115,7 +3119,9 @@ msgid "Scrolling"
 msgstr "捲動方式"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "顯示捲動軸"
 
 #: src/terminal-profile-editor.ui:632
@@ -3129,7 +3135,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "捲動方式"
 
 #: src/terminal-profile-editor.ui:655
@@ -3171,7 +3177,9 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr "啟用 SIXEL 影像"
 
 #: src/terminal-profile-editor.ui:717
@@ -3197,7 +3205,9 @@ msgid "Command"
 msgstr "指令"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "執行指令時讀入 shell 登入的設定檔案"
 
 #: src/terminal-profile-editor.ui:737
@@ -3230,7 +3240,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "是否要在開啟新終端機時保留工作目錄"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "當完成執行指令後"
 
 #: src/terminal-profile-editor.ui:789
@@ -3301,28 +3313,30 @@ msgstr "TTY 清除"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+#, fuzzy
+#| msgid "Shell only"
+msgid "Shell Only"
 msgstr "僅 Shell"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "關閉終端機(_L)"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "重新啟動指令"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "保持終端機開啟"
 
 #: src/terminal-profile-file.cc:96
@@ -3755,6 +3769,11 @@ msgstr "在這個終端機還有程序在執行。關閉終端機會終結它們
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "分析引數失敗：%s\n"
+
+#, fuzzy
+#~| msgid "C_lose Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "關閉終端機(_L)"
 
 #, fuzzy
 #~| msgid "Close Tab"

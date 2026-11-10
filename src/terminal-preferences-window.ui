@@ -85,7 +85,7 @@
             </child>
             <child>
               <object class="AdwComboRow" id="rounded_corners">
-                <property name="title" translatable="yes">Rounded corners</property>
+                <property name="title" translatable="yes">Rounded Corners</property>
                 <property name="expression">
                   <lookup name="title" type="TerminalPreferencesListItem"/>
                 </property>
@@ -100,7 +100,7 @@
                     </child>
                     <child>
                       <object class="TerminalPreferencesListItem">
-                        <property name="title" translatable="yes">Top only</property>
+                        <property name="title" translatable="yes">Top Only</property>
                         <property name="value">'top'</property>
                       </object>
                     </child>
@@ -439,7 +439,7 @@
             <property name="title" translatable="yes">Keyboard Shortcuts</property>
             <child>
               <object class="AdwSwitchRow" id="accelerator_key">
-                <property name="title" translatable="yes">Accelerator Key (F10 by default)</property>
+                <property name="title" translatable="yes">Accelerator Key (F10 by Default)</property>
               </object>
             </child>
             <child>

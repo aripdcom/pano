@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal-HEAD-help-el-5250\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2023-01-27 22:52+0200\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: team@lists.gnome.gr\n"
@@ -2415,11 +2415,11 @@ msgid "Light"
 msgstr "Ανοιχτόχρωμη"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2734,7 +2734,7 @@ msgstr "Συντόμευση πληκτρολογίου για την επικό
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Ενεργοποίηση του πλήκτρου επιταχυντή _μενού (από προεπιλογή F10)"
 
 #: src/terminal-preferences-window.ui:447
@@ -3011,11 +3011,15 @@ msgid "Never"
 msgstr "Ποτέ"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "Όταν είναι εστιασμένο"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "Όταν δεν είναι εστιασμένο"
 
 #: src/terminal-profile-editor.ui:139
@@ -3227,7 +3231,9 @@ msgid "Scrolling"
 msgstr "Κύλιση"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "Εμφάνιση γραμμή κύλισης"
 
 #: src/terminal-profile-editor.ui:632
@@ -3241,7 +3247,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Κύλιση"
 
 #: src/terminal-profile-editor.ui:655
@@ -3283,7 +3289,9 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr "Ενεργοποίηση εικόνων SIXEL"
 
 #: src/terminal-profile-editor.ui:717
@@ -3309,7 +3317,9 @@ msgid "Command"
 msgstr "Εντολή"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Εκτέλεση εντολής ως κελύφους εισόδου"
 
 #: src/terminal-profile-editor.ui:737
@@ -3343,7 +3353,9 @@ msgstr ""
 "Εάν θα διατηρηθεί ο κατάλογος εργασίας κατά το άνοιγμα ενός νέου τερματικού"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Κατά την έξοδο της εντολής"
 
 #: src/terminal-profile-editor.ui:789
@@ -3414,28 +3426,30 @@ msgstr "Διαγραφή ΤΤΥ"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+#, fuzzy
+#| msgid "Shell only"
+msgid "Shell Only"
 msgstr "Μόνο κέλυφος"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "Κλείσιμο τε_ρματικού"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Επανεκτέλεση της εντολής"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Διατήρηση του τερματικού ανοιχτό"
 
 #: src/terminal-profile-file.cc:96
@@ -3881,6 +3895,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Αποτυχία ανάλυσης των ορισμάτων: %s\n"
+
+#, fuzzy
+#~| msgid "C_lose Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "Κλείσιμο τε_ρματικού"
 
 #, fuzzy
 #~| msgid "Close Tab"

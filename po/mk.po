@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2012-01-11 19:55+0100\n"
 "Last-Translator: Jovan N\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -2450,11 +2450,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2762,7 +2762,7 @@ msgstr "Кратенки на тастатурата"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu shortcut key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Оневозможи го пристапот до ме_нито преку копче (стандардно F10)"
 
 #: src/terminal-preferences-window.ui:447
@@ -3041,11 +3041,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -3259,7 +3259,7 @@ msgstr "Лизгање"
 #: src/terminal-profile-editor.ui:623
 #, fuzzy
 #| msgid "_Scrollbar is:"
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "_Линијата за лизгање е:"
 
 #: src/terminal-profile-editor.ui:632
@@ -3273,7 +3273,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Лизгање"
 
 #: src/terminal-profile-editor.ui:655
@@ -3315,7 +3315,7 @@ msgid "Images"
 msgstr "Слики"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3345,7 +3345,9 @@ msgid "Command"
 msgstr "<b>Команда</b>"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Изврши команда како најавна школка"
 
 #: src/terminal-profile-editor.ui:737
@@ -3377,7 +3379,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "_Профил користен за пуштање на нов терминал:"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Кога командата затвора"
 
 #: src/terminal-profile-editor.ui:789
@@ -3448,28 +3452,28 @@ msgstr "TTY Erase"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "З_атвори го терминалот"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Рестартирај ја командата"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Задржи го терминалот отворен"
 
 #: src/terminal-profile-file.cc:96
@@ -3907,6 +3911,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Не успеав да ги испарсирам аргументите: %s\n"
+
+#, fuzzy
+#~| msgid "C_lose Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "З_атвори го терминалот"
 
 #, fuzzy
 #~| msgid "Close Tab"

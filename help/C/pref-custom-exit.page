@@ -41,16 +41,16 @@
   or a custom command exits:</p>
   <steps>
 <item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
-<item><p>In the <gui>Command</gui> group, set <gui>When command exits</gui> to <gui>Close terminal</gui>, <gui>Restart command</gui> or <gui>Hold terminal</gui>.</p></item>
+<item><p>In the <gui>Command</gui> group, set <gui>When Command Exits</gui> to <gui>Close Terminal</gui>, <gui>Restart Command</gui> or <gui>Hold Terminal</gui>.</p></item>
 </steps>
 
-  <p>With <gui>Hold terminal</gui>, the terminal shows how the command ended,
+  <p>With <gui>Hold Terminal</gui>, the terminal shows how the command ended,
   and you can start it again with <gui style="button">Relaunch</gui>, or
   start your shell in its place with <gui style="button">Run Shell</gui>.</p>
 
   <note style="tip">
     <p>If a <link xref="pref-custom-command">custom command</link> prints
-    something and exits at once, use <gui>Hold terminal</gui> so that you can
+    something and exits at once, use <gui>Hold Terminal</gui> so that you can
     read its output.</p>
   </note>
 

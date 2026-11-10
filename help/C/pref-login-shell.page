@@ -61,7 +61,7 @@
   <p>To start the shell of a profile as a login shell:</p>
   <steps>
 <item><p>Press the menu button in the top-right corner of the window and select <gui style="menuitem">Preferences</gui>.</p></item><item><p>In the <gui>Profiles</gui> group, click the profile you want to change. Its settings open on a page of their own.</p></item>
-<item><p>In the <gui>Command</gui> group, turn on <gui>Run command as a login shell</gui>.</p></item>
+<item><p>In the <gui>Command</gui> group, turn on <gui>Run Command as a Login Shell</gui>.</p></item>
 </steps>
 
   <p><link xref="cmd-shell-integration">Shell integration</link> is not added

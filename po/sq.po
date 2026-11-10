@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.gnome-2-22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2008-07-15 18:05+0200\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
@@ -2461,11 +2461,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2773,7 +2773,7 @@ msgstr "Kombinacione përshpejtuese nga tastiera"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Disable m_enu shortcut key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Ç'aktivo pulsantin e hyrjes në m_enu (F10 i prezgjedhur)"
 
 #: src/terminal-preferences-window.ui:447
@@ -3056,11 +3056,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -3270,7 +3270,7 @@ msgstr "Rrëshqitje"
 #: src/terminal-profile-editor.ui:623
 #, fuzzy
 #| msgid "_Scrollbar is:"
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "_Scrollbar është:"
 
 #: src/terminal-profile-editor.ui:632
@@ -3284,7 +3284,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Rrëshqitje"
 
 #: src/terminal-profile-editor.ui:655
@@ -3328,7 +3328,7 @@ msgid "Images"
 msgstr "Figurat"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3357,7 +3357,9 @@ msgid "Command"
 msgstr "<b>Komanda</b>"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Zbato komandën si një shell futjeje"
 
 #: src/terminal-profile-editor.ui:737
@@ -3389,7 +3391,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "Profili i _përdorur kur hapet një terminal i ri:"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Kur komanda përfundon"
 
 #: src/terminal-profile-editor.ui:789
@@ -3464,27 +3468,27 @@ msgstr ""
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-#| msgid "Close tab"
-msgid "Close terminal"
-msgstr "Mbyll skedën"
+#| msgid "_Terminal"
+msgid "Close Terminal"
+msgstr "_Terminali"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Custom co_mmand:"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Ko_mandë e personalizuar:"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Terminali i GNOME"
 
 #: src/terminal-profile-file.cc:96
@@ -3910,6 +3914,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Close tab"
+#~ msgid "Close terminal"
+#~ msgstr "Mbyll skedën"
 
 #, fuzzy
 #~| msgid "Close Tab"

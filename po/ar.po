@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2019-03-15 23:36+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -2326,11 +2326,11 @@ msgid "Light"
 msgstr "فاتحة"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2645,7 +2645,7 @@ msgstr "اختصارات لوحة المفاتيح"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "فعّل مفتاح المسرّع للوصول إلى ال_قائمة (F10 مبدئيا)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2922,11 +2922,15 @@ msgid "Never"
 msgstr "أبدًا"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "عند التركيز"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "عند عدم التركيز"
 
 #: src/terminal-profile-editor.ui:139
@@ -3138,7 +3142,9 @@ msgid "Scrolling"
 msgstr "اللف"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "أظهر شريط التمرير"
 
 #: src/terminal-profile-editor.ui:632
@@ -3152,7 +3158,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "اللف"
 
 #: src/terminal-profile-editor.ui:655
@@ -3194,7 +3200,7 @@ msgid "Images"
 msgstr "الصور"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3222,7 +3228,9 @@ msgid "Command"
 msgstr "الأمر"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "شغّل ألأمر كصدفة دخول"
 
 #: src/terminal-profile-editor.ui:737
@@ -3254,7 +3262,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "الطور الم_ستخدم عند فتح طرفية جديدة:"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "عند خروج الأمر"
 
 #: src/terminal-profile-editor.ui:789
@@ -3327,28 +3337,28 @@ msgstr "TTY Erase"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-#| msgid "Close Terminal"
-msgid "Close terminal"
-msgstr "أغلق الطرفية"
+#| msgid "C_lose Terminal"
+msgid "Close Terminal"
+msgstr "أغلق ال_طرفية"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "أعد تشغيل الطرفية"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "أبق الطرفيّة مفتوحة"
 
 #: src/terminal-profile-file.cc:96
@@ -3786,6 +3796,11 @@ msgstr "ما تزال بعض العمليات عاملة في هذه الطرف�
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "تعذّر تحليل المعاملات: %s\n"
+
+#, fuzzy
+#~| msgid "Close Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "أغلق الطرفية"
 
 #, fuzzy
 #~| msgid "Close Tab"

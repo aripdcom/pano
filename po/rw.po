@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2006-01-04 16:15-0200\n"
 "Last-Translator: Steve Murphy <murf@e-tools.com>\n"
 "Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
@@ -2337,11 +2337,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2641,7 +2641,7 @@ msgstr ""
 
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Ibikubiyemo Iy'ibusamo Urufunguzo ku Mburabuzi"
 
 #: src/terminal-preferences-window.ui:447
@@ -2931,11 +2931,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 # offmgr/source\offapp\dialog\treeopt.src:RID_OFADLG_OPTIONS_TREE_PAGES.SID_GENERAL_OPTIONS.9.text
@@ -3131,7 +3131,7 @@ msgstr ""
 
 #: src/terminal-profile-editor.ui:623
 #, fuzzy
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "ni"
 
 #: src/terminal-profile-editor.ui:632
@@ -3143,7 +3143,7 @@ msgid "Overlay"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:654
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:655
@@ -3179,7 +3179,7 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3207,7 +3207,7 @@ msgstr "<B B"
 
 #: src/terminal-profile-editor.ui:736
 #, fuzzy
-msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Komandi: Nka a Ifashayinjira Igikonoshwa"
 
 #: src/terminal-profile-editor.ui:737
@@ -3236,7 +3236,7 @@ msgstr "Ryari: a Gishya"
 
 #: src/terminal-profile-editor.ui:778
 #, fuzzy
-msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Komandi:"
 
 #: src/terminal-profile-editor.ui:789
@@ -3304,25 +3304,26 @@ msgstr ""
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
+# menu_close labels
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-msgid "Close terminal"
-msgstr "a Intego- nyuguti"
+msgid "Close Terminal"
+msgstr "Funga Isimbuka"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Komandi:"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Gufungura"
 
 #: src/terminal-profile-file.cc:96
@@ -3712,6 +3713,10 @@ msgstr ""
 #, fuzzy, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Inkoresha siyo"
+
+#, fuzzy
+#~ msgid "Close terminal"
+#~ msgstr "a Intego- nyuguti"
 
 # menu_close labels
 #, fuzzy

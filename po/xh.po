@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2006-01-04 16:14-0200\n"
 "Last-Translator: Canonical Ltd <translations@canonical.com>\n"
 "Language-Team: Xhosa <xh-translate@ubuntu.com>\n"
@@ -2435,11 +2435,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2747,7 +2747,7 @@ msgstr "IziNqumli ze-Keyboard"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Disable m_enu shortcut key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Yenza lingasebenzi iqhosha elinqumlayo leme_nyu (F10 ngokumiselweyo)"
 
 #: src/terminal-preferences-window.ui:447
@@ -3020,11 +3020,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -3238,7 +3238,7 @@ msgstr "Ukuhlisa unyusa"
 #: src/terminal-profile-editor.ui:623
 #, fuzzy
 #| msgid "_Scrollbar is:"
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "i-_Scrollbar yi:"
 
 #: src/terminal-profile-editor.ui:632
@@ -3252,7 +3252,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Ukuhlisa unyusa"
 
 #: src/terminal-profile-editor.ui:655
@@ -3294,7 +3294,7 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3324,7 +3324,9 @@ msgid "Command"
 msgstr "<b>Umyalelo</b>"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Qhuba umyalelo njengetoliki yemiyalelo yokungena"
 
 #: src/terminal-profile-editor.ui:737
@@ -3356,7 +3358,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "Inkangeleko _esetyenzisiweyo xa bekundululwa i-terminal entsha:"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Xa umyaleloukhona"
 
 #: src/terminal-profile-editor.ui:789
@@ -3427,28 +3431,28 @@ msgstr ""
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-#| msgid "Choose a terminal font"
-msgid "Close terminal"
-msgstr "Khetha ifonti ye-terminal"
+#| msgid "_Terminal"
+msgid "Close Terminal"
+msgstr "i-_Terminal"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Uvula kwakhona umyalelo"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Ibamba i-terminal ivulekile"
 
 #: src/terminal-profile-file.cc:96
@@ -3852,6 +3856,11 @@ msgstr ""
 #| msgid "Invalid argument: \"%s\"\n"
 msgid "Failed to parse arguments: %s\n"
 msgstr "Isiphumezi-myalelo esingasebenziyo: \"%s\"\n"
+
+#, fuzzy
+#~| msgid "Choose a terminal font"
+#~ msgid "Close terminal"
+#~ msgstr "Khetha ifonti ye-terminal"
 
 #, fuzzy
 #~| msgid "Close Tab"

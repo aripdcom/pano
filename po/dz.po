@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.dz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2007-03-01 11:06+0530\n"
 "Last-Translator: norbu <nor_den@hotmail.com>\n"
 "Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
@@ -2368,11 +2368,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2678,7 +2678,7 @@ msgstr "ལྡེ་སྒྲོམ་གྱི་མགྱོགས་ཐབས
 
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "དཀར་ཆག་གི་མགྱོགས་ཐབས་ལྡེ་མིག་ཚུ་ ལྕོགས་མིན་བཟོ། (ཨེཕ་༡༠ སྔོན་སྒྲིག་ཐོག་ལས)(_e)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2955,11 +2955,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -3168,7 +3168,7 @@ msgstr "བཤུད་སྒྲིལ་འབད་དོ།"
 #: src/terminal-profile-editor.ui:623
 #, fuzzy
 #| msgid "_Scrollbar is:"
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "བཤུད་སྒྲིལ་ཕྲ་རིང་ཨིན་:(_S)"
 
 #: src/terminal-profile-editor.ui:632
@@ -3182,7 +3182,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "བཤུད་སྒྲིལ་འབད་དོ།"
 
 #: src/terminal-profile-editor.ui:655
@@ -3222,7 +3222,7 @@ msgid "Images"
 msgstr "གཟུགས་བརྙན་ཚུ།"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3251,7 +3251,9 @@ msgid "Command"
 msgstr "<b>བརྡ་བཀོད་</b>"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "བརྡ་བཀོད་དེ་ ནང་བསྐྱོད་ཤལ་སྦེ་ གཡོག་བཀོལ།"
 
 #: src/terminal-profile-editor.ui:737
@@ -3281,7 +3283,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "ཊར་མི་ནཱལ་གསརཔ་ཅིག་ གསར་བཙུགས་འབདཝ་ད་ ལག་ལེན་འཐབ་ནིའི་གསལ་སྡུད།(_u)"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "བརྡ་བཀོད་ཕྱིར་འཐོན་འགྱོཝ་ད་:།"
 
 #: src/terminal-profile-editor.ui:789
@@ -3354,27 +3358,27 @@ msgstr ""
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "ཊར་མི་ནཱལ།(_T)"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "བརྡ་བཀོད་ལོག་འགོ་བཙུགས།"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "ཊར་མི་ནཱལ་ཁ་ཕྱེ་བའི་ཐོག་ལུ་ འཛིན་ཏེ་བཞག"
 
 #: src/terminal-profile-file.cc:96
@@ -3768,6 +3772,10 @@ msgstr ""
 #, fuzzy, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ནུས་མེད་སྒྲུབ་རྟགས་: \"%s\"\n"
+
+#, fuzzy
+#~ msgid "Close terminal"
+#~ msgstr "ཊར་མི་ནཱལ།(_T)"
 
 #, fuzzy
 #~| msgid "Close Tab"

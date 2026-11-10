@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2015-03-17 20:06+0100\n"
 "Last-Translator: Daniel Martinez <entaltoaragon@gmail.com>\n"
 "Language-Team: Aragonés <softaragones@googlegroups.com>\n"
@@ -2480,11 +2480,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2792,7 +2792,7 @@ msgstr "Alcorces de teclau"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr ""
 "Activar a tecla d'acceso rapido a o _menú (F10 de traza predeterminada)"
 
@@ -3078,11 +3078,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -3292,7 +3292,9 @@ msgid "Scrolling"
 msgstr "Desplazamiento"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "Amostrar a barra de desplazamiento"
 
 #: src/terminal-profile-editor.ui:632
@@ -3306,7 +3308,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Desplazamiento"
 
 #: src/terminal-profile-editor.ui:655
@@ -3348,7 +3350,7 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3374,7 +3376,9 @@ msgid "Command"
 msgstr "Comando"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Executar o comando como un enterprite de connexión"
 
 #: src/terminal-profile-editor.ui:737
@@ -3406,7 +3410,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "_Perfil emplegau en lanzar una terminal nueva:"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Quan o comando remata"
 
 #: src/terminal-profile-editor.ui:789
@@ -3479,28 +3485,28 @@ msgstr "Borrau TTY"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-#| msgid "Close Terminal"
-msgid "Close terminal"
-msgstr "Zarrar a terminal"
+#| msgid "C_lose Terminal"
+msgid "Close Terminal"
+msgstr "Zarrar a _terminal"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Reenchegar o comando"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Mantener a terminal ubierta"
 
 #: src/terminal-profile-file.cc:96
@@ -3935,6 +3941,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Ha fallau en analisar os argumentos: %s\n"
+
+#, fuzzy
+#~| msgid "Close Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "Zarrar a terminal"
 
 #, fuzzy
 #~| msgid "Close Tab"

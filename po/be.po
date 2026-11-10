@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2026-09-10 03:10+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -2314,11 +2314,15 @@ msgid "Light"
 msgstr "Светлы"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+#, fuzzy
+#| msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr "Скругленыя вуглы"
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+#, fuzzy
+#| msgid "Top only"
+msgid "Top Only"
 msgstr "Толькі верхнія"
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2625,7 +2629,9 @@ msgid "Keyboard Shortcuts"
 msgstr "Спалучэнні клавіш"
 
 #: src/terminal-preferences-window.ui:442
-msgid "Accelerator Key (F10 by default)"
+#, fuzzy
+#| msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Хуткая клавіша (звычайна F10)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2890,11 +2896,15 @@ msgid "Never"
 msgstr "Ніколі"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "Калі ў фокусе"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "Калі не ў фокусе"
 
 #: src/terminal-profile-editor.ui:139
@@ -3078,7 +3088,9 @@ msgid "Scrolling"
 msgstr "Прагортка"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "Паказваць палосы прагорткі"
 
 #: src/terminal-profile-editor.ui:632
@@ -3090,7 +3102,9 @@ msgid "Overlay"
 msgstr "Накладныя"
 
 #: src/terminal-profile-editor.ui:654
-msgid "Kinetic scrolling"
+#, fuzzy
+#| msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Інерцыйная прагортка"
 
 #: src/terminal-profile-editor.ui:655
@@ -3122,7 +3136,9 @@ msgid "Images"
 msgstr "Відарысы"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr "Уключыць відарысы SIXEL"
 
 #: src/terminal-profile-editor.ui:717
@@ -3148,7 +3164,9 @@ msgid "Command"
 msgstr "Каманда"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Запускаць каманду як уваходную камандную абалонку"
 
 #: src/terminal-profile-editor.ui:737
@@ -3172,7 +3190,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "Захоўваць працоўны каталог пры адкрыцці новага тэрмінала"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Пры заканчэнні працы каманды"
 
 #: src/terminal-profile-editor.ui:789
@@ -3233,22 +3253,30 @@ msgstr "TTY Erase"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+#, fuzzy
+#| msgid "Shell only"
+msgid "Shell Only"
 msgstr "Толькі абалонка"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
-msgid "Close terminal"
-msgstr "Закрыць тэрмінал"
+#, fuzzy
+#| msgid "C_lose Terminal"
+msgid "Close Terminal"
+msgstr "_Закрыць тэрмінал"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
-msgid "Restart command"
+#, fuzzy
+#| msgid "Restart command"
+msgid "Restart Command"
 msgstr "Перазапусціць каманду"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
-msgid "Hold terminal"
+#, fuzzy
+#| msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Пакінуць тэрмінал"
 
 #: src/terminal-profile-file.cc:96
@@ -3681,6 +3709,9 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Не ўдалося разабраць аргументы: %s\n"
+
+#~ msgid "Close terminal"
+#~ msgstr "Закрыць тэрмінал"
 
 #, fuzzy
 #~| msgid "Close Tab"

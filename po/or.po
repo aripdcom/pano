@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2013-04-01 16:16+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -2422,11 +2422,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2734,7 +2734,7 @@ msgstr "କିବୋର୍ଡ ସର୍ଟକଟଗୁଡିକ"
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "ତାଲିକା ତ୍ୱରକ କିକୁ ସକ୍ରିୟ କରନ୍ତୁ (ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଦ୍ୱାରା F10) (_m)"
 
 #: src/terminal-preferences-window.ui:447
@@ -3017,11 +3017,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -3233,7 +3233,7 @@ msgstr "ସ୍କ୍ରୋଲ କରୁଛି"
 #: src/terminal-profile-editor.ui:623
 #, fuzzy
 #| msgid "When to show the scrollbar"
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "ସ୍କ୍ରୋଲବାରକୁ କେତେବେଳେ ଦର୍ଶାଇବେ"
 
 #: src/terminal-profile-editor.ui:632
@@ -3247,7 +3247,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "ସ୍କ୍ରୋଲ କରୁଛି"
 
 #: src/terminal-profile-editor.ui:655
@@ -3289,7 +3289,7 @@ msgid "Images"
 msgstr "ପ୍ରତିଛବି"
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:717
@@ -3317,7 +3317,9 @@ msgid "Command"
 msgstr "ନିର୍ଦ୍ଦେଶ"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "ଗୋଟିଏ ଲଗଇନ ସେଲ ପରି ଆଦେଶକୁ ଚଳାଅ"
 
 #: src/terminal-profile-editor.ui:737
@@ -3349,7 +3351,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "ଗୋଟିଏ ନୂତନ ଟର୍ମିନାଲ ଆରମ୍ଭ କରିବା ସମୟରେ ବ୍ୟବହୃତ ରୂପରେଖ (_P):"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "ୟେବେ ଆଦେଶରୁ ପ୍ରସ୍ଥାନକରେ"
 
 #: src/terminal-profile-editor.ui:789
@@ -3422,28 +3426,28 @@ msgstr "TTY ବିଲୋପ"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "ଟର୍ମିନାଲ ବନ୍ଦକରନ୍ତୁ (_l)"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "ନିର୍ଦ୍ଦେଶ ଧାରାକୁ ପୁନଃ ଚାଳନ କରନ୍ତୁ"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "ଟର୍ମିନାଲକୁ ଖୋଲା ରଖନ୍ତୁ"
 
 #: src/terminal-profile-file.cc:96
@@ -3871,6 +3875,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ସ୍ୱତନ୍ତ୍ରଚରଗୁଡ଼ିକୁ ବିଶ୍ଳେଷଣ କରିବାରେ ବିଫଳ: %s\n"
+
+#, fuzzy
+#~| msgid "C_lose Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "ଟର୍ମିନାଲ ବନ୍ଦକରନ୍ତୁ (_l)"
 
 #, fuzzy
 #~| msgid "Close Tab"

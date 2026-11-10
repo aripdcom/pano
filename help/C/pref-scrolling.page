@@ -40,7 +40,7 @@
 
   <terms>
     <item>
-      <title><gui>Show scrollbar</gui></title>
+      <title><gui>Show Scrollbar</gui></title>
       <p><gui>Regular</gui> always shows the scrollbar next to the text,
       <gui>Overlay</gui> shows it over the text while you scroll, and
       <gui>None</gui> hides it. The marks of
@@ -48,7 +48,7 @@
       to the scrollbar.</p>
     </item>
     <item>
-      <title><gui>Kinetic scrolling</gui></title>
+      <title><gui>Kinetic Scrolling</gui></title>
       <p>Keep scrolling for a moment after you lift your fingers from a
       touchscreen.</p>
     </item>

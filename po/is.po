@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2022-10-25 16:12+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -2270,11 +2270,11 @@ msgid "Light"
 msgstr "Ljóst"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2586,7 +2586,7 @@ msgid "Keyboard Shortcuts"
 msgstr "Flýtivísun til að afrita texta"
 
 #: src/terminal-preferences-window.ui:442
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:447
@@ -2863,11 +2863,15 @@ msgid "Never"
 msgstr "Aldrei"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "Þegar er virkt"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "Þegar er óvirkt"
 
 #: src/terminal-profile-editor.ui:139
@@ -3079,7 +3083,9 @@ msgid "Scrolling"
 msgstr "Skrun"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "Birta skrunslá"
 
 #: src/terminal-profile-editor.ui:632
@@ -3093,7 +3099,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "Skrun"
 
 #: src/terminal-profile-editor.ui:655
@@ -3135,7 +3141,9 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr "Virkja SIXEL myndir"
 
 #: src/terminal-profile-editor.ui:717
@@ -3161,7 +3169,9 @@ msgid "Command"
 msgstr "Skipun"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "Keyra skipun sem innskráningar skel"
 
 #: src/terminal-profile-editor.ui:737
@@ -3194,7 +3204,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "Hvort halda eigi sömu vinnumöppu þegar nýr skjáhermigluggi er opnaður"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "Þegar skipun hættir"
 
 #: src/terminal-profile-editor.ui:789
@@ -3263,28 +3275,30 @@ msgstr "TTY Erase"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+#, fuzzy
+#| msgid "Shell only"
+msgid "Shell Only"
 msgstr "Einungis skel"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
-#| msgid "Close Terminal"
-msgid "Close terminal"
-msgstr "Loka skjáhermi"
+#| msgid "C_lose Terminal"
+msgid "Close Terminal"
+msgstr "_Loka skjáhermi"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "Enduræsa skipunina"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "Halda skjáherminum opnum"
 
 #: src/terminal-profile-file.cc:96
@@ -3720,6 +3734,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Mistókst að þátta viðföng: %s\n"
+
+#, fuzzy
+#~| msgid "Close Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "Loka skjáhermi"
 
 #, fuzzy
 #~| msgid "Close Tab"

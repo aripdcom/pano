@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "PO-Revision-Date: 2021-01-04 13:56+0530\n"
 "Last-Translator: Akarshan Biswas <akarshan.biswas@hotmail.com>\n"
 "Language-Team: Bengali <anubad@lists.ankur.org.in>\n"
@@ -2340,11 +2340,11 @@ msgid "Light"
 msgstr "আলো"
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2659,7 +2659,7 @@ msgstr "টেক্সট পেস্ট করার জন্য ব্য�
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "মেনু অ্যাকসিলেটর কী সক্ষম করুন (_m) (ডিফল্ট ভাবে F10)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2936,11 +2936,15 @@ msgid "Never"
 msgstr "কখনই না"
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+#, fuzzy
+#| msgid "When focused"
+msgid "When Focused"
 msgstr "ফোকাস করা যখন"
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+#, fuzzy
+#| msgid "When unfocused"
+msgid "When Unfocused"
 msgstr "ফোকাস যখন"
 
 #: src/terminal-profile-editor.ui:139
@@ -3152,7 +3156,9 @@ msgid "Scrolling"
 msgstr "স্ক্রোল ব্যবস্থা"
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+#, fuzzy
+#| msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr "স্ক্রোল বার দেখান"
 
 #: src/terminal-profile-editor.ui:632
@@ -3166,7 +3172,7 @@ msgstr ""
 #: src/terminal-profile-editor.ui:654
 #, fuzzy
 #| msgid "Scrolling"
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr "স্ক্রোল ব্যবস্থা"
 
 #: src/terminal-profile-editor.ui:655
@@ -3208,7 +3214,9 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr "SIXEL চিত্র সক্ষম করুন"
 
 #: src/terminal-profile-editor.ui:717
@@ -3236,7 +3244,9 @@ msgid "Command"
 msgstr "কমান্ড"
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+#, fuzzy
+#| msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr "লগ-ইন শেলে কমান্ড চালানো হবে"
 
 #: src/terminal-profile-editor.ui:737
@@ -3269,7 +3279,9 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr "নতুন টার্মিনাল খোলার সময় কার্যকারী ডিরেক্টরি সংরক্ষণ করা হবে কিনা"
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+#, fuzzy
+#| msgid "When command exits"
+msgid "When Command Exits"
 msgstr "কমান্ড বন্ধ করা হলে"
 
 #: src/terminal-profile-editor.ui:789
@@ -3340,28 +3352,30 @@ msgstr "TTY Erase"
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+#, fuzzy
+#| msgid "Shell only"
+msgid "Shell Only"
 msgstr "শেল কেবল"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "C_lose Terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "টার্মিন্যাল বন্ধ করুন (_l)"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
 #, fuzzy
 #| msgid "Restart the command"
-msgid "Restart command"
+msgid "Restart Command"
 msgstr "কমান্ড পুনরারম্ভ করুন"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "Hold the terminal open"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "টার্মিন্যালটি খুলে রাখা হবে"
 
 #: src/terminal-profile-file.cc:96
@@ -3798,6 +3812,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"
+
+#, fuzzy
+#~| msgid "C_lose Terminal"
+#~ msgid "Close terminal"
+#~ msgstr "টার্মিন্যাল বন্ধ করুন (_l)"
 
 #, fuzzy
 #~| msgid "Close Tab"

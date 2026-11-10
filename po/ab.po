@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-11 00:18+0300\n"
+"POT-Creation-Date: 2026-11-11 00:20+0300\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
 "Language-Team: Abkhazian <ab@li.org>\n"
 "Language: ab\n"
@@ -2031,11 +2031,11 @@ msgid "Light"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:88
-msgid "Rounded corners"
+msgid "Rounded Corners"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:103
-msgid "Top only"
+msgid "Top Only"
 msgstr ""
 
 #: src/terminal-preferences-window.ui:109 src/terminal-profile-editor.ui:644
@@ -2325,7 +2325,7 @@ msgstr ""
 #: src/terminal-preferences-window.ui:442
 #, fuzzy
 #| msgid "Enable the _menu accelerator key (F10 by default)"
-msgid "Accelerator Key (F10 by default)"
+msgid "Accelerator Key (F10 by Default)"
 msgstr "Амениу ахь анеиразы иласу арыд  _аҿакра(ишыҟоу еиԥш -«F10»)"
 
 #: src/terminal-preferences-window.ui:447
@@ -2586,11 +2586,11 @@ msgid "Never"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:121
-msgid "When focused"
+msgid "When Focused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:127
-msgid "When unfocused"
+msgid "When Unfocused"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:139
@@ -2768,7 +2768,7 @@ msgid "Scrolling"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:623
-msgid "Show scrollbar"
+msgid "Show Scrollbar"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:632
@@ -2780,7 +2780,7 @@ msgid "Overlay"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:654
-msgid "Kinetic scrolling"
+msgid "Kinetic Scrolling"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:655
@@ -2812,7 +2812,9 @@ msgid "Images"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:710
-msgid "Enable SIXEL images"
+#, fuzzy
+#| msgid "Enable SIXEL images"
+msgid "Enable SIXEL Images"
 msgstr " SIXEL асахьақәа рҿакра"
 
 #: src/terminal-profile-editor.ui:717
@@ -2836,7 +2838,7 @@ msgid "Command"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:736
-msgid "Run command as a login shell"
+msgid "Run Command as a Login Shell"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:737
@@ -2860,7 +2862,7 @@ msgid "Preserve the working directory when opening a new terminal"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:778
-msgid "When command exits"
+msgid "When Command Exits"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:789
@@ -2923,26 +2925,26 @@ msgstr ""
 
 #. Preserve working directory
 #: src/terminal-profile-editor.ui:905
-msgid "Shell only"
+msgid "Shell Only"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:920
 #, fuzzy
 #| msgid "gnome-terminal"
-msgid "Close terminal"
+msgid "Close Terminal"
 msgstr "gnome-terminal"
 
 #. When command exits
 #: src/terminal-profile-editor.ui:926
-msgid "Restart command"
+msgid "Restart Command"
 msgstr ""
 
 #. When command exits
 #: src/terminal-profile-editor.ui:932
 #, fuzzy
 #| msgid "gnome-terminal"
-msgid "Hold terminal"
+msgid "Hold Terminal"
 msgstr "gnome-terminal"
 
 #: src/terminal-profile-file.cc:96
@@ -3302,6 +3304,11 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr ""
+
+#, fuzzy
+#~| msgid "gnome-terminal"
+#~ msgid "Close terminal"
+#~ msgstr "gnome-terminal"
 
 #~ msgid "GPL-3.0+ or GFDL-1.3-only"
 #~ msgstr "GPL-3.0+ ма мацара GFDL-1.3"

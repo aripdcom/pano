@@ -118,13 +118,13 @@
                         </child>
                         <child>
                           <object class="TerminalPreferencesListItem">
-                            <property name="title" translatable="yes">When focused</property>
+                            <property name="title" translatable="yes">When Focused</property>
                             <property name="value">'focused'</property>
                           </object>
                         </child>
                         <child>
                           <object class="TerminalPreferencesListItem">
-                            <property name="title" translatable="yes">When unfocused</property>
+                            <property name="title" translatable="yes">When Unfocused</property>
                             <property name="value">'unfocused'</property>
                           </object>
                         </child>
@@ -620,7 +620,7 @@
                 <property name="title" translatable="yes">Scrolling</property>
                 <child>
                   <object class="AdwComboRow" id="show_scrollbar">
-                    <property name="title" translatable="yes">Show scrollbar</property>
+                    <property name="title" translatable="yes">Show Scrollbar</property>
                     <property name="expression">
                       <lookup name="title" type="TerminalPreferencesListItem"/>
                     </property>
@@ -651,7 +651,7 @@
                 </child>
                 <child>
                   <object class="AdwSwitchRow" id="kinetic_scrolling">
-                    <property name="title" translatable="yes">Kinetic scrolling</property>
+                    <property name="title" translatable="yes">Kinetic Scrolling</property>
                     <property name="subtitle" translatable="yes">When used on touchscreens</property>
                   </object>
                 </child>
@@ -707,7 +707,7 @@
                 <property name="title" translatable="yes">Images</property>
                 <child>
                   <object class="AdwSwitchRow" id="enable_sixel">
-                    <property name="title" translatable="yes">Enable SIXEL images</property>
+                    <property name="title" translatable="yes">Enable SIXEL Images</property>
                   </object>
                 </child>
               </object>
@@ -733,7 +733,7 @@
                 <property name="title" translatable="yes">Command</property>
                 <child>
                   <object class="AdwSwitchRow" id="login_shell">
-                    <property name="title" translatable="yes">Run command as a login shell</property>
+                    <property name="title" translatable="yes">Run Command as a Login Shell</property>
                     <property name="subtitle" translatable="yes">Applies to the shell, not to a custom command</property>
                   </object>
                 </child>
@@ -775,7 +775,7 @@
               <object class="AdwPreferencesGroup">
                 <child>
                   <object class="AdwComboRow" id="when_command_exits">
-                    <property name="title" translatable="yes">When command exits</property>
+                    <property name="title" translatable="yes">When Command Exits</property>
                     <property name="model">exit_actions</property>
                     <property name="expression">
                       <lookup name="title" type="TerminalPreferencesListItem"/>
@@ -902,7 +902,7 @@
     </child>
     <child>
       <object class="TerminalPreferencesListItem">
-        <property name="title" translatable="yes" comments="Preserve working directory">Shell only</property>
+        <property name="title" translatable="yes" comments="Preserve working directory">Shell Only</property>
         <property name="value">'safe'</property>
       </object>
     </child>
@@ -917,19 +917,19 @@
     <property name="item-type">TerminalPreferencesListItem</property>
     <child>
       <object class="TerminalPreferencesListItem">
-        <property name="title" translatable="yes" comments="When command exits">Close terminal</property>
+        <property name="title" translatable="yes" comments="When command exits">Close Terminal</property>
         <property name="value">'close'</property>
       </object>
     </child>
     <child>
       <object class="TerminalPreferencesListItem">
-        <property name="title" translatable="yes" comments="When command exits">Restart command</property>
+        <property name="title" translatable="yes" comments="When command exits">Restart Command</property>
         <property name="value">'restart'</property>
       </object>
     </child>
     <child>
       <object class="TerminalPreferencesListItem">
-        <property name="title" translatable="yes" comments="When command exits">Hold terminal</property>
+        <property name="title" translatable="yes" comments="When command exits">Hold Terminal</property>
         <property name="value">'hold'</property>
       </object>
     </child>
