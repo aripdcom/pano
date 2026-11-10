@@ -28,6 +28,11 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+/* musl does not define it */
+#ifndef W_EXITCODE
+#define W_EXITCODE(ret, sig) ((ret) << 8 | (sig))
+#endif
+
 #include <glib.h>
 #include <glib/gstdio.h>
 #include <gio/gio.h>
