@@ -160,9 +160,11 @@ msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'Sin nombre'"
+msgid "'Default'"
+msgstr "Predeterminado"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1961,8 +1963,10 @@ msgid "_Help"
 msgstr "Ay_uda"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "Acerca _de"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "_Acerca de la Terminal"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3903,6 +3907,13 @@ msgstr ""
 msgid "Failed to parse arguments: %s\n"
 msgstr "Falló al analizar los argumentos: %s\n"
 
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'Sin nombre'"
+
+#~ msgid "_About"
+#~ msgstr "Acerca _de"
+
 #, fuzzy
 #~| msgid "C_lose Terminal"
 #~ msgid "Close terminal"
@@ -4746,9 +4757,6 @@ msgstr "Falló al analizar los argumentos: %s\n"
 
 #~ msgid "Current Locale"
 #~ msgstr "Configuración regional actual"
-
-#~ msgid "_About Terminal"
-#~ msgstr "_Acerca de la Terminal"
 
 #~ msgid "Visible only when necessary"
 #~ msgstr "Visible sólo cuando sea necesaria"

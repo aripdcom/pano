@@ -124,10 +124,10 @@ msgstr ""
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
 #, fuzzy
-#| msgid "Unnamed"
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "𐑩𐑯𐑯𐑱𐑥𐑛"
+msgid "'Default'"
+msgstr "𐑛𐑦𐑓𐑷𐑤𐑑"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1982,8 +1982,9 @@ msgid "_Help"
 msgstr "_𐑣𐑧𐑤𐑐"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "_𐑩𐑚𐑬𐑑"
+#, fuzzy
+msgid "_About Pano Terminal"
+msgstr "·𐑜𐑯𐑴𐑥 𐑑𐑻𐑥𐑦𐑯𐑩𐑤"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3896,6 +3897,15 @@ msgstr "𐑞𐑺 𐑦𐑟 𐑕𐑑𐑦𐑤 𐑩 𐑐𐑮𐑴𐑕𐑧𐑕 𐑮�
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑐𐑸𐑕 𐑸𐑜𐑿𐑥𐑩𐑯𐑑𐑕: %s\n"
+
+#, fuzzy
+#~| msgid "Unnamed"
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "𐑩𐑯𐑯𐑱𐑥𐑛"
+
+#~ msgid "_About"
+#~ msgstr "_𐑩𐑚𐑬𐑑"
 
 #, fuzzy
 #~| msgid "C_lose Terminal"

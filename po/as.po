@@ -140,9 +140,11 @@ msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'নামবিহীন'"
+msgid "'Default'"
+msgstr "অবিকল্পিত"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1989,8 +1991,10 @@ msgid "_Help"
 msgstr "সহায়(_H)"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "বিষয়ে (_A)"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "টাৰ্মিনেলৰ বিষয়ে (_A)"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3913,6 +3917,13 @@ msgstr ""
 msgid "Failed to parse arguments: %s\n"
 msgstr "তৰ্ক বিশ্লেষণ কৰিব নোৱাৰি: %s\n"
 
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'নামবিহীন'"
+
+#~ msgid "_About"
+#~ msgstr "বিষয়ে (_A)"
+
 #, fuzzy
 #~| msgid "Close Terminal"
 #~ msgid "Close terminal"
@@ -4514,9 +4525,6 @@ msgstr "তৰ্ক বিশ্লেষণ কৰিব নোৱাৰি: %
 
 #~ msgid "Hidden"
 #~ msgstr "লুকুৱা"
-
-#~ msgid "_About Terminal"
-#~ msgstr "টাৰ্মিনেলৰ বিষয়ে (_A)"
 
 #~ msgid "_Close Window"
 #~ msgstr "উইন্ডো বন্ধ কৰক (_C)"

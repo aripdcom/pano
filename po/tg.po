@@ -137,9 +137,11 @@ msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'Беном'"
+msgid "'Default'"
+msgstr "Пешфарз"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -2001,8 +2003,10 @@ msgid "_Help"
 msgstr "_Кӯмак"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "_Дар бораи барнома"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "_Дар бораи терминал"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3929,6 +3933,13 @@ msgstr ""
 msgid "Failed to parse arguments: %s\n"
 msgstr "Таҷзияи баҳсҳо ноком монд: %s\n"
 
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'Беном'"
+
+#~ msgid "_About"
+#~ msgstr "_Дар бораи барнома"
+
 #, fuzzy
 #~| msgid "Close Terminal"
 #~ msgid "Close terminal"
@@ -4524,9 +4535,6 @@ msgstr "Таҷзияи баҳсҳо ноком монд: %s\n"
 
 #~ msgid "_Next Tab"
 #~ msgstr "_Варақаи навбатӣ"
-
-#~ msgid "_About Terminal"
-#~ msgstr "_Дар бораи терминал"
 
 #~ msgid "Visible only when necessary"
 #~ msgstr "аён танҳо ҳангоми зарурат"

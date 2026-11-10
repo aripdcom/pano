@@ -142,9 +142,11 @@ msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'ללא שם'"
+msgid "'Default'"
+msgstr "בררת מחדל"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1897,8 +1899,10 @@ msgid "_Help"
 msgstr "ע_זרה"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "על _אודות"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "על _אודות המסוף"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3831,6 +3835,13 @@ msgstr "עדיין ישנו תהליך הפעיל דרך מסוף זה. סגיר
 msgid "Failed to parse arguments: %s\n"
 msgstr "Failed to parse arguments: %s\n"
 
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'ללא שם'"
+
+#~ msgid "_About"
+#~ msgstr "על _אודות"
+
 #, fuzzy
 #~| msgid "C_lose Terminal"
 #~ msgid "Close terminal"
@@ -4617,9 +4628,6 @@ msgstr "Failed to parse arguments: %s\n"
 
 #~ msgid "Hidden"
 #~ msgstr "מוסתר"
-
-#~ msgid "_About Terminal"
-#~ msgstr "על _אודות המסוף"
 
 #~ msgid "What to do with dynamic title"
 #~ msgstr "What to do with dynamic title"

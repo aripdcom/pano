@@ -162,7 +162,7 @@
 	<attribute name="accel"></attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_About</attribute>
+        <attribute name="label" translatable="yes">_About Pano Terminal</attribute>
         <attribute name="action">app.about</attribute>
 	<attribute name="accel"></attribute>
       </item>

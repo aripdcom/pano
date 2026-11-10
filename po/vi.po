@@ -149,13 +149,13 @@ msgstr "Mô phỏng thiết bị cuối GNOME"
 msgid "Show or hide the quick terminal"
 msgstr ""
 
-# Cần dùng dấu nháy đơn. Xem:
-# <https://mail.gnome.org/archives/gnome-i18n/2014-September/msg00155.html>
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'Không tên'"
+msgid "'Default'"
+msgstr "Mặc định"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1914,8 +1914,9 @@ msgid "_Help"
 msgstr "Trợ g_iúp"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "_Giới thiệu"
+#, fuzzy
+msgid "_About Pano Terminal"
+msgstr "Thiết bị cuối GNOME"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3836,6 +3837,15 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Gặp lỗi khi phân tích cú pháp của các đối số: %s\n"
+
+# Cần dùng dấu nháy đơn. Xem:
+# <https://mail.gnome.org/archives/gnome-i18n/2014-September/msg00155.html>
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'Không tên'"
+
+#~ msgid "_About"
+#~ msgstr "_Giới thiệu"
 
 #, fuzzy
 #~| msgid "C_lose Terminal"

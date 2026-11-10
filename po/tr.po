@@ -139,8 +139,8 @@ msgstr "Hızlı uçbirimi göster ya da gizle"
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'Adsız'"
+msgid "'Default'"
+msgstr "'Öntanımlı'"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1838,8 +1838,8 @@ msgid "_Help"
 msgstr "_Yardım"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "_Hakkında"
+msgid "_About Pano Terminal"
+msgstr "Pano Terminal _Hakkında"
 
 #: src/terminal-nautilus.cc:513
 msgid "Open in Pano Terminal (_Remote)"
@@ -3565,6 +3565,13 @@ msgstr "Bu uçbirimde çalışan süreç var. Uçbirimi kapatmak onu sonlandıra
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Bağımsız değişkenler ayrıştırılamadı: %s\n"
+
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'Adsız'"
+
+#~ msgid "_About"
+#~ msgstr "_Hakkında"
 
 #~ msgid "Close terminal"
 #~ msgstr "Uçbirimi kapat"

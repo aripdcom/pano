@@ -146,9 +146,11 @@ msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'ไม่มีชื่อ'"
+msgid "'Default'"
+msgstr "ปริยาย"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1880,8 +1882,10 @@ msgid "_Help"
 msgstr "_วิธีใช้"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "เ_กี่ยวกับ"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "เ_กี่ยวกับทอร์มินัล"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3789,6 +3793,13 @@ msgstr "ยังมีโพรเซสหนึ่งทำงานอยู
 msgid "Failed to parse arguments: %s\n"
 msgstr "แจงอาร์กิวเมนต์ไม่สำเร็จ: %s\n"
 
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'ไม่มีชื่อ'"
+
+#~ msgid "_About"
+#~ msgstr "เ_กี่ยวกับ"
+
 #, fuzzy
 #~| msgid "C_lose Terminal"
 #~ msgid "Close terminal"
@@ -4553,9 +4564,6 @@ msgstr "แจงอาร์กิวเมนต์ไม่สำเร็จ
 
 #~ msgid "Hidden"
 #~ msgstr "ซ่อน"
-
-#~ msgid "_About Terminal"
-#~ msgstr "เ_กี่ยวกับทอร์มินัล"
 
 #~ msgid "What to do with dynamic title"
 #~ msgstr "สิ่งที่เกิดขึ้นกับหัวเรื่องพลวัต"

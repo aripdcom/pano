@@ -110,7 +110,7 @@ msgstr ""
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
 msgctxt "visible-name"
-msgid "'Unnamed'"
+msgid "'Default'"
 msgstr ""
 
 #: src/com.aripd.Pano.gschema.xml:152
@@ -1642,8 +1642,10 @@ msgid "_Help"
 msgstr ""
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr ""
+#, fuzzy
+#| msgid "gnome-terminal"
+msgid "_About Pano Terminal"
+msgstr "gnome-terminal"
 
 #: src/terminal-nautilus.cc:513
 msgid "Open in Pano Terminal (_Remote)"

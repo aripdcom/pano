@@ -143,9 +143,10 @@ msgstr ""
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
 #, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'未命名的'"
+msgid "'Default'"
+msgstr "預設"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1973,8 +1974,10 @@ msgid "_Help"
 msgstr "求助(_H)"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "關於(_A)"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "關於終端機(_A)"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3888,6 +3891,14 @@ msgid "Failed to parse arguments: %s\n"
 msgstr "分析引數失敗：%s\n"
 
 #, fuzzy
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'未命名的'"
+
+#~ msgid "_About"
+#~ msgstr "關於(_A)"
+
+#, fuzzy
 #~| msgid "Close Terminal"
 #~ msgid "Close terminal"
 #~ msgstr "關閉終端機"
@@ -4477,9 +4488,6 @@ msgstr "分析引數失敗：%s\n"
 
 #~ msgid "Hidden"
 #~ msgstr "隱藏"
-
-#~ msgid "_About Terminal"
-#~ msgstr "關於終端機(_A)"
 
 #~ msgid "_Close Window"
 #~ msgstr "關閉視窗(_C)"

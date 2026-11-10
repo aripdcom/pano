@@ -159,12 +159,15 @@ msgstr "Emulátor terminálu pre GNOME"
 msgid "Show or hide the quick terminal"
 msgstr ""
 
-# profil
+# nazov
+# GtkLabel label
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'Bez názvu'"
+msgid "'Default'"
+msgstr "Predvolený"
 
 # gsetting summary
 #: src/com.aripd.Pano.gschema.xml:152
@@ -2128,10 +2131,11 @@ msgstr "_Inšpektor"
 msgid "_Help"
 msgstr "_Pomocník"
 
-# menu item
+# PM: Terminál pre GNOME/ Terminál prostredia GNOME
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "_O programe"
+#, fuzzy
+msgid "_About Pano Terminal"
+msgstr "Terminál prostredia GNOME"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -4183,6 +4187,15 @@ msgstr "V tomto termináli stále beží proces. Zatvorenie terminálu ho ukonč
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Nepodarilo sa analyzovať parametre: %s\n"
+
+# profil
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'Bez názvu'"
+
+# menu item
+#~ msgid "_About"
+#~ msgstr "_O programe"
 
 #, fuzzy
 #~| msgid "C_lose Terminal"

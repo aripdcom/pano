@@ -158,9 +158,11 @@ msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'未命名'"
+msgid "'Default'"
+msgstr "默认"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1890,8 +1892,10 @@ msgid "_Help"
 msgstr "帮助(_H)"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "关于(_A)"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "关于终端(_A)"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3804,6 +3808,13 @@ msgstr "该终端中仍然有一个进程在运行。关闭终端将杀死该进
 msgid "Failed to parse arguments: %s\n"
 msgstr "无法处理参数：%s\n"
 
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'未命名'"
+
+#~ msgid "_About"
+#~ msgstr "关于(_A)"
+
 #, fuzzy
 #~| msgid "C_lose Terminal"
 #~ msgid "Close terminal"
@@ -4582,9 +4593,6 @@ msgstr "无法处理参数：%s\n"
 
 #~ msgid "Current Locale"
 #~ msgstr "当前区域"
-
-#~ msgid "_About Terminal"
-#~ msgstr "关于终端(_A)"
 
 #~ msgid "What to do with dynamic title"
 #~ msgstr "如何对待动态标题"

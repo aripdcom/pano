@@ -130,10 +130,10 @@ msgstr ""
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
 #, fuzzy
-#| msgid "Unnamed"
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "Gan Ainm"
+msgid "'Default'"
+msgstr "Réamhshocrú"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1806,8 +1806,10 @@ msgid "_Help"
 msgstr "Cab_hair"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "_Maidir Leis Seo"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "_Maidir le Teirminéal"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3731,6 +3733,15 @@ msgid "Failed to parse arguments: %s\n"
 msgstr "Theip ar pharsáil argóintí: %s\n"
 
 #, fuzzy
+#~| msgid "Unnamed"
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "Gan Ainm"
+
+#~ msgid "_About"
+#~ msgstr "_Maidir Leis Seo"
+
+#, fuzzy
 #~| msgid "C_lose Terminal"
 #~ msgid "Close terminal"
 #~ msgstr "_Dún Teirminéal"
@@ -4016,9 +4027,6 @@ msgstr "Theip ar pharsáil argóintí: %s\n"
 
 #~ msgid "User Defined"
 #~ msgstr "Sainmhínithe ag an Úsáideoir"
-
-#~ msgid "_About Terminal"
-#~ msgstr "_Maidir le Teirminéal"
 
 #~ msgid "_Quit"
 #~ msgstr "_Scoir"

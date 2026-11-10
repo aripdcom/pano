@@ -144,9 +144,11 @@ msgstr ""
 
 #. Translators: This needs to be parsed as a GVariant string, so keep the regular single quotes around the string as-is, and do not add extra quotes.
 #: src/com.aripd.Pano.gschema.xml:151
+#, fuzzy
+#| msgid "Default"
 msgctxt "visible-name"
-msgid "'Unnamed'"
-msgstr "'未命名'"
+msgid "'Default'"
+msgstr "預設"
 
 #: src/com.aripd.Pano.gschema.xml:152
 msgid "Human-readable name of the profile"
@@ -1871,8 +1873,10 @@ msgid "_Help"
 msgstr "求助(_H)"
 
 #: src/terminal-headermenu.ui:165
-msgid "_About"
-msgstr "關於(_A)"
+#, fuzzy
+#| msgid "_About Terminal"
+msgid "_About Pano Terminal"
+msgstr "關於終端機(_A)"
 
 #: src/terminal-nautilus.cc:513
 #, fuzzy
@@ -3790,6 +3794,13 @@ msgstr "在這個終端機還有程序在執行。關閉終端機會終結它們
 msgid "Failed to parse arguments: %s\n"
 msgstr "分析引數失敗：%s\n"
 
+#~ msgctxt "visible-name"
+#~ msgid "'Unnamed'"
+#~ msgstr "'未命名'"
+
+#~ msgid "_About"
+#~ msgstr "關於(_A)"
+
 #, fuzzy
 #~| msgid "C_lose Terminal"
 #~ msgid "Close terminal"
@@ -4596,9 +4607,6 @@ msgstr "分析引數失敗：%s\n"
 
 #~ msgid "Hidden"
 #~ msgstr "隱藏"
-
-#~ msgid "_About Terminal"
-#~ msgstr "關於終端機(_A)"
 
 #~ msgid "What to do with dynamic title"
 #~ msgstr "如何處理動態的終端機標題"
