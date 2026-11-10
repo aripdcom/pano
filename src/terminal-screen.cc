@@ -3901,14 +3901,40 @@ terminal_screen_capture_click_pressed_cb (TerminalScreen  *screen,
  * Returns: a newly allocated string containing the current working directory,
  *   or %nullptr on failure
  */
+/* Whether @host, from an OSC 7 URI, names this computer. Shells report
+ * $HOSTNAME, which may or may not include the domain. */
+static gboolean
+is_local_host (const char *host)
+{
+  if (host == nullptr || host[0] == '\0' ||
+      g_ascii_strcasecmp (host, "localhost") == 0)
+    return TRUE;
+
+  auto const local = g_get_host_name ();
+  if (g_ascii_strcasecmp (host, local) == 0)
+    return TRUE;
+
+  /* Compare the first labels: "pc" and "pc.example.com" */
+  auto const host_len = strcspn (host, ".");
+  auto const local_len = strcspn (local, ".");
+  return host_len == local_len && g_ascii_strncasecmp (host, local, host_len) == 0;
+}
+
 char *
 terminal_screen_get_current_dir (TerminalScreen *screen)
 {
   const char *uri;
 
+  /* The folder that the shell reports with OSC 7, unless it is on another
+   * computer, for example after ssh. Terminals in a container report the
+   * container's host name, but share the folders. */
   uri = vte_terminal_get_current_directory_uri (VTE_TERMINAL (screen));
-  if (uri != nullptr)
-    return g_filename_from_uri (uri, nullptr, nullptr);
+  if (uri != nullptr) {
+    gs_free char *host = nullptr;
+    gs_free char *path = g_filename_from_uri (uri, &host, nullptr);
+    if (path && (is_local_host (host) || screen->priv->container_name))
+      return g_steal_pointer (&path);
+  }
 
   /* Without shell integration (OSC 7), ask the system for the working
    * directory of the shell. This only works on Linux. */
