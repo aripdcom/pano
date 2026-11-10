@@ -504,7 +504,7 @@ tab_release_focus(TerminalTab* tab,
                   GtkWidget* subtree)
 {
   auto const root = gtk_widget_get_root(GTK_WIDGET(tab));
-  auto const focus = root ? gtk_root_get_focus(root) : nullptr;
+  GtkWidget* focus = root ? gtk_root_get_focus(root) : nullptr;
   if (!focus || !(focus == subtree || gtk_widget_is_ancestor(focus, subtree)))
     return nullptr;
 

@@ -185,6 +185,9 @@ struct _TerminalScreenPrivate
   /* Rows of the shell prompts, from shell integration; see PromptMark */
   GArray* prompts;
   long prompts_columns; /* the column count the rows are valid for */
+  GArray* prompt_anchors; /* see terminal_screen_anchor_prompts() */
+  int allocated_width; /* with this width and character width */
+  int allocated_char_width;
   long command_mark_row; /* the prompt of the running command, or -1 */
   long row_origin; /* cache for terminal_screen_get_row_origin() */
   bool row_origin_valid;
@@ -235,6 +238,16 @@ struct PromptMark {
 };
 
 #define MAX_PROMPTS 10000
+
+/* Where a prompt mark is in the text, which stays the same when VTE
+ * rewraps the lines: the line breaks between the start of its row and the
+ * cursor. */
+struct PromptAnchor {
+  long newlines; /* -1 if not known */
+};
+
+/* Marks further up are dropped when the lines rewrap */
+#define PROMPT_ANCHOR_ROWS 5000
 
 enum
 {
@@ -780,8 +793,9 @@ terminal_screen_capture_command_cb(void* user_data)
 }
 
 /* Drops prompt marks that are no longer valid: when the column count
- * changed, VTE has rewrapped the lines and the rows moved. Returns whether
- * marks were dropped.
+ * changed, VTE has rewrapped the lines and the rows moved. Normally
+ * terminal_screen_reanchor_prompts() moves them along; this is for the
+ * changes it did not see. Returns whether marks were dropped.
  */
 static bool
 terminal_screen_validate_prompts(TerminalScreen* screen)
@@ -882,6 +896,146 @@ terminal_screen_row_to_adjustment(TerminalScreen* screen,
                                   long row)
 {
   return double(row - terminal_screen_get_row_origin(screen)) * terminal_screen_scroll_unit(screen);
+}
+
+static long
+count_newlines(char const* text)
+{
+  long n = 0;
+  for (auto p = text; p && *p; ++p)
+    n += *p == '\n';
+  return n;
+}
+
+/* Before VTE gets another width, and rewraps the lines: where the prompt
+ * marks are in the text, see terminal_screen_reanchor_prompts(). */
+static void
+terminal_screen_anchor_prompts(TerminalScreen* screen)
+{
+  auto const priv = screen->priv;
+  auto const terminal = VTE_TERMINAL(screen);
+
+  g_clear_pointer(&priv->prompt_anchors, g_array_unref);
+  if (priv->prompts->len == 0 ||
+      vte_terminal_get_column_count(terminal) != priv->prompts_columns)
+    return;
+
+  long cursor_row = 0, cursor_col = 0;
+  vte_terminal_get_cursor_position(terminal, &cursor_col, &cursor_row);
+
+  auto const n = priv->prompts->len;
+  priv->prompt_anchors = g_array_sized_new(false, false, sizeof(PromptAnchor), n);
+  g_array_set_size(priv->prompt_anchors, n);
+
+  // From the bottom up, one piece of text between two marks at a time
+  long newlines = 0;
+  auto end_row = cursor_row, end_col = cursor_col;
+  auto known = true;
+  for (auto i = n; i > 0; --i) {
+    auto const& mark = g_array_index(priv->prompts, PromptMark, i - 1);
+    auto& anchor = g_array_index(priv->prompt_anchors, PromptAnchor, i - 1);
+    known = known && mark.row <= end_row && cursor_row - mark.row <= PROMPT_ANCHOR_ROWS;
+    if (!known) {
+      anchor.newlines = -1;
+      continue;
+    }
+
+    gs_free char* text = vte_terminal_get_text_range_format(terminal, VTE_FORMAT_TEXT,
+                                                           mark.row, 0, end_row, end_col,
+                                                           nullptr);
+    newlines += count_newlines(text);
+    anchor.newlines = newlines;
+    end_row = mark.row;
+    end_col = 0;
+  }
+}
+
+/* The line breaks between the start of @row and the end of @end_row */
+static long
+terminal_screen_count_newlines(TerminalScreen* screen,
+                               long row,
+                               long end_row)
+{
+  gs_free char* text = vte_terminal_get_text_range_format(VTE_TERMINAL(screen), VTE_FORMAT_TEXT,
+                                                         row, 0, end_row + 1, 0,
+                                                         nullptr);
+  return count_newlines(text);
+}
+
+/* After VTE rewrapped the lines: finds the new rows of the prompt marks
+ * from their anchors. A mark goes to the first row of the line that has
+ * as many line breaks below it as before. Returns false if there were no
+ * anchors for the new width, and the marks were dropped. */
+static bool
+terminal_screen_reanchor_prompts(TerminalScreen* screen,
+                                 long old_columns)
+{
+  auto const priv = screen->priv;
+  auto const terminal = VTE_TERMINAL(screen);
+  gs_unref_array GArray* anchors = g_steal_pointer(&priv->prompt_anchors);
+
+  if (!anchors || anchors->len != priv->prompts->len ||
+      old_columns != priv->prompts_columns)
+    return false;
+
+  priv->prompts_columns = vte_terminal_get_column_count(terminal);
+
+  long cursor_row = 0, cursor_col = 0;
+  vte_terminal_get_cursor_position(terminal, &cursor_col, &cursor_row);
+  auto const first_row = terminal_screen_adjustment_to_row(screen,
+                                                           gtk_adjustment_get_lower(terminal_screen_get_vadjustment(screen)));
+
+  /* Walk up from the cursor. @newlines counts the line breaks between the
+   * start of @row and the cursor; whole chunks of rows are skipped while
+   * the next mark is further up. */
+  auto row = cursor_row;
+  long newlines = 0;
+  auto const old_command_row = priv->command_mark_row;
+  priv->command_mark_row = -1;
+  guint n_dropped = 0;
+
+  for (auto i = priv->prompts->len; i > 0; --i) {
+    auto& mark = g_array_index(priv->prompts, PromptMark, i - 1);
+    auto const target = g_array_index(anchors, PromptAnchor, i - 1).newlines;
+    auto const old_row = mark.row;
+    if (target < 0 || target < newlines) {
+      n_dropped = i;
+      break;
+    }
+
+    // Skip chunks that end below the mark's line
+    long constexpr chunk = 256;
+    while (row - chunk >= first_row) {
+      auto const n = terminal_screen_count_newlines(screen, row - chunk, row - 1);
+      if (newlines + n > target)
+        break;
+      newlines += n;
+      row -= chunk;
+    }
+
+    // Then row by row, to the first row of the line
+    while (row > first_row) {
+      auto const n = terminal_screen_count_newlines(screen, row - 1, row - 1);
+      if (newlines + n > target)
+        break;
+      newlines += n;
+      --row;
+    }
+
+    if (newlines != target) {
+      n_dropped = i;
+      break;
+    }
+
+    mark.row = row;
+    if (old_row == old_command_row)
+      priv->command_mark_row = row;
+  }
+
+  // The marks further up, which could not be placed, go
+  if (n_dropped > 0)
+    g_array_remove_range(priv->prompts, 0, n_dropped);
+  return true;
 }
 
 /* Root and remote sessions */
@@ -1347,17 +1501,30 @@ terminal_screen_size_allocate (GtkWidget *widget,
   prev_column_count = vte_terminal_get_column_count (VTE_TERMINAL (screen));
   prev_row_count = vte_terminal_get_row_count (VTE_TERMINAL (screen));
 
+  /* Another width or font may change the column count, and VTE rewraps the
+   * lines then; note where the prompt marks are in the text */
+  auto const char_width = int (vte_terminal_get_char_width (VTE_TERMINAL (screen)));
+  if (width != priv->allocated_width || char_width != priv->allocated_char_width) {
+    priv->allocated_width = width;
+    priv->allocated_char_width = char_width;
+    terminal_screen_anchor_prompts (screen);
+  }
+
   GTK_WIDGET_CLASS (terminal_screen_parent_class)->size_allocate (widget, width, height, baseline);
 
   column_count = vte_terminal_get_column_count (VTE_TERMINAL (screen));
   row_count = vte_terminal_get_row_count (VTE_TERMINAL (screen));
 
-  /* Rewrapped lines invalidate the prompt rows and search matches */
+  /* Rewrapped lines move the prompt rows, and invalidate search matches */
   if (column_count != prev_column_count) {
-    if (terminal_screen_validate_prompts (screen))
+    if (terminal_screen_reanchor_prompts (screen, prev_column_count) ||
+        terminal_screen_validate_prompts (screen))
       g_signal_emit (screen, signals[PROMPTS_CHANGED], 0);
     terminal_screen_stop_quick_select (screen);
     g_signal_emit (screen, signals[COLUMNS_CHANGED], 0);
+  } else {
+    // The text goes on; anchors are only good for this allocation
+    g_clear_pointer (&priv->prompt_anchors, g_array_unref);
   }
 
   root = gtk_widget_get_root (widget);
@@ -2283,6 +2450,7 @@ terminal_screen_finalize (GObject *object)
 
   g_slist_free_full (priv->match_tags, (GDestroyNotify) free_tag_data);
   g_clear_pointer (&priv->prompts, g_array_unref);
+  g_clear_pointer (&priv->prompt_anchors, g_array_unref);
   g_clear_pointer (&priv->search_matches, g_array_unref);
 
   g_free (priv->uuid);
