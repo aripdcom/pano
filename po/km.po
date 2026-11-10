@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: po_gnome-terminal-km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:49+0300\n"
+"POT-Creation-Date: 2026-11-10 23:51+0300\n"
 "PO-Revision-Date: 2014-04-10 12:04+0700\n"
 "Last-Translator: Sophea Sok <sophea@open.org.kh>\n"
 "Language-Team: Khmer <>\n"
@@ -1421,11 +1421,11 @@ msgstr "រុំ​ជុំវិញ"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2641
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2639
 msgid "_Cancel"
 msgstr "បោះបង់"
 
-#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2642
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2640
 msgid "_Set"
 msgstr ""
 
@@ -1512,11 +1512,11 @@ msgstr "សម្អាត​ការ​រំលេច"
 msgid "Full Screen"
 msgstr "ពេញ​អេក្រង់"
 
-#: src/terminal-accels.cc:174
+#: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
 msgstr "ពង្រីក"
 
-#: src/terminal-accels.cc:175
+#: src/terminal-accels.cc:175 src/terminal-headerbar.cc:83
 msgid "Zoom Out"
 msgstr "បង្រួម"
 
@@ -1538,7 +1538,7 @@ msgstr ""
 msgid "Read-Only"
 msgstr ""
 
-#: src/terminal-accels.cc:183 src/terminal-window.cc:2638
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2636
 msgid "Set Title"
 msgstr "កំណត់​ចំណងជើង"
 
@@ -1946,6 +1946,18 @@ msgstr ""
 msgid "Makes the quick terminal’s shortcut work after logging in"
 msgstr ""
 
+#: src/terminal-headerbar.cc:77
+#, fuzzy
+#| msgid "Reset"
+msgid "Reset Zoom"
+msgstr "កំណត់​ឡើងវិញ"
+
+#. Translators: the zoom level in percent, such as "110%"
+#: src/terminal-headerbar.cc:205
+#, c-format
+msgid "%d%%"
+msgstr ""
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1962,132 +1974,114 @@ msgstr ""
 msgid "Show Open Tabs"
 msgstr "បើក​ផ្ទាំង"
 
-#: src/terminal-headermenu.ui:23
-#, fuzzy
-#| msgid "Zoom Out"
-msgid "Zoom _Out"
-msgstr "បង្រួម"
-
-#: src/terminal-headermenu.ui:29
-#, fuzzy
-#| msgid "Reset"
-msgid "Reset _Zoom"
-msgstr "កំណត់​ឡើងវិញ"
-
-#: src/terminal-headermenu.ui:35
-#, fuzzy
-#| msgid "Zoom In"
-msgid "Zoom _In"
-msgstr "ពង្រីក"
-
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3283
+#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
 #, fuzzy
 #| msgid "Window"
 msgid "New _Window"
 msgstr "បង្អួច"
 
-#: src/terminal-headermenu.ui:49
+#: src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
 msgid "Re_open Closed Tab"
 msgstr "បិទ​ផ្ទាំង"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3212
+#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
 msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3215
+#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
 msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3269
+#: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
 msgstr ""
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3255
+#: src/terminal-headermenu.ui:55 src/terminal-window.cc:3253
 msgid "_Off"
 msgstr ""
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3256
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3254
 msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3257
+#: src/terminal-headermenu.ui:65 src/terminal-window.cc:3255
 #, fuzzy
 #| msgid "New Terminal in New Window"
 msgid "To All Terminals in This _Window"
 msgstr "ស្ថានីយ​ថ្មី​ក្នុង​បង្អួច​ថ្មី"
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3266
+#: src/terminal-headermenu.ui:72 src/terminal-window.cc:3264
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "_Include This Terminal"
 msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
 
-#: src/terminal-headermenu.ui:93
+#: src/terminal-headermenu.ui:78
 msgid "_Full Screen"
 msgstr "ពេញ​អេក្រង់"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3192
+#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
 msgid "Read-_Only"
 msgstr ""
 
-#: src/terminal-headermenu.ui:105 src/terminal-notebook.ui:67
+#: src/terminal-headermenu.ui:90 src/terminal-notebook.ui:67
 #, fuzzy
 #| msgid "_Set Title…"
 msgid "Set _Title…"
 msgstr "កំណត់​ចំណងជើង…"
 
-#: src/terminal-headermenu.ui:111
+#: src/terminal-headermenu.ui:96
 #, fuzzy
 #| msgid "_Save Contents"
 msgid "_Save Contents…"
 msgstr "រក្សាទុក​មាតិកា"
 
-#: src/terminal-headermenu.ui:117
+#: src/terminal-headermenu.ui:102
 #, fuzzy
 #| msgid "_Cancel"
 msgid "_Advanced"
 msgstr "បោះបង់"
 
-#: src/terminal-headermenu.ui:120
+#: src/terminal-headermenu.ui:105
 msgid "_Reset"
 msgstr "កំណត់​ឡើងវិញ"
 
-#: src/terminal-headermenu.ui:126
+#: src/terminal-headermenu.ui:111
 msgid "Reset and C_lear"
 msgstr "កំណត់​ឡើងវិញ ហើយ​សម្អាត"
 
-#: src/terminal-headermenu.ui:134
+#: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
 msgstr ""
 
-#: src/terminal-headermenu.ui:140
+#: src/terminal-headermenu.ui:125
 msgid "_2. 80×43"
 msgstr ""
 
-#: src/terminal-headermenu.ui:146
+#: src/terminal-headermenu.ui:131
 msgid "_3. 132×24"
 msgstr ""
 
-#: src/terminal-headermenu.ui:152
+#: src/terminal-headermenu.ui:137
 msgid "_4. 132×43"
 msgstr ""
 
-#: src/terminal-headermenu.ui:160
+#: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr ""
 
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3681
-#: src/terminal-window.cc:3206
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3681
+#: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "ចំណូលចិត្ត​"
 
-#: src/terminal-headermenu.ui:175
+#: src/terminal-headermenu.ui:160
 msgid "_Help"
 msgstr "ជំនួយ"
 
-#: src/terminal-headermenu.ui:180
+#: src/terminal-headermenu.ui:165
 msgid "_About"
 msgstr "អំពី"
 
@@ -2146,8 +2140,8 @@ msgstr "ផ្លាស់ទី​ស្ថានីយ​ទៅ​ស្ដា
 msgid "_Detach Terminal"
 msgstr "ផ្ដាច់​ស្ថានីយ"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5299
-#: src/terminal-window.cc:5309
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
+#: src/terminal-window.cc:5303
 msgid "C_lose Terminal"
 msgstr "បិទ​ស្ថានីយ"
 
@@ -2482,7 +2476,7 @@ msgstr[0] ""
 msgid "Import Profile"
 msgstr "លុប​ទម្រង់"
 
-#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3618
+#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3616
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2856,7 +2850,7 @@ msgstr ""
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3649
+#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3647
 msgid "_Import"
 msgstr ""
 
@@ -3707,29 +3701,29 @@ msgid "Input goes to %u terminal"
 msgid_plural "Input goes to %u terminals"
 msgstr[0] "ចំណងជើង​សម្រាប់​ស្ថានីយ"
 
-#: src/terminal-window.cc:1735
+#: src/terminal-window.cc:1733
 msgid "Nothing to select"
 msgstr ""
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:1778
+#: src/terminal-window.cc:1776
 #, c-format
 msgid "“%s” does not exist"
 msgstr ""
 
-#: src/terminal-window.cc:2639
+#: src/terminal-window.cc:2637
 msgid ""
 "Programs cannot change this title. Leave it empty to show the title from the "
 "program again."
 msgstr ""
 
-#: src/terminal-window.cc:2849
+#: src/terminal-window.cc:2847
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Activity in a terminal"
 msgstr "បើក​ស្ថានីយ"
 
-#: src/terminal-window.cc:2884
+#: src/terminal-window.cc:2882
 #, c-format
 msgid ""
 "%s\n"
@@ -3739,204 +3733,204 @@ msgid_plural ""
 "No output for %u seconds"
 msgstr[0] ""
 
-#: src/terminal-window.cc:2889
+#: src/terminal-window.cc:2887
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Silence in a terminal"
 msgstr "បើក​ស្ថានីយ"
 
-#: src/terminal-window.cc:3114
+#: src/terminal-window.cc:3112
 #, fuzzy
 #| msgid "Open _Terminal"
 msgid "Open _Hyperlink"
 msgstr "បើក​ស្ថានីយ"
 
-#: src/terminal-window.cc:3115
+#: src/terminal-window.cc:3113
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy Hyperlink _Address"
 msgstr "ចម្លង​អាសយដ្ឋាន​តំណ"
 
-#: src/terminal-window.cc:3117
+#: src/terminal-window.cc:3115
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Paste Hyperlink _Target"
 msgstr "ចម្លង​អាសយដ្ឋាន​តំណ"
 
-#: src/terminal-window.cc:3127
+#: src/terminal-window.cc:3125
 #, fuzzy
 #| msgid "_Send Mail To…"
 msgid "Send Mail _To…"
 msgstr "ផ្ញើ​អ៊ីមែល​ទៅកាន់…"
 
-#: src/terminal-window.cc:3128
+#: src/terminal-window.cc:3126
 #, fuzzy
 #| msgid "_Copy E-mail Address"
 msgid "Copy Mail _Address"
 msgstr "ចម្លង​អាសយដ្ឋាន​អ៊ីមែល"
 
-#: src/terminal-window.cc:3131
+#: src/terminal-window.cc:3129
 #, fuzzy
 #| msgid "C_all To…"
 msgid "Call _To…"
 msgstr "ហៅ​ទៅកាន់…"
 
-#: src/terminal-window.cc:3132
+#: src/terminal-window.cc:3130
 #, fuzzy
 #| msgid "_Copy Call Address"
 msgid "Copy Call _Address "
 msgstr "ចម្លង​អាសយដ្ឋាន​ហៅ"
 
-#: src/terminal-window.cc:3137
+#: src/terminal-window.cc:3135
 msgid "_Open Link"
 msgstr "បើក​តំណ"
 
-#: src/terminal-window.cc:3138
+#: src/terminal-window.cc:3136
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy _Link"
 msgstr "ចម្លង​អាសយដ្ឋាន​តំណ"
 
-#: src/terminal-window.cc:3177
+#: src/terminal-window.cc:3175
 #, fuzzy
 #| msgid "Copy"
 msgid "_Copy"
 msgstr "ចម្លង"
 
-#: src/terminal-window.cc:3178
+#: src/terminal-window.cc:3176
 msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-window.cc:3179
+#: src/terminal-window.cc:3177
 #, fuzzy
 #| msgid "Paste"
 msgid "_Paste"
 msgstr "បិទភ្ជាប់"
 
-#: src/terminal-window.cc:3182
+#: src/terminal-window.cc:3180
 msgid "Copy _Output of This Command"
 msgstr ""
 
-#: src/terminal-window.cc:3184
+#: src/terminal-window.cc:3182
 msgid "Copy _Output of Last Command"
 msgstr ""
 
-#: src/terminal-window.cc:3186
+#: src/terminal-window.cc:3184
 #, fuzzy
 #| msgid "Paste _Filenames"
 msgid "Paste as _Filenames"
 msgstr "បិទភ្ជាប់​ឈ្មោះ​ឯកសារ"
 
-#: src/terminal-window.cc:3193
+#: src/terminal-window.cc:3191
 msgid "Monitor for _Activity"
 msgstr ""
 
-#: src/terminal-window.cc:3194
+#: src/terminal-window.cc:3192
 msgid "Monitor for _Silence"
 msgstr ""
 
-#: src/terminal-window.cc:3201
+#: src/terminal-window.cc:3199
 msgid "P_rofiles"
 msgstr "ទម្រង់"
 
-#: src/terminal-window.cc:3219
+#: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
 msgid "_Zoom Pane"
 msgstr "ពង្រីក"
 
-#: src/terminal-window.cc:3220
+#: src/terminal-window.cc:3218
 msgid "Make Panes the Same _Size"
 msgstr ""
 
-#: src/terminal-window.cc:3223
+#: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New Tab"
 msgid "To a New _Tab"
 msgstr "ផ្ទាំង​ថ្មី"
 
-#: src/terminal-window.cc:3226
+#: src/terminal-window.cc:3224
 #, fuzzy
 #| msgid "Close Window"
 msgid "To a New _Window"
 msgstr "បិទ​បង្អួច"
 
-#: src/terminal-window.cc:3231
+#: src/terminal-window.cc:3229
 msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-window.cc:3232
+#: src/terminal-window.cc:3230
 msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-window.cc:3233
+#: src/terminal-window.cc:3231
 msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-window.cc:3234
+#: src/terminal-window.cc:3232
 msgid "Swap With the Pane _Below"
 msgstr ""
 
-#: src/terminal-window.cc:3248
+#: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
 
-#: src/terminal-window.cc:3250
+#: src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close tab"
 msgid "Close P_ane"
 msgstr "បិទ​ផ្ទាំង"
 
-#: src/terminal-window.cc:3278
+#: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "_New Terminal"
 msgid "New _Terminal"
 msgstr "ស្ថានីយ​ថ្មី"
 
-#: src/terminal-window.cc:3287
+#: src/terminal-window.cc:3285
 #, fuzzy
 #| msgid "New Tab"
 msgid "New _Tab"
 msgstr "ផ្ទាំង​ថ្មី"
 
-#: src/terminal-window.cc:3297
+#: src/terminal-window.cc:3295
 msgid "Leave Full Screen"
 msgstr "ចេញពី​របៀប​ពេញ​អេក្រង់"
 
-#: src/terminal-window.cc:3644
+#: src/terminal-window.cc:3642
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3650 src/terminal-window.cc:4051
+#: src/terminal-window.cc:3648 src/terminal-window.cc:4049
 msgid "_No"
 msgstr ""
 
-#: src/terminal-window.cc:4045
+#: src/terminal-window.cc:4043
 msgid "Set Pano Terminal as your default terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:4050
+#: src/terminal-window.cc:4048
 msgid "_Yes"
 msgstr ""
 
-#: src/terminal-window.cc:4120
+#: src/terminal-window.cc:4118
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5287
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5287
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3947,7 +3941,7 @@ msgid ""
 msgstr ""
 "នៅ​ក្នុង​បង្អួច​នេះ ស្ថានីយ​មួយ​ចំនួន​នៅ​មាន​ដំណើរការ​កំពុង​ដើរ​​នៅ​ឡើយ។ ការ​បិទ​បង្អួច​នឹង​បញ្ចប់​ដំណើរការ​ទាំងនោះ។"
 
-#: src/terminal-window.cc:5297
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3957,32 +3951,32 @@ msgid ""
 "will kill it."
 msgstr "នៅ​ក្នុង​ស្ថានីយ​នេះ មាន​ដំណើរការ​មួយ​ចំនួន​កំពុង​ដើរ​​នៅ​ឡើយ។ ការ​បិទ​ស្ថានីយ​នឹង​បញ្ចប់​ដំណើរការ​នេះ។"
 
-#: src/terminal-window.cc:5299
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "បិទ​ស្ថានីយ"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5295
 msgid "Close this window?"
 msgstr "បិទ​បង្អួច​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5302
+#: src/terminal-window.cc:5296
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr ""
 "នៅ​ក្នុង​បង្អួច​នេះ ស្ថានីយ​មួយ​ចំនួន​នៅ​មាន​ដំណើរការ​កំពុង​ដើរ​​នៅ​ឡើយ។ ការ​បិទ​បង្អួច​នឹង​បញ្ចប់​ដំណើរការ​ទាំងនោះ។"
 
-#: src/terminal-window.cc:5304
+#: src/terminal-window.cc:5298
 msgid "C_lose Window"
 msgstr "បិទ​បង្អួច"
 
-#: src/terminal-window.cc:5306
+#: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "បិទ​ស្ថានីយ​នេះ​ឬ?"
 
-#: src/terminal-window.cc:5307
+#: src/terminal-window.cc:5301
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -3992,6 +3986,16 @@ msgstr "នៅ​ក្នុង​ស្ថានីយ​នេះ មាន�
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ញែក​អាគុយម៉ង់៖ %s\n"
+
+#, fuzzy
+#~| msgid "Zoom Out"
+#~ msgid "Zoom _Out"
+#~ msgstr "បង្រួម"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom _In"
+#~ msgstr "ពង្រីក"
 
 #, c-format
 #~ msgid ""

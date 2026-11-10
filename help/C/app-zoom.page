@@ -43,8 +43,12 @@
   <p>To make it smaller, press <keyseq><key>Ctrl</key><key>-</key></keyseq>, or click the
   <gui style="button">-</gui> button.</p>
 
-  <p>To return to the normal size, press <keyseq><key>Ctrl</key><key>0</key></keyseq>, or click the
-  button between the two.</p>
+  <p>The zoom level, such as <gui>120%</gui>, is shown between the two
+  buttons. To return to the normal size, press <keyseq><key>Ctrl</key><key>0</key></keyseq>,
+  or click the zoom level.</p>
+
+  <p>Zooming changes the number of columns and rows that fit in the window;
+  the window keeps its size.</p>
 
   <p>To change the font for good, see <link xref="app-fonts"/>.</p>
 

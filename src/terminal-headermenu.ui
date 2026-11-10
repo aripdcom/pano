@@ -18,24 +18,9 @@
 <interface>
   <menu id="headermenu">
     <section>
-      <attribute name="display-hint">horizontal-buttons</attribute>
+      <!-- Zoom out, the zoom level, which resets it, and zoom in; see terminal-headerbar.cc -->
       <item>
-        <attribute name="label" translatable="yes">Zoom _Out</attribute>
-        <attribute name="verb-icon">zoom-out-symbolic</attribute>
-        <attribute name="action">win.zoom-out</attribute>
-	<attribute name="accel"></attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Reset _Zoom</attribute>
-        <attribute name="action">win.zoom-normal</attribute>
-        <attribute name="verb-icon">zoom-original-symbolic</attribute>
-	<attribute name="accel"></attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Zoom _In</attribute>
-        <attribute name="verb-icon">zoom-in-symbolic</attribute>
-        <attribute name="action">win.zoom-in</attribute>
-	<attribute name="accel"></attribute>
+        <attribute name="custom">zoom</attribute>
       </item>
     </section>
     <section>

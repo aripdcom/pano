@@ -32,6 +32,7 @@ struct _TerminalHeaderbar
   GtkWidget *profilebutton;
   GtkWidget *new_tab_button;
   GtkWidget *menubutton;
+  GtkWidget *zoom_label;
   GtkPopoverMenu *profiles_popover_menu;
   gulong items_changed_handler;
 };
@@ -51,6 +52,44 @@ profilemenu_items_changed_cb (GMenuModel *menu,
                           g_menu_model_get_n_items (menu) > 0);
 }
 
+static GtkWidget *
+zoom_button_new (const char *icon_name,
+                 const char *tooltip,
+                 const char *action)
+{
+  auto const button = gtk_button_new_from_icon_name (icon_name);
+  gtk_widget_set_tooltip_text (button, tooltip);
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (button), action);
+  gtk_widget_add_css_class (button, "flat");
+  return button;
+}
+
+/* Zoom out, the zoom level, which resets the zoom when clicked, and zoom in,
+ * at the top of the main menu */
+static void
+terminal_headerbar_add_zoom_controls (TerminalHeaderbar *headerbar)
+{
+  auto const box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  gtk_box_set_homogeneous (GTK_BOX (box), TRUE);
+  gtk_widget_set_hexpand (box, TRUE);
+
+  auto const reset = gtk_button_new ();
+  gtk_widget_set_tooltip_text (reset, _("Reset Zoom"));
+  gtk_actionable_set_action_name (GTK_ACTIONABLE (reset), "win.zoom-normal");
+  gtk_widget_add_css_class (reset, "flat");
+  headerbar->zoom_label = gtk_label_new (nullptr);
+  gtk_button_set_child (GTK_BUTTON (reset), headerbar->zoom_label);
+
+  gtk_box_append (GTK_BOX (box), zoom_button_new ("zoom-out-symbolic", _("Zoom Out"), "win.zoom-out"));
+  gtk_box_append (GTK_BOX (box), reset);
+  gtk_box_append (GTK_BOX (box), zoom_button_new ("zoom-in-symbolic", _("Zoom In"), "win.zoom-in"));
+
+  terminal_headerbar_set_zoom (headerbar, 1.0);
+
+  auto const popover = gtk_menu_button_get_popover (GTK_MENU_BUTTON (headerbar->menubutton));
+  gtk_popover_menu_add_child (GTK_POPOVER_MENU (popover), box, "zoom");
+}
+
 /* Class implementation */
 
 static void
@@ -65,6 +104,7 @@ terminal_headerbar_init (TerminalHeaderbar *headerbar)
 
   gtk_menu_button_set_menu_model (GTK_MENU_BUTTON (headerbar->menubutton),
                                   terminal_app_get_headermenu (app));
+  terminal_headerbar_add_zoom_controls (headerbar);
 
   profilemenu = terminal_app_get_profilemenu (app);
   adw_split_button_set_menu_model (ADW_SPLIT_BUTTON (headerbar->profilebutton),
@@ -152,4 +192,16 @@ terminal_headerbar_connect_menus_closed (TerminalHeaderbar *headerbar,
     if (popover)
       g_signal_connect_object (popover, "closed", callback, user_data, G_CONNECT_DEFAULT);
   }
+}
+
+/* Shows @scale, the zoom of the active terminal, in the main menu */
+void
+terminal_headerbar_set_zoom (TerminalHeaderbar *headerbar,
+                             double scale)
+{
+  g_return_if_fail (TERMINAL_IS_HEADERBAR (headerbar));
+
+  /* Translators: the zoom level in percent, such as "110%" */
+  gs_free char *label = g_strdup_printf (_("%d%%"), int(scale * 100 + 0.5));
+  gtk_label_set_label (GTK_LABEL (headerbar->zoom_label), label);
 }

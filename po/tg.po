@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tajik Gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:49+0300\n"
+"POT-Creation-Date: 2026-11-10 23:51+0300\n"
 "PO-Revision-Date: 2015-05-21 10:01+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: \n"
@@ -1441,11 +1441,11 @@ msgstr "_Печонидан"
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
 
-#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2641
+#: src/terminal-accel-dialog.ui:40 src/terminal-window.cc:2639
 msgid "_Cancel"
 msgstr "_Бекор кардан"
 
-#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2642
+#: src/terminal-accel-dialog.ui:47 src/terminal-window.cc:2640
 msgid "_Set"
 msgstr ""
 
@@ -1530,11 +1530,11 @@ msgstr "Пок кардани ҷудокунӣ"
 msgid "Full Screen"
 msgstr "Экрани пурра"
 
-#: src/terminal-accels.cc:174
+#: src/terminal-accels.cc:174 src/terminal-headerbar.cc:85
 msgid "Zoom In"
 msgstr "Бузург кардани андоза"
 
-#: src/terminal-accels.cc:175
+#: src/terminal-accels.cc:175 src/terminal-headerbar.cc:83
 msgid "Zoom Out"
 msgstr "Хурд кардани андоза"
 
@@ -1556,7 +1556,7 @@ msgstr ""
 msgid "Read-Only"
 msgstr "Танҳо барои хондан"
 
-#: src/terminal-accels.cc:183 src/terminal-window.cc:2638
+#: src/terminal-accels.cc:183 src/terminal-window.cc:2636
 msgid "Set Title"
 msgstr "Таъин кардани сарлавҳа"
 
@@ -1967,6 +1967,18 @@ msgstr ""
 msgid "Makes the quick terminal’s shortcut work after logging in"
 msgstr ""
 
+#: src/terminal-headerbar.cc:77
+#, fuzzy
+#| msgid "Reset"
+msgid "Reset Zoom"
+msgstr "Танзими дубора"
+
+#. Translators: the zoom level in percent, such as "110%"
+#: src/terminal-headerbar.cc:205
+#, c-format
+msgid "%d%%"
+msgstr ""
+
 #: src/terminal-headerbar.ui:40
 #, fuzzy
 #| msgid "New Profile"
@@ -1983,132 +1995,114 @@ msgstr ""
 msgid "Show Open Tabs"
 msgstr "Кушодани В_арақа"
 
-#: src/terminal-headermenu.ui:23
-#, fuzzy
-#| msgid "Zoom Out"
-msgid "Zoom _Out"
-msgstr "Хурд кардани андоза"
-
-#: src/terminal-headermenu.ui:29
-#, fuzzy
-#| msgid "Reset"
-msgid "Reset _Zoom"
-msgstr "Танзими дубора"
-
-#: src/terminal-headermenu.ui:35
-#, fuzzy
-#| msgid "Zoom In"
-msgid "Zoom _In"
-msgstr "Бузург кардани андоза"
-
-#: src/terminal-headermenu.ui:43 src/terminal-window.cc:3283
+#: src/terminal-headermenu.ui:28 src/terminal-window.cc:3281
 #, fuzzy
 #| msgid "New Window"
 msgid "New _Window"
 msgstr "Равзанаи нав"
 
-#: src/terminal-headermenu.ui:49
+#: src/terminal-headermenu.ui:34
 #, fuzzy
 #| msgid "Close Tab"
 msgid "Re_open Closed Tab"
 msgstr "Пӯшидани варақа"
 
-#: src/terminal-headermenu.ui:54 src/terminal-window.cc:3212
+#: src/terminal-headermenu.ui:39 src/terminal-window.cc:3210
 msgid "Split _Right"
 msgstr ""
 
-#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3215
+#: src/terminal-headermenu.ui:45 src/terminal-window.cc:3213
 msgid "Split _Down"
 msgstr ""
 
-#: src/terminal-headermenu.ui:67 src/terminal-window.cc:3269
+#: src/terminal-headermenu.ui:52 src/terminal-window.cc:3267
 msgid "_Broadcast Input"
 msgstr ""
 
-#: src/terminal-headermenu.ui:70 src/terminal-window.cc:3255
+#: src/terminal-headermenu.ui:55 src/terminal-window.cc:3253
 msgid "_Off"
 msgstr ""
 
-#: src/terminal-headermenu.ui:75 src/terminal-window.cc:3256
+#: src/terminal-headermenu.ui:60 src/terminal-window.cc:3254
 msgid "To All Panes in This _Tab"
 msgstr ""
 
-#: src/terminal-headermenu.ui:80 src/terminal-window.cc:3257
+#: src/terminal-headermenu.ui:65 src/terminal-window.cc:3255
 #, fuzzy
 #| msgid "New Terminal in New Window"
 msgid "To All Terminals in This _Window"
 msgstr "Терминали нав дар равзанаи нав"
 
-#: src/terminal-headermenu.ui:87 src/terminal-window.cc:3266
+#: src/terminal-headermenu.ui:72 src/terminal-window.cc:3264
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "_Include This Terminal"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-headermenu.ui:93
+#: src/terminal-headermenu.ui:78
 msgid "_Full Screen"
 msgstr "_Экрани пурра"
 
-#: src/terminal-headermenu.ui:100 src/terminal-window.cc:3192
+#: src/terminal-headermenu.ui:85 src/terminal-window.cc:3190
 msgid "Read-_Only"
 msgstr "_Танҳо барои хондан"
 
-#: src/terminal-headermenu.ui:105 src/terminal-notebook.ui:67
+#: src/terminal-headermenu.ui:90 src/terminal-notebook.ui:67
 #, fuzzy
 #| msgid "_Set Title…"
 msgid "Set _Title…"
 msgstr "_Танзими сарлавҳа..."
 
-#: src/terminal-headermenu.ui:111
+#: src/terminal-headermenu.ui:96
 #, fuzzy
 #| msgid "_Save Contents"
 msgid "_Save Contents…"
 msgstr "_Захираи мӯҳтаво"
 
-#: src/terminal-headermenu.ui:117
+#: src/terminal-headermenu.ui:102
 #, fuzzy
 #| msgid "_Cancel"
 msgid "_Advanced"
 msgstr "_Бекор кардан"
 
-#: src/terminal-headermenu.ui:120
+#: src/terminal-headermenu.ui:105
 msgid "_Reset"
 msgstr "_Танзими дубора"
 
-#: src/terminal-headermenu.ui:126
+#: src/terminal-headermenu.ui:111
 msgid "Reset and C_lear"
 msgstr "Танзими дубора ва пок_кардан "
 
-#: src/terminal-headermenu.ui:134
+#: src/terminal-headermenu.ui:119
 msgid "_1. 80×24"
 msgstr ""
 
-#: src/terminal-headermenu.ui:140
+#: src/terminal-headermenu.ui:125
 msgid "_2. 80×43"
 msgstr ""
 
-#: src/terminal-headermenu.ui:146
+#: src/terminal-headermenu.ui:131
 msgid "_3. 132×24"
 msgstr ""
 
-#: src/terminal-headermenu.ui:152
+#: src/terminal-headermenu.ui:137
 msgid "_4. 132×43"
 msgstr ""
 
-#: src/terminal-headermenu.ui:160
+#: src/terminal-headermenu.ui:145
 msgid "_Inspector"
 msgstr "_Нозир"
 
-#: src/terminal-headermenu.ui:170 src/terminal-screen.cc:3681
-#: src/terminal-window.cc:3206
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3681
+#: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Хусусиятҳо"
 
-#: src/terminal-headermenu.ui:175
+#: src/terminal-headermenu.ui:160
 msgid "_Help"
 msgstr "_Кӯмак"
 
-#: src/terminal-headermenu.ui:180
+#: src/terminal-headermenu.ui:165
 msgid "_About"
 msgstr "_Дар бораи барнома"
 
@@ -2167,8 +2161,8 @@ msgstr "Ҳаракат кардани терминал ба _рост"
 msgid "_Detach Terminal"
 msgstr "_Ҷудо кардани терминал"
 
-#: src/terminal-notebook.ui:75 src/terminal-window.cc:5299
-#: src/terminal-window.cc:5309
+#: src/terminal-notebook.ui:75 src/terminal-window.cc:5293
+#: src/terminal-window.cc:5303
 msgid "C_lose Terminal"
 msgstr "П_ӯшонидани поёна"
 
@@ -2517,7 +2511,7 @@ msgstr[1] ""
 msgid "Import Profile"
 msgstr "Нест кардани профил"
 
-#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3618
+#: src/terminal-preferences-window.cc:390 src/terminal-window.cc:3616
 #, c-format
 msgid "Imported %u profile and the preferences of GNOME Terminal"
 msgid_plural "Imported %u profiles and the preferences of GNOME Terminal"
@@ -2896,7 +2890,7 @@ msgstr ""
 msgid "Copy its profiles, keyboard shortcuts and preferences"
 msgstr ""
 
-#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3649
+#: src/terminal-preferences-window.ui:511 src/terminal-window.cc:3647
 msgid "_Import"
 msgstr ""
 
@@ -3736,29 +3730,29 @@ msgid_plural "Input goes to %u terminals"
 msgstr[0] "Унвон барои терминал"
 msgstr[1] "Унвон барои терминал"
 
-#: src/terminal-window.cc:1735
+#: src/terminal-window.cc:1733
 msgid "Nothing to select"
 msgstr ""
 
 #. Translators: %s is a file name
-#: src/terminal-window.cc:1778
+#: src/terminal-window.cc:1776
 #, c-format
 msgid "“%s” does not exist"
 msgstr ""
 
-#: src/terminal-window.cc:2639
+#: src/terminal-window.cc:2637
 msgid ""
 "Programs cannot change this title. Leave it empty to show the title from the "
 "program again."
 msgstr ""
 
-#: src/terminal-window.cc:2849
+#: src/terminal-window.cc:2847
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Activity in a terminal"
 msgstr "Кушодани поёна"
 
-#: src/terminal-window.cc:2884
+#: src/terminal-window.cc:2882
 #, c-format
 msgid ""
 "%s\n"
@@ -3769,204 +3763,204 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/terminal-window.cc:2889
+#: src/terminal-window.cc:2887
 #, fuzzy
 #| msgid "Open a terminal"
 msgid "Silence in a terminal"
 msgstr "Кушодани поёна"
 
-#: src/terminal-window.cc:3114
+#: src/terminal-window.cc:3112
 #, fuzzy
 #| msgid "Open _Terminal"
 msgid "Open _Hyperlink"
 msgstr "Кушодани _Поёна"
 
-#: src/terminal-window.cc:3115
+#: src/terminal-window.cc:3113
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy Hyperlink _Address"
 msgstr "Нусхабардории суроғаи пайванд"
 
-#: src/terminal-window.cc:3117
+#: src/terminal-window.cc:3115
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Paste Hyperlink _Target"
 msgstr "Нусхабардории суроғаи пайванд"
 
-#: src/terminal-window.cc:3127
+#: src/terminal-window.cc:3125
 #, fuzzy
 #| msgid "_Send Mail To…"
 msgid "Send Mail _To…"
 msgstr "_Фиристодани почта ба..."
 
-#: src/terminal-window.cc:3128
+#: src/terminal-window.cc:3126
 #, fuzzy
 #| msgid "_Copy E-mail Address"
 msgid "Copy Mail _Address"
 msgstr "_Нусхабардории суроғаи почтаи электронӣ"
 
-#: src/terminal-window.cc:3131
+#: src/terminal-window.cc:3129
 #, fuzzy
 #| msgid "C_all To…"
 msgid "Call _To…"
 msgstr "Занг_задан ба..."
 
-#: src/terminal-window.cc:3132
+#: src/terminal-window.cc:3130
 #, fuzzy
 #| msgid "_Copy Call Address"
 msgid "Copy Call _Address "
 msgstr "_Нусхабардории суроғаи занг"
 
-#: src/terminal-window.cc:3137
+#: src/terminal-window.cc:3135
 msgid "_Open Link"
 msgstr "_Кушодани пайванд"
 
-#: src/terminal-window.cc:3138
+#: src/terminal-window.cc:3136
 #, fuzzy
 #| msgid "_Copy Link Address"
 msgid "Copy _Link"
 msgstr "Нусхабардории суроғаи пайванд"
 
-#: src/terminal-window.cc:3177
+#: src/terminal-window.cc:3175
 #, fuzzy
 #| msgid "Copy"
 msgid "_Copy"
 msgstr "Нусха бардоштан"
 
-#: src/terminal-window.cc:3178
+#: src/terminal-window.cc:3176
 msgid "Copy as _HTML"
 msgstr ""
 
-#: src/terminal-window.cc:3179
+#: src/terminal-window.cc:3177
 #, fuzzy
 #| msgid "Paste"
 msgid "_Paste"
 msgstr "Гузоштан"
 
-#: src/terminal-window.cc:3182
+#: src/terminal-window.cc:3180
 msgid "Copy _Output of This Command"
 msgstr ""
 
-#: src/terminal-window.cc:3184
+#: src/terminal-window.cc:3182
 msgid "Copy _Output of Last Command"
 msgstr ""
 
-#: src/terminal-window.cc:3186
+#: src/terminal-window.cc:3184
 #, fuzzy
 #| msgid "Paste _Filenames"
 msgid "Paste as _Filenames"
 msgstr "Гузоштани номи файл"
 
-#: src/terminal-window.cc:3193
+#: src/terminal-window.cc:3191
 msgid "Monitor for _Activity"
 msgstr ""
 
-#: src/terminal-window.cc:3194
+#: src/terminal-window.cc:3192
 msgid "Monitor for _Silence"
 msgstr ""
 
-#: src/terminal-window.cc:3201
+#: src/terminal-window.cc:3199
 msgid "P_rofiles"
 msgstr "П_рофилҳо"
 
-#: src/terminal-window.cc:3219
+#: src/terminal-window.cc:3217
 #, fuzzy
 #| msgid "Zoom In"
 msgid "_Zoom Pane"
 msgstr "Бузург кардани андоза"
 
-#: src/terminal-window.cc:3220
+#: src/terminal-window.cc:3218
 msgid "Make Panes the Same _Size"
 msgstr ""
 
-#: src/terminal-window.cc:3223
+#: src/terminal-window.cc:3221
 #, fuzzy
 #| msgid "New Tab"
 msgid "To a New _Tab"
 msgstr "Варақаи нав"
 
-#: src/terminal-window.cc:3226
+#: src/terminal-window.cc:3224
 #, fuzzy
 #| msgid "New Window"
 msgid "To a New _Window"
 msgstr "Равзанаи нав"
 
-#: src/terminal-window.cc:3231
+#: src/terminal-window.cc:3229
 msgid "Swap With the Pane on the _Left"
 msgstr ""
 
-#: src/terminal-window.cc:3232
+#: src/terminal-window.cc:3230
 msgid "Swap With the Pane on the _Right"
 msgstr ""
 
-#: src/terminal-window.cc:3233
+#: src/terminal-window.cc:3231
 msgid "Swap With the Pane _Above"
 msgstr ""
 
-#: src/terminal-window.cc:3234
+#: src/terminal-window.cc:3232
 msgid "Swap With the Pane _Below"
 msgstr ""
 
-#: src/terminal-window.cc:3248
+#: src/terminal-window.cc:3246
 msgid "_Move Pane"
 msgstr ""
 
-#: src/terminal-window.cc:3250
+#: src/terminal-window.cc:3248
 #, fuzzy
 #| msgid "Close tab"
 msgid "Close P_ane"
 msgstr "Пӯшидани варақа"
 
-#: src/terminal-window.cc:3278
+#: src/terminal-window.cc:3276
 #, fuzzy
 #| msgid "_New Terminal"
 msgid "New _Terminal"
 msgstr "_Терминали нав"
 
-#: src/terminal-window.cc:3287
+#: src/terminal-window.cc:3285
 #, fuzzy
 #| msgid "New Tab"
 msgid "New _Tab"
 msgstr "Варақаи нав"
 
-#: src/terminal-window.cc:3297
+#: src/terminal-window.cc:3295
 msgid "Leave Full Screen"
 msgstr "Баромадан аз экрани пурра"
 
-#: src/terminal-window.cc:3644
+#: src/terminal-window.cc:3642
 msgid ""
 "Import your profiles, keyboard shortcuts and preferences from GNOME Terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:3650 src/terminal-window.cc:4051
+#: src/terminal-window.cc:3648 src/terminal-window.cc:4049
 msgid "_No"
 msgstr ""
 
-#: src/terminal-window.cc:4045
+#: src/terminal-window.cc:4043
 msgid "Set Pano Terminal as your default terminal?"
 msgstr ""
 
-#: src/terminal-window.cc:4050
+#: src/terminal-window.cc:4048
 msgid "_Yes"
 msgstr ""
 
-#: src/terminal-window.cc:4120
+#: src/terminal-window.cc:4118
 msgid "_Stop"
 msgstr ""
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5287
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminals?"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-window.cc:5293
+#: src/terminal-window.cc:5287
 #, fuzzy
 #| msgid "Close this terminal?"
 msgid "Close the other terminal?"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-window.cc:5295
+#: src/terminal-window.cc:5289
 #, fuzzy
 #| msgid ""
 #| "There are still processes running in some terminals in this window. "
@@ -3978,7 +3972,7 @@ msgstr ""
 "Ҳоло ҳам баъзе равандҳо дар баъзе поёнаҳои ин равзана иҷро шуда истодаанд. "
 "Пӯшидани равзана ҳамаи онҳоро нобуд мекунад."
 
-#: src/terminal-window.cc:5297
+#: src/terminal-window.cc:5291
 #, fuzzy
 #| msgid ""
 #| "There is still a process running in this terminal. Closing the terminal "
@@ -3990,17 +3984,17 @@ msgstr ""
 "Ҳоло ҳам як раванд дар ин поёна иҷро шуда истодаанд. Пӯшидани пойна онро "
 "нобуд мекунад."
 
-#: src/terminal-window.cc:5299
+#: src/terminal-window.cc:5293
 #, fuzzy
 #| msgid "C_lose Terminal"
 msgid "C_lose Terminals"
 msgstr "П_ӯшонидани поёна"
 
-#: src/terminal-window.cc:5301
+#: src/terminal-window.cc:5295
 msgid "Close this window?"
 msgstr "Ин равзанаро мепӯшонед?"
 
-#: src/terminal-window.cc:5302
+#: src/terminal-window.cc:5296
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
@@ -4008,15 +4002,15 @@ msgstr ""
 "Ҳоло ҳам баъзе равандҳо дар баъзе поёнаҳои ин равзана иҷро шуда истодаанд. "
 "Пӯшидани равзана ҳамаи онҳоро нобуд мекунад."
 
-#: src/terminal-window.cc:5304
+#: src/terminal-window.cc:5298
 msgid "C_lose Window"
 msgstr "П_ӯшонидани равзана"
 
-#: src/terminal-window.cc:5306
+#: src/terminal-window.cc:5300
 msgid "Close this terminal?"
 msgstr "Ин поёнаро мепӯшонед?"
 
-#: src/terminal-window.cc:5307
+#: src/terminal-window.cc:5301
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will "
 "kill it."
@@ -4028,6 +4022,16 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Таҷзияи баҳсҳо ноком монд: %s\n"
+
+#, fuzzy
+#~| msgid "Zoom Out"
+#~ msgid "Zoom _Out"
+#~ msgstr "Хурд кардани андоза"
+
+#, fuzzy
+#~| msgid "Zoom In"
+#~ msgid "Zoom _In"
+#~ msgstr "Бузург кардани андоза"
 
 #~ msgid "Search _backwards"
 #~ msgstr "Ҷустуҷӯ _ба самти ақиб"

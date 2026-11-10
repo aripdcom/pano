@@ -4470,8 +4470,11 @@ screen_font_any_changed_cb (TerminalScreen *screen,
     return;
 
   /* Zooming keeps the window size; the grid changes instead */
-  if (psepc && g_str_equal (psepc->name, "font-scale"))
+  if (psepc && g_str_equal (psepc->name, "font-scale")) {
+    terminal_headerbar_set_zoom (window->headerbar,
+                                 vte_terminal_get_font_scale (VTE_TERMINAL (screen)));
     return;
+  }
 
   terminal_window_update_size (window);
 }
@@ -4696,6 +4699,8 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
   terminal_window_update_paste_sensitivity (window);
   terminal_window_update_pane_actions(window);
   terminal_window_update_prompt_actions(window);
+  terminal_headerbar_set_zoom (window->headerbar,
+                               vte_terminal_get_font_scale (VTE_TERMINAL (screen)));
 }
 
 static void

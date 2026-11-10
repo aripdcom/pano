@@ -30,6 +30,9 @@ GtkWidget *terminal_headerbar_new (void);
 
 gboolean terminal_headerbar_popup_menu (TerminalHeaderbar *headerbar);
 
+void terminal_headerbar_set_zoom (TerminalHeaderbar *headerbar,
+                                  double scale);
+
 void terminal_headerbar_connect_menus_closed (TerminalHeaderbar *headerbar,
                                               GCallback callback,
                                               gpointer user_data);
