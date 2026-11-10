@@ -2686,9 +2686,12 @@ terminal_screen_reexec_from_screen (TerminalScreen *screen,
                          parent_screen,
                          cwd);
 
+  /* The new terminal gets the environment of its parent, so that all
+   * terminals opened from one have the same, but not its command */
+  auto const parent_data = parent_screen->priv->exec_data;
   return terminal_screen_reexec_from_exec_data (screen,
                                                 nullptr /* exec data */,
-                                                nullptr /* envv */,
+                                                parent_data ? parent_data->envv : nullptr,
                                                 cwd,
                                                 cancellable,
                                                 error);
