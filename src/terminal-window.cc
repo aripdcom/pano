@@ -1660,7 +1660,6 @@ action_zoom_in_cb (GSimpleAction *action,
   if (!find_larger_zoom_factor (&zoom))
     return;
 
-  gtk_window_set_default_size (GTK_WINDOW (window), -1, -1);
   vte_terminal_set_font_scale (VTE_TERMINAL (window->active_screen), zoom);
   terminal_window_update_zoom_sensitivity (window);
 }
@@ -1680,7 +1679,6 @@ action_zoom_out_cb (GSimpleAction *action,
   if (!find_smaller_zoom_factor (&zoom))
     return;
 
-  gtk_window_set_default_size (GTK_WINDOW (window), -1, -1);
   vte_terminal_set_font_scale (VTE_TERMINAL (window->active_screen), zoom);
   terminal_window_update_zoom_sensitivity (window);
 }
@@ -4471,6 +4469,10 @@ screen_font_any_changed_cb (TerminalScreen *screen,
   if (screen != window->active_screen)
     return;
 
+  /* Zooming keeps the window size; the grid changes instead */
+  if (psepc && g_str_equal (psepc->name, "font-scale"))
+    return;
+
   terminal_window_update_size (window);
 }
 
@@ -4638,8 +4640,6 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
                              TerminalScreen   *screen,
                              TerminalWindow   *window)
 {
-  int old_grid_width, old_grid_height;
-
   _terminal_debug_print (TERMINAL_DEBUG_MDI,
                          "[window %p] MDI: screen-switched old %p new %p\n",
                          window, old_active_screen, screen);
@@ -4656,21 +4656,10 @@ notebook_screen_switched_cb (TerminalNotebook *notebook,
                          "[window %p] MDI: setting active tab to screen %p (old active screen %p)\n",
                          window, screen, old_active_screen);
 
-  /* Moving between panes of a tab, or to or from a split tab, keeps the
-   * window size; the terminals adapt to their space instead. */
-  auto const old_tab = terminal_tab_get_from_screen(old_active_screen);
-  auto const new_tab = terminal_tab_get_from_screen(screen);
-  auto const keep_window_size = (old_tab && old_tab == new_tab) ||
-    (old_tab && terminal_tab_is_split(old_tab)) ||
-    (new_tab && terminal_tab_is_split(new_tab));
-
-  if (old_active_screen != nullptr && screen != nullptr && !keep_window_size &&
-      should_update_window_size(window)) {
-    terminal_screen_get_size (old_active_screen, &old_grid_width, &old_grid_height);
-
-    /* This is so that we maintain the same grid */
-    vte_terminal_set_size (VTE_TERMINAL (screen), old_grid_width, old_grid_height);
-  }
+  /* Switching tabs or panes keeps the window size: the terminal adapts to
+   * the space, also when its font or zoom differ. Only the first terminal
+   * of a window sizes it. */
+  auto const keep_window_size = old_active_screen != nullptr;
 
   if (!screen) {
     gtk_revealer_set_reveal_child(window->find_bar_revealer, false);
