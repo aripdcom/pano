@@ -377,6 +377,9 @@ terminal_client_filter_environment (char** envv)
  * @builder: a #GVariantBuilder of #GVariantType "a{sv}"
  * @pass_environment: whether to pass the current environment
  * @working_directory: (allow-none): the cwd, or %nullptr
+ * @working_directory_requested: whether the user or the caller asked for
+ *   @working_directory, so that the profile's preserve-working-directory
+ *   setting does not apply
  * @fd_array: (array lenght=fd_array_len):
  * @fd_array_len:
  * @shell:
@@ -387,6 +390,7 @@ void
 terminal_client_append_exec_options (GVariantBuilder *builder,
                                      gboolean         pass_environment,
                                      const char      *working_directory,
+                                     gboolean         working_directory_requested,
                                      PassFdElement   *fd_array,
                                      gsize            fd_array_len,
                                      gboolean         shell)
@@ -408,6 +412,9 @@ terminal_client_append_exec_options (GVariantBuilder *builder,
   if (working_directory)
     g_variant_builder_add (builder, "{sv}",
                            "cwd", g_variant_new_bytestring (working_directory));
+  if (working_directory && working_directory_requested)
+    g_variant_builder_add (builder, "{sv}",
+                           "cwd-requested", g_variant_new_boolean (TRUE));
 
   if (shell)
     g_variant_builder_add (builder, "{sv}",

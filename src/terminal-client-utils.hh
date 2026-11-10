@@ -54,6 +54,7 @@ typedef struct {
 void terminal_client_append_exec_options            (GVariantBuilder *builder,
                                                      gboolean         pass_environment,
                                                      const char      *working_directory,
+                                                     gboolean         working_directory_requested,
                                                      PassFdElement   *fd_array,
                                                      gsize            fd_array_len,
                                                      gboolean         shell);

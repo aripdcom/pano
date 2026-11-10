@@ -773,7 +773,7 @@ terminal_app_new_quick_terminal(TerminalApp* app)
   terminal_window_add_tab(window, terminal_tab_new(screen), nullptr);
 
   gs_free_error GError* error = nullptr;
-  if (!terminal_screen_exec(screen, nullptr, nullptr, true, g_get_home_dir(),
+  if (!terminal_screen_exec(screen, nullptr, nullptr, true, g_get_home_dir(), false,
                             nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
                             &error))
     g_warning("Failed to start the quick terminal: %s", error->message);

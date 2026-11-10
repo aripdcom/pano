@@ -622,6 +622,8 @@ handle_options (TerminalOptions *options,
                                                !options->no_environment,
                                                it->working_dir ? it->working_dir
                                                                : options->default_working_dir,
+                                               it->working_dir != nullptr ||
+                                               options->default_working_dir_requested,
                                                fd_array, fd_array_len,
                                                argc == 0);
 

@@ -500,7 +500,7 @@ action_new_terminal_in_container_cb(GSimpleAction* action,
   if (parent_screen) {
     terminal_screen_reexec_from_screen(screen, parent_screen, nullptr, nullptr);
   } else {
-    terminal_screen_exec(screen, nullptr, nullptr, true, g_get_home_dir(),
+    terminal_screen_exec(screen, nullptr, nullptr, true, g_get_home_dir(), false,
                          nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
   }
 }

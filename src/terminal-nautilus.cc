@@ -291,6 +291,7 @@ receiver_proxy_cb (GObject *source,
   terminal_client_append_exec_options (&builder,
                                        TRUE, /* pass environment */
                                        data->path,
+                                       TRUE, /* the folder was asked for */
                                        nullptr, 0, /* FD array */
                                        TRUE /* shell */);
 

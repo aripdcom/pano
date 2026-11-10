@@ -748,6 +748,7 @@ option_working_directory_callback (const gchar *option_name,
     {
       g_free (options->default_working_dir);
       options->default_working_dir = g_strdup (value);
+      options->default_working_dir_requested = TRUE;
     }
 
   return TRUE;

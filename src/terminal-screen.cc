@@ -91,6 +91,7 @@ typedef struct {
   char **exec_argv; /* as processed */
   char **envv;
   char *cwd;
+  gboolean cwd_requested; /* asked for, so not subject to preserve-working-directory */
   gboolean as_shell;
 
   VtePtyFlags pty_flags;
@@ -453,6 +454,7 @@ exec_data_clone (ExecData *data)
   ExecData *clone = exec_data_new ();
   clone->envv = g_strdupv (data->envv);
   clone->cwd = g_strdup (data->cwd);
+  clone->cwd_requested = data->cwd_requested;
 
   /* If FDs were passed, cannot repeat argv. Return data only for env and cwd */
   if (data->fd_list != nullptr) {
@@ -2531,12 +2533,14 @@ terminal_screen_reexec_from_exec_data (TerminalScreen *screen,
                            str);
   }
 
+  /* If we have command line args, must always pass the cwd from the command line, too */
+  auto const data_cwd = data && (data->argv || !cwd);
   return terminal_screen_exec (screen,
                                data ? data->argv : nullptr,
                                envv ? envv : data ? data->envv : nullptr,
                                data ? data->as_shell : TRUE,
-                               /* If we have command line args, must always pass the cwd from the command line, too */
-                               data && data->argv ? data->cwd : cwd ? cwd : data ? data->cwd : nullptr,
+                               data_cwd ? data->cwd : cwd,
+                               data_cwd ? data->cwd_requested : FALSE,
                                nullptr /* fd list */, nullptr /* fd array */,
                                nullptr, nullptr, nullptr, /* callback + data + destroy notify */
                                cancellable,
@@ -2602,6 +2606,7 @@ terminal_screen_exec (TerminalScreen *screen,
                       char **initial_envv,
                       gboolean as_shell,
                       const char *cwd,
+                      gboolean cwd_requested,
                       GUnixFDList *fd_list,
                       GVariant *fd_array,
                       TerminalScreenExecCallback callback,
@@ -2672,7 +2677,9 @@ terminal_screen_exec (TerminalScreen *screen,
 
   terminal_screen_add_shell_integration (screen, argv, as_shell, &exec_argv, &envv);
 
-  if (!preserve_cwd) {
+  /* A working directory that was asked for, for example with
+   * --working-directory or by the file manager, is always used */
+  if (!preserve_cwd && !(cwd && cwd_requested)) {
     cwd = g_get_home_dir ();
     envv = g_environ_unsetenv (envv, "PWD");
   }
@@ -2708,6 +2715,7 @@ terminal_screen_exec (TerminalScreen *screen,
   data->argv = g_strdupv (argv);
   data->exec_argv = g_strdupv (exec_argv);
   data->cwd = g_strdup (cwd);
+  data->cwd_requested = cwd_requested;
   data->envv = g_strdupv (envv);
   data->as_shell = as_shell;
   data->pty_flags = VTE_PTY_DEFAULT;

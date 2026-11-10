@@ -84,6 +84,7 @@ typedef struct
   char    *default_role;
   char    *default_geometry;
   char    *default_working_dir;
+  gboolean default_working_dir_requested; /* with --working-directory */
   char    *default_title;
   char   **exec_argv;
   char    *default_profile;

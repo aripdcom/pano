@@ -540,6 +540,7 @@ terminal_session_restore_tab(TerminalWindow* window,
                               nullptr /* envv */,
                               true /* as shell */,
                               cwd,
+                              cwd != nullptr /* restoring it was asked for */,
                               nullptr, nullptr, /* fd list and array */
                               nullptr, nullptr, nullptr, /* callback */
                               nullptr /* cancellable */,

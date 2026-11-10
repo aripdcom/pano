@@ -150,6 +150,9 @@ terminal_receiver_impl_exec (TerminalReceiver *receiver,
     working_directory = nullptr;
   if (!g_variant_lookup (options, "shell", "b", &shell))
     shell = FALSE;
+  gboolean cwd_requested;
+  if (!g_variant_lookup (options, "cwd-requested", "b", &cwd_requested))
+    cwd_requested = FALSE;
   if (!g_variant_lookup (options, "environ", "^a&ay", &envv))
     envv = nullptr;
   if (!g_variant_lookup (options, "fd-set", "@a(ih)", &fd_array))
@@ -233,6 +236,7 @@ terminal_receiver_impl_exec (TerminalReceiver *receiver,
                              envv,
                              shell,
                              working_directory,
+                             cwd_requested,
                              fd_list, fd_array,
                              (TerminalScreenExecCallback) exec_cb,
                              exec_data /* adopted */,
