@@ -277,17 +277,18 @@
 
         <h3>Packages</h3>
         <p>
-          Every build makes a Fedora RPM, a Debian&nbsp;13 package and a
-          Flatpak bundle. Until the first release, download them from the
-          latest run of the
-          <a href="https://github.com/aripdcom/pano/actions/workflows/packages.yml">Packages workflow</a>
-          (sign in to GitHub, open the run and pick <em>rpm</em>, <em>deb</em>
-          or <em>pano-terminal-x86_64.flatpak</em> under Artifacts), then
-          install the file:
+          Download the Fedora RPM, the Debian&nbsp;13 package or the Flatpak
+          bundle of the
+          <a href="https://github.com/aripdcom/pano/releases/latest">latest release</a>,
+          then install the file:
         </p>
 <pre><code>sudo dnf install ./pano-terminal-*.rpm      # Fedora
 sudo apt install ./pano-terminal_*.deb      # Debian 13
 flatpak install ./pano-terminal.flatpak     # any distribution</code></pre>
+        <p>
+          Packages of the latest development version are in the runs of the
+          <a href="https://github.com/aripdcom/pano/actions/workflows/packages.yml">Packages workflow</a>.
+        </p>
         <p>
           The Flatpak runs your shell and commands on the computer itself,
           not in the sandbox, so it works like the other packages. The
