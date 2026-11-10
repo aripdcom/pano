@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2022-11-12 01:15+0100\n"
 "Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -3086,10 +3086,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "_Use colors from system theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "_Utiliser les couleurs du thème système"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3185,6 +3185,12 @@ msgstr "Choisissez la couleur de surbrillance en arrière-plan du terminal"
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "Palette"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "_Utiliser les couleurs du thème système"
 
 #: src/terminal-profile-editor.ui:465
 #, fuzzy

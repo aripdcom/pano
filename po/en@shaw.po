@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2010-05-18 10:04 -0400\n"
 "Last-Translator: Thomas Thurman <tthurman@gnome.org>\n"
 "Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
@@ -3099,10 +3099,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "_Use colors from system theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "_𐑿𐑟 𐑒𐑳𐑤𐑼𐑟 𐑓𐑮𐑪𐑥 𐑕𐑦𐑕𐑑𐑩𐑥 𐑔𐑰𐑥"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3196,6 +3196,12 @@ msgstr "𐑗𐑵𐑟 𐑑𐑻𐑥𐑦𐑯𐑩𐑤 𐑚𐑨𐑒𐑜𐑮𐑬𐑯�
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>𐑐𐑩𐑤𐑧𐑑</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "_𐑿𐑟 𐑒𐑳𐑤𐑼𐑟 𐑓𐑮𐑪𐑥 𐑕𐑦𐑕𐑑𐑩𐑥 𐑔𐑰𐑥"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

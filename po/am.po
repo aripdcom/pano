@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: profterm VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2003-02-03 10:16+EDT\n"
 "Last-Translator: Ge'ez Frontier Foundation <locales@geez.org>\n"
 "Language-Team: Amharic <locales@geez.org>\n"
@@ -2797,10 +2797,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "Color _palette:"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "የቀለሞች መደርደሪያ፦ (_P)"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -2882,6 +2882,12 @@ msgstr ""
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>መደርደሪያ</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "Color _palette:"
+msgid "Use Colors from Palette"
+msgstr "የቀለሞች መደርደሪያ፦ (_P)"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

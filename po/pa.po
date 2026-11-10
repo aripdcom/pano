@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2018-08-11 09:13-0600\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -2990,10 +2990,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "_Use colors from system theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "ਸਿਸਟਮ ਸਰੂਪ ਤੋਂ ਰੰਗ ਵਰਤੋਂ(_U)"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3089,6 +3089,12 @@ msgstr "ਟਰਮੀਨਲ ਉਘਾੜਨ ਬੈਕਗਰਾਊਂਡ ਰੰਗ
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "ਰੰਗ-ਪੱਟੀ"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "ਸਿਸਟਮ ਸਰੂਪ ਤੋਂ ਰੰਗ ਵਰਤੋਂ(_U)"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

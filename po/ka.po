@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2023-07-24 06:11+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <Ubuntu-Georgian-Translators@googlegroups.com>\n"
@@ -2948,10 +2948,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "_Use colors from system theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "_ფერების სისტემის თემიდან გამოყენება"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3047,6 +3047,12 @@ msgstr "ამოირჩიე ტერმინალის მონიშ�
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "პალიტრა"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "_ფერების სისტემის თემიდან გამოყენება"
 
 #: src/terminal-profile-editor.ui:465
 #, fuzzy

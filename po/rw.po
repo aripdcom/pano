@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2006-01-04 16:15-0200\n"
 "Last-Translator: Steve Murphy <murf@e-tools.com>\n"
 "Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
@@ -3015,9 +3015,9 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "Amabara Bivuye Sisitemu"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3100,6 +3100,11 @@ msgstr "Mbuganyuma Ibara"
 #, fuzzy
 msgid "Palette"
 msgstr "<B B"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+msgid "Use Colors from Palette"
+msgstr "Amabara Bivuye Sisitemu"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

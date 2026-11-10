@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2006-09-22 18:47+0200\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -3059,10 +3059,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "Use colors from s_ystem theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "Eployî les coleurs do tinme do _sistinme"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3156,6 +3156,12 @@ msgstr "Tchoezixhoz li coleur di fond pol terminå"
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>Palete</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "Use colors from s_ystem theme"
+msgid "Use Colors from Palette"
+msgstr "Eployî les coleurs do tinme do _sistinme"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

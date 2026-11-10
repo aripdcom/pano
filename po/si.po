@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: si\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2008-01-29 13:26+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <en@li.org>\n"
@@ -2926,10 +2926,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "Use colors from s_ystem theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "පද්ධති තේමාවෙ වර්‍ණ භාවිතා කරන්න (_y)"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3023,6 +3023,12 @@ msgstr "අග්‍රයේ පසුබිම් වර්‍ණය තෝර
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>වර්‍ණාවලිය</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "Use colors from s_ystem theme"
+msgid "Use Colors from Palette"
+msgstr "පද්ධති තේමාවෙ වර්‍ණ භාවිතා කරන්න (_y)"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

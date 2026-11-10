@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2026-09-09 15:49+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
@@ -2966,9 +2966,11 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
-msgid "Use Colors from Palette"
-msgstr "Palettából származó színek használata"
+#: src/terminal-profile-editor.ui:162
+#, fuzzy
+#| msgid "Use Colors from Scheme"
+msgid "Use Colors from System Style"
+msgstr "Sémából származó színek használata"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
 #, fuzzy
@@ -3043,6 +3045,10 @@ msgstr "Kiemelés háttérszínének kiválasztása"
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "Paletta"
+
+#: src/terminal-profile-editor.ui:312
+msgid "Use Colors from Palette"
+msgstr "Palettából származó színek használata"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

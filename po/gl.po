@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2023-08-13 12:44+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -3054,10 +3054,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "_Use colors from system theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "_Usar as cores do tema do sistema"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3153,6 +3153,12 @@ msgstr "Seleccione a cor de fondo do realce do terminal"
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "Paleta"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "_Usar as cores do tema do sistema"
 
 #: src/terminal-profile-editor.ui:465
 #, fuzzy

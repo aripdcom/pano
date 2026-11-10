@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2021-05-29 20:52+0100\n"
 "Last-Translator: Slimane Selyan Amiri <selyan.kab@protonmail.com>\n"
 "Language-Team: \n"
@@ -2757,8 +2757,8 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
-msgid "Use Colors from Palette"
+#: src/terminal-profile-editor.ui:162
+msgid "Use Colors from System Style"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -2834,6 +2834,10 @@ msgstr ""
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "Agalis n yiniten"
+
+#: src/terminal-profile-editor.ui:312
+msgid "Use Colors from Palette"
+msgstr ""
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

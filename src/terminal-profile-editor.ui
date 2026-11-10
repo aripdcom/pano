@@ -159,7 +159,7 @@
                 </child>
                 <child>
                   <object class="AdwSwitchRow" id="use_system_colors">
-                    <property name="title" translatable="yes">Use Colors from Palette</property>
+                    <property name="title" translatable="yes">Use Colors from System Style</property>
                   </object>
                 </child>
                 <child>

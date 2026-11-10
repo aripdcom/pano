@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2020-02-22 22:11+0530\n"
 "Last-Translator: Jor Teron <jor.teron@gmail.com>\n"
 "Language-Team: Karbi <karbi.translation@gmail.com>\n"
@@ -2792,8 +2792,8 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
-msgid "Use Colors from Palette"
+#: src/terminal-profile-editor.ui:162
+msgid "Use Colors from System Style"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -2880,6 +2880,10 @@ msgstr "Terminal Anung Alir chongvai"
 
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:312
+msgid "Use Colors from Palette"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:465

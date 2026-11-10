@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD.hy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2009-01-30 20:17+0400\n"
 "Last-Translator: Norayr Chilingaryan <chnorik@gmail.com>\n"
 "Language-Team: <norik@freenet.am>\n"
@@ -2807,9 +2807,9 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "Կիրառել համակառգի թեմայի գույները"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -2893,6 +2893,11 @@ msgstr "Ընտրեք տերմինալի նախադրյալի գույնը"
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>Ներկապնակ</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+msgid "Use Colors from Palette"
+msgstr "Կիրառել համակառգի թեմայի գույները"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

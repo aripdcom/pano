@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2021-01-04 13:56+0530\n"
 "Last-Translator: Akarshan Biswas <akarshan.biswas@hotmail.com>\n"
 "Language-Team: Bengali <anubad@lists.ankur.org.in>\n"
@@ -3019,10 +3019,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "_Use colors from system theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "সিস্টেমে ব্যবহৃত থিম থেকে রঙ প্রয়োগ করা হবে (_U)"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3118,6 +3118,12 @@ msgstr "টার্মিনাল হাইলাইট পটভূমি র
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "Palette"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "_Use colors from system theme"
+msgid "Use Colors from Palette"
+msgstr "সিস্টেমে ব্যবহৃত থিম থেকে রঙ প্রয়োগ করা হবে (_U)"
 
 #: src/terminal-profile-editor.ui:465
 #, fuzzy

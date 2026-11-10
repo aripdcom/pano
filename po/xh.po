@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2006-01-04 16:14-0200\n"
 "Last-Translator: Canonical Ltd <translations@canonical.com>\n"
 "Language-Team: Xhosa <xh-translate@ubuntu.com>\n"
@@ -3104,10 +3104,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "Use colors from s_ystem theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "Sebenzisa imibala evela kumxholo w_enkqubo"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3201,6 +3201,12 @@ msgstr "Khetha umbala wokungasemva kwe-terminal"
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>iNgqokelela yeziXhobo</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "Use colors from s_ystem theme"
+msgid "Use Colors from Palette"
+msgstr "Sebenzisa imibala evela kumxholo w_enkqubo"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

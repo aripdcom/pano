@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME-TERMINAL VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2007-03-08 06:43+0300\n"
 "Last-Translator: Thierry Randrianiriana <randrianiriana@gmail.com>\n"
 "Language-Team: MALAGASY <i18n-malagasy-gnome@gna.org>\n"
@@ -3108,10 +3108,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "Use colors from s_ystem theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "Mampiasà loko avy amin'ny endriky ny _rafitra"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3205,6 +3205,12 @@ msgstr "Hisafidy ny lokon'ny afaran'ny terminal"
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>Takela-pisaka</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "Use colors from s_ystem theme"
+msgid "Use Colors from Palette"
+msgstr "Mampiasà loko avy amin'ny endriky ny _rafitra"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

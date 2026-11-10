@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gedit.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2008-01-25 13:49+0530\n"
 "Last-Translator: Sangeeta Kumari\n"
 "Language-Team: <en@li.org>\n"
@@ -3067,8 +3067,8 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
-msgid "Use Colors from Palette"
+#: src/terminal-profile-editor.ui:162
+msgid "Use Colors from System Style"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3158,6 +3158,10 @@ msgstr "टर्मिनल पृष्ठभूमि रँग चुनू
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>पैलेट</b>"
+
+#: src/terminal-profile-editor.ui:312
+msgid "Use Colors from Palette"
+msgstr ""
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

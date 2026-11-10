@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.gnome-2-22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2008-07-15 18:05+0200\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
@@ -3140,10 +3140,10 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
+#: src/terminal-profile-editor.ui:162
 #, fuzzy
 #| msgid "Use colors from s_ystem theme"
-msgid "Use Colors from Palette"
+msgid "Use Colors from System Style"
 msgstr "Përdor ngjyrat e temës së s_istemit"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -3237,6 +3237,12 @@ msgstr "Zgjidh ngjyrën e sfondit të terminalit"
 #| msgid "<b>Palette</b>"
 msgid "Palette"
 msgstr "<b>Paleta</b>"
+
+#: src/terminal-profile-editor.ui:312
+#, fuzzy
+#| msgid "Use colors from s_ystem theme"
+msgid "Use Colors from Palette"
+msgstr "Përdor ngjyrat e temës së s_istemit"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"

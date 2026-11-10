@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
 "Language-Team: Abkhazian <ab@li.org>\n"
 "Language: ab\n"
@@ -2669,8 +2669,8 @@ msgstr ""
 msgid "_Open Folder"
 msgstr ""
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
-msgid "Use Colors from Palette"
+#: src/terminal-profile-editor.ui:162
+msgid "Use Colors from System Style"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
@@ -2741,6 +2741,10 @@ msgstr ""
 
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
+msgstr ""
+
+#: src/terminal-profile-editor.ui:312
+msgid "Use Colors from Palette"
 msgstr ""
 
 #: src/terminal-profile-editor.ui:465

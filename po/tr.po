@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 22:31+0300\n"
+"POT-Creation-Date: 2026-11-10 22:34+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -2889,9 +2889,9 @@ msgstr "Bu klasöre .palette dosyaları ekleyin"
 msgid "_Open Folder"
 msgstr "Klasörü _Aç"
 
-#: src/terminal-profile-editor.ui:162 src/terminal-profile-editor.ui:312
-msgid "Use Colors from Palette"
-msgstr "Paletteki Renkleri Kullan"
+#: src/terminal-profile-editor.ui:162
+msgid "Use Colors from System Style"
+msgstr "Sistem Biçeminin Renklerini Kullan"
 
 #: src/terminal-profile-editor.ui:167 src/terminal-profile-editor.ui:185
 msgid "Background Opacity"
@@ -2962,6 +2962,10 @@ msgstr "Vurgu Arka Plan Rengini Seç"
 #: src/terminal-profile-editor.ui:309
 msgid "Palette"
 msgstr "Palet"
+
+#: src/terminal-profile-editor.ui:312
+msgid "Use Colors from Palette"
+msgstr "Paletteki Renkleri Kullan"
 
 #: src/terminal-profile-editor.ui:465
 msgid "Show Bold Text in Bright Colors"
