@@ -28,8 +28,6 @@
   If not, see <https://www.gnu.org/licenses/>.
 -->
 <component
-  xmlns="https://specifications.freedesktop.org/metainfo/1.0"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
   type="addon">
   <id>com.aripd.Pano.Nautilus</id>
   <extends>org.gnome.Nautilus.desktop</extends>

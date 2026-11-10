@@ -9,52 +9,40 @@
   without any warranty.
 -->
 <its:rules xmlns:its="http://www.w3.org/2005/11/its"
-           xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"
            version="2.0">
 
-  <its:translateRule selector="/mi:component" translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
-  <its:translateRule selector="/mi:component/mi:name |
-                               /mi:component/mi:summary |
-                               /mi:component/mi:description |
-                               /mi:component/mi:developer_name |
-                               /mi:component/mi:name_variant_suffix |
-                               /mi:component/mi:keywords/mi:keyword |
-                               /mi:component/mi:screenshots/mi:screenshot/mi:caption |
-                               /mi:component/mi:releases/mi:release/mi:description |
-                               /mi:component/mi:agreement/mi:agreement_section/mi:name |
-                               /mi:component/mi:agreement/mi:agreement_section/mi:description"
-                     translate="yes"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
+  <its:translateRule selector="/component" translate="no"/>
+  <its:translateRule selector="/component/name |
+                               /component/summary |
+                               /component/description |
+                               /component/developer_name |
+                               /component/name_variant_suffix |
+                               /component/keywords/keyword |
+                               /component/screenshots/screenshot/caption |
+                               /component/releases/release/description |
+                               /component/agreement/agreement_section/name |
+                               /component/agreement/agreement_section/description"
+                     translate="yes"/>
 
-  <its:withinTextRule withinText="yes" selector="/mi:component//mi:description//mi:em |
-                                                 /mi:component//mi:description//mi:code"
-                      xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
+  <its:withinTextRule withinText="yes" selector="/component//description//em |
+                                                 /component//description//code"/>
 
-  <its:translateRule selector="/mi:component/mi:name[@translate = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
-  <its:translateRule selector="/mi:component/mi:developer_name[@translate = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
-  <its:translateRule selector="/mi:component/mi:name_variant_suffix[@translate = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
-  <its:translateRule selector="/mi:component/mi:keywords/mi:keyword[@translate = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
-  <its:translateRule selector="/mi:component/mi:releases/mi:release/mi:description[@translate = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
+  <its:translateRule selector="/component/name[@translate = 'no']"
+                     translate="no"/>
+  <its:translateRule selector="/component/developer_name[@translate = 'no']"
+                     translate="no"/>
+  <its:translateRule selector="/component/name_variant_suffix[@translate = 'no']"
+                     translate="no"/>
+  <its:translateRule selector="/component/keywords/keyword[@translate = 'no']"
+                     translate="no"/>
+  <its:translateRule selector="/component/releases/release/description[@translate = 'no']"
+                     translate="no"/>
 
   <!-- DEPRECATED -->
-  <its:translateRule selector="/mi:component/mi:name[@translatable = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
-  <its:translateRule selector="/mi:component/mi:developer_name[@translatable = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
-  <its:translateRule selector="/mi:component/mi:releases/mi:release/mi:description[@translatable = 'no']"
-                     translate="no"
-                     xmlns:mi="https://specifications.freedesktop.org/metainfo/1.0"/>
+  <its:translateRule selector="/component/name[@translatable = 'no']"
+                     translate="no"/>
+  <its:translateRule selector="/component/developer_name[@translatable = 'no']"
+                     translate="no"/>
+  <its:translateRule selector="/component/releases/release/description[@translatable = 'no']"
+                     translate="no"/>
 </its:rules>

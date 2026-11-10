@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:51+0300\n"
+"POT-Creation-Date: 2026-11-10 23:56+0300\n"
 "PO-Revision-Date: 2018-08-11 09:13-0600\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:35
 #, fuzzy
 msgid "Pano Terminal"
 msgstr "ਗਨੋਮ ਟਰਮੀਨਲ"
@@ -52,26 +52,11 @@ msgstr "ਨਵੀਂ ਵਿੰਡੋ"
 msgid "Preferences"
 msgstr "ਮੇਰੀ ਪਸੰਦ"
 
-#: data/com.aripd.Pano.metainfo.xml.in:34
-#: data/com.aripd.Pano.metainfo.xml.in:63
-msgid "com.aripd.Pano.desktop"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:35
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
-msgid "GPL-3.0+ or GFDL-1.3-only"
-msgstr ""
-
 #: data/com.aripd.Pano.metainfo.xml.in:36
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
-msgid "GPL-3.0+"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:38
 msgid "Use the command line, with your tabs where you want them"
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:40
+#: data/com.aripd.Pano.metainfo.xml.in:38
 #, fuzzy
 msgid ""
 "Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
@@ -80,7 +65,7 @@ msgstr ""
 "ਗਨੋਮ ਟਰਮੀਨਲ ਇੱਕ ਟਰਮੀਨਲ ਸਮਰੂਪ ਐਪਲੀਕੇਸ਼ਨ ਹੈ, ਜੋ ਕਿ ਯੂਨੈਕਸ ਸੈੱਲ ਇੰਵਾਇਰਨਮੈਂਟ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ\n"
 "ਹੈ, ਜਿਸ ਨੂੰ ਤੁਹਾਡੇ ਸਿਸਟਮ ਉੱਤੇ ਉਪਲੱਬਧ ਪ੍ਰੋਗਰਾਮ ਨੂੰ ਚਲਾਉਣ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
 
-#: data/com.aripd.Pano.metainfo.xml.in:41
+#: data/com.aripd.Pano.metainfo.xml.in:39
 #, fuzzy
 #| msgid ""
 #| "It supports several profiles, multiple tabs and implements several "
@@ -91,104 +76,35 @@ msgid ""
 "the window."
 msgstr "ਇਹ ਕਈ ਪ੍ਰੋਫਾਇਲਾਂ, ਕਈ ਟੈਬਾਂ ਲਈ ਸਹਾਇਕ ਹੈ ਅਤੇ ਕਈ ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਰੱਖਦਾ ਹੈ।"
 
-#: data/com.aripd.Pano.metainfo.xml.in:44
-#, fuzzy
-#| msgid "Linux console"
-msgid "console"
-msgstr "ਲੀਨਕਸ ਕਨਸੋਲ"
-
-#: data/com.aripd.Pano.metainfo.xml.in:45
-msgid "keyboard"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:46
-msgid "pointing"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:50
-msgid "https://pano.aripd.com/images/tabs-left-light.png"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:54
-msgid "HiDpiIcon"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:55
-msgid "HighContrast"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:56
-msgid "ModernToolkit"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:57
-#, fuzzy
-#| msgid "_Search for:"
-msgid "SearchProvider"
-msgstr "ਇਸ ਦੀ ਖੋਜ(_S): "
-
-#: data/com.aripd.Pano.metainfo.xml.in:58
-msgid "UserDocs"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:60
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
-msgid "https://pano.aripd.com"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:61
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
-msgid "https://github.com/aripdcom/pano/issues"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:62
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
-msgid "https://github.com/aripdcom/pano"
-msgstr ""
-
 #: data/com.aripd.Pano.metainfo.xml.in:64
 #: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
-#, fuzzy
-msgid "pano-terminal"
-msgstr "ਗਨੋਮ ਟਰਮੀਨਲ"
-
-#: data/com.aripd.Pano.metainfo.xml.in:66
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
 msgid "aripd"
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:71
+#: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:76
+#: data/com.aripd.Pano.metainfo.xml.in:74
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
-msgid "com.aripd.Pano.Nautilus"
-msgstr ""
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
-msgid "org.gnome.Nautilus.desktop"
-msgstr ""
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
 #, fuzzy
 #| msgid "Terminal plugin for Files"
 msgid "Pano Terminal plugin for Files"
 msgstr "ਫਾਇਲਾਂ ਲਈ ਟਰਮੀਨਲ ਪਲੱਗਇਨ"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
 #, fuzzy
 #| msgid "Open a terminal from Files"
 msgid "Open Pano Terminal from Files"
 msgstr "ਫਾਇਲਾਂ ਤੋਂ ਟਰਮੀਨਲ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
 msgid ""
 "Open in Pano Terminal is a plugin for the Files application that adds a menu "
 "item to the context menu to open Pano Terminal in the currently browsed "
@@ -1979,7 +1895,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "ਇੰਸਪੈਕਟਰ(_I)"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3681
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_ਮੇਰੀ ਪਸੰਦ"
@@ -3456,35 +3372,35 @@ msgstr "ਹਟਾਓ"
 msgid "_Set as default"
 msgstr "ਮੂਲ ਵਜੋਂ ਸੈੱਟ ਕਰੋ"
 
-#: src/terminal-screen.cc:1856
+#: src/terminal-screen.cc:1860
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3462
+#: src/terminal-screen.cc:3474
 msgid "No command supplied nor shell requested"
 msgstr "ਕੋਈ ਕਮਾਂਡ ਨਹੀਂ ਦਿੱਤੀ ਨਾ ਕੋਈ ਸ਼ੈੱਲ ਮੰਗ ਕੀਤੀ"
 
-#: src/terminal-screen.cc:3682 src/terminal-screen.cc:4140
+#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
 msgid "_Relaunch"
 msgstr "ਮੁੜ-ਚਲਾਓ(_R)"
 
-#: src/terminal-screen.cc:3685
+#: src/terminal-screen.cc:3697
 msgid "There was an error creating the child process for this terminal"
 msgstr "ਇਸ ਟਰਮੀਨਲ ਲਈ ਚਲਾਇਡ ਕਾਰਜ ਬਣਾਉਣ ਵਿੱਚ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: src/terminal-screen.cc:4144
+#: src/terminal-screen.cc:4178
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈਸ ਅਚਾਨਕ ਹੀ %d ਹਾਲਤ ਨਾਲ ਬੰਦ ਹੋ ਗਿਆ।"
 
-#: src/terminal-screen.cc:4147
+#: src/terminal-screen.cc:4181
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈੱਸ ਨੂੰ ਸਿਗਨਲ %d ਵਲੋਂ ਅਧੂਰਾ ਛੱਡਿਆ ਗਿਆ।"
 
-#: src/terminal-screen.cc:4150
+#: src/terminal-screen.cc:4184
 msgid "The child process was aborted."
 msgstr "ਚਲਾਈਡ ਪਰੋਸੈੱਸ ਅਧੂਰਾ ਛੱਡਿਆ ਗਿਆ।"
 
@@ -3874,6 +3790,20 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "ਆਰਗੂਮੈਂਟ ਪਾਰਸ ਕਰਨ ਲਈ ਫੇਲ੍ਹ: %s\n"
+
+#, fuzzy
+#~| msgid "Linux console"
+#~ msgid "console"
+#~ msgstr "ਲੀਨਕਸ ਕਨਸੋਲ"
+
+#, fuzzy
+#~| msgid "_Search for:"
+#~ msgid "SearchProvider"
+#~ msgstr "ਇਸ ਦੀ ਖੋਜ(_S): "
+
+#, fuzzy
+#~ msgid "pano-terminal"
+#~ msgstr "ਗਨੋਮ ਟਰਮੀਨਲ"
 
 #~ msgid "Zoom _Out"
 #~ msgstr "ਜ਼ੂਮ ਆਉਟ(_O)"

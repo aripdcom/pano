@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:51+0300\n"
+"POT-Creation-Date: 2026-11-10 23:56+0300\n"
 "PO-Revision-Date: 2026-09-10 03:10+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:35
 #, fuzzy
 msgid "Pano Terminal"
 msgstr "Тэрмінал GNOME"
@@ -50,26 +50,11 @@ msgstr "Новае акно"
 msgid "Preferences"
 msgstr "Налады"
 
-#: data/com.aripd.Pano.metainfo.xml.in:34
-#: data/com.aripd.Pano.metainfo.xml.in:63
-msgid "com.aripd.Pano.desktop"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:35
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
-msgid "GPL-3.0+ or GFDL-1.3-only"
-msgstr "GPL-3.0+ або толькі GFDL-1.3"
-
 #: data/com.aripd.Pano.metainfo.xml.in:36
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
-msgid "GPL-3.0+"
-msgstr "GPL-3.0+"
-
-#: data/com.aripd.Pano.metainfo.xml.in:38
 msgid "Use the command line, with your tabs where you want them"
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:40
+#: data/com.aripd.Pano.metainfo.xml.in:38
 #, fuzzy
 msgid ""
 "Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
@@ -78,7 +63,7 @@ msgstr ""
 "Тэрмінал GNOME - гэта эмулятар тэрмінала для доступу да асяроддзя абалонкі "
 "UNIX, праз які можна запускаць праграмы, даступныя ў вашай сістэме."
 
-#: data/com.aripd.Pano.metainfo.xml.in:41
+#: data/com.aripd.Pano.metainfo.xml.in:39
 #, fuzzy
 #| msgid ""
 #| "It supports several profiles, multiple tabs and implements several "
@@ -91,103 +76,35 @@ msgstr ""
 "Праграма падтрымлівае працу з некалькімі профілямі, укладкамі і спалучэннямі "
 "клавіш."
 
-#: data/com.aripd.Pano.metainfo.xml.in:44
-msgid "console"
-msgstr "кансоль"
-
-#: data/com.aripd.Pano.metainfo.xml.in:45
-msgid "keyboard"
-msgstr "клавіятура"
-
-#: data/com.aripd.Pano.metainfo.xml.in:46
-msgid "pointing"
-msgstr "указальнік"
-
-#: data/com.aripd.Pano.metainfo.xml.in:50
-msgid "https://pano.aripd.com/images/tabs-left-light.png"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:54
-msgid "HiDpiIcon"
-msgstr "HiDpiIcon"
-
-#: data/com.aripd.Pano.metainfo.xml.in:55
-msgid "HighContrast"
-msgstr "HighContrast"
-
-#: data/com.aripd.Pano.metainfo.xml.in:56
-msgid "ModernToolkit"
-msgstr "ModernToolkit"
-
-#: data/com.aripd.Pano.metainfo.xml.in:57
-msgid "SearchProvider"
-msgstr "SearchProvider"
-
-#: data/com.aripd.Pano.metainfo.xml.in:58
-msgid "UserDocs"
-msgstr "UserDocs"
-
-#: data/com.aripd.Pano.metainfo.xml.in:60
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
-msgid "https://pano.aripd.com"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:61
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
-msgid "https://github.com/aripdcom/pano/issues"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:62
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
-msgid "https://github.com/aripdcom/pano"
-msgstr ""
-
 #: data/com.aripd.Pano.metainfo.xml.in:64
 #: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
-#, fuzzy
-#| msgid "gnome-terminal"
-msgid "pano-terminal"
-msgstr "gnome-terminal"
-
-#: data/com.aripd.Pano.metainfo.xml.in:66
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
 msgid "aripd"
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:71
+#: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:76
+#: data/com.aripd.Pano.metainfo.xml.in:74
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
-#, fuzzy
-#| msgid "org.gnome.Terminal.Nautilus"
-msgid "com.aripd.Pano.Nautilus"
-msgstr "org.gnome.Terminal.Nautilus"
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
-msgid "org.gnome.Nautilus.desktop"
-msgstr "org.gnome.Nautilus.desktop"
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
 #, fuzzy
 #| msgid "Terminal plugin for Files"
 msgid "Pano Terminal plugin for Files"
 msgstr "Плагін тэрмінала для праграмы «Файлы»"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
 #, fuzzy
 #| msgid "Open a terminal from Files"
 msgid "Open Pano Terminal from Files"
 msgstr "Адкрывае тэрмінал з праграмы «Файлы»"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
 #, fuzzy
 #| msgid ""
 #| "Open Terminal is a plugin for the Files application that adds a menu item "
@@ -1980,7 +1897,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_Інспектар"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3681
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Налады"
@@ -3365,35 +3282,35 @@ msgstr "_Выдаліць"
 msgid "_Set as default"
 msgstr "_Зрабіць прадвызначаным"
 
-#: src/terminal-screen.cc:1856
+#: src/terminal-screen.cc:1860
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3462
+#: src/terminal-screen.cc:3474
 msgid "No command supplied nor shell requested"
 msgstr "Каманда не ўказана, камандная абалонка не вызначана"
 
-#: src/terminal-screen.cc:3682 src/terminal-screen.cc:4140
+#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
 msgid "_Relaunch"
 msgstr "_Перазапусціць"
 
-#: src/terminal-screen.cc:3685
+#: src/terminal-screen.cc:3697
 msgid "There was an error creating the child process for this terminal"
 msgstr "Падчас утварэння працэсу-нашчадка для гэтага тэрмінала ўзнікла памылка"
 
-#: src/terminal-screen.cc:4144
+#: src/terminal-screen.cc:4178
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Працэс-нашчадак завяршыў працу належным чынам з кодам стану %d."
 
-#: src/terminal-screen.cc:4147
+#: src/terminal-screen.cc:4181
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Працэс-нашчадак прымусова перарваны сігналам %d."
 
-#: src/terminal-screen.cc:4150
+#: src/terminal-screen.cc:4184
 msgid "The child process was aborted."
 msgstr "Працэс-нашчадак прымусова перарваны."
 
@@ -3786,6 +3703,49 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Не ўдалося разабраць аргументы: %s\n"
+
+#~ msgid "GPL-3.0+ or GFDL-1.3-only"
+#~ msgstr "GPL-3.0+ або толькі GFDL-1.3"
+
+#~ msgid "GPL-3.0+"
+#~ msgstr "GPL-3.0+"
+
+#~ msgid "console"
+#~ msgstr "кансоль"
+
+#~ msgid "keyboard"
+#~ msgstr "клавіятура"
+
+#~ msgid "pointing"
+#~ msgstr "указальнік"
+
+#~ msgid "HiDpiIcon"
+#~ msgstr "HiDpiIcon"
+
+#~ msgid "HighContrast"
+#~ msgstr "HighContrast"
+
+#~ msgid "ModernToolkit"
+#~ msgstr "ModernToolkit"
+
+#~ msgid "SearchProvider"
+#~ msgstr "SearchProvider"
+
+#~ msgid "UserDocs"
+#~ msgstr "UserDocs"
+
+#, fuzzy
+#~| msgid "gnome-terminal"
+#~ msgid "pano-terminal"
+#~ msgstr "gnome-terminal"
+
+#, fuzzy
+#~| msgid "org.gnome.Terminal.Nautilus"
+#~ msgid "com.aripd.Pano.Nautilus"
+#~ msgstr "org.gnome.Terminal.Nautilus"
+
+#~ msgid "org.gnome.Nautilus.desktop"
+#~ msgstr "org.gnome.Nautilus.desktop"
 
 #~ msgid "Zoom _Out"
 #~ msgstr "Па_меншыць"

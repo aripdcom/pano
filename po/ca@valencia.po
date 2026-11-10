@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:51+0300\n"
+"POT-Creation-Date: 2026-11-10 23:56+0300\n"
 "PO-Revision-Date: 2017-09-01 12:27+0200\n"
 "Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 "X-Project-Style: gnome\n"
 
-#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:35
 #, fuzzy
 msgid "Pano Terminal"
 msgstr "Terminal del GNOME"
@@ -54,26 +54,11 @@ msgstr "Finestra"
 msgid "Preferences"
 msgstr "Preferències"
 
-#: data/com.aripd.Pano.metainfo.xml.in:34
-#: data/com.aripd.Pano.metainfo.xml.in:63
-msgid "com.aripd.Pano.desktop"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:35
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
-msgid "GPL-3.0+ or GFDL-1.3-only"
-msgstr ""
-
 #: data/com.aripd.Pano.metainfo.xml.in:36
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
-msgid "GPL-3.0+"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:38
 msgid "Use the command line, with your tabs where you want them"
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:40
+#: data/com.aripd.Pano.metainfo.xml.in:38
 #, fuzzy
 msgid ""
 "Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
@@ -83,7 +68,7 @@ msgstr ""
 "un intèrpret d'ordes UNIX que es pot utilitzar per executar programes del "
 "sistema."
 
-#: data/com.aripd.Pano.metainfo.xml.in:41
+#: data/com.aripd.Pano.metainfo.xml.in:39
 #, fuzzy
 #| msgid ""
 #| "It supports several profiles, multiple tabs and implements several "
@@ -96,104 +81,35 @@ msgstr ""
 "Permet l'ús de diferents perfils, múltiples pestanyes i a més implementa "
 "diferents dreceres de teclat."
 
-#: data/com.aripd.Pano.metainfo.xml.in:44
-#, fuzzy
-#| msgid "Linux console"
-msgid "console"
-msgstr "Consola Linux"
-
-#: data/com.aripd.Pano.metainfo.xml.in:45
-msgid "keyboard"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:46
-msgid "pointing"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:50
-msgid "https://pano.aripd.com/images/tabs-left-light.png"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:54
-msgid "HiDpiIcon"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:55
-msgid "HighContrast"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:56
-msgid "ModernToolkit"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:57
-#, fuzzy
-#| msgid "_Search for:"
-msgid "SearchProvider"
-msgstr "_Cerca: "
-
-#: data/com.aripd.Pano.metainfo.xml.in:58
-msgid "UserDocs"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:60
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
-msgid "https://pano.aripd.com"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:61
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
-msgid "https://github.com/aripdcom/pano/issues"
-msgstr ""
-
-#: data/com.aripd.Pano.metainfo.xml.in:62
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
-msgid "https://github.com/aripdcom/pano"
-msgstr ""
-
 #: data/com.aripd.Pano.metainfo.xml.in:64
 #: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
-#, fuzzy
-msgid "pano-terminal"
-msgstr "Terminal del GNOME"
-
-#: data/com.aripd.Pano.metainfo.xml.in:66
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
 msgid "aripd"
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:71
+#: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
 "complete, and the other translations are up to date with the current strings."
 msgstr ""
 
-#: data/com.aripd.Pano.metainfo.xml.in:76
+#: data/com.aripd.Pano.metainfo.xml.in:74
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr ""
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
-msgid "com.aripd.Pano.Nautilus"
-msgstr ""
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
-msgid "org.gnome.Nautilus.desktop"
-msgstr ""
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
 #, fuzzy
 #| msgid "Terminal plugin for Files"
 msgid "Pano Terminal plugin for Files"
 msgstr "Connector de terminal per als fitxers"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
 #, fuzzy
 #| msgid "Open a terminal from Files"
 msgid "Open Pano Terminal from Files"
 msgstr "Obri un terminal per als fitxers"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
 #, fuzzy
 #| msgid ""
 #| "Open Terminal is a plugin for the Files application that adds a menu item "
@@ -2047,7 +1963,7 @@ msgstr ""
 msgid "_Inspector"
 msgstr "_Inspector"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3681
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Preferències"
@@ -3527,35 +3443,35 @@ msgstr "_Suprimeix"
 msgid "_Set as default"
 msgstr ""
 
-#: src/terminal-screen.cc:1856
+#: src/terminal-screen.cc:1860
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
 msgstr ""
 
-#: src/terminal-screen.cc:3462
+#: src/terminal-screen.cc:3474
 msgid "No command supplied nor shell requested"
 msgstr "No s'ha especificat cap orde ni s'ha indicat l'intèrpret d'ordes"
 
-#: src/terminal-screen.cc:3682 src/terminal-screen.cc:4140
+#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
 msgid "_Relaunch"
 msgstr "_Torna a executar"
 
-#: src/terminal-screen.cc:3685
+#: src/terminal-screen.cc:3697
 msgid "There was an error creating the child process for this terminal"
 msgstr "S'ha produït un error en crear el subprocés per este terminal"
 
-#: src/terminal-screen.cc:4144
+#: src/terminal-screen.cc:4178
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "El subprocés ha finalitzat normalment amb l'estat %d."
 
-#: src/terminal-screen.cc:4147
+#: src/terminal-screen.cc:4181
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "El senyal %d ha interromput el subprocés."
 
-#: src/terminal-screen.cc:4150
+#: src/terminal-screen.cc:4184
 msgid "The child process was aborted."
 msgstr "S'ha interromput el subprocés."
 
@@ -3968,6 +3884,20 @@ msgstr ""
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Ha fallat l'anàlisi dels arguments: %s\n"
+
+#, fuzzy
+#~| msgid "Linux console"
+#~ msgid "console"
+#~ msgstr "Consola Linux"
+
+#, fuzzy
+#~| msgid "_Search for:"
+#~ msgid "SearchProvider"
+#~ msgstr "_Cerca: "
+
+#, fuzzy
+#~ msgid "pano-terminal"
+#~ msgstr "Terminal del GNOME"
 
 #, fuzzy
 #~| msgid "Zoom Out"

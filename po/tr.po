@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-terminal master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-10 23:51+0300\n"
+"POT-Creation-Date: 2026-11-10 23:56+0300\n"
 "PO-Revision-Date: 2026-11-10 23:00+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:37
+#: data/com.aripd.Pano.desktop.in:2 data/com.aripd.Pano.metainfo.xml.in:35
 msgid "Pano Terminal"
 msgstr "Pano Terminal"
 
@@ -55,26 +55,11 @@ msgstr "Yeni Pencere"
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: data/com.aripd.Pano.metainfo.xml.in:34
-#: data/com.aripd.Pano.metainfo.xml.in:63
-msgid "com.aripd.Pano.desktop"
-msgstr "com.aripd.Pano.desktop"
-
-#: data/com.aripd.Pano.metainfo.xml.in:35
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
-msgid "GPL-3.0+ or GFDL-1.3-only"
-msgstr "GPL-3.0+ veya GFDL-1.3-only"
-
 #: data/com.aripd.Pano.metainfo.xml.in:36
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
-msgid "GPL-3.0+"
-msgstr "GPL-3.0+"
-
-#: data/com.aripd.Pano.metainfo.xml.in:38
 msgid "Use the command line, with your tabs where you want them"
 msgstr "Komut satırını kullanın, sekmeleriniz istediğiniz yerde olsun"
 
-#: data/com.aripd.Pano.metainfo.xml.in:40
+#: data/com.aripd.Pano.metainfo.xml.in:38
 msgid ""
 "Pano Terminal is a terminal emulator for accessing a UNIX shell environment "
 "which can be used to run programs available on your system."
@@ -83,7 +68,7 @@ msgstr ""
 "kullanabileceğiniz UNIX kabuğu ortamına erişmek için bir uçbirim "
 "öykünücüsüdür."
 
-#: data/com.aripd.Pano.metainfo.xml.in:41
+#: data/com.aripd.Pano.metainfo.xml.in:39
 msgid ""
 "It supports several profiles, multiple tabs and implements several keyboard "
 "shortcuts. The tab bar can be placed at the top, bottom, left or right of "
@@ -93,68 +78,12 @@ msgstr ""
 "Sekme çubuğu pencerenin üstüne, altına, soluna ya da sağına "
 "yerleştirilebilir."
 
-#: data/com.aripd.Pano.metainfo.xml.in:44
-msgid "console"
-msgstr "konsol"
-
-#: data/com.aripd.Pano.metainfo.xml.in:45
-msgid "keyboard"
-msgstr "klavye"
-
-#: data/com.aripd.Pano.metainfo.xml.in:46
-msgid "pointing"
-msgstr "imleme"
-
-#: data/com.aripd.Pano.metainfo.xml.in:50
-msgid "https://pano.aripd.com/images/tabs-left-light.png"
-msgstr "https://pano.aripd.com/images/tabs-left-light.png"
-
-#: data/com.aripd.Pano.metainfo.xml.in:54
-msgid "HiDpiIcon"
-msgstr "HiDpiIcon"
-
-#: data/com.aripd.Pano.metainfo.xml.in:55
-msgid "HighContrast"
-msgstr "HighContrast"
-
-#: data/com.aripd.Pano.metainfo.xml.in:56
-msgid "ModernToolkit"
-msgstr "ModernToolkit"
-
-#: data/com.aripd.Pano.metainfo.xml.in:57
-msgid "SearchProvider"
-msgstr "SearchProvider"
-
-#: data/com.aripd.Pano.metainfo.xml.in:58
-msgid "UserDocs"
-msgstr "UserDocs"
-
-#: data/com.aripd.Pano.metainfo.xml.in:60
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:43
-msgid "https://pano.aripd.com"
-msgstr "https://pano.aripd.com"
-
-#: data/com.aripd.Pano.metainfo.xml.in:61
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:44
-msgid "https://github.com/aripdcom/pano/issues"
-msgstr "https://github.com/aripdcom/pano/issues"
-
-#: data/com.aripd.Pano.metainfo.xml.in:62
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:45
-msgid "https://github.com/aripdcom/pano"
-msgstr "https://github.com/aripdcom/pano"
-
 #: data/com.aripd.Pano.metainfo.xml.in:64
 #: data/com.aripd.Pano.Nautilus.metainfo.xml.in:46
-msgid "pano-terminal"
-msgstr "pano-terminal"
-
-#: data/com.aripd.Pano.metainfo.xml.in:66
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:48
 msgid "aripd"
 msgstr "aripd"
 
-#: data/com.aripd.Pano.metainfo.xml.in:71
+#: data/com.aripd.Pano.metainfo.xml.in:69
 msgid ""
 "Pano Terminal opens from the applications menu when it is built from source "
 "and installed to a prefix such as ~/.local. The Turkish translation is "
@@ -164,27 +93,19 @@ msgstr ""
 "uygulamalar menüsünden açılıyor. Türkçe çeviri tamamlandı, diğer çeviriler "
 "de güncel metinlerle birleştirildi."
 
-#: data/com.aripd.Pano.metainfo.xml.in:76
+#: data/com.aripd.Pano.metainfo.xml.in:74
 msgid "The first release of Pano Terminal, a fork of GNOME Terminal."
 msgstr "GNOME Uçbirim’in bir çatalı olan Pano Terminal’in ilk sürümü."
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:34
-msgid "com.aripd.Pano.Nautilus"
-msgstr "com.aripd.Pano.Nautilus"
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:35
-msgid "org.gnome.Nautilus.desktop"
-msgstr "org.gnome.Nautilus.desktop"
-
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:38
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:36
 msgid "Pano Terminal plugin for Files"
 msgstr "Dosyalar için Pano Terminal eklentisi"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:37
 msgid "Open Pano Terminal from Files"
 msgstr "Dosyalar uygulamasından Pano Terminal aç"
 
-#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:41
+#: data/com.aripd.Pano.Nautilus.metainfo.xml.in:39
 msgid ""
 "Open in Pano Terminal is a plugin for the Files application that adds a menu "
 "item to the context menu to open Pano Terminal in the currently browsed "
@@ -1927,7 +1848,7 @@ msgstr "_4. 132×43"
 msgid "_Inspector"
 msgstr "_İnceleyici"
 
-#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3681
+#: src/terminal-headermenu.ui:155 src/terminal-screen.cc:3693
 #: src/terminal-window.cc:3204
 msgid "_Preferences"
 msgstr "_Tercihler"
@@ -3275,7 +3196,7 @@ msgstr "_Sil"
 msgid "_Set as default"
 msgstr "Öntanımlı olarak _ayarla"
 
-#: src/terminal-screen.cc:1856
+#: src/terminal-screen.cc:1860
 msgid ""
 "Type a label to copy it · with Shift to paste it · with Ctrl to open it · "
 "Esc to cancel"
@@ -3283,29 +3204,29 @@ msgstr ""
 "Kopyalamak için etiketi yazın · yapıştırmak için Shift ile · açmak için Ctrl "
 "ile · iptal için Esc"
 
-#: src/terminal-screen.cc:3462
+#: src/terminal-screen.cc:3474
 msgid "No command supplied nor shell requested"
 msgstr "Ne bir komut sağlandı ne de kabuk istendi"
 
-#: src/terminal-screen.cc:3682 src/terminal-screen.cc:4140
+#: src/terminal-screen.cc:3694 src/terminal-screen.cc:4174
 msgid "_Relaunch"
 msgstr "_Yeniden başlat"
 
-#: src/terminal-screen.cc:3685
+#: src/terminal-screen.cc:3697
 msgid "There was an error creating the child process for this terminal"
 msgstr "Bu uçbirim için çocuk süreç oluştururken hata oluştu"
 
-#: src/terminal-screen.cc:4144
+#: src/terminal-screen.cc:4178
 #, c-format
 msgid "The child process exited normally with status %d."
 msgstr "Çocuk süreç %d durum kodu ile olağan biçimde çıkış yaptı."
 
-#: src/terminal-screen.cc:4147
+#: src/terminal-screen.cc:4181
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "Çocuk süreç %d sinyaliyle iptal edildi."
 
-#: src/terminal-screen.cc:4150
+#: src/terminal-screen.cc:4184
 msgid "The child process was aborted."
 msgstr "Çocuk süreç iptal edildi."
 
@@ -3664,6 +3585,60 @@ msgstr "Bu uçbirimde çalışan süreç var. Uçbirimi kapatmak onu sonlandıra
 #, c-format
 msgid "Failed to parse arguments: %s\n"
 msgstr "Bağımsız değişkenler ayrıştırılamadı: %s\n"
+
+#~ msgid "com.aripd.Pano.desktop"
+#~ msgstr "com.aripd.Pano.desktop"
+
+#~ msgid "GPL-3.0+ or GFDL-1.3-only"
+#~ msgstr "GPL-3.0+ veya GFDL-1.3-only"
+
+#~ msgid "GPL-3.0+"
+#~ msgstr "GPL-3.0+"
+
+#~ msgid "console"
+#~ msgstr "konsol"
+
+#~ msgid "keyboard"
+#~ msgstr "klavye"
+
+#~ msgid "pointing"
+#~ msgstr "imleme"
+
+#~ msgid "https://pano.aripd.com/images/tabs-left-light.png"
+#~ msgstr "https://pano.aripd.com/images/tabs-left-light.png"
+
+#~ msgid "HiDpiIcon"
+#~ msgstr "HiDpiIcon"
+
+#~ msgid "HighContrast"
+#~ msgstr "HighContrast"
+
+#~ msgid "ModernToolkit"
+#~ msgstr "ModernToolkit"
+
+#~ msgid "SearchProvider"
+#~ msgstr "SearchProvider"
+
+#~ msgid "UserDocs"
+#~ msgstr "UserDocs"
+
+#~ msgid "https://pano.aripd.com"
+#~ msgstr "https://pano.aripd.com"
+
+#~ msgid "https://github.com/aripdcom/pano/issues"
+#~ msgstr "https://github.com/aripdcom/pano/issues"
+
+#~ msgid "https://github.com/aripdcom/pano"
+#~ msgstr "https://github.com/aripdcom/pano"
+
+#~ msgid "pano-terminal"
+#~ msgstr "pano-terminal"
+
+#~ msgid "com.aripd.Pano.Nautilus"
+#~ msgstr "com.aripd.Pano.Nautilus"
+
+#~ msgid "org.gnome.Nautilus.desktop"
+#~ msgstr "org.gnome.Nautilus.desktop"
 
 #~ msgid "Zoom _Out"
 #~ msgstr "_Uzaklaştır"
